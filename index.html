@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macdio — The Radio App Your Mac Deserves</title>
-    <meta name="description" content="Stream 30,000+ radio stations, record live audio, view synced lyrics — all in a stunning native macOS experience.">
-    <link rel="icon" type="image/png" href="assets/app-icon.png">
+    <title>Macdio — The Best Internet Radio Player for Mac | Stream, Record & Discover</title>
+    <meta name="description" content="Macdio is the ultimate native macOS radio player. Stream 30,000+ stations worldwide, record live audio, view synced lyrics, and discover new music — all in a beautiful Liquid Glass interface built for macOS Tahoe.">
+    <meta name="keywords" content="mac radio player, internet radio mac, macOS radio app, radio streaming app, mac radio recorder, live radio mac, online radio player, macOS Tahoe app, radio browser, internet radio recorder, mac music app, radio stations mac, best radio app mac, free radio mac, mac radio tuner, podcast radio mac">
+    <meta name="author" content="SFN">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050507">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Macdio — The Best Internet Radio Player for Mac">
+    <meta property="og:description" content="Stream 30,000+ stations, record live audio, view synced lyrics — all in a stunning native macOS Tahoe experience.">
+    <meta property="og:image" content="assets/app-icon.png">
+    <meta property="og:url" content="https://sfnemis.github.io/macdioapp/">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Macdio — The Best Internet Radio Player for Mac">
+    <meta name="twitter:description" content="Stream 30,000+ stations, record live, view synced lyrics. Built for macOS Tahoe.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sfnemis.github.io/macdioapp/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
             --bg: #050507;
-            --surface: #0e0e12;
+            --surface: rgba(14, 14, 18, 0.8);
+            --surface-solid: #0e0e12;
             --surface-2: #16161c;
-            --border: #1e1e28;
+            --border: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
             --text: #e8e8ed;
             --text-secondary: #7a7a8c;
-            --accent: #5b9cf6;
-            --accent-glow: rgba(91, 156, 246, 0.15);
-            --gradient-1: #5b9cf6;
-            --gradient-2: #a855f7;
-            --gradient-3: #ec4899;
+            --accent: #6366f1;
+            --accent-2: #a855f7;
+            --accent-3: #ec4899;
+            --glow: rgba(99, 102, 241, 0.12);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -39,66 +62,52 @@
         /* Three.js Canvas */
         #bg-canvas {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             z-index: 0;
             pointer-events: none;
         }
 
-        /* Navigation */
+        /* === NAVIGATION === */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 100;
-            padding: 20px 48px;
+            padding: 0 48px;
+            height: 64px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            background: rgba(5, 5, 7, 0.7);
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            background: rgba(5, 5, 7, 0.6);
+            border-bottom: 1px solid var(--border);
             transition: all 0.3s ease;
         }
 
-        nav.scrolled {
-            padding: 14px 48px;
-            background: rgba(5, 5, 7, 0.9);
-        }
+        nav.scrolled { background: rgba(5, 5, 7, 0.92); }
 
         .nav-brand {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             text-decoration: none;
             color: #fff;
         }
 
-        .nav-brand img {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-        }
-
-        .nav-brand span {
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: -0.01em;
-        }
+        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-brand span { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 28px;
             align-items: center;
         }
 
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 500;
             transition: color 0.2s;
         }
@@ -106,20 +115,27 @@
         .nav-links a:hover { color: #fff; }
 
         .nav-cta {
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
-            color: #fff !important;
-            padding: 10px 22px;
-            border-radius: 10px;
+            background: #fff !important;
+            color: #000 !important;
+            padding: 8px 20px !important;
+            border-radius: 8px !important;
             font-weight: 600 !important;
-            transition: transform 0.2s, box-shadow 0.2s !important;
+            font-size: 0.85rem !important;
+            transition: all 0.2s !important;
         }
 
-        .nav-cta:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 8px 24px rgba(91, 156, 246, 0.3);
+        .nav-cta:hover { opacity: 0.9; transform: scale(1.02); }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
 
-        /* Hero */
+        /* === HERO === */
         .hero {
             position: relative;
             z-index: 1;
@@ -129,26 +145,26 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 120px 24px 80px;
+            padding: 120px 24px 60px;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: var(--surface-2);
-            border: 1px solid var(--border);
+            background: rgba(99, 102, 241, 0.08);
+            border: 1px solid rgba(99, 102, 241, 0.2);
             border-radius: 100px;
-            padding: 8px 20px;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
+            padding: 6px 18px;
+            font-size: 0.82rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 36px;
             animation: fadeInUp 0.8s ease;
         }
 
         .hero-badge .dot {
-            width: 8px;
-            height: 8px;
+            width: 6px; height: 6px;
             background: #34d399;
             border-radius: 50%;
             animation: pulse 2s infinite;
@@ -156,38 +172,37 @@
 
         @keyframes pulse {
             0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
+            50% { opacity: 0.3; }
         }
 
         .hero-icon {
-            width: 120px;
-            height: 120px;
-            border-radius: 28px;
-            margin-bottom: 32px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 80px var(--accent-glow);
-            animation: fadeInUp 0.8s ease 0.1s both;
-            transition: transform 0.4s ease;
+            width: 112px; height: 112px;
+            border-radius: 26px;
+            margin-bottom: 36px;
+            box-shadow: 0 20px 80px rgba(0,0,0,0.5), 0 0 100px var(--glow);
+            animation: fadeInUp 0.8s ease 0.1s both, float 6s ease-in-out infinite;
         }
 
-        .hero-icon:hover {
-            transform: scale(1.05) translateY(-4px);
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
         }
 
         .hero h1 {
-            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-size: clamp(2.8rem, 6.5vw, 5rem);
             font-weight: 900;
             letter-spacing: -0.04em;
-            line-height: 1.05;
+            line-height: 1.08;
             margin-bottom: 20px;
             animation: fadeInUp 0.8s ease 0.2s both;
         }
 
-        .hero h1 .gradient-text {
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2), var(--gradient-3));
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #6366f1);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            background-size: 200% 200%;
-            animation: gradientShift 5s ease infinite;
+            animation: gradientShift 6s ease infinite;
         }
 
         @keyframes gradientShift {
@@ -197,67 +212,61 @@
         }
 
         .hero-sub {
-            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-size: clamp(1rem, 1.8vw, 1.25rem);
             color: var(--text-secondary);
-            max-width: 560px;
+            max-width: 520px;
             line-height: 1.7;
-            margin-bottom: 40px;
+            margin-bottom: 44px;
             animation: fadeInUp 0.8s ease 0.3s both;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 16px;
+            gap: 14px;
             flex-wrap: wrap;
             justify-content: center;
             animation: fadeInUp 0.8s ease 0.4s both;
         }
 
-        .btn-primary {
+        .btn-appstore {
             display: inline-flex;
             align-items: center;
             gap: 10px;
             background: #fff;
             color: #000;
-            padding: 16px 32px;
-            border-radius: 14px;
-            font-size: 1rem;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
             font-weight: 600;
             text-decoration: none;
             transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
         }
 
-        .btn-primary:hover {
+        .btn-appstore:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(255,255,255,0.15);
+            box-shadow: 0 12px 40px rgba(255,255,255,0.12);
         }
 
-        .btn-primary svg {
-            width: 22px;
-            height: 22px;
-        }
+        .btn-appstore svg { width: 20px; height: 20px; }
 
         .btn-secondary {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            background: var(--surface-2);
+            gap: 8px;
+            background: transparent;
             color: var(--text);
-            padding: 16px 32px;
-            border-radius: 14px;
-            font-size: 1rem;
-            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 500;
             text-decoration: none;
             border: 1px solid var(--border);
             transition: all 0.3s ease;
         }
 
         .btn-secondary:hover {
-            background: var(--surface);
-            border-color: #333;
-            transform: translateY(-2px);
+            background: rgba(255,255,255,0.04);
+            border-color: var(--border-hover);
         }
 
         @keyframes fadeInUp {
@@ -265,49 +274,67 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Screenshots Gallery */
+        /* === SCREENSHOTS === */
         .screenshots {
             position: relative;
             z-index: 1;
-            padding: 40px 0 120px;
-            overflow: hidden;
+            padding: 60px 0 140px;
         }
 
-        .screenshots-track {
+        .screenshots-header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 0 24px;
+        }
+
+        .screenshots-wrapper {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 60px;
+        }
+
+        .screenshots-grid {
             display: flex;
-            gap: 24px;
-            padding: 0 48px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-            scroll-behavior: smooth;
+            gap: 32px;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
         }
 
-        .screenshots-track::-webkit-scrollbar { display: none; }
-
-        .screenshot-card {
+        .screenshot-item {
             flex: 0 0 auto;
-            width: min(80vw, 900px);
-            scroll-snap-align: center;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-            transition: transform 0.4s ease;
+            width: min(400px, 85vw);
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
-        .screenshot-card:hover {
-            transform: scale(1.02);
+        .screenshot-item:nth-child(even) {
+            margin-top: 40px;
         }
 
-        .screenshot-card img {
+        .screenshot-item:hover {
+            transform: translateY(-12px) scale(1.02);
+        }
+
+        .screenshot-item img {
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 12px;
+            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
         }
 
-        /* Features */
+        .screenshot-label {
+            text-align: center;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.02em;
+        }
+
+        /* === FEATURES === */
         .features {
             position: relative;
             z-index: 1;
@@ -317,130 +344,138 @@
         }
 
         .section-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.12em;
             color: var(--accent);
             margin-bottom: 12px;
         }
 
         .section-title {
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
             font-weight: 800;
             letter-spacing: -0.03em;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             line-height: 1.1;
         }
 
         .section-desc {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
-            max-width: 560px;
+            max-width: 520px;
             line-height: 1.7;
-            margin-bottom: 64px;
+            margin-bottom: 56px;
         }
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
         }
 
         .feature-card {
             background: var(--surface);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 36px;
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
         }
 
-        .feature-card::before {
+        .feature-card::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            inset: 0;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, transparent 40%, rgba(99, 102, 241, 0.3), transparent 60%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: opacity 0.4s;
         }
 
         .feature-card:hover {
-            border-color: rgba(91, 156, 246, 0.2);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.15);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.2);
         }
 
-        .feature-card:hover::before { opacity: 1; }
+        .feature-card:hover::after { opacity: 1; }
 
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 16px;
-            display: block;
+            font-size: 1.6rem;
+            margin-bottom: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px; height: 44px;
+            background: rgba(99, 102, 241, 0.08);
+            border-radius: 12px;
         }
 
         .feature-card h3 {
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             color: #fff;
         }
 
         .feature-card p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
             line-height: 1.65;
         }
 
-        /* Parallax Stats */
+        /* === STATS === */
         .stats {
             position: relative;
             z-index: 1;
-            padding: 100px 48px;
+            padding: 80px 48px;
             display: flex;
             justify-content: center;
-            gap: 64px;
+            gap: 80px;
             flex-wrap: wrap;
         }
 
-        .stat {
-            text-align: center;
-        }
+        .stat { text-align: center; }
 
         .stat-number {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
             font-weight: 900;
             letter-spacing: -0.03em;
-            background: linear-gradient(135deg, var(--gradient-1), var(--gradient-2));
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
         .stat-label {
-            font-size: 0.95rem;
+            font-size: 0.88rem;
             color: var(--text-secondary);
             margin-top: 4px;
+            font-weight: 500;
         }
 
-        /* CTA */
+        /* === CTA === */
         .cta {
             position: relative;
             z-index: 1;
             text-align: center;
-            padding: 120px 24px;
+            padding: 100px 24px 120px;
         }
 
         .cta-box {
-            max-width: 700px;
+            max-width: 640px;
             margin: 0 auto;
             background: var(--surface);
+            backdrop-filter: blur(20px);
             border: 1px solid var(--border);
-            border-radius: 28px;
-            padding: 72px 48px;
+            border-radius: 24px;
+            padding: 64px 48px;
             position: relative;
             overflow: hidden;
         }
@@ -448,16 +483,15 @@
         .cta-box::before {
             content: '';
             position: absolute;
-            top: -50%;
+            top: -100%;
             left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, var(--accent-glow) 0%, transparent 60%);
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse, var(--glow) 0%, transparent 60%);
             pointer-events: none;
         }
 
         .cta-box h2 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 800;
             letter-spacing: -0.03em;
             margin-bottom: 12px;
@@ -466,189 +500,50 @@
 
         .cta-box p {
             color: var(--text-secondary);
-            font-size: 1.1rem;
-            margin-bottom: 36px;
-            position: relative;
-        }
-
-        .cta-box .btn-primary {
-            position: relative;
-        }
-
-        /* Support */
-        .support {
-            position: relative;
-            z-index: 1;
-            padding: 120px 48px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .support-cards {
-            display: grid;
-            gap: 16px;
-            margin-top: 48px;
-        }
-
-        .support-card {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px 32px;
-            transition: border-color 0.2s;
-        }
-
-        .support-card:hover { border-color: #333; }
-
-        .support-card h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .support-card p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .support-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .support-card a:hover { text-decoration: underline; }
-
-        /* FAQ */
-        .faq {
-            position: relative;
-            z-index: 1;
-            padding: 0 48px 120px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 24px 0;
-        }
-
-        .faq-item h3 {
             font-size: 1rem;
-            font-weight: 600;
-            color: #d4d4d4;
-            margin-bottom: 10px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .faq-item h3::after {
-            content: '+';
-            font-size: 1.3rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            transition: transform 0.3s;
-        }
-
-        .faq-item.open h3::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-answer {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.3s;
-            opacity: 0;
-        }
-
-        .faq-item.open .faq-answer {
-            max-height: 200px;
-            opacity: 1;
-        }
-
-        /* Privacy */
-        .privacy {
+            margin-bottom: 32px;
             position: relative;
-            z-index: 1;
-            padding: 120px 48px;
-            max-width: 800px;
-            margin: 0 auto;
         }
 
-        .privacy-content {
-            background: var(--surface);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 48px;
-            margin-top: 32px;
-        }
+        .cta-box .btn-appstore { position: relative; }
 
-        .privacy-content h3 {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin: 28px 0 12px;
-            color: #fff;
-        }
-
-        .privacy-content h3:first-child { margin-top: 0; }
-
-        .privacy-content p, .privacy-content li {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        .privacy-content ul {
-            list-style: none;
-            margin: 12px 0;
-        }
-
-        .privacy-content li::before {
-            content: '→';
-            color: var(--accent);
-            margin-right: 10px;
-        }
-
-        /* Footer */
+        /* === FOOTER === */
         footer {
             position: relative;
             z-index: 1;
-            text-align: center;
             padding: 48px 24px;
             border-top: 1px solid var(--border);
+            text-align: center;
         }
 
-        footer p {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        footer .footer-links {
+        .footer-links {
             display: flex;
             gap: 24px;
             justify-content: center;
+            flex-wrap: wrap;
             margin-bottom: 16px;
         }
 
-        /* Scroll Reveal */
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: #fff; }
+
+        footer p {
+            color: #444;
+            font-size: 0.8rem;
+        }
+
+        /* === SCROLL REVEAL === */
         .reveal {
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(30px);
+            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .reveal.visible {
@@ -656,16 +551,40 @@
             transform: translateY(0);
         }
 
-        /* Responsive */
+        /* === MOBILE === */
         @media (max-width: 768px) {
-            nav { padding: 16px 20px; }
+            nav { padding: 0 20px; }
             .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
             .features { padding: 80px 20px; }
-            .stats { gap: 32px; padding: 60px 20px; }
-            .support, .faq, .privacy { padding-left: 20px; padding-right: 20px; }
+            .stats { gap: 40px; padding: 60px 20px; }
             .cta-box { padding: 48px 24px; }
-            .privacy-content { padding: 28px; }
-            .screenshots-track { padding: 0 20px; }
+            .screenshots-wrapper { padding: 0 20px; }
+            .screenshots-grid { flex-direction: column; align-items: center; }
+            .screenshot-item:nth-child(even) { margin-top: 0; }
+            .screenshot-item { width: min(360px, 90vw); }
+
+            .mobile-nav {
+                display: none;
+                position: fixed;
+                inset: 0;
+                z-index: 99;
+                background: rgba(5,5,7,0.96);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+            }
+
+            .mobile-nav.open { display: flex; }
+
+            .mobile-nav a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
         }
     </style>
 </head>
@@ -673,58 +592,73 @@
 
 <canvas id="bg-canvas"></canvas>
 
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+    <a href="#features" onclick="closeMobileNav()">Features</a>
+    <a href="#screenshots" onclick="closeMobileNav()">Screenshots</a>
+    <a href="support.html" onclick="closeMobileNav()">Support</a>
+    <a href="privacy.html" onclick="closeMobileNav()">Privacy</a>
+    <a href="#" onclick="closeMobileNav()">Download</a>
+</div>
+
 <!-- Navigation -->
 <nav id="navbar">
-    <a href="#" class="nav-brand">
-        <img src="assets/app-icon.png" alt="Macdio">
+    <a href="index.html" class="nav-brand">
+        <img src="assets/app-icon.png" alt="Macdio" width="32" height="32">
         <span>Macdio</span>
     </a>
     <div class="nav-links">
         <a href="#features">Features</a>
         <a href="#screenshots">Screenshots</a>
-        <a href="#support">Support</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#" class="nav-cta">Download on Mac App Store</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="#" class="nav-cta"> Download</a>
     </div>
+    <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
 </nav>
 
 <!-- Hero -->
 <section class="hero" id="hero">
     <div class="hero-badge">
         <span class="dot"></span>
-        Built for macOS Tahoe
+        Designed for macOS Tahoe
     </div>
-    <img src="assets/app-icon.png" alt="Macdio" class="hero-icon" data-parallax="0.1">
+    <img src="assets/app-icon.png" alt="Macdio App Icon" class="hero-icon" width="112" height="112">
     <h1>The Radio App<br>Your Mac <span class="gradient-text">Deserves</span></h1>
     <p class="hero-sub">Stream 30,000+ stations worldwide, record live audio, view synced lyrics — all in a stunning native experience.</p>
     <div class="hero-buttons">
-        <a href="#" class="btn-primary">
+        <a href="#" class="btn-appstore" aria-label="Download Macdio on the Mac App Store">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             Download on App Store
         </a>
-        <a href="#features" class="btn-secondary">
-            Explore Features ↓
-        </a>
+        <a href="#features" class="btn-secondary">Explore Features ↓</a>
     </div>
 </section>
 
 <!-- Screenshots -->
 <section class="screenshots" id="screenshots">
-    <div class="screenshots-track">
-        <div class="screenshot-card reveal">
-            <img src="assets/screenshots/Library.png" alt="Macdio Library" loading="lazy">
-        </div>
-        <div class="screenshot-card reveal">
-            <img src="assets/screenshots/Music.png" alt="Macdio Player" loading="lazy">
-        </div>
-        <div class="screenshot-card reveal">
-            <img src="assets/screenshots/Discover.png" alt="Macdio Discover" loading="lazy">
-        </div>
-        <div class="screenshot-card reveal">
-            <img src="assets/screenshots/Recordings.png" alt="Macdio Recordings" loading="lazy">
-        </div>
-        <div class="screenshot-card reveal">
-            <img src="assets/screenshots/Tracks.png" alt="Macdio Tracks" loading="lazy">
+    <div class="screenshots-header reveal">
+        <p class="section-label">App Preview</p>
+        <h2 class="section-title">See Macdio in action</h2>
+    </div>
+    <div class="screenshots-wrapper">
+        <div class="screenshots-grid">
+            <div class="screenshot-item reveal">
+                <img src="assets/screenshots/library.png" alt="Macdio Library View - Browse your radio station collection" loading="lazy">
+                <div class="screenshot-label">Library</div>
+            </div>
+            <div class="screenshot-item reveal">
+                <img src="assets/screenshots/player.png" alt="Macdio Player - Now playing with synced lyrics" loading="lazy">
+                <div class="screenshot-label">Now Playing</div>
+            </div>
+            <div class="screenshot-item reveal">
+                <img src="assets/screenshots/discover.png" alt="Macdio Discover - Browse 30000+ radio stations by genre and country" loading="lazy">
+                <div class="screenshot-label">Discover</div>
+            </div>
+            <div class="screenshot-item reveal">
+                <img src="assets/screenshots/recordings.png" alt="Macdio Recordings - Record and manage live radio recordings" loading="lazy">
+                <div class="screenshot-label">Recordings</div>
+            </div>
         </div>
     </div>
 </section>
@@ -754,49 +688,49 @@
     <div class="reveal">
         <p class="section-label">Features</p>
         <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
-        <p class="section-desc">A true native macOS app — no Electron, no web wrappers. Just fast, beautiful, and built for your Mac.</p>
+        <p class="section-desc">100% native macOS — no Electron, no web wrappers. Just fast, beautiful, and built for your Mac.</p>
     </div>
 
     <div class="features-grid">
         <div class="feature-card reveal">
-            <span class="feature-icon">🌍</span>
+            <div class="feature-icon">🌍</div>
             <h3>30,000+ Stations</h3>
-            <p>Browse and discover radio stations from every corner of the world. Jazz from New York, lo-fi from Tokyo, or your local hometown station.</p>
+            <p>Discover radio from every corner of the world. Jazz from New York, lo-fi from Tokyo, or your local hometown station.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">➕</span>
+            <div class="feature-icon">➕</div>
             <h3>Add Your Own</h3>
-            <p>Can't find your station? Paste any stream URL and you're live in seconds. It's that simple.</p>
+            <p>Can't find your station? Paste any stream URL and you're live in seconds. Supports M3U, PLS, and direct streams.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">🔴</span>
+            <div class="feature-icon">🔴</div>
             <h3>Live Recording</h3>
-            <p>Record any live stream in high quality. Never miss a song again — your recordings are saved and organized automatically.</p>
+            <p>Record any live stream in high quality. Never miss a song — your recordings are saved and organized automatically.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">🎵</span>
+            <div class="feature-icon">🎵</div>
             <h3>Synced Lyrics</h3>
-            <p>Follow along with real-time synchronized lyrics. See every word as the music plays.</p>
+            <p>Follow along with real-time synchronized lyrics. See every word as the music plays with beautiful animations.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">🖥️</span>
+            <div class="feature-icon">🖥️</div>
             <h3>Compact Player</h3>
-            <p>Switch to the sleek mini player for a minimal footprint. Perfect for multitasking while staying tuned.</p>
+            <p>Switch to the sleek mini player for a minimal footprint. Perfect for multitasking while staying tuned in.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">⌨️</span>
+            <div class="feature-icon">⌨️</div>
             <h3>Keyboard Shortcuts</h3>
             <p>Control everything without leaving your keyboard. Play, pause, skip, volume — all at your fingertips.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">☁️</span>
+            <div class="feature-icon">☁️</div>
             <h3>iCloud Sync</h3>
-            <p>Your favorites, settings, and saved stations stay in sync across all your Macs automatically.</p>
+            <p>Your favorites, settings, and saved stations stay in sync across all your Macs — automatically via iCloud.</p>
         </div>
         <div class="feature-card reveal">
-            <span class="feature-icon">🌙</span>
-            <h3>Dark Mode</h3>
-            <p>Beautifully optimized for Dark Mode with a Liquid Glass interface designed for macOS Tahoe.</p>
+            <div class="feature-icon">🌙</div>
+            <h3>Liquid Glass</h3>
+            <p>Beautifully optimized with a Liquid Glass interface — designed from the ground up for macOS Tahoe.</p>
         </div>
     </div>
 </section>
@@ -806,96 +740,10 @@
     <div class="cta-box">
         <h2>Ready to tune in?</h2>
         <p>Tune In, Lock Down — Seize Every Stream.</p>
-        <a href="#" class="btn-primary">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
+        <a href="#" class="btn-appstore">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
             Download on App Store
         </a>
-    </div>
-</section>
-
-<!-- Support -->
-<section class="support" id="support">
-    <div class="reveal">
-        <p class="section-label">Support</p>
-        <h2 class="section-title">We're here to help.</h2>
-        <p class="section-desc">Got a question, feedback, or running into something unexpected? Reach out — we'd love to hear from you.</p>
-    </div>
-
-    <div class="support-cards">
-        <div class="support-card reveal">
-            <h3>📧 General Support</h3>
-            <p>For questions, bug reports, or feature requests:<br>
-            <a href="mailto:firat@nemis.me">firat@nemis.me</a></p>
-        </div>
-        <div class="support-card reveal">
-            <h3>🎨 Design Feedback</h3>
-            <p>Have thoughts on the UI or visual experience?<br>
-            <a href="mailto:apeca68@gmail.com">apeca68@gmail.com</a></p>
-        </div>
-        <div class="support-card reveal">
-            <h3>🔒 Privacy</h3>
-            <p>Macdio does not collect any personal data. Your stations, recordings, and preferences stay on your device and sync only through your personal iCloud account. <a href="#privacy">Read our Privacy Policy →</a></p>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-    <div class="reveal">
-        <h2 class="section-title" style="margin-bottom: 40px;">Frequently Asked Questions</h2>
-    </div>
-
-    <div class="faq-item reveal">
-        <h3>How do I add my own radio station?</h3>
-        <div class="faq-answer"><p>Open the app, click the "+" button, paste any stream URL (e.g. .m3u or .pls), give it a name, and you're live in seconds.</p></div>
-    </div>
-    <div class="faq-item reveal">
-        <h3>How do I record a live stream?</h3>
-        <div class="faq-answer"><p>While listening, click the record button. Macdio saves the audio in high quality. Find all your recordings in the Recordings tab.</p></div>
-    </div>
-    <div class="faq-item reveal">
-        <h3>Do my favorites sync across devices?</h3>
-        <div class="faq-answer"><p>Yes! Macdio uses iCloud to keep your favorite stations and settings in sync across all your Macs automatically.</p></div>
-    </div>
-    <div class="faq-item reveal">
-        <h3>What macOS version is required?</h3>
-        <div class="faq-answer"><p>Macdio requires macOS Tahoe (macOS 26) or later.</p></div>
-    </div>
-    <div class="faq-item reveal">
-        <h3>Is my data shared with anyone?</h3>
-        <div class="faq-answer"><p>No. Macdio does not collect, store, or share any personal information. Everything stays on your device.</p></div>
-    </div>
-</section>
-
-<!-- Privacy Policy -->
-<section class="privacy" id="privacy">
-    <div class="reveal">
-        <p class="section-label">Legal</p>
-        <h2 class="section-title">Privacy Policy</h2>
-        <p style="color: var(--text-secondary); margin-top: 8px;">Last updated: April 7, 2026</p>
-
-        <div class="privacy-content">
-            <h3>Overview</h3>
-            <p>Macdio is designed with your privacy in mind. We do not collect, store, or share any personal data.</p>
-
-            <h3>Data Collection</h3>
-            <p>Macdio does <strong>not</strong> collect any personal information. All your data — including favorite stations, saved tracks, and recordings — stays on your device and syncs only through your personal iCloud account.</p>
-
-            <h3>Third-Party Services</h3>
-            <p>Macdio connects to the following external services solely to provide its core functionality:</p>
-            <ul>
-                <li><strong>Radio Browser API</strong> — to browse and search radio stations (no personal data is sent)</li>
-                <li><strong>LRCLIB</strong> — to fetch song lyrics (no personal data is sent)</li>
-                <li><strong>iTunes Search API</strong> — to fetch album artwork (no personal data is sent)</li>
-            </ul>
-            <p>No analytics, advertising, or tracking SDKs are used.</p>
-
-            <h3>iCloud</h3>
-            <p>If you use iCloud sync, your favorites and settings are stored in your private iCloud container. This data is managed entirely by Apple and is not accessible to us.</p>
-
-            <h3>Contact</h3>
-            <p>If you have questions about this privacy policy, contact us at <a href="mailto:firat@nemis.me" style="color: var(--accent);">firat@nemis.me</a></p>
-        </div>
     </div>
 </section>
 
@@ -903,16 +751,16 @@
 <footer>
     <div class="footer-links">
         <a href="#features">Features</a>
-        <a href="#support">Support</a>
-        <a href="#privacy">Privacy Policy</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
         <a href="mailto:firat@nemis.me">Contact</a>
     </div>
     <p>© 2026 SFN. All rights reserved.</p>
-    <p style="margin-top: 8px; font-size: 0.8rem;">Tune In, Lock Down — Seize Every Stream.</p>
+    <p style="margin-top: 6px;">Tune In, Lock Down — Seize Every Stream.</p>
 </footer>
 
 <script>
-// ============ Three.js Animated Background ============
+// ============ Three.js — Audio-Waveform Inspired Background ============
 const canvas = document.getElementById('bg-canvas');
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -922,59 +770,69 @@ const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 30;
 
-// Particle System
-const particleCount = 800;
-const positions = new Float32Array(particleCount * 3);
-const colors = new Float32Array(particleCount * 3);
+// Audio waveform ring particles
+const ringCount = 3;
+const rings = [];
 
-for (let i = 0; i < particleCount * 3; i += 3) {
-    positions[i] = (Math.random() - 0.5) * 80;
-    positions[i + 1] = (Math.random() - 0.5) * 80;
-    positions[i + 2] = (Math.random() - 0.5) * 80;
+for (let r = 0; r < ringCount; r++) {
+    const count = 200;
+    const positions = new Float32Array(count * 3);
+    const radius = 10 + r * 6;
 
-    const colorChoice = Math.random();
-    if (colorChoice < 0.33) {
-        colors[i] = 0.36; colors[i+1] = 0.61; colors[i+2] = 0.96; // Blue
-    } else if (colorChoice < 0.66) {
-        colors[i] = 0.66; colors[i+1] = 0.33; colors[i+2] = 0.97; // Purple
-    } else {
-        colors[i] = 0.93; colors[i+1] = 0.28; colors[i+2] = 0.60; // Pink
+    for (let i = 0; i < count; i++) {
+        const angle = (i / count) * Math.PI * 2;
+        positions[i * 3] = Math.cos(angle) * radius;
+        positions[i * 3 + 1] = Math.sin(angle) * radius;
+        positions[i * 3 + 2] = (Math.random() - 0.5) * 4;
     }
+
+    const geo = new THREE.BufferGeometry();
+    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+    const colors = [0x6366f1, 0xa855f7, 0xec4899];
+    const mat = new THREE.PointsMaterial({
+        size: 0.08 + r * 0.02,
+        color: colors[r],
+        transparent: true,
+        opacity: 0.4 - r * 0.08,
+        blending: THREE.AdditiveBlending,
+    });
+
+    const points = new THREE.Points(geo, mat);
+    rings.push({ points, positions, radius, count });
+    scene.add(points);
 }
 
-const particleGeometry = new THREE.BufferGeometry();
-particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+// Floating ambient particles
+const ambientCount = 400;
+const ambientPos = new Float32Array(ambientCount * 3);
+const ambientColors = new Float32Array(ambientCount * 3);
 
-const particleMaterial = new THREE.PointsMaterial({
-    size: 0.12,
+for (let i = 0; i < ambientCount * 3; i += 3) {
+    ambientPos[i] = (Math.random() - 0.5) * 100;
+    ambientPos[i + 1] = (Math.random() - 0.5) * 100;
+    ambientPos[i + 2] = (Math.random() - 0.5) * 60;
+
+    const c = Math.random();
+    if (c < 0.4) { ambientColors[i] = 0.39; ambientColors[i+1] = 0.4; ambientColors[i+2] = 0.95; }
+    else if (c < 0.7) { ambientColors[i] = 0.66; ambientColors[i+1] = 0.33; ambientColors[i+2] = 0.97; }
+    else { ambientColors[i] = 0.93; ambientColors[i+1] = 0.28; ambientColors[i+2] = 0.6; }
+}
+
+const ambientGeo = new THREE.BufferGeometry();
+ambientGeo.setAttribute('position', new THREE.BufferAttribute(ambientPos, 3));
+ambientGeo.setAttribute('color', new THREE.BufferAttribute(ambientColors, 3));
+
+const ambientMat = new THREE.PointsMaterial({
+    size: 0.08,
     vertexColors: true,
     transparent: true,
-    opacity: 0.6,
+    opacity: 0.35,
     blending: THREE.AdditiveBlending,
 });
 
-const particles = new THREE.Points(particleGeometry, particleMaterial);
-scene.add(particles);
-
-// Orbiting Ring
-const torusGeometry = new THREE.TorusGeometry(12, 0.03, 16, 200);
-const torusMaterial = new THREE.MeshBasicMaterial({
-    color: 0x5b9cf6,
-    transparent: true,
-    opacity: 0.15,
-});
-const torus = new THREE.Mesh(torusGeometry, torusMaterial);
-torus.rotation.x = Math.PI * 0.5;
-scene.add(torus);
-
-const torus2 = new THREE.Mesh(
-    new THREE.TorusGeometry(16, 0.02, 16, 200),
-    new THREE.MeshBasicMaterial({ color: 0xa855f7, transparent: true, opacity: 0.08 })
-);
-torus2.rotation.x = Math.PI * 0.3;
-torus2.rotation.y = Math.PI * 0.2;
-scene.add(torus2);
+const ambientParticles = new THREE.Points(ambientGeo, ambientMat);
+scene.add(ambientParticles);
 
 let mouseX = 0, mouseY = 0;
 
@@ -985,18 +843,28 @@ document.addEventListener('mousemove', (e) => {
 
 function animate() {
     requestAnimationFrame(animate);
-
     const time = Date.now() * 0.001;
 
-    particles.rotation.y += 0.0005;
-    particles.rotation.x += 0.0002;
+    // Animate rings like audio waveforms
+    rings.forEach((ring, r) => {
+        const pos = ring.points.geometry.attributes.position.array;
+        for (let i = 0; i < ring.count; i++) {
+            const angle = (i / ring.count) * Math.PI * 2;
+            const wave = Math.sin(time * (1.5 + r * 0.5) + angle * 4) * (1.5 + r * 0.5);
+            const rad = ring.radius + wave;
+            pos[i * 3] = Math.cos(angle + time * 0.1 * (r + 1)) * rad;
+            pos[i * 3 + 1] = Math.sin(angle + time * 0.1 * (r + 1)) * rad;
+            pos[i * 3 + 2] = Math.sin(time * 2 + angle * 3) * (0.5 + r * 0.3);
+        }
+        ring.points.geometry.attributes.position.needsUpdate = true;
+        ring.points.rotation.z = time * 0.02 * (r % 2 === 0 ? 1 : -1);
+    });
 
-    torus.rotation.z = time * 0.1;
-    torus2.rotation.z = -time * 0.07;
-    torus2.rotation.x = Math.PI * 0.3 + Math.sin(time * 0.2) * 0.1;
+    ambientParticles.rotation.y += 0.0003;
+    ambientParticles.rotation.x += 0.0001;
 
-    camera.position.x += (mouseX * 3 - camera.position.x) * 0.02;
-    camera.position.y += (-mouseY * 3 - camera.position.y) * 0.02;
+    camera.position.x += (mouseX * 2 - camera.position.x) * 0.015;
+    camera.position.y += (-mouseY * 2 - camera.position.y) * 0.015;
     camera.lookAt(scene.position);
 
     renderer.render(scene, camera);
@@ -1009,69 +877,50 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// ============ Parallax on Scroll ============
-const parallaxElements = document.querySelectorAll('[data-parallax]');
-
+// ============ Scroll Effects ============
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
-
-    // Nav scroll effect
     document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50);
 
-    // Parallax
-    parallaxElements.forEach(el => {
-        const speed = parseFloat(el.dataset.parallax);
-        el.style.transform = `translateY(${scrollY * speed}px)`;
+    const pct = scrollY / (document.body.scrollHeight - window.innerHeight);
+    camera.position.z = 30 + pct * 15;
+    rings.forEach((r, i) => {
+        r.points.rotation.x = pct * Math.PI * 0.15 * (i + 1);
     });
-
-    // Three.js react to scroll
-    const scrollPercent = scrollY / (document.body.scrollHeight - window.innerHeight);
-    particles.rotation.y = scrollPercent * Math.PI * 0.5;
-    camera.position.z = 30 + scrollPercent * 10;
 });
 
 // ============ Scroll Reveal ============
-const revealElements = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-revealElements.forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// ============ FAQ Toggle ============
-document.querySelectorAll('.faq-item h3').forEach(item => {
-    item.addEventListener('click', () => {
-        item.parentElement.classList.toggle('open');
-    });
-});
-
-// ============ Counter Animation ============
-const counters = document.querySelectorAll('[data-count]');
-const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const target = parseInt(entry.target.dataset.count);
-            let current = 0;
-            const increment = target / 60;
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    entry.target.textContent = target.toLocaleString() + '+';
-                    clearInterval(timer);
-                } else {
-                    entry.target.textContent = Math.floor(current).toLocaleString() + '+';
-                }
-            }, 16);
-            counterObserver.unobserve(entry.target);
-        }
+// ============ Counter ============
+const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const target = parseInt(e.target.dataset.count);
+        let current = 0;
+        const inc = target / 50;
+        const timer = setInterval(() => {
+            current += inc;
+            if (current >= target) { e.target.textContent = target.toLocaleString() + '+'; clearInterval(timer); }
+            else { e.target.textContent = Math.floor(current).toLocaleString() + '+'; }
+        }, 20);
+        counterObs.unobserve(e.target);
     });
 }, { threshold: 0.5 });
 
-counters.forEach(c => counterObserver.observe(c));
+document.querySelectorAll('[data-count]').forEach(c => counterObs.observe(c));
+
+// ============ Mobile Menu ============
+function toggleMobileNav() {
+    document.getElementById('mobileNav').classList.toggle('open');
+}
+function closeMobileNav() {
+    document.getElementById('mobileNav').classList.remove('open');
+}
 </script>
 
 </body>
