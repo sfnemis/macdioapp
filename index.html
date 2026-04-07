@@ -278,60 +278,146 @@
         .screenshots {
             position: relative;
             z-index: 1;
-            padding: 60px 0 140px;
+            padding: 80px 0 120px;
         }
 
         .screenshots-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 56px;
             padding: 0 24px;
         }
 
         .screenshots-wrapper {
-            position: relative;
-            max-width: 1400px;
+            max-width: 1100px;
             margin: 0 auto;
-            padding: 0 60px;
+            padding: 0 40px;
         }
 
         .screenshots-grid {
-            display: flex;
-            gap: 32px;
-            justify-content: center;
-            align-items: flex-start;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
         }
 
         .screenshot-item {
-            flex: 0 0 auto;
-            width: min(400px, 85vw);
             position: relative;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .screenshot-item:nth-child(even) {
-            margin-top: 40px;
+            cursor: pointer;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            background: var(--surface-solid);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .screenshot-item:hover {
-            transform: translateY(-12px) scale(1.02);
+            transform: translateY(-6px);
+            border-color: rgba(99, 102, 241, 0.2);
+            box-shadow: 0 24px 64px rgba(0,0,0,0.35), 0 0 40px var(--glow);
         }
 
         .screenshot-item img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 12px;
-            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
+            transition: transform 0.4s ease;
+        }
+
+        .screenshot-item:hover img {
+            transform: scale(1.02);
+        }
+
+        .screenshot-meta {
+            padding: 14px 18px;
+            background: var(--surface-solid);
+            border-top: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .screenshot-label {
-            text-align: center;
-            margin-top: 16px;
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             font-weight: 600;
+            color: var(--text);
+        }
+
+        .screenshot-hint {
+            font-size: 0.75rem;
             color: var(--text-secondary);
-            letter-spacing: 0.02em;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .screenshot-item:hover .screenshot-hint {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            padding: 40px;
+            animation: lbFadeIn 0.3s ease;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 12px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
+            animation: lbZoomIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            color: #fff;
+            font-size: 1.6rem;
+            cursor: pointer;
+            width: 44px; height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.2s;
+        }
+
+        .lightbox-close:hover { background: rgba(255,255,255,0.15); }
+
+        .lightbox-caption {
+            position: absolute;
+            bottom: 32px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        @keyframes lbFadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes lbZoomIn {
+            from { opacity: 0; transform: scale(0.92); }
+            to { opacity: 1; transform: scale(1); }
         }
 
         /* === FEATURES === */
@@ -559,10 +645,8 @@
             .features { padding: 80px 20px; }
             .stats { gap: 40px; padding: 60px 20px; }
             .cta-box { padding: 48px 24px; }
-            .screenshots-wrapper { padding: 0 20px; }
-            .screenshots-grid { flex-direction: column; align-items: center; }
-            .screenshot-item:nth-child(even) { margin-top: 0; }
-            .screenshot-item { width: min(360px, 90vw); }
+            .screenshots-wrapper { padding: 0 16px; }
+            .screenshots-grid { grid-template-columns: 1fr; }
 
             .mobile-nav {
                 display: none;
@@ -635,54 +719,6 @@
     </div>
 </section>
 
-<!-- Screenshots -->
-<section class="screenshots" id="screenshots">
-    <div class="screenshots-header reveal">
-        <p class="section-label">App Preview</p>
-        <h2 class="section-title">See Macdio in action</h2>
-    </div>
-    <div class="screenshots-wrapper">
-        <div class="screenshots-grid">
-            <div class="screenshot-item reveal">
-                <img src="assets/screenshots/library.png" alt="Macdio Library View - Browse your radio station collection" loading="lazy">
-                <div class="screenshot-label">Library</div>
-            </div>
-            <div class="screenshot-item reveal">
-                <img src="assets/screenshots/player.png" alt="Macdio Player - Now playing with synced lyrics" loading="lazy">
-                <div class="screenshot-label">Now Playing</div>
-            </div>
-            <div class="screenshot-item reveal">
-                <img src="assets/screenshots/discover.png" alt="Macdio Discover - Browse 30000+ radio stations by genre and country" loading="lazy">
-                <div class="screenshot-label">Discover</div>
-            </div>
-            <div class="screenshot-item reveal">
-                <img src="assets/screenshots/recordings.png" alt="Macdio Recordings - Record and manage live radio recordings" loading="lazy">
-                <div class="screenshot-label">Recordings</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Stats -->
-<section class="stats reveal">
-    <div class="stat">
-        <div class="stat-number" data-count="30000">0</div>
-        <div class="stat-label">Radio Stations</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">∞</div>
-        <div class="stat-label">Custom Stations</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">4+</div>
-        <div class="stat-label">Age Rating</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">0</div>
-        <div class="stat-label">Data Collected</div>
-    </div>
-</section>
-
 <!-- Features -->
 <section class="features" id="features">
     <div class="reveal">
@@ -734,6 +770,73 @@
         </div>
     </div>
 </section>
+
+<!-- Stats -->
+<section class="stats reveal">
+    <div class="stat">
+        <div class="stat-number" data-count="30000">0</div>
+        <div class="stat-label">Radio Stations</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">∞</div>
+        <div class="stat-label">Custom Stations</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">4+</div>
+        <div class="stat-label">Age Rating</div>
+    </div>
+    <div class="stat">
+        <div class="stat-number">0</div>
+        <div class="stat-label">Data Collected</div>
+    </div>
+</section>
+
+<!-- Screenshots -->
+<section class="screenshots" id="screenshots">
+    <div class="screenshots-header reveal">
+        <p class="section-label">App Preview</p>
+        <h2 class="section-title">See Macdio in action</h2>
+    </div>
+    <div class="screenshots-wrapper">
+        <div class="screenshots-grid">
+            <div class="screenshot-item reveal" onclick="openLightbox(this)">
+                <img src="assets/screenshots/library.png" alt="Macdio Library View" loading="lazy">
+                <div class="screenshot-meta">
+                    <span class="screenshot-label">Library</span>
+                    <span class="screenshot-hint">🔍 Click to zoom</span>
+                </div>
+            </div>
+            <div class="screenshot-item reveal" onclick="openLightbox(this)">
+                <img src="assets/screenshots/player.png" alt="Macdio Now Playing" loading="lazy">
+                <div class="screenshot-meta">
+                    <span class="screenshot-label">Now Playing</span>
+                    <span class="screenshot-hint">🔍 Click to zoom</span>
+                </div>
+            </div>
+            <div class="screenshot-item reveal" onclick="openLightbox(this)">
+                <img src="assets/screenshots/discover.png" alt="Macdio Discover Stations" loading="lazy">
+                <div class="screenshot-meta">
+                    <span class="screenshot-label">Discover</span>
+                    <span class="screenshot-hint">🔍 Click to zoom</span>
+                </div>
+            </div>
+            <div class="screenshot-item reveal" onclick="openLightbox(this)">
+                <img src="assets/screenshots/recordings.png" alt="Macdio Recordings" loading="lazy">
+                <div class="screenshot-meta">
+                    <span class="screenshot-label">Recordings</span>
+                    <span class="screenshot-hint">🔍 Click to zoom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-close" onclick="closeLightbox()">✕</div>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
 
 <!-- CTA -->
 <section class="cta reveal">
@@ -921,6 +1024,27 @@ function toggleMobileNav() {
 function closeMobileNav() {
     document.getElementById('mobileNav').classList.remove('open');
 }
+
+// ============ Lightbox ============
+function openLightbox(item) {
+    const img = item.querySelector('img');
+    const label = item.querySelector('.screenshot-label');
+    const lb = document.getElementById('lightbox');
+    document.getElementById('lightboxImg').src = img.src;
+    document.getElementById('lightboxImg').alt = img.alt;
+    document.getElementById('lightboxCaption').textContent = label ? label.textContent : '';
+    lb.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
 </script>
 
 </body>
