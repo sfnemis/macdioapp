@@ -68,8 +68,11 @@
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <style>
         :root {
             --bg: #050507;
@@ -1485,7 +1488,10 @@
 
 <script>
 // ============ Three.js — Audio-Waveform Inspired Background ============
+// Deferred: wait for three.js to load before initializing
+function initThreeBackground() {
 const canvas = document.getElementById('bg-canvas');
+if (!canvas || typeof THREE === 'undefined') return;
 const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -1718,6 +1724,15 @@ const barObs = new IntersectionObserver((entries) => {
 }, { threshold: 0.3 });
 
 document.querySelectorAll('.comparison-card').forEach(el => barObs.observe(el));
+
+// Close the deferred Three.js init function and call it
+}
+// Initialize Three.js after the deferred script has loaded
+if (document.readyState === 'complete') {
+    initThreeBackground();
+} else {
+    window.addEventListener('load', initThreeBackground);
+}
 </script>
 
 </body>
