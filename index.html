@@ -249,6 +249,17 @@
 
         .btn-appstore svg { width: 20px; height: 20px; }
 
+        .btn-appstore-svg {
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .btn-appstore-svg:hover {
+            transform: translateY(-3px);
+            filter: drop-shadow(0 8px 24px rgba(255,255,255,0.18));
+        }
+
         .btn-secondary {
             display: inline-flex;
             align-items: center;
@@ -1076,7 +1087,7 @@
     <a href="#screenshots" onclick="closeMobileNav()">Screenshots</a>
     <a href="support.html" onclick="closeMobileNav()">Support</a>
     <a href="privacy.html" onclick="closeMobileNav()">Privacy</a>
-    <a href="#" onclick="closeMobileNav()">Download</a>
+    <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" onclick="closeMobileNav()" target="_blank" rel="noopener">Download</a>
 </div>
 
 <!-- Navigation -->
@@ -1091,7 +1102,7 @@
         <a href="#screenshots">Screenshots</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy</a>
-        <a href="#" class="nav-cta"> Download</a>
+        <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" class="nav-cta" target="_blank" rel="noopener"> Download</a>
     </div>
     <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
 </nav>
@@ -1106,9 +1117,8 @@
     <h1>The Radio App<br>Your Mac <span class="gradient-text">Deserves</span></h1>
     <p class="hero-sub">Stream 30,000+ stations worldwide, record live audio, view synced lyrics — all in a stunning native experience.</p>
     <div class="hero-buttons">
-        <a href="#" class="btn-appstore" aria-label="Download Macdio on the Mac App Store">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download on App Store
+        <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" class="btn-appstore-svg" aria-label="Download Macdio on the Mac App Store" target="_blank" rel="noopener">
+            <img src="download_button.svg" alt="Download on the Mac App Store" style="height:54px; width:auto; display:block;">
         </a>
         <a href="#features" class="btn-secondary">Explore Features ↓</a>
     </div>
@@ -1415,9 +1425,8 @@
     <div class="cta-box">
         <h2>Ready to tune in?</h2>
         <p>Tune In, Lock Down — Seize Every Stream.</p>
-        <a href="#" class="btn-appstore">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5C17.88 20.74 17 21.95 15.66 21.97C14.32 21.99 13.89 21.18 12.37 21.18C10.84 21.18 10.37 21.95 9.1 21.99C7.79 22.03 6.8 20.68 5.96 19.47C4.25 16.97 2.94 12.45 4.7 9.39C5.57 7.87 7.13 6.91 8.82 6.88C10.1 6.86 11.32 7.75 12.11 7.75C12.89 7.75 14.37 6.68 15.92 6.84C16.57 6.87 18.39 7.1 19.56 8.82C19.47 8.88 17.39 10.1 17.41 12.63C17.44 15.65 20.06 16.66 20.09 16.67C20.06 16.74 19.67 18.11 18.71 19.5ZM13 3.5C13.73 2.67 14.94 2.04 15.94 2C16.07 3.17 15.6 4.35 14.9 5.19C14.21 6.04 13.07 6.7 11.95 6.61C11.8 5.46 12.36 4.26 13 3.5Z"/></svg>
-            Download on App Store
+        <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" class="btn-appstore-svg" aria-label="Download Macdio on the Mac App Store" target="_blank" rel="noopener">
+            <img src="download_button.svg" alt="Download on the Mac App Store" style="height:54px; width:auto; display:block;">
         </a>
     </div>
 </section>
