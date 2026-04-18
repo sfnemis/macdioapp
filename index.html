@@ -172,8 +172,46 @@
             background: none;
             border: none;
             color: #fff;
-            font-size: 1.5rem;
             cursor: pointer;
+            z-index: 201;
+            width: 44px;
+            height: 44px;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hamburger-lines {
+            width: 22px;
+            height: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .hamburger-lines span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            border-radius: 2px;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active .hamburger-lines span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .mobile-menu-btn.active .hamburger-lines span:nth-child(2) {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+
+        .mobile-menu-btn.active .hamburger-lines span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
         }
 
         /* === HERO === */
@@ -1071,11 +1109,209 @@
             transform: translateY(0);
         }
 
-        /* === MOBILE === */
+        /* === MOBILE MENU OVERLAY === */
+        .mobile-nav-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 200;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .mobile-nav-overlay.open {
+            visibility: visible;
+            pointer-events: auto;
+        }
+
+        .mobile-nav-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-backdrop {
+            opacity: 1;
+        }
+
+        .mobile-nav-panel {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: min(320px, 85vw);
+            height: 100%;
+            background: rgba(12, 12, 16, 0.92);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border-left: 1px solid rgba(255, 255, 255, 0.06);
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 100px 32px 40px;
+            overflow-y: auto;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-panel {
+            transform: translateX(0);
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 16px 18px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateX(30px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mobile-nav-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 14px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(168, 85, 247, 0.04));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link:active {
+            color: #fff;
+        }
+
+        .mobile-nav-link:hover::before,
+        .mobile-nav-link:active::before {
+            opacity: 1;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(1) { transition: opacity 0.4s 0.15s ease, transform 0.5s 0.15s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(2) { transition: opacity 0.4s 0.2s ease, transform 0.5s 0.2s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(3) { transition: opacity 0.4s 0.25s ease, transform 0.5s 0.25s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(4) { transition: opacity 0.4s 0.3s ease, transform 0.5s 0.3s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease; }
+        .mobile-nav-overlay.open .mobile-nav-link:nth-child(5) { transition: opacity 0.4s 0.35s ease, transform 0.5s 0.35s cubic-bezier(0.23, 1, 0.32, 1), color 0.3s ease; }
+
+        .mobile-nav-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 11px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mobile-nav-icon.feat { background: rgba(99, 102, 241, 0.12); }
+        .mobile-nav-icon.perf { background: rgba(52, 211, 153, 0.12); }
+        .mobile-nav-icon.screen { background: rgba(168, 85, 247, 0.12); }
+        .mobile-nav-icon.support { background: rgba(251, 191, 36, 0.12); }
+        .mobile-nav-icon.privacy { background: rgba(236, 72, 153, 0.12); }
+
+        .mobile-nav-link-text {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mobile-nav-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+            margin: 16px 0;
+            opacity: 0;
+            transition: opacity 0.5s 0.4s ease;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-divider {
+            opacity: 1;
+        }
+
+        .mobile-nav-download {
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.4s 0.1s ease, transform 0.4s 0.1s cubic-bezier(0.23, 1, 0.32, 1);
+            margin-bottom: 4px;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-download {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .mobile-nav-download a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-radius: 10px;
+            padding: 4px;
+        }
+
+        .mobile-nav-download a:hover,
+        .mobile-nav-download a:active {
+            transform: scale(1.03);
+            filter: brightness(1.1);
+        }
+
+        .mobile-nav-download a img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .mobile-nav-footer {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            opacity: 0;
+            transition: opacity 0.5s 0.5s ease;
+        }
+
+        .mobile-nav-overlay.open .mobile-nav-footer {
+            opacity: 1;
+        }
+
+        .mobile-nav-footer p {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.2);
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        /* Lock body scroll when menu is open */
+        body.menu-open {
+            overflow: hidden;
+        }
+
+        /* === MOBILE RESPONSIVE === */
         @media (max-width: 768px) {
             nav { padding: 0 20px; }
             .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
+            .mobile-menu-btn { display: flex; }
             .features { padding: 80px 20px; }
             .stats { gap: 40px; padding: 60px 20px; }
             .cta-box { padding: 48px 24px; }
@@ -1086,28 +1322,6 @@
             .comparison-card { padding: 24px 16px; }
             .comp-label { width: 90px; font-size: 0.78rem; }
             .optim-grid { grid-template-columns: 1fr; }
-
-            .mobile-nav {
-                display: none;
-                position: fixed;
-                inset: 0;
-                z-index: 99;
-                background: rgba(5,5,7,0.96);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 24px;
-            }
-
-            .mobile-nav.open { display: flex; }
-
-            .mobile-nav a {
-                color: #fff;
-                text-decoration: none;
-                font-size: 1.2rem;
-                font-weight: 600;
-            }
         }
 
         @media (max-width: 480px) {
@@ -1121,14 +1335,42 @@
 
 <canvas id="bg-canvas"></canvas>
 
-<!-- Mobile Nav -->
-<div class="mobile-nav" id="mobileNav">
-    <a href="#features" onclick="closeMobileNav()">Features</a>
-    <a href="#performance" onclick="closeMobileNav()">Performance</a>
-    <a href="#screenshots" onclick="closeMobileNav()">Screenshots</a>
-    <a href="support.html" onclick="closeMobileNav()">Support</a>
-    <a href="privacy.html" onclick="closeMobileNav()">Privacy</a>
-    <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" onclick="closeMobileNav()" target="_blank" rel="noopener">Download</a>
+<!-- Mobile Nav Overlay -->
+<div class="mobile-nav-overlay" id="mobileNav">
+    <div class="mobile-nav-backdrop" onclick="closeMobileNav()"></div>
+    <div class="mobile-nav-panel">
+        <div class="mobile-nav-download">
+            <a href="https://apps.apple.com/app/macdio/id6761737888?mt=12" target="_blank" rel="noopener" onclick="closeMobileNav()" aria-label="Download Macdio on the Mac App Store">
+                <img src="download_button_light.svg" alt="Download on the Mac App Store" style="height: 44px; width: auto; display: block;">
+            </a>
+        </div>
+        <div class="mobile-nav-divider"></div>
+        <div class="mobile-nav-links">
+            <a href="#features" class="mobile-nav-link" onclick="closeMobileNav()">
+                <div class="mobile-nav-icon feat">✦</div>
+                <span class="mobile-nav-link-text">Features</span>
+            </a>
+            <a href="#performance" class="mobile-nav-link" onclick="closeMobileNav()">
+                <div class="mobile-nav-icon perf">⚡</div>
+                <span class="mobile-nav-link-text">Performance</span>
+            </a>
+            <a href="#screenshots" class="mobile-nav-link" onclick="closeMobileNav()">
+                <div class="mobile-nav-icon screen">🖼</div>
+                <span class="mobile-nav-link-text">Screenshots</span>
+            </a>
+            <a href="support.html" class="mobile-nav-link" onclick="closeMobileNav()">
+                <div class="mobile-nav-icon support">💬</div>
+                <span class="mobile-nav-link-text">Support</span>
+            </a>
+            <a href="privacy.html" class="mobile-nav-link" onclick="closeMobileNav()">
+                <div class="mobile-nav-icon privacy">🔒</div>
+                <span class="mobile-nav-link-text">Privacy</span>
+            </a>
+        </div>
+        <div class="mobile-nav-footer">
+            <p>Native macOS Radio Player<br>4.9 MB · 60 MB RAM · 30,000+ Stations</p>
+        </div>
+    </div>
 </div>
 
 <!-- Navigation -->
@@ -1147,7 +1389,13 @@
             <img src="download_button_light.svg" alt="Download on the Mac App Store" style="height:36px; width:auto; display:block;">
         </a>
     </div>
-    <button class="mobile-menu-btn" onclick="toggleMobileNav()" aria-label="Menu">☰</button>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileNav()" aria-label="Menu">
+        <div class="hamburger-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </button>
 </nav>
 
 <!-- Hero -->
@@ -1487,6 +1735,36 @@
 </footer>
 
 <script>
+// ============ Mobile Menu (Global Scope) ============
+function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    const btn = document.getElementById('mobileMenuBtn');
+    const isOpen = nav.classList.contains('open');
+
+    if (isOpen) {
+        closeMobileNav();
+    } else {
+        nav.classList.add('open');
+        btn.classList.add('active');
+        document.body.classList.add('menu-open');
+    }
+}
+
+function closeMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    const btn = document.getElementById('mobileMenuBtn');
+    nav.classList.remove('open');
+    btn.classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeMobileNav();
+});
+</script>
+
+<script>
 // ============ Three.js — Audio-Waveform Inspired Background ============
 // Deferred: wait for three.js to load before initializing
 function initThreeBackground() {
@@ -1644,13 +1922,8 @@ const counterObs = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-count]').forEach(c => counterObs.observe(c));
 
-// ============ Mobile Menu ============
-function toggleMobileNav() {
-    document.getElementById('mobileNav').classList.toggle('open');
-}
-function closeMobileNav() {
-    document.getElementById('mobileNav').classList.remove('open');
-}
+// ============ Mobile Menu (moved outside initThreeBackground for global scope) ============
+// Placeholder - actual functions are defined in a separate script block above
 
 // ============ Lightbox ============
 function openLightbox(item) {
