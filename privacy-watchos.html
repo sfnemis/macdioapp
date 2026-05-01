@@ -12,7 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root{--bg:#050507;--surface:rgba(14,14,18,0.8);--border:rgba(255,255,255,0.06);--text:#e8e8ed;--text-secondary:#7a7a8c;--accent:#6366f1;}
+        :root{--bg:#050507;--surface:rgba(14,14,18,0.8);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--text:#e8e8ed;--text-secondary:#7a7a8c;--accent:#6366f1;}
+        .back-link{display:inline-flex;align-items:center;gap:8px;color:var(--accent);text-decoration:none;font-size:0.88rem;font-weight:600;margin-bottom:20px;padding:8px 16px;border-radius:10px;background:rgba(99,102,241,0.06);border:1px solid rgba(99,102,241,0.12);transition:all 0.25s ease;}
+        .back-link:hover{background:rgba(99,102,241,0.12);border-color:rgba(99,102,241,0.3);transform:translateX(-2px);}
+        .back-link svg{width:16px;height:16px;}
+        .platform-nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:32px;}
+        .platform-nav a{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:10px;font-size:0.82rem;font-weight:600;text-decoration:none;border:1px solid var(--border);color:var(--text-secondary);background:rgba(255,255,255,0.02);transition:all 0.25s ease;}
+        .platform-nav a:hover{border-color:var(--border-hover);color:#fff;background:rgba(255,255,255,0.05);}
+        .platform-nav a.current{background:rgba(99,102,241,0.1);border-color:rgba(99,102,241,0.3);color:var(--accent);pointer-events:none;}
         *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
         body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;}
         .bg-glow{position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 50% 40% at 20% 20%,rgba(99,102,241,0.06) 0%,transparent 100%),radial-gradient(ellipse 40% 50% at 80% 80%,rgba(168,85,247,0.04) 0%,transparent 100%);}
@@ -49,11 +56,18 @@
     <button class="mobile-menu-btn" aria-label="Menu">☰</button>
 </nav>
 <main class="page-content">
+    <a href="privacy.html" class="back-link fade-in"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg> All Platforms</a>
     <div class="page-header fade-in">
         <div class="platform-badge">⌚ watchOS · Apple Watch</div>
         <p class="section-label">Legal</p>
         <h1 class="page-title">Privacy Policy — watchOS</h1>
         <p class="page-meta">Last updated: May 1, 2026</p>
+    </div>
+    <div class="platform-nav fade-in">
+        <a href="privacy-ios.html">📱 iOS</a>
+        <a href="privacy-macos.html">🖥 macOS</a>
+        <a href="privacy-tvos.html">📺 tvOS</a>
+        <a href="privacy-watchos.html" class="current">⌚ watchOS</a>
     </div>
     <div class="policy-card fade-in fade-in-delay">
         <div class="policy-section"><h2>📋 Overview</h2><p>Macdio for Apple Watch is designed with your privacy in mind. We do not collect, store, or share any personal data.</p></div>
