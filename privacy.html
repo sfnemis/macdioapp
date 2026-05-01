@@ -11,9 +11,9 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Macdio | Internet Radio Player for Mac</title>
-    <meta name="description" content="Macdio Privacy Policy — We do not collect, store, or share any personal data. Your radio stations, recordings, and preferences stay entirely on your device.">
-    <meta name="keywords" content="macdio privacy policy, mac radio app privacy, macdio data collection, internet radio privacy">
+    <title>Privacy Policy — Macdio | Internet Radio for All Apple Devices</title>
+    <meta name="description" content="Macdio Privacy Policy — We do not collect, store, or share any personal data. View platform-specific policies for iOS, macOS, tvOS, and watchOS.">
+    <meta name="keywords" content="macdio privacy policy, macdio ios privacy, macdio mac privacy, radio app privacy, internet radio privacy">
     <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#050507">
     <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
@@ -268,7 +268,39 @@
             .mobile-menu-btn { display: block; }
             .page-content { padding: 120px 20px 60px; }
             .policy-card { padding: 28px; }
+            .platform-cards { grid-template-columns: 1fr; }
         }
+
+        .platform-cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-bottom: 48px;
+        }
+
+        .platform-link {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 20px 24px;
+            background: var(--surface);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text);
+            transition: all 0.3s ease;
+        }
+
+        .platform-link:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        }
+
+        .platform-link .pl-icon { font-size: 1.6rem; }
+        .platform-link .pl-name { font-weight: 700; font-size: 0.95rem; }
+        .platform-link .pl-arrow { margin-left: auto; color: var(--text-secondary); font-size: 1.2rem; }
     </style>
 </head>
 <body>
@@ -294,14 +326,38 @@
     <div class="page-header fade-in">
         <p class="section-label">Legal</p>
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-meta">Last updated: April 7, 2026</p>
+        <p class="page-meta">Last updated: May 1, 2026</p>
+    </div>
+
+    <!-- Platform-Specific Privacy Pages -->
+    <div class="platform-cards fade-in">
+        <a href="privacy-ios.html" class="platform-link">
+            <span class="pl-icon">📱</span>
+            <span class="pl-name">iOS · iPhone · iPad · CarPlay</span>
+            <span class="pl-arrow">→</span>
+        </a>
+        <a href="privacy-macos.html" class="platform-link">
+            <span class="pl-icon">🖥</span>
+            <span class="pl-name">macOS</span>
+            <span class="pl-arrow">→</span>
+        </a>
+        <a href="privacy-tvos.html" class="platform-link">
+            <span class="pl-icon">📺</span>
+            <span class="pl-name">tvOS · Apple TV</span>
+            <span class="pl-arrow">→</span>
+        </a>
+        <a href="privacy-watchos.html" class="platform-link">
+            <span class="pl-icon">⌚</span>
+            <span class="pl-name">watchOS · Apple Watch</span>
+            <span class="pl-arrow">→</span>
+        </a>
     </div>
 
     <div class="policy-card fade-in fade-in-delay">
 
         <div class="policy-section">
-            <h2>📋 Overview</h2>
-            <p>Macdio ("the App") is designed with your privacy in mind. We do not collect, store, or share any personal data. This privacy policy explains how the App handles your information.</p>
+            <h2>📋 General Overview</h2>
+            <p>Macdio ("the App") is designed with your privacy in mind. We do not collect, store, or share any personal data. For platform-specific details, please use the links above. Below is our general privacy policy that applies across all platforms.</p>
         </div>
 
         <div class="divider"></div>
