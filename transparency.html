@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QR2MZ9NF2N');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparency — Macdio | Internet Radio for All Apple Devices</title>
+    <meta name="description" content="How Macdio is built, what data sources it uses, and who's behind it. A solo-developer project built with SwiftUI for every Apple platform.">
+    <meta name="keywords" content="macdio transparency, macdio developer, open source radio, radio app data sources, lrclib, radio browser">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050507">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+    <link rel="apple-touch-icon" href="assets/app-icon.png">
+    <link rel="canonical" href="https://macdio.app/transparency.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050507;
+            --surface: rgba(14, 14, 18, 0.8);
+            --surface-solid: #0e0e12;
+            --border: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
+            --text: #e8e8ed;
+            --text-secondary: #7a7a8c;
+            --accent: #6366f1;
+            --accent-2: #a855f7;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+        }
+
+        .bg-glow {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse 50% 40% at 20% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 100%),
+                radial-gradient(ellipse 40% 50% at 80% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 100%);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            padding: 0 48px;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            background: rgba(5, 5, 7, 0.8);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
+        .nav-brand span { font-size: 1.1rem; font-weight: 700; }
+
+        .nav-links { display: flex; gap: 28px; align-items: center; }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: #fff; }
+        .nav-links a.active { color: #fff; }
+
+        .nav-cta {
+            background: #fff !important;
+            color: #000 !important;
+            padding: 8px 20px !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+            font-size: 0.85rem !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 102;
+        }
+
+        /* Mobile menu overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            z-index: 99;
+            background: rgba(5, 5, 7, 0.96);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            padding: 16px 24px 20px;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .mobile-menu.open { display: flex; }
+
+        .mobile-menu a {
+            display: block;
+            padding: 12px 16px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.92rem;
+            font-weight: 500;
+            border-radius: 10px;
+            transition: all 0.15s;
+        }
+
+        .mobile-menu a:hover,
+        .mobile-menu a.active {
+            color: #fff;
+            background: rgba(255,255,255,0.04);
+        }
+
+        .mobile-menu .mm-cta {
+            margin-top: 8px;
+            background: #fff;
+            color: #000;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Page */
+        .page-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 140px 24px 80px;
+        }
+
+        .page-header { margin-bottom: 56px; }
+
+        .section-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .page-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+            line-height: 1.1;
+        }
+
+        .page-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Sections */
+        .tr-section {
+            margin-bottom: 48px;
+        }
+
+        .tr-section h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .tr-section p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .tr-section p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tr-section a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .tr-section a:hover { text-decoration: underline; }
+
+        /* Data source cards */
+        .ds-cards {
+            display: grid;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .ds-card {
+            background: var(--surface);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 22px 26px;
+            transition: border-color 0.3s ease;
+        }
+
+        .ds-card:hover {
+            border-color: var(--border-hover);
+        }
+
+        .ds-card h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .ds-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .ds-card .ds-url {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 0.78rem;
+            color: var(--accent);
+            opacity: 0.8;
+        }
+
+        /* Dependencies table */
+        .deps-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 16px;
+        }
+
+        .deps-table th {
+            text-align: left;
+            padding: 14px 18px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            border-bottom: 1px solid var(--border);
+            background: rgba(255,255,255,0.015);
+        }
+
+        .deps-table td {
+            padding: 12px 18px;
+            font-size: 0.85rem;
+            color: var(--text);
+            border-bottom: 1px solid rgba(255,255,255,0.03);
+        }
+
+        .deps-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .deps-table td a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .deps-table td a:hover { text-decoration: underline; }
+
+        .dep-type {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            padding: 3px 8px;
+            border-radius: 6px;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent);
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: #fff; }
+        footer p { color: #444; font-size: 0.8rem; }
+
+        /* Animations */
+        .fade-in { animation: fadeIn 0.6s ease both; }
+        .fade-in-d1 { animation-delay: 0.1s; }
+        .fade-in-d2 { animation-delay: 0.2s; }
+        .fade-in-d3 { animation-delay: 0.3s; }
+        .fade-in-d4 { animation-delay: 0.4s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 768px) {
+            nav { padding: 0 20px; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .page-content { padding: 120px 20px 60px; }
+            .deps-table th,
+            .deps-table td { padding: 10px 12px; font-size: 0.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<nav>
+    <a href="index.html" class="nav-brand">
+        <img src="assets/app-icon.png" alt="Macdio" width="32" height="32">
+        <span>Macdio</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#screenshots">Screenshots</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="transparency.html" class="active">Transparency</a>
+        <a href="submit-station.html">Submit Station</a>
+        <a href="https://apps.apple.com/app/macdio/id6761737888" class="nav-cta" target="_blank" rel="noopener">Download</a>
+    </div>
+    <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#compare">Compare</a>
+    <a href="index.html#screenshots">Screenshots</a>
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="transparency.html" class="active">Transparency</a>
+    <a href="submit-station.html">Submit Station</a>
+    <a href="https://apps.apple.com/app/macdio/id6761737888" class="mm-cta" target="_blank" rel="noopener">Download</a>
+</div>
+
+<main class="page-content">
+    <div class="page-header fade-in">
+        <p class="section-label">Transparency</p>
+        <h1 class="page-title">How Macdio is built.</h1>
+        <p class="page-desc">Macdio is a solo project. I want to be upfront about how the app works, what data it touches, and what goes into building it.</p>
+    </div>
+
+    <!-- Who -->
+    <div class="tr-section fade-in fade-in-d1">
+        <h2>Who builds Macdio</h2>
+        <p>Macdio is a solo-developer project by <strong>Sait Fırat Nemis</strong>. There’s no company behind it, no team, no investors. Just one person building a radio app that felt missing from the App Store.</p>
+        <p>I handle the SwiftUI code across all six platforms, the website, App Store presence, and the support inbox. If you email <a href="mailto:firat@nemis.me">firat@nemis.me</a>, you’re reaching me directly.</p>
+    </div>
+
+    <!-- How it's built -->
+    <div class="tr-section fade-in fade-in-d2">
+        <h2>How it’s built</h2>
+        <p>Macdio is 100% native Swift and SwiftUI. No Electron, no React Native, no web views. Every screen is written specifically for the platform it runs on — iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay.</p>
+        <p>Like most developers in 2026, I use AI-assisted tools as part of my workflow — for exploring edge cases, prototyping ideas, and working through tricky debugging sessions. But the core architecture, the design decisions, the performance tuning, and the final shipped code all come from deliberate research and hands-on iteration. I care about getting the details right, and that means understanding every layer of the stack rather than accepting whatever a tool generates.</p>
+    </div>
+
+    <!-- Data Sources -->
+    <div class="tr-section fade-in fade-in-d3">
+        <h2>Data sources & APIs</h2>
+        <p>Macdio doesn't have its own station database. It relies on public APIs to provide station listings, now-playing metadata, and lyrics. Here's what the app talks to:</p>
+
+        <div class="ds-cards">
+            <div class="ds-card">
+                <h3>Radio Browser</h3>
+                <p>Community-maintained database of internet radio stations. Provides station metadata, stream URLs, country info, and genre tags. This is where the 30,000+ station catalog comes from.</p>
+                <a class="ds-url" href="https://www.radio-browser.info" target="_blank" rel="noopener">radio-browser.info ↗</a>
+            </div>
+            <div class="ds-card">
+                <h3>iTunes Search API</h3>
+                <p>Apple's public search API, used to enrich now-playing information — fetching album artwork, release year, and album name based on the track metadata that radio stations broadcast.</p>
+                <a class="ds-url" href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/" target="_blank" rel="noopener">iTunes Search API documentation ↗</a>
+            </div>
+            <div class="ds-card">
+                <h3>LRCLIB</h3>
+                <p>Open-source, free lyrics API. Provides synchronized (LRC format) and plain-text lyrics for the currently playing song. No API key required, no tracking.</p>
+                <a class="ds-url" href="https://lrclib.net" target="_blank" rel="noopener">lrclib.net ↗</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dependencies -->
+    <div class="tr-section fade-in fade-in-d4">
+        <h2>Dependencies</h2>
+        <p>Macdio has a minimal dependency footprint. The app itself uses zero third-party Swift packages — it's built entirely with Apple's frameworks (SwiftUI, SwiftData, AVFoundation, CloudKit, MediaPlayer).</p>
+        <p>This website uses:</p>
+
+        <table class="deps-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Purpose</th>
+                    <th>Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="https://threejs.org" target="_blank" rel="noopener">Three.js</a></td>
+                    <td>Animated background on the homepage</td>
+                    <td><span class="dep-type">Web / CDN</span></td>
+                </tr>
+                <tr>
+                    <td><a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Inter</a></td>
+                    <td>Typography (via Google Fonts)</td>
+                    <td><span class="dep-type">Web / CDN</span></td>
+                </tr>
+                <tr>
+                    <td><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></td>
+                    <td>Anonymous page view analytics (website only)</td>
+                    <td><span class="dep-type">Web / CDN</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Changelog -->
+    <div class="tr-section fade-in fade-in-d4">
+        <h2>Changelog</h2>
+        <p>Macdio's full version history and release notes are available on the <a href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store listing</a>. Every update describes exactly what changed.</p>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#features">Features</a>
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="accessibility.html">Accessibility</a>
+        <a href="transparency.html">Transparency</a>
+        <a href="submit-station.html">Submit Station</a>
+        <a href="mailto:firat@nemis.me">Contact</a>
+    </div>
+    <p>© 2026 SFN. All rights reserved.</p>
+</footer>
+
+<script>
+var menuBtn = document.getElementById('menuBtn');
+var mobileMenu = document.getElementById('mobileMenu');
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener('click', function() {
+        var isOpen = mobileMenu.classList.toggle('open');
+        menuBtn.textContent = isOpen ? '✕' : '☰';
+    });
+}
+</script>
+
+</body>
+</html>
