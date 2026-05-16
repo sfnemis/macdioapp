@@ -1,2515 +1,836 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QR2MZ9NF2N');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macdio — Internet Radio for iPhone, Mac, iPad, Apple TV & Apple Watch</title>
-    <meta name="description" content="Macdio is the best native internet radio player for all Apple devices. Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch & CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
-    <meta name="keywords" content="radio player iphone, internet radio app, mac radio player, radio app ipad, apple tv radio, apple watch radio, carplay radio, internet radio recorder, synced lyrics radio, icloud sync radio, radio streaming app, best radio app iphone, radio player for mac, sleep timer radio, radio browser, TuneIn alternative, myTuner alternative, native radio app apple">
-    <meta name="author" content="SFN">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#050507">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Macdio — Internet Radio for All Apple Devices">
-    <meta property="og:description" content="Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch & CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
-    <meta property="og:image" content="https://macdio.app/assets/app-icon.png">
-    <meta property="og:url" content="https://macdio.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Macdio">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Macdio — Radio for iPhone, Mac, iPad, Apple TV & Watch">
-    <meta name="twitter:description" content="Stream 55,000+ stations everywhere. Record live radio, synced lyrics, iCloud sync. Available on all Apple devices.">
-    <meta name="twitter:image" content="https://macdio.app/assets/app-icon.png">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
-    <link rel="apple-touch-icon" href="assets/app-icon.png">
-
-    <!-- Canonical -->
-    <link rel="canonical" href="https://macdio.app/">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Macdio",
-      "operatingSystem": "iOS, macOS, tvOS, watchOS",
-      "applicationCategory": "MultimediaApplication",
-      "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio, view synced lyrics, and sync via iCloud across iPhone, iPad, Mac, Apple TV, Apple Watch & CarPlay.",
-      "url": "https://macdio.app",
-      "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
-      "softwareVersion": "1.0",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      }
-    }
-    </script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <style>
-        :root {
-            --bg: #050507;
-            --surface: rgba(14, 14, 18, 0.8);
-            --surface-solid: #0e0e12;
-            --surface-2: #16161c;
-            --border: rgba(255,255,255,0.06);
-            --border-hover: rgba(255,255,255,0.12);
-            --text: #e8e8ed;
-            --text-secondary: #7a7a8c;
-            --accent: #6366f1;
-            --accent-2: #a855f7;
-            --accent-3: #ec4899;
-            --glow: rgba(99, 102, 241, 0.12);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* Three.js Canvas */
-        #bg-canvas {
-            position: fixed;
-            inset: 0;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* === NAVIGATION === */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 0 48px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            background: rgba(5, 5, 7, 0.6);
-            border-bottom: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        nav.scrolled { background: rgba(5, 5, 7, 0.92); }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
-        .nav-brand span { font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: #fff; }
-
-        .nav-cta {
-            background: #fff !important;
-            color: #000 !important;
-            padding: 8px 20px !important;
-            border-radius: 8px !important;
-            font-weight: 600 !important;
-            font-size: 0.85rem !important;
-            transition: all 0.2s !important;
-        }
-
-        .nav-cta:hover { opacity: 0.9; transform: scale(1.02); }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            cursor: pointer;
-            z-index: 201;
-            width: 44px;
-            height: 44px;
-            position: relative;
-            align-items: center;
-            justify-content: center;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .hamburger-lines {
-            width: 22px;
-            height: 16px;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .hamburger-lines span {
-            display: block;
-            width: 100%;
-            height: 2px;
-            background: #fff;
-            border-radius: 2px;
-            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-            transform-origin: center;
-        }
-
-        .mobile-menu-btn.active .hamburger-lines span:nth-child(1) {
-            transform: translateY(7px) rotate(45deg);
-        }
-
-        .mobile-menu-btn.active .hamburger-lines span:nth-child(2) {
-            opacity: 0;
-            transform: scaleX(0);
-        }
-
-        .mobile-menu-btn.active .hamburger-lines span:nth-child(3) {
-            transform: translateY(-7px) rotate(-45deg);
-        }
-
-        /* === HERO === */
-        .hero {
-            position: relative;
-            z-index: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 100px 24px 40px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(99, 102, 241, 0.08);
-            border: 1px solid rgba(99, 102, 241, 0.2);
-            border-radius: 100px;
-            padding: 6px 18px;
-            font-size: 0.82rem;
-            color: var(--accent);
-            font-weight: 500;
-            margin-bottom: 24px;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero-badge .dot {
-            width: 6px; height: 6px;
-            background: #34d399;
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.3; }
-        }
-
-        .hero-icon {
-            width: 112px; height: 112px;
-            border-radius: 26px;
-            margin-bottom: 36px;
-            box-shadow: 0 20px 80px rgba(0,0,0,0.5), 0 0 100px var(--glow);
-            animation: fadeInUp 0.8s ease 0.1s both, float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .hero h1 {
-            font-size: clamp(2.8rem, 6.5vw, 5rem);
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1.08;
-            margin-bottom: 20px;
-            animation: fadeInUp 0.8s ease 0.2s both;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1, #a855f7, #ec4899, #6366f1);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: gradientShift 6s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero-sub {
-            font-size: clamp(1rem, 1.8vw, 1.25rem);
-            color: var(--text-secondary);
-            max-width: 520px;
-            line-height: 1.7;
-            margin-bottom: 44px;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            flex-wrap: wrap;
-            justify-content: center;
-            animation: fadeInUp 0.8s ease 0.4s both;
-        }
-
-        .btn-appstore {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #fff;
-            color: #000;
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-appstore:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 40px rgba(255,255,255,0.12);
-        }
-
-        .btn-appstore svg { width: 20px; height: 20px; }
-
-        .btn-appstore-svg {
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.3s ease, filter 0.3s ease;
-        }
-
-        .btn-appstore-svg:hover {
-            transform: translateY(-3px);
-            filter: drop-shadow(0 8px 24px rgba(255,255,255,0.18));
-        }
-
-        .btn-secondary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: transparent;
-            color: var(--text);
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255,255,255,0.04);
-            border-color: var(--border-hover);
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* === PLATFORM TABS === */
-        .platform-tabs {
-            display: flex;
-            justify-content: center;
-            gap: 6px;
-            margin-bottom: 48px;
-            padding: 0 24px;
-            flex-wrap: wrap;
-        }
-
-        .platform-tab {
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-            padding: 10px 20px;
-            border-radius: 100px;
-            border: 1px solid var(--border);
-            background: transparent;
-            color: var(--text-secondary);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .platform-tab:hover {
-            border-color: var(--border-hover);
-            color: var(--text);
-            background: rgba(255,255,255,0.03);
-        }
-
-        .platform-tab.active {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            border-color: transparent;
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .platform-tab .tab-icon { font-size: 1rem; }
-
-        .platform-gallery { display: none; }
-        .platform-gallery.active { display: block; }
-
-        /* Watch/CarPlay: smaller items */
-        .screenshots-grid.watch-grid {
-            grid-template-columns: repeat(4, 1fr);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .screenshots-grid.watch-grid .screenshot-item img {
-            border-radius: 20px;
-        }
-        .screenshots-grid.carplay-grid {
-            grid-template-columns: 1fr;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* === SCREENSHOTS === */
-        .screenshots {
-            position: relative;
-            z-index: 1;
-            padding: 80px 0 120px;
-        }
-
-        .screenshots-header {
-            text-align: center;
-            margin-bottom: 56px;
-            padding: 0 24px;
-        }
-
-        .screenshots-wrapper {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
-
-        .screenshots-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 28px;
-            align-items: start;
-        }
-
-        .screenshot-item {
-            position: relative;
-            cursor: pointer;
-            border-radius: 14px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            background: var(--surface-solid);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .screenshot-item:hover {
-            transform: translateY(-6px);
-            border-color: rgba(99, 102, 241, 0.2);
-            box-shadow: 0 24px 64px rgba(0,0,0,0.35), 0 0 40px var(--glow);
-        }
-
-        .screenshot-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        .screenshot-item:hover img {
-            transform: scale(1.02);
-        }
-
-        .screenshot-meta {
-            padding: 14px 18px;
-            background: var(--surface-solid);
-            border-top: 1px solid var(--border);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .screenshot-label {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .screenshot-hint {
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 4px;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-
-        .screenshot-item:hover .screenshot-hint {
-            opacity: 1;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, 0.92);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            cursor: zoom-out;
-            padding: 40px;
-            animation: lbFadeIn 0.3s ease;
-        }
-
-        .lightbox.active { display: flex; }
-
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 85vh;
-            border-radius: 12px;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.6);
-            animation: lbZoomIn 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 24px;
-            right: 32px;
-            color: #fff;
-            font-size: 1.6rem;
-            cursor: pointer;
-            width: 44px; height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
-            transition: background 0.2s;
-        }
-
-        .lightbox-close:hover { background: rgba(255,255,255,0.15); }
-
-        .lightbox-caption {
-            position: absolute;
-            bottom: 32px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-align: center;
-        }
-
-        .lightbox-counter {
-            position: absolute;
-            top: 28px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: rgba(255,255,255,0.5);
-            letter-spacing: 0.08em;
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 48px;
-            height: 48px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
-            color: #fff;
-            font-size: 1.3rem;
-            cursor: pointer;
-            transition: all 0.25s ease;
-            z-index: 1001;
-            user-select: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .lightbox-nav:hover {
-            background: rgba(255,255,255,0.18);
-            transform: translateY(-50%) scale(1.08);
-        }
-
-        .lightbox-nav:active {
-            transform: translateY(-50%) scale(0.95);
-        }
-
-        .lightbox-prev { left: 20px; }
-        .lightbox-next { right: 20px; }
-
-        .lightbox img {
-            transition: opacity 0.2s ease;
-        }
-
-        .lightbox img.lb-fade {
-            opacity: 0;
-        }
-
-        @media (max-width: 768px) {
-            .lightbox-nav {
-                width: 40px;
-                height: 40px;
-                font-size: 1.1rem;
-            }
-            .lightbox-prev { left: 8px; }
-            .lightbox-next { right: 8px; }
-            .lightbox { padding: 20px 12px; }
-        }
-
-        @keyframes lbFadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes lbZoomIn {
-            from { opacity: 0; transform: scale(0.92); }
-            to { opacity: 1; transform: scale(1); }
-        }
-
-        /* === FEATURES === */
-        .features {
-            position: relative;
-            z-index: 1;
-            padding: 120px 48px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 14px;
-            line-height: 1.1;
-        }
-
-        .section-desc {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 520px;
-            line-height: 1.7;
-            margin-bottom: 56px;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 16px;
-        }
-
-        .feature-card {
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 32px;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .feature-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 16px;
-            padding: 1px;
-            background: linear-gradient(135deg, transparent 40%, rgba(99, 102, 241, 0.3), transparent 60%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(99, 102, 241, 0.15);
-            box-shadow: 0 24px 48px rgba(0,0,0,0.2);
-        }
-
-        .feature-card:hover::after { opacity: 1; }
-
-        .feature-icon {
-            font-size: 1.6rem;
-            margin-bottom: 14px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px; height: 44px;
-            background: rgba(99, 102, 241, 0.08);
-            border-radius: 12px;
-        }
-
-        .feature-card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: #fff;
-        }
-
-        .feature-card p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        /* === STATS === */
-        .stats {
-            position: relative;
-            z-index: 1;
-            padding: 40px 48px;
-            display: flex;
-            justify-content: center;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .stat { text-align: center; }
-
-        .stat-number {
-            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .stat-label {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            margin-top: 4px;
-            font-weight: 500;
-        }
-
-        /* === CTA === */
-        .cta {
-            position: relative;
-            z-index: 1;
-            text-align: center;
-            padding: 100px 24px 120px;
-        }
-
-        .cta-box {
-            max-width: 640px;
-            margin: 0 auto;
-            background: var(--surface);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 64px 48px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-box::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -50%;
-            width: 200%; height: 200%;
-            background: radial-gradient(ellipse, var(--glow) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .cta-box h2 {
-            font-size: 2rem;
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            position: relative;
-        }
-
-        .cta-box p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            margin-bottom: 32px;
-            position: relative;
-        }
-
-        .cta-box .btn-appstore { position: relative; }
-
-        /* === FOOTER === */
-        footer {
-            position: relative;
-            z-index: 1;
-            padding: 48px 24px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 16px;
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        footer a:hover { color: #fff; }
-
-        footer p {
-            color: #444;
-            font-size: 0.8rem;
-        }
-
-        /* === PERFORMANCE SECTION === */
-        .performance {
-            position: relative;
-            z-index: 1;
-            padding: 120px 48px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .perf-header {
-            text-align: center;
-            margin-bottom: 64px;
-        }
-
-        .perf-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(52, 211, 153, 0.08);
-            border: 1px solid rgba(52, 211, 153, 0.2);
-            border-radius: 100px;
-            padding: 6px 18px;
-            font-size: 0.82rem;
-            color: #34d399;
-            font-weight: 600;
-            margin-bottom: 24px;
-            letter-spacing: 0.04em;
-        }
-
-        .perf-badge .check { font-size: 0.9rem; }
-
-        /* Benchmark Cards Grid */
-        .benchmark-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            margin-bottom: 48px;
-        }
-
-        .benchmark-card {
-            background: var(--surface);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 32px 28px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .benchmark-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2), transparent);
-            opacity: 0;
-            transition: opacity 0.4s;
-        }
-
-        .benchmark-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(99, 102, 241, 0.2);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25), 0 0 40px var(--glow);
-        }
-
-        .benchmark-card:hover::before { opacity: 1; }
-
-        .bench-icon {
-            width: 52px;
-            height: 52px;
-            margin: 0 auto 16px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-        }
-
-        .bench-icon.cpu { background: rgba(99, 102, 241, 0.1); }
-        .bench-icon.memory { background: rgba(168, 85, 247, 0.1); }
-        .bench-icon.leak { background: rgba(52, 211, 153, 0.1); }
-        .bench-icon.size { background: rgba(236, 72, 153, 0.1); }
-        .bench-icon.launch { background: rgba(251, 191, 36, 0.1); }
-        .bench-icon.threads { background: rgba(59, 130, 246, 0.1); }
-
-        .bench-value {
-            font-size: 2.4rem;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin-bottom: 4px;
-        }
-
-        .bench-value.green { color: #34d399; }
-        .bench-value.blue {
-            background: linear-gradient(135deg, var(--accent), var(--accent-2));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .bench-value.pink {
-            background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .bench-unit {
-            font-size: 1.1rem;
-            font-weight: 400;
-            opacity: 0.6;
-        }
-
-        .bench-label {
-            font-size: 0.88rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 4px;
-        }
-
-        .bench-desc {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        .bench-pass {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 12px;
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: #34d399;
-            background: rgba(52, 211, 153, 0.08);
-            padding: 4px 12px;
-            border-radius: 100px;
-        }
-
-        /* Memory Comparison */
-        .comparison-section {
-            margin-top: 12px;
-            margin-bottom: 48px;
-        }
-
-        .comparison-card {
-            background: var(--surface);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .comparison-card::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            border-radius: 20px;
-            padding: 1px;
-            background: linear-gradient(135deg, transparent 30%, rgba(99, 102, 241, 0.2), transparent 70%);
-            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-            -webkit-mask-composite: xor;
-            mask-composite: exclude;
-            pointer-events: none;
-        }
-
-        .comparison-title {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-secondary);
-            margin-bottom: 28px;
-        }
-
-        .comparison-row {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .comparison-row:last-child { margin-bottom: 0; }
-
-        .comp-label {
-            width: 130px;
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            flex-shrink: 0;
-        }
-
-        .comp-label.highlight {
-            color: #fff;
-            font-weight: 700;
-        }
-
-        .comp-bar-track {
-            flex: 1;
-            height: 28px;
-            background: rgba(255,255,255,0.03);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .comp-bar {
-            height: 100%;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            padding-left: 12px;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: #fff;
-            transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-            width: 0;
-        }
-
-        .comp-bar.macdio {
-            background: linear-gradient(90deg, var(--accent), var(--accent-2));
-            box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-        }
-
-        .comp-bar.other {
-            background: rgba(255,255,255,0.08);
-            color: var(--text-secondary);
-        }
-
-        .comp-value {
-            margin-left: auto;
-            padding-right: 12px;
-            font-size: 0.78rem;
-            font-weight: 700;
-        }
-
-        /* All Tests Passed Banner */
-        .tests-banner {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-            margin-bottom: 48px;
-        }
-
-        .test-item {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(52, 211, 153, 0.04);
-            border: 1px solid rgba(52, 211, 153, 0.1);
-            border-radius: 12px;
-            padding: 14px 18px;
-            transition: all 0.3s ease;
-        }
-
-        .test-item:hover {
-            background: rgba(52, 211, 153, 0.08);
-            border-color: rgba(52, 211, 153, 0.2);
-            transform: translateX(4px);
-        }
-
-        .test-check {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            background: rgba(52, 211, 153, 0.15);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            flex-shrink: 0;
-            color: #34d399;
-        }
-
-        .test-info {
-            flex: 1;
-        }
-
-        .test-name {
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: var(--text);
-            margin-bottom: 1px;
-        }
-
-        .test-result {
-            font-size: 0.72rem;
-            color: #34d399;
-            font-weight: 500;
-        }
-
-        /* Optimizations Timeline */
-        .optim-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
-        }
-
-        .optim-card {
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 24px;
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .optim-card:hover {
-            border-color: rgba(168, 85, 247, 0.2);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px rgba(0,0,0,0.15);
-        }
-
-        .optim-impact {
-            flex-shrink: 0;
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.78rem;
-            font-weight: 800;
-            color: #34d399;
-            background: rgba(52, 211, 153, 0.08);
-            border: 1px solid rgba(52, 211, 153, 0.15);
-        }
-
-        .optim-text h4 {
-            font-size: 0.92rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 4px;
-        }
-
-        .optim-text p {
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-        }
-
-        /* Env badge row */
-        .env-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 12px;
-            margin-top: 8px;
-        }
-
-        .env-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(255,255,255,0.03);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 8px 14px;
-            font-size: 0.78rem;
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
-
-        .env-badge .e-icon {
-            font-size: 0.9rem;
-        }
-
-        .env-badge strong {
-            color: var(--text);
-            font-weight: 600;
-        }
-
-        /* === SCROLL REVEAL === */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* === MOBILE MENU OVERLAY === */
-        .mobile-nav-overlay {
-            position: fixed;
-            inset: 0;
-            z-index: 200;
-            visibility: hidden;
-            pointer-events: none;
-        }
-
-        .mobile-nav-overlay.open {
-            visibility: visible;
-            pointer-events: auto;
-        }
-
-        .mobile-nav-backdrop {
-            position: absolute;
-            inset: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .mobile-nav-overlay.open .mobile-nav-backdrop {
-            opacity: 1;
-        }
-
-        .mobile-nav-panel {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: min(300px, 82vw);
-            height: 100%;
-            background: rgba(10, 10, 14, 0.96);
-            backdrop-filter: blur(30px) saturate(180%);
-            -webkit-backdrop-filter: blur(30px) saturate(180%);
-            border-left: 1px solid var(--border);
-            transform: translateX(100%);
-            transition: transform 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-            display: flex;
-            flex-direction: column;
-            padding: 80px 24px 40px;
-            overflow-y: auto;
-        }
-
-        .mobile-nav-overlay.open .mobile-nav-panel {
-            transform: translateX(0);
-        }
-
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-            flex: 1;
-        }
-
-        .mobile-nav-link {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            padding: 13px 16px;
-            border-radius: 10px;
-            transition: color 0.2s, background 0.2s;
-        }
-
-        .mobile-nav-link:hover,
-        .mobile-nav-link:active {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .mobile-nav-divider {
-            height: 1px;
-            background: var(--border);
-            margin: 12px 0;
-        }
-
-        .mobile-nav-download {
-            margin-bottom: 8px;
-        }
-
-        .mobile-nav-download a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            border-radius: 10px;
-            padding: 4px;
-        }
-
-        .mobile-nav-download a img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .mobile-nav-footer {
-            margin-top: auto;
-            padding-top: 16px;
-            border-top: 1px solid var(--border);
-        }
-
-        .mobile-nav-footer p {
-            font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.2);
-            text-align: center;
-            line-height: 1.6;
-        }
-
-        /* Lock body scroll when menu is open */
-        body.menu-open {
-            overflow: hidden;
-        }
-
-        /* === MOBILE RESPONSIVE === */
-        @media (max-width: 768px) {
-            nav { padding: 0 20px; }
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: flex; }
-            .features { padding: 80px 20px; }
-            .stats { gap: 40px; padding: 60px 20px; }
-            .cta-box { padding: 48px 24px; }
-            .screenshots-wrapper { padding: 0 16px; }
-            .screenshots-grid { grid-template-columns: 1fr; }
-            .screenshots-grid.watch-grid { grid-template-columns: repeat(2, 1fr); }
-            .platform-tabs { gap: 4px; }
-            .platform-tab { padding: 8px 14px; font-size: 0.78rem; }
-            .performance { padding: 80px 20px; }
-            .benchmark-grid { grid-template-columns: 1fr; }
-            .comparison-card { padding: 24px 16px; }
-            .comp-label { width: 90px; font-size: 0.78rem; }
-            .optim-grid { grid-template-columns: 1fr; }
-        }
-
-        @media (max-width: 480px) {
-            .benchmark-grid { grid-template-columns: 1fr; gap: 12px; }
-            .tests-banner { grid-template-columns: 1fr; }
-            .env-badges { flex-direction: column; align-items: center; }
-        }
-        /* === COMPARISON TABLE === */
-        .compare {
-            position: relative;
-            z-index: 1;
-            padding: 100px 48px 80px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .compare-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .compare-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            overflow: hidden;
-        }
-
-        .compare-table thead th {
-            padding: 18px 16px;
-            font-size: 0.82rem;
-            font-weight: 700;
-            color: var(--text);
-            text-align: center;
-            border-bottom: 1px solid var(--border);
-            background: rgba(255,255,255,0.02);
-        }
-
-        .compare-table thead th:first-child {
-            text-align: left;
-            padding-left: 24px;
-            color: var(--text-secondary);
-            font-weight: 600;
-        }
-
-        .compare-table thead th.macdio-col {
-            color: var(--accent);
-            position: relative;
-        }
-
-        .compare-table tbody td {
-            padding: 14px 16px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            border-bottom: 1px solid rgba(255,255,255,0.03);
-        }
-
-        .compare-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .compare-table tbody td:first-child {
-            text-align: left;
-            padding-left: 24px;
-            font-weight: 500;
-            color: var(--text);
-        }
-
-        .compare-table tbody td.macdio-col {
-            background: rgba(99, 102, 241, 0.03);
-        }
-
-        .compare-table tbody tr:hover {
-            background: rgba(255,255,255,0.015);
-        }
-
-        .cmp-yes {
-            color: #34d399;
-            font-weight: 600;
-        }
-
-        .cmp-no {
-            color: rgba(255,255,255,0.2);
-        }
-
-        .cmp-price {
-            font-weight: 600;
-            color: var(--text);
-        }
-
-        .compare-note {
-            text-align: center;
-            margin-top: 16px;
-            font-size: 0.75rem;
-            color: var(--text-secondary);
-            opacity: 0.7;
-        }
-
-        @media (max-width: 768px) {
-            .compare { padding: 80px 16px 60px; }
-            .compare-table { font-size: 0.78rem; }
-            .compare-table thead th,
-            .compare-table tbody td { padding: 10px 8px; }
-            .compare-table thead th:first-child,
-            .compare-table tbody td:first-child { padding-left: 12px; }
-            .compare-table thead th { font-size: 0.72rem; }
-            .compare-table tbody td { font-size: 0.75rem; }
-        }
-
-        @media (max-width: 480px) {
-            .compare-table { font-size: 0.7rem; }
-        }
-    </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QR2MZ9NF2N');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macdio — Internet Radio for iPhone, Mac, iPad, Apple TV &amp; Apple Watch</title>
+  <meta name="description" content="Macdio is the best native internet radio player for all Apple devices. Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
+  <meta name="keywords" content="radio player iphone, internet radio app, mac radio player, radio app ipad, apple tv radio, apple watch radio, carplay radio, internet radio recorder, synced lyrics radio, icloud sync radio, radio streaming app, best radio app iphone, radio player for mac, sleep timer radio, TuneIn alternative, native radio app apple">
+  <meta name="author" content="SFN">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050507">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Macdio — Internet Radio for All Apple Devices">
+  <meta property="og:description" content="Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
+  <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="628">
+  <meta property="og:url" content="https://macdio.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Macdio">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Macdio — Radio for iPhone, Mac, iPad, Apple TV &amp; Watch">
+  <meta name="twitter:description" content="Stream 55,000+ stations everywhere. Record live radio, synced lyrics, iCloud sync. Available on all Apple devices.">
+  <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://macdio.app/">
+
+  <!-- Structured Data: App -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Macdio",
+    "operatingSystem": "iOS, macOS, tvOS, watchOS",
+    "applicationCategory": "MultimediaApplication",
+    "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio, view synced lyrics, and sync via iCloud.",
+    "url": "https://macdio.app",
+    "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <!-- Structured Data: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Macdio",
+    "url": "https://macdio.app",
+    "logo": "https://macdio.app/assets/app-icon.png",
+    "sameAs": ["https://hub.macdio.app"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="assets/css/main.css">
+
+  <!-- Three.js (deferred) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
 <canvas id="bg-canvas"></canvas>
 
-<!-- Mobile Nav Overlay -->
-<div class="mobile-nav-overlay" id="mobileNav">
-    <div class="mobile-nav-backdrop" onclick="closeMobileNav()"></div>
-    <div class="mobile-nav-panel">
-        <div class="mobile-nav-download">
-            <a href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" onclick="closeMobileNav()" aria-label="Download Macdio on the App Store">
-                <img src="download_button_light.svg" alt="Download on the App Store" style="height: 44px; width: auto; display: block;">
-            </a>
-        </div>
-        <div class="mobile-nav-divider"></div>
-        <div class="mobile-nav-links">
-            <a href="#features" class="mobile-nav-link" onclick="closeMobileNav()">Features</a>
-            <a href="#compare" class="mobile-nav-link" onclick="closeMobileNav()">Compare</a>
-            <a href="#performance" class="mobile-nav-link" onclick="closeMobileNav()">Performance</a>
-            <a href="#screenshots" class="mobile-nav-link" onclick="closeMobileNav()">Screenshots</a>
-            <a href="support.html" class="mobile-nav-link" onclick="closeMobileNav()">Support</a>
-            <a href="privacy.html" class="mobile-nav-link" onclick="closeMobileNav()">Privacy</a>
-            <a href="transparency.html" class="mobile-nav-link" onclick="closeMobileNav()">Transparency</a>
-            <a href="accessibility.html" class="mobile-nav-link" onclick="closeMobileNav()">Accessibility</a>
-            <a href="submit-station.html" class="mobile-nav-link" onclick="closeMobileNav()">Submit Station</a>
-            <a href="stations.html" class="mobile-nav-link" onclick="closeMobileNav()">Stations</a>
-        </div>
-        <div class="mobile-nav-footer">
-            <p>Available on iPhone, iPad, Mac, Apple TV,<br>Apple Watch &amp; CarPlay · 55,000+ Stations</p>
-        </div>
-    </div>
-</div>
+<!-- Nav injected by nav.js -->
+<div id="nav-placeholder"></div>
 
-<!-- Navigation -->
-<nav id="navbar">
-    <a href="index.html" class="nav-brand">
-        <img src="assets/app-icon.png" alt="Macdio" width="32" height="32">
-        <span>Macdio</span>
-    </a>
-    <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#screenshots">Screenshots</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="transparency.html">Transparency</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="submit-station.html">Submit Station</a>
-        <a href="stations.html">Stations</a>
-        <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg nav-download-svg" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store">
-            <img src="download_button_light.svg" alt="Download on the Mac App Store" style="height:36px; width:auto; display:block;">
-        </a>
-    </div>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileNav()" aria-label="Menu">
-        <div class="hamburger-lines">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </button>
-</nav>
+<main>
 
-<!-- Hero -->
-<section class="hero" id="hero">
-    <div class="hero-badge">
-        <span class="dot"></span>
-        Available on All Apple Platforms
-    </div>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero" data-three-section="hero">
+  <div class="hero-badge">
+    <span class="dot"></span>
+    Live Internet Radio for All Apple Platforms
+  </div>
+  <div class="hero-icon-wrap">
     <img src="assets/app-icon.png" alt="Macdio App Icon" class="hero-icon" width="112" height="112">
-    <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
-    <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch & CarPlay — record live audio, view synced lyrics, and sync everything via iCloud.</p>
-    <div class="hero-buttons">
-        <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-            <img src="download_button.svg" alt="Download on the App Store" style="height:54px; width:auto; display:block;">
-        </a>
-        <a href="#features" class="btn-secondary">Explore Features ↓</a>
-    </div>
-    <p class="hero-refund" style="margin-top: 18px; font-size: 0.82rem; color: var(--text-secondary); animation: fadeInUp 0.8s ease 0.5s both;">Try with confidence — Apple offers a full refund within 14 days, no questions asked.</p>
+  </div>
+  <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
+  <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
+  <div class="hero-buttons">
+    <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
+      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;">
+    </a>
+    <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
+  </div>
 </section>
 
-<!-- Stats -->
-<section class="stats reveal">
-    <div class="stat">
-        <div class="stat-number" data-count="55000">0</div>
-        <div class="stat-label">Radio Stations</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Platforms</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">∞</div>
-        <div class="stat-label">Custom Stations</div>
-    </div>
-    <div class="stat">
-        <div class="stat-number">0</div>
-        <div class="stat-label">Data Collected</div>
-    </div>
-</section>
+<!-- ============================================================
+     PLATFORM SHOWCASE
+     ============================================================ -->
+<section class="platform-showcase" id="screenshots" data-three-section="screenshots">
+  <div class="showcase-header reveal">
+    <p class="section-label">App Preview</p>
+    <h2 class="section-title">Macdio on every screen</h2>
+  </div>
 
-
-<!-- Screenshots -->
-<section class="screenshots" id="screenshots">
-    <div class="screenshots-header reveal">
-        <p class="section-label">App Preview</p>
-        <h2 class="section-title">See Macdio on every screen</h2>
-    </div>
-
-    <!-- Platform Tabs -->
-    <div class="platform-tabs" id="platformTabs">
-        <button class="platform-tab active" data-platform="macos"><span class="tab-icon">🖥</span> Mac</button>
-        <button class="platform-tab" data-platform="iphone"><span class="tab-icon">📱</span> iPhone</button>
-        <button class="platform-tab" data-platform="ipad"><span class="tab-icon">📱</span> iPad</button>
-        <button class="platform-tab" data-platform="tvos"><span class="tab-icon">📺</span> Apple TV</button>
-        <button class="platform-tab" data-platform="watchos"><span class="tab-icon">⌚</span> Watch</button>
+  <!-- Desktop: sticky sidebar + galleries -->
+  <div class="showcase-wrapper">
+    <div class="platform-list" role="tablist" aria-label="Platform selector">
+      <button class="platform-list-item active" data-platform="macos" role="tab" aria-selected="true" aria-controls="gallery-macos">
+        <span class="plat-icon">🖥</span>
+        <span class="plat-info"><span class="plat-name">Mac</span><span class="plat-desc">macOS Tahoe</span></span>
+      </button>
+      <button class="platform-list-item" data-platform="iphone" role="tab" aria-selected="false" aria-controls="gallery-iphone">
+        <span class="plat-icon">📱</span>
+        <span class="plat-info"><span class="plat-name">iPhone</span><span class="plat-desc">+ CarPlay</span></span>
+      </button>
+      <button class="platform-list-item" data-platform="ipad" role="tab" aria-selected="false" aria-controls="gallery-ipad">
+        <span class="plat-icon">📱</span>
+        <span class="plat-info"><span class="plat-name">iPad</span><span class="plat-desc">iPadOS</span></span>
+      </button>
+      <button class="platform-list-item" data-platform="tvos" role="tab" aria-selected="false" aria-controls="gallery-tvos">
+        <span class="plat-icon">📺</span>
+        <span class="plat-info"><span class="plat-name">Apple TV</span><span class="plat-desc">tvOS</span></span>
+      </button>
+      <button class="platform-list-item" data-platform="watchos" role="tab" aria-selected="false" aria-controls="gallery-watchos">
+        <span class="plat-icon">⌚</span>
+        <span class="plat-info"><span class="plat-name">Apple Watch</span><span class="plat-desc">Stream over LTE</span></span>
+      </button>
     </div>
 
-    <div class="screenshots-wrapper">
-        <!-- macOS -->
-        <div class="platform-gallery active" id="gallery-macos">
-            <div class="screenshots-grid">
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/Discover.png" alt="Macdio macOS Discover" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/Library.png" alt="Macdio macOS Library" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Library</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/Tracks.png" alt="Macdio macOS Tracks" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/Recordings.png" alt="Macdio macOS Recordings" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Recordings</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/mini_player.png" alt="Macdio macOS Mini Player" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Mini Player</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/macos_web/stats.png" alt="Macdio macOS Stats" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Listening Stats</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-            </div>
+    <div class="showcase-galleries">
+      <!-- macOS -->
+      <div class="platform-gallery active" id="gallery-macos" role="tabpanel">
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/Discover.png" alt="Macdio macOS Discover" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
-
-        <!-- iPhone -->
-        <div class="platform-gallery" id="gallery-iphone">
-            <div class="screenshots-grid">
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Discover-b.png" alt="Macdio iPhone Discover" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.png" alt="Macdio iPhone Now Playing" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Now Playing & Lyrics</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Fav-song.png" alt="Macdio iPhone Favorites" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Saved Songs</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Sleep-Timer.png" alt="Macdio iPhone Sleep Timer" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Lyric.png" alt="Macdio iPhone Lyrics" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/iPhone_web/Sync-ICloud.png" alt="Macdio iPhone iCloud Sync" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/CarPlay_web/Song.png" alt="Macdio CarPlay Now Playing" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">CarPlay</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-            </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/Library.png" alt="Macdio macOS Library" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Library</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
-
-        <!-- iPad -->
-        <div class="platform-gallery" id="gallery-ipad">
-            <div class="screenshots-grid">
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/Discover-W.png" alt="Macdio iPad Discover" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/Lyrics-Song.png" alt="Macdio iPad Lyrics" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Lyrics & Now Playing</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/Left-Save-to-fav.png" alt="Macdio iPad Save to Favorites" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Save to Favorites</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/Sleep-Timer.png" alt="Macdio iPad Sleep Timer" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/List.png" alt="Macdio iPad Station List" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Station List</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/ipad_web/Sync-ICloud.png" alt="Macdio iPad iCloud Sync" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-            </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/Tracks.png" alt="Macdio macOS Now Playing" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
-
-        <!-- Apple TV -->
-        <div class="platform-gallery" id="gallery-tvos">
-            <div class="screenshots-grid">
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Discover.png" alt="Macdio Apple TV Discover" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Song.png" alt="Macdio Apple TV Now Playing" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Lyrics.png" alt="Macdio Apple TV Lyrics" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Recently-Played.png" alt="Macdio Apple TV Recently Played" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Stats.png" alt="Macdio Apple TV Stats" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Listening Stats</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/tvOS_web/Sleep-Timer.png" alt="Macdio Apple TV Sleep Timer" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">🔍 Click to zoom</span></div>
-                </div>
-            </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/Recordings.png" alt="Macdio macOS Recordings" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Recordings</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
-
-        <!-- Apple Watch -->
-        <div class="platform-gallery" id="gallery-watchos">
-            <p class="watch-lte-callout" style="text-align:center; font-size:0.9rem; color:var(--text-secondary); margin-bottom:20px; font-weight:500;">⌚ Stream over LTE on your Apple Watch — no iPhone needed.</p>
-            <div class="screenshots-grid watch-grid">
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Discover.png" alt="Macdio Watch Discover" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Discover</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Stations.png" alt="Macdio Watch Stations" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Stations</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Favs.png" alt="Macdio Watch Favorites" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Favorites</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Genre.png" alt="Macdio Watch Genre" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Genre</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Popular Nearby.png" alt="Macdio Watch Popular Nearby" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Popular Nearby</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Recently-Played.png" alt="Macdio Watch Recently Played" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span></div>
-                </div>
-                <div class="screenshot-item reveal" onclick="openLightbox(this)">
-                    <img src="assets/screenshots/watchos_web/Save-Your-Songs.png" alt="Macdio Watch Save Songs" loading="lazy">
-                    <div class="screenshot-meta"><span class="screenshot-label">Save Songs</span></div>
-                </div>
-            </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/mini_player.png" alt="Macdio macOS Mini Player" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Mini Player</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/macos_web/stats.png" alt="Macdio macOS Listening Stats" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Listening Stats</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+      </div>
 
-    </div>
+      <!-- iPhone -->
+      <div class="platform-gallery" id="gallery-iphone" role="tabpanel">
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Discover-b.png" alt="Macdio iPhone Discover" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.png" alt="Macdio iPhone Now Playing" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Now Playing &amp; Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Fav-song.png" alt="Macdio iPhone Favorites" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Saved Songs</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Sleep-Timer.png" alt="Macdio iPhone Sleep Timer" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Lyric.png" alt="Macdio iPhone Synced Lyrics" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/iPhone_web/Sync-ICloud.png" alt="Macdio iPhone iCloud Sync" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/CarPlay_web/Song.png" alt="Macdio CarPlay Now Playing" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">CarPlay</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+      </div>
+
+      <!-- iPad -->
+      <div class="platform-gallery" id="gallery-ipad" role="tabpanel">
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Discover-W.png" alt="Macdio iPad Discover" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Lyrics-Song.png" alt="Macdio iPad Lyrics &amp; Now Playing" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Lyrics &amp; Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Left-Save-to-fav.png" alt="Macdio iPad Save to Favorites" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Save to Favorites</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Sleep-Timer.png" alt="Macdio iPad Sleep Timer" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Sync-ICloud.png" alt="Macdio iPad iCloud Sync" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/ipad_web/Lyrics.png" alt="Macdio iPad Full-Screen Lyrics" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Full-Screen Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+      </div>
+
+      <!-- Apple TV -->
+      <div class="platform-gallery" id="gallery-tvos" role="tabpanel">
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/tvOS_web/Discover.png" alt="Macdio Apple TV Discover" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/tvOS_web/Song.png" alt="Macdio Apple TV Now Playing" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/tvOS_web/Lyrics.png" alt="Macdio Apple TV Synced Lyrics" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/tvOS_web/Recently-Played.png" alt="Macdio Apple TV Recently Played" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span><span class="screenshot-hint">click to zoom</span></div>
+        </div>
+      </div>
+
+      <!-- Apple Watch -->
+      <div class="platform-gallery watch-gallery" id="gallery-watchos" role="tabpanel">
+        <p style="grid-column:1/-1;text-align:center;font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;">⌚ Stream over LTE — no iPhone needed</p>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Discover.png" alt="Macdio Watch Discover" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Discover</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Stations.png" alt="Macdio Watch Stations" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Stations</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Favs.png" alt="Macdio Watch Favorites" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Favorites</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Genre.png" alt="Macdio Watch Genre" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Genre</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Recently-Played.png" alt="Macdio Watch Recently Played" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span></div>
+        </div>
+        <div class="screenshot-item reveal" onclick="openLightbox(this)">
+          <img src="assets/screenshots/watchos_web/Save-Your-Songs.png" alt="Macdio Watch Save Songs" loading="lazy">
+          <div class="screenshot-meta"><span class="screenshot-label">Save Songs</span></div>
+        </div>
+      </div>
+    </div><!-- /.showcase-galleries -->
+  </div><!-- /.showcase-wrapper -->
+
+  <!-- Mobile: tab bar (galleries are shown from .showcase-galleries below via JS clone) -->
+  <div class="platform-tabs-mobile" id="mobilePlatformTabs" aria-label="Platform selector">
+    <button class="platform-tab-m active" data-platform="macos">🖥 Mac</button>
+    <button class="platform-tab-m" data-platform="iphone">📱 iPhone</button>
+    <button class="platform-tab-m" data-platform="ipad">📱 iPad</button>
+    <button class="platform-tab-m" data-platform="tvos">📺 Apple TV</button>
+    <button class="platform-tab-m" data-platform="watchos">⌚ Watch</button>
+  </div>
+  <div id="mobileGalleriesRoot" style="padding:0 20px;"></div>
+
 </section>
 
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
-    <div class="lightbox-close" onclick="closeLightbox()">✕</div>
-    <div class="lightbox-counter" id="lightboxCounter"></div>
-    <div class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)">‹</div>
-    <img id="lightboxImg" src="" alt="">
-    <div class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)">›</div>
-    <div class="lightbox-caption" id="lightboxCaption"></div>
+  <div class="lightbox-close" onclick="closeLightbox()" role="button" aria-label="Close">✕</div>
+  <div class="lightbox-counter" id="lightboxCounter"></div>
+  <div class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" role="button" aria-label="Previous">‹</div>
+  <img id="lightboxImg" src="" alt="">
+  <div class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" role="button" aria-label="Next">›</div>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
 </div>
 
-<!-- Features -->
-<section class="features" id="features">
-    <div class="reveal">
-        <p class="section-label">Features</p>
-        <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
-        <p class="section-desc">100% native SwiftUI — no Electron, no web wrappers. Built from the ground up for every Apple device.</p>
-    </div>
+<!-- ============================================================
+     COMMUNITY
+     ============================================================ -->
+<section class="community" id="community" data-three-section="community">
+  <div class="community-header reveal">
+    <p class="section-label">Community</p>
+    <h2 class="section-title">Join the conversation</h2>
+    <p class="section-desc" style="margin:14px auto 0;text-align:center;">Request features, report bugs, share great stations — and connect with other Macdio listeners.</p>
+  </div>
 
-    <div class="features-grid">
-        <div class="feature-card reveal">
-            <div class="feature-icon">🌍</div>
-            <h3>55,000+ Stations</h3>
-            <p>Discover radio from every corner of the world. Jazz from New York, lo-fi from Tokyo, or your local hometown station.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">➕</div>
-            <h3>Add Your Own</h3>
-            <p>Can't find your station? Paste any stream URL and you're live in seconds. Supports M3U, PLS, and direct streams.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">🔴</div>
-            <h3>Live Recording</h3>
-            <p>Record any live stream in high quality. Never miss a song — your recordings are saved and organized automatically.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">🎵</div>
-            <h3>Synced Lyrics</h3>
-            <p>Follow along with real-time synchronized lyrics. See every word as the music plays with beautiful animations.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">🖥️</div>
-            <h3>Compact Player</h3>
-            <p>Switch to the sleek mini player for a minimal footprint. Perfect for multitasking while staying tuned in.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">⌨️</div>
-            <h3>Keyboard Shortcuts</h3>
-            <p>On Mac, control everything from your keyboard. Play, pause, skip, volume — all at your fingertips.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">☁️</div>
-            <h3>iCloud Sync</h3>
-            <p>Your favorites, settings, and listening stats stay in sync across all your Apple devices — automatically via iCloud.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">📱</div>
-            <h3>Dynamic Island</h3>
-            <p>On iPhone, see what's playing right in your Dynamic Island and Lock Screen with Live Activities.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">⌚</div>
-            <h3>Apple Watch</h3>
-            <p>Browse stations, control playback, and track your listening stats right from your wrist. Stream over LTE — no iPhone needed.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">📺</div>
-            <h3>Apple TV</h3>
-            <p>Enjoy radio on the big screen with a beautiful living room experience and Siri Remote support.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">🚗</div>
-            <h3>CarPlay</h3>
-            <p>Tune into your favorite stations while driving with a distraction-free CarPlay interface.</p>
-        </div>
-        <div class="feature-card reveal">
-            <div class="feature-icon">🌙</div>
-            <h3>Liquid Glass</h3>
-            <p>Beautifully optimized with a Liquid Glass interface — designed from the ground up for the latest Apple operating systems.</p>
-        </div>
+  <div class="community-grid reveal">
+    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
+      <span class="community-card-icon">💬</span>
+      <span class="community-card-title">Feature Requests</span>
+      <span class="community-card-desc">Shape the future of Macdio</span>
+    </a>
+    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
+      <span class="community-card-icon">🐛</span>
+      <span class="community-card-title">Bug Reports</span>
+      <span class="community-card-desc">Help make the app better</span>
+    </a>
+    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
+      <span class="community-card-icon">📻</span>
+      <span class="community-card-title">Station Tips</span>
+      <span class="community-card-desc">Discover great radio worldwide</span>
+    </a>
+  </div>
+
+  <div class="community-threads reveal">
+    <div class="community-thread">
+      <span class="thread-title">What stations do you always come back to?</span>
+      <span class="thread-replies">12 replies</span>
     </div>
+    <div class="community-thread">
+      <span class="thread-title">Dark mode improvements — share your thoughts</span>
+      <span class="thread-replies">8 replies</span>
+    </div>
+    <div class="community-thread">
+      <span class="thread-title">Best jazz stations to add to Macdio</span>
+      <span class="thread-replies">21 replies</span>
+    </div>
+  </div>
+
+  <a href="https://hub.macdio.app" class="btn-community reveal" target="_blank" rel="noopener">
+    Visit Community Hub →
+  </a>
 </section>
 
-<!-- Comparison -->
-<section class="compare" id="compare">
-    <div class="compare-header reveal">
-        <p class="section-label">How It Compares</p>
-        <h2 class="section-title">Why Macdio?</h2>
-        <p class="section-desc" style="margin: 14px auto 0; text-align: center;">A quick look at how Macdio stacks up against other radio apps.</p>
-    </div>
+<!-- ============================================================
+     FEATURE NARRATIVE
+     ============================================================ -->
+<section class="features" id="features" data-three-section="features">
+  <div class="features-header reveal">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+    <p class="section-desc" style="margin:16px auto 0;text-align:center;">100% native SwiftUI — no Electron, no web wrappers. Built for every Apple device from the ground up.</p>
+  </div>
 
-    <div class="reveal">
-        <table class="compare-table">
-            <thead>
-                <tr>
-                    <th></th>
-                    <th class="macdio-col">Macdio</th>
-                    <th>Broadcasts</th>
-                    <th>Eter</th>
-                    <th>TuneIn</th>
-                    <th>Radio Garden</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Pricing</td>
-                    <td class="macdio-col cmp-price">One-time</td>
-                    <td class="cmp-price">One-time</td>
-                    <td class="cmp-price">One-time</td>
-                    <td class="cmp-price">Free + sub</td>
-                    <td class="cmp-price">Free + ads</td>
-                </tr>
-                <tr>
-                    <td>No ads</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>No tracking</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Native Mac app</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Apple TV</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Standalone Watch</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>CarPlay</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Family Sharing</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Live recording</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>Synced lyrics</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-no">—</td>
-                </tr>
-                <tr>
-                    <td>No in-app purchases</td>
-                    <td class="macdio-col cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-yes">✓</td>
-                    <td class="cmp-no">—</td>
-                    <td class="cmp-yes">✓</td>
-                </tr>
-            </tbody>
-        </table>
-        <p class="compare-note">Comparison based on publicly available information as of May 2026. Features may change.</p>
+  <!-- Feature 1: Synced Lyrics -->
+  <div class="feature-row reveal">
+    <div class="feature-screenshot">
+      <img src="assets/screenshots/iPhone_web/Lyric.png" alt="Macdio synced lyrics view" loading="lazy">
     </div>
+    <div class="feature-text">
+      <span class="feature-tag">🎵 Synced Lyrics</span>
+      <h3>Every word, in perfect sync.</h3>
+      <p>Follow along as the music plays — real-time synchronized lyrics that scroll automatically. Beautiful animations, zero effort.</p>
+    </div>
+  </div>
+
+  <!-- Feature 2: Live Recording -->
+  <div class="feature-row reverse reveal">
+    <div class="feature-screenshot">
+      <img src="assets/screenshots/iPhone_web/Recordings.png" alt="Macdio live recording" loading="lazy">
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">🔴 Live Recording</span>
+      <h3>Capture every moment.</h3>
+      <p>Record any live stream in high quality. Your recordings are saved and organized automatically — no missed songs, ever.</p>
+    </div>
+  </div>
+
+  <!-- Feature 3: Apple Watch LTE -->
+  <div class="feature-row reveal">
+    <div class="feature-screenshot">
+      <img src="assets/screenshots/watchos_web/Discover.png" alt="Macdio on Apple Watch" loading="lazy">
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">⌚ Apple Watch</span>
+      <h3>Leave your iPhone at home.</h3>
+      <p>Browse stations, control playback, and stream over LTE — directly from your wrist. No iPhone required.</p>
+      <div class="feature-stat"><span class="stat-val">LTE</span> Standalone streaming</div>
+    </div>
+  </div>
+
+  <!-- Feature 4: All Platforms -->
+  <div class="feature-row reverse reveal">
+    <div class="feature-screenshot">
+      <img src="assets/screenshots/macos_web/Discover.png" alt="Macdio on Mac" loading="lazy">
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">🖥 All Apple Platforms</span>
+      <h3>One app, every screen.</h3>
+      <p>iPhone, iPad, Mac, Apple TV, Apple Watch, CarPlay — Macdio is built natively for each platform, not stretched to fit.</p>
+      <div class="feature-stat"><span class="stat-val">6</span> platforms, one purchase</div>
+    </div>
+  </div>
+
+  <!-- Feature 5: Privacy + iCloud -->
+  <div class="feature-row reveal">
+    <div class="feature-screenshot">
+      <img src="assets/screenshots/iPhone_web/Sync-ICloud.png" alt="Macdio iCloud sync" loading="lazy">
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">☁️ iCloud Sync</span>
+      <h3>Private by design. Synced effortlessly.</h3>
+      <p>Your favorites, history, and settings sync across all your devices via iCloud — automatically, and with zero data collected about you.</p>
+      <div class="feature-stat"><span class="stat-val">0</span> data collected</div>
+    </div>
+  </div>
+
+  <!-- Also includes chips -->
+  <div class="also-includes reveal">
+    <h4>Also includes</h4>
+    <div class="chips">
+      <span class="chip">⌨️ Keyboard Shortcuts</span>
+      <span class="chip">🚗 CarPlay</span>
+      <span class="chip">📱 Dynamic Island</span>
+      <span class="chip">🌙 Sleep Timer</span>
+      <span class="chip">👨‍👩‍👧 Family Sharing</span>
+      <span class="chip">🖼 Mini Player</span>
+      <span class="chip">💧 Liquid Glass</span>
+      <span class="chip">➕ Custom Stream URLs</span>
+      <span class="chip">🌍 55,000+ Stations</span>
+      <span class="chip">📊 Listening Stats</span>
+    </div>
+  </div>
 </section>
 
-<!-- Performance -->
-<section class="performance" id="performance">
-    <div class="perf-header reveal">
-        <div class="perf-badge"><span class="check">✓</span> All 9 Tests Passed</div>
-        <p class="section-label">macOS Performance</p>
-        <h2 class="section-title">Built for <span class="gradient-text">Performance</span></h2>
-        <p class="section-desc" style="margin: 14px auto 12px; text-align: center;">Every millisecond matters. Here are the real numbers from our automated benchmark suite on macOS.</p>
-        <div class="env-badges">
-            <span class="env-badge"><span class="e-icon">🖥</span> <strong>macOS Tahoe</strong> 26.4</span>
-            <span class="env-badge"><span class="e-icon">⚙️</span> <strong>Apple Silicon</strong> M4</span>
-            <span class="env-badge"><span class="e-icon">🏗️</span> <strong>Native</strong> ARM64</span>
-        </div>
-    </div>
+<!-- ============================================================
+     COMPARE
+     ============================================================ -->
+<section class="compare" id="compare" data-three-section="compare">
+  <div class="compare-header reveal">
+    <p class="section-label">How It Compares</p>
+    <h2 class="section-title">Why Macdio?</h2>
+    <p class="section-desc" style="margin:14px auto 0;text-align:center;">A quick look at how Macdio stacks up.</p>
+  </div>
 
-    <!-- Benchmark Cards -->
-    <div class="benchmark-grid">
-        <div class="benchmark-card reveal">
-            <div class="bench-icon cpu">⚡</div>
-            <div class="bench-value green">0.0<span class="bench-unit">%</span></div>
-            <div class="bench-label">Idle CPU Usage</div>
-            <div class="bench-desc">10 consecutive samples — zero CPU when not playing. Audio timer auto-stops.</div>
-            <div class="bench-pass">✓ Pass</div>
-        </div>
-        <div class="benchmark-card reveal">
-            <div class="bench-icon memory">💾</div>
-            <div class="bench-value blue"><span data-bench-count="60">0</span><span class="bench-unit"> MB</span></div>
-            <div class="bench-label">Memory Footprint</div>
-            <div class="bench-desc">Physical idle footprint. 3× lighter than Apple Podcasts, 6× lighter than Spotify.</div>
-            <div class="bench-pass">✓ Pass</div>
-        </div>
-        <div class="benchmark-card reveal">
-            <div class="bench-icon leak">🛡️</div>
-            <div class="bench-value green">0<span class="bench-unit"> leaks</span></div>
-            <div class="bench-label">Memory Leaks</div>
-            <div class="bench-desc">Zero leaked bytes across 243K+ allocated nodes. Verified with Apple's leaks tool.</div>
-            <div class="bench-pass">✓ Zero Leaks</div>
-        </div>
-        <div class="benchmark-card reveal">
-            <div class="bench-icon size">📦</div>
-            <div class="bench-value pink"><span data-bench-count="4.9" data-bench-decimal="true">0</span><span class="bench-unit"> MB</span></div>
-            <div class="bench-label">App Bundle Size</div>
-            <div class="bench-desc">The complete release bundle — a full-featured radio app with iCloud in under 5 MB.</div>
-            <div class="bench-pass">✓ Lightweight</div>
-        </div>
-        <div class="benchmark-card reveal">
-            <div class="bench-icon launch">🚀</div>
-            <div class="bench-value blue">~1<span class="bench-unit">s</span></div>
-            <div class="bench-label">Cold Launch</div>
-            <div class="bench-desc">Near-instant startup in release build. Optimized initialization pipeline.</div>
-            <div class="bench-pass">✓ Instant</div>
-        </div>
-        <div class="benchmark-card reveal">
-            <div class="bench-icon threads">🧵</div>
-            <div class="bench-value green">0<span class="bench-unit"> active</span></div>
-            <div class="bench-label">Idle Threads</div>
-            <div class="bench-desc">All 20 threads sleeping when idle. No busy-wait loops, no background polling.</div>
-            <div class="bench-pass">✓ Efficient</div>
-        </div>
-    </div>
-
-    <!-- Memory Comparison Chart -->
-    <div class="comparison-section reveal">
-        <div class="comparison-card">
-            <div class="comparison-title">💡 Memory Usage Comparison — Idle State</div>
-            <div class="comparison-row">
-                <span class="comp-label highlight">Macdio</span>
-                <div class="comp-bar-track">
-                    <div class="comp-bar macdio" data-width="17"><span class="comp-value">60 MB</span></div>
-                </div>
-            </div>
-            <div class="comparison-row">
-                <span class="comp-label">Apple Podcasts</span>
-                <div class="comp-bar-track">
-                    <div class="comp-bar other" data-width="24"><span class="comp-value">~85 MB</span></div>
-                </div>
-            </div>
-            <div class="comparison-row">
-                <span class="comp-label">Apple Music</span>
-                <div class="comp-bar-track">
-                    <div class="comp-bar other" data-width="51"><span class="comp-value">~180 MB</span></div>
-                </div>
-            </div>
-            <div class="comparison-row">
-                <span class="comp-label">Spotify</span>
-                <div class="comp-bar-track">
-                    <div class="comp-bar other" data-width="100"><span class="comp-value">~350 MB</span></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- All Tests Passed -->
-    <div class="reveal">
-        <p class="section-label" style="text-align: center; margin-bottom: 20px;">App Store Readiness</p>
-    </div>
-    <div class="tests-banner">
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">App Sandbox</div>
-                <div class="test-result">Enabled & Verified</div>
-            </div>
-        </div>
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">Code Signing</div>
-                <div class="test-result">Valid Certificate</div>
-            </div>
-        </div>
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">Private API</div>
-                <div class="test-result">0 Private Frameworks</div>
-            </div>
-        </div>
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">Crash Detection</div>
-                <div class="test-result">No Crashes Found</div>
-            </div>
-        </div>
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">ARM64 Native</div>
-                <div class="test-result">Apple Silicon Optimized</div>
-            </div>
-        </div>
-        <div class="test-item reveal">
-            <span class="test-check">✓</span>
-            <div class="test-info">
-                <div class="test-name">Memory Stability</div>
-                <div class="test-result">60s Stable — No Trend</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Optimizations Applied -->
-    <div class="reveal" style="margin-top: 48px;">
-        <p class="section-label" style="text-align: center; margin-bottom: 8px;">Engineering Optimizations</p>
-        <h3 class="section-title" style="text-align: center; font-size: clamp(1.4rem, 2.5vw, 2rem); margin-bottom: 32px;">Fine-tuned for <span class="gradient-text">Perfection</span></h3>
-    </div>
-    <div class="optim-grid">
-        <div class="optim-card reveal">
-            <div class="optim-impact">-80%</div>
-            <div class="optim-text">
-                <h4>Audio Timer Optimization</h4>
-                <p>Reduced from 20Hz to 4Hz with auto-stop. Eliminates timer overhead when idle.</p>
-            </div>
-        </div>
-        <div class="optim-card reveal">
-            <div class="optim-impact">-N×100</div>
-            <div class="optim-text">
-                <h4>Query Elimination</h4>
-                <p>Per-row @Query removed. Hundreds of redundant SwiftData queries eliminated per render.</p>
-            </div>
-        </div>
-        <div class="optim-card reveal">
-            <div class="optim-impact">-33%</div>
-            <div class="optim-text">
-                <h4>GPU Compositing</h4>
-                <p>GlassEffect layers reduced from 21 to 14. Smoother rendering, lower GPU load.</p>
-            </div>
-        </div>
-        <div class="optim-card reveal">
-            <div class="optim-impact">0 ☠️</div>
-            <div class="optim-text">
-                <h4>Crash-Proof iCloud</h4>
-                <p>ModelContainer with automatic fallback. Graceful recovery if CloudKit is unavailable.</p>
-            </div>
-        </div>
-    </div>
+  <div class="compare-table-wrap reveal">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="macdio-col">Macdio</th>
+          <th>Broadcasts</th>
+          <th>Eter</th>
+          <th>TuneIn</th>
+          <th>Radio Garden</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Pricing</td><td class="macdio-col cmp-price">One-time</td><td class="cmp-price">One-time</td><td class="cmp-price">One-time</td><td class="cmp-price">Free + sub</td><td class="cmp-price">Free + ads</td></tr>
+        <tr><td>No ads</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>No tracking</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>Native Mac app</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>Apple TV</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>Standalone Watch</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>CarPlay</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td></tr>
+        <tr><td>Family Sharing</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>Live recording</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>Synced lyrics</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
+        <tr><td>No in-app purchases</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-yes">✓</td></tr>
+      </tbody>
+    </table>
+    <p class="compare-note">Comparison based on publicly available information as of May 2026. Features may change.</p>
+  </div>
 </section>
 
-<!-- CTA -->
+<!-- ============================================================
+     PERFORMANCE
+     ============================================================ -->
+<section class="performance" id="performance" data-three-section="performance">
+  <div class="perf-header reveal">
+    <div class="perf-badge"><span>✓</span> All 9 Tests Passed</div>
+    <p class="section-label">macOS Performance</p>
+    <h2 class="section-title">Built for <span class="gradient-text">Performance</span></h2>
+    <p class="section-desc" style="margin:14px auto 12px;text-align:center;">Every millisecond matters. Real numbers from our automated benchmark suite on macOS.</p>
+    <div class="env-badges">
+      <span class="env-badge">🖥 <strong>macOS Tahoe</strong> 26.4</span>
+      <span class="env-badge">⚙️ <strong>Apple Silicon</strong> M4</span>
+      <span class="env-badge">🏗 <strong>Native</strong> ARM64</span>
+    </div>
+  </div>
+
+  <!-- Top 3 cards -->
+  <div class="benchmark-grid">
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">⚡</span>
+      <div class="bench-value green">0.0<span class="bench-unit">%</span></div>
+      <div class="bench-label">Idle CPU Usage</div>
+      <div class="bench-desc">10 consecutive samples — zero CPU when not playing.</div>
+      <div class="bench-pass">✓ Pass</div>
+    </div>
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">💾</span>
+      <div class="bench-value blue"><span data-bench-count="60">0</span><span class="bench-unit"> MB</span></div>
+      <div class="bench-label">Memory Footprint</div>
+      <div class="bench-desc">3× lighter than Apple Podcasts, 6× lighter than Spotify.</div>
+      <div class="bench-pass">✓ Pass</div>
+    </div>
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">🛡️</span>
+      <div class="bench-value green">0<span class="bench-unit"> leaks</span></div>
+      <div class="bench-label">Memory Leaks</div>
+      <div class="bench-desc">Zero leaked bytes across 243K+ allocated nodes.</div>
+      <div class="bench-pass">✓ Zero Leaks</div>
+    </div>
+  </div>
+
+  <button class="bench-toggle-btn" id="benchToggleBtn" onclick="toggleBenchExtra()">Show all benchmarks ▾</button>
+
+  <!-- Extra 3 cards (hidden by default) -->
+  <div class="bench-extra" id="benchExtra">
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">📦</span>
+      <div class="bench-value pink"><span data-bench-count="4.9" data-bench-decimal="true">0</span><span class="bench-unit"> MB</span></div>
+      <div class="bench-label">App Bundle Size</div>
+      <div class="bench-desc">Full-featured radio app with iCloud in under 5 MB.</div>
+      <div class="bench-pass">✓ Lightweight</div>
+    </div>
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">🚀</span>
+      <div class="bench-value blue">~1<span class="bench-unit">s</span></div>
+      <div class="bench-label">Cold Launch</div>
+      <div class="bench-desc">Near-instant startup. Optimized initialization pipeline.</div>
+      <div class="bench-pass">✓ Instant</div>
+    </div>
+    <div class="benchmark-card reveal">
+      <span class="bench-icon">🧵</span>
+      <div class="bench-value green">0<span class="bench-unit"> active</span></div>
+      <div class="bench-label">Idle Threads</div>
+      <div class="bench-desc">All threads sleeping when idle. No busy-wait loops.</div>
+      <div class="bench-pass">✓ Efficient</div>
+    </div>
+  </div>
+
+  <!-- Memory comparison -->
+  <div class="comparison-section reveal">
+    <div class="comparison-card">
+      <div class="comparison-title">💡 Memory Usage Comparison — Idle State</div>
+      <div class="comparison-row">
+        <span class="comp-label highlight">Macdio</span>
+        <div class="comp-bar-track"><div class="comp-bar macdio" data-width="17"><span class="comp-value">60 MB</span></div></div>
+      </div>
+      <div class="comparison-row">
+        <span class="comp-label">Apple Podcasts</span>
+        <div class="comp-bar-track"><div class="comp-bar other" data-width="24"><span class="comp-value">~85 MB</span></div></div>
+      </div>
+      <div class="comparison-row">
+        <span class="comp-label">Apple Music</span>
+        <div class="comp-bar-track"><div class="comp-bar other" data-width="51"><span class="comp-value">~180 MB</span></div></div>
+      </div>
+      <div class="comparison-row">
+        <span class="comp-label">Spotify</span>
+        <div class="comp-bar-track"><div class="comp-bar other" data-width="100"><span class="comp-value">~350 MB</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- App Store readiness -->
+  <div class="reveal" style="text-align:center;margin-bottom:20px;">
+    <p class="section-label">App Store Readiness</p>
+  </div>
+  <div class="tests-banner">
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">App Sandbox</div><div class="test-result">Enabled &amp; Verified</div></div></div>
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Code Signing</div><div class="test-result">Valid Certificate</div></div></div>
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Private API</div><div class="test-result">0 Private Frameworks</div></div></div>
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Crash Detection</div><div class="test-result">No Crashes Found</div></div></div>
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">ARM64 Native</div><div class="test-result">Apple Silicon Optimized</div></div></div>
+    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Memory Stability</div><div class="test-result">60s Stable — No Trend</div></div></div>
+  </div>
+
+  <!-- Engineering optimizations -->
+  <div class="reveal" style="text-align:center;margin:40px 0 20px;">
+    <p class="section-label">Engineering Optimizations</p>
+    <h3 class="section-title" style="font-size:clamp(1.4rem,2.5vw,2rem);">Fine-tuned for <span class="gradient-text">Perfection</span></h3>
+  </div>
+  <div class="optim-grid">
+    <div class="optim-card reveal"><div class="optim-impact">−80%</div><div class="optim-text"><h4>Audio Timer Optimization</h4><p>Reduced from 20 Hz to 4 Hz with auto-stop. Eliminates timer overhead when idle.</p></div></div>
+    <div class="optim-card reveal"><div class="optim-impact">−N×100</div><div class="optim-text"><h4>Query Elimination</h4><p>Per-row @Query removed. Hundreds of redundant SwiftData queries eliminated per render.</p></div></div>
+    <div class="optim-card reveal"><div class="optim-impact">−33%</div><div class="optim-text"><h4>GPU Compositing</h4><p>GlassEffect layers reduced from 21 to 14. Smoother rendering, lower GPU load.</p></div></div>
+    <div class="optim-card reveal"><div class="optim-impact">0 ☠️</div><div class="optim-text"><h4>Crash-Proof iCloud</h4><p>ModelContainer with automatic fallback. Graceful recovery if CloudKit is unavailable.</p></div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
 <section class="cta reveal">
-    <div class="cta-box">
-        <h2>Ready to tune in?</h2>
-        <p>Tune In, Lock Down — Seize Every Stream.</p>
-        <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-            <img src="download_button.svg" alt="Download on the App Store" style="height:54px; width:auto; display:block;">
-        </a>
-    </div>
+  <div class="cta-inner">
+    <h2>Ready to tune in.</h2>
+    <p>Native. Private. No subscriptions.<br>On every Apple device you own.</p>
+    <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
+      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;">
+    </a>
+  </div>
 </section>
 
-<!-- Footer -->
-<footer>
-    <div class="footer-links">
-        <a href="#features">Features</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="transparency.html">Transparency</a>
-        <a href="submit-station.html">Submit Station</a>
-        <a href="stations.html">Stations</a>
-        <a href="mailto:support@macdio.app">Contact</a>
-    </div>
-    <p>© 2026 SFN. All rights reserved.</p>
-    <p style="margin-top: 6px;">Available on iPhone, iPad, Mac, Apple TV, Apple Watch & CarPlay</p>
-</footer>
+</main>
+
+<!-- Footer injected by footer.js -->
+<div id="footer-placeholder"></div>
+
+<!-- Shared JS -->
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/footer.js"></script>
+<script defer src="assets/js/three-bg.js"></script>
 
 <script>
-// ============ Mobile Menu (Global Scope) ============
-function toggleMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    const btn = document.getElementById('mobileMenuBtn');
-    const isOpen = nav.classList.contains('open');
-
-    if (isOpen) {
-        closeMobileNav();
-    } else {
-        nav.classList.add('open');
-        btn.classList.add('active');
-        document.body.classList.add('menu-open');
-    }
-}
-
-function closeMobileNav() {
-    const nav = document.getElementById('mobileNav');
-    const btn = document.getElementById('mobileMenuBtn');
-    nav.classList.remove('open');
-    btn.classList.remove('active');
-    document.body.classList.remove('menu-open');
-}
-
-// Close on Escape key
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeMobileNav();
-});
-
-// ============ Platform Tabs ============
-document.querySelectorAll('.platform-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.platform-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.platform-gallery').forEach(g => g.classList.remove('active'));
-        tab.classList.add('active');
-        const platform = tab.dataset.platform;
-        const gallery = document.getElementById('gallery-' + platform);
-        if (gallery) {
-            gallery.classList.add('active');
-            // Trigger reveal on newly visible items
-            gallery.querySelectorAll('.reveal:not(.visible)').forEach(el => {
-                el.classList.add('visible');
-            });
-        }
+/* ============================================================
+   Platform switcher (desktop sidebar + mobile tabs)
+   ============================================================ */
+function switchPlatform(platform) {
+  // Update desktop list items
+  document.querySelectorAll('.platform-list-item').forEach(function(btn) {
+    var active = btn.dataset.platform === platform;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', active);
+  });
+  // Update mobile tab buttons
+  document.querySelectorAll('.platform-tab-m').forEach(function(btn) {
+    btn.classList.toggle('active', btn.dataset.platform === platform);
+  });
+  // Toggle galleries
+  document.querySelectorAll('.platform-gallery').forEach(function(g) {
+    g.classList.remove('active');
+  });
+  var gallery = document.getElementById('gallery-' + platform);
+  if (gallery) {
+    gallery.classList.add('active');
+    gallery.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
+      el.classList.add('visible');
     });
-});
-</script>
+  }
+  // Three.js color sync
+  if (window.threeSetPlatformColor) window.threeSetPlatformColor(platform);
 
-<script>
-// ============ Three.js — Audio-Waveform Inspired Background ============
-// Deferred: wait for three.js to load before initializing
-function initThreeBackground() {
-const canvas = document.getElementById('bg-canvas');
-if (!canvas || typeof THREE === 'undefined') return;
-const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-camera.position.z = 30;
-
-// Audio waveform ring particles
-const ringCount = 3;
-const rings = [];
-
-for (let r = 0; r < ringCount; r++) {
-    const count = 200;
-    const positions = new Float32Array(count * 3);
-    const radius = 10 + r * 6;
-
-    for (let i = 0; i < count; i++) {
-        const angle = (i / count) * Math.PI * 2;
-        positions[i * 3] = Math.cos(angle) * radius;
-        positions[i * 3 + 1] = Math.sin(angle) * radius;
-        positions[i * 3 + 2] = (Math.random() - 0.5) * 4;
-    }
-
-    const geo = new THREE.BufferGeometry();
-    geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-
-    const colors = [0x6366f1, 0xa855f7, 0xec4899];
-    const mat = new THREE.PointsMaterial({
-        size: 0.08 + r * 0.02,
-        color: colors[r],
-        transparent: true,
-        opacity: 0.4 - r * 0.08,
-        blending: THREE.AdditiveBlending,
-    });
-
-    const points = new THREE.Points(geo, mat);
-    rings.push({ points, positions, radius, count });
-    scene.add(points);
+  // Mobile: mirror into #mobileGalleriesRoot
+  syncMobileGalleries(platform);
 }
 
-// Floating ambient particles
-const ambientCount = 400;
-const ambientPos = new Float32Array(ambientCount * 3);
-const ambientColors = new Float32Array(ambientCount * 3);
-
-for (let i = 0; i < ambientCount * 3; i += 3) {
-    ambientPos[i] = (Math.random() - 0.5) * 100;
-    ambientPos[i + 1] = (Math.random() - 0.5) * 100;
-    ambientPos[i + 2] = (Math.random() - 0.5) * 60;
-
-    const c = Math.random();
-    if (c < 0.4) { ambientColors[i] = 0.39; ambientColors[i+1] = 0.4; ambientColors[i+2] = 0.95; }
-    else if (c < 0.7) { ambientColors[i] = 0.66; ambientColors[i+1] = 0.33; ambientColors[i+2] = 0.97; }
-    else { ambientColors[i] = 0.93; ambientColors[i+1] = 0.28; ambientColors[i+2] = 0.6; }
+function syncMobileGalleries(platform) {
+  var root = document.getElementById('mobileGalleriesRoot');
+  if (!root) return;
+  // On mobile, show the active gallery clone inside mobileGalleriesRoot
+  var gallery = document.getElementById('gallery-' + platform);
+  if (gallery && window.innerWidth <= 768) {
+    root.innerHTML = '';
+    var clone = gallery.cloneNode(true);
+    clone.id = 'mob-gallery-' + platform;
+    clone.classList.add('active');
+    root.appendChild(clone);
+    // re-attach lightbox handlers
+    clone.querySelectorAll('.screenshot-item').forEach(function(item) {
+      item.onclick = function() { openLightbox(item); };
+    });
+  }
 }
 
-const ambientGeo = new THREE.BufferGeometry();
-ambientGeo.setAttribute('position', new THREE.BufferAttribute(ambientPos, 3));
-ambientGeo.setAttribute('color', new THREE.BufferAttribute(ambientColors, 3));
-
-const ambientMat = new THREE.PointsMaterial({
-    size: 0.08,
-    vertexColors: true,
-    transparent: true,
-    opacity: 0.35,
-    blending: THREE.AdditiveBlending,
+document.querySelectorAll('.platform-list-item, .platform-tab-m').forEach(function(btn) {
+  btn.addEventListener('click', function() { switchPlatform(btn.dataset.platform); });
 });
 
-const ambientParticles = new THREE.Points(ambientGeo, ambientMat);
-scene.add(ambientParticles);
-
-let mouseX = 0, mouseY = 0;
-
-document.addEventListener('mousemove', (e) => {
-    mouseX = (e.clientX / window.innerWidth - 0.5) * 2;
-    mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
+// On mobile load, mirror default gallery
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth <= 768) syncMobileGalleries('macos');
+});
+window.addEventListener('resize', function() {
+  var activePlat = (document.querySelector('.platform-list-item.active') || {}).dataset || {};
+  if (window.innerWidth <= 768) syncMobileGalleries(activePlat.platform || 'macos');
 });
 
-function animate() {
-    requestAnimationFrame(animate);
-    const time = Date.now() * 0.001;
-
-    // Animate rings like audio waveforms
-    rings.forEach((ring, r) => {
-        const pos = ring.points.geometry.attributes.position.array;
-        for (let i = 0; i < ring.count; i++) {
-            const angle = (i / ring.count) * Math.PI * 2;
-            const wave = Math.sin(time * (1.5 + r * 0.5) + angle * 4) * (1.5 + r * 0.5);
-            const rad = ring.radius + wave;
-            pos[i * 3] = Math.cos(angle + time * 0.1 * (r + 1)) * rad;
-            pos[i * 3 + 1] = Math.sin(angle + time * 0.1 * (r + 1)) * rad;
-            pos[i * 3 + 2] = Math.sin(time * 2 + angle * 3) * (0.5 + r * 0.3);
-        }
-        ring.points.geometry.attributes.position.needsUpdate = true;
-        ring.points.rotation.z = time * 0.02 * (r % 2 === 0 ? 1 : -1);
-    });
-
-    ambientParticles.rotation.y += 0.0003;
-    ambientParticles.rotation.x += 0.0001;
-
-    camera.position.x += (mouseX * 2 - camera.position.x) * 0.015;
-    camera.position.y += (-mouseY * 2 - camera.position.y) * 0.015;
-    camera.lookAt(scene.position);
-
-    renderer.render(scene, camera);
-}
-animate();
-
-window.addEventListener('resize', () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-});
-
-window.addEventListener('scroll', () => {
-    const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-    camera.position.z = 30 + pct * 15;
-    rings.forEach((r, i) => {
-        r.points.rotation.x = pct * Math.PI * 0.15 * (i + 1);
-    });
-});
-
-} // end initThreeBackground
-
-// Initialize Three.js after the deferred script has loaded
-if (document.readyState === 'complete') {
-    initThreeBackground();
-} else {
-    window.addEventListener('load', initThreeBackground);
-}
-
-// ============ Scroll Effects (navbar) ============
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    document.getElementById('navbar').classList.toggle('scrolled', scrollY > 50);
-});
-
-// ============ Scroll Reveal ============
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ============ Counter ============
-const counterObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const target = parseInt(e.target.dataset.count);
-        let current = 0;
-        const inc = target / 50;
-        const timer = setInterval(() => {
-            current += inc;
-            if (current >= target) { e.target.textContent = target.toLocaleString() + '+'; clearInterval(timer); }
-            else { e.target.textContent = Math.floor(current).toLocaleString() + '+'; }
-        }, 20);
-        counterObs.unobserve(e.target);
-    });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('[data-count]').forEach(c => counterObs.observe(c));
-
-// ============ Mobile Menu (moved outside initThreeBackground for global scope) ============
-// Placeholder - actual functions are defined in a separate script block above
-
-// ============ Lightbox with Navigation ============
-let lbItems = [];   // current gallery's screenshot-items
-let lbIndex = 0;    // current index within lbItems
-let touchStartX = 0;
-let touchEndX = 0;
+/* ============================================================
+   Lightbox
+   ============================================================ */
+var lbItems = [], lbIndex = 0;
+var touchStartX = 0;
 
 function openLightbox(item) {
-    // Find all screenshot-items in the currently active gallery
-    const activeGallery = document.querySelector('.platform-gallery.active');
-    if (activeGallery) {
-        lbItems = Array.from(activeGallery.querySelectorAll('.screenshot-item'));
-        lbIndex = lbItems.indexOf(item);
-    } else {
-        lbItems = [item];
-        lbIndex = 0;
-    }
-    showLightboxItem(lbIndex);
-    document.getElementById('lightbox').classList.add('active');
-    document.body.style.overflow = 'hidden';
+  var activeGallery = document.querySelector('.platform-gallery.active, [id^="mob-gallery-"]');
+  if (activeGallery) {
+    lbItems = Array.from(activeGallery.querySelectorAll('.screenshot-item'));
+    lbIndex = lbItems.indexOf(item);
+    if (lbIndex < 0) lbIndex = 0;
+  } else {
+    lbItems = [item]; lbIndex = 0;
+  }
+  showLightboxItem(lbIndex);
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
-function showLightboxItem(index) {
-    if (index < 0 || index >= lbItems.length) return;
-    lbIndex = index;
-    const item = lbItems[lbIndex];
-    const img = item.querySelector('img');
-    const label = item.querySelector('.screenshot-label');
-    const lbImg = document.getElementById('lightboxImg');
-
-    // Fade transition
-    lbImg.classList.add('lb-fade');
-    setTimeout(() => {
-        lbImg.src = img.src;
-        lbImg.alt = img.alt;
-        document.getElementById('lightboxCaption').textContent = label ? label.textContent : '';
-        document.getElementById('lightboxCounter').textContent = (lbIndex + 1) + ' / ' + lbItems.length;
-        lbImg.classList.remove('lb-fade');
-    }, 150);
+function showLightboxItem(idx) {
+  if (idx < 0 || idx >= lbItems.length) return;
+  lbIndex = idx;
+  var item   = lbItems[idx];
+  var img    = item.querySelector('img');
+  var label  = item.querySelector('.screenshot-label');
+  var lbImg  = document.getElementById('lightboxImg');
+  lbImg.classList.add('lb-fade');
+  setTimeout(function() {
+    lbImg.src = img.src; lbImg.alt = img.alt;
+    document.getElementById('lightboxCaption').textContent = label ? label.textContent : '';
+    document.getElementById('lightboxCounter').textContent = (idx + 1) + ' / ' + lbItems.length;
+    lbImg.classList.remove('lb-fade');
+  }, 120);
 }
 
-function navigateLightbox(direction) {
-    const newIndex = lbIndex + direction;
-    if (newIndex >= 0 && newIndex < lbItems.length) {
-        showLightboxItem(newIndex);
-    }
+function navigateLightbox(dir) {
+  var n = lbIndex + dir;
+  if (n >= 0 && n < lbItems.length) showLightboxItem(n);
 }
 
 function handleLightboxClick(e) {
-    // Only close if clicking the backdrop itself, not buttons/image
-    if (e.target === document.getElementById('lightbox')) {
-        closeLightbox();
-    }
+  if (e.target === document.getElementById('lightbox')) closeLightbox();
 }
 
 function closeLightbox() {
-    document.getElementById('lightbox').classList.remove('active');
-    document.body.style.overflow = '';
+  document.getElementById('lightbox').classList.remove('active');
+  document.body.style.overflow = '';
 }
 
-// Keyboard: Escape, Left, Right
-document.addEventListener('keydown', (e) => {
-    const lb = document.getElementById('lightbox');
-    if (!lb.classList.contains('active')) return;
-    if (e.key === 'Escape') closeLightbox();
-    else if (e.key === 'ArrowLeft') navigateLightbox(-1);
-    else if (e.key === 'ArrowRight') navigateLightbox(1);
+document.getElementById('lightbox').addEventListener('touchstart', function(e) {
+  touchStartX = e.changedTouches[0].screenX;
+}, { passive: true });
+document.getElementById('lightbox').addEventListener('touchend', function(e) {
+  var diff = touchStartX - e.changedTouches[0].screenX;
+  if (Math.abs(diff) > 50) { if (diff > 0) navigateLightbox(1); else navigateLightbox(-1); }
+}, { passive: true });
+
+document.addEventListener('keydown', function(e) {
+  var lb = document.getElementById('lightbox');
+  if (!lb.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox();
+  else if (e.key === 'ArrowLeft')  navigateLightbox(-1);
+  else if (e.key === 'ArrowRight') navigateLightbox(1);
 });
 
-// Mobile swipe support
-document.getElementById('lightbox').addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
+/* ============================================================
+   Bench toggle
+   ============================================================ */
+function toggleBenchExtra() {
+  var el  = document.getElementById('benchExtra');
+  var btn = document.getElementById('benchToggleBtn');
+  var open = el.classList.toggle('open');
+  btn.textContent = open ? 'Hide benchmarks ▴' : 'Show all benchmarks ▾';
+}
 
-document.getElementById('lightbox').addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    const diff = touchStartX - touchEndX;
-    if (Math.abs(diff) > 50) { // minimum swipe distance
-        if (diff > 0) navigateLightbox(1);  // swipe left = next
-        else navigateLightbox(-1);           // swipe right = prev
-    }
-}, { passive: true });
+/* ============================================================
+   Scroll reveal
+   ============================================================ */
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
 
-// ============ Benchmark Counter Animation ============
-const benchObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const target = parseFloat(e.target.dataset.benchCount);
-        const isDecimal = e.target.dataset.benchDecimal === 'true';
-        let current = 0;
-        const duration = 1200;
-        const startTime = performance.now();
-
-        function animate(now) {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            // easeOutExpo
-            const eased = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-            current = target * eased;
-
-            if (isDecimal) {
-                e.target.textContent = current.toFixed(1);
-            } else {
-                e.target.textContent = Math.round(current);
-            }
-
-            if (progress < 1) {
-                requestAnimationFrame(animate);
-            } else {
-                e.target.textContent = isDecimal ? target.toFixed(1) : target;
-            }
-        }
-        requestAnimationFrame(animate);
-        benchObs.unobserve(e.target);
-    });
+/* ============================================================
+   Counter animation
+   ============================================================ */
+var counterObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (!e.isIntersecting) return;
+    var target = parseInt(e.target.dataset.count);
+    var current = 0, inc = target / 50;
+    var timer = setInterval(function() {
+      current += inc;
+      if (current >= target) {
+        e.target.textContent = target.toLocaleString() + '+'; clearInterval(timer);
+      } else {
+        e.target.textContent = Math.floor(current).toLocaleString() + '+';
+      }
+    }, 20);
+    counterObs.unobserve(e.target);
+  });
 }, { threshold: 0.5 });
+document.querySelectorAll('[data-count]').forEach(function(c) { counterObs.observe(c); });
 
-document.querySelectorAll('[data-bench-count]').forEach(el => benchObs.observe(el));
+/* ============================================================
+   Benchmark counter animation
+   ============================================================ */
+var benchObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (!e.isIntersecting) return;
+    var target    = parseFloat(e.target.dataset.benchCount);
+    var isDecimal = e.target.dataset.benchDecimal === 'true';
+    var start     = performance.now();
+    var dur       = 1200;
+    (function animate(now) {
+      var p = Math.min((now - start) / dur, 1);
+      var eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
+      e.target.textContent = isDecimal ? (target * eased).toFixed(1) : Math.round(target * eased);
+      if (p < 1) requestAnimationFrame(animate);
+      else e.target.textContent = isDecimal ? target.toFixed(1) : target;
+    })(start);
+    benchObs.unobserve(e.target);
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('[data-bench-count]').forEach(function(el) { benchObs.observe(el); });
 
-// ============ Comparison Bar Animation ============
-const barObs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (!e.isIntersecting) return;
-        const bars = e.target.querySelectorAll('.comp-bar[data-width]');
-        bars.forEach((bar, i) => {
-            setTimeout(() => {
-                bar.style.width = bar.dataset.width + '%';
-            }, i * 200);
-        });
-        barObs.unobserve(e.target);
+/* ============================================================
+   Bar chart animation
+   ============================================================ */
+var barObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (!e.isIntersecting) return;
+    e.target.querySelectorAll('.comp-bar[data-width]').forEach(function(bar, i) {
+      setTimeout(function() { bar.style.width = bar.dataset.width + '%'; }, i * 200);
     });
+    barObs.unobserve(e.target);
+  });
 }, { threshold: 0.3 });
-
-document.querySelectorAll('.comparison-card').forEach(el => barObs.observe(el));
+document.querySelectorAll('.comparison-card').forEach(function(el) { barObs.observe(el); });
 </script>
 
 </body>

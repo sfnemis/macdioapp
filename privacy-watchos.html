@@ -10,6 +10,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png"><link rel="apple-touch-icon" href="assets/app-icon.png">
     <link rel="canonical" href="https://macdio.app/privacy-watchos.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root{--bg:#050507;--surface:rgba(14,14,18,0.8);--border:rgba(255,255,255,0.06);--border-hover:rgba(255,255,255,0.12);--text:#e8e8ed;--text-secondary:#7a7a8c;--accent:#6366f1;}
@@ -47,24 +49,11 @@
         @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
         @media(max-width:768px){nav{padding:0 20px;}.nav-links{display:none;}.mobile-menu-btn{display:block;}.page-content{padding:120px 20px 60px;}.policy-card{padding:28px;}}
     </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 <div class="bg-glow"></div>
-<nav>
-    <a href="index.html" class="nav-brand"><img src="assets/app-icon.png" alt="Macdio" width="32" height="32"><span>Macdio</span></a>
-        <div class="nav-links">
-        <a href="index.html#features">Features</a>
-        <a href="index.html#screenshots">Screenshots</a>
-        <a href="support.html">Support</a>
-        <a href="privacy.html" class="active">Privacy</a>
-        <a href="transparency.html">Transparency</a>
-        <a href="accessibility.html">Accessibility</a>
-        <a href="submit-station.html">Submit Station</a>
-        <a href="stations.html">Stations</a>
-        <a href="https://apps.apple.com/app/macdio/id6761737888" class="nav-cta" target="_blank" rel="noopener">Download</a>
-    </div>
-    <button class="mobile-menu-btn" aria-label="Menu">☰</button>
-</nav>
+<div id="nav-placeholder"></div>
 <main class="page-content">
     <a href="privacy.html" class="back-link fade-in"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg> All Platforms</a>
     <div class="page-header fade-in">
@@ -95,6 +84,9 @@
         <div class="policy-section"><h2>📬 Contact</h2><p>Questions? Contact us at: <a href="mailto:support@macdio.app">support@macdio.app</a></p></div>
     </div>
 </main>
-<footer><div class="footer-links"><a href="index.html">Home</a><a href="privacy.html">All Platforms</a><a href="support.html">Support</a><a href="mailto:support@macdio.app">Contact</a></div><p>© 2026 SFN. All rights reserved.</p></footer>
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/footer.js"></script>
 </body>
 </html>

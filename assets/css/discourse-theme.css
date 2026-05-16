@@ -1,0 +1,494 @@
+/*
+  Macdio — Discourse Theme CSS v2
+  Full dark theme matching macdio.app
+  Paste into: Admin → Customize → Themes → Macdio → CSS tab
+*/
+
+/* ===================================================
+   FONT
+   =================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ===================================================
+   DISCOURSE CSS VARIABLES
+   These propagate through all of Discourse's own CSS.
+   --tertiary controls link / accent colors.
+   =================================================== */
+:root {
+  --font-family:         'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --primary:            #e8e8ed;
+  --primary-low:        rgba(232,232,237,0.06);
+  --primary-medium:     #7a7a8c;
+  --primary-high:       rgba(232,232,237,0.75);
+  --primary-very-high:  rgba(232,232,237,0.92);
+
+  --secondary:          #050507;
+  --secondary-low:      rgba(14,14,18,0.5);
+  --secondary-medium:   rgba(14,14,18,0.7);
+  --secondary-high:     rgba(14,14,18,0.9);
+  --secondary-very-high:#0e0e12;
+
+  /* tertiary = link/accent color — the main fix */
+  --tertiary:           #818cf8;
+  --tertiary-low:       rgba(129,140,248,0.1);
+  --tertiary-medium:    rgba(129,140,248,0.45);
+  --tertiary-high:      rgba(129,140,248,0.8);
+
+  --quaternary:         #a855f7;
+  --quaternary-low:     rgba(168,85,247,0.1);
+
+  --highlight:          rgba(99,102,241,0.14);
+  --highlight-medium:   rgba(99,102,241,0.22);
+  --highlight-high:     rgba(99,102,241,0.35);
+
+  --danger:   #ef4444;
+  --success:  #34d399;
+  --warning:  #f59e0b;
+  --love:     #ec4899;
+
+  --header_background:  rgba(5,5,7,0.92);
+  --header_primary:     #e8e8ed;
+
+  --d-sidebar-background:                rgba(8,8,12,0.99);
+  --d-sidebar-highlight-color:           #818cf8;
+  --d-sidebar-highlight-hover-color:     rgba(99,102,241,0.1);
+  --d-sidebar-section-header-text-color: #7a7a8c;
+  --d-sidebar-link-active-background:    rgba(99,102,241,0.12);
+  --d-sidebar-link-active-color:         #e8e8ed;
+
+  --border-color: rgba(255,255,255,0.07);
+}
+
+/* ===================================================
+   BASE
+   =================================================== */
+html, body {
+  background: #050507 !important;
+  color: #e8e8ed !important;
+  font-family: var(--font-family) !important;
+}
+
+/* ===================================================
+   HEADER
+   =================================================== */
+.d-header {
+  background: rgba(5,5,7,0.92) !important;
+  backdrop-filter: blur(24px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+  box-shadow: none !important;
+}
+
+.d-header .title a,
+.d-header .home-logo-wrapper a {
+  color: #e8e8ed !important;
+  font-family: var(--font-family) !important;
+  font-weight: 700 !important;
+}
+
+.d-header-icons .btn,
+.d-header-icons .icon {
+  color: #b0b0bc !important;
+}
+.d-header-icons .btn:hover { color: #e8e8ed !important; background: rgba(255,255,255,0.06) !important; }
+
+/* ===================================================
+   SIDEBAR
+   =================================================== */
+.sidebar-wrapper,
+#d-sidebar,
+.sidebar-container {
+  background: rgba(8,8,12,0.99) !important;
+  border-right: 1px solid rgba(255,255,255,0.06) !important;
+}
+
+.sidebar-section-header-text,
+.sidebar-section-header {
+  color: #7a7a8c !important;
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+}
+
+.sidebar-section-link-wrapper a,
+.sidebar-section-link {
+  color: #a0a0b2 !important;
+  border-radius: 8px !important;
+  font-family: var(--font-family) !important;
+  font-size: 0.88rem !important;
+  font-weight: 500 !important;
+}
+.sidebar-section-link-wrapper a:hover,
+.sidebar-section-link:hover {
+  background: rgba(255,255,255,0.05) !important;
+  color: #e8e8ed !important;
+}
+.sidebar-section-link-wrapper a.active,
+.sidebar-section-link.active,
+.sidebar-section-link--active {
+  background: rgba(99,102,241,0.12) !important;
+  color: #e8e8ed !important;
+  border-left: 2px solid #818cf8 !important;
+}
+
+.sidebar-section-link .badge-notification {
+  background: rgba(99,102,241,0.2) !important;
+  color: #a5b4fc !important;
+}
+
+/* Channel items */
+.sidebar-section-link .prefix-icon,
+.channel-title { color: inherit !important; }
+
+/* ===================================================
+   MAIN / TOPIC LIST
+   =================================================== */
+#main-outlet, .wrap, .container { background: transparent !important; }
+
+.topic-list { background: transparent !important; border: none !important; }
+
+.topic-list-header,
+.topic-list tr.topic-list-header {
+  background: rgba(14,14,18,0.7) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+}
+
+.topic-list-header th {
+  color: #7a7a8c !important;
+  font-size: 0.72rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.07em !important;
+}
+
+.topic-list-item,
+.topic-list tbody tr {
+  background: rgba(14,14,18,0.45) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+  transition: background 0.15s !important;
+}
+.topic-list-item:hover,
+.topic-list tbody tr:hover { background: rgba(22,22,34,0.8) !important; }
+
+.topic-list .main-link a.title,
+.topic-title a,
+.fancy-title,
+.raw-topic-link {
+  color: #e8e8ed !important;
+  font-weight: 600 !important;
+  font-family: var(--font-family) !important;
+}
+.topic-list .main-link a.title:hover,
+.topic-title a:hover { color: #a5b4fc !important; }
+
+.topic-excerpt { color: #7a7a8c !important; font-size: 0.83rem !important; }
+
+.posts-map, .num .value, .age, .activity { color: #7a7a8c !important; }
+.posts-map a { color: #7a7a8c !important; }
+.topic-statuses .fa { color: #7a7a8c !important; }
+
+/* ===================================================
+   NAV PILLS (Latest / New / Hot / Categories)
+   =================================================== */
+.nav-pills > li > a {
+  color: #a0a0b2 !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-family: var(--font-family) !important;
+}
+.nav-pills > li > a:hover {
+  background: rgba(255,255,255,0.05) !important;
+  color: #e8e8ed !important;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover {
+  background: rgba(99,102,241,0.14) !important;
+  color: #a5b4fc !important;
+}
+
+/* Categories / Tags filter pills */
+.list-controls .combo-box .combo-box-header,
+.navigation-bar li a {
+  color: #a0a0b2 !important;
+  background: rgba(14,14,18,0.8) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 8px !important;
+}
+.navigation-bar li.active a {
+  background: rgba(99,102,241,0.14) !important;
+  color: #a5b4fc !important;
+  border-color: rgba(99,102,241,0.2) !important;
+}
+
+/* ===================================================
+   BUTTONS
+   =================================================== */
+.btn-primary {
+  background: linear-gradient(135deg, #6366f1, #a855f7) !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  font-family: var(--font-family) !important;
+}
+.btn-primary:hover { opacity: 0.88 !important; }
+
+.btn-default, .btn:not(.btn-primary):not(.btn-danger) {
+  background: rgba(18,18,26,0.95) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: #d0d0dc !important;
+  border-radius: 10px !important;
+  font-family: var(--font-family) !important;
+}
+.btn-default:hover, .btn:not(.btn-primary):not(.btn-danger):hover {
+  background: rgba(28,28,42,0.95) !important;
+  border-color: rgba(255,255,255,0.16) !important;
+  color: #e8e8ed !important;
+}
+
+.btn.btn-icon { background: transparent !important; border-color: transparent !important; }
+.btn.btn-icon:hover { background: rgba(255,255,255,0.06) !important; }
+
+#create-topic.btn {
+  background: linear-gradient(135deg, #6366f1, #a855f7) !important;
+  border: none !important;
+  color: #fff !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+}
+
+/* ===================================================
+   LINKS (global fallback)
+   =================================================== */
+a { color: #818cf8 !important; }
+a:hover { color: #a5b4fc !important; }
+a:visited { color: #818cf8 !important; }
+.btn a, .btn-primary a, .nav-pills a { color: inherit !important; }
+
+/* ===================================================
+   POSTS / TOPIC PAGE
+   =================================================== */
+.topic-post { border-bottom: 1px solid rgba(255,255,255,0.04) !important; }
+.topic-post article { background: transparent !important; }
+
+.cooked {
+  color: #d0d0dc !important;
+  line-height: 1.75 !important;
+  font-family: var(--font-family) !important;
+}
+.cooked a            { color: #818cf8 !important; }
+.cooked a:hover      { color: #a5b4fc !important; }
+.cooked strong       { color: #e8e8ed !important; }
+.cooked h1, .cooked h2, .cooked h3 { color: #e8e8ed !important; }
+.cooked code {
+  background: rgba(99,102,241,0.1) !important;
+  color: #c4b5fd !important;
+  border-radius: 5px !important;
+  padding: 2px 6px !important;
+  font-size: 0.88em !important;
+}
+.cooked pre {
+  background: rgba(10,10,14,0.95) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 10px !important;
+}
+.cooked pre code { background: transparent !important; padding: 0 !important; }
+.cooked blockquote {
+  border-left: 3px solid #6366f1 !important;
+  background: rgba(99,102,241,0.06) !important;
+  color: #b0b0bc !important;
+  border-radius: 0 8px 8px 0 !important;
+}
+
+.post-infos, .names .username, .post-date, .read-state, .post-info { color: #7a7a8c !important; }
+.names .full-name { color: #a0a0b2 !important; }
+
+.post-menu-area .actions .btn, .post-menu-area .actions .btn:not(.btn-primary) {
+  background: transparent !important;
+  border: none !important;
+  color: #7a7a8c !important;
+}
+.post-menu-area .actions .btn:hover { color: #818cf8 !important; }
+.has-like .fa-heart { color: #ec4899 !important; }
+.like-count          { color: #7a7a8c !important; }
+
+/* Topic progress / timeline */
+.topic-timeline .timeline-scrollarea { border-left-color: rgba(255,255,255,0.08) !important; }
+.topic-timeline .timeline-handle     { background: #6366f1 !important; }
+
+/* ===================================================
+   COMPOSER / EDITOR
+   =================================================== */
+.d-editor-container {
+  background: rgba(10,10,14,0.98) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+.d-editor-input {
+  background: rgba(10,10,14,0.95) !important;
+  color: #e8e8ed !important;
+  border: none !important;
+  font-family: var(--font-family) !important;
+}
+.d-editor-button-bar {
+  background: rgba(6,6,10,0.98) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+}
+.d-editor-button-bar .btn { background: transparent !important; border: none !important; color: #7a7a8c !important; }
+.d-editor-button-bar .btn:hover { color: #e8e8ed !important; background: rgba(255,255,255,0.05) !important; }
+.d-editor-preview {
+  background: rgba(8,8,12,0.95) !important;
+  border-left: 1px solid rgba(255,255,255,0.06) !important;
+  color: #d0d0dc !important;
+}
+
+/* Composer actions toolbar */
+.composer-popup { background: #0e0e12 !important; border-color: rgba(255,255,255,0.08) !important; }
+.reply-control { background: rgba(8,8,12,0.98) !important; border-top: 1px solid rgba(255,255,255,0.08) !important; }
+.reply-control .mini-composer { color: #7a7a8c !important; }
+
+/* ===================================================
+   INPUTS
+   =================================================== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="url"],
+textarea {
+  background: rgba(14,14,18,0.95) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+  color: #e8e8ed !important;
+  border-radius: 10px !important;
+  font-family: var(--font-family) !important;
+}
+input:focus, textarea:focus {
+  border-color: rgba(99,102,241,0.4) !important;
+  box-shadow: 0 0 0 3px rgba(99,102,241,0.12) !important;
+  outline: none !important;
+}
+::placeholder { color: #7a7a8c !important; }
+
+/* Select kit */
+.select-kit .select-kit-header {
+  background: rgba(14,14,18,0.95) !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+  color: #e8e8ed !important;
+  border-radius: 10px !important;
+}
+.select-kit-collection,
+.select-kit .select-kit-body {
+  background: #0e0e12 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.6) !important;
+}
+.select-kit .select-kit-row { color: #b0b0bc !important; border-radius: 8px !important; }
+.select-kit .select-kit-row:hover,
+.select-kit .select-kit-row.is-highlighted { background: rgba(99,102,241,0.1) !important; color: #e8e8ed !important; }
+.select-kit .select-kit-row.is-selected    { background: rgba(99,102,241,0.16) !important; color: #a5b4fc !important; }
+
+/* ===================================================
+   NOTIFICATIONS / ALERTS
+   =================================================== */
+.alert {
+  color: #e8e8ed !important;
+  border-radius: 0 10px 10px 0 !important;
+}
+.alert.alert-info {
+  background: rgba(99,102,241,0.1) !important;
+  border-left: 3px solid #6366f1 !important;
+}
+.alert.alert-success {
+  background: rgba(52,211,153,0.08) !important;
+  border-left: 3px solid #34d399 !important;
+}
+.alert.alert-error, .alert.alert-danger {
+  background: rgba(239,68,68,0.08) !important;
+  border-left: 3px solid #ef4444 !important;
+}
+
+.notification-item { background: rgba(14,14,18,0.9) !important; border-radius: 10px !important; }
+.notification-item.unread { background: rgba(99,102,241,0.08) !important; }
+
+.badge-notification.new-posts,
+.badge-notification.unread-posts { background: #6366f1 !important; color: #fff !important; }
+
+/* ===================================================
+   USER CARD
+   =================================================== */
+.user-card, .group-card {
+  background: #0e0e12 !important;
+  border: 1px solid rgba(255,255,255,0.09) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6) !important;
+}
+.user-card .card-row    { color: #b0b0bc !important; }
+.user-card .names h1 a  { color: #e8e8ed !important; }
+
+/* ===================================================
+   CATEGORY CARDS (Categories view)
+   =================================================== */
+.category-box {
+  background: rgba(14,14,18,0.7) !important;
+  border: 1px solid rgba(255,255,255,0.07) !important;
+  border-radius: 14px !important;
+  transition: all 0.2s !important;
+}
+.category-box:hover {
+  border-color: rgba(99,102,241,0.2) !important;
+  background: rgba(99,102,241,0.05) !important;
+}
+.category-box h3 a     { color: #e8e8ed !important; }
+.category-description  { color: #7a7a8c !important; }
+
+/* ===================================================
+   TAGS
+   =================================================== */
+.discourse-tag, .discourse-tags .discourse-tag {
+  background: rgba(99,102,241,0.1) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99,102,241,0.18) !important;
+  border-radius: 6px !important;
+  padding: 2px 8px !important;
+}
+
+/* ===================================================
+   SEARCH MENU
+   =================================================== */
+.search-menu {
+  background: #0e0e12 !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.55) !important;
+}
+.search-menu .search-result-topic .topic-title { color: #e8e8ed !important; }
+.search-menu ul li a:hover { background: rgba(99,102,241,0.08) !important; }
+.search-menu .category-name { color: #818cf8 !important; }
+
+/* ===================================================
+   MISC
+   =================================================== */
+hr { border-color: rgba(255,255,255,0.06) !important; }
+
+.footer-message, .powered-by { color: #7a7a8c !important; opacity: 0.5 !important; }
+
+/* Pinned icon */
+.topic-statuses .pinned .fa { color: #6366f1 !important; }
+
+/* "Back to list" / breadcrumb */
+#topic-title h1 { color: #e8e8ed !important; font-family: var(--font-family) !important; }
+.fancy-title     { color: #e8e8ed !important; }
+
+/* Expand post summary */
+.topic-map { background: rgba(14,14,18,0.7) !important; border-color: rgba(255,255,255,0.07) !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar       { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.18); }

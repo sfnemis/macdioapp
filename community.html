@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community — Macdio | Internet Radio Forum</title>
+  <meta name="description" content="Join the Macdio community at hub.macdio.app. Request features, report bugs, share great radio stations, and connect with other listeners.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#050507">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="canonical" href="https://macdio.app/community.html">
+
+  <meta property="og:title" content="Macdio Community — Join the Conversation">
+  <meta property="og:description" content="Request features, report bugs, and share great radio stations with other Macdio listeners.">
+  <meta property="og:image" content="https://macdio.app/assets/app-icon.png">
+  <meta property="og:url" content="https://macdio.app/community.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+<div class="bg-glow"></div>
+<div id="nav-placeholder"></div>
+
+<main>
+  <div class="subpage-hero reveal">
+    <p class="section-label">Community</p>
+    <h1 class="section-title" style="font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;letter-spacing:-0.04em;margin-bottom:16px;">
+      The Macdio<br><span class="gradient-text">Community Hub</span>
+    </h1>
+    <p class="section-desc" style="margin-top:16px;">Connect with other listeners, request features, report bugs, and discover great radio stations. The community lives at <strong style="color:var(--text);">hub.macdio.app</strong>.</p>
+
+    <div style="margin-top:36px;">
+      <a href="https://hub.macdio.app" class="btn-community" target="_blank" rel="noopener" style="display:inline-flex;">
+        Open Community Hub →
+      </a>
+    </div>
+  </div>
+
+  <div class="subpage-content">
+    <!-- Category cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:48px;">
+      <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card" style="border-radius:var(--radius-card);">
+        <span class="community-card-icon">💬</span>
+        <span class="community-card-title">Feature Requests</span>
+        <span class="community-card-desc">Vote on and suggest new features for Macdio</span>
+      </a>
+      <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card" style="border-radius:var(--radius-card);">
+        <span class="community-card-icon">🐛</span>
+        <span class="community-card-title">Bug Reports</span>
+        <span class="community-card-desc">Found an issue? Let us know so we can fix it</span>
+      </a>
+      <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card" style="border-radius:var(--radius-card);">
+        <span class="community-card-icon">📻</span>
+        <span class="community-card-title">Station Tips</span>
+        <span class="community-card-desc">Share your favourite radio stations worldwide</span>
+      </a>
+      <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card" style="border-radius:var(--radius-card);">
+        <span class="community-card-icon">🙌</span>
+        <span class="community-card-title">General</span>
+        <span class="community-card-desc">Anything and everything Macdio</span>
+      </a>
+    </div>
+
+    <!-- What to expect -->
+    <div class="content-card reveal">
+      <h3>What to expect</h3>
+      <p>hub.macdio.app is powered by Discourse — a modern forum designed for real conversations. It's free to join, and your voice directly shapes future versions of Macdio.</p>
+      <ul style="margin-top:12px;padding-left:20px;">
+        <li>Feature requests are tracked and prioritized by the developer</li>
+        <li>Bug reports get personal responses</li>
+        <li>Station suggestions may be featured in the app's Discover section</li>
+        <li>No advertising, no tracking — same principles as the app</li>
+      </ul>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;">
+      <p style="font-size:0.88rem;color:var(--text-secondary);margin-bottom:20px;">Already have a question? Reach us directly at</p>
+      <a href="mailto:support@macdio.app" style="color:var(--accent);font-size:0.95rem;font-weight:600;text-decoration:none;">support@macdio.app</a>
+    </div>
+  </div>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/footer.js"></script>
+<script>
+var revealObs = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
+</script>
+</body>
+</html>
