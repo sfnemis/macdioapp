@@ -343,6 +343,7 @@ body.menu-open { overflow: hidden; }
   border-radius: 50%;
   filter: blur(24px);
   animation: heroGlowPulse 8s ease-in-out infinite;
+  will-change: transform, opacity;
   z-index: 0;
   pointer-events: none;
 }
@@ -358,6 +359,7 @@ body.menu-open { overflow: hidden; }
   border-radius: 50%;
   filter: blur(8px);
   animation: heroShadow 8s ease-in-out infinite;
+  will-change: transform, opacity;
   pointer-events: none;
 }
 
@@ -372,6 +374,7 @@ body.menu-open { overflow: hidden; }
     0 0 40px rgba(99,102,241,0.35),
     0 0 80px rgba(99,102,241,0.15);
   animation: float 8s ease-in-out infinite;
+  will-change: transform;
 }
 
 @keyframes heroGlowPulse {

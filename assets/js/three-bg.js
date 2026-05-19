@@ -36,20 +36,22 @@
     if (!canvas || typeof THREE === 'undefined') return;
 
     var isMobile = window.innerWidth < 768;
+    var isWindows = navigator.platform.indexOf('Win') > -1 || navigator.userAgent.indexOf('Windows') > -1;
+    var isLowPerf = isMobile || isWindows;
 
-    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: !isMobile });
+    var renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: false });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isMobile ? 1 : 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, isLowPerf ? 1 : 2));
 
     var scene  = new THREE.Scene();
     var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
     camera.position.z = 30;
 
-    var ringCount = isMobile ? 2 : 3;
+    var ringCount = isLowPerf ? 2 : 3;
     var rings = [];
 
     for (var r = 0; r < ringCount; r++) {
-      var count     = isMobile ? 120 : 200;
+      var count     = isLowPerf ? 80 : 200;
       var positions = new Float32Array(count * 3);
       var radius    = 10 + r * 6;
 
@@ -77,7 +79,7 @@
     }
 
     /* Ambient particles */
-    var ambCount  = isMobile ? 200 : 400;
+    var ambCount  = isLowPerf ? 120 : 400;
     var ambPos    = new Float32Array(ambCount * 3);
     var ambColors = new Float32Array(ambCount * 3);
 
@@ -122,10 +124,14 @@
       sectionEls.forEach(function (s) { obs.observe(s); });
     }
 
-    /* Animate */
-    function animate() {
+    /* Animate — throttle to ~30fps on low-perf devices */
+    var frameInterval = isLowPerf ? 33 : 0;
+    var lastFrame = 0;
+    function animate(now) {
       requestAnimationFrame(animate);
-      var time = Date.now() * 0.001;
+      if (frameInterval && now - lastFrame < frameInterval) return;
+      lastFrame = now;
+      var time = now * 0.001;
 
       /* Lerp color */
       for (var k = 0; k < 3; k++) {
@@ -155,7 +161,7 @@
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
     }
-    animate();
+    animate(0);
 
     window.addEventListener('scroll', function () {
       var pct = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight);
