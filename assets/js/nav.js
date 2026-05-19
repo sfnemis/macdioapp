@@ -23,6 +23,7 @@
       <a href="accessibility.html" class="mobile-nav-link" onclick="macdioNav.close()">Accessibility</a>
       <a href="submit-station.html" class="mobile-nav-link" onclick="macdioNav.close()">Submit Station</a>
       <a href="stations.html" class="mobile-nav-link" onclick="macdioNav.close()">Stations</a>
+      <a href="presskit.html" class="mobile-nav-link" onclick="macdioNav.close()">Press Kit</a>
     </div>
     <div class="mobile-nav-footer">
       <p>Available on iPhone, iPad, Mac, Apple TV,<br>Apple Watch &amp; CarPlay &middot; 55,000+ Stations</p>
@@ -52,6 +53,7 @@
         <a href="accessibility.html">Accessibility</a>
         <a href="submit-station.html">Submit Station</a>
         <a href="stations.html">Stations</a>
+        <a href="presskit.html">Press Kit</a>
       </div>
     </div>
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="nav-download-svg" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store">

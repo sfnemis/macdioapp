@@ -29,6 +29,7 @@
       <p class="footer-col-title">Support</p>
       <a href="/support.html">Help Center</a>
       <a href="mailto:support@macdio.app">Contact</a>
+      <a href="/presskit.html">Press Kit</a>
     </div>
   </div>
   <div class="footer-bottom">
