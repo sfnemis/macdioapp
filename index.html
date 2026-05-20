@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+  <!-- Google Analytics Lazy Loader -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QR2MZ9NF2N');
+    function loadGoogleAnalytics() {
+      if (window.gaLoaded) return;
+      window.gaLoaded = true;
+      
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N";
+      document.head.appendChild(script);
+      
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      gtag('js', new Date());
+      gtag('config', 'G-QR2MZ9NF2N');
+    }
+    
+    window.addEventListener('load', function() {
+      var delayTimer = setTimeout(loadGoogleAnalytics, 1500);
+      
+      function triggerLoad() {
+        clearTimeout(delayTimer);
+        loadGoogleAnalytics();
+        ['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(function(e) {
+          window.removeEventListener(e, triggerLoad);
+        });
+      }
+      
+      ['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(function(e) {
+        window.addEventListener(e, triggerLoad, { passive: true });
+      });
+    });
   </script>
 
   <meta charset="UTF-8">
@@ -105,7 +131,7 @@
   <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
   <div class="hero-buttons">
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" fetchpriority="high" loading="eager">
+      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" width="162" height="54" fetchpriority="high" loading="eager">
     </a>
     <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
   </div>
@@ -611,7 +637,7 @@
     <h2>Ready to tune in.</h2>
     <p>Native. Private. No subscriptions.<br>On every Apple device you own.</p>
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;">
+      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;" width="162" height="54" loading="lazy">
     </a>
   </div>
 </section>

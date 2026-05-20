@@ -46,7 +46,7 @@
         alpha: true, 
         antialias: !isMobile,
         powerPreference: "high-performance",
-        failIfMajorPerformanceCaveat: true
+        failIfMajorPerformanceCaveat: false
       });
       
       // Determine if OS is Windows to limit high-DPI scaling overhead
@@ -54,7 +54,7 @@
       if (typeof navigator !== 'undefined' && navigator.userAgent) {
         isWindows = /Windows|Win32|Win64/i.test(navigator.userAgent);
       }
-      var maxPixelRatio = isMobile ? 1 : (isWindows ? 1.25 : 2);
+      var maxPixelRatio = isMobile ? 1 : (isWindows ? 1.5 : 2);
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio, maxPixelRatio));
 
@@ -193,9 +193,6 @@
     }
   }
 
-  if (document.readyState === 'complete') {
-    initThreeBackground();
-  } else {
-    window.addEventListener('load', initThreeBackground);
-  }
+  // Execute immediately since we load this script dynamically after load event is fired
+  initThreeBackground();
 })();
