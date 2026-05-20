@@ -69,18 +69,17 @@
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts & Asset Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
 
   <!-- Shared CSS -->
   <link rel="stylesheet" href="assets/css/main.css">
-
-  <!-- Three.js (deferred) -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
 
@@ -100,13 +99,13 @@
     Live Internet Radio for All Apple Platforms
   </div>
   <div class="hero-icon-wrap">
-    <img src="assets/app-icon.png" alt="Macdio App Icon" class="hero-icon" width="112" height="112">
+    <img src="assets/app-icon.png" alt="Macdio App Icon" class="hero-icon" width="112" height="112" fetchpriority="high" loading="eager">
   </div>
   <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
   <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
   <div class="hero-buttons">
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;">
+      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" fetchpriority="high" loading="eager">
     </a>
     <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
   </div>
@@ -150,27 +149,27 @@
       <!-- macOS -->
       <div class="platform-gallery active" id="gallery-macos" role="tabpanel">
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Discover.png" alt="Macdio macOS Discover" loading="lazy">
+          <img src="assets/screenshots/macos_web/Discover.webp" alt="Macdio macOS Discover" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Library.png" alt="Macdio macOS Library" loading="lazy">
+          <img src="assets/screenshots/macos_web/Library.webp" alt="Macdio macOS Library" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Library</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Tracks.png" alt="Macdio macOS Now Playing" loading="lazy">
+          <img src="assets/screenshots/macos_web/Tracks.webp" alt="Macdio macOS Now Playing" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Recordings.png" alt="Macdio macOS Recordings" loading="lazy">
+          <img src="assets/screenshots/macos_web/Recordings.webp" alt="Macdio macOS Recordings" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Recordings</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/mini_player.png" alt="Macdio macOS Mini Player" loading="lazy">
+          <img src="assets/screenshots/macos_web/mini_player.webp" alt="Macdio macOS Mini Player" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Mini Player</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/stats.png" alt="Macdio macOS Listening Stats" loading="lazy">
+          <img src="assets/screenshots/macos_web/stats.webp" alt="Macdio macOS Listening Stats" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Listening Stats</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
       </div>
@@ -178,31 +177,31 @@
       <!-- iPhone -->
       <div class="platform-gallery" id="gallery-iphone" role="tabpanel">
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Discover-b.png" alt="Macdio iPhone Discover" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Discover-b.webp" alt="Macdio iPhone Discover" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.png" alt="Macdio iPhone Now Playing" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.webp" alt="Macdio iPhone Now Playing" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Now Playing &amp; Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Fav-song.png" alt="Macdio iPhone Favorites" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Fav-song.webp" alt="Macdio iPhone Favorites" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Saved Songs</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Sleep-Timer.png" alt="Macdio iPhone Sleep Timer" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Sleep-Timer.webp" alt="Macdio iPhone Sleep Timer" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Lyric.png" alt="Macdio iPhone Synced Lyrics" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Lyric.webp" alt="Macdio iPhone Synced Lyrics" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Sync-ICloud.png" alt="Macdio iPhone iCloud Sync" loading="lazy">
+          <img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="Macdio iPhone iCloud Sync" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/CarPlay_web/Song.png" alt="Macdio CarPlay Now Playing" loading="lazy">
+          <img src="assets/screenshots/CarPlay_web/Song.webp" alt="Macdio CarPlay Now Playing" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">CarPlay</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
       </div>
@@ -210,27 +209,27 @@
       <!-- iPad -->
       <div class="platform-gallery" id="gallery-ipad" role="tabpanel">
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Discover-W.png" alt="Macdio iPad Discover" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Discover-W.webp" alt="Macdio iPad Discover" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Lyrics-Song.png" alt="Macdio iPad Lyrics &amp; Now Playing" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Lyrics-Song.webp" alt="Macdio iPad Lyrics &amp; Now Playing" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Lyrics &amp; Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Left-Save-to-fav.png" alt="Macdio iPad Save to Favorites" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Left-Save-to-fav.webp" alt="Macdio iPad Save to Favorites" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Save to Favorites</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Sleep-Timer.png" alt="Macdio iPad Sleep Timer" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Sleep-Timer.webp" alt="Macdio iPad Sleep Timer" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Sync-ICloud.png" alt="Macdio iPad iCloud Sync" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Sync-ICloud.webp" alt="Macdio iPad iCloud Sync" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Lyrics.png" alt="Macdio iPad Full-Screen Lyrics" loading="lazy">
+          <img src="assets/screenshots/ipad_web/Lyrics.webp" alt="Macdio iPad Full-Screen Lyrics" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Full-Screen Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
       </div>
@@ -238,19 +237,19 @@
       <!-- Apple TV -->
       <div class="platform-gallery" id="gallery-tvos" role="tabpanel">
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Discover.png" alt="Macdio Apple TV Discover" loading="lazy">
+          <img src="assets/screenshots/tvOS_web/Discover.webp" alt="Macdio Apple TV Discover" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Song.png" alt="Macdio Apple TV Now Playing" loading="lazy">
+          <img src="assets/screenshots/tvOS_web/Song.webp" alt="Macdio Apple TV Now Playing" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Lyrics.png" alt="Macdio Apple TV Synced Lyrics" loading="lazy">
+          <img src="assets/screenshots/tvOS_web/Lyrics.webp" alt="Macdio Apple TV Synced Lyrics" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Recently-Played.png" alt="Macdio Apple TV Recently Played" loading="lazy">
+          <img src="assets/screenshots/tvOS_web/Recently-Played.webp" alt="Macdio Apple TV Recently Played" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span><span class="screenshot-hint">click to zoom</span></div>
         </div>
       </div>
@@ -259,27 +258,27 @@
       <div class="platform-gallery watch-gallery" id="gallery-watchos" role="tabpanel">
         <p style="grid-column:1/-1;text-align:center;font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;">⌚ Stream over LTE — no iPhone needed</p>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Discover.png" alt="Macdio Watch Discover" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Discover.webp" alt="Macdio Watch Discover" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Discover</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Stations.png" alt="Macdio Watch Stations" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Stations.webp" alt="Macdio Watch Stations" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Stations</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Favs.png" alt="Macdio Watch Favorites" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Favs.webp" alt="Macdio Watch Favorites" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Favorites</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Genre.png" alt="Macdio Watch Genre" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Genre.webp" alt="Macdio Watch Genre" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Genre</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Recently-Played.png" alt="Macdio Watch Recently Played" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Recently-Played.webp" alt="Macdio Watch Recently Played" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span></div>
         </div>
         <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Save-Your-Songs.png" alt="Macdio Watch Save Songs" loading="lazy">
+          <img src="assets/screenshots/watchos_web/Save-Your-Songs.webp" alt="Macdio Watch Save Songs" loading="lazy">
           <div class="screenshot-meta"><span class="screenshot-label">Save Songs</span></div>
         </div>
       </div>
@@ -369,7 +368,7 @@
   <!-- Feature 1: Synced Lyrics -->
   <div class="feature-row reveal">
     <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Lyric.png" alt="Macdio synced lyrics view" loading="lazy">
+      <img src="assets/screenshots/iPhone_web/Lyric.webp" alt="Macdio synced lyrics view" loading="lazy">
     </div>
     <div class="feature-text">
       <span class="feature-tag">🎵 Synced Lyrics</span>
@@ -381,7 +380,7 @@
   <!-- Feature 2: Live Recording -->
   <div class="feature-row reverse reveal">
     <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Recordings.png" alt="Macdio live recording" loading="lazy">
+      <img src="assets/screenshots/iPhone_web/Recordings.webp" alt="Macdio live recording" loading="lazy">
     </div>
     <div class="feature-text">
       <span class="feature-tag">🔴 Live Recording</span>
@@ -393,7 +392,7 @@
   <!-- Feature 3: Apple Watch LTE -->
   <div class="feature-row reveal">
     <div class="feature-screenshot">
-      <img src="assets/screenshots/watchos_web/Discover.png" alt="Macdio on Apple Watch" loading="lazy">
+      <img src="assets/screenshots/watchos_web/Discover.webp" alt="Macdio on Apple Watch" loading="lazy">
     </div>
     <div class="feature-text">
       <span class="feature-tag">⌚ Apple Watch</span>
@@ -406,7 +405,7 @@
   <!-- Feature 4: All Platforms -->
   <div class="feature-row reverse reveal">
     <div class="feature-screenshot">
-      <img src="assets/screenshots/macos_web/Discover.png" alt="Macdio on Mac" loading="lazy">
+      <img src="assets/screenshots/macos_web/Discover.webp" alt="Macdio on Mac" loading="lazy">
     </div>
     <div class="feature-text">
       <span class="feature-tag">🖥 All Apple Platforms</span>
@@ -419,7 +418,7 @@
   <!-- Feature 5: Privacy + iCloud -->
   <div class="feature-row reveal">
     <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Sync-ICloud.png" alt="Macdio iCloud sync" loading="lazy">
+      <img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="Macdio iCloud sync" loading="lazy">
     </div>
     <div class="feature-text">
       <span class="feature-tag">☁️ iCloud Sync</span>
@@ -625,7 +624,25 @@
 <!-- Shared JS -->
 <script src="assets/js/nav.js"></script>
 <script src="assets/js/footer.js"></script>
-<script defer src="assets/js/three-bg.js"></script>
+
+<script>
+// Dynamic Script Loader for Three.js Background (Prevents Render-Blocking & saves bandwidth on reduced-motion devices)
+window.addEventListener('load', function() {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.body.classList.add('no-webgl');
+    return;
+  }
+  
+  var script3 = document.createElement('script');
+  script3.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+  script3.onload = function() {
+    var scriptBg = document.createElement('script');
+    scriptBg.src = 'assets/js/three-bg.js';
+    document.body.appendChild(scriptBg);
+  };
+  document.body.appendChild(script3);
+});
+</script>
 
 <script>
 /* ============================================================
