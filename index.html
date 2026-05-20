@@ -98,8 +98,6 @@
   <!-- Fonts & Asset Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
@@ -311,7 +309,7 @@
     </div><!-- /.showcase-galleries -->
   </div><!-- /.showcase-wrapper -->
 
-  <!-- Mobile: tab bar (galleries are shown from .showcase-galleries below via JS clone) -->
+  <!-- Mobile: tab bar (original galleries are shown natively in the DOM) -->
   <div class="platform-tabs-mobile" id="mobilePlatformTabs" aria-label="Platform selector">
     <button class="platform-tab-m active" data-platform="macos">🖥 Mac</button>
     <button class="platform-tab-m" data-platform="iphone">📱 iPhone</button>
@@ -319,7 +317,6 @@
     <button class="platform-tab-m" data-platform="tvos">📺 Apple TV</button>
     <button class="platform-tab-m" data-platform="watchos">⌚ Watch</button>
   </div>
-  <div id="mobileGalleriesRoot" style="padding:0 20px;"></div>
 
 </section>
 

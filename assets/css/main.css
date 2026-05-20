@@ -85,13 +85,13 @@ body.no-webgl::after {
 }
 
 @keyframes floatGlow1 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(-80px, 80px) scale(1.15); }
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(-80px, 80px, 0) scale(1.15); }
 }
 
 @keyframes floatGlow2 {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(80px, -80px) scale(1.15); }
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  100% { transform: translate3d(80px, -80px, 0) scale(1.15); }
 }
 
 /* === SHARED SECTION === */

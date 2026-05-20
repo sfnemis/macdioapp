@@ -118,8 +118,11 @@
       var ambParticles = new THREE.Points(ambGeo, ambMat);
       scene.add(ambParticles);
 
-      /* Mouse parallax */
+      /* Mouse parallax & Scroll lerp variables */
       var mouseX = 0, mouseY = 0;
+      var targetScroll = 0;
+      var currentScroll = 0;
+
       document.addEventListener('mousemove', function (e) {
         mouseX = (e.clientX / window.innerWidth  - 0.5) * 2;
         mouseY = (e.clientY / window.innerHeight - 0.5) * 2;
@@ -149,6 +152,9 @@
           currentColor[k] = lerp(currentColor[k], targetColor[k], 0.02);
         }
 
+        /* Lerp scroll for smooth movement on Windows */
+        currentScroll = lerp(currentScroll, targetScroll, 0.05);
+
         rings.forEach(function (ring, idx) {
           ring.mat.color.setRGB(currentColor[0], currentColor[1], currentColor[2]);
           var pos = ring.points.geometry.attributes.position.array;
@@ -162,6 +168,7 @@
           }
           ring.points.geometry.attributes.position.needsUpdate = true;
           ring.points.rotation.z = time * 0.02 * (idx % 2 === 0 ? 1 : -1);
+          ring.points.rotation.x = currentScroll * Math.PI * 0.15 * (idx + 1);
         });
 
         ambParticles.rotation.y += 0.0003;
@@ -169,17 +176,14 @@
 
         camera.position.x += (mouseX * 2 - camera.position.x) * 0.015;
         camera.position.y += (-mouseY * 2 - camera.position.y) * 0.015;
+        camera.position.z = 30 + currentScroll * 15;
         camera.lookAt(scene.position);
         renderer.render(scene, camera);
       }
       animate();
 
       window.addEventListener('scroll', function () {
-        var pct = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight);
-        camera.position.z = 30 + pct * 15;
-        rings.forEach(function (ring, idx) {
-          ring.points.rotation.x = pct * Math.PI * 0.15 * (idx + 1);
-        });
+        targetScroll = window.scrollY / Math.max(1, document.body.scrollHeight - window.innerHeight);
       }, { passive: true });
 
       window.addEventListener('resize', function () {
