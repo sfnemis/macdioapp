@@ -1090,12 +1090,10 @@ footer {
 
   .hero { padding: 110px 20px 80px; min-height: auto; }
 
-  .showcase-wrapper { display: none; }
+  .showcase-wrapper { display: block; padding: 0; }
+  .platform-list { display: none; }
+  .showcase-galleries { padding: 0 20px; }
   .platform-tabs-mobile { display: flex; }
-  /* On mobile, galleries appear under tab bar — keep same showcase-galleries markup */
-  .platform-showcase .showcase-galleries-mobile {
-    padding: 0 20px;
-  }
   .platform-gallery.active { grid-template-columns: repeat(2, 1fr); gap: 14px; }
   .platform-gallery.watch-gallery.active { grid-template-columns: repeat(2, 1fr); }
 
