@@ -649,13 +649,8 @@
 <script src="assets/js/footer.js" defer></script>
 
 <script>
-// Dynamic Script Loader for Three.js Background (Prevents Render-Blocking & saves bandwidth on reduced-motion and mobile devices)
+// Dynamic Script Loader for Three.js Background (Prevents Render-Blocking & loads asynchronously)
 window.addEventListener('load', function() {
-  if ((window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) || window.innerWidth < 768) {
-    document.body.classList.add('no-webgl');
-    return;
-  }
-  
   var script3 = document.createElement('script');
   script3.src = 'assets/js/three.min.js';
   script3.onload = function() {

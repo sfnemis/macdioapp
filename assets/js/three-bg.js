@@ -30,11 +30,6 @@
   };
 
   function initThreeBackground() {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.body.classList.add('no-webgl');
-      return;
-    }
-
     var canvas = document.getElementById('bg-canvas');
     if (!canvas || typeof THREE === 'undefined') return;
 
