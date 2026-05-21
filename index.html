@@ -650,16 +650,42 @@
 
 <script>
 // Dynamic Script Loader for Three.js Background (Prevents Render-Blocking & loads asynchronously)
-window.addEventListener('load', function() {
+function loadThreeJs() {
   var script3 = document.createElement('script');
   script3.src = 'assets/js/three.min.js';
+  
+  // CDN Fallback on loading failure (resolves local script blocks/MIME-type errors on Windows/older browsers)
+  script3.onerror = function() {
+    console.warn("Local three.min.js failed to load. Attempting CDN fallback...");
+    var cdnScript = document.createElement('script');
+    cdnScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
+    cdnScript.onload = function() {
+      var scriptBg = document.createElement('script');
+      scriptBg.src = 'assets/js/three-bg.js';
+      document.body.appendChild(scriptBg);
+    };
+    cdnScript.onerror = function() {
+      console.error("Both local and CDN Three.js failed to load. Activating premium CSS glow fallback.");
+      document.body.classList.add('no-webgl');
+    };
+    document.body.appendChild(cdnScript);
+  };
+
   script3.onload = function() {
     var scriptBg = document.createElement('script');
     scriptBg.src = 'assets/js/three-bg.js';
     document.body.appendChild(scriptBg);
   };
+
   document.body.appendChild(script3);
-});
+}
+
+// Eliminate race condition if the page has already finished loading (common in fast Windows cache rendering)
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  loadThreeJs();
+} else {
+  window.addEventListener('load', loadThreeJs);
+}
 </script>
 
 <script>

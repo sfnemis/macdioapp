@@ -31,7 +31,10 @@
 
   function initThreeBackground() {
     var canvas = document.getElementById('bg-canvas');
-    if (!canvas || typeof THREE === 'undefined') return;
+    if (!canvas || typeof THREE === 'undefined') {
+      document.body.classList.add('no-webgl');
+      return;
+    }
 
     var isMobile = window.innerWidth < 768;
 
