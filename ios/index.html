@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macdio for iOS</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QR2MZ9NF2N');
+
+    var destination = 'https://apps.apple.com/app/macdio/id6761737888';
+
+    gtag('event', 'app_store_redirect', {
+      'event_category': 'outbound',
+      'event_label': 'ios_app_store',
+      'event_callback': function() {
+        window.location.replace(destination);
+      },
+      'event_timeout': 2000
+    });
+
+    // Fallback: redirect after 2s regardless of GA response
+    setTimeout(function() {
+      window.location.replace(destination);
+    }, 2000);
+  </script>
+  <style>
+    body { margin: 0; display: flex; align-items: center; justify-content: center;
+           min-height: 100vh; font-family: -apple-system, sans-serif; background: #0a0a0a; color: #fff; }
+    p { font-size: 1rem; opacity: 0.6; }
+    a { color: #fff; }
+  </style>
+</head>
+<body>
+  <p>Redirecting to App Store… <a href="https://apps.apple.com/app/macdio/id6761737888">Click here</a> if not redirected.</p>
+</body>
+</html>
