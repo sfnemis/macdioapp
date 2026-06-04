@@ -127,48 +127,62 @@
   </div>
   <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
   <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
+  <div class="hero-price-block" id="heroPriceBlock" aria-live="polite">
+    <div class="hero-price-row">
+      <span class="hero-price-flag" id="heroPriceFlag">🌍</span>
+      <span class="hero-price-big" id="heroPriceAmount">—</span>
+    </div>
+    <p class="hero-price-tagline">One price &nbsp;·&nbsp; Every Apple device &nbsp;·&nbsp; Forever.</p>
+    <p class="hero-price-sub">No subscription. No renewal. Pay once, use on all your Apple devices.</p>
+  </div>
+
   <div class="hero-buttons">
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" width="162" height="54" fetchpriority="high" loading="eager">
+      <img src="download_button_light.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" width="162" height="54" fetchpriority="high" loading="eager">
     </a>
     <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
-  </div>
-  <div id="hero-price-pill" class="hero-price-pill" aria-live="polite">
-    <span class="hero-price-flag" id="heroPriceFlag"></span>
-    <span class="hero-price-amount" id="heroPriceAmount"></span>
-    <span class="hero-price-sep">·</span>
-    <span class="hero-price-note">one-time · all Apple devices</span>
   </div>
 </section>
 
 <style>
-.hero-price-pill {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  margin-top: 20px;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+.hero-price-block {
+  margin: 32px auto 8px;
+  text-align: center;
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(8px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
 }
-.hero-price-pill.visible {
-  opacity: 1;
-  transform: none;
+.hero-price-block.visible { opacity: 1; transform: none; }
+.hero-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
 }
-.hero-price-flag { font-size: 1rem; }
-.hero-price-amount {
-  font-weight: 700;
-  font-size: 0.95rem;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+.hero-price-flag { font-size: 1.5rem; line-height: 1; }
+.hero-price-big {
+  font-size: clamp(2.8rem, 8vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
 }
-.hero-price-sep { color: var(--border); }
-.hero-price-note { color: var(--text-secondary); }
+.hero-price-tagline {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 5px;
+}
+.hero-price-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
 </style>
 
 <!-- ============================================================
@@ -662,186 +676,6 @@
   </div>
 </section>
 
-<!-- ============================================================
-     PRICING
-     ============================================================ -->
-<section class="pricing-section" id="pricing">
-  <div class="pricing-inner reveal">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">One price.<br><span class="gradient-text">Every Apple device. Forever.</span></h2>
-    <p class="pricing-sub">No subscription. No monthly fee. Buy once, use on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay.</p>
-
-    <div class="pricing-card">
-      <div class="pricing-card-top">
-        <span class="pricing-badge">Universal Purchase</span>
-      </div>
-      <div class="pricing-display">
-        <div class="pricing-local" id="pricingLocal">
-          <span class="pricing-amount" id="pricingAmount">$9.99</span>
-          <span class="pricing-period">one-time</span>
-        </div>
-        <p class="pricing-country-label" id="pricingCountryLabel">Detecting your location...</p>
-      </div>
-      <ul class="pricing-features">
-        <li><span class="pf-check">✓</span> All platforms included</li>
-        <li><span class="pf-check">✓</span> iCloud sync across all devices</li>
-        <li><span class="pf-check">✓</span> All future updates free</li>
-        <li><span class="pf-check">✓</span> No ads. No tracking.</li>
-        <li><span class="pf-check">✓</span> 55,000+ stations</li>
-      </ul>
-      <a href="https://apps.apple.com/app/macdio/id6761737888" class="pricing-cta-btn" target="_blank" rel="noopener">
-        Download on the App Store
-      </a>
-    </div>
-
-    <div class="pricing-countries">
-      <p class="pricing-countries-label">Pricing in popular regions</p>
-      <div class="pricing-pills" id="pricingPills">
-        <span class="price-pill">🇺🇸 $5.99</span>
-        <span class="price-pill">🇬🇧 £5.99</span>
-        <span class="price-pill">🇩🇪 €6.99</span>
-        <span class="price-pill">🇹🇷 ₺299.99</span>
-        <span class="price-pill">🇯🇵 ¥1,000</span>
-        <span class="price-pill">🇦🇺 A$9.99</span>
-        <span class="price-pill">🇨🇦 C$7.99</span>
-        <span class="price-pill">🇧🇷 R$39.90</span>
-        <span class="price-pill">🇮🇳 ₹599</span>
-        <span class="price-pill">🇰🇷 ₩9,900</span>
-        <span class="price-pill">🇸🇦 SAR 24.99</span>
-        <span class="price-pill">🌍 +160 countries</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.pricing-section {
-  padding: 100px 24px;
-  max-width: 680px;
-  margin: 0 auto;
-  text-align: center;
-}
-.pricing-inner { max-width: 520px; margin: 0 auto; }
-.pricing-sub {
-  color: var(--text-secondary);
-  font-size: 1rem;
-  line-height: 1.7;
-  margin: 12px 0 40px;
-}
-.pricing-card {
-  background: var(--surface, rgba(255,255,255,0.04));
-  border: 1px solid rgba(99,102,241,0.25);
-  border-radius: 20px;
-  padding: 36px 32px;
-  position: relative;
-  overflow: hidden;
-}
-.pricing-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%);
-  pointer-events: none;
-}
-.pricing-card-top {
-  margin-bottom: 24px;
-}
-.pricing-badge {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  background: rgba(99,102,241,0.12);
-  border: 1px solid rgba(99,102,241,0.25);
-  border-radius: 20px;
-  padding: 5px 14px;
-}
-.pricing-display { margin-bottom: 28px; }
-.pricing-local { display: flex; align-items: baseline; justify-content: center; gap: 10px; }
-.pricing-amount {
-  font-size: clamp(3rem, 8vw, 4rem);
-  font-weight: 800;
-  color: var(--text);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  transition: all 0.4s ease;
-}
-.pricing-period {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-.pricing-country-label {
-  font-size: 0.82rem;
-  color: var(--text-secondary);
-  margin-top: 8px;
-  min-height: 1.2em;
-  transition: opacity 0.3s;
-}
-.pricing-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 32px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.pricing-features li {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.pf-check {
-  color: #34d399;
-  font-weight: 700;
-  flex-shrink: 0;
-}
-.pricing-cta-btn {
-  display: block;
-  width: 100%;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 15px 24px;
-  border-radius: 12px;
-  text-decoration: none;
-  transition: opacity 0.2s, transform 0.2s;
-}
-.pricing-cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
-.pricing-countries { margin-top: 28px; }
-.pricing-countries-label {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin-bottom: 12px;
-  text-align: center;
-}
-.pricing-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-}
-.price-pill {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  background: var(--surface, rgba(255,255,255,0.03));
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 4px 12px;
-  white-space: nowrap;
-}
-.price-pill.highlighted {
-  color: var(--text);
-  border-color: rgba(99,102,241,0.4);
-  background: rgba(99,102,241,0.1);
-}
-</style>
-
 <script>
 (function() {
   var flags = {"AF":"🇦🇫","AL":"🇦🇱","DZ":"🇩🇿","AO":"🇦🇴","AG":"🇦🇬","AR":"🇦🇷","AM":"🇦🇲","AU":"🇦🇺","AT":"🇦🇹","AZ":"🇦🇿","BS":"🇧🇸","BH":"🇧🇭","BB":"🇧🇧","BY":"🇧🇾","BE":"🇧🇪","BZ":"🇧🇿","BJ":"🇧🇯","BM":"🇧🇲","BT":"🇧🇹","BO":"🇧🇴","BA":"🇧🇦","BW":"🇧🇼","BR":"🇧🇷","VG":"🇻🇬","BN":"🇧🇳","BG":"🇧🇬","BF":"🇧🇫","KH":"🇰🇭","CM":"🇨🇲","CA":"🇨🇦","CV":"🇨🇻","KY":"🇰🇾","TD":"🇹🇩","CL":"🇨🇱","CN":"🇨🇳","CO":"🇨🇴","CD":"🇨🇩","CG":"🇨🇬","CR":"🇨🇷","CI":"🇨🇮","HR":"🇭🇷","CY":"🇨🇾","CZ":"🇨🇿","DK":"🇩🇰","DM":"🇩🇲","DO":"🇩🇴","EC":"🇪🇨","EG":"🇪🇬","SV":"🇸🇻","EE":"🇪🇪","SZ":"🇸🇿","FJ":"🇫🇯","FI":"🇫🇮","FR":"🇫🇷","GA":"🇬🇦","GM":"🇬🇲","GE":"🇬🇪","DE":"🇩🇪","GH":"🇬🇭","GR":"🇬🇷","GD":"🇬🇩","GT":"🇬🇹","GW":"🇬🇼","GY":"🇬🇾","HN":"🇭🇳","HK":"🇭🇰","HU":"🇭🇺","IS":"🇮🇸","IN":"🇮🇳","ID":"🇮🇩","IQ":"🇮🇶","IE":"🇮🇪","IL":"🇮🇱","IT":"🇮🇹","JM":"🇯🇲","JP":"🇯🇵","JO":"🇯🇴","KZ":"🇰🇿","KE":"🇰🇪","KR":"🇰🇷","XK":"🇽🇰","KW":"🇰🇼","KG":"🇰🇬","LA":"🇱🇦","LV":"🇱🇻","LB":"🇱🇧","LR":"🇱🇷","LY":"🇱🇾","LT":"🇱🇹","LU":"🇱🇺","MO":"🇲🇴","MG":"🇲🇬","MW":"🇲🇼","MY":"🇲🇾","MV":"🇲🇻","ML":"🇲🇱","MT":"🇲🇹","MR":"🇲🇷","MU":"🇲🇺","MX":"🇲🇽","MD":"🇲🇩","MN":"🇲🇳","ME":"🇲🇪","MA":"🇲🇦","MZ":"🇲🇿","MM":"🇲🇲","NA":"🇳🇦","NP":"🇳🇵","NL":"🇳🇱","NZ":"🇳🇿","NI":"🇳🇮","NG":"🇳🇬","MK":"🇲🇰","NO":"🇳🇴","OM":"🇴🇲","PK":"🇵🇰","PA":"🇵🇦","PY":"🇵🇾","PE":"🇵🇪","PH":"🇵🇭","PL":"🇵🇱","PT":"🇵🇹","QA":"🇶🇦","RO":"🇷🇴","RU":"🇷🇺","SA":"🇸🇦","SN":"🇸🇳","RS":"🇷🇸","SG":"🇸🇬","SK":"🇸🇰","SI":"🇸🇮","ZA":"🇿🇦","ES":"🇪🇸","LK":"🇱🇰","SE":"🇸🇪","CH":"🇨🇭","TW":"🇹🇼","TJ":"🇹🇯","TZ":"🇹🇿","TH":"🇹🇭","TT":"🇹🇹","TN":"🇹🇳","TR":"🇹🇷","UG":"🇺🇬","UA":"🇺🇦","AE":"🇦🇪","GB":"🇬🇧","US":"🇺🇸","UY":"🇺🇾","UZ":"🇺🇿","VE":"🇻🇪","VN":"🇻🇳","YE":"🇾🇪","ZM":"🇿🇲","ZW":"🇿🇼"};
@@ -1005,29 +839,14 @@
 
   function setPrice(code) {
     var d = pricing[code] || pricing["US"];
-    var flag = (flags[code] || '');
-
-    // Update pricing section card
-    var amountEl = document.getElementById('pricingAmount');
-    var labelEl = document.getElementById('pricingCountryLabel');
-    if (amountEl) {
-      amountEl.style.opacity = '0';
-      setTimeout(function() {
-        amountEl.textContent = d.s + d.p;
-        amountEl.style.opacity = '1';
-        if (labelEl) labelEl.textContent = 'Price in ' + d.n + ' · ' + d.c;
-      }, 200);
-    }
-
-    // Update hero pill
-    var heroPill = document.getElementById('hero-price-pill');
-    var heroFlag = document.getElementById('heroPriceFlag');
-    var heroAmount = document.getElementById('heroPriceAmount');
-    if (heroPill && heroAmount) {
-      if (heroFlag) heroFlag.textContent = flag;
-      heroAmount.textContent = d.s + d.p;
-      heroPill.classList.add('visible');
-    }
+    var flag = flags[code] || '🌍';
+    var block = document.getElementById('heroPriceBlock');
+    var flagEl = document.getElementById('heroPriceFlag');
+    var amountEl = document.getElementById('heroPriceAmount');
+    if (!block || !amountEl) return;
+    flagEl.textContent = flag;
+    amountEl.textContent = d.s + d.p;
+    block.classList.add('visible');
   }
 
   // Try geolocation via ipapi.co (free tier, no key needed)
@@ -1053,7 +872,7 @@
     <h2>Ready to tune in.</h2>
     <p>Native. Private. No subscriptions.<br>On every Apple device you own.</p>
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;" width="162" height="54" loading="lazy">
+      <img src="download_button_light.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;" width="162" height="54" loading="lazy">
     </a>
   </div>
 </section>
