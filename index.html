@@ -133,7 +133,43 @@
     </a>
     <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
   </div>
+  <div id="hero-price-pill" class="hero-price-pill" aria-live="polite">
+    <span class="hero-price-flag" id="heroPriceFlag"></span>
+    <span class="hero-price-amount" id="heroPriceAmount"></span>
+    <span class="hero-price-sep">·</span>
+    <span class="hero-price-note">one-time · all Apple devices</span>
+  </div>
 </section>
+
+<style>
+.hero-price-pill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.hero-price-pill.visible {
+  opacity: 1;
+  transform: none;
+}
+.hero-price-flag { font-size: 1rem; }
+.hero-price-amount {
+  font-weight: 700;
+  font-size: 0.95rem;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-price-sep { color: var(--border); }
+.hero-price-note { color: var(--text-secondary); }
+</style>
 
 <!-- ============================================================
      PLATFORM SHOWCASE
@@ -661,18 +697,18 @@
     <div class="pricing-countries">
       <p class="pricing-countries-label">Pricing in popular regions</p>
       <div class="pricing-pills" id="pricingPills">
-        <span class="price-pill">🇺🇸 $9.99</span>
-        <span class="price-pill">🇬🇧 £6.99</span>
-        <span class="price-pill">🇩🇪 €7.99</span>
-        <span class="price-pill">🇹🇷 ₺499.99</span>
-        <span class="price-pill">🇯🇵 ¥1,500</span>
-        <span class="price-pill">🇦🇺 A$12.99</span>
-        <span class="price-pill">🇨🇦 C$12.99</span>
-        <span class="price-pill">🇧🇷 R$24.90</span>
-        <span class="price-pill">🇮🇳 ₹499</span>
+        <span class="price-pill">🇺🇸 $5.99</span>
+        <span class="price-pill">🇬🇧 £5.99</span>
+        <span class="price-pill">🇩🇪 €6.99</span>
+        <span class="price-pill">🇹🇷 ₺299.99</span>
+        <span class="price-pill">🇯🇵 ¥1,000</span>
+        <span class="price-pill">🇦🇺 A$9.99</span>
+        <span class="price-pill">🇨🇦 C$7.99</span>
+        <span class="price-pill">🇧🇷 R$39.90</span>
+        <span class="price-pill">🇮🇳 ₹599</span>
         <span class="price-pill">🇰🇷 ₩9,900</span>
-        <span class="price-pill">🇸🇦 SAR 39.99</span>
-        <span class="price-pill">🇧🇶 +160 countries</span>
+        <span class="price-pill">🇸🇦 SAR 24.99</span>
+        <span class="price-pill">🌍 +160 countries</span>
       </div>
     </div>
   </div>
@@ -808,179 +844,190 @@
 
 <script>
 (function() {
+  var flags = {"AF":"🇦🇫","AL":"🇦🇱","DZ":"🇩🇿","AO":"🇦🇴","AG":"🇦🇬","AR":"🇦🇷","AM":"🇦🇲","AU":"🇦🇺","AT":"🇦🇹","AZ":"🇦🇿","BS":"🇧🇸","BH":"🇧🇭","BB":"🇧🇧","BY":"🇧🇾","BE":"🇧🇪","BZ":"🇧🇿","BJ":"🇧🇯","BM":"🇧🇲","BT":"🇧🇹","BO":"🇧🇴","BA":"🇧🇦","BW":"🇧🇼","BR":"🇧🇷","VG":"🇻🇬","BN":"🇧🇳","BG":"🇧🇬","BF":"🇧🇫","KH":"🇰🇭","CM":"🇨🇲","CA":"🇨🇦","CV":"🇨🇻","KY":"🇰🇾","TD":"🇹🇩","CL":"🇨🇱","CN":"🇨🇳","CO":"🇨🇴","CD":"🇨🇩","CG":"🇨🇬","CR":"🇨🇷","CI":"🇨🇮","HR":"🇭🇷","CY":"🇨🇾","CZ":"🇨🇿","DK":"🇩🇰","DM":"🇩🇲","DO":"🇩🇴","EC":"🇪🇨","EG":"🇪🇬","SV":"🇸🇻","EE":"🇪🇪","SZ":"🇸🇿","FJ":"🇫🇯","FI":"🇫🇮","FR":"🇫🇷","GA":"🇬🇦","GM":"🇬🇲","GE":"🇬🇪","DE":"🇩🇪","GH":"🇬🇭","GR":"🇬🇷","GD":"🇬🇩","GT":"🇬🇹","GW":"🇬🇼","GY":"🇬🇾","HN":"🇭🇳","HK":"🇭🇰","HU":"🇭🇺","IS":"🇮🇸","IN":"🇮🇳","ID":"🇮🇩","IQ":"🇮🇶","IE":"🇮🇪","IL":"🇮🇱","IT":"🇮🇹","JM":"🇯🇲","JP":"🇯🇵","JO":"🇯🇴","KZ":"🇰🇿","KE":"🇰🇪","KR":"🇰🇷","XK":"🇽🇰","KW":"🇰🇼","KG":"🇰🇬","LA":"🇱🇦","LV":"🇱🇻","LB":"🇱🇧","LR":"🇱🇷","LY":"🇱🇾","LT":"🇱🇹","LU":"🇱🇺","MO":"🇲🇴","MG":"🇲🇬","MW":"🇲🇼","MY":"🇲🇾","MV":"🇲🇻","ML":"🇲🇱","MT":"🇲🇹","MR":"🇲🇷","MU":"🇲🇺","MX":"🇲🇽","MD":"🇲🇩","MN":"🇲🇳","ME":"🇲🇪","MA":"🇲🇦","MZ":"🇲🇿","MM":"🇲🇲","NA":"🇳🇦","NP":"🇳🇵","NL":"🇳🇱","NZ":"🇳🇿","NI":"🇳🇮","NG":"🇳🇬","MK":"🇲🇰","NO":"🇳🇴","OM":"🇴🇲","PK":"🇵🇰","PA":"🇵🇦","PY":"🇵🇾","PE":"🇵🇪","PH":"🇵🇭","PL":"🇵🇱","PT":"🇵🇹","QA":"🇶🇦","RO":"🇷🇴","RU":"🇷🇺","SA":"🇸🇦","SN":"🇸🇳","RS":"🇷🇸","SG":"🇸🇬","SK":"🇸🇰","SI":"🇸🇮","ZA":"🇿🇦","ES":"🇪🇸","LK":"🇱🇰","SE":"🇸🇪","CH":"🇨🇭","TW":"🇹🇼","TJ":"🇹🇯","TZ":"🇹🇿","TH":"🇹🇭","TT":"🇹🇹","TN":"🇹🇳","TR":"🇹🇷","UG":"🇺🇬","UA":"🇺🇦","AE":"🇦🇪","GB":"🇬🇧","US":"🇺🇸","UY":"🇺🇾","UZ":"🇺🇿","VE":"🇻🇪","VN":"🇻🇳","YE":"🇾🇪","ZM":"🇿🇲","ZW":"🇿🇼"};
   var pricing = {
-    "AF":{"s":"$","p":"4.99","c":"USD","n":"Afghanistan"},
+    "AF":{"s":"$","p":"5.99","c":"USD","n":"Afghanistan"},
     "AL":{"s":"$","p":"6.99","c":"USD","n":"Albania"},
-    "DZ":{"s":"$","p":"4.99","c":"USD","n":"Algeria"},
-    "AO":{"s":"$","p":"4.99","c":"USD","n":"Angola"},
-    "AG":{"s":"$","p":"4.99","c":"USD","n":"Antigua and Barbuda"},
-    "AR":{"s":"$","p":"4.99","c":"USD","n":"Argentina"},
-    "AM":{"s":"$","p":"4.99","c":"USD","n":"Armenia"},
-    "AU":{"s":"A$","p":"12.99","c":"AUD","n":"Australia"},
-    "AT":{"s":"€","p":"7.99","c":"EUR","n":"Austria"},
-    "AZ":{"s":"$","p":"4.99","c":"USD","n":"Azerbaijan"},
-    "BS":{"s":"$","p":"4.99","c":"USD","n":"Bahamas"},
-    "BH":{"s":"$","p":"9.99","c":"USD","n":"Bahrain"},
-    "BB":{"s":"$","p":"4.99","c":"USD","n":"Barbados"},
+    "DZ":{"s":"$","p":"5.99","c":"USD","n":"Algeria"},
+    "AO":{"s":"$","p":"5.99","c":"USD","n":"Angola"},
+    "AG":{"s":"$","p":"5.99","c":"USD","n":"Antigua and Barbuda"},
+    "AR":{"s":"$","p":"5.99","c":"USD","n":"Argentina"},
+    "AM":{"s":"$","p":"6.99","c":"USD","n":"Armenia"},
+    "AU":{"s":"A$","p":"9.99","c":"AUD","n":"Australia"},
+    "AT":{"s":"€","p":"6.99","c":"EUR","n":"Austria"},
+    "AZ":{"s":"$","p":"6.99","c":"USD","n":"Azerbaijan"},
+    "BS":{"s":"$","p":"6.99","c":"USD","n":"Bahamas"},
+    "BH":{"s":"$","p":"6.99","c":"USD","n":"Bahrain"},
+    "BB":{"s":"$","p":"6.99","c":"USD","n":"Barbados"},
     "BY":{"s":"$","p":"6.99","c":"USD","n":"Belarus"},
-    "BE":{"s":"€","p":"7.99","c":"EUR","n":"Belgium"},
-    "BZ":{"s":"$","p":"4.99","c":"USD","n":"Belize"},
-    "BJ":{"s":"$","p":"4.99","c":"USD","n":"Benin"},
-    "BM":{"s":"$","p":"4.99","c":"USD","n":"Bermuda"},
-    "BT":{"s":"$","p":"4.99","c":"USD","n":"Bhutan"},
-    "BO":{"s":"$","p":"4.99","c":"USD","n":"Bolivia"},
+    "BE":{"s":"€","p":"6.99","c":"EUR","n":"Belgium"},
+    "BZ":{"s":"$","p":"5.99","c":"USD","n":"Belize"},
+    "BJ":{"s":"$","p":"6.99","c":"USD","n":"Benin"},
+    "BM":{"s":"$","p":"5.99","c":"USD","n":"Bermuda"},
+    "BT":{"s":"$","p":"5.99","c":"USD","n":"Bhutan"},
+    "BO":{"s":"$","p":"5.99","c":"USD","n":"Bolivia"},
     "BA":{"s":"€","p":"6.99","c":"EUR","n":"Bosnia and Herzegovina"},
-    "BW":{"s":"$","p":"4.99","c":"USD","n":"Botswana"},
-    "BR":{"s":"R$","p":"24.90","c":"BRL","n":"Brazil"},
-    "VG":{"s":"$","p":"4.99","c":"USD","n":"British Virgin Islands"},
-    "BN":{"s":"$","p":"4.99","c":"USD","n":"Brunei"},
+    "BW":{"s":"$","p":"5.99","c":"USD","n":"Botswana"},
+    "BR":{"s":"R$","p":"39.90","c":"BRL","n":"Brazil"},
+    "VG":{"s":"$","p":"5.99","c":"USD","n":"British Virgin Islands"},
+    "BN":{"s":"$","p":"5.99","c":"USD","n":"Brunei"},
     "BG":{"s":"€","p":"6.99","c":"EUR","n":"Bulgaria"},
-    "BF":{"s":"$","p":"4.99","c":"USD","n":"Burkina Faso"},
-    "KH":{"s":"$","p":"4.99","c":"USD","n":"Cambodia"},
-    "CM":{"s":"$","p":"4.99","c":"USD","n":"Cameroon"},
-    "CA":{"s":"C$","p":"12.99","c":"CAD","n":"Canada"},
-    "CV":{"s":"$","p":"4.99","c":"USD","n":"Cape Verde"},
-    "KY":{"s":"$","p":"4.99","c":"USD","n":"Cayman Islands"},
-    "TD":{"s":"$","p":"4.99","c":"USD","n":"Chad"},
-    "CL":{"s":"CLP","p":"3,990","c":"CLP","n":"Chile"},
+    "BF":{"s":"$","p":"5.99","c":"USD","n":"Burkina Faso"},
+    "KH":{"s":"$","p":"6.99","c":"USD","n":"Cambodia"},
+    "CM":{"s":"$","p":"6.99","c":"USD","n":"Cameroon"},
+    "CA":{"s":"C$","p":"7.99","c":"CAD","n":"Canada"},
+    "CV":{"s":"$","p":"5.99","c":"USD","n":"Cape Verde"},
+    "KY":{"s":"$","p":"5.99","c":"USD","n":"Cayman Islands"},
+    "TD":{"s":"$","p":"5.99","c":"USD","n":"Chad"},
+    "CL":{"s":"CLP","p":"6,990","c":"CLP","n":"Chile"},
     "CN":{"s":"¥","p":"38.00","c":"CNY","n":"China"},
-    "CO":{"s":"COP","p":"19,900","c":"COP","n":"Colombia"},
-    "CD":{"s":"$","p":"4.99","c":"USD","n":"DR Congo"},
-    "CG":{"s":"$","p":"4.99","c":"USD","n":"Republic of the Congo"},
-    "CR":{"s":"$","p":"4.99","c":"USD","n":"Costa Rica"},
-    "CI":{"s":"$","p":"4.99","c":"USD","n":"Côte d'Ivoire"},
+    "CO":{"s":"COP","p":"29,900","c":"COP","n":"Colombia"},
+    "CD":{"s":"$","p":"5.99","c":"USD","n":"DR Congo"},
+    "CG":{"s":"$","p":"5.99","c":"USD","n":"Republic of the Congo"},
+    "CR":{"s":"$","p":"5.99","c":"USD","n":"Costa Rica"},
+    "CI":{"s":"$","p":"6.99","c":"USD","n":"Côte d'Ivoire"},
     "HR":{"s":"€","p":"6.99","c":"EUR","n":"Croatia"},
     "CY":{"s":"€","p":"6.99","c":"EUR","n":"Cyprus"},
     "CZ":{"s":"Kč","p":"149","c":"CZK","n":"Czech Republic"},
-    "DK":{"s":"kr","p":"59","c":"DKK","n":"Denmark"},
-    "DM":{"s":"$","p":"4.99","c":"USD","n":"Dominica"},
-    "DO":{"s":"$","p":"4.99","c":"USD","n":"Dominican Republic"},
-    "EC":{"s":"$","p":"4.99","c":"USD","n":"Ecuador"},
-    "EG":{"s":"E£","p":"249.99","c":"EGP","n":"Egypt"},
-    "SV":{"s":"$","p":"4.99","c":"USD","n":"El Salvador"},
+    "DK":{"s":"kr","p":"49","c":"DKK","n":"Denmark"},
+    "DM":{"s":"$","p":"5.99","c":"USD","n":"Dominica"},
+    "DO":{"s":"$","p":"5.99","c":"USD","n":"Dominican Republic"},
+    "EC":{"s":"$","p":"5.99","c":"USD","n":"Ecuador"},
+    "EG":{"s":"E£","p":"299.99","c":"EGP","n":"Egypt"},
+    "SV":{"s":"$","p":"5.99","c":"USD","n":"El Salvador"},
     "EE":{"s":"€","p":"6.99","c":"EUR","n":"Estonia"},
-    "SZ":{"s":"$","p":"4.99","c":"USD","n":"Eswatini"},
-    "FJ":{"s":"$","p":"4.99","c":"USD","n":"Fiji"},
+    "SZ":{"s":"$","p":"5.99","c":"USD","n":"Eswatini"},
+    "FJ":{"s":"$","p":"5.99","c":"USD","n":"Fiji"},
     "FI":{"s":"€","p":"6.99","c":"EUR","n":"Finland"},
-    "FR":{"s":"€","p":"7.99","c":"EUR","n":"France"},
-    "GA":{"s":"$","p":"4.99","c":"USD","n":"Gabon"},
-    "GM":{"s":"$","p":"4.99","c":"USD","n":"Gambia"},
-    "GE":{"s":"$","p":"4.99","c":"USD","n":"Georgia"},
-    "DE":{"s":"€","p":"7.99","c":"EUR","n":"Germany"},
-    "GH":{"s":"$","p":"4.99","c":"USD","n":"Ghana"},
+    "FR":{"s":"€","p":"6.99","c":"EUR","n":"France"},
+    "GA":{"s":"$","p":"5.99","c":"USD","n":"Gabon"},
+    "GM":{"s":"$","p":"5.99","c":"USD","n":"Gambia"},
+    "GE":{"s":"$","p":"6.99","c":"USD","n":"Georgia"},
+    "DE":{"s":"€","p":"6.99","c":"EUR","n":"Germany"},
+    "GH":{"s":"$","p":"6.99","c":"USD","n":"Ghana"},
     "GR":{"s":"€","p":"6.99","c":"EUR","n":"Greece"},
-    "GD":{"s":"$","p":"4.99","c":"USD","n":"Grenada"},
-    "GT":{"s":"$","p":"4.99","c":"USD","n":"Guatemala"},
-    "GW":{"s":"$","p":"4.99","c":"USD","n":"Guinea-Bissau"},
-    "GY":{"s":"$","p":"4.99","c":"USD","n":"Guyana"},
-    "HN":{"s":"$","p":"4.99","c":"USD","n":"Honduras"},
-    "HK":{"s":"HK$","p":"38","c":"HKD","n":"Hong Kong"},
-    "HU":{"s":"Ft","p":"1,990","c":"HUF","n":"Hungary"},
+    "GD":{"s":"$","p":"5.99","c":"USD","n":"Grenada"},
+    "GT":{"s":"$","p":"5.99","c":"USD","n":"Guatemala"},
+    "GW":{"s":"$","p":"5.99","c":"USD","n":"Guinea-Bissau"},
+    "GY":{"s":"$","p":"5.99","c":"USD","n":"Guyana"},
+    "HN":{"s":"$","p":"5.99","c":"USD","n":"Honduras"},
+    "HK":{"s":"HK$","p":"48","c":"HKD","n":"Hong Kong"},
+    "HU":{"s":"Ft","p":"2,490","c":"HUF","n":"Hungary"},
     "IS":{"s":"$","p":"6.99","c":"USD","n":"Iceland"},
-    "IN":{"s":"₹","p":"499","c":"INR","n":"India"},
+    "IN":{"s":"₹","p":"599","c":"INR","n":"India"},
     "ID":{"s":"Rp","p":"99,000","c":"IDR","n":"Indonesia"},
-    "IQ":{"s":"$","p":"4.99","c":"USD","n":"Iraq"},
+    "IQ":{"s":"$","p":"5.99","c":"USD","n":"Iraq"},
     "IE":{"s":"€","p":"6.99","c":"EUR","n":"Ireland"},
-    "IL":{"s":"₪","p":"29.90","c":"ILS","n":"Israel"},
-    "IT":{"s":"€","p":"7.99","c":"EUR","n":"Italy"},
-    "JM":{"s":"$","p":"4.99","c":"USD","n":"Jamaica"},
-    "JP":{"s":"¥","p":"1,500","c":"JPY","n":"Japan"},
-    "JO":{"s":"$","p":"4.99","c":"USD","n":"Jordan"},
-    "KZ":{"s":"₸","p":"2,490","c":"KZT","n":"Kazakhstan"},
-    "KE":{"s":"$","p":"4.99","c":"USD","n":"Kenya"},
+    "IL":{"s":"₪","p":"19.90","c":"ILS","n":"Israel"},
+    "IT":{"s":"€","p":"6.99","c":"EUR","n":"Italy"},
+    "JM":{"s":"$","p":"5.99","c":"USD","n":"Jamaica"},
+    "JP":{"s":"¥","p":"1,000","c":"JPY","n":"Japan"},
+    "JO":{"s":"$","p":"5.99","c":"USD","n":"Jordan"},
+    "KZ":{"s":"₸","p":"3,490","c":"KZT","n":"Kazakhstan"},
+    "KE":{"s":"$","p":"6.99","c":"USD","n":"Kenya"},
     "KR":{"s":"₩","p":"9,900","c":"KRW","n":"South Korea"},
     "XK":{"s":"€","p":"6.99","c":"EUR","n":"Kosovo"},
-    "KW":{"s":"$","p":"9.99","c":"USD","n":"Kuwait"},
-    "KG":{"s":"$","p":"4.99","c":"USD","n":"Kyrgyzstan"},
-    "LA":{"s":"$","p":"4.99","c":"USD","n":"Laos"},
+    "KW":{"s":"$","p":"5.99","c":"USD","n":"Kuwait"},
+    "KG":{"s":"$","p":"6.99","c":"USD","n":"Kyrgyzstan"},
+    "LA":{"s":"$","p":"6.99","c":"USD","n":"Laos"},
     "LV":{"s":"€","p":"6.99","c":"EUR","n":"Latvia"},
-    "LB":{"s":"$","p":"4.99","c":"USD","n":"Lebanon"},
-    "LR":{"s":"$","p":"4.99","c":"USD","n":"Liberia"},
-    "LY":{"s":"$","p":"4.99","c":"USD","n":"Libya"},
+    "LB":{"s":"$","p":"5.99","c":"USD","n":"Lebanon"},
+    "LR":{"s":"$","p":"5.99","c":"USD","n":"Liberia"},
+    "LY":{"s":"$","p":"5.99","c":"USD","n":"Libya"},
     "LT":{"s":"€","p":"6.99","c":"EUR","n":"Lithuania"},
-    "LU":{"s":"€","p":"7.99","c":"EUR","n":"Luxembourg"},
-    "MO":{"s":"$","p":"4.99","c":"USD","n":"Macau"},
-    "MG":{"s":"$","p":"4.99","c":"USD","n":"Madagascar"},
-    "MW":{"s":"$","p":"4.99","c":"USD","n":"Malawi"},
-    "MY":{"s":"RM","p":"24.90","c":"MYR","n":"Malaysia"},
-    "MV":{"s":"$","p":"4.99","c":"USD","n":"Maldives"},
-    "ML":{"s":"$","p":"4.99","c":"USD","n":"Mali"},
+    "LU":{"s":"€","p":"6.99","c":"EUR","n":"Luxembourg"},
+    "MO":{"s":"$","p":"5.99","c":"USD","n":"Macau"},
+    "MG":{"s":"$","p":"5.99","c":"USD","n":"Madagascar"},
+    "MW":{"s":"$","p":"5.99","c":"USD","n":"Malawi"},
+    "MY":{"s":"RM","p":"29.90","c":"MYR","n":"Malaysia"},
+    "MV":{"s":"$","p":"5.99","c":"USD","n":"Maldives"},
+    "ML":{"s":"$","p":"5.99","c":"USD","n":"Mali"},
     "MT":{"s":"€","p":"6.99","c":"EUR","n":"Malta"},
-    "MR":{"s":"$","p":"4.99","c":"USD","n":"Mauritania"},
-    "MU":{"s":"$","p":"4.99","c":"USD","n":"Mauritius"},
-    "MX":{"s":"MX$","p":"89","c":"MXN","n":"Mexico"},
-    "MD":{"s":"$","p":"7.99","c":"USD","n":"Moldova"},
-    "MN":{"s":"$","p":"4.99","c":"USD","n":"Mongolia"},
-    "ME":{"s":"€","p":"6.99","c":"EUR","n":"Montenegro"},
-    "MA":{"s":"$","p":"4.99","c":"USD","n":"Morocco"},
-    "MZ":{"s":"$","p":"4.99","c":"USD","n":"Mozambique"},
-    "MM":{"s":"$","p":"4.99","c":"USD","n":"Myanmar"},
-    "NA":{"s":"$","p":"4.99","c":"USD","n":"Namibia"},
-    "NP":{"s":"$","p":"4.99","c":"USD","n":"Nepal"},
-    "NL":{"s":"€","p":"7.99","c":"EUR","n":"Netherlands"},
-    "NZ":{"s":"NZ$","p":"14.99","c":"NZD","n":"New Zealand"},
-    "NI":{"s":"$","p":"4.99","c":"USD","n":"Nicaragua"},
-    "NG":{"s":"₦","p":"5,900","c":"NGN","n":"Nigeria"},
-    "MK":{"s":"$","p":"6.99","c":"USD","n":"North Macedonia"},
+    "MR":{"s":"$","p":"5.99","c":"USD","n":"Mauritania"},
+    "MU":{"s":"$","p":"6.99","c":"USD","n":"Mauritius"},
+    "MX":{"s":"MX$","p":"129","c":"MXN","n":"Mexico"},
+    "MD":{"s":"$","p":"6.99","c":"USD","n":"Moldova"},
+    "MN":{"s":"$","p":"5.99","c":"USD","n":"Mongolia"},
+    "ME":{"s":"€","p":"5.99","c":"EUR","n":"Montenegro"},
+    "MA":{"s":"$","p":"5.99","c":"USD","n":"Morocco"},
+    "MZ":{"s":"$","p":"5.99","c":"USD","n":"Mozambique"},
+    "MM":{"s":"$","p":"5.99","c":"USD","n":"Myanmar"},
+    "NA":{"s":"$","p":"5.99","c":"USD","n":"Namibia"},
+    "NP":{"s":"$","p":"6.99","c":"USD","n":"Nepal"},
+    "NL":{"s":"€","p":"6.99","c":"EUR","n":"Netherlands"},
+    "NZ":{"s":"NZ$","p":"9.99","c":"NZD","n":"New Zealand"},
+    "NI":{"s":"$","p":"5.99","c":"USD","n":"Nicaragua"},
+    "NG":{"s":"₦","p":"9,900","c":"NGN","n":"Nigeria"},
+    "MK":{"s":"$","p":"5.99","c":"USD","n":"North Macedonia"},
     "NO":{"s":"kr","p":"79","c":"NOK","n":"Norway"},
-    "OM":{"s":"$","p":"9.99","c":"USD","n":"Oman"},
-    "PK":{"s":"₨","p":"1,500","c":"PKR","n":"Pakistan"},
-    "PA":{"s":"$","p":"4.99","c":"USD","n":"Panama"},
-    "PY":{"s":"$","p":"4.99","c":"USD","n":"Paraguay"},
-    "PE":{"s":"S/","p":"17.90","c":"PEN","n":"Peru"},
-    "PH":{"s":"₱","p":"299","c":"PHP","n":"Philippines"},
+    "OM":{"s":"$","p":"5.99","c":"USD","n":"Oman"},
+    "PK":{"s":"₨","p":"1,700","c":"PKR","n":"Pakistan"},
+    "PA":{"s":"$","p":"5.99","c":"USD","n":"Panama"},
+    "PY":{"s":"$","p":"5.99","c":"USD","n":"Paraguay"},
+    "PE":{"s":"S/","p":"24.90","c":"PEN","n":"Peru"},
+    "PH":{"s":"₱","p":"399","c":"PHP","n":"Philippines"},
     "PL":{"s":"zł","p":"29.99","c":"PLN","n":"Poland"},
-    "PT":{"s":"€","p":"7.99","c":"EUR","n":"Portugal"},
-    "QA":{"s":"QR","p":"39.99","c":"QAR","n":"Qatar"},
+    "PT":{"s":"€","p":"6.99","c":"EUR","n":"Portugal"},
+    "QA":{"s":"QR","p":"19.99","c":"QAR","n":"Qatar"},
     "RO":{"s":"lei","p":"29.99","c":"RON","n":"Romania"},
     "RU":{"s":"₽","p":"499","c":"RUB","n":"Russia"},
-    "SA":{"s":"SAR","p":"39.99","c":"SAR","n":"Saudi Arabia"},
-    "SN":{"s":"$","p":"4.99","c":"USD","n":"Senegal"},
+    "SA":{"s":"SAR","p":"24.99","c":"SAR","n":"Saudi Arabia"},
+    "SN":{"s":"$","p":"6.99","c":"USD","n":"Senegal"},
     "RS":{"s":"€","p":"6.99","c":"EUR","n":"Serbia"},
-    "SG":{"s":"S$","p":"7.98","c":"SGD","n":"Singapore"},
+    "SG":{"s":"S$","p":"8.98","c":"SGD","n":"Singapore"},
     "SK":{"s":"€","p":"6.99","c":"EUR","n":"Slovakia"},
     "SI":{"s":"€","p":"6.99","c":"EUR","n":"Slovenia"},
-    "ZA":{"s":"R","p":"149.99","c":"ZAR","n":"South Africa"},
-    "ES":{"s":"€","p":"7.99","c":"EUR","n":"Spain"},
-    "LK":{"s":"$","p":"4.99","c":"USD","n":"Sri Lanka"},
+    "ZA":{"s":"R","p":"119.99","c":"ZAR","n":"South Africa"},
+    "ES":{"s":"€","p":"6.99","c":"EUR","n":"Spain"},
+    "LK":{"s":"$","p":"5.99","c":"USD","n":"Sri Lanka"},
     "SE":{"s":"kr","p":"79","c":"SEK","n":"Sweden"},
-    "CH":{"s":"CHF","p":"7","c":"CHF","n":"Switzerland"},
-    "TW":{"s":"NT$","p":"180","c":"TWD","n":"Taiwan"},
-    "TJ":{"s":"$","p":"4.99","c":"USD","n":"Tajikistan"},
-    "TZ":{"s":"TZS","p":"14,900","c":"TZS","n":"Tanzania"},
-    "TH":{"s":"฿","p":"179","c":"THB","n":"Thailand"},
-    "TT":{"s":"$","p":"4.99","c":"USD","n":"Trinidad and Tobago"},
-    "TN":{"s":"$","p":"4.99","c":"USD","n":"Tunisia"},
-    "TR":{"s":"₺","p":"499.99","c":"TRY","n":"Türkiye"},
-    "UG":{"s":"$","p":"4.99","c":"USD","n":"Uganda"},
+    "CH":{"s":"CHF","p":"5","c":"CHF","n":"Switzerland"},
+    "TW":{"s":"NT$","p":"190","c":"TWD","n":"Taiwan"},
+    "TJ":{"s":"$","p":"6.99","c":"USD","n":"Tajikistan"},
+    "TZ":{"s":"TZS","p":"17,900","c":"TZS","n":"Tanzania"},
+    "TH":{"s":"฿","p":"199","c":"THB","n":"Thailand"},
+    "TT":{"s":"$","p":"5.99","c":"USD","n":"Trinidad and Tobago"},
+    "TN":{"s":"$","p":"5.99","c":"USD","n":"Tunisia"},
+    "TR":{"s":"₺","p":"299.99","c":"TRY","n":"Türkiye"},
+    "UG":{"s":"$","p":"6.99","c":"USD","n":"Uganda"},
     "UA":{"s":"$","p":"6.99","c":"USD","n":"Ukraine"},
-    "AE":{"s":"AED","p":"39.99","c":"AED","n":"United Arab Emirates"},
-    "GB":{"s":"£","p":"6.99","c":"GBP","n":"United Kingdom"},
-    "US":{"s":"$","p":"9.99","c":"USD","n":"United States"},
-    "UY":{"s":"$","p":"4.99","c":"USD","n":"Uruguay"},
-    "UZ":{"s":"$","p":"4.99","c":"USD","n":"Uzbekistan"},
-    "VE":{"s":"$","p":"2.99","c":"USD","n":"Venezuela"},
-    "VN":{"s":"₫","p":"129,000","c":"VND","n":"Vietnam"},
-    "YE":{"s":"$","p":"4.99","c":"USD","n":"Yemen"},
-    "ZM":{"s":"$","p":"4.99","c":"USD","n":"Zambia"},
-    "ZW":{"s":"$","p":"4.99","c":"USD","n":"Zimbabwe"}
+    "AE":{"s":"AED","p":"22.99","c":"AED","n":"United Arab Emirates"},
+    "GB":{"s":"£","p":"5.99","c":"GBP","n":"United Kingdom"},
+    "US":{"s":"$","p":"5.99","c":"USD","n":"United States"},
+    "UY":{"s":"$","p":"5.99","c":"USD","n":"Uruguay"},
+    "UZ":{"s":"$","p":"6.99","c":"USD","n":"Uzbekistan"},
+    "VE":{"s":"$","p":"5.99","c":"USD","n":"Venezuela"},
+    "VN":{"s":"₫","p":"199,000","c":"VND","n":"Vietnam"},
+    "YE":{"s":"$","p":"5.99","c":"USD","n":"Yemen"},
+    "ZM":{"s":"$","p":"6.99","c":"USD","n":"Zambia"},
+    "ZW":{"s":"$","p":"6.99","c":"USD","n":"Zimbabwe"}
   };
 
   function setPrice(code) {
     var d = pricing[code] || pricing["US"];
+    var flag = (flags[code] || '');
+
+    // Update pricing section card
     var amountEl = document.getElementById('pricingAmount');
     var labelEl = document.getElementById('pricingCountryLabel');
-    if (!amountEl) return;
-    amountEl.style.opacity = '0';
-    setTimeout(function() {
-      amountEl.textContent = d.s + d.p;
-      amountEl.style.opacity = '1';
-      labelEl.textContent = 'Price in ' + d.n + ' · ' + d.c;
-      // Highlight matching pill if exists
-      document.querySelectorAll('.price-pill').forEach(function(p) {
-        p.classList.remove('highlighted');
-      });
-    }, 200);
+    if (amountEl) {
+      amountEl.style.opacity = '0';
+      setTimeout(function() {
+        amountEl.textContent = d.s + d.p;
+        amountEl.style.opacity = '1';
+        if (labelEl) labelEl.textContent = 'Price in ' + d.n + ' · ' + d.c;
+      }, 200);
+    }
+
+    // Update hero pill
+    var heroPill = document.getElementById('hero-price-pill');
+    var heroFlag = document.getElementById('heroPriceFlag');
+    var heroAmount = document.getElementById('heroPriceAmount');
+    if (heroPill && heroAmount) {
+      if (heroFlag) heroFlag.textContent = flag;
+      heroAmount.textContent = d.s + d.p;
+      heroPill.classList.add('visible');
+    }
   }
 
   // Try geolocation via ipapi.co (free tier, no key needed)
