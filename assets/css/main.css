@@ -461,7 +461,7 @@ body.menu-open { overflow: hidden; }
   color: var(--text-secondary);
   max-width: 500px;
   line-height: 1.7;
-  margin-bottom: 44px;
+  margin-bottom: 0;
   animation: fadeInUp 0.8s ease 0.3s both;
 }
 
