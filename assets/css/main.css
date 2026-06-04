@@ -507,6 +507,13 @@ body.menu-open { overflow: hidden; }
   margin-bottom: 64px;
   padding: 0 24px;
 }
+.showcase-platforms-mobile {
+  display: none;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
 
 .showcase-wrapper {
   display: grid;
@@ -1090,12 +1097,21 @@ footer {
 
   .hero { padding: 110px 20px 80px; min-height: auto; }
 
+  /* Platform showcase — mobile: tabs + single focused screenshot */
   .showcase-wrapper { display: block; padding: 0; }
   .platform-list { display: none; }
-  .showcase-galleries { padding: 0 20px; }
-  .platform-tabs-mobile { display: flex; }
-  .platform-gallery.active { grid-template-columns: repeat(2, 1fr); gap: 14px; }
-  .platform-gallery.watch-gallery.active { grid-template-columns: repeat(2, 1fr); }
+  .showcase-galleries { padding: 0 16px; }
+  .platform-tabs-mobile { display: flex; padding: 0 16px 16px; }
+  .platform-gallery.active {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .platform-gallery.watch-gallery.active { grid-template-columns: repeat(3, 1fr); }
+  /* Hide all but first 2 screenshots on mobile to keep it clean */
+  .platform-gallery.active .screenshot-item:nth-child(n+3) { display: none; }
+  .platform-gallery.watch-gallery.active .screenshot-item:nth-child(n+3) { display: block; }
+  .screenshot-item .screenshot-hint { display: none; }
+  .showcase-platforms-mobile { display: block; }
 
   .features { padding: 60px 20px 40px; }
   .also-includes { padding: 40px 20px 0; margin-top: 48px; }
@@ -1118,17 +1134,31 @@ footer {
   .cta { padding: 40px 20px 80px; }
   .cta-inner { max-width: 100%; }
 
-  footer { padding: 48px 24px 36px; }
-  .footer-links { grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; }
+  /* Footer — 2 columns on tablet, tight padding */
+  footer { padding: 40px 20px 28px; }
+  .footer-brand { margin-bottom: 28px; }
+  .footer-links { grid-template-columns: repeat(2, 1fr); gap: 24px 20px; margin-bottom: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .footer-platforms { display: none; }
 }
 
 @media (max-width: 480px) {
   .hero h1 { font-size: 2.4rem; }
   .hero-buttons { flex-direction: column; align-items: center; width: 100%; }
   .btn-secondary { justify-content: center; }
-  .platform-gallery.active { grid-template-columns: 1fr; }
+
+  /* Platform showcase — mobile: only 2 screenshots side by side, clean */
+  .platform-gallery.active { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .platform-gallery.active .screenshot-item:nth-child(n+3) { display: none; }
+  .showcase-header { margin-bottom: 32px; }
+  .showcase-header .section-title { font-size: 1.4rem; }
+
   .community-grid { grid-template-columns: 1fr; }
-  .footer-links { grid-template-columns: 1fr; }
+
+  /* Footer — stays 2 columns on small screens, just tighter */
+  .footer-links { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
+  .footer-col-title { font-size: 0.68rem; }
+  .footer-col a { font-size: 0.82rem; }
+
   .compare-table { font-size: 0.72rem; }
 }

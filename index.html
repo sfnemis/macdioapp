@@ -184,6 +184,7 @@
   <div class="showcase-header reveal">
     <p class="section-label">App Preview</p>
     <h2 class="section-title">Macdio on every screen</h2>
+    <p class="showcase-platforms-mobile">iPhone &nbsp;·&nbsp; iPad &nbsp;·&nbsp; Mac &nbsp;·&nbsp; Apple TV &nbsp;·&nbsp; Apple Watch &nbsp;·&nbsp; CarPlay</p>
   </div>
 
   <!-- Desktop: sticky sidebar + galleries -->
@@ -373,6 +374,90 @@
 </div>
 
 <!-- ============================================================
+     FAIR PRICING
+     ============================================================ -->
+<section class="fair-pricing" id="fair-pricing">
+  <div class="fp-inner reveal">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Internet radio<br>should be <span class="gradient-text">for everyone.</span></h2>
+
+    <div class="fp-body">
+      <p>Radio has been free on the airwaves for a century. Somewhere along the way, streaming apps started charging monthly subscriptions for something that should just work. Macdio does not do that.</p>
+      <p>You pay once. You get the app on every Apple device you own — iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay — and every update that follows, forever. No plan tiers. No premium features locked behind a paywall. No price increase email three months in.</p>
+      <p>Macdio is available in over 160 countries, priced in local currencies. A listener in India pays the same fair price relative to their market as someone in Germany or the United States. The goal has always been the same: if you want to listen to radio, the app should not be the thing standing in the way.</p>
+    </div>
+
+    <div class="fp-stats">
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">160+</span>
+        <span class="fp-stat-label">Countries. Local prices.</span>
+      </div>
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">6</span>
+        <span class="fp-stat-label">Apple platforms. One purchase.</span>
+      </div>
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">$0</span>
+        <span class="fp-stat-label">Recurring. Ever.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.fair-pricing {
+  padding: 90px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.fp-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+.fp-body {
+  text-align: left;
+  margin: 32px 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fp-body p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.fp-body p strong { color: var(--text); font-weight: 600; }
+.fp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.fp-stat {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.fp-stat-value {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.fp-stat-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+@media (max-width: 480px) {
+  .fp-stats { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- ============================================================
      COMMUNITY
      ============================================================ -->
 <section class="community" id="community" data-three-section="community">
@@ -550,90 +635,6 @@
     <p class="compare-note">Comparison based on publicly available information as of May 2026. Features may change.</p>
   </div>
 </section>
-
-<!-- ============================================================
-     FAIR PRICING
-     ============================================================ -->
-<section class="fair-pricing" id="fair-pricing">
-  <div class="fp-inner reveal">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Internet radio<br>should be <span class="gradient-text">for everyone.</span></h2>
-
-    <div class="fp-body">
-      <p>Radio has been free on the airwaves for a century. Somewhere along the way, streaming apps started charging monthly subscriptions for something that should just work. Macdio does not do that.</p>
-      <p>You pay once. You get the app on every Apple device you own — iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay — and every update that follows, forever. No plan tiers. No premium features locked behind a paywall. No price increase email three months in.</p>
-      <p>Macdio is available in over 160 countries, priced in local currencies. A listener in India pays the same fair price relative to their market as someone in Germany or the United States. The goal has always been the same: if you want to listen to radio, the app should not be the thing standing in the way.</p>
-    </div>
-
-    <div class="fp-stats">
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">160+</span>
-        <span class="fp-stat-label">Countries. Local prices.</span>
-      </div>
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">6</span>
-        <span class="fp-stat-label">Apple platforms. One purchase.</span>
-      </div>
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">$0</span>
-        <span class="fp-stat-label">Recurring. Ever.</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-.fair-pricing {
-  padding: 90px 24px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.fp-inner { max-width: 600px; margin: 0 auto; text-align: center; }
-.fp-body {
-  text-align: left;
-  margin: 32px 0 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.fp-body p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--text-secondary);
-  margin: 0;
-}
-.fp-body p strong { color: var(--text); font-weight: 600; }
-.fp-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.fp-stat {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 16px;
-  text-align: center;
-}
-.fp-stat-value {
-  display: block;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.fp-stat-label {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
-}
-@media (max-width: 480px) {
-  .fp-stats { grid-template-columns: 1fr; }
-}
-</style>
 
 <!-- ============================================================
      PERFORMANCE
