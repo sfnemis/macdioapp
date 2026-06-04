@@ -39,7 +39,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Macdio — Internet Radio for iPhone, Mac, iPad, Apple TV &amp; Apple Watch</title>
-  <meta name="description" content="Macdio is the best native internet radio player for all Apple devices. Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
+  <meta name="description" content="Macdio is a native internet radio app for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Stream 55,000+ stations. One-time purchase, no subscription — available in 160+ countries at local prices. Record live radio, synced lyrics, iCloud sync.">
   <meta name="keywords" content="radio player iphone, internet radio app, mac radio player, radio app ipad, apple tv radio, apple watch radio, carplay radio, internet radio recorder, synced lyrics radio, icloud sync radio, radio streaming app, best radio app iphone, radio player for mac, sleep timer radio, TuneIn alternative, native radio app apple">
   <meta name="author" content="SFN">
   <meta name="robots" content="index, follow">
@@ -80,7 +80,20 @@
     "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio, view synced lyrics, and sync via iCloud.",
     "url": "https://macdio.app",
     "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "2.99",
+      "highPrice": "9.99",
+      "priceCurrency": "USD",
+      "offerCount": "160",
+      "offers": [
+        { "@type": "Offer", "price": "5.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "United States" } },
+        { "@type": "Offer", "price": "5.99", "priceCurrency": "GBP", "eligibleRegion": { "@type": "Country", "name": "United Kingdom" } },
+        { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "eligibleRegion": { "@type": "Country", "name": "Germany" } },
+        { "@type": "Offer", "price": "299.99", "priceCurrency": "TRY", "eligibleRegion": { "@type": "Country", "name": "Turkey" } },
+        { "@type": "Offer", "price": "9.99", "priceCurrency": "AUD", "eligibleRegion": { "@type": "Country", "name": "Australia" } }
+      ]
+    }
   }
   </script>
   <!-- Structured Data: Organization -->
@@ -537,6 +550,90 @@
     <p class="compare-note">Comparison based on publicly available information as of May 2026. Features may change.</p>
   </div>
 </section>
+
+<!-- ============================================================
+     FAIR PRICING
+     ============================================================ -->
+<section class="fair-pricing" id="fair-pricing">
+  <div class="fp-inner reveal">
+    <p class="section-label">Pricing</p>
+    <h2 class="section-title">Internet radio<br>should be <span class="gradient-text">for everyone.</span></h2>
+
+    <div class="fp-body">
+      <p>Radio has been free on the airwaves for a century. Somewhere along the way, streaming apps started charging monthly subscriptions for something that should just work. Macdio does not do that.</p>
+      <p>You pay once. You get the app on every Apple device you own — iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay — and every update that follows, forever. No plan tiers. No premium features locked behind a paywall. No price increase email three months in.</p>
+      <p>Macdio is available in over 160 countries, priced in local currencies. A listener in India pays the same fair price relative to their market as someone in Germany or the United States. The goal has always been the same: if you want to listen to radio, the app should not be the thing standing in the way.</p>
+    </div>
+
+    <div class="fp-stats">
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">160+</span>
+        <span class="fp-stat-label">Countries. Local prices.</span>
+      </div>
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">6</span>
+        <span class="fp-stat-label">Apple platforms. One purchase.</span>
+      </div>
+      <div class="fp-stat reveal">
+        <span class="fp-stat-value">$0</span>
+        <span class="fp-stat-label">Recurring. Ever.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.fair-pricing {
+  padding: 90px 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.fp-inner { max-width: 600px; margin: 0 auto; text-align: center; }
+.fp-body {
+  text-align: left;
+  margin: 32px 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.fp-body p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin: 0;
+}
+.fp-body p strong { color: var(--text); font-weight: 600; }
+.fp-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.fp-stat {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.fp-stat-value {
+  display: block;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.fp-stat-label {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+@media (max-width: 480px) {
+  .fp-stats { grid-template-columns: 1fr; }
+}
+</style>
 
 <!-- ============================================================
      PERFORMANCE
