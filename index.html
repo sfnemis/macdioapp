@@ -127,62 +127,41 @@
   </div>
   <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
   <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
-  <div class="hero-price-block" id="heroPriceBlock" aria-live="polite">
-    <div class="hero-price-row">
-      <span class="hero-price-flag" id="heroPriceFlag">🌍</span>
-      <span class="hero-price-big" id="heroPriceAmount">—</span>
-    </div>
-    <p class="hero-price-tagline">One price &nbsp;·&nbsp; Every Apple device &nbsp;·&nbsp; Forever.</p>
-    <p class="hero-price-sub">No subscription. No renewal. Pay once, use on all your Apple devices.</p>
-  </div>
-
   <div class="hero-buttons">
     <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
       <img src="download_button_light.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" width="162" height="54" fetchpriority="high" loading="eager">
     </a>
     <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
   </div>
+
+  <p class="hero-price-line" id="heroPriceBlock" aria-live="polite">
+    <span id="heroPriceFlag"></span>
+    <span id="heroPriceAmount"></span>
+    <span class="hero-price-dot">·</span>
+    <span>One-time purchase. All your Apple devices.</span>
+  </p>
 </section>
 
 <style>
-.hero-price-block {
-  margin: 32px auto 8px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-.hero-price-block.visible { opacity: 1; transform: none; }
-.hero-price-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-.hero-price-flag { font-size: 1.5rem; line-height: 1; }
-.hero-price-big {
-  font-size: clamp(2.8rem, 8vw, 3.8rem);
-  font-weight: 900;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 55%, var(--accent-3) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-}
-.hero-price-tagline {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--text);
-  margin: 0 0 5px;
-}
-.hero-price-sub {
-  font-size: 0.8rem;
+.hero-price-line {
+  margin: 18px auto 0;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
 }
+.hero-price-line.visible { opacity: 1; }
+#heroPriceAmount {
+  color: var(--text);
+  font-weight: 600;
+}
+.hero-price-dot { color: rgba(255,255,255,0.2); }
 </style>
 
 <!-- ============================================================
