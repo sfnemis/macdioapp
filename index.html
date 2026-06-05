@@ -573,8 +573,38 @@
     </div>
   </div>
 
-  <!-- Feature 5: Privacy + iCloud -->
+  <!-- Feature 5: Siri + Shortcuts -->
   <div class="feature-row reveal">
+    <div class="feature-screenshot feature-screenshot--siri">
+      <div class="siri-demo">
+        <div class="siri-bubble siri-bubble--user">
+          <span class="siri-label">You</span>
+          <p>"Play Jazz FM on Macdio"</p>
+        </div>
+        <div class="siri-bubble siri-bubble--app">
+          <span class="siri-label">Macdio</span>
+          <p>Playing Jazz FM...</p>
+        </div>
+        <div class="siri-bubble siri-bubble--user">
+          <span class="siri-label">You</span>
+          <p>"Stop Macdio"</p>
+        </div>
+        <div class="siri-bubble siri-bubble--app">
+          <span class="siri-label">Macdio</span>
+          <p>Stopped.</p>
+        </div>
+      </div>
+    </div>
+    <div class="feature-text">
+      <span class="feature-tag">🎙 Siri &amp; Shortcuts</span>
+      <h3>Just ask. No tapping required.</h3>
+      <p>Ask Siri to play any station, switch to a favorite, or stop playback — hands-free, without opening the app. Full Shortcuts support lets you automate radio into any workflow: morning routines, focus modes, CarPlay actions.</p>
+      <div class="feature-stat"><span class="stat-val">Siri</span> full integration</div>
+    </div>
+  </div>
+
+  <!-- Feature 6: Privacy + iCloud -->
+  <div class="feature-row reverse reveal">
     <div class="feature-screenshot">
       <img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="Macdio iCloud sync" loading="lazy">
     </div>
@@ -586,10 +616,67 @@
     </div>
   </div>
 
+  <!-- Siri demo styles -->
+  <style>
+  .feature-screenshot--siri {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .siri-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+    padding: 8px;
+  }
+  .siri-bubble {
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    position: relative;
+  }
+  .siri-bubble p { margin: 0; font-weight: 500; }
+  .siri-label {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 4px;
+    opacity: 0.6;
+  }
+  .siri-bubble--user {
+    background: rgba(99,102,241,0.12);
+    border: 1px solid rgba(99,102,241,0.2);
+    color: var(--text);
+    align-self: flex-end;
+    text-align: right;
+    border-radius: 16px 16px 4px 16px;
+  }
+  .siri-bubble--user .siri-label { color: var(--accent); }
+  .siri-bubble--app {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    align-self: flex-start;
+    border-radius: 16px 16px 16px 4px;
+  }
+  .siri-bubble--app .siri-label { color: var(--text-secondary); }
+  </style>
+
   <!-- Also includes chips -->
   <div class="also-includes reveal">
     <h4>Also includes</h4>
     <div class="chips">
+      <span class="chip">🎙 Siri Integration</span>
+      <span class="chip">⚡ Apple Shortcuts</span>
       <span class="chip">⌨️ Keyboard Shortcuts</span>
       <span class="chip">🚗 CarPlay</span>
       <span class="chip">📱 Dynamic Island</span>
