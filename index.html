@@ -1,1278 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Analytics Lazy Loader -->
-  <script>
-    function loadGoogleAnalytics() {
-      if (window.gaLoaded) return;
-      window.gaLoaded = true;
-      
-      var script = document.createElement('script');
-      script.async = true;
-      script.src = "https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N";
-      document.head.appendChild(script);
-      
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      window.gtag = gtag;
-      gtag('js', new Date());
-      gtag('config', 'G-QR2MZ9NF2N');
-    }
-    
-    window.addEventListener('load', function() {
-      var delayTimer = setTimeout(loadGoogleAnalytics, 1500);
-      
-      function triggerLoad() {
-        clearTimeout(delayTimer);
-        loadGoogleAnalytics();
-        ['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(function(e) {
-          window.removeEventListener(e, triggerLoad);
-        });
-      }
-      
-      ['touchstart', 'mousemove', 'scroll', 'keydown'].forEach(function(e) {
-        window.addEventListener(e, triggerLoad, { passive: true });
-      });
-    });
-  </script>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Macdio — Internet Radio for iPhone, Mac, iPad, Apple TV &amp; Apple Watch</title>
-  <meta name="description" content="Macdio is a native internet radio app for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Stream 55,000+ stations. One-time purchase, no subscription — available in 160+ countries at local prices. Record live radio, synced lyrics, iCloud sync.">
-  <meta name="keywords" content="radio player iphone, internet radio app, mac radio player, radio app ipad, apple tv radio, apple watch radio, carplay radio, internet radio recorder, synced lyrics radio, icloud sync radio, radio streaming app, best radio app iphone, radio player for mac, sleep timer radio, TuneIn alternative, native radio app apple">
-  <meta name="author" content="SFN">
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#050507">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macdio — Internet Radio for iPhone, Mac, iPad, Apple TV &amp; Apple Watch</title>
+<meta name="description" content="Macdio is a native internet radio player for all Apple devices. Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Record live radio into a tagged library, follow synced lyrics, identify songs with no microphone, and sync everything via iCloud. One-time purchase, no subscription.">
+<meta name="keywords" content="internet radio app, radio player iphone, mac radio player, radio app ipad, apple tv radio, apple watch radio, carplay radio, internet radio recorder, record internet radio, split track radio recording, synced lyrics radio, identify song radio no microphone, icloud sync radio, best radio app apple, native radio app, TuneIn alternative, Broadcasts radio alternative, Eter radio alternative, Radio Garden alternative, one-time purchase radio app, no subscription radio">
+<meta name="author" content="SFN">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Macdio — Internet Radio for All Apple Devices">
-  <meta property="og:description" content="Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live radio, view synced lyrics, and sync everything via iCloud.">
-  <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="628">
-  <meta property="og:url" content="https://macdio.app/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Macdio">
-  <meta property="og:locale" content="en_US">
+<!-- Open Graph -->
+<meta property="og:title" content="Macdio — Internet Radio for All Apple Devices">
+<meta property="og:description" content="Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Record live radio, synced lyrics, song ID with no microphone, iCloud sync. One-time purchase, no subscription.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta property="og:url" content="https://macdio.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<meta property="og:locale" content="en_US">
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Macdio — Radio for iPhone, Mac, iPad, Apple TV &amp; Watch">
-  <meta name="twitter:description" content="Stream 55,000+ stations everywhere. Record live radio, synced lyrics, iCloud sync. Available on all Apple devices.">
-  <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@macdioapp">
+<meta name="twitter:title" content="Macdio — Radio for iPhone, Mac, iPad, Apple TV &amp; Watch">
+<meta name="twitter:description" content="Stream 55,000+ stations everywhere. Record live radio, synced lyrics, song ID with no microphone, iCloud sync. One-time purchase, no subscription.">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
-  <link rel="apple-touch-icon" href="assets/app-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://macdio.app/">
+<!-- Structured data: the app + its capabilities (also feeds AI answer engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Macdio",
+  "operatingSystem": "iOS, iPadOS, macOS, tvOS, watchOS",
+  "applicationCategory": "MultimediaApplication",
+  "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio into a tagged library, follow synced lyrics, identify songs with no microphone, and sync via iCloud. One-time purchase, no subscription, no ads.",
+  "url": "https://macdio.app",
+  "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
+  "softwareVersion": "1.0.8",
+  "featureList": [
+    "Stream 55,000+ internet radio stations",
+    "Record live radio with split-by-track and automatic song tagging",
+    "Synced, scrolling lyrics with adjustable timing",
+    "Identify songs with no microphone and no permission",
+    "Native apps for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay",
+    "Standalone Apple Watch streaming over LTE",
+    "iCloud sync with no account and zero data collection"
+  ],
+  "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD" }
+}
+</script>
+<!-- Structured data: organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Macdio",
+  "url": "https://macdio.app",
+  "logo": "https://macdio.app/assets/app-icon.png",
+  "sameAs": [
+    "https://hub.macdio.app",
+    "https://x.com/macdioapp",
+    "https://www.instagram.com/macdioapp",
+    "https://www.tiktok.com/@macdioapp",
+    "https://www.youtube.com/@macdioapp"
+  ]
+}
+</script>
+<!-- Structured data: FAQ (rich results + AI answer engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is Macdio free or a subscription?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Macdio is a one-time purchase with no subscription and no ads. You pay once and get the app on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay, priced in your local currency." } },
+    { "@type": "Question", "name": "Can Macdio record internet radio?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio records live streams directly from the network with no microphone, can split a recording into one file per song, and then identifies and tags each track automatically." } },
+    { "@type": "Question", "name": "Does Macdio identify songs without a microphone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio identifies songs on stations that send no title or artwork in the background, with no microphone and no microphone permission required." } },
+    { "@type": "Question", "name": "Does Macdio work on Apple Watch without an iPhone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Apple Watch app streams live radio over LTE or Wi-Fi without an iPhone nearby." } },
+    { "@type": "Question", "name": "Does Macdio sync across Apple devices?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Favorites, history and settings sync across all your devices through iCloud, with no account beyond your Apple ID and zero data collection." } },
+    { "@type": "Question", "name": "How is Macdio different from TuneIn, Broadcasts, Eter or Radio Garden?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Macdio is the only one of these that records radio into a tagged library, shows synced lyrics, and identifies songs with no microphone. It is a one-time purchase with no ads and no subscription, unlike TuneIn which charges monthly." } }
+  ]
+}
+</script>
 
-  <!-- Structured Data: App -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Macdio",
-    "operatingSystem": "iOS, macOS, tvOS, watchOS",
-    "applicationCategory": "MultimediaApplication",
-    "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio, view synced lyrics, and sync via iCloud.",
-    "url": "https://macdio.app",
-    "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
-    "offers": {
-      "@type": "AggregateOffer",
-      "lowPrice": "2.99",
-      "highPrice": "9.99",
-      "priceCurrency": "USD",
-      "offerCount": "160",
-      "offers": [
-        { "@type": "Offer", "price": "5.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "United States" } },
-        { "@type": "Offer", "price": "5.99", "priceCurrency": "GBP", "eligibleRegion": { "@type": "Country", "name": "United Kingdom" } },
-        { "@type": "Offer", "price": "6.99", "priceCurrency": "EUR", "eligibleRegion": { "@type": "Country", "name": "Germany" } },
-        { "@type": "Offer", "price": "299.99", "priceCurrency": "TRY", "eligibleRegion": { "@type": "Country", "name": "Turkey" } },
-        { "@type": "Offer", "price": "9.99", "priceCurrency": "AUD", "eligibleRegion": { "@type": "Country", "name": "Australia" } }
-      ]
-    }
-  }
-  </script>
-  <!-- Structured Data: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Macdio",
-    "url": "https://macdio.app",
-    "logo": "https://macdio.app/assets/app-icon.png",
-    "sameAs": ["https://hub.macdio.app"]
-  }
-  </script>
-
-  <!-- Fonts & Asset Preconnects -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-
-  <!-- Shared CSS -->
-  <link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="redesign.css">
 </head>
 <body>
 
-<canvas id="bg-canvas"></canvas>
+<div id="nav-slot"></div>
 
-<!-- Nav injected by nav.js -->
-<div id="nav-placeholder"></div>
+<main id="top">
 
-<main>
-
-<!-- ============================================================
-     HERO
-     ============================================================ -->
-<section class="hero" id="hero" data-three-section="hero">
-  <div class="hero-badge">
-    <span class="dot"></span>
-    Live Internet Radio for All Apple Platforms
-  </div>
-  <div class="hero-icon-wrap">
-    <img src="assets/app-icon.png" alt="Macdio App Icon" class="hero-icon" width="112" height="112" fetchpriority="high" loading="eager">
-  </div>
-  <h1>One App.<br>Made to <span class="gradient-text">Listen.</span></h1>
-  <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch &amp; CarPlay. Record live audio, follow synced lyrics, sync everything via iCloud.</p>
-  <div class="hero-price-line" id="heroPriceBlock" aria-live="polite">
-    <span class="hero-price-main">
-      <span id="heroPriceFlag"></span>
-      <span id="heroPriceAmount"></span>
-    </span>
-    <span class="hero-price-detail">One-time &nbsp;·&nbsp; All Apple devices &nbsp;·&nbsp; No subscription</span>
-  </div>
-
-  <div class="hero-buttons">
-    <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button_light.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;" width="162" height="54" fetchpriority="high" loading="eager">
-    </a>
-    <a href="#screenshots" class="btn-secondary">See it in action ↓</a>
+<!-- ============ HERO ============ -->
+<section class="section hero" id="hero">
+  <div class="hero-aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+  <div class="hero-eq" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span>Live internet radio for every Apple device</div>
+    <img class="hero-icon" src="assets/app-icon.png" alt="Macdio app icon">
+    <h1>One App.<br>Made to <span class="grad">Listen.</span></h1>
+    <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay. Record live audio, follow synced lyrics, and sync everything through iCloud.</p>
+    <div class="price-pill"><span class="flag" id="priceFlag">🇹🇷</span><span id="priceAmount">₺299.99</span></div>
+    <div class="price-note">One time. Every Apple device. No subscription.</div>
+    <div class="hero-actions">
+      <a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store">
+        <img src="download_button.svg" alt="Download on the App Store">
+      </a>
+      <a class="scroll-cue" href="#identify">See what it does ↓</a>
+    </div>
   </div>
 </section>
 
-<style>
-.hero-price-line {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin: 20px auto 20px;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-.hero-price-line.visible { opacity: 1; transform: none; }
-.hero-price-main {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--text);
-  letter-spacing: -0.01em;
-}
-#heroPriceFlag { font-size: 1.2rem; }
-.hero-price-detail {
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  letter-spacing: 0.01em;
-}
-</style>
-
-<!-- ============================================================
-     PLATFORM SHOWCASE
-     ============================================================ -->
-<section class="platform-showcase" id="screenshots" data-three-section="screenshots">
-  <div class="showcase-header reveal">
-    <p class="section-label">App Preview</p>
-    <h2 class="section-title">Macdio on every screen</h2>
-    <p class="showcase-platforms-mobile">iPhone &nbsp;·&nbsp; iPad &nbsp;·&nbsp; Mac &nbsp;·&nbsp; Apple TV &nbsp;·&nbsp; Apple Watch &nbsp;·&nbsp; CarPlay</p>
-  </div>
-
-  <!-- Desktop: sticky sidebar + galleries -->
-  <div class="showcase-wrapper">
-    <div class="platform-list" role="tablist" aria-label="Platform selector">
-      <button class="platform-list-item active" data-platform="macos" role="tab" aria-selected="true" aria-controls="gallery-macos">
-        <span class="plat-icon">🖥</span>
-        <span class="plat-info"><span class="plat-name">Mac</span><span class="plat-desc">macOS Tahoe</span></span>
-      </button>
-      <button class="platform-list-item" data-platform="iphone" role="tab" aria-selected="false" aria-controls="gallery-iphone">
-        <span class="plat-icon">📱</span>
-        <span class="plat-info"><span class="plat-name">iPhone</span><span class="plat-desc">+ CarPlay</span></span>
-      </button>
-      <button class="platform-list-item" data-platform="ipad" role="tab" aria-selected="false" aria-controls="gallery-ipad">
-        <span class="plat-icon">📱</span>
-        <span class="plat-info"><span class="plat-name">iPad</span><span class="plat-desc">iPadOS</span></span>
-      </button>
-      <button class="platform-list-item" data-platform="tvos" role="tab" aria-selected="false" aria-controls="gallery-tvos">
-        <span class="plat-icon">📺</span>
-        <span class="plat-info"><span class="plat-name">Apple TV</span><span class="plat-desc">tvOS</span></span>
-      </button>
-      <button class="platform-list-item" data-platform="watchos" role="tab" aria-selected="false" aria-controls="gallery-watchos">
-        <span class="plat-icon">⌚</span>
-        <span class="plat-info"><span class="plat-name">Apple Watch</span><span class="plat-desc">Stream over LTE</span></span>
-      </button>
+<!-- ============ KILLER #1: SONG IDENTIFICATION ============ -->
+<section class="section identify" id="identify">
+  <p class="eyebrow reveal">Song Identification</p>
+  <h2 class="headline reveal d1" style="margin:14px auto 0;max-width:16ch;">Macdio names the song<br><span class="grad">the station won't.</span></h2>
+  <p class="sub reveal d2" style="max-width:52ch;margin:20px auto 0;">Thousands of stations stream music with no title, no artist, no artwork. Macdio listens in the background and identifies it for you. No microphone, no tapping. The album art simply appears.</p>
+  <div class="stage reveal d2">
+    <div class="radar" aria-hidden="true"><span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span></div>
+    <div class="phone">
+      <video autoplay muted loop playsinline preload="auto" aria-label="Macdio identifying a song live on a radio stream">
+        <source src="assets/vids/Shazam.webm" type="video/webm">
+        <source src="assets/vids/Shazam.mp4" type="video/mp4">
+      </video>
     </div>
-
-    <div class="showcase-galleries">
-      <!-- macOS -->
-      <div class="platform-gallery active" id="gallery-macos" role="tabpanel">
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Discover.webp" alt="Macdio macOS Discover" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Library.webp" alt="Macdio macOS Library" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Library</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Tracks.webp" alt="Macdio macOS Now Playing" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/Recordings.webp" alt="Macdio macOS Recordings" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Recordings</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/mini_player.webp" alt="Macdio macOS Mini Player" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Mini Player</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/macos_web/stats.webp" alt="Macdio macOS Listening Stats" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Listening Stats</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-      </div>
-
-      <!-- iPhone -->
-      <div class="platform-gallery" id="gallery-iphone" role="tabpanel">
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Discover-b.webp" alt="Macdio iPhone Discover" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.webp" alt="Macdio iPhone Now Playing" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Now Playing &amp; Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Fav-song.webp" alt="Macdio iPhone Favorites" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Saved Songs</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Sleep-Timer.webp" alt="Macdio iPhone Sleep Timer" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Lyric.webp" alt="Macdio iPhone Synced Lyrics" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="Macdio iPhone iCloud Sync" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/CarPlay_web/Song.webp" alt="Macdio CarPlay Now Playing" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">CarPlay</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-      </div>
-
-      <!-- iPad -->
-      <div class="platform-gallery" id="gallery-ipad" role="tabpanel">
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Discover-W.webp" alt="Macdio iPad Discover" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Lyrics-Song.webp" alt="Macdio iPad Lyrics &amp; Now Playing" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Lyrics &amp; Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Left-Save-to-fav.webp" alt="Macdio iPad Save to Favorites" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Save to Favorites</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Sleep-Timer.webp" alt="Macdio iPad Sleep Timer" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Sleep Timer</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Sync-ICloud.webp" alt="Macdio iPad iCloud Sync" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">iCloud Sync</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/ipad_web/Lyrics.webp" alt="Macdio iPad Full-Screen Lyrics" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Full-Screen Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-      </div>
-
-      <!-- Apple TV -->
-      <div class="platform-gallery" id="gallery-tvos" role="tabpanel">
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Discover.webp" alt="Macdio Apple TV Discover" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Discover</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Song.webp" alt="Macdio Apple TV Now Playing" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Now Playing</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Lyrics.webp" alt="Macdio Apple TV Synced Lyrics" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Synced Lyrics</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/tvOS_web/Recently-Played.webp" alt="Macdio Apple TV Recently Played" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span><span class="screenshot-hint">click to zoom</span></div>
-        </div>
-      </div>
-
-      <!-- Apple Watch -->
-      <div class="platform-gallery watch-gallery" id="gallery-watchos" role="tabpanel">
-        <p style="grid-column:1/-1;text-align:center;font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;">⌚ Stream over LTE — no iPhone needed</p>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Discover.webp" alt="Macdio Watch Discover" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Discover</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Stations.webp" alt="Macdio Watch Stations" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Stations</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Favs.webp" alt="Macdio Watch Favorites" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Favorites</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Genre.webp" alt="Macdio Watch Genre" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Genre</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Recently-Played.webp" alt="Macdio Watch Recently Played" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Recently Played</span></div>
-        </div>
-        <div class="screenshot-item reveal" onclick="openLightbox(this)">
-          <img src="assets/screenshots/watchos_web/Save-Your-Songs.webp" alt="Macdio Watch Save Songs" loading="lazy">
-          <div class="screenshot-meta"><span class="screenshot-label">Save Songs</span></div>
-        </div>
-      </div>
-    </div><!-- /.showcase-galleries -->
-  </div><!-- /.showcase-wrapper -->
-
-  <!-- Mobile: tab bar (original galleries are shown natively in the DOM) -->
-  <div class="platform-tabs-mobile" id="mobilePlatformTabs" aria-label="Platform selector">
-    <button class="platform-tab-m active" data-platform="macos">🖥 Mac</button>
-    <button class="platform-tab-m" data-platform="iphone">📱 iPhone</button>
-    <button class="platform-tab-m" data-platform="ipad">📱 iPad</button>
-    <button class="platform-tab-m" data-platform="tvos">📺 Apple TV</button>
-    <button class="platform-tab-m" data-platform="watchos">⌚ Watch</button>
   </div>
-
 </section>
 
-<!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="handleLightboxClick(event)">
-  <div class="lightbox-close" onclick="closeLightbox()" role="button" aria-label="Close">✕</div>
-  <div class="lightbox-counter" id="lightboxCounter"></div>
-  <div class="lightbox-nav lightbox-prev" onclick="navigateLightbox(-1)" role="button" aria-label="Previous">‹</div>
-  <img id="lightboxImg" src="" alt="">
-  <div class="lightbox-nav lightbox-next" onclick="navigateLightbox(1)" role="button" aria-label="Next">›</div>
-  <div class="lightbox-caption" id="lightboxCaption"></div>
-</div>
-
-<!-- ============================================================
-     FAIR PRICING
-     ============================================================ -->
-<section class="fair-pricing" id="fair-pricing">
-  <div class="fp-inner reveal">
-    <p class="section-label">Pricing</p>
-    <h2 class="section-title">Internet radio<br>should be <span class="gradient-text">for everyone.</span></h2>
-
-    <div class="fp-body">
-      <p>Radio has been free on the airwaves for a century. Somewhere along the way, streaming apps started charging monthly subscriptions for something that should just work. Macdio does not do that.</p>
-      <p>You pay once. You get the app on every Apple device you own — iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay — and every update that follows, forever. No plan tiers. No premium features locked behind a paywall. No price increase email three months in.</p>
-      <p>Macdio is available in over 160 countries, priced in local currencies. A listener in India pays the same fair price relative to their market as someone in Germany or the United States. The goal has always been the same: if you want to listen to radio, the app should not be the thing standing in the way.</p>
+<!-- ============ KILLER #2: RECORDING ============ -->
+<section class="section feature" id="recording">
+  <div class="wrap">
+    <div class="feature-text reveal">
+      <span class="eyebrow">Live Recording</span>
+      <h3 class="headline">Record the radio. Get back a tagged library.</h3>
+      <p class="sub">Capture any live stream straight from the network, with zero ambient noise. Macdio can split the recording into one file per song, then identify the unknown ones in the background and name them for you. You started with a stream. You end with an organized music library.</p>
+      <div class="feature-tags">
+        <span class="tag">Split by track</span>
+        <span class="tag">Auto titled</span>
+        <span class="tag">FLAC · AAC · MP3</span>
+        <span class="tag">No microphone</span>
+      </div>
     </div>
-
-    <div class="fp-stats">
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">160+</span>
-        <span class="fp-stat-label">Countries. Local prices.</span>
-      </div>
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">6</span>
-        <span class="fp-stat-label">Apple platforms. One purchase.</span>
-      </div>
-      <div class="fp-stat reveal">
-        <span class="fp-stat-value">$0</span>
-        <span class="fp-stat-label">Recurring. Ever.</span>
+    <div class="feature-visual reveal d1">
+      <div class="phone">
+        <video autoplay muted loop playsinline preload="auto" aria-label="Macdio recording live radio and tagging tracks">
+          <source src="assets/vids/Recording.webm" type="video/webm">
+          <source src="assets/vids/Recording.mp4" type="video/mp4">
+        </video>
       </div>
     </div>
   </div>
 </section>
 
-<style>
-.fair-pricing {
-  padding: 90px 24px;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.fp-inner { max-width: 600px; margin: 0 auto; text-align: center; }
-.fp-body {
-  text-align: left;
-  margin: 32px 0 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.fp-body p {
-  font-size: 1rem;
-  line-height: 1.75;
-  color: var(--text-secondary);
-  margin: 0;
-}
-.fp-body p strong { color: var(--text); font-weight: 600; }
-.fp-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-.fp-stat {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 20px 16px;
-  text-align: center;
-}
-.fp-stat-value {
-  display: block;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 800;
-  color: var(--text);
-  letter-spacing: -0.02em;
-  line-height: 1;
-  margin-bottom: 6px;
-}
-.fp-stat-label {
-  display: block;
-  font-size: 0.78rem;
-  color: var(--text-secondary);
-  line-height: 1.4;
-}
-@media (max-width: 480px) {
-  .fp-stats { grid-template-columns: 1fr; }
-}
-</style>
-
-<!-- ============================================================
-     COMMUNITY
-     ============================================================ -->
-<section class="community" id="community" data-three-section="community">
-  <div class="community-header reveal">
-    <p class="section-label">Community</p>
-    <h2 class="section-title">Join the conversation</h2>
-    <p class="section-desc" style="margin:14px auto 0;text-align:center;">Request features, report bugs, share great stations — and connect with other Macdio listeners.</p>
-  </div>
-
-  <div class="community-grid reveal">
-    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
-      <span class="community-card-icon">💬</span>
-      <span class="community-card-title">Feature Requests</span>
-      <span class="community-card-desc">Shape the future of Macdio</span>
-    </a>
-    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
-      <span class="community-card-icon">🐛</span>
-      <span class="community-card-title">Bug Reports</span>
-      <span class="community-card-desc">Help make the app better</span>
-    </a>
-    <a href="https://hub.macdio.app" target="_blank" rel="noopener" class="community-card">
-      <span class="community-card-icon">📻</span>
-      <span class="community-card-title">Station Tips</span>
-      <span class="community-card-desc">Discover great radio worldwide</span>
-    </a>
-  </div>
-
-  <div class="community-threads reveal">
-    <div class="community-thread">
-      <span class="thread-title">What stations do you always come back to?</span>
-      <span class="thread-replies">12 replies</span>
-    </div>
-    <div class="community-thread">
-      <span class="thread-title">Dark mode improvements — share your thoughts</span>
-      <span class="thread-replies">8 replies</span>
-    </div>
-    <div class="community-thread">
-      <span class="thread-title">Best jazz stations to add to Macdio</span>
-      <span class="thread-replies">21 replies</span>
-    </div>
-  </div>
-
-  <a href="https://hub.macdio.app" class="btn-community reveal" target="_blank" rel="noopener">
-    Visit Community Hub →
-  </a>
-</section>
-
-<!-- ============================================================
-     FEATURE NARRATIVE
-     ============================================================ -->
-<section class="features" id="features" data-three-section="features">
-  <div class="features-header reveal">
-    <p class="section-label">Features</p>
-    <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
-    <p class="section-desc" style="margin:16px auto 0;text-align:center;">100% native SwiftUI — no Electron, no web wrappers. Built for every Apple device from the ground up.</p>
-  </div>
-
-  <!-- Feature 1: Synced Lyrics -->
-  <div class="feature-row reveal">
-    <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Lyric.webp" alt="Macdio synced lyrics view" loading="lazy">
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">🎵 Synced Lyrics</span>
-      <h3>Every word, in perfect sync.</h3>
-      <p>Follow along as the music plays — real-time synchronized lyrics that scroll automatically. Beautiful animations, zero effort.</p>
-    </div>
-  </div>
-
-  <!-- Feature 2: Live Recording -->
-  <div class="feature-row reverse reveal">
-    <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Recordings.webp" alt="Macdio live recording" loading="lazy">
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">🔴 Live Recording</span>
-      <h3>Capture every moment.</h3>
-      <p>Record any live stream in high quality. Your recordings are saved and organized automatically — no missed songs, ever.</p>
-    </div>
-  </div>
-
-  <!-- Feature 3: Apple Watch LTE -->
-  <div class="feature-row reveal">
-    <div class="feature-screenshot">
-      <img src="assets/screenshots/watchos_web/Discover.webp" alt="Macdio on Apple Watch" loading="lazy">
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">⌚ Apple Watch</span>
-      <h3>Leave your iPhone at home.</h3>
-      <p>Browse stations, control playback, and stream over LTE — directly from your wrist. No iPhone required.</p>
-      <div class="feature-stat"><span class="stat-val">LTE</span> Standalone streaming</div>
-    </div>
-  </div>
-
-  <!-- Feature 4: All Platforms -->
-  <div class="feature-row reverse reveal">
-    <div class="feature-screenshot">
-      <img src="assets/screenshots/macos_web/Discover.webp" alt="Macdio on Mac" loading="lazy">
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">🖥 All Apple Platforms</span>
-      <h3>One app, every screen.</h3>
-      <p>iPhone, iPad, Mac, Apple TV, Apple Watch, CarPlay — Macdio is built natively for each platform, not stretched to fit.</p>
-      <div class="feature-stat"><span class="stat-val">6</span> platforms, one purchase</div>
-    </div>
-  </div>
-
-  <!-- Feature 5: Siri + Shortcuts -->
-  <div class="feature-row reveal">
-    <div class="feature-screenshot feature-screenshot--siri">
-      <div class="siri-demo">
-        <div class="siri-bubble siri-bubble--user">
-          <span class="siri-label">You</span>
-          <p>"Play Jazz FM on Macdio"</p>
-        </div>
-        <div class="siri-bubble siri-bubble--app">
-          <span class="siri-label">Macdio</span>
-          <p>Playing Jazz FM...</p>
-        </div>
-        <div class="siri-bubble siri-bubble--user">
-          <span class="siri-label">You</span>
-          <p>"Stop Macdio"</p>
-        </div>
-        <div class="siri-bubble siri-bubble--app">
-          <span class="siri-label">Macdio</span>
-          <p>Stopped.</p>
-        </div>
+<!-- ============ KILLER #3: SYNCED LYRICS ============ -->
+<section class="section feature reverse" id="lyrics">
+  <div class="wrap">
+    <div class="feature-text reveal">
+      <span class="eyebrow">Synced Lyrics</span>
+      <h3 class="headline">Every word, on time.</h3>
+      <p class="sub">Macdio pulls time synced lyrics and scrolls them line by line as the song plays, highlighting the current line. Radio broadcasts run a little ahead, so you can nudge the timing until it lands exactly right.</p>
+      <div class="feature-tags">
+        <span class="tag">Line by line</span>
+        <span class="tag">Auto scroll</span>
+        <span class="tag">Tunable offset</span>
       </div>
     </div>
-    <div class="feature-text">
-      <span class="feature-tag">🎙 Siri &amp; Shortcuts</span>
-      <h3>Just ask. No tapping required.</h3>
-      <p>Ask Siri to play any station, switch to a favorite, or stop playback — hands-free, without opening the app. Full Shortcuts support lets you automate radio into any workflow: morning routines, focus modes, CarPlay actions.</p>
-      <div class="feature-stat"><span class="stat-val">Siri</span> full integration</div>
-    </div>
-  </div>
-
-  <!-- Feature 6: Privacy + iCloud -->
-  <div class="feature-row reverse reveal">
-    <div class="feature-screenshot">
-      <img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="Macdio iCloud sync" loading="lazy">
-    </div>
-    <div class="feature-text">
-      <span class="feature-tag">☁️ iCloud Sync</span>
-      <h3>Private by design. Synced effortlessly.</h3>
-      <p>Your favorites, history, and settings sync across all your devices via iCloud — automatically, and with zero data collected about you.</p>
-      <div class="feature-stat"><span class="stat-val">0</span> data collected</div>
-    </div>
-  </div>
-
-  <!-- Siri demo styles -->
-  <style>
-  .feature-screenshot--siri {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    border: none;
-    box-shadow: none;
-    padding: 0;
-  }
-  .siri-demo {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    max-width: 320px;
-    padding: 8px;
-  }
-  .siri-bubble {
-    padding: 14px 18px;
-    border-radius: 16px;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    position: relative;
-  }
-  .siri-bubble p { margin: 0; font-weight: 500; }
-  .siri-label {
-    display: block;
-    font-size: 0.65rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    margin-bottom: 4px;
-    opacity: 0.6;
-  }
-  .siri-bubble--user {
-    background: rgba(99,102,241,0.12);
-    border: 1px solid rgba(99,102,241,0.2);
-    color: var(--text);
-    align-self: flex-end;
-    text-align: right;
-    border-radius: 16px 16px 4px 16px;
-  }
-  .siri-bubble--user .siri-label { color: var(--accent); }
-  .siri-bubble--app {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid var(--border);
-    color: var(--text-secondary);
-    align-self: flex-start;
-    border-radius: 16px 16px 16px 4px;
-  }
-  .siri-bubble--app .siri-label { color: var(--text-secondary); }
-  </style>
-
-  <!-- Also includes chips -->
-  <div class="also-includes reveal">
-    <h4>Also includes</h4>
-    <div class="chips">
-      <span class="chip">🎙 Siri Integration</span>
-      <span class="chip">⚡ Apple Shortcuts</span>
-      <span class="chip">⌨️ Keyboard Shortcuts</span>
-      <span class="chip">🚗 CarPlay</span>
-      <span class="chip">📱 Dynamic Island</span>
-      <span class="chip">🌙 Sleep Timer</span>
-      <span class="chip">👨‍👩‍👧 Family Sharing</span>
-      <span class="chip">🖼 Mini Player</span>
-      <span class="chip">💧 Liquid Glass</span>
-      <span class="chip">➕ Custom Stream URLs</span>
-      <span class="chip">🌍 55,000+ Stations</span>
-      <span class="chip">📊 Listening Stats</span>
+    <div class="feature-visual reveal d1">
+      <div class="phone">
+        <video autoplay muted loop playsinline preload="auto" aria-label="Macdio scrolling synced lyrics line by line">
+          <source src="assets/vids/Lyrics.webm" type="video/webm">
+          <source src="assets/vids/Lyrics.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================================================
-     COMPARE
-     ============================================================ -->
-<section class="compare" id="compare" data-three-section="compare">
-  <div class="compare-header reveal">
-    <p class="section-label">How It Compares</p>
-    <h2 class="section-title">Why Macdio?</h2>
-    <p class="section-desc" style="margin:14px auto 0;text-align:center;">A quick look at how Macdio stacks up.</p>
+<!-- ============ DISCOVER ============ -->
+<section class="section feature" id="discover">
+  <div class="wrap">
+    <div class="feature-text reveal">
+      <span class="eyebrow">Discover</span>
+      <h3 class="headline">55,000 stations. A world to tune into.</h3>
+      <p class="sub">Browse by genre, country, or language, or jump straight to what is popular near you. Search across 55,000+ live stations and add any stream you like. The whole planet's radio, one tap away.</p>
+      <div class="feature-tags">
+        <span class="tag">By genre</span>
+        <span class="tag">By country</span>
+        <span class="tag">Popular near you</span>
+        <span class="tag">Custom stream URLs</span>
+      </div>
+    </div>
+    <div class="feature-visual reveal d1">
+      <div class="phone">
+        <video autoplay muted loop playsinline preload="auto" aria-label="Browsing radio stations in Macdio">
+          <source src="assets/vids/Discovery.webm" type="video/webm">
+          <source src="assets/vids/Discovery.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEVICES ============ -->
+<section class="section devices" id="devices">
+  <p class="eyebrow reveal">Every Apple device</p>
+  <h2 class="headline reveal d1" style="margin-top:14px;max-width:18ch;margin-left:auto;margin-right:auto;">Built native for each screen. Not stretched to fit.</h2>
+  <div class="device-grid">
+    <div class="device reveal">
+      <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2.5"/><line x1="10.5" y1="18.5" x2="13.5" y2="18.5"/></svg>
+      <span class="d-name">iPhone</span><span class="d-desc">+ CarPlay</span>
+    </div>
+    <div class="device reveal">
+      <svg viewBox="0 0 24 24"><rect x="5" y="2.5" width="14" height="19" rx="2"/><line x1="10.5" y1="19" x2="13.5" y2="19"/></svg>
+      <span class="d-name">iPad</span><span class="d-desc">iPadOS</span>
+    </div>
+    <div class="device unique reveal">
+      <span class="only">Only Macdio</span>
+      <svg viewBox="0 0 24 24"><rect x="7.5" y="6.5" width="9" height="11" rx="2.5"/><path d="M9 6.5l.6-3h4.8l.6 3"/><path d="M9 17.5l.6 3h4.8l.6-3"/></svg>
+      <span class="d-name">Apple Watch</span><span class="d-desc">Streams over LTE</span>
+    </div>
+    <div class="device reveal">
+      <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></svg>
+      <span class="d-name">Mac</span><span class="d-desc">Native, not Catalyst</span>
+    </div>
+    <div class="device unique reveal">
+      <span class="only">Only Macdio</span>
+      <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="2"/><line x1="8" y1="20.5" x2="16" y2="20.5"/></svg>
+      <span class="d-name">Apple TV</span><span class="d-desc">Lean back</span>
+    </div>
+    <div class="device reveal">
+      <svg viewBox="0 0 24 24"><path d="M4 13l1.5-5h13L20 13"/><rect x="3" y="13" width="18" height="6" rx="2"/><circle cx="7" cy="16" r="1"/><circle cx="17" cy="16" r="1"/></svg>
+      <span class="d-name">CarPlay</span><span class="d-desc">Four full tabs</span>
+    </div>
+  </div>
+  <p class="device-note reveal d2">One purchase. <b>Every screen you own.</b> A station you heart on your wrist shows up on your Mac and your TV.</p>
+</section>
+
+<!-- ============ PREVIEW ============ -->
+<section class="section preview" id="preview">
+  <p class="eyebrow reveal">App Preview</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;">Macdio on every screen</h2>
+  <div class="tabs reveal d2" role="tablist">
+    <button class="tab" data-target="macos" aria-selected="true">Mac<span class="t-desc">macOS</span></button>
+    <button class="tab" data-target="iphone" aria-selected="false">iPhone<span class="t-desc">iOS</span></button>
+    <button class="tab" data-target="ipad" aria-selected="false">iPad<span class="t-desc">iPadOS</span></button>
+    <button class="tab" data-target="tvos" aria-selected="false">Apple TV<span class="t-desc">tvOS</span></button>
+    <button class="tab" data-target="watchos" aria-selected="false">Watch<span class="t-desc">LTE</span></button>
   </div>
 
-  <div class="compare-table-wrap reveal">
-    <table class="compare-table">
+  <div class="gallery active" id="gallery-macos">
+    <div class="shot"><img src="assets/screenshots/macos_web/Discover.webp" alt="Mac Discover" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/macos_web/Library.webp" alt="Mac Library" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/macos_web/Tracks.webp" alt="Mac Now Playing" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/macos_web/Recordings.webp" alt="Mac Recordings" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/macos_web/mini_player.webp" alt="Mac Mini Player" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/macos_web/stats.webp" alt="Mac Listening Stats" loading="lazy"></div>
+  </div>
+  <div class="gallery" id="gallery-iphone">
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Discover-b.webp" alt="iPhone Discover" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.webp" alt="iPhone Now Playing" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Lyric.webp" alt="iPhone Lyrics" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Recordings.webp" alt="iPhone Recordings" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Sleep-Timer.webp" alt="iPhone Sleep Timer" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="iPhone iCloud Sync" loading="lazy"></div>
+  </div>
+  <div class="gallery" id="gallery-ipad">
+    <div class="shot"><img src="assets/screenshots/ipad_web/Discover-B.webp" alt="iPad Discover" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/ipad_web/Lyrics-Song.webp" alt="iPad Lyrics" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/ipad_web/Lib-Fav.webp" alt="iPad Library" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/ipad_web/List.webp" alt="iPad List" loading="lazy"></div>
+  </div>
+  <div class="gallery" id="gallery-tvos">
+    <div class="shot"><img src="assets/screenshots/tvOS_web/Discover.webp" alt="Apple TV Discover" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/tvOS_web/Song.webp" alt="Apple TV Now Playing" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/tvOS_web/Lyrics.webp" alt="Apple TV Lyrics" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/tvOS_web/Stats.webp" alt="Apple TV Stats" loading="lazy"></div>
+  </div>
+  <div class="gallery" id="gallery-watchos">
+    <div class="shot"><img src="assets/screenshots/watchos_web/Discover.webp" alt="Apple Watch Discover" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/watchos_web/Favs.webp" alt="Apple Watch Favorites" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/watchos_web/Stations.webp" alt="Apple Watch Stations" loading="lazy"></div>
+    <div class="shot"><img src="assets/screenshots/watchos_web/Recently-Played.webp" alt="Apple Watch Recently Played" loading="lazy"></div>
+  </div>
+</section>
+
+<!-- ============ BENTO: MORE FEATURES ============ -->
+<section class="section bento" id="more">
+  <p class="eyebrow reveal">Everything else</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;">And so much more.</h2>
+  <p class="sub reveal d2" style="margin:16px auto 0;max-width:48ch;">The big features get the spotlight. These quietly make every day with Macdio better.</p>
+  <div class="bento-grid">
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div>
+      <h3>Sleep Timer</h3><p>Drift off with presets or stop at the end of the song, with a gentle 30 second fade out.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><line x1="6" y1="20" x2="6" y2="13"/><line x1="12" y1="20" x2="12" y2="5"/><line x1="18" y1="20" x2="18" y2="9"/></svg></div>
+      <h3>Listening Stats</h3><p>Your top stations and total listening time by week, month, or all time, across every device.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></div>
+      <h3>Widgets &amp; Live Activity</h3><p>Home Screen, Lock Screen, and Dynamic Island show what is playing at a glance.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M3 12h2l2-6 3 12 3-9 2 3h6"/></svg></div>
+      <h3>Siri &amp; Shortcuts</h3><p>Play any station hands free and automate radio into your morning routine and Focus modes.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></div>
+      <h3>Spotlight Search</h3><p>Find and launch your favorite stations straight from Spotlight on iPhone and Mac.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="16" r="2.5"/><path d="M8.5 18V6l12-2v12"/></svg></div>
+      <h3>Apple Music Bridge</h3><p>Send any song you hear on the radio to your Apple Music library in one tap.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19" r="1"/></svg></div>
+      <h3>Adaptive Streaming</h3><p>Quality and buffering adapt to your connection, with low, medium, and high tiers.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div>
+      <h3>Never Drops Out</h3><p>Auto reconnect and a custom Icecast proxy keep the stream alive through Wi-Fi and cellular handoffs.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="11" rx="1.5"/><path d="M2 19h20l-2-4H4z"/></svg></div>
+      <h3>Mac Extras</h3><p>Menu bar mini player, dynamic dock artwork, and launch at login, built natively for Mac.</p>
+    </div>
+  </div>
+  <div class="bento-more reveal">
+    <a href="features.html">See every feature <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<!-- ============ COMPARE ============ -->
+<section class="section compare" id="compare">
+  <p class="eyebrow reveal">How it compares</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;">What only Macdio does.</h2>
+  <p class="sub reveal d2" style="margin:16px auto 0;max-width:50ch;">Three of these ship in no other radio app on the App Store. Everything else, Macdio matches or beats.</p>
+  <div class="table-wrap reveal d2">
+    <table class="cmp">
       <thead>
-        <tr>
-          <th></th>
-          <th class="macdio-col">Macdio</th>
-          <th>Broadcasts</th>
-          <th>Eter</th>
-          <th>TuneIn</th>
-          <th>Radio Garden</th>
-        </tr>
+        <tr><th></th><th class="me">Macdio</th><th>Broadcasts</th><th>Eter</th><th>TuneIn</th><th>Radio Garden</th></tr>
       </thead>
       <tbody>
-        <tr><td>Pricing</td><td class="macdio-col cmp-price">One-time</td><td class="cmp-price">One-time</td><td class="cmp-price">One-time</td><td class="cmp-price">Free + sub</td><td class="cmp-price">Free + ads</td></tr>
-        <tr><td>No ads</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>No tracking</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>Native Mac app</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>Apple TV</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>Standalone Watch</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>CarPlay</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td></tr>
-        <tr><td>Family Sharing</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>Live recording</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>Synced lyrics</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td><td class="cmp-no">—</td></tr>
-        <tr><td>No in-app purchases</td><td class="macdio-col cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-yes">✓</td><td class="cmp-no">—</td><td class="cmp-yes">✓</td></tr>
+        <tr class="grp"><td>Only on Macdio</td><td class="me"></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="only"><td>Split-track recording</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr class="only"><td>Synced lyrics</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr class="only"><td>Song ID without a microphone</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr class="grp"><td>The essentials, all covered</td><td class="me"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><td>Song identification</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr><td>Native Mac app</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr><td>Apple TV</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td></tr>
+        <tr><td>Apple Watch</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td></tr>
+        <tr><td>CarPlay</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td></tr>
+        <tr><td>iCloud sync, no account</td><td class="me yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr><td>No ads</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
+        <tr><td>No subscription</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="yes">✓</td></tr>
+        <tr><td>Pricing</td><td class="me">One time</td><td>Free + $7.99</td><td>Free + $8.99</td><td>$9.99 / mo</td><td>Free + ads</td></tr>
       </tbody>
     </table>
-    <p class="compare-note">Comparison based on publicly available information as of May 2026. Features may change.</p>
+  </div>
+  <p class="cmp-foot reveal">Comparison based on publicly available information as of June 2026. Features may change.</p>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section pricing" id="pricing">
+  <p class="eyebrow reveal">Pricing</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;max-width:18ch;margin-left:auto;margin-right:auto;">Internet radio should be for everyone.</h2>
+  <div class="pricing-copy reveal d2">
+    <p>Radio has been free on the airwaves for a century. Somewhere along the way, streaming apps started charging monthly subscriptions for something that should just work. Macdio does not do that.</p>
+    <p>You pay once. You get the app on every Apple device you own, and every update that follows. No plan tiers. No premium features behind a paywall. No price increase email three months in.</p>
+    <p>Macdio is sold in over 160 countries, priced in local currencies. A listener in India pays the same fair price relative to their market as someone in Germany or the United States. If you want to listen to radio, the app should not be the thing standing in the way.</p>
+  </div>
+  <div class="stats">
+    <div class="stat reveal"><div class="num">160+</div><div class="lab">Countries, local prices</div></div>
+    <div class="stat reveal d1"><div class="num">6</div><div class="lab">Apple platforms, one purchase</div></div>
+    <div class="stat reveal d2"><div class="num">$0</div><div class="lab">Recurring, ever</div></div>
   </div>
 </section>
 
-<!-- ============================================================
-     PERFORMANCE
-     ============================================================ -->
-<section class="performance" id="performance" data-three-section="performance">
-  <div class="perf-header reveal">
-    <div class="perf-badge"><span>✓</span> All 9 Tests Passed</div>
-    <p class="section-label">macOS Performance</p>
-    <h2 class="section-title">Built for <span class="gradient-text">Performance</span></h2>
-    <p class="section-desc" style="margin:14px auto 12px;text-align:center;">Every millisecond matters. Real numbers from our automated benchmark suite on macOS.</p>
-    <div class="env-badges">
-      <span class="env-badge">🖥 <strong>macOS Tahoe</strong> 26.4</span>
-      <span class="env-badge">⚙️ <strong>Apple Silicon</strong> M4</span>
-      <span class="env-badge">🏗 <strong>Native</strong> ARM64</span>
-    </div>
+<!-- ============ PRIVACY ============ -->
+<section class="section privacy" id="privacy">
+  <p class="eyebrow reveal">Private by design</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;max-width:16ch;margin-left:auto;margin-right:auto;">Your listening stays yours.</h2>
+  <div class="badges reveal d2">
+    <span class="badge">Data Not Collected</span>
+    <span class="badge">No account required</span>
+    <span class="badge">No analytics SDK</span>
+    <span class="badge">Private iCloud sync</span>
   </div>
+  <p class="craft reveal d2">7.8 MB. 0% idle CPU. Zero third party dependencies.</p>
+</section>
 
-  <!-- Top 3 cards -->
-  <div class="benchmark-grid">
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">⚡</span>
-      <div class="bench-value green">0.0<span class="bench-unit">%</span></div>
-      <div class="bench-label">Idle CPU Usage</div>
-      <div class="bench-desc">10 consecutive samples — zero CPU when not playing.</div>
-      <div class="bench-pass">✓ Pass</div>
-    </div>
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">💾</span>
-      <div class="bench-value blue"><span data-bench-count="60">0</span><span class="bench-unit"> MB</span></div>
-      <div class="bench-label">Memory Footprint</div>
-      <div class="bench-desc">3× lighter than Apple Podcasts, 6× lighter than Spotify.</div>
-      <div class="bench-pass">✓ Pass</div>
-    </div>
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">🛡️</span>
-      <div class="bench-value green">0<span class="bench-unit"> leaks</span></div>
-      <div class="bench-label">Memory Leaks</div>
-      <div class="bench-desc">Zero leaked bytes across 243K+ allocated nodes.</div>
-      <div class="bench-pass">✓ Zero Leaks</div>
-    </div>
-  </div>
-
-  <button class="bench-toggle-btn" id="benchToggleBtn" onclick="toggleBenchExtra()">Show all benchmarks ▾</button>
-
-  <!-- Extra 3 cards (hidden by default) -->
-  <div class="bench-extra" id="benchExtra">
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">📦</span>
-      <div class="bench-value pink"><span data-bench-count="4.9" data-bench-decimal="true">0</span><span class="bench-unit"> MB</span></div>
-      <div class="bench-label">App Bundle Size</div>
-      <div class="bench-desc">Full-featured radio app with iCloud in under 5 MB.</div>
-      <div class="bench-pass">✓ Lightweight</div>
-    </div>
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">🚀</span>
-      <div class="bench-value blue">~1<span class="bench-unit">s</span></div>
-      <div class="bench-label">Cold Launch</div>
-      <div class="bench-desc">Near-instant startup. Optimized initialization pipeline.</div>
-      <div class="bench-pass">✓ Instant</div>
-    </div>
-    <div class="benchmark-card reveal">
-      <span class="bench-icon">🧵</span>
-      <div class="bench-value green">0<span class="bench-unit"> active</span></div>
-      <div class="bench-label">Idle Threads</div>
-      <div class="bench-desc">All threads sleeping when idle. No busy-wait loops.</div>
-      <div class="bench-pass">✓ Efficient</div>
-    </div>
-  </div>
-
-  <!-- Memory comparison -->
-  <div class="comparison-section reveal">
-    <div class="comparison-card">
-      <div class="comparison-title">💡 Memory Usage Comparison — Idle State</div>
-      <div class="comparison-row">
-        <span class="comp-label highlight">Macdio</span>
-        <div class="comp-bar-track"><div class="comp-bar macdio" data-width="17"><span class="comp-value">60 MB</span></div></div>
-      </div>
-      <div class="comparison-row">
-        <span class="comp-label">Apple Podcasts</span>
-        <div class="comp-bar-track"><div class="comp-bar other" data-width="24"><span class="comp-value">~85 MB</span></div></div>
-      </div>
-      <div class="comparison-row">
-        <span class="comp-label">Apple Music</span>
-        <div class="comp-bar-track"><div class="comp-bar other" data-width="51"><span class="comp-value">~180 MB</span></div></div>
-      </div>
-      <div class="comparison-row">
-        <span class="comp-label">Spotify</span>
-        <div class="comp-bar-track"><div class="comp-bar other" data-width="100"><span class="comp-value">~350 MB</span></div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- App Store readiness -->
-  <div class="reveal" style="text-align:center;margin-bottom:20px;">
-    <p class="section-label">App Store Readiness</p>
-  </div>
-  <div class="tests-banner">
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">App Sandbox</div><div class="test-result">Enabled &amp; Verified</div></div></div>
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Code Signing</div><div class="test-result">Valid Certificate</div></div></div>
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Private API</div><div class="test-result">0 Private Frameworks</div></div></div>
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Crash Detection</div><div class="test-result">No Crashes Found</div></div></div>
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">ARM64 Native</div><div class="test-result">Apple Silicon Optimized</div></div></div>
-    <div class="test-item reveal"><span class="test-check">✓</span><div class="test-info"><div class="test-name">Memory Stability</div><div class="test-result">60s Stable — No Trend</div></div></div>
-  </div>
-
-  <!-- Engineering optimizations -->
-  <div class="reveal" style="text-align:center;margin:40px 0 20px;">
-    <p class="section-label">Engineering Optimizations</p>
-    <h3 class="section-title" style="font-size:clamp(1.4rem,2.5vw,2rem);">Fine-tuned for <span class="gradient-text">Perfection</span></h3>
-  </div>
-  <div class="optim-grid">
-    <div class="optim-card reveal"><div class="optim-impact">−80%</div><div class="optim-text"><h4>Audio Timer Optimization</h4><p>Reduced from 20 Hz to 4 Hz with auto-stop. Eliminates timer overhead when idle.</p></div></div>
-    <div class="optim-card reveal"><div class="optim-impact">−N×100</div><div class="optim-text"><h4>Query Elimination</h4><p>Per-row @Query removed. Hundreds of redundant SwiftData queries eliminated per render.</p></div></div>
-    <div class="optim-card reveal"><div class="optim-impact">−33%</div><div class="optim-text"><h4>GPU Compositing</h4><p>GlassEffect layers reduced from 21 to 14. Smoother rendering, lower GPU load.</p></div></div>
-    <div class="optim-card reveal"><div class="optim-impact">0 ☠️</div><div class="optim-text"><h4>Crash-Proof iCloud</h4><p>ModelContainer with automatic fallback. Graceful recovery if CloudKit is unavailable.</p></div></div>
+<!-- ============ COMMUNITY ============ -->
+<section class="section community" id="community">
+  <p class="eyebrow reveal">Community</p>
+  <h2 class="headline reveal d1" style="margin-top:12px;font-size:clamp(1.8rem,5vw,3rem);">Shape what comes next.</h2>
+  <div class="community-links">
+    <a class="cl reveal" href="https://hub.macdio.app"><div class="cl-t">Feature requests</div><div class="cl-d">Tell us what to build next</div></a>
+    <a class="cl reveal d1" href="https://hub.macdio.app"><div class="cl-t">Bug reports</div><div class="cl-d">Help make the app better</div></a>
+    <a class="cl reveal d2" href="https://hub.macdio.app"><div class="cl-t">Station tips</div><div class="cl-d">Share great radio worldwide</div></a>
   </div>
 </section>
 
-<script>
-(function() {
-  var flags = {"AF":"🇦🇫","AL":"🇦🇱","DZ":"🇩🇿","AO":"🇦🇴","AG":"🇦🇬","AR":"🇦🇷","AM":"🇦🇲","AU":"🇦🇺","AT":"🇦🇹","AZ":"🇦🇿","BS":"🇧🇸","BH":"🇧🇭","BB":"🇧🇧","BY":"🇧🇾","BE":"🇧🇪","BZ":"🇧🇿","BJ":"🇧🇯","BM":"🇧🇲","BT":"🇧🇹","BO":"🇧🇴","BA":"🇧🇦","BW":"🇧🇼","BR":"🇧🇷","VG":"🇻🇬","BN":"🇧🇳","BG":"🇧🇬","BF":"🇧🇫","KH":"🇰🇭","CM":"🇨🇲","CA":"🇨🇦","CV":"🇨🇻","KY":"🇰🇾","TD":"🇹🇩","CL":"🇨🇱","CN":"🇨🇳","CO":"🇨🇴","CD":"🇨🇩","CG":"🇨🇬","CR":"🇨🇷","CI":"🇨🇮","HR":"🇭🇷","CY":"🇨🇾","CZ":"🇨🇿","DK":"🇩🇰","DM":"🇩🇲","DO":"🇩🇴","EC":"🇪🇨","EG":"🇪🇬","SV":"🇸🇻","EE":"🇪🇪","SZ":"🇸🇿","FJ":"🇫🇯","FI":"🇫🇮","FR":"🇫🇷","GA":"🇬🇦","GM":"🇬🇲","GE":"🇬🇪","DE":"🇩🇪","GH":"🇬🇭","GR":"🇬🇷","GD":"🇬🇩","GT":"🇬🇹","GW":"🇬🇼","GY":"🇬🇾","HN":"🇭🇳","HK":"🇭🇰","HU":"🇭🇺","IS":"🇮🇸","IN":"🇮🇳","ID":"🇮🇩","IQ":"🇮🇶","IE":"🇮🇪","IL":"🇮🇱","IT":"🇮🇹","JM":"🇯🇲","JP":"🇯🇵","JO":"🇯🇴","KZ":"🇰🇿","KE":"🇰🇪","KR":"🇰🇷","XK":"🇽🇰","KW":"🇰🇼","KG":"🇰🇬","LA":"🇱🇦","LV":"🇱🇻","LB":"🇱🇧","LR":"🇱🇷","LY":"🇱🇾","LT":"🇱🇹","LU":"🇱🇺","MO":"🇲🇴","MG":"🇲🇬","MW":"🇲🇼","MY":"🇲🇾","MV":"🇲🇻","ML":"🇲🇱","MT":"🇲🇹","MR":"🇲🇷","MU":"🇲🇺","MX":"🇲🇽","MD":"🇲🇩","MN":"🇲🇳","ME":"🇲🇪","MA":"🇲🇦","MZ":"🇲🇿","MM":"🇲🇲","NA":"🇳🇦","NP":"🇳🇵","NL":"🇳🇱","NZ":"🇳🇿","NI":"🇳🇮","NG":"🇳🇬","MK":"🇲🇰","NO":"🇳🇴","OM":"🇴🇲","PK":"🇵🇰","PA":"🇵🇦","PY":"🇵🇾","PE":"🇵🇪","PH":"🇵🇭","PL":"🇵🇱","PT":"🇵🇹","QA":"🇶🇦","RO":"🇷🇴","RU":"🇷🇺","SA":"🇸🇦","SN":"🇸🇳","RS":"🇷🇸","SG":"🇸🇬","SK":"🇸🇰","SI":"🇸🇮","ZA":"🇿🇦","ES":"🇪🇸","LK":"🇱🇰","SE":"🇸🇪","CH":"🇨🇭","TW":"🇹🇼","TJ":"🇹🇯","TZ":"🇹🇿","TH":"🇹🇭","TT":"🇹🇹","TN":"🇹🇳","TR":"🇹🇷","UG":"🇺🇬","UA":"🇺🇦","AE":"🇦🇪","GB":"🇬🇧","US":"🇺🇸","UY":"🇺🇾","UZ":"🇺🇿","VE":"🇻🇪","VN":"🇻🇳","YE":"🇾🇪","ZM":"🇿🇲","ZW":"🇿🇼"};
-  var pricing = {
-    "AF":{"s":"$","p":"4.99","c":"USD","n":"Afghanistan"},
-    "AL":{"s":"$","p":"6.99","c":"USD","n":"Albania"},
-    "DZ":{"s":"$","p":"4.99","c":"USD","n":"Algeria"},
-    "AO":{"s":"$","p":"4.99","c":"USD","n":"Angola"},
-    "AG":{"s":"$","p":"4.99","c":"USD","n":"Antigua and Barbuda"},
-    "AR":{"s":"$","p":"4.99","c":"USD","n":"Argentina"},
-    "AM":{"s":"$","p":"4.99","c":"USD","n":"Armenia"},
-    "AU":{"s":"A$","p":"14.99","c":"AUD","n":"Australia"},
-    "AT":{"s":"€","p":"7.99","c":"EUR","n":"Austria"},
-    "AZ":{"s":"$","p":"4.99","c":"USD","n":"Azerbaijan"},
-    "BS":{"s":"$","p":"4.99","c":"USD","n":"Bahamas"},
-    "BH":{"s":"$","p":"9.99","c":"USD","n":"Bahrain"},
-    "BB":{"s":"$","p":"4.99","c":"USD","n":"Barbados"},
-    "BY":{"s":"$","p":"6.99","c":"USD","n":"Belarus"},
-    "BE":{"s":"€","p":"7.99","c":"EUR","n":"Belgium"},
-    "BZ":{"s":"$","p":"4.99","c":"USD","n":"Belize"},
-    "BJ":{"s":"$","p":"4.99","c":"USD","n":"Benin"},
-    "BM":{"s":"$","p":"4.99","c":"USD","n":"Bermuda"},
-    "BT":{"s":"$","p":"4.99","c":"USD","n":"Bhutan"},
-    "BO":{"s":"$","p":"4.99","c":"USD","n":"Bolivia"},
-    "BA":{"s":"€","p":"6.99","c":"EUR","n":"Bosnia and Herzegovina"},
-    "BW":{"s":"$","p":"4.99","c":"USD","n":"Botswana"},
-    "BR":{"s":"R$","p":"29.90","c":"BRL","n":"Brazil"},
-    "VG":{"s":"$","p":"9.99","c":"USD","n":"British Virgin Islands"},
-    "BN":{"s":"$","p":"4.99","c":"USD","n":"Brunei"},
-    "BG":{"s":"€","p":"6.99","c":"EUR","n":"Bulgaria"},
-    "BF":{"s":"$","p":"4.99","c":"USD","n":"Burkina Faso"},
-    "KH":{"s":"$","p":"4.99","c":"USD","n":"Cambodia"},
-    "CM":{"s":"$","p":"4.99","c":"USD","n":"Cameroon"},
-    "CA":{"s":"C$","p":"12.99","c":"CAD","n":"Canada"},
-    "CV":{"s":"$","p":"4.99","c":"USD","n":"Cape Verde"},
-    "KY":{"s":"$","p":"9.99","c":"USD","n":"Cayman Islands"},
-    "TD":{"s":"$","p":"4.99","c":"USD","n":"Chad"},
-    "CL":{"s":"CLP","p":"4,990","c":"CLP","n":"Chile"},
-    "CN":{"s":"¥","p":"38.00","c":"CNY","n":"China"},
-    "CO":{"s":"COP","p":"24,900","c":"COP","n":"Colombia"},
-    "CD":{"s":"$","p":"4.99","c":"USD","n":"DR Congo"},
-    "CG":{"s":"$","p":"4.99","c":"USD","n":"Republic of the Congo"},
-    "CR":{"s":"$","p":"4.99","c":"USD","n":"Costa Rica"},
-    "CI":{"s":"$","p":"4.99","c":"USD","n":"Côte d'Ivoire"},
-    "HR":{"s":"€","p":"6.99","c":"EUR","n":"Croatia"},
-    "CY":{"s":"€","p":"6.99","c":"EUR","n":"Cyprus"},
-    "CZ":{"s":"Kč","p":"149","c":"CZK","n":"Czech Republic"},
-    "DK":{"s":"kr","p":"69","c":"DKK","n":"Denmark"},
-    "DM":{"s":"$","p":"4.99","c":"USD","n":"Dominica"},
-    "DO":{"s":"$","p":"4.99","c":"USD","n":"Dominican Republic"},
-    "EC":{"s":"$","p":"4.99","c":"USD","n":"Ecuador"},
-    "EG":{"s":"E£","p":"299.99","c":"EGP","n":"Egypt"},
-    "SV":{"s":"$","p":"4.99","c":"USD","n":"El Salvador"},
-    "EE":{"s":"€","p":"6.99","c":"EUR","n":"Estonia"},
-    "SZ":{"s":"$","p":"4.99","c":"USD","n":"Eswatini"},
-    "FJ":{"s":"$","p":"4.99","c":"USD","n":"Fiji"},
-    "FI":{"s":"€","p":"6.99","c":"EUR","n":"Finland"},
-    "FR":{"s":"€","p":"7.99","c":"EUR","n":"France"},
-    "GA":{"s":"$","p":"4.99","c":"USD","n":"Gabon"},
-    "GM":{"s":"$","p":"4.99","c":"USD","n":"Gambia"},
-    "GE":{"s":"$","p":"4.99","c":"USD","n":"Georgia"},
-    "DE":{"s":"€","p":"7.99","c":"EUR","n":"Germany"},
-    "GH":{"s":"$","p":"4.99","c":"USD","n":"Ghana"},
-    "GR":{"s":"€","p":"6.99","c":"EUR","n":"Greece"},
-    "GD":{"s":"$","p":"4.99","c":"USD","n":"Grenada"},
-    "GT":{"s":"$","p":"4.99","c":"USD","n":"Guatemala"},
-    "GW":{"s":"$","p":"4.99","c":"USD","n":"Guinea-Bissau"},
-    "GY":{"s":"$","p":"4.99","c":"USD","n":"Guyana"},
-    "HN":{"s":"$","p":"4.99","c":"USD","n":"Honduras"},
-    "HK":{"s":"HK$","p":"48","c":"HKD","n":"Hong Kong"},
-    "HU":{"s":"Ft","p":"2,490","c":"HUF","n":"Hungary"},
-    "IS":{"s":"$","p":"6.99","c":"USD","n":"Iceland"},
-    "IN":{"s":"₹","p":"499","c":"INR","n":"India"},
-    "ID":{"s":"Rp","p":"69,000","c":"IDR","n":"Indonesia"},
-    "IQ":{"s":"$","p":"4.99","c":"USD","n":"Iraq"},
-    "IE":{"s":"€","p":"6.99","c":"EUR","n":"Ireland"},
-    "IL":{"s":"₪","p":"34.90","c":"ILS","n":"Israel"},
-    "IT":{"s":"€","p":"7.99","c":"EUR","n":"Italy"},
-    "JM":{"s":"$","p":"4.99","c":"USD","n":"Jamaica"},
-    "JP":{"s":"¥","p":"1,200","c":"JPY","n":"Japan"},
-    "JO":{"s":"$","p":"4.99","c":"USD","n":"Jordan"},
-    "KZ":{"s":"₸","p":"2,990","c":"KZT","n":"Kazakhstan"},
-    "KE":{"s":"$","p":"4.99","c":"USD","n":"Kenya"},
-    "KR":{"s":"₩","p":"11,000","c":"KRW","n":"South Korea"},
-    "XK":{"s":"€","p":"6.99","c":"EUR","n":"Kosovo"},
-    "KW":{"s":"$","p":"9.99","c":"USD","n":"Kuwait"},
-    "KG":{"s":"$","p":"4.99","c":"USD","n":"Kyrgyzstan"},
-    "LA":{"s":"$","p":"4.99","c":"USD","n":"Laos"},
-    "LV":{"s":"€","p":"6.99","c":"EUR","n":"Latvia"},
-    "LB":{"s":"$","p":"3.99","c":"USD","n":"Lebanon"},
-    "LR":{"s":"$","p":"4.99","c":"USD","n":"Liberia"},
-    "LY":{"s":"$","p":"3.99","c":"USD","n":"Libya"},
-    "LT":{"s":"€","p":"6.99","c":"EUR","n":"Lithuania"},
-    "LU":{"s":"€","p":"7.99","c":"EUR","n":"Luxembourg"},
-    "MO":{"s":"$","p":"4.99","c":"USD","n":"Macau"},
-    "MG":{"s":"$","p":"4.99","c":"USD","n":"Madagascar"},
-    "MW":{"s":"$","p":"4.99","c":"USD","n":"Malawi"},
-    "MY":{"s":"RM","p":"29.90","c":"MYR","n":"Malaysia"},
-    "MV":{"s":"$","p":"4.99","c":"USD","n":"Maldives"},
-    "ML":{"s":"$","p":"4.99","c":"USD","n":"Mali"},
-    "MT":{"s":"€","p":"7.99","c":"EUR","n":"Malta"},
-    "MR":{"s":"$","p":"4.99","c":"USD","n":"Mauritania"},
-    "MU":{"s":"$","p":"4.99","c":"USD","n":"Mauritius"},
-    "MX":{"s":"MX$","p":"99","c":"MXN","n":"Mexico"},
-    "MD":{"s":"$","p":"6.99","c":"USD","n":"Moldova"},
-    "MN":{"s":"$","p":"4.99","c":"USD","n":"Mongolia"},
-    "ME":{"s":"€","p":"6.99","c":"EUR","n":"Montenegro"},
-    "MA":{"s":"$","p":"4.99","c":"USD","n":"Morocco"},
-    "MZ":{"s":"$","p":"4.99","c":"USD","n":"Mozambique"},
-    "MM":{"s":"$","p":"4.99","c":"USD","n":"Myanmar"},
-    "NA":{"s":"$","p":"4.99","c":"USD","n":"Namibia"},
-    "NP":{"s":"$","p":"4.99","c":"USD","n":"Nepal"},
-    "NL":{"s":"€","p":"7.99","c":"EUR","n":"Netherlands"},
-    "NZ":{"s":"NZ$","p":"19.99","c":"NZD","n":"New Zealand"},
-    "NI":{"s":"$","p":"4.99","c":"USD","n":"Nicaragua"},
-    "NG":{"s":"₦","p":"4,900","c":"NGN","n":"Nigeria"},
-    "MK":{"s":"$","p":"6.99","c":"USD","n":"North Macedonia"},
-    "NO":{"s":"kr","p":"89","c":"NOK","n":"Norway"},
-    "OM":{"s":"$","p":"9.99","c":"USD","n":"Oman"},
-    "PK":{"s":"₨","p":"1,500","c":"PKR","n":"Pakistan"},
-    "PA":{"s":"$","p":"4.99","c":"USD","n":"Panama"},
-    "PY":{"s":"$","p":"4.99","c":"USD","n":"Paraguay"},
-    "PE":{"s":"S/","p":"24.90","c":"PEN","n":"Peru"},
-    "PH":{"s":"₱","p":"249","c":"PHP","n":"Philippines"},
-    "PL":{"s":"zł","p":"34.99","c":"PLN","n":"Poland"},
-    "PT":{"s":"€","p":"7.99","c":"EUR","n":"Portugal"},
-    "QA":{"s":"QR","p":"39.99","c":"QAR","n":"Qatar"},
-    "RO":{"s":"lei","p":"29.99","c":"RON","n":"Romania"},
-    "RU":{"s":"₽","p":"599","c":"RUB","n":"Russia"},
-    "SA":{"s":"SAR","p":"39.99","c":"SAR","n":"Saudi Arabia"},
-    "SN":{"s":"$","p":"4.99","c":"USD","n":"Senegal"},
-    "RS":{"s":"€","p":"6.99","c":"EUR","n":"Serbia"},
-    "SG":{"s":"S$","p":"5.98","c":"SGD","n":"Singapore"},
-    "SK":{"s":"€","p":"6.99","c":"EUR","n":"Slovakia"},
-    "SI":{"s":"€","p":"6.99","c":"EUR","n":"Slovenia"},
-    "ZA":{"s":"R","p":"149.99","c":"ZAR","n":"South Africa"},
-    "ES":{"s":"€","p":"7.99","c":"EUR","n":"Spain"},
-    "LK":{"s":"$","p":"4.99","c":"USD","n":"Sri Lanka"},
-    "SE":{"s":"kr","p":"89","c":"SEK","n":"Sweden"},
-    "CH":{"s":"CHF","p":"7","c":"CHF","n":"Switzerland"},
-    "TW":{"s":"NT$","p":"250","c":"TWD","n":"Taiwan"},
-    "TJ":{"s":"$","p":"4.99","c":"USD","n":"Tajikistan"},
-    "TZ":{"s":"TZS","p":"14,900","c":"TZS","n":"Tanzania"},
-    "TH":{"s":"฿","p":"149","c":"THB","n":"Thailand"},
-    "TT":{"s":"$","p":"4.99","c":"USD","n":"Trinidad and Tobago"},
-    "TN":{"s":"$","p":"4.99","c":"USD","n":"Tunisia"},
-    "TR":{"s":"₺","p":"299.99","c":"TRY","n":"Türkiye"},
-    "UG":{"s":"$","p":"4.99","c":"USD","n":"Uganda"},
-    "UA":{"s":"$","p":"6.99","c":"USD","n":"Ukraine"},
-    "AE":{"s":"AED","p":"39.99","c":"AED","n":"United Arab Emirates"},
-    "GB":{"s":"£","p":"9.99","c":"GBP","n":"United Kingdom"},
-    "US":{"s":"$","p":"9.99","c":"USD","n":"United States"},
-    "UY":{"s":"$","p":"4.99","c":"USD","n":"Uruguay"},
-    "UZ":{"s":"$","p":"4.99","c":"USD","n":"Uzbekistan"},
-    "VE":{"s":"$","p":"4.99","c":"USD","n":"Venezuela"},
-    "VN":{"s":"₫","p":"149,000","c":"VND","n":"Vietnam"},
-    "YE":{"s":"$","p":"4.99","c":"USD","n":"Yemen"},
-    "ZM":{"s":"$","p":"4.99","c":"USD","n":"Zambia"},
-    "ZW":{"s":"$","p":"4.99","c":"USD","n":"Zimbabwe"},
-  };
-
-  function setPrice(code) {
-    var d = pricing[code] || pricing["US"];
-    var flag = flags[code] || '🌍';
-    var block = document.getElementById('heroPriceBlock');
-    var flagEl = document.getElementById('heroPriceFlag');
-    var amountEl = document.getElementById('heroPriceAmount');
-    if (!block || !amountEl) return;
-    flagEl.textContent = flag;
-    amountEl.textContent = d.s + d.p;
-    block.classList.add('visible');
-  }
-
-  // Try geolocation via ipapi.co (free tier, no key needed)
-  fetch('https://ipapi.co/json/')
-    .then(function(r) { return r.json(); })
-    .then(function(data) {
-      var code = data.country_code;
-      if (code && pricing[code]) {
-        setPrice(code);
-      } else {
-        setPrice('US');
-      }
-    })
-    .catch(function() { setPrice('US'); });
-})();
-</script>
-
-<!-- ============================================================
-     CTA
-     ============================================================ -->
-<section class="cta reveal">
-  <div class="cta-inner">
-    <h2>Ready to tune in.</h2>
-    <p>Native. Private. No subscriptions.<br>On every Apple device you own.</p>
-    <a href="https://apps.apple.com/app/macdio/id6761737888" class="btn-appstore-svg" aria-label="Download Macdio on the App Store" target="_blank" rel="noopener">
-      <img src="download_button_light.svg" alt="Download on the App Store" style="height:54px;width:auto;display:block;margin:0 auto;" width="162" height="54" loading="lazy">
+<!-- ============ FINAL CTA ============ -->
+<section class="section final" id="get">
+  <h2 class="reveal">Ready to tune in.</h2>
+  <p class="reveal d1">Native. Private. No subscriptions. On every Apple device you own.</p>
+  <div class="reveal d2">
+    <a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store">
+      <img src="download_button.svg" alt="Download on the App Store">
     </a>
   </div>
 </section>
 
+<div id="footer-slot"></div>
+
 </main>
-
-<!-- Footer injected by footer.js -->
-<div id="footer-placeholder"></div>
-
-<!-- Shared JS -->
-<script src="assets/js/nav.js" defer></script>
-<script src="assets/js/footer.js" defer></script>
-
-<script>
-// Dynamic Script Loader for Three.js Background (Prevents Render-Blocking & loads asynchronously)
-function loadThreeJs() {
-  var script3 = document.createElement('script');
-  script3.src = 'assets/js/three.min.js';
-  
-  // CDN Fallback on loading failure (resolves local script blocks/MIME-type errors on Windows/older browsers)
-  script3.onerror = function() {
-    console.warn("Local three.min.js failed to load. Attempting CDN fallback...");
-    var cdnScript = document.createElement('script');
-    cdnScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js';
-    cdnScript.onload = function() {
-      var scriptBg = document.createElement('script');
-      scriptBg.src = 'assets/js/three-bg.js';
-      document.body.appendChild(scriptBg);
-    };
-    cdnScript.onerror = function() {
-      console.error("Both local and CDN Three.js failed to load. Activating premium CSS glow fallback.");
-      document.body.classList.add('no-webgl');
-    };
-    document.body.appendChild(cdnScript);
-  };
-
-  script3.onload = function() {
-    var scriptBg = document.createElement('script');
-    scriptBg.src = 'assets/js/three-bg.js';
-    document.body.appendChild(scriptBg);
-  };
-
-  document.body.appendChild(script3);
-}
-
-// Eliminate race condition if the page has already finished loading (common in fast Windows cache rendering)
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-  loadThreeJs();
-} else {
-  window.addEventListener('load', loadThreeJs);
-}
-</script>
-
-<script>
-/* ============================================================
-   Platform switcher (desktop sidebar + mobile tabs)
-   ============================================================ */
-function switchPlatform(platform) {
-  // Update desktop list items
-  document.querySelectorAll('.platform-list-item').forEach(function(btn) {
-    var active = btn.dataset.platform === platform;
-    btn.classList.toggle('active', active);
-    btn.setAttribute('aria-selected', active);
-  });
-  // Update mobile tab buttons
-  document.querySelectorAll('.platform-tab-m').forEach(function(btn) {
-    btn.classList.toggle('active', btn.dataset.platform === platform);
-  });
-  // Toggle galleries
-  document.querySelectorAll('.platform-gallery').forEach(function(g) {
-    g.classList.remove('active');
-  });
-  var gallery = document.getElementById('gallery-' + platform);
-  if (gallery) {
-    gallery.classList.add('active');
-    gallery.querySelectorAll('.reveal:not(.visible)').forEach(function(el) {
-      el.classList.add('visible');
-    });
-  }
-  // Three.js color sync
-  if (window.threeSetPlatformColor) window.threeSetPlatformColor(platform);
-}
-
-document.querySelectorAll('.platform-list-item, .platform-tab-m').forEach(function(btn) {
-  btn.addEventListener('click', function() { switchPlatform(btn.dataset.platform); });
-});
-
-/* ============================================================
-   Lightbox
-   ============================================================ */
-var lbItems = [], lbIndex = 0;
-var touchStartX = 0;
-
-function openLightbox(item) {
-  var activeGallery = document.querySelector('.platform-gallery.active');
-  if (activeGallery) {
-    lbItems = Array.from(activeGallery.querySelectorAll('.screenshot-item'));
-    lbIndex = lbItems.indexOf(item);
-    if (lbIndex < 0) lbIndex = 0;
-  } else {
-    lbItems = [item]; lbIndex = 0;
-  }
-  showLightboxItem(lbIndex);
-  document.getElementById('lightbox').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function showLightboxItem(idx) {
-  if (idx < 0 || idx >= lbItems.length) return;
-  lbIndex = idx;
-  var item   = lbItems[idx];
-  var img    = item.querySelector('img');
-  var label  = item.querySelector('.screenshot-label');
-  var lbImg  = document.getElementById('lightboxImg');
-  lbImg.classList.add('lb-fade');
-  setTimeout(function() {
-    lbImg.src = img.src; lbImg.alt = img.alt;
-    document.getElementById('lightboxCaption').textContent = label ? label.textContent : '';
-    document.getElementById('lightboxCounter').textContent = (idx + 1) + ' / ' + lbItems.length;
-    lbImg.classList.remove('lb-fade');
-  }, 120);
-}
-
-function navigateLightbox(dir) {
-  var n = lbIndex + dir;
-  if (n >= 0 && n < lbItems.length) showLightboxItem(n);
-}
-
-function handleLightboxClick(e) {
-  if (e.target === document.getElementById('lightbox')) closeLightbox();
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('active');
-  document.body.style.overflow = '';
-}
-
-document.getElementById('lightbox').addEventListener('touchstart', function(e) {
-  touchStartX = e.changedTouches[0].screenX;
-}, { passive: true });
-document.getElementById('lightbox').addEventListener('touchend', function(e) {
-  var diff = touchStartX - e.changedTouches[0].screenX;
-  if (Math.abs(diff) > 50) { if (diff > 0) navigateLightbox(1); else navigateLightbox(-1); }
-}, { passive: true });
-
-document.addEventListener('keydown', function(e) {
-  var lb = document.getElementById('lightbox');
-  if (!lb.classList.contains('active')) return;
-  if (e.key === 'Escape') closeLightbox();
-  else if (e.key === 'ArrowLeft')  navigateLightbox(-1);
-  else if (e.key === 'ArrowRight') navigateLightbox(1);
-});
-
-/* ============================================================
-   Bench toggle
-   ============================================================ */
-function toggleBenchExtra() {
-  var el  = document.getElementById('benchExtra');
-  var btn = document.getElementById('benchToggleBtn');
-  var open = el.classList.toggle('open');
-  btn.textContent = open ? 'Hide benchmarks ▴' : 'Show all benchmarks ▾';
-}
-
-/* ============================================================
-   Scroll reveal
-   ============================================================ */
-var revealObs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
-
-/* ============================================================
-   Counter animation
-   ============================================================ */
-var counterObs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (!e.isIntersecting) return;
-    var target = parseInt(e.target.dataset.count);
-    var current = 0, inc = target / 50;
-    var timer = setInterval(function() {
-      current += inc;
-      if (current >= target) {
-        e.target.textContent = target.toLocaleString() + '+'; clearInterval(timer);
-      } else {
-        e.target.textContent = Math.floor(current).toLocaleString() + '+';
-      }
-    }, 20);
-    counterObs.unobserve(e.target);
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('[data-count]').forEach(function(c) { counterObs.observe(c); });
-
-/* ============================================================
-   Benchmark counter animation
-   ============================================================ */
-var benchObs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (!e.isIntersecting) return;
-    var target    = parseFloat(e.target.dataset.benchCount);
-    var isDecimal = e.target.dataset.benchDecimal === 'true';
-    var start     = performance.now();
-    var dur       = 1200;
-    (function animate(now) {
-      var p = Math.min((now - start) / dur, 1);
-      var eased = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-      e.target.textContent = isDecimal ? (target * eased).toFixed(1) : Math.round(target * eased);
-      if (p < 1) requestAnimationFrame(animate);
-      else e.target.textContent = isDecimal ? target.toFixed(1) : target;
-    })(start);
-    benchObs.unobserve(e.target);
-  });
-}, { threshold: 0.5 });
-document.querySelectorAll('[data-bench-count]').forEach(function(el) { benchObs.observe(el); });
-
-/* ============================================================
-   Bar chart animation
-   ============================================================ */
-var barObs = new IntersectionObserver(function(entries) {
-  entries.forEach(function(e) {
-    if (!e.isIntersecting) return;
-    e.target.querySelectorAll('.comp-bar[data-width]').forEach(function(bar, i) {
-      setTimeout(function() { bar.style.width = bar.dataset.width + '%'; }, i * 200);
-    });
-    barObs.unobserve(e.target);
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('.comparison-card').forEach(function(el) { barObs.observe(el); });
-</script>
-
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
 </body>
 </html>

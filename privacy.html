@@ -1,419 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QR2MZ9NF2N');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Macdio | Internet Radio for All Apple Devices</title>
-    <meta name="description" content="Macdio Privacy Policy — We do not collect, store, or share any personal data. View platform-specific policies for iOS, macOS, tvOS, and watchOS.">
-    <meta name="keywords" content="macdio privacy policy, macdio ios privacy, macdio mac privacy, radio app privacy, internet radio privacy">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#050507">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
-    <link rel="apple-touch-icon" href="assets/app-icon.png">
-    <link rel="canonical" href="https://macdio.app/privacy.html">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050507;
-            --surface: rgba(14, 14, 18, 0.8);
-            --border: rgba(255,255,255,0.06);
-            --border-hover: rgba(255,255,255,0.12);
-            --text: #e8e8ed;
-            --text-secondary: #7a7a8c;
-            --accent: #6366f1;
-        }
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
-        }
-
-        .bg-glow {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            background:
-                radial-gradient(ellipse 50% 40% at 20% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 100%),
-                radial-gradient(ellipse 40% 50% at 80% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 100%);
-        }
-
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 0 48px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            background: rgba(5, 5, 7, 0.8);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
-        .nav-brand span { font-size: 1.1rem; font-weight: 700; }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: #fff; }
-        .nav-links a.active { color: #fff; }
-
-        .nav-cta {
-            background: #fff !important;
-            color: #000 !important;
-            padding: 8px 20px !important;
-            border-radius: 8px !important;
-            font-weight: 600 !important;
-            font-size: 0.85rem !important;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        .page-content {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 140px 24px 80px;
-        }
-
-        .page-header { margin-bottom: 40px; }
-
-        .section-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .page-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 8px;
-            line-height: 1.1;
-        }
-
-        .page-meta {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        /* Policy Content */
-        .policy-card {
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            padding: 48px;
-        }
-
-        .policy-section {
-            margin-bottom: 36px;
-        }
-
-        .policy-section:last-child {
-            margin-bottom: 0;
-        }
-
-        .policy-section h2 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .policy-section p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
-            margin-bottom: 12px;
-        }
-
-        .policy-section p:last-child { margin-bottom: 0; }
-
-        .policy-section ul {
-            list-style: none;
-            margin: 16px 0;
-        }
-
-        .policy-section li {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.75;
-            padding: 6px 0;
-            padding-left: 24px;
-            position: relative;
-        }
-
-        .policy-section li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-weight: 600;
-        }
-
-        .policy-section strong {
-            color: #d4d4d8;
-        }
-
-        .policy-section a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .policy-section a:hover { text-decoration: underline; }
-
-        .divider {
-            height: 1px;
-            background: var(--border);
-            margin: 32px 0;
-        }
-
-        footer {
-            position: relative;
-            z-index: 1;
-            padding: 40px 24px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        footer a:hover { color: #fff; }
-        footer p { color: #444; font-size: 0.8rem; }
-
-        .fade-in {
-            animation: fadeIn 0.6s ease both;
-        }
-
-        .fade-in-delay { animation-delay: 0.15s; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            nav { padding: 0 20px; }
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .page-content { padding: 120px 20px 60px; }
-            .policy-card { padding: 28px; }
-            .platform-cards { grid-template-columns: 1fr; }
-        }
-
-        .platform-cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 14px;
-            margin-bottom: 48px;
-        }
-
-        .platform-link {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 20px 24px;
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            text-decoration: none;
-            color: var(--text);
-            transition: all 0.3s ease;
-        }
-
-        .platform-link:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-        }
-
-        .platform-link .pl-icon { font-size: 1.6rem; }
-        .platform-link .pl-name { font-weight: 700; font-size: 0.95rem; }
-        .platform-link .pl-arrow { margin-left: auto; color: var(--text-secondary); font-size: 1.2rem; }
-    </style>
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy — Macdio | Internet Radio for All Apple Devices</title>
+<meta name="description" content="Macdio Privacy Policy. We do not collect, store, or share any personal data. View platform-specific policies for iOS, macOS, tvOS, and watchOS.">
+<meta name="keywords" content="macdio privacy policy, macdio ios privacy, macdio mac privacy, radio app privacy, internet radio privacy">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/privacy.html"><meta property="og:title" content="Privacy Policy — Macdio">
+<meta property="og:description" content="We do not collect, store, or share any personal data. No analytics, no tracking, no ads.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png"><link rel="apple-touch-icon" href="assets/app-icon.png"><link rel="stylesheet" href="redesign.css"></head>
 <body>
 
-<div class="bg-glow"></div>
-<div id="nav-placeholder"></div>
+<div id="nav-slot"></div>
 
-<main class="page-content">
-    <div class="page-header fade-in">
-        <p class="section-label">Legal</p>
-        <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-meta">Last updated: May 1, 2026</p>
-    </div>
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">Legal</p>
+  <h1 class="reveal d1">Your data <span class="grad">stays yours.</span></h1>
+  <p class="reveal d1">Macdio does not collect, store, or share any personal data. No analytics, no tracking, no ads. Last updated May 1, 2026.</p>
+</header>
 
-    <!-- Platform-Specific Privacy Pages -->
-    <div class="platform-cards fade-in">
-        <a href="privacy-ios.html" class="platform-link">
-            <span class="pl-icon">📱</span>
-            <span class="pl-name">iOS · iPhone · iPad · CarPlay</span>
-            <span class="pl-arrow">→</span>
-        </a>
-        <a href="privacy-macos.html" class="platform-link">
-            <span class="pl-icon">🖥</span>
-            <span class="pl-name">macOS</span>
-            <span class="pl-arrow">→</span>
-        </a>
-        <a href="privacy-tvos.html" class="platform-link">
-            <span class="pl-icon">📺</span>
-            <span class="pl-name">tvOS · Apple TV</span>
-            <span class="pl-arrow">→</span>
-        </a>
-        <a href="privacy-watchos.html" class="platform-link">
-            <span class="pl-icon">⌚</span>
-            <span class="pl-name">watchOS · Apple Watch</span>
-            <span class="pl-arrow">→</span>
-        </a>
-    </div>
+<div class="content">
+  <div class="card-grid cols-2 reveal">
+    <a class="info-card" href="privacy-ios.html"><h3>iOS · iPhone · iPad · CarPlay <span class="ic-arrow">→</span></h3><p>How Macdio handles data on iPhone, iPad, and CarPlay.</p></a>
+    <a class="info-card" href="privacy-macos.html"><h3>macOS <span class="ic-arrow">→</span></h3><p>App Sandbox, entitlements, and local recordings on your Mac.</p></a>
+    <a class="info-card" href="privacy-tvos.html"><h3>tvOS · Apple TV <span class="ic-arrow">→</span></h3><p>Streaming-only privacy details for the living room.</p></a>
+    <a class="info-card" href="privacy-watchos.html"><h3>watchOS · Apple Watch <span class="ic-arrow">→</span></h3><p>Complications and on-watch data handling.</p></a>
+  </div>
 
-    <div class="policy-card fade-in fade-in-delay">
+  <h2 class="sec reveal">General overview</h2>
+  <p class="reveal">Macdio ("the App") is designed with your privacy in mind. We do not collect, store, or share any personal data. For platform-specific details, please use the links above. Below is our general privacy policy that applies across all platforms.</p>
 
-        <div class="policy-section">
-            <h2>📋 General Overview</h2>
-            <p>Macdio ("the App") is designed with your privacy in mind. We do not collect, store, or share any personal data. For platform-specific details, please use the links above. Below is our general privacy policy that applies across all platforms.</p>
-        </div>
+  <h2 class="sec reveal">Data collection</h2>
+  <p class="reveal">Macdio does <strong>not</strong> collect any personal information. All your data, including favorite stations, saved tracks, recordings, and preferences, stays on your device and syncs only through your personal iCloud account.</p>
+  <p class="reveal">We do not use any analytics, advertising, or tracking SDKs. We have no way to identify you or access your usage data.</p>
 
-        <div class="divider"></div>
+  <h2 class="sec reveal">Third-party services</h2>
+  <p class="reveal">Macdio connects to the following external services solely to provide its core functionality:</p>
+  <ul class="reveal">
+    <li><strong>Radio Browser API</strong> to browse and search radio stations from around the world. No personal data is sent with these requests.</li>
+    <li><strong>LRCLIB</strong> to fetch synchronized song lyrics for currently playing tracks. No personal data is sent.</li>
+    <li><strong>iTunes Search API</strong> to fetch album artwork and track metadata. No personal data is sent.</li>
+  </ul>
+  <p class="reveal">These services receive only the minimum information needed to fulfill their purpose, such as a song title for lyric lookup. No user identifiers, device IDs, or personal data are transmitted.</p>
 
-        <div class="policy-section">
-            <h2>🔍 Data Collection</h2>
-            <p>Macdio does <strong>not</strong> collect any personal information. All your data — including favorite stations, saved tracks, recordings, and preferences — stays on your device and syncs only through your personal iCloud account.</p>
-            <p>We do not use any analytics, advertising, or tracking SDKs. We have no way to identify you or access your usage data.</p>
-        </div>
+  <h2 class="sec reveal">iCloud sync</h2>
+  <p class="reveal">If you use iCloud sync, your favorites, saved stations, and settings are stored in your private iCloud container. This data is managed entirely by Apple's iCloud infrastructure and is not accessible to us in any way.</p>
+  <p class="reveal">For Apple's privacy practices regarding iCloud, please refer to <a class="inline" href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
 
-        <div class="divider"></div>
+  <h2 class="sec reveal">Audio &amp; recordings</h2>
+  <p class="reveal">Any audio recordings you make through Macdio are stored locally on your device. We do not upload, transmit, or access your recordings in any way.</p>
 
-        <div class="policy-section">
-            <h2>🌐 Third-Party Services</h2>
-            <p>Macdio connects to the following external services solely to provide its core functionality:</p>
-            <ul>
-                <li><strong>Radio Browser API</strong> — to browse and search radio stations from around the world. No personal data is sent with these requests.</li>
-                <li><strong>LRCLIB</strong> — to fetch synchronized song lyrics for currently playing tracks. No personal data is sent.</li>
-                <li><strong>iTunes Search API</strong> — to fetch album artwork and track metadata. No personal data is sent.</li>
-            </ul>
-            <p>These services receive only the minimum information needed to fulfill their purpose (e.g., a song title for lyric lookup). No user identifiers, device IDs, or personal data are transmitted.</p>
-        </div>
+  <h2 class="sec reveal">Children's privacy</h2>
+  <p class="reveal">Macdio does not knowingly collect data from anyone, including children under 13. Since we collect no data at all, the App is safe for users of all ages.</p>
 
-        <div class="divider"></div>
+  <h2 class="sec reveal">Changes to this policy</h2>
+  <p class="reveal">We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this page periodically.</p>
 
-        <div class="policy-section">
-            <h2>☁️ iCloud Sync</h2>
-            <p>If you use iCloud sync, your favorites, saved stations, and settings are stored in your private iCloud container. This data is managed entirely by Apple's iCloud infrastructure and is not accessible to us in any way.</p>
-            <p>For Apple's privacy practices regarding iCloud, please refer to <a href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="policy-section">
-            <h2>🎙️ Audio & Recordings</h2>
-            <p>Any audio recordings you make through Macdio are stored locally on your device. We do not upload, transmit, or access your recordings in any way.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="policy-section">
-            <h2>👶 Children's Privacy</h2>
-            <p>Macdio does not knowingly collect data from anyone, including children under 13. Since we collect no data at all, the App is safe for users of all ages.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="policy-section">
-            <h2>📝 Changes to This Policy</h2>
-            <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this page periodically.</p>
-        </div>
-
-        <div class="divider"></div>
-
-        <div class="policy-section">
-            <h2>📬 Contact</h2>
-            <p>If you have any questions or concerns about this privacy policy, please contact us at:</p>
-            <p><a href="mailto:support@macdio.app">support@macdio.app</a></p>
-        </div>
-
-    </div>
+  <h2 class="sec reveal">Contact</h2>
+  <p class="reveal">If you have any questions or concerns about this privacy policy, contact us at <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>.</p>
+</div>
 </main>
 
-<div id="footer-placeholder"></div>
+<div id="footer-slot"></div>
 
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/footer.js"></script>
-
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
 </body>
 </html>

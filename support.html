@@ -1,416 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-QR2MZ9NF2N');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support — Macdio | Internet Radio for All Apple Devices</title>
-    <meta name="description" content="Get help with Macdio, the best internet radio app for iPhone, iPad, Mac, Apple TV, and Apple Watch. Contact support, read FAQs, and find answers.">
-    <meta name="keywords" content="macdio support, macdio help, radio app FAQ, macdio iOS, macdio mac, macdio contact">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#050507">
-    <link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
-    <link rel="apple-touch-icon" href="assets/app-icon.png">
-    <link rel="canonical" href="https://macdio.app/support.html">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Support — Macdio">
-    <meta property="og:description" content="Get help with Macdio. Contact support, read FAQs, and find answers for iPhone, iPad, Mac, Apple TV and Apple Watch.">
-    <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="628">
-    <meta property="og:url" content="https://macdio.app/support.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Macdio">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Support — Macdio">
-    <meta name="twitter:description" content="Get help with Macdio. Contact support, read FAQs, and find answers for iPhone, iPad, Mac, Apple TV and Apple Watch.">
-    <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-        :root {
-            --bg: #050507;
-            --surface: rgba(14, 14, 18, 0.8);
-            --surface-solid: #0e0e12;
-            --border: rgba(255,255,255,0.06);
-            --border-hover: rgba(255,255,255,0.12);
-            --text: #e8e8ed;
-            --text-secondary: #7a7a8c;
-            --accent: #6366f1;
-            --accent-2: #a855f7;
-        }
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            min-height: 100vh;
-        }
-
-        /* Ambient gradient background */
-        .bg-glow {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 0;
-            background:
-                radial-gradient(ellipse 50% 40% at 20% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 100%),
-                radial-gradient(ellipse 40% 50% at 80% 80%, rgba(168, 85, 247, 0.04) 0%, transparent 100%);
-        }
-
-        /* Navigation (shared) */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 100;
-            padding: 0 48px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            backdrop-filter: blur(24px) saturate(180%);
-            -webkit-backdrop-filter: blur(24px) saturate(180%);
-            background: rgba(5, 5, 7, 0.8);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .nav-brand {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: #fff;
-        }
-
-        .nav-brand img { width: 32px; height: 32px; border-radius: 8px; }
-        .nav-brand span { font-size: 1.1rem; font-weight: 700; }
-
-        .nav-links {
-            display: flex;
-            gap: 28px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover { color: #fff; }
-        .nav-links a.active { color: #fff; }
-
-        .nav-cta {
-            background: #fff !important;
-            color: #000 !important;
-            padding: 8px 20px !important;
-            border-radius: 8px !important;
-            font-weight: 600 !important;
-            font-size: 0.85rem !important;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Page */
-        .page-content {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 140px 24px 80px;
-        }
-
-        .page-header {
-            margin-bottom: 56px;
-        }
-
-        .section-label {
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            margin-bottom: 12px;
-        }
-
-        .page-title {
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            margin-bottom: 12px;
-            line-height: 1.1;
-        }
-
-        .page-desc {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Support Cards */
-        .support-cards {
-            display: grid;
-            gap: 14px;
-            margin-bottom: 64px;
-        }
-
-        .support-card {
-            background: var(--surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 28px 32px;
-            transition: all 0.3s ease;
-        }
-
-        .support-card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-2px);
-        }
-
-        .support-card h3 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .support-card p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        .support-card a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .support-card a:hover { text-decoration: underline; }
-
-        /* FAQ */
-        .faq-section {
-            margin-bottom: 64px;
-        }
-
-        .faq-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            margin-bottom: 28px;
-        }
-
-        .faq-item {
-            border-bottom: 1px solid var(--border);
-            padding: 20px 0;
-        }
-
-        .faq-item:first-child {
-            border-top: 1px solid var(--border);
-        }
-
-        .faq-q {
-            font-size: 0.98rem;
-            font-weight: 600;
-            color: #d4d4d8;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 16px;
-            user-select: none;
-        }
-
-        .faq-q::after {
-            content: '+';
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: var(--text-secondary);
-            transition: transform 0.3s;
-            flex-shrink: 0;
-        }
-
-        .faq-item.open .faq-q::after {
-            transform: rotate(45deg);
-        }
-
-        .faq-a {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s;
-        }
-
-        .faq-item.open .faq-a {
-            max-height: 200px;
-            padding-top: 12px;
-        }
-
-        .faq-a p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Footer */
-        footer {
-            position: relative;
-            z-index: 1;
-            padding: 40px 24px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 12px;
-        }
-
-        footer a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        footer a:hover { color: #fff; }
-        footer p { color: #444; font-size: 0.8rem; }
-
-        /* Animations */
-        .fade-in {
-            animation: fadeIn 0.6s ease both;
-        }
-
-        .fade-in-delay-1 { animation-delay: 0.1s; }
-        .fade-in-delay-2 { animation-delay: 0.2s; }
-        .fade-in-delay-3 { animation-delay: 0.3s; }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            nav { padding: 0 20px; }
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .page-content { padding: 120px 20px 60px; }
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support — Macdio | Internet Radio for All Apple Devices</title>
+<meta name="description" content="Get help with Macdio. Contact support, send design feedback, and read answers to common questions about recording, iCloud sync, custom stations, privacy, and system requirements.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/support.html">
+<meta property="og:title" content="Support — Macdio">
+<meta property="og:description" content="Get help with Macdio. Contact support and read answers to common questions.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/support.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/app-icon.png">
+<link rel="apple-touch-icon" href="assets/app-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How do I add my own radio station?", "acceptedAnswer": { "@type": "Answer", "text": "Open the app, tap the plus button, paste any stream URL such as an .m3u, .pls, or direct stream, give it a name, and you are live in seconds." } },
+    { "@type": "Question", "name": "How do I record a live stream?", "acceptedAnswer": { "@type": "Answer", "text": "While listening, tap the record button in the player. Macdio saves the audio in high quality and you find it in the Recordings tab." } },
+    { "@type": "Question", "name": "Do my favorites sync across devices?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio uses your iCloud account to keep favorite stations, saved tracks, and settings in sync across iPhone, iPad, Mac, Apple TV, and Apple Watch, automatically." } },
+    { "@type": "Question", "name": "What are the system requirements?", "acceptedAnswer": { "@type": "Answer", "text": "Macdio requires iOS or iPadOS 18, macOS Tahoe (macOS 26), tvOS 18, or watchOS 11 and later. It is built with 100% native SwiftUI." } },
+    { "@type": "Question", "name": "Is my data shared with anyone?", "acceptedAnswer": { "@type": "Answer", "text": "No. Macdio does not collect, store, or share any personal information. No analytics, no tracking, no ads." } }
+  ]
+}
+</script>
+<link rel="stylesheet" href="redesign.css">
 </head>
 <body>
 
-<div class="bg-glow"></div>
-<div id="nav-placeholder"></div>
+<div id="nav-slot"></div>
 
-<main class="page-content">
-    <div class="page-header fade-in">
-        <p class="section-label">Support</p>
-        <h1 class="page-title">We're here to help.</h1>
-        <p class="page-desc">Got a question, found a bug, or have a feature request? We'd love to hear from you.</p>
-    </div>
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">Support</p>
+  <h1 class="reveal d1">We are here <span class="grad">to help.</span></h1>
+  <p class="reveal d1">Got a question, found a bug, or have an idea? We would love to hear from you.</p>
+</header>
 
-    <div class="support-cards">
-        <div class="support-card fade-in fade-in-delay-1">
-            <h3>📧 General Support</h3>
-            <p>For questions, bug reports, or feature requests, reach out to us at:<br>
-            <a href="mailto:support@macdio.app">support@macdio.app</a></p>
-        </div>
-        <div class="support-card fade-in fade-in-delay-2">
-            <h3>🎨 Design Feedback</h3>
-            <p>Have thoughts on the UI or visual experience? We appreciate design feedback at:<br>
-            <a href="mailto:apeca68@gmail.com">apeca68@gmail.com</a></p>
-        </div>
-        <div class="support-card fade-in fade-in-delay-3">
-            <h3>🔒 Privacy First</h3>
-            <p>Macdio does not collect any personal data. Your stations, recordings, and preferences stay on your device and sync only through your iCloud account. <a href="privacy.html">Read our full Privacy Policy →</a></p>
-        </div>
-    </div>
+<div class="content">
+  <div class="support-cards">
+    <div class="support-card reveal"><h3>General support</h3><p>Email <a href="mailto:support@macdio.app">support@macdio.app</a> and we will get back to you.</p></div>
+    <div class="support-card reveal"><h3>Feature requests</h3><p>Share ideas and report bugs in the <a href="https://hub.macdio.app" target="_blank" rel="noopener">Community Hub</a>.</p></div>
+    <div class="support-card reveal"><h3>Privacy first</h3><p>Macdio collects nothing. No analytics, no tracking, no ads, ever.</p></div>
+  </div>
 
-    <div class="faq-section fade-in fade-in-delay-3">
-        <h2 class="faq-title">Frequently Asked Questions</h2>
-
-        <div class="faq-item">
-            <div class="faq-q">How do I add my own radio station?</div>
-            <div class="faq-a"><p>Open the app, click the "+" button, paste any stream URL (e.g. .m3u, .pls, or direct stream URL), give it a name, and you're live in seconds.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">How do I record a live stream?</div>
-            <div class="faq-a"><p>While listening to a station, click the record button in the player. Macdio saves the audio in high quality. Find all your recordings in the Recordings tab.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">Do my favorites sync across devices?</div>
-            <div class="faq-a"><p>Yes! Macdio uses your personal iCloud account to keep your favorite stations, saved tracks, and settings in sync across all your Apple devices — iPhone, iPad, Mac, Apple TV, and Apple Watch — automatically.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">What are the system requirements?</div>
-            <div class="faq-a"><p>Macdio requires iOS 18 / iPadOS 18, macOS Tahoe (macOS 26), tvOS 18, or watchOS 11 and later. It's built with 100% native SwiftUI to take full advantage of each platform.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">Is my data shared with anyone?</div>
-            <div class="faq-a"><p>Absolutely not. Macdio does not collect, store, or share any personal information. No analytics, no tracking, no ads. Everything stays on your device.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">A station isn't playing. What should I do?</div>
-            <div class="faq-a"><p>Some radio stations may go offline temporarily. Try refreshing the station list or check if the stream URL is still active. If it persists, contact support with the station name.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-q">Where are my recordings saved?</div>
-            <div class="faq-a"><p>Recordings are saved locally on your device. On Mac, they're in the app's documents folder; on iPhone and iPad, they're in the app's local storage. You can access them through the Recordings tab and export them at any time.</p></div>
-        </div>
-    </div>
+  <h2 class="reveal">Frequently asked questions</h2>
+  <div class="faq reveal">
+    <details class="faq-item"><summary>How do I add my own radio station?</summary><div class="faq-a">Open the app, tap the plus button, paste any stream URL (an .m3u, .pls, or direct stream), give it a name, and you are live in seconds.</div></details>
+    <details class="faq-item"><summary>How do I record a live stream?</summary><div class="faq-a">While listening to a station, tap the record button in the player. Macdio saves the audio in high quality. Find all your recordings in the Recordings tab.</div></details>
+    <details class="faq-item"><summary>Does song identification use my microphone?</summary><div class="faq-a">No. Macdio reads the stream directly to identify songs, so it never needs the microphone and never asks for microphone permission.</div></details>
+    <details class="faq-item"><summary>Do my favorites sync across devices?</summary><div class="faq-a">Yes. Macdio uses your iCloud account to keep your favorite stations, saved tracks, and settings in sync across all your Apple devices, iPhone, iPad, Mac, Apple TV, and Apple Watch, automatically.</div></details>
+    <details class="faq-item"><summary>What are the system requirements?</summary><div class="faq-a">Macdio requires iOS or iPadOS 18, macOS Tahoe (macOS 26), tvOS 18, or watchOS 11 and later. It is built with 100% native SwiftUI to take full advantage of each platform.</div></details>
+    <details class="faq-item"><summary>Is my data shared with anyone?</summary><div class="faq-a">Absolutely not. Macdio does not collect, store, or share any personal information. No analytics, no tracking, no ads. Everything stays on your device.</div></details>
+    <details class="faq-item"><summary>A station is not playing. What should I do?</summary><div class="faq-a">Some radio stations go offline temporarily. Try refreshing the station list or check whether the stream URL is still active. If it persists, contact support with the station name.</div></details>
+    <details class="faq-item"><summary>Where are my recordings saved?</summary><div class="faq-a">Recordings are saved locally on your device. You can access them through the Recordings tab and export them at any time.</div></details>
+  </div>
+</div>
 </main>
 
-<div id="footer-placeholder"></div>
+<div id="footer-slot"></div>
 
-<script src="assets/js/nav.js"></script>
-<script src="assets/js/footer.js"></script>
-<script>
-document.querySelectorAll('.faq-q').forEach(function(q) {
-    q.addEventListener('click', function() { q.parentElement.classList.toggle('open'); });
-});
-var revealObs = new IntersectionObserver(function(entries) {
-    entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(function(el) { revealObs.observe(el); });
-</script>
-
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
 </body>
 </html>
