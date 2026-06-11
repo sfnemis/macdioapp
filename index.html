@@ -57,7 +57,20 @@
     "Standalone Apple Watch streaming over LTE",
     "iCloud sync with no account and zero data collection"
   ],
-  "offers": { "@type": "Offer", "price": "9.99", "priceCurrency": "USD" }
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "USD",
+    "lowPrice": "9.99",
+    "highPrice": "9.99",
+    "offerCount": "175",
+    "offers": [
+      { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "United States" } },
+      { "@type": "Offer", "price": "9.99", "priceCurrency": "GBP", "eligibleRegion": { "@type": "Country", "name": "United Kingdom" } },
+      { "@type": "Offer", "price": "7.99", "priceCurrency": "EUR", "eligibleRegion": { "@type": "Country", "name": "Germany" } },
+      { "@type": "Offer", "price": "299.99", "priceCurrency": "TRY", "eligibleRegion": { "@type": "Country", "name": "Turkey" } },
+      { "@type": "Offer", "price": "14.99", "priceCurrency": "AUD", "eligibleRegion": { "@type": "Country", "name": "Australia" } }
+    ]
+  }
 }
 </script>
 <!-- Structured data: organization -->
