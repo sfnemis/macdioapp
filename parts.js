@@ -65,7 +65,9 @@
         '<a href="mailto:support@macdio.app">Contact</a>' +
       '</nav>' +
       '<div class="footer-socials">' + SOCIALS + '</div>' +
-      '<div class="footer-copy">© 2026 SFN. All rights reserved.</div>' +
+      '<div class="footer-copy">© 2026 SFN. All rights reserved. ' +
+        '<a href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
+      '</div>' +
     '</div></footer>';
 
   function bindNav() {
