@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" fill="#f5f5f7">
+  <!-- Livedio glyph — single colour; inherits #f5f5f7 (default white) -->
+  <g id="glyph"><path d="M 358 322 Q 358 286 390 304 L 636 446 Q 668 464 668 500 L 668 524 Q 668 560 636 578 L 390 720 Q 358 738 358 702 Z" fill="#f5f5f7"/><path d="M 700 330 A 150 150 0 0 1 744 436" stroke="#f5f5f7" stroke-width="44" stroke-linecap="round" fill="none"/><path d="M 780 268 A 246 246 0 0 1 852 442" stroke="#f5f5f7" stroke-width="44" stroke-linecap="round" fill="none" opacity="0.72"/></g>
+</svg>

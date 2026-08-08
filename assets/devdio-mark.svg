@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><defs><linearGradient id="gs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F2F3F5"/><stop offset="1" stop-color="#9DA2AB"/></linearGradient></defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
   <g id="devdio-mark" transform="translate(71.68,89.20) scale(0.922136)">
-    <g transform="translate(0.000000,917.000000) scale(0.100000,-0.100000)" fill="url(#gs)" stroke="none">
+    <g transform="translate(0.000000,917.000000) scale(0.100000,-0.100000)" fill="#FFFFFF" stroke="none">
 <path d="M1990 8750 c-30 -5 -113 -16 -184 -25 -313 -38 -603 -142 -786 -283
 -295 -228 -477 -508 -569 -873 -50 -199 -53 -257 -49 -1249 l3 -915 22 -66
 c150 -441 663 -466 835 -40 l23 56 6 930 c6 1048 3 1006 83 1170 89 182 242

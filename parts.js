@@ -73,9 +73,9 @@
       '</nav>' +
       '<div class="footer-socials">' + SOCIALS + '</div>' +
       '<div class="footer-copy">' +
-        '<a class="devdio-credit" href="https://devdio.pro" target="_blank" rel="noopener"><img class="devdio-mark" src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a> ' +
-        '<a href="https://livedio.app" target="_blank" rel="noopener">Livedio, live internet radio, is also made by Devdio</a> ' +
-        '<a href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
+        '<a class="brand-credit" href="https://devdio.pro" target="_blank" rel="noopener"><img class="credit-mark" src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a>' +
+        '<a class="brand-credit" href="https://livedio.app" target="_blank" rel="noopener"><img class="credit-mark" src="' + A + 'assets/livedio-mark.svg" alt="Livedio">Livedio, live internet radio, is also made by Devdio.</a>' +
+        '<a class="brand-credit" href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
       '</div>' +
     '</div></footer>';
 
