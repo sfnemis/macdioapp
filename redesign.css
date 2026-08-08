@@ -681,3 +681,7 @@ table.cmp tr.grp td.me { background: rgba(168,85,247,.08); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Devdio footer credit (2026-08-09) */
+.footer-copy .devdio-credit{display:inline-flex;align-items:center;gap:6px;}
+.footer-copy .devdio-mark{height:15px;width:auto;opacity:.75;}
