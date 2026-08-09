@@ -35,6 +35,7 @@
           '<a href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
           '<a href="' + HOME + '#identify">Features</a>' +
           '<a href="' + HOME + '#preview">Screenshots</a>' +
+          '<a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
           '<div class="nav-more" id="navMore"><button class="nav-more-btn" id="navMoreBtn" aria-expanded="false" aria-label="More pages">More <span class="chev">▾</span></button>' +
             '<div class="nav-more-menu">' + MORE_LINKS + '</div></div>' +
         '</div>' +
@@ -48,6 +49,7 @@
       '<a class="mm-link" href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
       '<a class="mm-link" href="' + HOME + '#identify">Features</a>' +
       '<a class="mm-link" href="' + HOME + '#preview">Screenshots</a>' +
+      '<a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
       '<a class="mm-small" href="' + P + 'iphone.html">Radio for iPhone</a>' +
       '<a class="mm-small" href="' + P + 'mac.html">Radio for Mac</a>' +
       '<a class="mm-small" href="' + P + 'apple-tv.html">Radio for Apple TV</a>' +
@@ -64,18 +66,16 @@
   var FOOTER =
     '<footer class="footer"><div class="wrap">' +
       '<a class="footer-brand" href="' + HOME + '"><img src="' + A + 'assets/app-icon.png" alt="Macdio"><span>Macdio</span></a>' +
+      '<a class="footer-devdio" href="https://devdio.pro" target="_blank" rel="noopener"><img src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a>' +
       '<nav class="footer-nav">' +
         '<a href="' + P + 'support.html">Support</a>' +
         '<a href="' + P + 'privacy.html">Privacy</a>' +
         '<a href="' + P + 'presskit.html">Press Kit</a>' +
         '<a href="mailto:support@devdio.pro">Contact</a>' +
-        '<a href="https://livedio.app" target="_blank" rel="noopener">Livedio</a>' +
       '</nav>' +
       '<div class="footer-socials">' + SOCIALS + '</div>' +
       '<div class="footer-copy">' +
-        '<a class="brand-credit" href="https://devdio.pro" target="_blank" rel="noopener"><img class="credit-mark" src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a>' +
-        '<a class="brand-credit" href="https://livedio.app" target="_blank" rel="noopener"><img class="credit-mark" src="' + A + 'assets/livedio-mark.svg" alt="Livedio">Livedio, live internet radio, is also made by Devdio.</a>' +
-        '<a class="brand-credit" href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
+        '<a href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
       '</div>' +
     '</div></footer>';
 
