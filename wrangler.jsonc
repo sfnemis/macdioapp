@@ -3,9 +3,11 @@
   // Deploy: npx wrangler deploy   (needs `npx wrangler login` once)
   // Custom domain: add macdio.app under Workers > macdio-web > Settings > Domains & Routes
   "name": "macdio-web",
+  "main": "worker.js",
   "compatibility_date": "2026-08-01",
   "assets": {
     "directory": ".",
-    "html_handling": "none"
+    "html_handling": "none",
+    "binding": "ASSETS"
   }
 }
