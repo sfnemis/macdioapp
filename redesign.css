@@ -682,6 +682,10 @@ table.cmp tr.grp td.me { background: rgba(168,85,247,.08); }
   .reveal { opacity: 1; transform: none; }
 }
 
+/* Anchor targets must clear the fixed nav instead of hiding under it (2026-08-09) */
+#compare-table{scroll-margin-top:calc(var(--nav-h) + 26px);}
+section[id]{scroll-margin-top:calc(var(--nav-h) + 12px);}
+
 /* Sticky footer: short pages must still push the footer to the bottom (2026-08-09) */
 body{display:flex;flex-direction:column;min-height:100svh;}
 body > main{flex:1 0 auto;}

@@ -34,7 +34,7 @@
       '<div class="nav-right">' +
         '<div class="nav-links">' +
           '<a href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
-          '<a class="nav-compare" href="' + HOME + '#compare">Compare</a>' +
+          '<a class="nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
           '<a href="' + HOME + '#identify">Features</a>' +
           '<a href="' + HOME + '#preview">Screenshots</a>' +
           '<a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
@@ -49,7 +49,7 @@
     '<div class="mobile-menu" id="mobileMenu">' +
       '<div class="mm-socials">' + SOCIALS + '</div>' +
       '<a class="mm-link" href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
-      '<a class="mm-link nav-compare" href="' + HOME + '#compare">Compare</a>' +
+      '<a class="mm-link nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
       '<a class="mm-link" href="' + HOME + '#identify">Features</a>' +
       '<a class="mm-link" href="' + HOME + '#preview">Screenshots</a>' +
       '<a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
