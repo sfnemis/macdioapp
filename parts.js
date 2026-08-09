@@ -74,9 +74,6 @@
         '<a href="mailto:support@devdio.pro">Contact</a>' +
       '</nav>' +
       '<div class="footer-socials">' + SOCIALS + '</div>' +
-      '<div class="footer-copy">' +
-        '<a href="https://logo.dev" rel="noopener">Missing station logos provided by Logo.dev</a>' +
-      '</div>' +
     '</div></footer>';
 
   function bindNav() {
