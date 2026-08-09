@@ -103,12 +103,31 @@
     }
   }
 
+  function bindLightbox() {
+    document.addEventListener('click', function (e) {
+      var img = e.target && e.target.closest ? e.target.closest('.shot img') : null;
+      if (!img) return;
+      var ov = document.createElement('div');
+      ov.className = 'lightbox';
+      var big = document.createElement('img');
+      big.src = img.currentSrc || img.src;
+      big.alt = img.alt || '';
+      ov.appendChild(big);
+      function onKey(ev) { if (ev.key === 'Escape') close(); }
+      function close() { ov.remove(); document.removeEventListener('keydown', onKey); }
+      ov.addEventListener('click', close);
+      document.addEventListener('keydown', onKey);
+      document.body.appendChild(ov);
+    });
+  }
+
   function inject() {
     var n = document.getElementById('nav-slot');
     if (n) n.outerHTML = NAV;
     var f = document.getElementById('footer-slot');
     if (f) f.outerHTML = FOOTER;
     bindNav();
+    bindLightbox();
   }
 
   if (document.readyState === 'loading') {
