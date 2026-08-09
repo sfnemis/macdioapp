@@ -19,7 +19,9 @@
     '<a href="' + P + 'guides/">Guides</a>' +
     '<a href="' + P + 'iphone.html">Radio for iPhone</a>' +
     '<a href="' + P + 'mac.html">Radio for Mac</a>' +
+    '<a href="' + P + 'ipad.html">Radio for iPad</a>' +
     '<a href="' + P + 'apple-tv.html">Radio for Apple TV</a>' +
+    '<a href="' + P + 'apple-watch.html">Radio for Apple Watch</a>' +
     '<a href="' + P + 'support.html">Support</a>' +
     '<a href="' + P + 'privacy.html">Privacy</a>' +
     '<a href="' + P + 'transparency.html">Transparency</a>' +
@@ -56,7 +58,9 @@
       '<a class="mm-small" href="' + P + 'guides/">Guides</a>' +
       '<a class="mm-small" href="' + P + 'iphone.html">Radio for iPhone</a>' +
       '<a class="mm-small" href="' + P + 'mac.html">Radio for Mac</a>' +
+      '<a class="mm-small" href="' + P + 'ipad.html">Radio for iPad</a>' +
       '<a class="mm-small" href="' + P + 'apple-tv.html">Radio for Apple TV</a>' +
+      '<a class="mm-small" href="' + P + 'apple-watch.html">Radio for Apple Watch</a>' +
       '<a class="mm-small" href="' + P + 'support.html">Support</a>' +
       '<a class="mm-small" href="' + P + 'privacy.html">Privacy</a>' +
       '<a class="mm-small" href="' + P + 'transparency.html">Transparency</a>' +
