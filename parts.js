@@ -35,7 +35,7 @@
       '<a class="nav-brand" href="' + HOME + '"><img src="' + A + 'assets/app-icon.png" alt="Macdio"><span>Macdio</span></a>' +
       '<div class="nav-right">' +
         '<div class="nav-links">' +
-          '<a href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
+          '<a href="https://hub.devdio.pro" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
           '<a class="nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
           '<a href="' + HOME + '#identify">Features</a>' +
           '<a href="' + HOME + '#preview">Screenshots</a>' +
@@ -50,7 +50,7 @@
     '</nav>' +
     '<div class="mobile-menu" id="mobileMenu">' +
       '<div class="mm-socials">' + SOCIALS + '</div>' +
-      '<a class="mm-link" href="https://hub.macdio.app" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
+      '<a class="mm-link" href="https://hub.devdio.pro" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
       '<a class="mm-link nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
       '<a class="mm-link" href="' + HOME + '#identify">Features</a>' +
       '<a class="mm-link" href="' + HOME + '#preview">Screenshots</a>' +

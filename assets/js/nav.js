@@ -11,7 +11,7 @@
     </div>
     <div class="mobile-nav-divider"></div>
     <div class="mobile-nav-links">
-      <a href="https://hub.macdio.app" class="mobile-nav-link" target="_blank" rel="noopener" onclick="macdioNav.close()">
+      <a href="https://hub.devdio.pro" class="mobile-nav-link" target="_blank" rel="noopener" onclick="macdioNav.close()">
         Community <span class="community-dot" style="margin-left:2px;"></span>
       </a>
       <a href="index.html#features" class="mobile-nav-link" onclick="macdioNav.close()">Features</a>
@@ -51,7 +51,7 @@
     <span>Macdio</span>
   </a>
   <div class="nav-links">
-    <a href="https://hub.macdio.app" class="nav-community" target="_blank" rel="noopener">
+    <a href="https://hub.devdio.pro" class="nav-community" target="_blank" rel="noopener">
       Community <span class="community-dot"></span>
     </a>
     <a href="index.html#features">Features</a>
