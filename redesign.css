@@ -729,3 +729,9 @@ body > footer{margin-top:auto;}
 .lightbox{position:fixed;inset:0;z-index:1000;background:rgba(5,5,7,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;cursor:zoom-out;animation:lbIn .18s ease;}
 .lightbox img{max-width:92vw;max-height:92vh;width:auto;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.65);}
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
+
+/* Static crawlable site links. JavaScript replaces this block with the real
+   footer, so it is only ever seen by crawlers that do not run scripts. */
+.static-sitelinks { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 28px 20px;
+  max-width: 1100px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,.08); }
+.static-sitelinks a { color: var(--text-2); font-size: 13px; }

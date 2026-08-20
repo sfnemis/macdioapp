@@ -32,7 +32,7 @@
 
   var NAV =
     '<nav class="nav">' +
-      '<a class="nav-brand" href="' + HOME + '"><img src="' + A + 'assets/app-icon.png" alt="Macdio"><span>Macdio</span></a>' +
+      '<a class="nav-brand" href="' + HOME + '"><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>' +
       '<div class="nav-right">' +
         '<div class="nav-links">' +
           '<a href="https://hub.devdio.pro" target="_blank" rel="noopener">Community <span class="dot-green"></span></a>' +
@@ -73,7 +73,7 @@
 
   var FOOTER =
     '<footer class="footer"><div class="wrap">' +
-      '<a class="footer-brand" href="' + HOME + '"><img src="' + A + 'assets/app-icon.png" alt="Macdio"><span>Macdio</span></a>' +
+      '<a class="footer-brand" href="' + HOME + '"><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>' +
       '<a class="footer-devdio" href="https://devdio.pro" target="_blank" rel="noopener"><img src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a>' +
       '<nav class="footer-nav">' +
         '<a href="' + P + 'support.html">Support</a>' +

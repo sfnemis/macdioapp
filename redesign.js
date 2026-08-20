@@ -234,7 +234,41 @@
   })();
 
   // pause feature videos when reduced motion is preferred
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reducedMotion) {
     document.querySelectorAll('video').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); });
   }
+
+  // lazy-load the feature videos: autoplay ignores preload="none", so the real
+  // source stays in data-src until the video is close to the viewport
+  (function () {
+    var lazyVideos = Array.prototype.slice.call(document.querySelectorAll('video[data-lazy-video]'));
+    if (!lazyVideos.length) return;
+
+    function load(v) {
+      if (v.dataset.lazyLoaded) return;
+      v.dataset.lazyLoaded = '1';
+      var sources = v.querySelectorAll('source[data-src]');
+      for (var i = 0; i < sources.length; i++) {
+        sources[i].src = sources[i].getAttribute('data-src');
+        sources[i].removeAttribute('data-src');
+      }
+      v.load();
+      if (!reducedMotion) {
+        var playing = v.play();
+        if (playing && playing.catch) { playing.catch(function () {}); }
+      }
+    }
+
+    if ('IntersectionObserver' in window) {
+      var vobs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { load(e.target); vobs.unobserve(e.target); }
+        });
+      }, { rootMargin: '300px 0px' });
+      lazyVideos.forEach(function (v) { vobs.observe(v); });
+    } else {
+      lazyVideos.forEach(load);
+    }
+  })();
 })();
