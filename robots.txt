@@ -1,5 +1,13 @@
 # macdio.app
 # AI assistants and answer engines are welcome to read and cite this site.
+#
+# NOTE: every named group below shadows "User-agent: *" for that crawler, so a
+# rule added to the star group alone reaches none of them. Repeat it in each
+# named group, or it will not apply.
+#
+# /ios/ is deliberately crawlable. It answers with a 302 to the App Store and
+# its stub page carries a noindex meta, so blocking the crawl would only hide
+# the redirect and risk a bare URL being indexed instead.
 
 User-agent: *
 Allow: /
@@ -59,8 +67,5 @@ Allow: /
 
 User-agent: MistralAI-User
 Allow: /
-
-# Redirect stub, no content to index
-Disallow: /ios/
 
 Sitemap: https://macdio.app/sitemap.xml
