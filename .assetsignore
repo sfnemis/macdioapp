@@ -4,3 +4,14 @@
 wrangler.jsonc
 worker.js
 CNAME
+
+# Wrangler's own state and deploy temp files. Without this they are published
+# as public assets: the account cache and the worker sourcemap were both
+# reachable on macdio.app until 2026-08-20.
+.wrangler
+*.map
+
+# Local backups that must never reach the CDN
+*.onceki
+*.bak
+*.zip
