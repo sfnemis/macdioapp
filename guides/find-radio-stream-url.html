@@ -23,9 +23,9 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What is a radio stream URL?","acceptedAnswer":{"@type":"Answer","text":"It is the direct web address of the audio feed itself, ending in something like .mp3, .aac, .m3u8, .pls or a bare host and port. A player opens that address and the station starts."}},
-{"@type":"Question","name":"How do I find the stream URL of a station?","acceptedAnswer":{"@type":"Answer","text":"Check the station's own site for a listen link or an M3U or PLS file, look it up in an open community directory, or open the station's web player and read the audio request in the browser's developer tools under the Network tab."}},
-{"@type":"Question","name":"Why does a stream URL stop working?","acceptedAnswer":{"@type":"Answer","text":"Stations move servers, change providers or retire old endpoints. When a URL goes silent the station is usually still online under a new address, so it is worth looking the station up again rather than assuming it closed."}}]}
+{"@type":"Question","name":"What is a radio stream URL?","acceptedAnswer":{"@type":"Answer","text":"It is the direct address of a station's audio feed rather than the page around it. Some end in .mp3, .aac or .m3u8, others are a bare host and port, and a player opens them without any website in between."}},
+{"@type":"Question","name":"How do I find the stream URL of a station?","acceptedAnswer":{"@type":"Answer","text":"Try the station's own listen page first, then an open community directory, then the Network tab of your browser's developer tools while the web player runs. If none of those work, ask the station by email."}},
+{"@type":"Question","name":"Why does a stream URL stop working?","acceptedAnswer":{"@type":"Answer","text":"Stations change servers more often than listeners expect. A dead address usually means a moved stream rather than a closed station, so look the station up again and update the URL instead of deleting it."}}]}
 </script>
 <link rel="stylesheet" href="/redesign.css">
 <script>window.MACDIO_ASSETS='/';window.MACDIO_HOME='/';window.MACDIO_PAGES='/';</script>
@@ -65,6 +65,8 @@
   <p class="reveal d1">Four ways that work, in the order I would try them, plus what to do when a stream you love goes quiet.</p>
 </header>
 <div class="content">
+  <p class="reveal">A station's stream URL is the direct address of its audio, and there are four reliable ways to get it: the station's own listen page, an open community directory, the Network tab of your browser's developer tools, and simply asking the station. They are below in the order worth trying, along with what to do when an address that used to work goes quiet.</p>
+
   <h2 class="reveal">What a stream URL is</h2>
   <p class="reveal">It is the direct address of the audio feed rather than the page around it. Some end in a file extension like .mp3, .aac or .m3u8, others are a bare host and port. Paste one into a player and the station starts, with no website in between.</p>
 
@@ -72,7 +74,7 @@
   <p class="reveal">Start here, because it is the source. Many stations publish a listen or tune-in page offering an .m3u or .pls file, often labelled for VLC, Winamp or "other players". Those small files are playlists that contain the real stream address, and any decent player reads them directly.</p>
 
   <h2 class="reveal">2. An open community directory</h2>
-  <p class="reveal">Community-maintained databases collect stream addresses that listeners have submitted and that get checked automatically. This is where most radio apps, including Macdio, get their catalog, and it is usually the fastest way to find a station whose site is hard to navigate or in a language you do not read.</p>
+  <p class="reveal">Community-maintained databases collect stream addresses that listeners have submitted and that get checked automatically. This is where most radio apps, including Macdio, get their catalog, and it is usually the fastest way to find a station whose site is hard to navigate or in a language you do not read. Once you have an address, <a href="/guides/how-to-listen-to-radio-on-mac.html">how to listen to internet radio on a Mac</a> covers what to paste it into.</p>
 
   <h2 class="reveal">3. Browser developer tools</h2>
   <p class="reveal">If a station only offers a web player, the address is still visible. Open the player page, open the browser's developer tools, choose the Network tab, filter to Media, and press play. The long-running request that keeps growing is the stream. Right click it and copy the URL.</p>
@@ -88,6 +90,13 @@
 
   <h2 class="reveal">When a stream goes silent</h2>
   <p class="reveal">Stations move servers more often than people expect. A dead URL rarely means a dead station, so look the station up again before giving up; there is usually a new address, and it is worth updating the custom station rather than deleting it.</p>
+
+  <h2 class="reveal">Frequently asked questions</h2>
+  <div class="faq reveal">
+    <details class="faq-item"><summary>What is a radio stream URL?</summary><div class="faq-a">It is the direct address of a station's audio feed rather than the page around it. Some end in .mp3, .aac or .m3u8, others are a bare host and port, and a player opens them without any website in between.</div></details>
+    <details class="faq-item"><summary>How do I find the stream URL of a station?</summary><div class="faq-a">Try the station's own listen page first, then an open community directory, then the Network tab of your browser's developer tools while the web player runs. If none of those work, ask the station by email.</div></details>
+    <details class="faq-item"><summary>Why does a stream URL stop working?</summary><div class="faq-a">Stations change servers more often than listeners expect. A dead address usually means a moved stream rather than a closed station, so look the station up again and update the URL instead of deleting it.</div></details>
+  </div>
 
   <h2 class="reveal">Ready to add your own?</h2>
   <p class="reveal">Get Macdio on the <a href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store</a>. 55,000+ stations built in, and room for every one you bring yourself.</p>

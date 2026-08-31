@@ -23,9 +23,12 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"Can the Mac play radio without a browser?","acceptedAnswer":{"@type":"Answer","text":"Yes. VLC plays any stream URL, the Music app accepts direct stream links, and native radio apps like Macdio come with a full station catalog built in, so no browser tab is needed."}},
-{"@type":"Question","name":"Does internet radio use a lot of resources on a Mac?","acceptedAnswer":{"@type":"Answer","text":"A native player uses very little. A browser tab playing a station website usually costs far more memory and battery than a dedicated app playing the same stream."}},
-{"@type":"Question","name":"How do I keep radio one click away while working?","acceptedAnswer":{"@type":"Answer","text":"Use a radio app with a menu bar player. Macdio sits in the Mac menu bar, so play, pause and station switching never require opening a window."}}]}
+{"@type":"Question","name":"Can the Mac play radio without a browser?","acceptedAnswer":{"@type":"Answer","text":"Yes. VLC plays any stream URL, the Music app accepts direct links, and a native app like Macdio brings the whole catalog with it, so nothing depends on a browser tab."}},
+{"@type":"Question","name":"Does internet radio use a lot of resources?","acceptedAnswer":{"@type":"Answer","text":"A native player barely registers. A browser tab playing a station site usually costs far more memory and battery than a dedicated app playing the same stream."}},
+{"@type":"Question","name":"How do I keep the radio one click away while working?","acceptedAnswer":{"@type":"Answer","text":"Use a menu bar player. Macdio lives in the Mac menu bar: play, pause and switch stations without opening a window."}},
+{"@type":"Question","name":"Does the Music app still have internet radio stations?","acceptedAnswer":{"@type":"Answer","text":"The Music app can open a stream address you supply through File, Open Stream URL, but it no longer offers a browsable directory of internet radio stations, so you have to bring the address yourself."}},
+{"@type":"Question","name":"Which macOS version does Macdio need?","acceptedAnswer":{"@type":"Answer","text":"macOS 26 or later. The same purchase also covers the iPhone, iPad, Apple TV and Apple Watch versions."}},
+{"@type":"Question","name":"Can I record what I listen to?","acceptedAnswer":{"@type":"Answer","text":"With Macdio, yes: one click records the stream in high quality and Split by Track cuts the session into individual songs. See the recording guide ."}}]}
 </script>
 <link rel="stylesheet" href="/redesign.css">
 <script>window.MACDIO_ASSETS='/';window.MACDIO_HOME='/';window.MACDIO_PAGES='/';</script>
@@ -65,11 +68,13 @@
   <p class="reveal d1">Every way that works in 2026, from a quick browser tab to a player that lives in the menu bar, with the honest trade-offs of each.</p>
 </header>
 <div class="content">
+  <p class="reveal">Four routes work on a Mac, and they differ in what they cost you. The station's own website needs nothing but a browser tab. VLC and the Music app play any stream you can supply an address for. A native radio player brings the catalog, the menu bar and recording with it. Each one is below, with what it does badly as well as what it does well.</p>
+
   <h2 class="reveal">Option 1: the station's website</h2>
   <p class="reveal">Almost every station has a play button on its site. It works, and it costs nothing, but it ties the radio to a browser tab: close the tab and the music stops, and a tab playing audio keeps the browser awake and hungry. Fine for a quick listen, tiring as a daily driver.</p>
 
   <h2 class="reveal">Option 2: VLC</h2>
-  <p class="reveal">VLC plays any stream URL. Open VLC, press Cmd+N (Open Network), paste the station's stream address and press Play. The catch is finding that address: stations rarely publish their raw stream URLs, so this route suits people who already have a list of streams they love.</p>
+  <p class="reveal">VLC plays any stream URL. Open VLC, press Cmd+N (Open Network), paste the station's stream address and press Play. The catch is finding that address: stations rarely publish their raw stream URLs, so this route suits people who already have a list of streams they love. If you need one, here is <a href="/guides/find-radio-stream-url.html">how to find a station's stream URL</a>.</p>
 
   <h2 class="reveal">Option 3: the Music app</h2>
   <p class="reveal">Apple's Music app accepts direct stream links through File, Open Stream URL. Same catch as VLC: you need to know the URL, and there is no browsing, no favorites for stations, and no artwork.</p>
@@ -77,11 +82,25 @@
   <h2 class="reveal">Option 4: a native radio app</h2>
   <p class="reveal">A dedicated player removes the URL hunt entirely. <a href="/mac.html">Macdio for Mac</a> ships with a catalog of 55,000+ stations searchable by country and genre, and adds the things the other routes cannot: a menu bar mini player so the radio never needs a window, one-click recording with automatic track splitting, live synced lyrics, and song identification straight from the stream with no microphone. It launches at login if you want, and one purchase covers iPhone, iPad, Apple TV and Apple Watch too.</p>
 
+  <h2 class="reveal">Which route should you pick?</h2>
+  <p class="reveal">For a station you visit once, the browser is fine and costs nothing. For a handful of streams you already know the addresses of, VLC is enough and stays out of the way. For radio as a daily habit, where you want to browse stations, keep favorites, see what song is playing and start listening without opening a window, the browser and VLC both run out of road quickly, and a dedicated player is the honest answer.</p>
+
+  <h2 class="reveal">Keeping the radio in the menu bar</h2>
+  <p class="reveal">The practical difference on a Mac is not sound quality, it is whether the radio needs a window. A menu bar player puts play, pause and station switching one click from the clock, so the radio sits beside your work instead of on top of it. It survives full-screen apps and Mission Control, and it never disappears behind a browser window you then have to hunt for.</p>
+
+  <h2 class="reveal">Adding a station the catalog does not have</h2>
+  <p class="reveal">Even a 55,000 station catalog misses small local broadcasters. Any player that accepts a raw address can still play them, and the address is usually findable in a couple of minutes: <a href="/guides/find-radio-stream-url.html">how to find a station's stream URL</a> covers the four ways that work. In Macdio, pasting one creates a custom station that syncs to your other Apple devices.</p>
+
+  <h2 class="reveal">Recording what you hear</h2>
+  <p class="reveal">Recording is the other thing the browser cannot do. System audio capture tools record everything the Mac plays, including notification sounds, while a player that records the stream itself keeps the audio clean and can split a session into individual songs. The details, and what the law of personal recording actually says, are in <a href="/guides/record-internet-radio.html">how to record internet radio</a>.</p>
+
   <h2 class="reveal">Frequently asked questions</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>Can the Mac play radio without a browser?</summary><div class="faq-a">Yes. VLC plays any stream URL, the Music app accepts direct links, and a native app like Macdio brings the whole catalog with it, so nothing depends on a browser tab.</div></details>
     <details class="faq-item"><summary>Does internet radio use a lot of resources?</summary><div class="faq-a">A native player barely registers. A browser tab playing a station site usually costs far more memory and battery than a dedicated app playing the same stream.</div></details>
     <details class="faq-item"><summary>How do I keep the radio one click away while working?</summary><div class="faq-a">Use a menu bar player. Macdio lives in the Mac menu bar: play, pause and switch stations without opening a window.</div></details>
+    <details class="faq-item"><summary>Does the Music app still have internet radio stations?</summary><div class="faq-a">The Music app can open a stream address you supply through File, Open Stream URL, but it no longer offers a browsable directory of internet radio stations, so you have to bring the address yourself.</div></details>
+    <details class="faq-item"><summary>Which macOS version does Macdio need?</summary><div class="faq-a">macOS 26 or later. The same purchase also covers the iPhone, iPad, Apple TV and Apple Watch versions.</div></details>
     <details class="faq-item"><summary>Can I record what I listen to?</summary><div class="faq-a">With Macdio, yes: one click records the stream in high quality and Split by Track cuts the session into individual songs. See the <a href="/guides/record-internet-radio.html">recording guide</a>.</div></details>
   </div>
 

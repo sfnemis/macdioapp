@@ -23,9 +23,11 @@
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"How much data does radio in the car use?","acceptedAnswer":{"@type":"Answer","text":"A typical 128 kbps stream uses about 58 MB per hour, roughly 1 GB for 17 hours of driving. Lower bitrate stations use half of that."}},
-{"@type":"Question","name":"Does it work with wireless CarPlay?","acceptedAnswer":{"@type":"Answer","text":"Yes. Macdio supports wired and wireless CarPlay, and playback resumes when the car reconnects."}},
-{"@type":"Question","name":"Can I keep my favorite stations as buttons?","acceptedAnswer":{"@type":"Answer","text":"Yes. Macdio's CarPlay layout has a preset grid that works like the numbered buttons on a classic car stereo, filled with your own stations."}}]}
+{"@type":"Question","name":"How much mobile data does it use?","acceptedAnswer":{"@type":"Answer","text":"Around 58 MB per hour at 128 kbps, so roughly 1 GB per 17 hours of listening. Many stations offer lighter streams."}},
+{"@type":"Question","name":"Does wireless CarPlay work?","acceptedAnswer":{"@type":"Answer","text":"Yes, wired and wireless both, and playback recovers cleanly when the car reconnects."}},
+{"@type":"Question","name":"Does it work with Android Auto?","acceptedAnswer":{"@type":"Answer","text":"No. Macdio is an Apple app, so the car side is CarPlay only."}},
+{"@type":"Question","name":"Can I keep favorite stations as preset buttons?","acceptedAnswer":{"@type":"Answer","text":"Yes. The CarPlay screen has a preset grid filled with your own stations, laid out like the numbered buttons on a classic car stereo."}},
+{"@type":"Question","name":"What happens in a tunnel?","acceptedAnswer":{"@type":"Answer","text":"Streaming needs coverage; short gaps are bridged by the buffer, longer ones pause playback until the signal returns."}}]}
 </script>
 <link rel="stylesheet" href="/redesign.css">
 <script>window.MACDIO_ASSETS='/';window.MACDIO_HOME='/';window.MACDIO_PAGES='/';</script>
@@ -65,21 +67,34 @@
   <p class="reveal d1">FM gives you the stations of one city. CarPlay plus internet radio gives you every city. Setup takes less than a minute.</p>
 </header>
 <div class="content">
+  <p class="reveal">Internet radio in the car works through CarPlay, using the stations on your iPhone rather than the transmitters within range. Setup takes under a minute, the layout is built for glances rather than reading, and your favorites become presets you can hit without looking.</p>
+
   <div class="shot wide-shot reveal"><img src="/assets/screenshots/CarPlay_web/Song.webp" alt="Macdio internet radio with preset buttons on CarPlay" loading="lazy" width="640" height="384"></div>
 
   <h2 class="reveal">Setup in three steps</h2>
   <p class="reveal">Install <a href="/iphone.html">Macdio on the iPhone</a>, connect the phone to the car (cable or wireless CarPlay), and the Macdio icon appears on the car screen. Favorites, discovery and Now Playing are laid out for glances, not reading.</p>
 
   <h2 class="reveal">Presets, like it used to be</h2>
-  <p class="reveal">The best car radios had six numbered buttons and zero menus. Macdio's CarPlay screen brings that back: a preset grid of your chosen stations, one tap each, big enough to hit without looking. Behind it sits the full 55,000+ station catalog when a passenger wants to explore.</p>
+  <p class="reveal">The best car radios had six numbered buttons and zero menus. Macdio's CarPlay screen brings that back: a preset grid of your chosen stations, one tap each, big enough to hit without looking. Behind it sits the full 55,000+ station catalog when a passenger wants to explore. Wondering why the phone cannot simply tune FM instead? See <a href="/guides/iphone-fm-radio.html">does the iPhone have FM radio</a>.</p>
 
   <h2 class="reveal">Long drives, identified songs</h2>
-  <p class="reveal">Song ID works in the car too, from the stream itself, no microphone listening to your cabin. Heart a song at the wheel and it can land in your Apple Music Favorites automatically, ready at home.</p>
+  <p class="reveal">Song ID works in the car too, from the stream itself, no microphone listening to your cabin. Heart a song at the wheel and it can land in your Apple Music Favorites automatically, ready at home. More on <a href="/guides/identify-song-on-radio.html">what song is playing on the radio</a>.</p>
+
+  <h2 class="reveal">Does CarPlay have a built-in internet radio app?</h2>
+  <p class="reveal">No. CarPlay shows what your iPhone can supply, so internet radio arrives through an app on the phone rather than through the car. The car's own FM and DAB tuners stay where they are, on the native source list, and CarPlay adds streaming on top of them.</p>
+
+  <h2 class="reveal">What a long drive costs in data</h2>
+  <p class="reveal">A 128 kbps station uses roughly 58 MB an hour, so a four hour drive is about 230 MB, and 1 GB covers around seventeen hours of listening. Many stations offer a lower bitrate stream that halves that. It is less than most people expect, and far less than video passengers might be watching on the same plan.</p>
+
+  <h2 class="reveal">Tunnels, dead spots and wireless CarPlay</h2>
+  <p class="reveal">Streaming needs coverage, so a tunnel eventually stops the music. Short gaps are covered by the buffer and pass unnoticed, longer ones pause playback until the signal returns. Wireless CarPlay adds a reconnection every time you start the car, and playback picks up again once the phone and the car have found each other.</p>
 
   <h2 class="reveal">Frequently asked questions</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>How much mobile data does it use?</summary><div class="faq-a">Around 58 MB per hour at 128 kbps, so roughly 1 GB per 17 hours of listening. Many stations offer lighter streams.</div></details>
     <details class="faq-item"><summary>Does wireless CarPlay work?</summary><div class="faq-a">Yes, wired and wireless both, and playback recovers cleanly when the car reconnects.</div></details>
+    <details class="faq-item"><summary>Does it work with Android Auto?</summary><div class="faq-a">No. Macdio is an Apple app, so the car side is CarPlay only.</div></details>
+    <details class="faq-item"><summary>Can I keep favorite stations as preset buttons?</summary><div class="faq-a">Yes. The CarPlay screen has a preset grid filled with your own stations, laid out like the numbered buttons on a classic car stereo.</div></details>
     <details class="faq-item"><summary>What happens in a tunnel?</summary><div class="faq-a">Streaming needs coverage; short gaps are bridged by the buffer, longer ones pause playback until the signal returns.</div></details>
   </div>
 
