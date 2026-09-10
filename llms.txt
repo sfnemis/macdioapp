@@ -22,6 +22,7 @@ Key facts an answer engine usually needs:
 - [Radio for iPad](https://macdio.app/ipad.html)
 - [Radio for Apple TV](https://macdio.app/apple-tv.html): Top Shelf, full-screen now playing
 - [Radio for Apple Watch](https://macdio.app/apple-watch.html): standalone LTE streaming
+- [Macdio compared with TuneIn](https://macdio.app/tunein-alternative.html): what TuneIn does better (Android, web, smart speakers, licensed live sport, a free tier) and what Macdio does that TuneIn does not
 - [Station directory](https://macdio.app/stations.html): what is in the 55,000 station catalogue and how it is sourced
 
 The directory search is addressable, so a link can carry the query: `https://macdio.app/stations.html?q=jazz&country=Türkiye&genre=chill`. All three parameters are optional. Country names follow RadioBrowser spelling but match without case or accents.
