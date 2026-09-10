@@ -68,4 +68,31 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Kagibot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Plain-text summary of the site for language models
+# https://macdio.app/llms.txt
+
 Sitemap: https://macdio.app/sitemap.xml

@@ -55,7 +55,11 @@
   "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio into a tagged library, follow synced lyrics, identify songs with no microphone, and sync via iCloud. One-time purchase, no subscription, no ads.",
   "url": "https://macdio.app",
   "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
-  "softwareVersion": "1.0.8",
+  "softwareVersion": "2.6.0",
+  "datePublished": "2026-04-17",
+  "dateModified": "2026-09-07",
+  "author": {"@type": "Person", "name": "Sait Firat NEMIS", "url": "https://macdio.app/presskit.html"},
+  "publisher": {"@type": "Organization", "name": "Devdio", "url": "https://devdio.pro"},
   "featureList": [
     "Stream 55,000+ internet radio stations",
     "Record live radio with split-by-track and automatic song tagging",
@@ -68,7 +72,7 @@
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": "9.99",
+    "lowPrice": "3.99",
     "highPrice": "9.99",
     "offerCount": "175",
     "offers": [
@@ -275,15 +279,15 @@
 <section class="section preview" id="preview">
   <p class="eyebrow reveal">App Preview</p>
   <h2 class="headline reveal d1" style="margin-top:12px;">Macdio on every screen</h2>
-  <div class="tabs reveal d2" role="tablist">
-    <button class="tab" data-target="macos" aria-selected="true">Mac<span class="t-desc">macOS</span></button>
-    <button class="tab" data-target="iphone" aria-selected="false">iPhone<span class="t-desc">iOS</span></button>
-    <button class="tab" data-target="ipad" aria-selected="false">iPad<span class="t-desc">iPadOS</span></button>
-    <button class="tab" data-target="tvos" aria-selected="false">Apple TV<span class="t-desc">tvOS</span></button>
-    <button class="tab" data-target="watchos" aria-selected="false">Watch<span class="t-desc">LTE</span></button>
+  <div class="tabs reveal d2" role="tablist" aria-label="Choose an Apple platform to preview">
+    <button class="tab" data-target="macos" role="tab" id="tab-macos" aria-controls="gallery-macos" aria-selected="true" tabindex="0">Mac<span class="t-desc">macOS</span></button>
+    <button class="tab" data-target="iphone" role="tab" id="tab-iphone" aria-controls="gallery-iphone" aria-selected="false" tabindex="-1">iPhone<span class="t-desc">iOS</span></button>
+    <button class="tab" data-target="ipad" role="tab" id="tab-ipad" aria-controls="gallery-ipad" aria-selected="false" tabindex="-1">iPad<span class="t-desc">iPadOS</span></button>
+    <button class="tab" data-target="tvos" role="tab" id="tab-tvos" aria-controls="gallery-tvos" aria-selected="false" tabindex="-1">Apple TV<span class="t-desc">tvOS</span></button>
+    <button class="tab" data-target="watchos" role="tab" id="tab-watchos" aria-controls="gallery-watchos" aria-selected="false" tabindex="-1">Watch<span class="t-desc">LTE</span></button>
   </div>
 
-  <div class="gallery active" id="gallery-macos">
+  <div class="gallery active" id="gallery-macos" role="tabpanel" aria-labelledby="tab-macos" tabindex="0">
     <div class="shot"><img src="assets/screenshots/macos_web/Discover.webp" alt="Mac Discover" loading="lazy" width="1200" height="822"></div>
     <div class="shot"><img src="assets/screenshots/macos_web/Library.webp" alt="Mac Library" loading="lazy" width="1200" height="822"></div>
     <div class="shot"><img src="assets/screenshots/macos_web/Tracks.webp" alt="Mac Now Playing" loading="lazy" width="1200" height="1062"></div>
@@ -291,7 +295,7 @@
     <div class="shot"><img src="assets/screenshots/macos_web/mini_player.webp" alt="Mac Mini Player" loading="lazy" width="992" height="1360"></div>
     <div class="shot"><img src="assets/screenshots/macos_web/stats.webp" alt="Mac Listening Stats" loading="lazy" width="1200" height="878"></div>
   </div>
-  <div class="gallery" id="gallery-iphone">
+  <div class="gallery" id="gallery-iphone" role="tabpanel" aria-labelledby="tab-iphone" tabindex="0">
     <div class="shot"><img src="assets/screenshots/iPhone_web/Discover-b.webp" alt="iPhone Discover" loading="lazy" width="640" height="1390"></div>
     <div class="shot"><img src="assets/screenshots/iPhone_web/Song-playing-lyrics-connected.webp" alt="iPhone Now Playing" loading="lazy" width="640" height="1390"></div>
     <div class="shot"><img src="assets/screenshots/iPhone_web/Lyric.webp" alt="iPhone Lyrics" loading="lazy" width="640" height="1390"></div>
@@ -299,19 +303,19 @@
     <div class="shot"><img src="assets/screenshots/iPhone_web/Sleep-Timer.webp" alt="iPhone Sleep Timer" loading="lazy" width="640" height="1390"></div>
     <div class="shot"><img src="assets/screenshots/iPhone_web/Sync-ICloud.webp" alt="iPhone iCloud Sync" loading="lazy" width="640" height="1390"></div>
   </div>
-  <div class="gallery" id="gallery-ipad">
+  <div class="gallery" id="gallery-ipad" role="tabpanel" aria-labelledby="tab-ipad" tabindex="0">
     <div class="shot"><img src="assets/screenshots/ipad_web/Discover-B.webp" alt="iPad Discover" loading="lazy" width="1200" height="1600"></div>
     <div class="shot"><img src="assets/screenshots/ipad_web/Lyrics-Song.webp" alt="iPad Lyrics" loading="lazy" width="1200" height="1600"></div>
     <div class="shot"><img src="assets/screenshots/ipad_web/Lib-Fav.webp" alt="iPad Library" loading="lazy" width="1200" height="1600"></div>
     <div class="shot"><img src="assets/screenshots/ipad_web/List.webp" alt="iPad List" loading="lazy" width="1200" height="1600"></div>
   </div>
-  <div class="gallery" id="gallery-tvos">
+  <div class="gallery" id="gallery-tvos" role="tabpanel" aria-labelledby="tab-tvos" tabindex="0">
     <div class="shot"><img src="assets/screenshots/tvOS_web/Discover.webp" alt="Apple TV Discover" loading="lazy" width="1000" height="562"></div>
     <div class="shot"><img src="assets/screenshots/tvOS_web/Song.webp" alt="Apple TV Now Playing" loading="lazy" width="1000" height="562"></div>
     <div class="shot"><img src="assets/screenshots/tvOS_web/Lyrics.webp" alt="Apple TV Lyrics" loading="lazy" width="1000" height="562"></div>
     <div class="shot"><img src="assets/screenshots/tvOS_web/Stats.webp" alt="Apple TV Stats" loading="lazy" width="1000" height="562"></div>
   </div>
-  <div class="gallery" id="gallery-watchos">
+  <div class="gallery" id="gallery-watchos" role="tabpanel" aria-labelledby="tab-watchos" tabindex="0">
     <div class="shot"><img src="assets/screenshots/watchos_web/Discover.webp" alt="Apple Watch Discover" loading="lazy" width="400" height="487"></div>
     <div class="shot"><img src="assets/screenshots/watchos_web/Favs.webp" alt="Apple Watch Favorites" loading="lazy" width="400" height="487"></div>
     <div class="shot"><img src="assets/screenshots/watchos_web/Stations.webp" alt="Apple Watch Stations" loading="lazy" width="400" height="487"></div>
@@ -375,28 +379,29 @@
   <p class="cmp-proof reveal d2"><span class="cmp-proof-dot"></span><span><b>Macdio never asks for microphone access.</b> The app declares no microphone permission at all, so it cannot listen to your room even if it wanted to. Song ID reads the radio stream itself.</span></p>
   <div class="table-wrap reveal d2" id="compare-table">
     <table class="cmp">
+      <caption class="vh">Macdio compared with Broadcasts, Eter, TuneIn and myTuner, feature by feature</caption>
       <thead>
-        <tr><th></th><th class="me">Macdio</th><th>Broadcasts</th><th>Eter</th><th>TuneIn</th><th>myTuner</th></tr>
+        <tr><th scope="col"><span class="vh">Feature</span></th><th scope="col" class="me">Macdio</th><th scope="col">Broadcasts</th><th scope="col">Eter</th><th scope="col">TuneIn</th><th scope="col">myTuner</th></tr>
       </thead>
       <tbody>
-        <tr class="grp"><td>Only on Macdio</td><td class="me"></td><td></td><td></td><td></td><td></td></tr>
-        <tr class="only"><td>Loved songs sync to Apple Music</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr class="only"><td>Split-track recording</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr class="only"><td>Synced lyrics</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr class="only"><td>Song ID with no microphone access</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr class="only"><td>Bedside Clock Mode</td><td class="me yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr class="grp"><td>The essentials, all covered</td><td class="me"></td><td></td><td></td><td></td><td></td></tr>
-        <tr><td>Song identification</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>Game controller support</td><td class="me yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>Sleep timer</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>Native Mac app</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="yes">✓</td></tr>
-        <tr><td>Apple TV</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>Apple Watch</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>CarPlay</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="yes">✓</td></tr>
-        <tr><td>iCloud sync, no account</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>No ads</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>No subscription</td><td class="me yes">✓</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">·</td><td class="no">·</td></tr>
-        <tr><td>Pricing</td><td class="me">One time</td><td>Free + $7.99</td><td>Free + one time</td><td>Free + subscription</td><td>Free + subscription</td></tr>
+        <tr class="grp"><th scope="row">Only on Macdio</th><td class="me"></td><td></td><td></td><td></td><td></td></tr>
+        <tr class="only"><th scope="row">Loved songs sync to Apple Music</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Split-track recording</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Synced lyrics</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Song ID with no microphone access</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Bedside Clock Mode</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="grp"><th scope="row">The essentials, all covered</th><td class="me"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th scope="row">Song identification</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">Game controller support</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">Sleep timer</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">Native Mac app</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
+        <tr><th scope="row">Apple TV</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
+        <tr><th scope="row">Apple Watch</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
+        <tr><th scope="row">CarPlay</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
+        <tr><th scope="row">iCloud sync, no account</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">No ads</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">No subscription</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr><th scope="row">Pricing</th><td class="me">One time</td><td>Free + $7.99</td><td>Free + one time</td><td>Free + subscription</td><td>Free + subscription</td></tr>
       </tbody>
     </table>
   </div>
@@ -473,6 +478,13 @@
   <a href="guides/find-radio-stream-url.html">How to find a radio station stream URL</a>
   <a href="support.html">Macdio support</a>
   <a href="privacy.html">Privacy policy</a>
+  <a href="accessibility.html">Accessibility statement</a>
+  <a href="transparency.html">Transparency report</a>
+  <a href="presskit.html">Macdio press kit</a>
+  <a href="community.html">Macdio community</a>
+  <a href="submit-station.html">Submit a radio station</a>
+  <a href="tr/" hreflang="tr">Macdio internet radyo (Turkce)</a>
+  <a href="de/" hreflang="de">Macdio Internetradio (Deutsch)</a>
   </nav>
 </div>
 

@@ -4,11 +4,16 @@
   // scroll reveal — IntersectionObserver plus a scroll sweep fallback so nothing
   // ever stays stuck hidden (fast scroll, anchor jumps, long text pages)
   var reveals = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
-  function sweep() {
+  // The first pass runs before anything has scrolled, so whatever it touches is
+  // already on screen. Those elements get a much shorter fade: an .8s fade with
+  // a delay on above-the-fold text was holding LCP back by roughly 900 ms on a
+  // throttled phone, because Chrome does not count an element at opacity 0.
+  function sweep(firstPaint) {
     var vh = window.innerHeight || document.documentElement.clientHeight || 800;
     for (var i = 0; i < reveals.length; i++) {
       var el = reveals[i];
       if (!el.classList.contains('in') && el.getBoundingClientRect().top < vh * 0.92) {
+        if (firstPaint) el.classList.add('first-view');
         el.classList.add('in');
       }
     }
@@ -23,21 +28,37 @@
   } else {
     reveals.forEach(function (el) { el.classList.add('in'); });
   }
-  sweep();
-  window.addEventListener('scroll', sweep, { passive: true });
-  window.addEventListener('load', sweep);
-  window.addEventListener('resize', sweep);
+  sweep(true);
+  window.addEventListener('scroll', function () { sweep(false); }, { passive: true });
+  window.addEventListener('load', function () { sweep(false); });
+  window.addEventListener('resize', function () { sweep(false); });
 
   // platform preview tabs
   var tabs = document.querySelectorAll('.tab');
   var galleries = document.querySelectorAll('.gallery');
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () {
-      var target = tab.getAttribute('data-target');
-      tabs.forEach(function (t) { t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
-      galleries.forEach(function (g) {
-        g.classList.toggle('active', g.id === 'gallery-' + target);
-      });
+  function selectTab(tab, moveFocus) {
+    var target = tab.getAttribute('data-target');
+    tabs.forEach(function (t) {
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    galleries.forEach(function (g) {
+      g.classList.toggle('active', g.id === 'gallery-' + target);
+    });
+    if (moveFocus) tab.focus();
+  }
+  tabs.forEach(function (tab, i) {
+    tab.addEventListener('click', function () { selectTab(tab, false); });
+    tab.addEventListener('keydown', function (e) {
+      var last = tabs.length - 1, next = -1;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') next = i === last ? 0 : i + 1;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') next = i === 0 ? last : i - 1;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = last;
+      if (next < 0) return;
+      e.preventDefault();
+      selectTab(tabs[next], true);
     });
   });
 
@@ -222,14 +243,11 @@
       flagEl.textContent = flag(cc);
       amtEl.textContent = money(e);
     }
+    // Region comes from the browser itself (time zone, then locale). The old
+    // ipwho.is lookup sent every visitor's IP to a third party that the privacy
+    // and transparency pages never listed, and its free tier was returning 429.
     fetch('pricing.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }).then(function (data) {
-      var done = false;
-      function finish(cc) { if (done) return; done = true; apply(cc, data); }
-      var t = setTimeout(function () { finish(guessRegion()); }, 2500);
-      fetch('https://ipwho.is/?fields=country_code', { cache: 'no-store' })
-        .then(function (r) { return r.json(); })
-        .then(function (geo) { clearTimeout(t); finish((geo && geo.country_code) || guessRegion()); })
-        .catch(function () { clearTimeout(t); finish(guessRegion()); });
+      apply(guessRegion(), data);
     }).catch(function () { /* keep the static default price */ });
   })();
 

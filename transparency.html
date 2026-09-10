@@ -26,7 +26,17 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
-<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon-180.png"><link rel="stylesheet" href="redesign.css"></head>
+<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon-180.png"><link rel="stylesheet" href="redesign.css"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Macdio", "item": "https://macdio.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Transparency", "item": "https://macdio.app/transparency.html" }
+  ]
+}
+</script>
+</head>
 <body>
 
 <div id="nav-slot"></div>
@@ -69,15 +79,35 @@
 
   <h2 class="reveal">Dependencies</h2>
   <p class="reveal">Macdio has a minimal dependency footprint. The app itself uses zero third-party Swift packages. It is built entirely with Apple's own frameworks (SwiftUI, SwiftData, AVFoundation, CloudKit, MediaPlayer).</p>
-  <p class="reveal">This website is just as lean. It ships with no web fonts and no 3D libraries. Typography uses the system font already on your Apple device, and every animation is plain CSS and JavaScript. The only external service is:</p>
+  <p class="reveal">This website is just as lean. It ships with no web fonts and no 3D libraries. Typography uses the system font already on your Apple device, and every animation is plain CSS and JavaScript. The external services are:</p>
   <table class="data-table reveal">
     <thead>
-      <tr><th>Name</th><th>Purpose</th><th>Type</th></tr>
+      <tr><th scope="col">Name</th><th scope="col">Purpose</th><th scope="col">Type</th></tr>
     </thead>
     <tbody>
       <tr>
-        <td><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></td>
+        <th scope="row"><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></th>
         <td>Anonymous page-view analytics (website only)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare Web Analytics</a></th>
+        <td>Cookie-free visit counting, added at the edge by the host (website only)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a></th>
+        <td>Station data for the directory page, queried from your browser (website only)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://formspree.io" target="_blank" rel="noopener">Formspree</a></th>
+        <td>Delivers the Submit a Station form. What you type there, including the email address if you fill that field in, goes to Formspree and then to me by email. Nothing on any other page touches it.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Station logo servers</th>
+        <td>On the directory page each station logo is loaded from that station's own server, so those servers see your IP address. The requests are sent with no referrer, and a logo that fails to load is replaced with a local glyph. Nothing is proxied through this site.</td>
         <td><span class="tag-pill">Web</span></td>
       </tr>
     </tbody>

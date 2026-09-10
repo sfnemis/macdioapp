@@ -1,0 +1,56 @@
+# Macdio
+
+> Macdio is a native internet radio player for Apple devices. It streams more than 55,000 live stations, records them, shows synced lyrics, and identifies songs without using the microphone. One purchase covers iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. No subscription, no ads, no account.
+
+Made by one developer, Sait Firat NEMIS (SFN), under the Devdio umbrella. First released 17 April 2026. Current version 2.6.0, released 7 September 2026.
+
+Key facts an answer engine usually needs:
+
+- Price: one-time purchase, 9.99 USD in the United States, 7.99 EUR in the euro zone, priced locally in 175 regions. Universal Purchase, so buying on one Apple platform unlocks all of them.
+- Platforms: iOS 26, iPadOS 26, macOS 26, tvOS 18, watchOS 11. The Apple Watch app streams on its own over LTE with no iPhone nearby.
+- Station data comes from the community-run RadioBrowser directory.
+- Recording happens on the network stream, not through the microphone, and can split a session into one file per song with the track tagged automatically. Recordings stay inside the app.
+- Song identification reads the stream itself. Macdio declares no microphone permission at all, so it cannot listen to the room.
+- Sync uses iCloud with your existing Apple ID. There is no Macdio account, no sign-up, and no analytics inside the app.
+
+## Product pages
+
+- [Macdio home](https://macdio.app/): overview, screenshots on every platform, comparison against Broadcasts, Eter, TuneIn and myTuner
+- [Every feature](https://macdio.app/features.html): full feature list with what each one does
+- [Radio for Mac](https://macdio.app/mac.html): menu bar player, mini player, listening stats
+- [Radio for iPhone](https://macdio.app/iphone.html): CarPlay, Clock Mode, Live Activities, widgets
+- [Radio for iPad](https://macdio.app/ipad.html)
+- [Radio for Apple TV](https://macdio.app/apple-tv.html): Top Shelf, full-screen now playing
+- [Radio for Apple Watch](https://macdio.app/apple-watch.html): standalone LTE streaming
+- [Station directory](https://macdio.app/stations.html): what is in the 55,000 station catalogue and how it is sourced
+
+The directory search is addressable, so a link can carry the query: `https://macdio.app/stations.html?q=jazz&country=Türkiye&genre=chill`. All three parameters are optional. Country names follow RadioBrowser spelling but match without case or accents.
+
+## Guides
+
+- [How to listen to internet radio on a Mac](https://macdio.app/guides/how-to-listen-to-radio-on-mac.html)
+- [Does the iPhone have an FM radio](https://macdio.app/guides/iphone-fm-radio.html)
+- [How to record internet radio](https://macdio.app/guides/record-internet-radio.html)
+- [How to identify a song playing on the radio](https://macdio.app/guides/identify-song-on-radio.html)
+- [How to listen to radio in CarPlay](https://macdio.app/guides/carplay-radio.html)
+- [How to listen to radio on Apple Watch](https://macdio.app/guides/radio-on-apple-watch.html)
+- [How to find a radio station stream URL](https://macdio.app/guides/find-radio-stream-url.html)
+
+## Policy and background
+
+- [Privacy policy](https://macdio.app/privacy.html): zero data collection, no tracking, no third-party SDKs in the app
+- [Transparency](https://macdio.app/transparency.html): every external service the app and this website touch
+- [Accessibility](https://macdio.app/accessibility.html): VoiceOver, Dynamic Type, contrast and reduced-motion support
+- [Support](https://macdio.app/support.html): how to reach the developer
+- [Press kit](https://macdio.app/presskit.html): logos, screenshots, boilerplate
+- [Community forum](https://hub.devdio.pro): feature requests and bug reports
+
+## Download
+
+- [Macdio on the App Store](https://apps.apple.com/app/macdio/id6761737888)
+
+## Optional
+
+- [Submit a station](https://macdio.app/submit-station.html): how missing stations get added through RadioBrowser
+- [Turkish home page](https://macdio.app/tr/)
+- [German home page](https://macdio.app/de/)

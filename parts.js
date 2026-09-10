@@ -39,12 +39,12 @@
           '<a class="nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
           '<a href="' + HOME + '#identify">Features</a>' +
           '<a href="' + HOME + '#preview">Screenshots</a>' +
-          '<a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
+          '<a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>' +
           '<div class="nav-more" id="navMore"><button class="nav-more-btn" id="navMoreBtn" aria-expanded="false" aria-label="More pages">More <span class="chev">▾</span></button>' +
             '<div class="nav-more-menu">' + MORE_LINKS + '</div></div>' +
         '</div>' +
         '<div class="nav-socials">' + SOCIALS + '</div>' +
-        '<a class="nav-appstore" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store"><img src="' + A + 'download_button.svg" alt="Download on the App Store"></a>' +
+        '<a class="nav-appstore" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store"><img src="' + A + 'download_button.svg" alt="Download on the App Store" width="120" height="40"></a>' +
         '<button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>' +
       '</div>' +
     '</nav>' +
@@ -54,7 +54,7 @@
       '<a class="mm-link nav-compare" href="' + HOME + '#compare-table">Compare</a>' +
       '<a class="mm-link" href="' + HOME + '#identify">Features</a>' +
       '<a class="mm-link" href="' + HOME + '#preview">Screenshots</a>' +
-      '<a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio"><span>Livedio</span></a>' +
+      '<a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="' + A + 'assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>' +
       '<a class="mm-small" href="' + P + 'guides/">Guides</a>' +
       '<a class="mm-small" href="' + P + 'iphone.html">Radio for iPhone</a>' +
       '<a class="mm-small" href="' + P + 'mac.html">Radio for Mac</a>' +
@@ -68,13 +68,13 @@
       '<a class="mm-small" href="' + P + 'submit-station.html">Submit Station</a>' +
       '<a class="mm-small" href="' + P + 'stations.html">Stations</a>' +
       '<a class="mm-small" href="' + P + 'presskit.html">Press Kit</a>' +
-      '<a class="mm-download" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store"><img src="' + A + 'download_button.svg" alt="Download on the App Store"></a>' +
+      '<a class="mm-download" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store"><img src="' + A + 'download_button.svg" alt="Download on the App Store" width="120" height="40"></a>' +
     '</div>';
 
   var FOOTER =
     '<footer class="footer"><div class="wrap">' +
       '<a class="footer-brand" href="' + HOME + '"><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>' +
-      '<a class="footer-devdio" href="https://devdio.pro" target="_blank" rel="noopener"><img src="' + A + 'assets/devdio-mark.svg" alt="Devdio">© 2026 Devdio. All rights reserved.</a>' +
+      '<a class="footer-devdio" href="https://devdio.pro" target="_blank" rel="noopener"><img src="' + A + 'assets/devdio-mark.svg" alt="Devdio" width="15" height="15">© 2026 Devdio. All rights reserved.</a>' +
       '<nav class="footer-nav">' +
         '<a href="' + P + 'support.html">Support</a>' +
         '<a href="' + P + 'privacy.html">Privacy</a>' +

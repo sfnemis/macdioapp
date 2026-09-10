@@ -63,17 +63,22 @@
 </header>
 
 <div class="content wide">
+  <form class="station-search" id="stationSearch" role="search" aria-label="Search the radio station directory" action="stations.html" method="get">
   <div class="search-bar reveal">
-    <input type="text" class="search-input" id="searchInput" placeholder="Search stations by name…" autocomplete="off">
-    <button class="search-btn" id="searchBtn">Search</button>
+    <label class="vh" for="searchInput">Station name</label>
+    <input type="search" name="q" class="search-input" id="searchInput" placeholder="Search stations by name…" autocomplete="off">
+    <button class="search-btn" id="searchBtn" type="submit">Search</button>
   </div>
 
   <div class="filters reveal">
-    <select class="filter-select" id="countryFilter"><option value="">All countries</option></select>
-    <select class="filter-select" id="genreFilter"><option value="">All genres</option></select>
+    <label class="vh" for="countryFilter">Country</label>
+    <select class="filter-select" name="country" id="countryFilter"><option value="">All countries</option></select>
+    <label class="vh" for="genreFilter">Genre</label>
+    <select class="filter-select" name="genre" id="genreFilter"><option value="">All genres</option></select>
   </div>
+  </form>
 
-  <div class="results-info" id="resultsInfo"></div>
+  <div class="results-info" id="resultsInfo" role="status" aria-live="polite"></div>
 
   <div id="stationResults">
     <div class="loading"><div class="spinner"></div>Loading popular stations…</div>
@@ -123,6 +128,30 @@ var resultsContainer = document.getElementById('stationResults');
 var resultsInfo = document.getElementById('resultsInfo');
 var pagination = document.getElementById('pagination');
 
+// A search is addressable: stations.html?q=jazz&country=Turkey&genre=chill.
+// Read it before anything else so the first search already reflects the URL.
+// RadioBrowser is a public, community-editable database: a station name, tag or
+// logo URL is untrusted input. Everything below is escaped before it reaches
+// innerHTML, and a logo URL has to be an absolute http(s) address.
+function esc(v) {
+  return String(v == null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+// https only: RadioBrowser stores plenty of http:// logos, and loading one from
+// an https page is mixed content the browser blocks or upgrades anyway. Those
+// stations get the local glyph instead of a broken image and a console error.
+function safeLogoUrl(u) {
+  return /^https:\/\//i.test(String(u || '')) ? esc(u) : '';
+}
+function fold(v) {
+  v = String(v).toLowerCase();
+  return v.normalize ? v.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : v;
+}
+var initialQuery = new URLSearchParams(window.location.search);
+var pendingCountry = initialQuery.get('country') || '';
+if (initialQuery.get('q')) searchInput.value = initialQuery.get('q');
+
 // Populate country filter
 fetch(API_BASE + '/countries?order=stationcount&reverse=true&limit=60')
   .then(function (r) { return r.json(); })
@@ -135,8 +164,22 @@ fetch(API_BASE + '/countries?order=stationcount&reverse=true&limit=60')
         countryFilter.appendChild(opt);
       }
     });
+    // The option only exists now, so a ?country= value can only be applied here.
+    // Match loosely: the directory spells countries the way RadioBrowser does,
+    // and a link built by hand or by an agent rarely gets the case and the
+    // accents right.
+    if (pendingCountry) {
+      var wanted = fold(pendingCountry);
+      for (var i = 0; i < countryFilter.options.length; i++) {
+        if (fold(countryFilter.options[i].value) === wanted) {
+          countryFilter.value = countryFilter.options[i].value;
+          break;
+        }
+      }
+      searchStations(0);
+    }
   })
-  .catch(function () {});
+  .catch(function () { if (pendingCountry) searchStations(0); });
 
 // Common genres
 var genres = ['pop','rock','jazz','classical','electronic','hip hop','country','blues','metal','reggae','latin','folk','indie','ambient','news','talk','sports','oldies','80s','90s','lounge','soul','r&b','punk','dance','house','techno','trance','chill'];
@@ -198,17 +241,17 @@ function renderStations(stations) {
 
   var html = '<div class="station-grid">';
   stations.forEach(function (s) {
-    var icon = '';
-    if (s.favicon && s.favicon.length > 5) {
-      icon = '<img src="' + s.favicon + '" alt="" loading="lazy" onerror="this.parentNode.innerHTML=\'<span class=fallback>📻</span>\'">';
-    } else {
-      icon = '<span class="fallback">📻</span>';
-    }
+    // Station logos live on each station's own server. no-referrer keeps the
+    // visited page out of their logs; a dead logo falls back to the glyph.
+    var logo = safeLogoUrl(s.favicon);
+    var icon = logo.length > 5
+      ? '<img src="' + logo + '" alt="" width="44" height="44" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.innerHTML=\'<span class=fallback>📻</span>\'">'
+      : '<span class="fallback">📻</span>';
 
     var meta = [];
-    if (s.country) meta.push(s.country);
-    if (s.codec) meta.push(s.codec);
-    if (s.bitrate && s.bitrate > 0) meta.push(s.bitrate + ' kbps');
+    if (s.country) meta.push(esc(s.country));
+    if (s.codec) meta.push(esc(s.codec));
+    if (s.bitrate && s.bitrate > 0) meta.push(Number(s.bitrate) + ' kbps');
 
     var tags = '';
     if (s.tags) {
@@ -216,7 +259,7 @@ function renderStations(stations) {
       tags = '<div class="station-tags">';
       tagList.forEach(function (t) {
         t = t.trim();
-        if (t) tags += '<span class="station-tag">' + t + '</span>';
+        if (t) tags += '<span class="station-tag">' + esc(t) + '</span>';
       });
       tags += '</div>';
     }
@@ -224,7 +267,7 @@ function renderStations(stations) {
     html += '<div class="station-card">';
     html += '<div class="station-icon">' + icon + '</div>';
     html += '<div class="station-info">';
-    html += '<div class="station-name" title="' + (s.name || '').replace(/"/g, '&quot;') + '">' + (s.name || 'Unknown') + '</div>';
+    html += '<div class="station-name" title="' + esc(s.name || '') + '">' + esc(s.name || 'Unknown') + '</div>';
     html += '<div class="station-meta">' + meta.join(' · ') + '</div>';
     html += tags;
     html += '</div></div>';
@@ -245,12 +288,30 @@ function renderStations(stations) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-searchBtn.addEventListener('click', function () { searchStations(0); });
-searchInput.addEventListener('keydown', function (e) { if (e.key === 'Enter') searchStations(0); });
-countryFilter.addEventListener('change', function () { searchStations(0); });
-genreFilter.addEventListener('change', function () { searchStations(0); });
+// Keep the query in the URL so a search can be linked, shared, bookmarked and
+// reached directly by a crawler or an agent: stations.html?q=jazz&country=Turkey
+function syncUrl() {
+  if (!window.history || !window.history.replaceState) return;
+  var p = new URLSearchParams();
+  if (searchInput.value.trim()) p.set('q', searchInput.value.trim());
+  if (countryFilter.value) p.set('country', countryFilter.value);
+  if (genreFilter.value) p.set('genre', genreFilter.value);
+  var qs = p.toString();
+  window.history.replaceState(null, '', qs ? 'stations.html?' + qs : 'stations.html');
+}
+function runSearch(page) { syncUrl(); searchStations(page); }
 
-searchStations(0);
+document.getElementById('stationSearch').addEventListener('submit', function (e) {
+  e.preventDefault();
+  runSearch(0);
+});
+countryFilter.addEventListener('change', function () { runSearch(0); });
+genreFilter.addEventListener('change', function () { runSearch(0); });
+
+if (initialQuery.get('genre')) genreFilter.value = initialQuery.get('genre');
+
+// With ?country= the first search waits for the country list to arrive.
+if (!pendingCountry) searchStations(0);
 </script>
 </body>
 </html>
