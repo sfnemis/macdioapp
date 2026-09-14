@@ -6,11 +6,11 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 HOST="macdio.app"
 KEY="80c004ef1f5a429ab1d919978a666da5"   # must match $KEY.txt at the site root
-test -f "$KEY.txt" || { echo "key file missing: $KEY.txt"; exit 1; }
+test -f "public/$KEY.txt" || { echo "key file missing: public/$KEY.txt"; exit 1; }
 BODY=$(python3 - "$HOST" "$KEY" <<'PY'
 import json, re, sys
 host, key = sys.argv[1], sys.argv[2]
-urls = re.findall(r"<loc>([^<]+)</loc>", open("sitemap.xml").read())
+urls = re.findall(r"<loc>([^<]+)</loc>", open("public/sitemap.xml").read())
 assert urls, "sitemap has no urls"
 print(json.dumps({"host": host, "key": key,
                   "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}))

@@ -1,30 +1,11 @@
-.git
-.gitignore
+# Only files inside ./public are published now (see wrangler.jsonc), so this
+# list only has to cover junk that can land in there. It is the second line of
+# defence, not the first one: the first is that the web root is a directory of
+# its own.
 .DS_Store
-wrangler.jsonc
-worker.js
-CNAME
 
-# Wrangler's own state and deploy temp files. Without this they are published
-# as public assets: the account cache and the worker sourcemap were both
-# reachable on macdio.app until 2026-08-20.
-.wrangler
+# Sourcemaps and local backups, which have reached the CDN before
 *.map
-
-# Everything here is published unless this file says otherwise, because
-# wrangler.jsonc serves the whole repository ("directory": "."). On
-# 2026-09-14 these all answered 200 on macdio.app: /CLAUDE.local.md,
-# /docs/superpowers/specs/*.md, /.serena/project.yml,
-# /.serena/project.local.yml and /scripts/indexnow.sh. Agent notes, an
-# internal design spec and build tooling, none of it meant for the CDN.
-# scripts/check-public.sh proves they stay gone after a deploy.
-CLAUDE.md
-CLAUDE.local.md
-docs
-.serena
-scripts
-
-# Local backups that must never reach the CDN
 *.onceki
 *.bak
 *.zip

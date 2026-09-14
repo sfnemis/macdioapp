@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 # Prove that nothing private is reachable on macdio.app.
 #
-# This matters here more than on most sites: wrangler.jsonc publishes the whole
-# repository ("directory": "."), so a new file is public by default and stays
-# public until .assetsignore mentions it. Three rounds of this have already
-# happened: the wrangler account cache and the worker sourcemap in August, then
-# CLAUDE.local.md, docs/ and .serena/ on 2026-09-14.
+# The web root is ./public and nothing outside it can be served, which is what
+# makes most of the list below structurally impossible rather than merely
+# forbidden. It used to be the repository root, and that leaked the wrangler
+# account cache and the worker sourcemap in August, then CLAUDE.local.md,
+# docs/ and .serena/ on 2026-09-14. The check stays because a config can be
+# changed back by accident, and because /public/... proves the swap held.
 #
 # Run after every deploy:  bash scripts/check-public.sh
 set -uo pipefail
@@ -16,8 +17,9 @@ MUST_404=(
   /docs/superpowers/specs/2026-05-16-macdio-web-redesign-design.md
   /.serena/project.yml /.serena/project.local.yml
   /scripts/indexnow.sh /scripts/check-public.sh
-  /worker.js /wrangler.jsonc /.gitignore /.assetsignore
+  /worker.js /wrangler.jsonc /.gitignore /.assetsignore /CNAME
   /.wrangler/cache/wrangler-account.json
+  /public/ /public/index.html
 )
 # The site breaks without these, so a 404 here is also a failure.
 MUST_200=(/ /index.html /mac.html /pricing.json /parts.js /sitemap.xml /robots.txt)

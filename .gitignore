@@ -1,3 +1,6 @@
 # macOS
 .DS_Store
 **/.DS_Store
+
+# Local agent notes, never committed and never deployed
+CLAUDE.local.md

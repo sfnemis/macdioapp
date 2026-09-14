@@ -23,12 +23,15 @@ saying what happened to it.
 - [x] **`scripts/check-public.sh` added.** Probes 12 private paths for 404 and
   7 public ones for 200, and exits non-zero on either failure. Run it after
   every deploy.
-- [ ] **Root cause is still open: `wrangler.jsonc` has `"directory": "."`,**
-  so every new file is public until someone remembers `.assetsignore`. Three
-  rounds of leaks have come from this. The real fix is moving the site into a
-  `public/` directory the way livedio-web does, where nothing outside it can
-  ever ship. That is a move of ~1,100 files plus CNAME and path rewrites, so
-  it needs its own session.
+- [x] **Root cause fixed: the web root is `./public` now.** `wrangler.jsonc`
+  had `"directory": "."`, so every new file was public until someone
+  remembered `.assetsignore`, and three separate leaks came from it. The 47
+  top-level site entries (144 files) moved under `public/` with `git mv`;
+  `worker.js`, `wrangler.jsonc`, `CNAME`, `scripts/`, `docs/`, `.serena/` and
+  `CLAUDE.local.md` stay outside it and can no longer be served at all.
+  `.assetsignore` shrank to the junk that can still land inside `public/`, and
+  `scripts/indexnow.sh` now reads `public/sitemap.xml`. URLs are unchanged: the
+  assets directory is the URL root either way.
 - [ ] **Meta descriptions on `de/index.html` and `tr/index.html` were not
   touched.** If the "mac radio" variant matters in those markets, they need
   their own wording rather than a translation of this one.

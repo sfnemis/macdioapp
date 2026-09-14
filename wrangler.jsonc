@@ -1,12 +1,18 @@
 {
   // Cloudflare Workers static assets config for macdio.app
+  //
+  // "directory" is ./public and must stay that way. It used to be ".", which
+  // made the whole repository the public web root, and every file was served
+  // until .assetsignore happened to name it. That leaked the wrangler account
+  // cache, the worker sourcemap, CLAUDE.local.md, docs/ and .serena/ across
+  // three separate incidents. Anything outside ./public cannot ship now.
   // Deploy: npx wrangler deploy   (needs `npx wrangler login` once)
   // Custom domain: add macdio.app under Workers > macdio-web > Settings > Domains & Routes
   "name": "macdio-web",
   "main": "worker.js",
   "compatibility_date": "2026-08-01",
   "assets": {
-    "directory": ".",
+    "directory": "./public",
     "html_handling": "none",
     "binding": "ASSETS"
   }
