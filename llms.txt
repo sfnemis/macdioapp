@@ -32,6 +32,7 @@ The directory search is addressable, so a link can carry the query: `https://mac
 - [How to listen to internet radio on a Mac](https://macdio.app/guides/how-to-listen-to-radio-on-mac.html)
 - [Does the iPhone have an FM radio](https://macdio.app/guides/iphone-fm-radio.html)
 - [How to record internet radio](https://macdio.app/guides/record-internet-radio.html)
+- [Best internet radio apps for Mac and iPhone, compared](https://macdio.app/guides/best-internet-radio-apps.html)
 - [How to identify a song playing on the radio](https://macdio.app/guides/identify-song-on-radio.html)
 - [How to listen to radio in CarPlay](https://macdio.app/guides/carplay-radio.html)
 - [How to listen to radio on Apple Watch](https://macdio.app/guides/radio-on-apple-watch.html)

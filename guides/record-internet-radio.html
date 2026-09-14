@@ -5,17 +5,17 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>How to Record Internet Radio on Mac and iPhone (2026)</title>
-<meta name="description" content="Record a live stream straight from the network with no microphone, and get each song as its own tagged file. Covers what is legal and how one tap does it.">
+<title>How to Record Internet Radio on a Mac (Step by Step)</title>
+<meta name="description" content="Three ways to record internet radio on a Mac, plus what works on iPhone: a player with recording built in, a system audio capture tool, and Audacity with a virtual audio device.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://macdio.app/guides/record-internet-radio.html">
-<meta property="og:title" content="How to Record Internet Radio on Mac and iPhone (2026)">
-<meta property="og:description" content="Record a live stream straight from the network with no microphone, and get each song as its own tagged file. Covers what is legal and how one tap does it.">
+<meta property="og:title" content="How to Record Internet Radio on a Mac (Step by Step)">
+<meta property="og:description" content="Three ways to record internet radio on a Mac, plus what works on iPhone: a player with recording built in, a system audio capture tool, and Audacity with a virtual audio device.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
-<meta name="twitter:title" content="How to Record Internet Radio on Mac and iPhone (2026)">
-<meta name="twitter:description" content="Record a live stream straight from the network with no microphone, and get each song as its own tagged file. Covers what is legal and how one tap does it.">
+<meta name="twitter:title" content="How to Record Internet Radio on a Mac (Step by Step)">
+<meta name="twitter:description" content="Three ways to record internet radio on a Mac, plus what works on iPhone: a player with recording built in, a system audio capture tool, and Audacity with a virtual audio device.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/guides/record-internet-radio.html">
@@ -23,12 +23,13 @@
 <meta property="og:site_name" content="Macdio">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "How to Record Internet Radio on Mac and iPhone (2026)",
+  "headline": "How to Record Internet Radio on a Mac",
   "datePublished": "2026-08-09",
-  "dateModified": "2026-08-31",
+  "dateModified": "2026-09-14",
   "author": {
     "@type": "Person",
     "name": "Sait Firat NEMIS",
@@ -53,16 +54,57 @@
     "@type": "WebPage",
     "@id": "https://macdio.app/guides/record-internet-radio.html"
   },
-  "description": "Record a live stream straight from the network with no microphone, and get each song as its own tagged file. Covers what is legal and how one tap does it.",
+  "description": "Three ways to record internet radio on a Mac, plus what works on iPhone: a player with recording built in, a system audio capture tool, and Audacity with a virtual audio device.",
   "inLanguage": "en"
-}</script>
+}
+</script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"What quality are the recordings?","acceptedAnswer":{"@type":"Answer","text":"The stream's own quality. Macdio saves the audio exactly as the station broadcasts it, with no re-encoding loss."}},
-{"@type":"Question","name":"Where do recordings live?","acceptedAnswer":{"@type":"Answer","text":"Locally on your device, listed in the Recordings tab, where each track can be played or deleted. They stay inside the app."}},
-{"@type":"Question","name":"What format are the recordings?","acceptedAnswer":{"@type":"Answer","text":"Whatever the station broadcasts, usually MP3 or AAC. Macdio writes the stream's own bytes, so nothing is converted and no quality is lost on the way to disk."}},
-{"@type":"Question","name":"Can I record while using other apps?","acceptedAnswer":{"@type":"Answer","text":"Yes. Recording follows playback, so it continues while you switch apps or lock the phone."}},
-{"@type":"Question","name":"Can I record on Apple Watch or Apple TV?","acceptedAnswer":{"@type":"Answer","text":"Recording is a Mac and iPhone feature. Favorites and saved songs still sync everywhere."}}]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What quality are the recordings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Identical to the stream. The incoming audio is written as it arrives with no re-encode, so a 128 kbps station gives a 128 kbps file and a 320 kbps station gives a 320 kbps file."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I export a recording to Finder or the Files app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Recordings stay inside the app on your device, where you can play or delete them. There is no share, export or iCloud file sync for them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I record while using other apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I record on Apple Watch or Apple TV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Recording is a Mac, iPhone and iPad feature. The watch and TV apps play stations and control playback."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I record a radio show that airs at night?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start the recording before you go to bed and let the three hour limit end it, or raise that limit in settings if the show is longer. There is no scheduler that starts a recording on its own."
+      }
+    }
+  ]
+}
 </script>
 <link rel="stylesheet" href="/redesign.css">
 <script>window.MACDIO_ASSETS='/';window.MACDIO_HOME='/';window.MACDIO_PAGES='/';</script>
@@ -92,64 +134,119 @@
   ]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to record internet radio on a Mac",
+  "description": "Record an internet radio stream on a Mac with a player that has recording built in.",
+  "totalTime": "PT2M",
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "A Mac or iPhone"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "A radio player with recording built in"
+    }
+  ],
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Play the station",
+      "text": "Open the radio app and start the station you want to record.",
+      "url": "https://macdio.app/guides/record-internet-radio.html#method-1"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Press record",
+      "text": "Press the record button in the player. The incoming stream is written to disk with no re-encode."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Choose the mode",
+      "text": "Choose Continuous for one file per session, or Split by Track to cut the session at every song change."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Leave it running",
+      "text": "Keep using other apps. The recording captures the stream rather than the speakers, so nothing else lands in the file."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stop and play back",
+      "text": "Press stop. The session and its split tracks appear in the Recordings tab on the device."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div id="nav-slot"></div>
 <main class="platform-page">
 <header class="page-head">
-  <p class="eyebrow reveal"><a href="/guides/" style="color:inherit;">Guides</a></p>
-  <h1 class="reveal d1">Record internet radio, <span class="grad">song by song.</span></h1>
-  <p class="reveal d1">Taping the radio is as old as radio itself. Here is how it works on a Mac and an iPhone today, and how a whole show turns into named, individual tracks.</p>
+<p class="eyebrow reveal"><a href="/guides/" style="color:inherit;">Guides</a></p>
+<h1 class="reveal d1">How to record <span class="grad">internet radio on a Mac</span></h1>
+<p class="reveal d1">Three ways to do it, what each one costs you, and where the files end up.</p>
 </header>
 <div class="content">
-  <p class="reveal">Yes, internet radio can be recorded, and on a Mac or an iPhone it takes one tap in a player that supports it. The recording is the stream itself rather than whatever the speakers happen to be playing, so it stays clean and keeps the broadcast's own quality. What follows is how it works on each device, how large the files get, and where they live afterwards.</p>
+<p class="reveal"><strong>The easiest way to record internet radio on a Mac is a radio player with recording built in, because it saves the stream itself and needs no audio routing. Recording the whole system with a capture tool works too, and it is the only option when the audio comes from a website or an app that cannot record. On an iPhone, only the built-in route exists.</strong></p>
 
-  <h2 class="reveal">Is recording radio allowed?</h2>
-  <p class="reveal">Recording a broadcast for your own personal, private listening is a long-standing practice in most countries, the same tradition as taping FM onto a cassette. What stays personal stays simple: do not redistribute or re-publish recordings, and check your own country's rules if unsure.</p>
+<h2 class="reveal">Why record internet radio at all</h2>
+<p class="reveal">Most requests come down to one of three things: a show that airs while you are asleep or at work, a DJ set you want to keep because it will never be posted anywhere, or a single track you heard once and want to find again. Streams are live and nothing is stored for you, so if you want it later, you have to catch it as it goes past.</p>
 
-  <h2 class="reveal">The hard way</h2>
-  <p class="reveal">On a Mac, audio-capture tools can record whatever the system plays. If you are still choosing how to play radio there, start with <a class="inline" href="/guides/how-to-listen-to-radio-on-mac.html">how to listen to internet radio on a Mac</a>. They work, but they capture one long file with no idea where a song starts or ends, and notification sounds land in the recording too. On an iPhone, system audio capture is not available to apps at all, so this route does not exist.</p>
+<h2 class="reveal">Method 1: record with a player that has it built in</h2>
+<p class="reveal">A player that records writes the incoming stream to disk. Nothing is re-encoded, no system sounds leak in, and a notification during the recording does not end up in the file. <a class="inline" href="/mac.html">Macdio</a> does this on Mac and on <a class="inline" href="/iphone.html">iPhone</a> with the same button.</p>
+<p class="reveal">Play a station, then press record. Choose Continuous for one file per session, or Split by Track to have the session cut at every song change. Leave it running, use other apps, and press stop when you are done. The session appears in the Recordings tab straight away.</p>
+<p class="reveal">Split by Track is the part worth knowing about. It watches the song information arriving inside the stream and cuts at each change, so a two hour show becomes a list of named tracks with artwork instead of one long file you have to scrub through. When a station sends nothing useful, which plenty of them do, Macdio works the song out from the audio it already has in hand, so the naming keeps going with the screen off and without ever asking for microphone permission. The <a class="inline" href="/guides/identify-song-on-radio.html">song identification guide</a> covers how that part works.</p>
+<p class="reveal">The trade is that a built-in recorder only records what the player can play. It captures internet radio and nothing else, so a video call or a browser tab is out of scope.</p>
 
-  <h2 class="reveal">The one-tap way</h2>
-  <p class="reveal">Macdio records the stream itself rather than the speaker output, on both <a class="inline" href="/mac.html">Mac</a> and <a class="inline" href="/iphone.html">iPhone</a>. Tap the record button while listening and the audio is saved in the stream's original quality, clean of any system sounds. Two modes:</p>
-  <div class="support-cards">
-    <div class="support-card reveal"><h3>Continuous</h3><p>One file for the whole session, exactly as broadcast. Ideal for shows, interviews and DJ sets.</p></div>
-    <div class="support-card reveal"><h3>Split by Track</h3><p>Macdio watches the station's song data and cuts the session into individual tracks, each named and carrying its own artwork.</p></div>
-    <div class="support-card reveal"><h3>Yours to keep</h3><p>Recordings stay on your device, playable in the app and exportable any time. Nothing is uploaded anywhere.</p></div>
-  </div>
+<h2 class="reveal">Method 2: capture the whole system with Audio Hijack</h2>
+<p class="reveal">Audio Hijack from Rogue Amoeba records audio from any application on a Mac, or all the system audio at once, so it covers streams that live in a browser tab or in a player with no recorder. Version 4.6.0 runs on macOS 14.4 through macOS 27 and can be downloaded free, with limitations applied until you buy a licence, according to Rogue Amoeba's product page (checked 14 September 2026).</p>
+<p class="reveal">You pick the source application, add a recorder block, and press the run button. It is more setup than a record button, and there is a catch worth planning around: whatever the Mac plays lands in the file. A Slack notification at minute forty is in the recording for good. It also gives you one long file with no idea where a song starts or ends, so the tracklist work is yours to do afterwards.</p>
 
-  <h2 class="reveal">How to record internet radio on a Mac</h2>
-  <p class="reveal">In Macdio, start the station and click record. The audio is written as it arrives, so nothing is re-encoded and no system sounds leak in. Split by Track mode watches the song information coming from the station and cuts the session at each change, so a two hour show becomes a list of named tracks with artwork instead of one long file you have to scrub through.</p>
+<h2 class="reveal">Method 3: Audacity plus a virtual audio device</h2>
+<p class="reveal">Audacity is free and open source, which makes it the usual answer on forums, but macOS does not let an app record system audio on its own. You have to install a virtual audio device first, such as the free and open source BlackHole, route the Mac's output through it, then set Audacity to record from that device. You will also want to hear what you are recording, which means a multi-output device in Audio MIDI Setup so the sound reaches both your speakers and the recorder.</p>
+<p class="reveal">It works, it costs nothing, and it is the fiddliest of the three. The upside is that Audacity is an editor, so trimming, fading and exporting in a specific format are right there once the capture is done.</p>
 
-  <h2 class="reveal">How to record radio on an iPhone</h2>
-  <p class="reveal">The same button, the same result. Tap record while a station plays and the recording continues while you use other apps, because it is the stream being written rather than the microphone listening. Recordings appear in the Recordings tab as soon as you stop.</p>
+<h2 class="reveal">Which method to use</h2>
+<p class="reveal">If the station is in a radio app, use the app's own recorder. It is the only route that gives you clean audio and per-track splitting without extra software. If the audio is somewhere else, or you are recording a podcast interview and a music bed at the same time, Audio Hijack is the tool built for that job. Audacity is the choice when the budget is zero and an afternoon of setup is acceptable.</p>
 
-  <h2 class="reveal">How large do the files get?</h2>
-  <p class="reveal">A recording is as heavy as the stream, since nothing is added or compressed further. At 128 kbps, the most common bitrate, that is roughly 58 MB an hour, so a full evening of radio is about 350 MB. A 320 kbps station is around 2.4 MB a minute, and a low bitrate talk station can be a quarter of that. Split by Track makes the arithmetic friendlier in practice, because you keep the three songs you wanted and delete the rest.</p>
+<h2 class="reveal">How to record radio on an iPhone</h2>
+<p class="reveal">Only the first method exists here. iOS gives no app access to system audio capture, so there is no iPhone equivalent of Audio Hijack, and screen recording will not save a clean stream either. A player with recording built in is the whole list.</p>
+<p class="reveal">In Macdio it is the same button as on the Mac. Tap record while a station plays, and the recording continues while you use other apps, because it is the stream being written rather than a microphone listening. Recordings appear in the Recordings tab as soon as you stop.</p>
 
-  <h2 class="reveal">What format the files are in</h2>
-  <p class="reveal">A recording keeps whatever the station sends. An MP3 station gives you an .mp3 and an AAC station gives you an .aac, and nothing is re-encoded on the way to disk, so the file sounds exactly like the stream did. Tracks that Split by Track cuts out are written as .m4a. There is no quality setting to get wrong here, because there is no second encode.</p>
+<h2 class="reveal">Can you schedule a recording?</h2>
+<p class="reveal">Not in Macdio. There is no timer that starts a station at 21:00 on Thursday, and it is on the request list rather than in the app. On a Mac, Audio Hijack is the closest thing available today, or a Shortcuts automation can open a station at a set time while you press record yourself.</p>
+<p class="reveal">What Macdio does have is the opposite guard: a session stops on its own after three hours, so a recording you forgot about does not eat the disk overnight. The limit is adjustable in settings when you are taping a long show, and the time left is shown while the recording runs.</p>
 
-  <h2 class="reveal">How long one recording can run</h2>
-  <p class="reveal">A session stops on its own after three hours. That is the default, and it exists so a recording you forgot about does not eat the disk overnight. The limit is adjustable in settings if you are taping a long show, and the time left is shown while the recording runs.</p>
+<h2 class="reveal">What stops a recording early</h2>
+<p class="reveal">Two things end a session before you do, and both of them save the file rather than lose it. The first is the three hour limit above. The second is the disk. Macdio watches free space while it writes, warns you every five minutes once the drive drops under 500 MB, and stops the recording with a notification if space gets critical, so the worst case is a shorter file rather than a full disk and a corrupt one. A long overnight session on a nearly full laptop is the case to watch, because a 320 kbps station writes about 144 MB an hour.</p>
 
-  <h2 class="reveal">When a station sends no song titles</h2>
-  <p class="reveal">Plenty of stations send nothing useful in the stream, or send the same promo line for hours. Split by Track then has nothing to name the file with, so Macdio works the song out from the audio it already has in hand. It reads the stream itself, which is why this happens with the screen off and why the app never asks for microphone permission. Stations that do send proper titles are trusted first, because the station knows what it is playing better than any matcher does. The <a class="inline" href="/guides/identify-song-on-radio.html">song identification guide</a> goes through it in more detail.</p>
+<h2 class="reveal">How large do the files get?</h2>
+<p class="reveal">A recording is as heavy as the stream, since nothing is added or compressed further. At 128 kbps, the most common bitrate, that is roughly 58 MB an hour, so a full evening of radio is about 350 MB. A 320 kbps station is around 2.4 MB a minute, and a low bitrate talk station can be a quarter of that. Split by Track makes the arithmetic friendlier in practice, because you keep the three songs you wanted and delete the rest.</p>
 
-  <h2 class="reveal">Where recordings live</h2>
-  <p class="reveal">On your own device, in the Recordings tab, where each session and each split track can be played or deleted. They stay inside the app rather than landing in your music library or the Files app, which keeps a personal recording personal.</p>
+<h2 class="reveal">What format the files are in</h2>
+<p class="reveal">A recording keeps whatever the station sends. An MP3 station gives you an .mp3 and an AAC station gives you an .aac, with nothing re-encoded on the way to disk, so the file sounds exactly like the stream did. Tracks that Split by Track cuts out are written as .m4a. There is no quality setting to get wrong here, because there is no second encode.</p>
 
-  <h2 class="reveal">Frequently asked questions</h2>
-  <div class="faq reveal">
-    <details class="faq-item"><summary>What quality are the recordings?</summary><div class="faq-a">The stream's own quality. Macdio saves the audio exactly as the station broadcasts it, with no re-encoding loss.</div></details>
-    <details class="faq-item"><summary>Where do recordings live?</summary><div class="faq-a">Locally on your device, listed in the Recordings tab, where each track can be played or deleted. They stay inside the app.</div></details>
-    <details class="faq-item"><summary>What format are the recordings?</summary><div class="faq-a">Whatever the station broadcasts, usually MP3 or AAC. Macdio writes the stream's own bytes, so nothing is converted and no quality is lost on the way to disk.</div></details>
-    <details class="faq-item"><summary>Can I record while using other apps?</summary><div class="faq-a">Yes. Recording follows playback, so it continues while you switch apps or lock the phone.</div></details>
-    <details class="faq-item"><summary>Can I record on Apple Watch or Apple TV?</summary><div class="faq-a">Recording is a Mac and iPhone feature. Favorites and saved songs still sync everywhere.</div></details>
-  </div>
+<h2 class="reveal">Where the recordings live</h2>
+<p class="reveal">Inside the app, on your own device, in the Recordings tab where each session and each split track can be played or deleted. They are not copied into your music library, they do not appear in the Files app or Finder, and there is no share or export button. That is a deliberate limit for a personal recording feature, not something waiting to be finished, and it keeps a personal recording personal. Nothing is uploaded anywhere.</p>
 
-  <h2 class="reveal">Ready to try it?</h2>
-  <p class="reveal">Get Macdio on the <a href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store</a>. One purchase, every Apple device, no subscription.</p>
+<h2 class="reveal">Is recording internet radio legal?</h2>
+<p class="reveal">Recording a broadcast for your own private listening is a long-standing practice in most countries, the same tradition as taping FM onto a cassette. What stays personal stays simple: do not redistribute or re-publish the recordings, and check your own country's rules if you are unsure. This is general information rather than legal advice.</p>
+
+<h2 class="reveal">Frequently asked questions</h2>
+<div class="faq reveal">
+<details class="faq-item"><summary>What quality are the recordings?</summary><div class="faq-a">Identical to the stream. The incoming audio is written as it arrives with no re-encode, so a 128 kbps station gives a 128 kbps file and a 320 kbps station gives a 320 kbps file.</div></details>
+<details class="faq-item"><summary>Can I export a recording to Finder or the Files app?</summary><div class="faq-a">No. Recordings stay inside the app on your device, where you can play or delete them. There is no share, export or iCloud file sync for them.</div></details>
+<details class="faq-item"><summary>Can I record while using other apps?</summary><div class="faq-a">Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off.</div></details>
+<details class="faq-item"><summary>Can I record on Apple Watch or Apple TV?</summary><div class="faq-a">No. Recording is a Mac, iPhone and iPad feature. The watch and TV apps play stations and control playback.</div></details>
+<details class="faq-item"><summary>How do I record a radio show that airs at night?</summary><div class="faq-a">Start the recording before you go to bed and let the three hour limit end it, or raise that limit in settings if the show is longer. There is no scheduler that starts a recording on its own.</div></details>
+</div>
+
+<h2 class="reveal">Ready to try it?</h2>
+<p class="reveal">Get Macdio on the <a href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store</a>. One purchase, every Apple device, no subscription.</p>
 </div>
 </main>
 <div id="footer-slot">
@@ -164,7 +261,7 @@
   <a href="../stations.html">Internet radio station directory</a>
   <a href="../guides/">Radio guides</a>
   <a href="../guides/how-to-listen-to-radio-on-mac.html">How to listen to internet radio on a Mac</a>
-  <a href="../guides/iphone-fm-radio.html">Does the iPhone have an FM radio</a>
+  <a href="../guides/iphone-fm-radio.html">Does the iPhone have an FM radio</a> <a href="../guides/best-internet-radio-apps.html">Best internet radio apps compared</a>
   <a href="../guides/identify-song-on-radio.html">How to identify a song playing on the radio</a>
   <a href="../guides/carplay-radio.html">How to listen to radio in CarPlay</a>
   <a href="../guides/radio-on-apple-watch.html">How to listen to radio on Apple Watch</a>
