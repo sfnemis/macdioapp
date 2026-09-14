@@ -11,12 +11,18 @@ CNAME
 .wrangler
 *.map
 
-# Agent instructions and internal specs. Both were reachable on macdio.app:
-# /CLAUDE.local.md and /docs/superpowers/specs/*.md both answered 200 on
-# 2026-09-14, publishing local filesystem paths and internal notes.
+# Everything here is published unless this file says otherwise, because
+# wrangler.jsonc serves the whole repository ("directory": "."). On
+# 2026-09-14 these all answered 200 on macdio.app: /CLAUDE.local.md,
+# /docs/superpowers/specs/*.md, /.serena/project.yml,
+# /.serena/project.local.yml and /scripts/indexnow.sh. Agent notes, an
+# internal design spec and build tooling, none of it meant for the CDN.
+# scripts/check-public.sh proves they stay gone after a deploy.
 CLAUDE.md
 CLAUDE.local.md
 docs
+.serena
+scripts
 
 # Local backups that must never reach the CDN
 *.onceki
