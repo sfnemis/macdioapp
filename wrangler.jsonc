@@ -11,6 +11,14 @@
   "name": "macdio-web",
   "main": "worker.js",
   "compatibility_date": "2026-08-01",
+
+  // macdio.app is a custom domain, so the workers.dev subdomain served
+  // nothing but a second public copy of the site: macdio-web.sfn-test
+  // .workers.dev answered 200, and so did a preview URL per retained
+  // version, eleven hostnames on 2026-09-14. Any future mistake would have
+  // been exposed on all of them, and each one is a host that ignores the
+  // canonical the pages carry.
+  "workers_dev": false,
   "assets": {
     "directory": "./public",
     "html_handling": "none",
