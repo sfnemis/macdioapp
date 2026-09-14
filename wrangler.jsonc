@@ -23,5 +23,18 @@
     "directory": "./public",
     "html_handling": "none",
     "binding": "ASSETS"
-  }
+  },
+
+  // Both domains were attached in the dashboard and named nowhere in the repo,
+  // so `wrangler deploy` ended with "No targets deployed for macdio-web" and
+  // the routing lived only in a web UI. Declared here it survives a rebuild.
+  // www.macdio.app 301s to the apex.
+  "routes": [
+    { "pattern": "macdio.app", "custom_domain": true },
+    { "pattern": "www.macdio.app", "custom_domain": true }
+  ],
+
+  // Nothing was recorded while /CLAUDE.local.md was public, so there is no way
+  // to know whether anyone fetched it. Logs cost nothing at this traffic.
+  "observability": { "enabled": true }
 }

@@ -5,6 +5,17 @@ saying what happened to it.
 
 ## 2026-09-14
 
+- [x] **Both custom domains are declared in `wrangler.jsonc` now.** `macdio.app`
+  and `www.macdio.app` were attached in the dashboard and named nowhere in the
+  repo, so `wrangler deploy` reported "No targets deployed for macdio-web" and
+  the routing existed only in a web UI. `www.macdio.app` was never probed during
+  the leak audit either; it 301s to the apex and every private path is 404
+  through it. `check-public.sh` checks it now instead of assuming it.
+- [x] **Workers Logs enabled** (`"observability": { "enabled": true }`). While
+  `/CLAUDE.local.md` was public nothing was recorded, so there is no way to know
+  whether anybody fetched it. At ~1.5k invocations a day the logs cost nothing
+  and the next incident will have evidence.
+
 - [x] **The workers.dev subdomain was a second public copy of the site.**
   `macdio-web.sfn-test.workers.dev` answered 200, and so did a preview URL for
   each of the ten retained versions: eleven hostnames serving pages whose
