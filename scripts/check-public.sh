@@ -40,7 +40,16 @@ for path in "${MUST_200[@]}"; do
   fi
 done
 
+# macdio.app is a custom domain, so the workers.dev subdomain would only be a
+# second public copy of the site on a host that ignores the pages' canonical.
+# workers_dev is false in wrangler.jsonc; this proves it stayed false.
+dev_code=$(curl -s -o /dev/null -w '%{http_code}' https://macdio-web.sfn-test.workers.dev/)
+if [ "$dev_code" = "200" ]; then
+  echo "LEAK: macdio-web.sfn-test.workers.dev serves the site again, expected it disabled"
+  fail=1
+fi
+
 if [ "$fail" = 0 ]; then
-  echo "$HOST: ${#MUST_404[@]} private paths hidden, ${#MUST_200[@]} public paths served"
+  echo "$HOST: ${#MUST_404[@]} private paths hidden, ${#MUST_200[@]} public paths served, workers.dev off"
 fi
 exit "$fail"

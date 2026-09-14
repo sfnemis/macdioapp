@@ -5,6 +5,22 @@ saying what happened to it.
 
 ## 2026-09-14
 
+- [x] **The workers.dev subdomain was a second public copy of the site.**
+  `macdio-web.sfn-test.workers.dev` answered 200, and so did a preview URL for
+  each of the ten retained versions: eleven hostnames serving pages whose
+  canonical points at macdio.app. `"workers_dev": false` in `wrangler.jsonc`
+  turned both off, and `scripts/check-public.sh` now fails if the subdomain
+  comes back. `livedio-web.sfn-test.workers.dev` already 404s.
+- [x] **Checked whether the leaked files were picked up elsewhere.** No Wayback
+  captures of `/CLAUDE.local.md`, `/.serena/*` or `/docs/*` (CDX filter query
+  returned nothing while a control query for `macdio.app/` returned a 2026-09-10
+  capture). Nothing in search results for those paths or for the workers.dev
+  hostname.
+- [ ] **Re-run the Wayback check once archive.org is back up.** The domain-wide
+  CDX listing hit an "Internet Archive services are temporarily offline" page on
+  2026-09-14, so only the filtered query was answered. The evidence points to
+  no capture, but one query is not a clean confirmation.
+
 - [x] **Homepage meta description should carry the "mac radio" variant.**
   Requested by Sait. `index.html` now opens with "Mac radio app with 55,000+
   stations" across the description, og:description and twitter:description,
