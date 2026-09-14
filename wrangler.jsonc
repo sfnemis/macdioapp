@@ -34,7 +34,13 @@
     { "pattern": "www.macdio.app", "custom_domain": true }
   ],
 
-  // Nothing was recorded while /CLAUDE.local.md was public, so there is no way
-  // to know whether anyone fetched it. Logs cost nothing at this traffic.
+  // Worth knowing what this does and does not cover: assets win over the Worker
+  // by default, so worker.js only runs when no asset matches. A successful
+  // fetch of /CLAUDE.local.md was an asset hit and would never have appeared in
+  // these logs. What does appear is every miss, which is exactly the shape of a
+  // scanner walking /.env, /.git/config and /CLAUDE.md, so this is scanner
+  // visibility rather than leak visibility. Logging asset hits would need
+  // assets.run_worker_first, which bills an invocation per request.
+  // Prevention stays scripts/check-public.sh. Logs cost nothing at 1.5k/day.
   "observability": { "enabled": true }
 }

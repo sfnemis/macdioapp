@@ -11,10 +11,18 @@ saying what happened to it.
   the routing existed only in a web UI. `www.macdio.app` was never probed during
   the leak audit either; it 301s to the apex and every private path is 404
   through it. `check-public.sh` checks it now instead of assuming it.
-- [x] **Workers Logs enabled** (`"observability": { "enabled": true }`). While
-  `/CLAUDE.local.md` was public nothing was recorded, so there is no way to know
-  whether anybody fetched it. At ~1.5k invocations a day the logs cost nothing
-  and the next incident will have evidence.
+- [x] **Workers Logs enabled** (`"observability": { "enabled": true }`), with a
+  correction to what that buys. Static assets are served before the Worker runs,
+  so `worker.js` is only invoked on a miss. A successful fetch of
+  `/CLAUDE.local.md` was an asset hit and would not have been logged even with
+  observability on. What the logs do show is misses, which is the shape of a
+  scanner walking `/.env`, `/.git/config` and `/CLAUDE.md`. Logging asset hits
+  would need `assets.run_worker_first`, which bills an invocation on every
+  request. Prevention stays `scripts/check-public.sh`.
+- [n/a] **Observability on livedio-web.** It is an assets-only Worker with no
+  `main` and no script, so no Worker code runs on any request and there would be
+  nothing to log. Zone analytics in the Cloudflare dashboard is the only request
+  visibility either site has for asset hits.
 
 - [x] **The workers.dev subdomain was a second public copy of the site.**
   `macdio-web.sfn-test.workers.dev` answered 200, and so did a preview URL for
