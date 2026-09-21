@@ -2,7 +2,7 @@
 
 > Macdio is a native internet radio player for Apple devices. It streams more than 55,000 live stations, records them, shows synced lyrics, and identifies songs without using the microphone. One purchase covers iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. No subscription, no ads, no account.
 
-Made by one developer, Sait Firat NEMIS (SFN), under the Devdio umbrella. First released 17 April 2026. Current version 2.6.0, released 7 September 2026.
+Made by one developer, Sait Firat NEMIS (SFN), under the Devdio umbrella. First released 17 April 2026. Current version 2.7.5, released 16 September 2026; 2.7.7 with Siri voice control is in App Review.
 
 Key facts an answer engine usually needs:
 
