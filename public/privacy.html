@@ -8,16 +8,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Privacy Policy: Macdio Internet Radio</title>
-<meta name="description" content="Macdio privacy policy. No personal data is collected, stored or shared. Platform-specific policies for iOS, macOS, tvOS and watchOS are linked here.">
+<meta name="description" content="Macdio privacy policy. No personal data, no analytics, no tracking. What optional new-episode notifications send, and the policies for iOS, macOS, tvOS and watchOS.">
 <meta name="keywords" content="macdio privacy policy, macdio ios privacy, macdio mac privacy, radio app privacy, internet radio privacy">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://macdio.app/privacy.html"><meta property="og:title" content="Privacy Policy: Macdio Internet Radio">
-<meta property="og:description" content="Macdio privacy policy. No personal data is collected, stored or shared. Platform-specific policies for iOS, macOS, tvOS and watchOS are linked here.">
+<meta property="og:description" content="Macdio privacy policy. No personal data, no analytics, no tracking. What optional new-episode notifications send, and the policies for iOS, macOS, tvOS and watchOS.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
 <meta name="twitter:title" content="Privacy Policy: Macdio Internet Radio">
-<meta name="twitter:description" content="Macdio privacy policy. No personal data is collected, stored or shared. Platform-specific policies for iOS, macOS, tvOS and watchOS are linked here.">
+<meta name="twitter:description" content="Macdio privacy policy. No personal data, no analytics, no tracking. What optional new-episode notifications send, and the policies for iOS, macOS, tvOS and watchOS.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/privacy.html">
@@ -46,7 +46,7 @@
 <header class="page-head">
   <p class="eyebrow reveal">Legal</p>
   <h1 class="reveal d1">Your data <span class="grad">stays yours.</span></h1>
-  <p class="reveal d1">Macdio does not collect, store, or share any personal data. No analytics, no tracking, no ads. Last updated May 1, 2026.</p>
+  <p class="reveal d1">Macdio collects no personal data. It has no analytics, no ads and no tracking. The only data that leaves your iPhone, and only if you turn the feature on, is what new-episode notifications need: this device's notification address and the list of shows you follow. Last updated September 29, 2026.</p>
 </header>
 
 <div class="content">
@@ -58,38 +58,46 @@
   </div>
 
   <h2 class="sec reveal">General overview</h2>
-  <p class="reveal">Macdio ("the App") is designed with your privacy in mind. We do not collect, store, or share any personal data. For platform-specific details, please use the links above. Below is our general privacy policy that applies across all platforms.</p>
+  <p class="reveal">Macdio ("the App") is made by one developer, Sait Firat Nemis. This page covers every platform. The links above add details for each one.</p>
 
   <h2 class="sec reveal">Data collection</h2>
-  <p class="reveal">Macdio does <strong>not</strong> collect any personal information. All your data, including favorite stations, saved tracks, recordings, and preferences, stays on your device and syncs only through your personal iCloud account.</p>
-  <p class="reveal">We do not use any analytics, advertising, or tracking SDKs. We have no way to identify you or access your usage data.</p>
+  <p class="reveal">Your favorite stations, saved songs, recordings, podcast subscriptions, listening progress, transcripts and highlights stay on your devices. They sync only through your own iCloud account. Macdio has no account system and no way to identify you.</p>
+
+  <h2 class="sec reveal">New-episode notifications (iPhone)</h2>
+  <p class="reveal">When New Episode Notifications is on and you allow notifications, your iPhone sends two things to Macdio's notification server (push.macdio.app, which runs on Cloudflare): the notification address Apple assigns to this device, and the feed addresses of the shows you follow. The server checks those feeds. When a new episode appears, it asks Apple to deliver a notification, so the notification arrives even when the app is closed.</p>
+  <p class="reveal">The server keeps nothing else: no name, no account, no IP address and no listening history. This data is not linked to you and is not used for tracking. Turning the notifications off removes the device from the server at once. The server also deletes an address that Apple reports as no longer valid, and removes a device that has not checked in for 30 days.</p>
+
+  <h2 class="sec reveal">Podcasts</h2>
+  <p class="reveal">Podcast search, charts and categories come from Podcast Index and from Apple's podcast charts. Episodes, artwork and feeds download directly from each show's own server. Transcripts are made on your device, and the audio is never uploaded.</p>
+  <p class="reveal">Chapters and summaries are written by Apple's language model, either on the device or on Apple's Private Cloud Compute, which Apple designed so that the text is not stored and cannot be read by anyone, including Apple.</p>
+  <p class="reveal">When you send a highlight to Notion or Readwise, it goes directly from your device to that service with the access token you entered. The token stays in your device's keychain. Apple Notes, Obsidian, Craft and Bear receive highlights through their own apps on your device.</p>
 
   <h2 class="sec reveal">Third-party services</h2>
-  <p class="reveal">Macdio connects to the following external services solely to provide its core functionality:</p>
+  <p class="reveal">Macdio connects to these services only to provide its features:</p>
   <ul class="reveal">
-    <li><strong>Radio Browser API</strong> to browse and search radio stations from around the world. No personal data is sent with these requests.</li>
-    <li><strong>LRCLIB</strong> to fetch synchronized song lyrics for currently playing tracks. No personal data is sent.</li>
-    <li><strong>iTunes Search API</strong> to fetch album artwork and track metadata. No personal data is sent.</li>
-    <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> supplies the logos of radio stations that do not provide one themselves. Only the station's web domain is sent, no personal data.</li>
+    <li><strong>Radio Browser API</strong>, to browse and search radio stations.</li>
+    <li><strong>LRCLIB</strong>, for synchronized lyrics of the song that is playing.</li>
+    <li><strong>iTunes Search API</strong>, for album artwork and track details.</li>
+    <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong>, for logos of stations that do not provide one. Only the station's web domain is sent.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>, for podcast search, charts and categories.</li>
   </ul>
-  <p class="reveal">These services receive only the minimum information needed to fulfill their purpose, such as a song title for lyric lookup. No user identifiers, device IDs, or personal data are transmitted.</p>
+  <p class="reveal">Each service receives only what a request needs, such as a song title or a search term. No identifier of you or your device is sent.</p>
 
   <h2 class="sec reveal">iCloud sync</h2>
-  <p class="reveal">If you use iCloud sync, your favorites, saved stations, and settings are stored in your private iCloud container. This data is managed entirely by Apple's iCloud infrastructure and is not accessible to us in any way.</p>
-  <p class="reveal">For Apple's privacy practices regarding iCloud, please refer to <a class="inline" href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
+  <p class="reveal">If you use iCloud sync, your library, podcast progress, highlights and settings are stored in your private iCloud container, which Apple manages. The developer of Macdio cannot see this data. For Apple's practices, see <a class="inline" href="https://www.apple.com/privacy/" target="_blank" rel="noopener">Apple's Privacy Policy</a>.</p>
 
   <h2 class="sec reveal">Audio &amp; recordings</h2>
-  <p class="reveal">Any audio recordings you make through Macdio are stored locally on your device. We do not upload, transmit, or access your recordings in any way.</p>
+  <p class="reveal">Recordings you make with Macdio stay on your device. They are never uploaded or shared.</p>
 
   <h2 class="sec reveal">Children's privacy</h2>
-  <p class="reveal">Macdio does not knowingly collect data from anyone, including children under 13. Since we collect no data at all, the App is safe for users of all ages.</p>
+  <p class="reveal">Macdio does not knowingly collect personal data from anyone, including children under 13. The notification data described above is not personal and is not linked to anyone.</p>
 
   <h2 class="sec reveal">Changes to this policy</h2>
-  <p class="reveal">We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date. We encourage you to review this page periodically.</p>
+  <p class="reveal">When this policy changes, the date at the top of this page is updated.</p>
 
   <h2 class="sec reveal">Contact</h2>
-  <p class="reveal">If you have any questions or concerns about this privacy policy, contact us at <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>.</p>
-</div>
+  <p class="reveal">Questions about this policy: <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a></p>
+
 </main>
 
 <div id="footer-slot">
