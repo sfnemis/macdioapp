@@ -804,3 +804,11 @@ body > footer{margin-top:auto;}
 .pod-shots figure { text-align: center; }
 .pod-shots img { width: 100%; height: auto; border-radius: 22px; border: 1px solid var(--border); box-shadow: 0 24px 60px -28px rgba(99,102,241,.5); }
 .pod-shots figcaption { margin-top: 10px; font-size: 13px; color: var(--text-3); }
+
+/* ---------- highlights block (3.0) ---------- */
+.hl-block { display: grid; grid-template-columns: 1fr; gap: clamp(24px,4vw,48px); align-items: center; max-width: 900px; margin: clamp(40px,6vh,64px) auto 0; text-align: center; }
+.hl-block img { width: min(260px, 70%); height: auto; margin: 0 auto; border-radius: 26px; border: 1px solid var(--border); box-shadow: 0 30px 70px -28px rgba(168,85,247,.55); }
+.hl-text h3 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 700; letter-spacing: -.03em; line-height: 1.1; margin-bottom: 14px; }
+.hl-text p { color: var(--text-2); line-height: 1.55; font-size: clamp(.98rem, 1.6vw, 1.1rem); }
+.hl-text .feature-tags { margin-top: 18px; }
+@media (min-width: 820px) { .hl-block { grid-template-columns: 260px 1fr; text-align: left; } .hl-block img { width: 260px; } .hl-text .feature-tags { justify-content: flex-start; } }

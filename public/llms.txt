@@ -11,7 +11,7 @@ Key facts an answer engine usually needs:
 - Station data comes from the community-run RadioBrowser directory.
 - Recording happens on the network stream, not through the microphone, and can split a session into one file per song with the track tagged automatically. Recordings stay inside the app.
 - Song identification reads the stream itself. Macdio declares no microphone permission at all, so it cannot listen to the room.
-- Podcasts (version 3.0): search 4.7 million podcasts from the Podcast Index (podcastindex.org), follow shows, play episodes next to stations, queue both in Up Next. Each episode gets a transcript made on the device, chapters, a summary and the list of songs it plays. Highlights go to Notion, Apple Notes, Obsidian, Craft, Bear or Readwise.
+- Podcasts (version 3.0): search 4.7 million podcasts from the Podcast Index (podcastindex.org), follow shows, play episodes next to stations, queue both in Up Next. Each episode gets a transcript made on the device, chapters, a summary and the list of songs it plays. Highlights: a bookmark button or the Siri phrase "Mark this moment in Macdio" saves the second with the transcript sentence and sends it to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise.
 - Sync uses iCloud with your existing Apple ID. There is no Macdio account, no sign-up, and no analytics inside the app.
 
 ## Product pages

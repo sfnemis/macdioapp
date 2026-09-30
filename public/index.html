@@ -63,6 +63,7 @@
   "featureList": [
     "Stream 60,000+ internet radio stations",
     "Podcasts with transcripts made on your device, chapters and the songs of every episode",
+    "Highlights: mark a podcast moment with a button or with Siri and send it to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise",
     "Record live radio with split-by-track and automatic song tagging",
     "Synced, scrolling lyrics with adjustable timing",
     "Identify songs with no microphone and no permission",
@@ -120,6 +121,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, since version 3.0. You can follow shows, play episodes next to your stations and queue both in Up Next. Each episode gets a transcript made on your device, chapters, and the list of songs it plays." } },
     { "@type": "Question", "name": "Does Macdio transcribe podcasts on the device?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Apple's speech recognition turns each episode into searchable text on your iPhone, iPad or Mac, and the audio is not uploaded. Chapters, a summary and a list of the songs in the episode are made from that text. On Apple TV the transcripts made on your iPhone or Mac arrive through iCloud." } },
+    { "@type": "Question", "name": "Can Macdio send podcast highlights to Apple Notes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tap the bookmark button in the player, or tell Siri \"Mark this moment in Macdio\", and Macdio saves the exact second with the sentence from the transcript. It sends the highlight to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise, or you can share it with anyone. On iPhone, Apple Notes goes through a ready-made shortcut that you add once." } },
     { "@type": "Question", "name": "Does Macdio work on Apple Watch without an iPhone?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Apple Watch app streams live radio over LTE or Wi-Fi without an iPhone nearby." } },
     { "@type": "Question", "name": "Does Macdio sync across Apple devices?",
@@ -302,7 +305,7 @@
     </div>
     <div class="bento-card reveal">
       <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div>
-      <h3>Highlights</h3><p>Mark a moment and send it to Notion, Apple Notes, Obsidian, Craft, Bear or Readwise, or share it.</p>
+      <h3>Highlights</h3><p>Mark a moment with the bookmark button or with Siri, and send it to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise.</p>
     </div>
     <div class="bento-card reveal d1">
       <div class="bento-ico"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/><polygon points="17,14 22,18 17,22"/></svg></div>
@@ -323,6 +326,23 @@
     <figure><img src="assets/screenshots/podcasts_web/transcript.jpg" alt="A live transcript following the speakers of a podcast episode on iPhone" loading="lazy" width="640" height="1390"><figcaption>Follow the words</figcaption></figure>
     <figure><img src="assets/screenshots/podcasts_web/chapters.jpg" alt="Chapters of a podcast episode in Macdio on iPhone" loading="lazy" width="640" height="1390"><figcaption>Chapters from the text</figcaption></figure>
     <figure><img src="assets/screenshots/podcasts_web/songs.jpg" alt="The songs found inside a podcast episode in Macdio on iPhone" loading="lazy" width="640" height="1390"><figcaption>Songs in the episode</figcaption></figure>
+  </div>
+  <div class="hl-block reveal">
+    <img src="assets/screenshots/podcasts_web/highlights.jpg" alt="The menu of a saved podcast highlight in Macdio with Play from Here, Copy, Share and Send to Obsidian" loading="lazy" width="640" height="1390">
+    <div class="hl-text">
+      <span class="only-badge">Only on Macdio</span>
+      <h3>Mark the moment. Send it to your notes.</h3>
+      <p>Hear something worth keeping? Tap the bookmark button, or tell Siri "Mark this moment in Macdio" when your hands are full. Macdio saves the exact second with the sentence from the transcript and sends it to your notes app. You can share it with anyone too.</p>
+      <div class="feature-tags" style="justify-content:flex-start">
+        <span class="tag">Apple Notes</span>
+        <span class="tag">Notion</span>
+        <span class="tag">Obsidian</span>
+        <span class="tag">Bear</span>
+        <span class="tag">Craft</span>
+        <span class="tag">Readwise</span>
+        <span class="tag">Button or Siri</span>
+      </div>
+    </div>
   </div>
   <p class="device-note reveal d2" style="text-align:center;margin-top:28px;">On Apple TV, transcripts made on your iPhone or Mac arrive through iCloud.</p>
 </section>
@@ -462,7 +482,7 @@
 <section class="section compare" id="compare">
   <p class="eyebrow reveal">How it compares</p>
   <h2 class="headline reveal d1" style="margin-top:12px;">What only Macdio does.</h2>
-  <p class="sub reveal d2" style="margin:16px auto 0;max-width:50ch;">Seven of these ship in no other radio app on the App Store. Everything else, Macdio matches or beats.</p>
+  <p class="sub reveal d2" style="margin:16px auto 0;max-width:50ch;">Eight of these ship in no other radio app on the App Store. Everything else, Macdio matches or beats.</p>
   <p class="cmp-proof reveal d2"><span class="cmp-proof-dot"></span><span><b>Macdio never asks for microphone access.</b> The app declares no microphone permission at all, so it cannot listen to your room even if it wanted to. Song ID reads the radio stream itself.</span></p>
   <div class="table-wrap reveal d2" id="compare-table">
     <table class="cmp">
@@ -479,6 +499,7 @@
         <tr class="only"><th scope="row">Bedside Clock Mode</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="only"><th scope="row">Podcast transcripts, made on your device</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="only"><th scope="row">Songs identified inside podcast episodes</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Podcast highlights to Apple Notes, Notion and more</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="grp"><th scope="row">The essentials, all covered</th><td class="me"></td><td></td><td></td><td></td><td></td></tr>
         <tr><th scope="row">Podcasts</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
         <tr><th scope="row">Song identification</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
@@ -495,7 +516,7 @@
       </tbody>
     </table>
   </div>
-  <p class="cmp-foot reveal">Comparison based on each app's own published App Store description, support pages and reviews, checked on 9 August 2026; the podcast rows were checked against each App Store description on 1 October 2026. Features and prices change, and prices vary by country; check the App Store for current details.</p>
+  <p class="cmp-foot reveal">Comparison based on each app's own published App Store description, support pages and reviews, checked on 9 August 2026; the podcast and highlights rows were checked against each App Store description on 1 October 2026. Features and prices change, and prices vary by country; check the App Store for current details.</p>
 </section>
 
 <!-- ============ PRICING ============ -->
