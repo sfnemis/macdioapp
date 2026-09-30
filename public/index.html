@@ -62,7 +62,7 @@
   "publisher": {"@type": "Organization", "name": "Devdio", "url": "https://devdio.pro"},
   "featureList": [
     "Stream 60,000+ internet radio stations",
-    "Podcasts with on-device transcripts, chapters and the songs of every episode",
+    "Podcasts with transcripts made on your device, chapters and the songs of every episode",
     "Record live radio with split-by-track and automatic song tagging",
     "Synced, scrolling lyrics with adjustable timing",
     "Identify songs with no microphone and no permission",
@@ -118,6 +118,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio identifies songs on stations that send no title or artwork in the background, with no microphone and no microphone permission required." } },
     { "@type": "Question", "name": "Does Macdio play podcasts?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, since version 3.0. You can follow shows, play episodes next to your stations and queue both in Up Next. Each episode gets a transcript made on your device, chapters, and the list of songs it plays." } },
+    { "@type": "Question", "name": "Does Macdio transcribe podcasts on the device?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Apple's speech recognition turns each episode into searchable text on your iPhone, iPad or Mac, and the audio is not uploaded. Chapters, a summary and a list of the songs in the episode are made from that text. On Apple TV the transcripts made on your iPhone or Mac arrive through iCloud." } },
     { "@type": "Question", "name": "Does Macdio work on Apple Watch without an iPhone?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Apple Watch app streams live radio over LTE or Wi-Fi without an iPhone nearby." } },
     { "@type": "Question", "name": "Does Macdio sync across Apple devices?",
@@ -150,7 +152,7 @@
       </svg>
     </div>
     <h1>One App.<br>Made to <span class="grad">Listen.</span></h1>
-    <p class="hero-sub">Stream 60,000+ radio stations on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay, and follow 4.7 million podcasts with a transcript for every episode. Record live audio, follow synced lyrics and sync everything through iCloud.</p>
+    <p class="hero-sub">Stream 60,000+ radio stations on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay, and follow 4.7 million podcasts, each with a transcript made on your device. Record live audio, follow synced lyrics and sync everything through iCloud.</p>
     <div class="price-pill"><span class="flag" id="priceFlag">🇹🇷</span><span id="priceAmount">₺499.99</span></div>
     <div class="price-note">One time. Every Apple device. No subscription.</div>
     <div class="hero-actions">
@@ -258,6 +260,7 @@
       <p class="sub">Follow any of 4.7 million podcasts and play episodes next to your stations. Every episode gets a transcript, chapters and the list of songs it plays. The transcript is made on your device, not on a server.</p>
       <div class="feature-tags">
         <span class="tag">Transcripts on device</span>
+        <span class="tag">Nothing uploaded</span>
         <span class="tag">Chapters</span>
         <span class="tag">New episode alerts</span>
         <span class="tag">OPML import</span>
@@ -309,6 +312,17 @@
       <div class="bento-ico"><svg viewBox="0 0 24 24"><polyline points="3,17 9,11 13,15 21,7"/><polyline points="15,7 21,7 21,13"/></svg></div>
       <h3>Charts and search</h3><p>The popular shows of your country, and a search across the 4.7 million podcasts of the Podcast Index.</p>
     </div>
+  </div>
+  <div class="transcribe reveal">
+    <span class="only-badge">Only on Macdio</span>
+    <h3>Every episode, transcribed on your device.</h3>
+    <p>Apple's speech recognition runs on the iPhone, iPad or Mac in your hand. The audio is not uploaded and there is no account. Each episode becomes searchable text where you can jump to the exact line, and chapters, a summary and a song list are made from it.</p>
+  </div>
+  <div class="pod-shots reveal">
+    <figure><img src="assets/screenshots/podcasts_web/transcript-search.jpg" alt="Macdio on iPhone searching for a word inside the transcripts of several podcast episodes" loading="lazy" width="640" height="1390"><figcaption>Search every transcript</figcaption></figure>
+    <figure><img src="assets/screenshots/podcasts_web/transcript.jpg" alt="A live transcript following the speakers of a podcast episode on iPhone" loading="lazy" width="640" height="1390"><figcaption>Follow the words</figcaption></figure>
+    <figure><img src="assets/screenshots/podcasts_web/chapters.jpg" alt="Chapters of a podcast episode in Macdio on iPhone" loading="lazy" width="640" height="1390"><figcaption>Chapters from the text</figcaption></figure>
+    <figure><img src="assets/screenshots/podcasts_web/songs.jpg" alt="The songs found inside a podcast episode in Macdio on iPhone" loading="lazy" width="640" height="1390"><figcaption>Songs in the episode</figcaption></figure>
   </div>
   <p class="device-note reveal d2" style="text-align:center;margin-top:28px;">On Apple TV, transcripts made on your iPhone or Mac arrive through iCloud.</p>
 </section>
@@ -448,7 +462,7 @@
 <section class="section compare" id="compare">
   <p class="eyebrow reveal">How it compares</p>
   <h2 class="headline reveal d1" style="margin-top:12px;">What only Macdio does.</h2>
-  <p class="sub reveal d2" style="margin:16px auto 0;max-width:50ch;">Five of these ship in no other radio app on the App Store. Everything else, Macdio matches or beats.</p>
+  <p class="sub reveal d2" style="margin:16px auto 0;max-width:50ch;">Seven of these ship in no other radio app on the App Store. Everything else, Macdio matches or beats.</p>
   <p class="cmp-proof reveal d2"><span class="cmp-proof-dot"></span><span><b>Macdio never asks for microphone access.</b> The app declares no microphone permission at all, so it cannot listen to your room even if it wanted to. Song ID reads the radio stream itself.</span></p>
   <div class="table-wrap reveal d2" id="compare-table">
     <table class="cmp">
@@ -463,7 +477,10 @@
         <tr class="only"><th scope="row">Synced lyrics</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="only"><th scope="row">Song ID with no microphone access</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="only"><th scope="row">Bedside Clock Mode</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Podcast transcripts, made on your device</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
+        <tr class="only"><th scope="row">Songs identified inside podcast episodes</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr class="grp"><th scope="row">The essentials, all covered</th><td class="me"></td><td></td><td></td><td></td><td></td></tr>
+        <tr><th scope="row">Podcasts</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td></tr>
         <tr><th scope="row">Song identification</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr><th scope="row">Game controller support</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
         <tr><th scope="row">Sleep timer</th><td class="me yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="yes"><span aria-hidden="true">✓</span><span class="vh">Yes</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td><td class="no"><span aria-hidden="true">·</span><span class="vh">No</span></td></tr>
@@ -478,7 +495,7 @@
       </tbody>
     </table>
   </div>
-  <p class="cmp-foot reveal">Comparison based on each app's own published App Store description, support pages and reviews, checked on 9 August 2026. Features and prices change, and prices vary by country; check the App Store for current details.</p>
+  <p class="cmp-foot reveal">Comparison based on each app's own published App Store description, support pages and reviews, checked on 9 August 2026; the podcast rows were checked against each App Store description on 1 October 2026. Features and prices change, and prices vary by country; check the App Store for current details.</p>
 </section>
 
 <!-- ============ PRICING ============ -->
