@@ -55,13 +55,14 @@
   "description": "Native internet radio player for all Apple devices. Stream 55,000+ stations, record live radio into a tagged library, follow synced lyrics, identify songs with no microphone, and sync via iCloud. One-time purchase, no subscription, no ads.",
   "url": "https://macdio.app",
   "downloadUrl": "https://apps.apple.com/app/macdio/id6761737888",
-  "softwareVersion": "2.6.0",
+  "softwareVersion": "3.0.0",
   "datePublished": "2026-04-17",
-  "dateModified": "2026-09-07",
+  "dateModified": "2026-10-01",
   "author": {"@type": "Person", "name": "Sait Firat NEMIS", "url": "https://macdio.app/presskit.html"},
   "publisher": {"@type": "Organization", "name": "Devdio", "url": "https://devdio.pro"},
   "featureList": [
     "Stream 55,000+ internet radio stations",
+    "Podcasts with on-device transcripts, chapters and the songs of every episode",
     "Record live radio with split-by-track and automatic song tagging",
     "Synced, scrolling lyrics with adjustable timing",
     "Identify songs with no microphone and no permission",
@@ -72,15 +73,15 @@
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "USD",
-    "lowPrice": "3.99",
-    "highPrice": "9.99",
+    "lowPrice": "7.99",
+    "highPrice": "14.99",
     "offerCount": "175",
     "offers": [
-      { "@type": "Offer", "price": "9.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "United States" } },
-      { "@type": "Offer", "price": "9.99", "priceCurrency": "GBP", "eligibleRegion": { "@type": "Country", "name": "United Kingdom" } },
-      { "@type": "Offer", "price": "7.99", "priceCurrency": "EUR", "eligibleRegion": { "@type": "Country", "name": "Germany" } },
-      { "@type": "Offer", "price": "299.99", "priceCurrency": "TRY", "eligibleRegion": { "@type": "Country", "name": "Turkey" } },
-      { "@type": "Offer", "price": "14.99", "priceCurrency": "AUD", "eligibleRegion": { "@type": "Country", "name": "Australia" } }
+      { "@type": "Offer", "price": "14.99", "priceCurrency": "USD", "eligibleRegion": { "@type": "Country", "name": "United States" } },
+      { "@type": "Offer", "price": "14.99", "priceCurrency": "GBP", "eligibleRegion": { "@type": "Country", "name": "United Kingdom" } },
+      { "@type": "Offer", "price": "14.99", "priceCurrency": "EUR", "eligibleRegion": { "@type": "Country", "name": "Germany" } },
+      { "@type": "Offer", "price": "499.99", "priceCurrency": "TRY", "eligibleRegion": { "@type": "Country", "name": "Turkey" } },
+      { "@type": "Offer", "price": "24.99", "priceCurrency": "AUD", "eligibleRegion": { "@type": "Country", "name": "Australia" } }
     ]
   }
 }
@@ -115,6 +116,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio records live streams directly from the network with no microphone, can split a recording into one file per song, and then identifies and tags each track automatically." } },
     { "@type": "Question", "name": "Does Macdio identify songs without a microphone?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Macdio identifies songs on stations that send no title or artwork in the background, with no microphone and no microphone permission required." } },
+    { "@type": "Question", "name": "Does Macdio play podcasts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, since version 3.0. You can follow shows, play episodes next to your stations and queue both in Up Next. Each episode gets a transcript made on your device, chapters, and the list of songs it plays." } },
     { "@type": "Question", "name": "Does Macdio work on Apple Watch without an iPhone?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The Apple Watch app streams live radio over LTE or Wi-Fi without an iPhone nearby." } },
     { "@type": "Question", "name": "Does Macdio sync across Apple devices?",
@@ -139,10 +142,16 @@
   <div class="hero-eq" aria-hidden="true"></div>
   <div class="hero-content">
     <div class="hero-badge"><span class="dot"></span>Live internet radio for every Apple device</div>
-    <img class="hero-icon" src="assets/app-icon-276.png" alt="Macdio app icon" width="276" height="276">
+    <div class="hero-mark" role="img" aria-label="Macdio 3">
+      <img class="hero-icon" src="assets/app-icon-276.png" alt="" width="276" height="276">
+      <svg class="hero-three" viewBox="-4 -4 36 48" width="58" height="77" aria-hidden="true" focusable="false">
+        <defs><linearGradient id="three-grad" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b873ff"/><stop offset="1" stop-color="#f573e0"/></linearGradient></defs>
+        <path d="M0 0 L28 0 L7 20 L28 40 L0 40" fill="none" stroke="url(#three-grad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
     <h1>One App.<br>Made to <span class="grad">Listen.</span></h1>
     <p class="hero-sub">Stream 55,000+ stations on iPhone, iPad, Mac, Apple TV, Apple Watch, and CarPlay. Record live audio, follow synced lyrics, and sync everything through iCloud.</p>
-    <div class="price-pill"><span class="flag" id="priceFlag">🇹🇷</span><span id="priceAmount">₺299.99</span></div>
+    <div class="price-pill"><span class="flag" id="priceFlag">🇹🇷</span><span id="priceAmount">₺499.99</span></div>
     <div class="price-note">One time. Every Apple device. No subscription.</div>
     <div class="hero-actions">
       <a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="Download Macdio on the App Store">
@@ -238,6 +247,70 @@
       </div>
     </div>
   </div>
+</section>
+
+<!-- ============ PODCASTS (new in 3.0) ============ -->
+<section class="section feature reverse" id="podcasts">
+  <div class="wrap">
+    <div class="feature-text reveal">
+      <span class="eyebrow">New in 3.0 · Podcasts</span>
+      <h3 class="headline">Radio and podcasts in one app.</h3>
+      <p class="sub">Follow your shows and play episodes next to your stations. Every episode gets a transcript, chapters and the list of songs it plays. The transcript is made on your device, not on a server.</p>
+      <div class="feature-tags">
+        <span class="tag">Transcripts on device</span>
+        <span class="tag">Chapters</span>
+        <span class="tag">New episode alerts</span>
+        <span class="tag">OPML import</span>
+      </div>
+    </div>
+    <div class="feature-visual reveal d1">
+      <div class="pod-mock" role="img" aria-label="Illustration of a podcast episode with chapters, a transcript and the number of songs found">
+        <div class="pm-head">
+          <div class="pm-art" aria-hidden="true"></div>
+          <div><div class="pm-title">Morning Show, episode 214</div><div class="pm-meta">48 min · transcript ready</div></div>
+        </div>
+        <div class="pm-label">Chapters</div>
+        <ul class="pm-chap">
+          <li><span>00:00</span>Intro</li>
+          <li class="on"><span>04:12</span>Headlines</li>
+          <li><span>19:40</span>Interview</li>
+          <li><span>41:05</span>Listener mail</li>
+        </ul>
+        <div class="pm-label">Transcript</div>
+        <p class="pm-line">So the tower stayed on air for another ten years.</p>
+        <p class="pm-line on">Nobody on the team expected the signal to carry that far.</p>
+        <p class="pm-line">The letters started arriving the next week.</p>
+        <div class="pm-foot">3 songs found in this episode</div>
+      </div>
+    </div>
+  </div>
+  <div class="bento-grid">
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><line x1="12" y1="18" x2="12" y2="21"/></svg></div>
+      <h3>Transcribed on your device</h3><p>Every episode becomes searchable text, made on the device you listen on.</p>
+    </div>
+    <div class="bento-card reveal d1">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><line x1="8" y1="6" x2="20" y2="6"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="8" y1="18" x2="20" y2="18"/><circle cx="4" cy="6" r="1"/><circle cx="4" cy="12" r="1"/><circle cx="4" cy="18" r="1"/></svg></div>
+      <h3>Chapters and summaries</h3><p>Jump to a chapter, read a summary or search inside the episode.</p>
+    </div>
+    <div class="bento-card reveal d2">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="16" r="2.5"/><path d="M8.5 18V6l12-2v12"/></svg></div>
+      <h3>Songs in every episode</h3><p>The songs an episode plays are identified from the audio and saved to Tracks.</p>
+    </div>
+    <div class="bento-card reveal">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></div>
+      <h3>Highlights</h3><p>Mark a moment and send it to Notion, Apple Notes, Obsidian, Craft, Bear or Readwise, or share it.</p>
+    </div>
+    <div class="bento-card reveal d1">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="14" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/><polygon points="17,14 22,18 17,22"/></svg></div>
+      <h3>Up Next with live radio</h3><p>Queue episodes and stations together. A station hands over when its time is up.</p>
+    </div>
+    <div class="bento-card reveal d2">
+      <div class="bento-ico"><svg viewBox="0 0 24 24"><polyline points="3,17 9,11 13,15 21,7"/><polyline points="15,7 21,7 21,13"/></svg></div>
+      <h3>Charts and search</h3><p>The popular shows of your country, and a search across millions of feeds.</p>
+    </div>
+  </div>
+  <p class="device-note reveal d2" style="text-align:center;margin-top:28px;">On Apple TV, transcripts made on your iPhone or Mac arrive through iCloud.</p>
 </section>
 
 <!-- ============ DEVICES ============ -->
