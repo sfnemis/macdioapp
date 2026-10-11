@@ -8,20 +8,20 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Submit a Station: Add Your Radio to Macdio</title>
-<meta name="description" content="Submit your radio station to be included in the Macdio station directory. Help grow the catalog with streams from around the world.">
+<meta name="description" content="Add your radio station to Macdio through Radio Browser, the free directory the app gets its 50,000+ stations from.">
 <meta name="keywords" content="macdio submit station, add radio station, internet radio submission, community radio">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://macdio.app/submit-station.html">
 <meta property="og:title" content="Submit a Station: Add Your Radio to Macdio">
-<meta property="og:description" content="Submit your radio station to be included in the Macdio station directory.">
+<meta property="og:description" content="Add your radio station to Macdio through Radio Browser, the free directory the app gets its 50,000+ stations from.">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/submit-station.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Macdio">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Submit a Station: Add Your Radio to Macdio">
-<meta name="twitter:description" content="Submit your radio station to be included in the Macdio station directory.">
+<meta name="twitter:description" content="Add your radio station to Macdio through Radio Browser, the free directory the app gets its 50,000+ stations from.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -49,63 +49,21 @@
 <header class="page-head">
   <p class="eyebrow reveal">Community</p>
   <h1 class="reveal d1">Submit a <span class="grad">station.</span></h1>
-  <p class="reveal d1">Know a radio station that is missing from the catalog? Help us grow the directory by submitting it below.</p>
+  <p class="reveal d1">Is a radio station missing from Macdio? Add it to Radio Browser and it will show up in the app.</p>
 </header>
 
 <div class="content">
-  <div class="callout accent reveal" id="noteBox">
-    Macdio's station catalog is powered by <a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a>, a community-maintained database. Submissions go through a quick review before appearing in the app. You can also add any stream URL directly in the app via Library, then Add Custom Station.
+  <div class="callout accent reveal">
+    Macdio gets its stations from <a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a>, a free directory that anyone can add to. Macdio reads it directly, so a station added there also appears in Macdio, usually within minutes of Radio Browser accepting it.
   </div>
-
-  <form class="form reveal" id="stationForm" action="https://formspree.io/f/xvgawjzr" method="POST">
-    <input type="hidden" name="_subject" value="New Station Submission for Macdio">
-
-    <div class="field">
-      <label class="req" for="station-name">Station name</label>
-      <input type="text" id="station-name" name="station_name" placeholder="e.g. Jazz FM London" required>
-    </div>
-
-    <div class="field">
-      <label class="req" for="stream-url">Stream URL</label>
-      <span class="hint">Direct audio stream, M3U, or PLS link</span>
-      <input type="url" id="stream-url" name="stream_url" placeholder="https://stream.example.com/live" required>
-      <div class="url-status" id="urlStatus"></div>
-    </div>
-
-    <div class="form-row">
-      <div class="field">
-        <label for="country">Country</label>
-        <input type="text" id="country" name="country" placeholder="e.g. United Kingdom">
-      </div>
-      <div class="field">
-        <label for="genre">Genre</label>
-        <input type="text" id="genre" name="genre" placeholder="e.g. Jazz, Blues">
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="website">Station website</label>
-      <input type="url" id="website" name="website" placeholder="https://jazzfm.com">
-    </div>
-
-    <div class="field">
-      <label for="contact-email">Your email</label>
-      <span class="hint">Optional, only if you would like to hear back about your submission</span>
-      <input type="email" id="contact-email" name="email" placeholder="you@example.com">
-    </div>
-
-    <div class="field">
-      <label for="notes">Notes</label>
-      <textarea id="notes" name="notes" placeholder="Anything else we should know? (language, broadcast schedule, and so on)"></textarea>
-    </div>
-
-    <button type="submit" class="btn-pill" id="submitBtn">Submit station</button>
-  </form>
-
-  <div class="success-msg" id="successMsg">
-    <h2>Thanks for the submission!</h2>
-    <p>We will review it and add it to the catalog if the stream is valid. You can also paste the URL directly into Macdio via Library, then Add Custom Station, to start listening right away.</p>
-  </div>
+  <ol class="reveal">
+    <li>Check whether the station is already in the <a class="inline" href="stations.html">station directory</a>.</li>
+    <li>If it is not there, add it on Radio Browser.
+      <p><a class="btn-pill" href="https://www.radio-browser.info/add" target="_blank" rel="noopener">Add a station on Radio Browser</a></p>
+    </li>
+    <li>To listen right away, paste the stream URL into Macdio under Library, then Add Custom Station.</li>
+  </ol>
+  <p class="reveal">Questions about a listing? Write to <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>.</p>
 </div>
 </main>
 
@@ -137,55 +95,6 @@
 <script src="parts.js"></script>
 <script src="redesign.js"></script>
 
-<script>
-// Basic URL format validation
-var urlInput = document.getElementById('stream-url');
-var urlStatus = document.getElementById('urlStatus');
 
-urlInput.addEventListener('blur', function () {
-  var url = this.value.trim();
-  if (!url) { urlStatus.className = 'url-status'; return; }
-  var streamPattern = /^https?:\/\/.+\..+/i;
-  if (streamPattern.test(url)) {
-    urlStatus.textContent = '✓ URL format looks good';
-    urlStatus.className = 'url-status valid';
-  } else {
-    urlStatus.textContent = 'Please enter a valid URL starting with http:// or https://';
-    urlStatus.className = 'url-status invalid';
-  }
-});
-
-// Form submission via Formspree
-var form = document.getElementById('stationForm');
-var submitBtn = document.getElementById('submitBtn');
-var successMsg = document.getElementById('successMsg');
-var noteBox = document.getElementById('noteBox');
-
-form.addEventListener('submit', function (e) {
-  e.preventDefault();
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Submitting…';
-
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(function (response) {
-    if (response.ok) {
-      form.style.display = 'none';
-      if (noteBox) noteBox.style.display = 'none';
-      successMsg.classList.add('show');
-    } else {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Submit station';
-      alert('Something went wrong. Please try again or email support@macdio.app directly.');
-    }
-  }).catch(function () {
-    submitBtn.disabled = false;
-    submitBtn.textContent = 'Submit station';
-    alert('Network error. Please try again later.');
-  });
-});
-</script>
 </body>
 </html>
