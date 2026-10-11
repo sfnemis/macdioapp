@@ -116,8 +116,26 @@
 <script src="redesign.js"></script>
 
 <script>
-// Radio Browser API
-var API_BASE = 'https://de1.api.radio-browser.info/json';
+// Radio Browser API, then Macdio's own copy of it when Radio Browser does not
+// answer (its single server returned 503 on 2026-10-11; dir.macdio.app is the
+// apps' fallback too and allows this site's origin).
+var API_BASES = ['https://de1.api.radio-browser.info/json', 'https://dir.macdio.app/json'];
+function getJSON(path, i) {
+  i = i || 0;
+  var ctrl = window.AbortController ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 8000) : null;
+  return fetch(API_BASES[i] + path, ctrl ? { signal: ctrl.signal } : {})
+    .then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      if (timer) clearTimeout(timer);
+      if (i + 1 < API_BASES.length) return getJSON(path, i + 1);
+      throw err;
+    });
+}
 var PAGE_SIZE = 30;
 var currentPage = 0;
 var lastQuery = {};
@@ -155,8 +173,7 @@ var pendingCountry = initialQuery.get('country') || '';
 if (initialQuery.get('q')) searchInput.value = initialQuery.get('q');
 
 // Populate country filter
-fetch(API_BASE + '/countries?order=stationcount&reverse=true&limit=60')
-  .then(function (r) { return r.json(); })
+getJSON('/countries?order=stationcount&reverse=true&limit=60')
   .then(function (countries) {
     countries.forEach(function (c) {
       if (c.name && c.stationcount > 50) {
@@ -213,8 +230,7 @@ function searchStations(page) {
   resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Searching…</div>';
   pagination.innerHTML = '';
 
-  fetch(API_BASE + '/stations/search?' + params.toString())
-    .then(function (r) { return r.json(); })
+  getJSON('/stations/search?' + params.toString())
     .then(function (stations) { renderStations(stations); })
     .catch(function () {
       resultsContainer.innerHTML = '<div class="empty-state"><h3>Connection error</h3><p>Could not reach the station database. Please try again.</p></div>';
