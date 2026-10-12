@@ -62,7 +62,7 @@ The old fallback still works too: type a remembered line of the lyrics into a se
 
 Station metadata is written by whatever automation the station runs, and it drifts. The usual failures are an advert or a jingle inheriting the previous track's title, a title that arrives a few seconds early or late, and a placeholder like the station name sitting where the song should be.
 
-Identification from the audio corrects all three, because it reports what is actually sounding rather than what the playout system claims. When the station is right, its own text wins, since the broadcaster knows its catalogue better than any fingerprint.
+Identification from the audio corrects all three, because it reports what is actually sounding rather than what the playout system claims. When the station is right, its own text wins, since the broadcaster knows its catalog better than any fingerprint.
 
 ## Then keep the song
 

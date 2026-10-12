@@ -36,7 +36,7 @@ The trade is that a built-in recorder only records what the player can play. It 
 
 ## Method 2: capture the whole system with Audio Hijack
 
-Audio Hijack from Rogue Amoeba records audio from any application on a Mac, or all the system audio at once, so it covers streams that live in a browser tab or in a player with no recorder. Version 4.6.0 runs on macOS 14.4 through macOS 27 and can be downloaded free, with limitations applied until you buy a licence, according to Rogue Amoeba's product page (checked 14 September 2026).
+Audio Hijack from Rogue Amoeba records audio from any application on a Mac, or all the system audio at once, so it covers streams that live in a browser tab or in a player with no recorder. Version 4.6.0 runs on macOS 14.4 through macOS 27 and can be downloaded free, with limitations applied until you buy a license, according to Rogue Amoeba's product page (checked 14 September 2026).
 
 You pick the source application, add a recorder block, and press the run button. It is more setup than a record button, and there is a catch worth planning around: whatever the Mac plays lands in the file. A Slack notification at minute forty is in the recording for good. It also gives you one long file with no idea where a song starts or ends, so the tracklist work is yours to do afterwards.
 

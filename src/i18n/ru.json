@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/ru/app/macdio/id6761737888",
+    "storeLabel": "Загрузить Macdio в App Store",
+    "storeAlt": "Загрузить в App Store"
+  },
+  "nav": {
+    "community": "Сообщество",
+    "compare": "Сравнение",
+    "features": "Функции",
+    "screenshots": "Скриншоты",
+    "more": "Ещё",
+    "moreLabel": "Другие страницы",
+    "openMenu": "Открыть меню",
+    "pages": [
+      { "path": "/guides/", "label": "Руководства" },
+      { "path": "/podcasts.html", "label": "Подкасты" },
+      { "path": "/pricing.html", "label": "Цена" },
+      { "path": "/carplay.html", "label": "Радио в CarPlay" },
+      { "path": "/iphone.html", "label": "Радио для iPhone" },
+      { "path": "/mac.html", "label": "Радио для Mac" },
+      { "path": "/ipad.html", "label": "Радио для iPad" },
+      { "path": "/apple-tv.html", "label": "Радио для Apple TV" },
+      { "path": "/apple-watch.html", "label": "Радио для Apple Watch" },
+      { "path": "/support.html", "label": "Поддержка" },
+      { "path": "/privacy.html", "label": "Конфиденциальность" },
+      { "path": "/transparency.html", "label": "Прозрачность" },
+      { "path": "/accessibility.html", "label": "Доступность" },
+      { "path": "/submit-station.html", "label": "Предложить станцию" },
+      { "path": "/stations.html", "label": "Станции" },
+      { "path": "/presskit.html", "label": "Для прессы" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. Все права защищены.",
+    "support": "Поддержка",
+    "privacy": "Конфиденциальность",
+    "presskit": "Для прессы",
+    "contact": "Связаться",
+    "language": "Язык"
+  },
+  "socials": {
+    "x": "Macdio в X",
+    "instagram": "Macdio в Instagram",
+    "tiktok": "Macdio в TikTok",
+    "youtube": "Macdio на YouTube"
+  },
+  "guides": {
+    "title": "Интернет-радио на Mac, iPhone, часах и в CarPlay: руководства",
+    "h1": "Руководства",
+    "description": "Короткие практичные руководства для слушателей интернет-радио на Mac, iPhone, iPad, Apple Watch, Apple TV и в CarPlay от разработчика Macdio.",
+    "intro": "Короткие практичные ответы на вопросы, которые на самом деле задают слушатели интернет-радио, от разработчика Macdio. В каждом руководстве указано, к каким устройствам оно относится, а в конце собраны вопросы, которые люди ищут.",
+    "allGuides": "Все руководства",
+    "behindH2": "Приложение, стоящее за руководствами",
+    "behind": "Macdio это нативный плеер интернет-радио и подкастов для <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> и <a href=\"/apple-watch.html\">Apple Watch</a>. Более 60 000 станций, запись, синхронный текст песен и распознавание песен без микрофона, за одну покупку и без подписки.",
+    "writtenBy": "Автор: <a href=\"/presskit.html\">Sait Firat NEMIS</a>, разработчик Macdio.",
+    "checkedOn": "Проверено {date}.",
+    "groups": [
+      {
+        "label": "Радио на любом устройстве",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Радио на Mac", "title": "Как слушать интернет-радио на Mac", "description": "Браузер, VLC, приложение Музыка или плеер в строке меню: все способы, с честным разбором плюсов и минусов. Начните с этого руководства, если вы впервые слушаете радио на компьютере." },
+          { "slug": "radio-on-apple-watch", "label": "Apple Watch без iPhone", "title": "Радио на Apple Watch без iPhone", "description": "Стриминг с запястья без iPhone рядом: что на самом деле значит автономность, что для этого нужно и честные цифры по аккумулятору." },
+          { "slug": "carplay-radio", "label": "Радио в CarPlay", "title": "Интернет-радио в CarPlay", "description": "Пресеты, как на классической автомагнитоле, станции со всего мира вместо местного FM и сколько мобильного трафика уходит за долгую поездку." },
+          { "slug": "siri-radio", "label": "Радио через Siri", "title": "Как включить радио через Siri", "description": "Все голосовые фразы, которые понимает Macdio, на 14 языках, и как название станции, сказанное в машине, превращается в нужный поток." }
+        ]
+      },
+      {
+        "label": "Функции радио",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "Запись интернет-радио", "title": "Как записать интернет-радио", "description": "Как превратить живой эфир в отдельные подписанные треки на Mac и iPhone и что на самом деле говорит закон о записи для личного использования." },
+          { "slug": "identify-song-on-radio", "label": "Что за песня играет?", "title": "Что за песня играет по радио?", "description": "Три способа узнать песню по радио, включая тот, что читает сам поток и никогда не просит доступ к микрофону." },
+          { "slug": "find-radio-stream-url", "label": "Найти URL потока", "title": "Как найти URL потока радиостанции", "description": "Четыре способа получить прямой адрес, что с ним можно делать и как добавить свою станцию." },
+          { "slug": "iphone-fm-radio", "label": "Есть ли в iPhone FM-радио?", "title": "Есть ли в iPhone FM-радио?", "description": "Честный ответ про отсутствующий чип, приёмник против передатчика, аргумент про экстренные ситуации и что делать вместо этого." }
+        ]
+      },
+      {
+        "label": "Покупка и сравнение",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "Лучшие приложения интернет-радио", "title": "Сравнение лучших приложений интернет-радио", "description": "Семь плееров для Mac, iPhone, Apple Watch и Apple TV, с ценами, числом станций и тем, чего в каждом нет." }
+        ]
+      }
+    ]
+  }
+}

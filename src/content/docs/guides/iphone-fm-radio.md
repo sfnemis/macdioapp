@@ -26,9 +26,9 @@ The short answer is no, and it is not coming. The honest version of why, and wha
 
 ## Do iPhones have an FM radio chip?
 
-Not one you can use. The wireless chips inside older iPhones did include an FM tuner block on the silicon, which is where the rumour started, but that block was never wired to an antenna and was never exposed to software. A dormant transistor is not a radio. In 2017, after a public campaign to switch FM on during hurricane season, Apple stated that its phones have no FM radio chip that can be enabled and no antenna designed to support FM signals.
+Not one you can use. The wireless chips inside older iPhones did include an FM tuner block on the silicon, which is where the rumor started, but that block was never wired to an antenna and was never exposed to software. A dormant transistor is not a radio. In 2017, after a public campaign to switch FM on during hurricane season, Apple stated that its phones have no FM radio chip that can be enabled and no antenna designed to support FM signals.
 
-That covers every model to date. Not the first iPhone, not the iPhone 17 generation, nothing in between. The question comes back every September because each new model brings a fresh round of searches, but the answer has not changed in eighteen years.
+That covers every model to date. Not the first iPhone, not the iPhone 17 generation, nothing in between. The question comes back every September because each new model brings a fresh round of searches, but the answer has not changed since 2007.
 
 ## Why Apple does not enable FM radio on iPhone
 
@@ -56,7 +56,7 @@ What the iPhone does offer on that front is a different set of tools. Wireless E
 
 ## Can you still listen to FM stations on an iPhone?
 
-Yes, and this is the part most people are actually after. Nearly every AM and FM station of any size also streams its broadcast over the internet, which means the station you would tune on a car radio is usually available on an iPhone within a second or two of tapping it. You are hearing the same programme, the same presenters, and the same ad breaks, delivered over Wi-Fi or cellular instead of over the air.
+Yes, and this is the part most people are actually after. Nearly every AM and FM station of any size also streams its broadcast over the internet, which means the station you would tune on a car radio is usually available on an iPhone within a second or two of tapping it. You are hearing the same program, the same presenters, and the same ad breaks, delivered over Wi-Fi or cellular instead of over the air.
 
 Two differences are worth knowing before you rely on it. An internet stream is usually a few seconds behind the broadcast, which matters if you are listening to a football match next to someone with a radio. And a stream needs data, roughly 58 MB an hour at 128 kbps, so about 1 GB for 17 hours of listening. On Wi-Fi it costs nothing from your plan.
 
@@ -64,9 +64,9 @@ Two differences are worth knowing before you rely on it. An internet stream is u
 
 Three steps, no account needed.
 
-Install a native radio app from the App Store. Search for the station by name, or browse by country and genre if you are looking for something new. Tap it once to play, then save it as a favourite so it is on the first screen next time.
+Install a native radio app from the App Store. Search for the station by name, or browse by country and genre if you are looking for something new. Tap it once to play, then save it as a favorite so it is on the first screen next time.
 
-[Macdio for iPhone](/iphone.html) covers 60,000+ stations with CarPlay, Home Screen widgets, Lock Screen controls, sleep timers and a bedside Clock Mode. It identifies the song straight from the stream with no microphone permission (see [what song is playing on the radio](/guides/identify-song-on-radio.html)), records shows and splits them into named tracks, and syncs favourites across your Apple devices. One purchase, no subscription, nothing tracked. It needs iOS 26, so an older phone will need one of the free alternatives in the [radio app comparison](/guides/best-internet-radio-apps.html).
+[Macdio for iPhone](/iphone.html) covers 60,000+ stations with CarPlay, Home Screen widgets, Lock Screen controls, sleep timers and a bedside Clock Mode. It identifies the song straight from the stream with no microphone permission (see [what song is playing on the radio](/guides/identify-song-on-radio.html)), records shows and splits them into named tracks, and syncs favorites across your Apple devices. One purchase, no subscription, nothing tracked. It needs iOS 26, so an older phone will need one of the free alternatives in the [radio app comparison](/guides/best-internet-radio-apps.html).
 
 ## What internet radio does better than FM
 
@@ -80,7 +80,7 @@ FM cannot tell you what is playing. A good streaming player names the song, show
 
 ### It follows you
 
-The same stations on phone, Mac, TV, watch and in the car, with favourites synced between them.
+The same stations on phone, Mac, TV, watch and in the car, with favorites synced between them.
 
 ## Frequently asked questions
 

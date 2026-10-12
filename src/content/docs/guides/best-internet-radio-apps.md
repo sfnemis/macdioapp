@@ -44,7 +44,7 @@ Every figure comes from each app's App Store listing in the United States store,
 
 Macdio is $14.99 in the United States store, paid once, and that purchase covers iPhone, iPad, Mac, Apple TV and Apple Watch through Universal Purchase. There are no ads, no in-app purchases and no account. It carries 60,000+ stations from the RadioBrowser directory, plus any stream URL you paste in yourself.
 
-The features that are hard to find elsewhere are recording and song identification. It records the stream itself rather than the speaker output, and Split by Track cuts a session into one file per song, each named with its own artwork, which is covered in the [recording guide](/guides/record-internet-radio.html). Song identification reads the audio out of the stream, so it keeps working with the phone in a pocket and the app never asks for microphone permission. Synced lyrics scroll in time with what you are hearing. Favourites and history sync over iCloud between devices, and the watch app streams over LTE with no iPhone nearby.
+The features that are hard to find elsewhere are recording and song identification. It records the stream itself rather than the speaker output, and Split by Track cuts a session into one file per song, each named with its own artwork, which is covered in the [recording guide](/guides/record-internet-radio.html). Song identification reads the audio out of the stream, so it keeps working with the phone in a pocket and the app never asks for microphone permission. Synced lyrics scroll in time with what you are hearing. Favorites and history sync over iCloud between devices, and the watch app streams over LTE with no iPhone nearby.
 
 Two limits to state plainly. Macdio needs iOS 26 or macOS 26, so it will not install on an older iPhone or an Intel Mac left behind by that release, and among the seven apps here it has the highest system requirement by a wide margin. And recordings stay inside the app: no export, no sharing, no copy into Files or Finder. That was a deliberate decision and it is not going to change.
 
@@ -52,11 +52,11 @@ Pick it if you want one payment, no advertising, and the recording and song nami
 
 ## Eter, the free option that grows up well
 
-Eter from Apparent Software is free to download and runs on macOS, iOS, iPadOS, watchOS and tvOS, with CarPlay included. It searches the radio-browser.info database and adds a hand-picked list of recommended stations, and you can add any stream URL of your own. A single one-time in-app purchase unlocks saved favourites and hides the recommended list so you only see your own stations. The listing sets a sleep timer alongside that, and unlimited listening is free even without the unlock.
+Eter from Apparent Software is free to download and runs on macOS, iOS, iPadOS, watchOS and tvOS, with CarPlay included. It searches the radio-browser.info database and adds a hand-picked list of recommended stations, and you can add any stream URL of your own. A single one-time in-app purchase unlocks saved favorites and hides the recommended list so you only see your own stations. The listing mentions a sleep timer alongside that, and unlimited listening is free even without the unlock.
 
 Its App Store listing does not publish a station count and does not advertise recording. The minimum is iOS 16, so it reaches back several generations further than Macdio does.
 
-Pick it if you want to spend nothing, see whether you like the app for a week, and pay a small amount only when favourites start to matter. It is the most sensible free starting point on this list.
+Pick it if you want to spend nothing, see whether you like the app for a week, and pay a small amount only when favorites start to matter. It is the most sensible free starting point on this list.
 
 ## Broadcasts, for people who curate their own list
 
@@ -68,7 +68,7 @@ Pick it if you have a dozen stations you love, care about how they look on scree
 
 ## Simple Radio, the one your parents will manage
 
-Simple Radio from Streema advertises 90,000+ stations on iPhone, iPad and Apple Watch, and is free with display ads. Its Premium purchase removes those ads and adds a sleep timer. The interface is exactly what the name promises: a search field, a favourites list, and a big play button, with no settings worth getting lost in.
+Simple Radio from Streema advertises 90,000+ stations on iPhone, iPad and Apple Watch, and is free with display ads. Its Premium purchase removes those ads and adds a sleep timer. The interface is exactly what the name promises: a search field, a favorites list, and a big play button, with no settings worth getting lost in.
 
 There is no Mac app in the Mac App Store listing, no recording mentioned, and the minimum is iOS 15, which covers most phones still in use.
 
@@ -82,7 +82,7 @@ The listing does not describe the free tier's advertising, so this page does not
 
 Pick it if you want a broad international directory and are comfortable with the subscription model, or if the one-off Mac Pro version fits how you listen. Read the subscription terms before tapping through, because weekly pricing adds up faster than it reads.
 
-## TuneIn, the biggest catalogue and the most advertising
+## TuneIn, the biggest catalog and the most advertising
 
 TuneIn advertises 100,000+ stations, the largest count here, and reaches further than any other app on this list: iPhone, iPad, Apple Watch, Apple TV, Alexa, Google Home and Sonos, plus a web player. That reach is the real reason to choose it. It is free with ads, and TuneIn Premium is a subscription that advertises ad-free news from CNBC, CNN and Fox News Radio, commercial-free music stations, and fewer ads elsewhere. A separate paid app, TuneIn Radio Pro, sells for $9.99 on the App Store.
 
