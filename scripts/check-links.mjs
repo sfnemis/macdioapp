@@ -7,7 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 export function linkTargets(html) {
   const out = [];
-  for (const m of html.matchAll(/\b(?:href|src|poster|data-webm|data-mp4)="(\/[^"#?]*)/g)) {
+  for (const m of html.matchAll(/\b(?:href|src|data-src|poster|data-webm|data-mp4)="(\/[^"#?]*)/g)) {
     // A URL is percent-encoded; the file on disk is not ("Popular%20Nearby.webp").
     let target = decodeURIComponent(m[1]);
     if (target.startsWith('//') || target.startsWith('/cdn-cgi/')) continue;

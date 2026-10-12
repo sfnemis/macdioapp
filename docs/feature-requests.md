@@ -37,12 +37,40 @@ saying what happened to it.
   (W3, W4) and a "what's new" badge (W11). The redesign experiment (home page on a
   dark serif theme) is parked at tag `redesign-experiment-2026-10-12`. Everything
   is shown locally before anything deploys.
+  Progress 2026-10-12 19:05, port built (commit 3b30c3d and the follow-up on
+  `v2`): every live page lives whole under `src/legacy/<locale>/` (a `git mv`
+  from `old-site/`), `src/layouts/Legacy.astro` adds the shell (the live head,
+  nav and footer in the markup `parts.js` used to inject, `redesign.css`,
+  `parts.js` now bind-only, `redesign.js`), links are made root-relative and
+  localized at build (`src/site/legacy.mjs`). 32 of 32 legacy URLs build, 7
+  checks green, 41 tests. Checked against macdio.app: title, description, main
+  text and markup skeleton identical on all 32 pages except the deliberate
+  wording fixes (we/our/us on 8 pages, listed in the agent log); full-page
+  screenshots at 1280 and 375 px on 10 pages: 0.00% differing pixels on 7, home
+  0.99% (random equalizer bars) and 0.03%, `/tr/` 0.17% (nav now Turkish),
+  features and stations under 0.1% at 375. Side by side:
+  `~/MacdioBuild/web-port/compare.html`; preview `npm run preview` at
+  http://localhost:4321. Not deployed. Next: W2 guide hub on this base.
 - [ ] **W11 "New" badge on the logo for a new hub post** (Sait, 2026-10-12 18:23).
   When a new release note appears on the hub, the logo in the nav shows a small
   "New" or "Updated" bubble that opens the post; Sait is open to a more modern,
   more functional form (proposed: a "what's new" dot plus a small popover with
   the last three release notes, fed by a Worker route that caches the hub's
   JSON, remembered per visitor in localStorage).
+- [x] **W12 Mobile overflow on the live stations page** (found 2026-10-12 19:20
+  during the port, by a width probe at 375 px). The stations page was 465 px
+  wide on a 375 px phone: the country and genre selects take the width of their
+  longest option (442 px) and the right part of the control is cut off. Fixed in
+  `redesign.css`: `.filter-select { max-width: 100% }`, plus `html { overflow-x:
+  clip }` so no element can widen the page sideways again (the home page's
+  aurora and equalizer bars reach past the viewport too; the body already hid
+  them, the clip on html makes it explicit). Verified headless: scrollWidth 375
+  on the new build, 465 on the live site. Ships with the port.
+- [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
+  content check over the legacy pages): `/features.html` 188, `/guides/record-
+  internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
+  `/de/` 192. No title is over 60. Warnings in the build today; W6 rewrites every
+  title and description against the keyword map, which closes this.
 - [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
   on the model of https://linnote.app/guide/ (structured guide hub with
   navigation, per-topic pages) for SEO and GEO. The 9 existing guides carry over.

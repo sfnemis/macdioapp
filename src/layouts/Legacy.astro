@@ -24,7 +24,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{page.title}</title>
+<title set:html={page.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')} />
 <meta name="description" content={page.description}>
 {page.keywords && <meta name="keywords" content={page.keywords} />}
 <meta name="author" content="SFN">
