@@ -1,0 +1,6 @@
+---
+import Page from '../../templates/Page.astro';
+import { liveLocales, DEFAULT } from '../../site/locales.mjs';
+export function getStaticPaths() { return liveLocales().filter((l) => l.code !== DEFAULT).map((l) => ({ params: { lang: l.code } })); }
+---
+<Page lang={Astro.params.lang} path="/" />

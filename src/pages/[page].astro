@@ -1,0 +1,6 @@
+---
+import Page from '../templates/Page.astro';
+import { ROOT_PAGES } from '../site/pages.mjs';
+export function getStaticPaths() { return ROOT_PAGES.map((page) => ({ params: { page } })); }
+---
+<Page lang="en" path={`/${Astro.params.page}.html`} />

@@ -1,0 +1,6 @@
+---
+import Page from '../../templates/Page.astro';
+import { FEATURE_PAGES } from '../../site/pages.mjs';
+export function getStaticPaths() { return FEATURE_PAGES.map((page) => ({ params: { page } })); }
+---
+<Page lang="en" path={`/features/${Astro.params.page}.html`} />

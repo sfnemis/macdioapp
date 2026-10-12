@@ -1,9 +1,4 @@
 ---
-import Base from '../layouts/Base.astro';
-import { t } from '../i18n/index.mjs';
-const s = t('en').pages['/'];
+import Page from '../templates/Page.astro';
 ---
-<Base lang="en" path="/" title={s.title} description={s.description}>
-  <h1>{s.title}</h1>
-  <p>{s.description}</p>
-</Base>
+<Page lang="en" path="/" />
