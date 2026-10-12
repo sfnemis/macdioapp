@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/tw/app/macdio/id6761737888",
+    "storeLabel": "在 App Store 下載 Macdio",
+    "storeAlt": "在 App Store 下載"
+  },
+  "nav": {
+    "community": "社群",
+    "compare": "比較",
+    "features": "功能",
+    "screenshots": "螢幕截圖",
+    "more": "更多",
+    "moreLabel": "更多頁面",
+    "openMenu": "開啟選單",
+    "pages": [
+      { "path": "/guides/", "label": "指南" },
+      { "path": "/podcasts.html", "label": "Podcast" },
+      { "path": "/pricing.html", "label": "價格" },
+      { "path": "/carplay.html", "label": "CarPlay 電台" },
+      { "path": "/iphone.html", "label": "iPhone 電台" },
+      { "path": "/mac.html", "label": "Mac 電台" },
+      { "path": "/ipad.html", "label": "iPad 電台" },
+      { "path": "/apple-tv.html", "label": "Apple TV 電台" },
+      { "path": "/apple-watch.html", "label": "Apple Watch 電台" },
+      { "path": "/support.html", "label": "支援" },
+      { "path": "/privacy.html", "label": "隱私權" },
+      { "path": "/transparency.html", "label": "透明度" },
+      { "path": "/accessibility.html", "label": "輔助使用" },
+      { "path": "/submit-station.html", "label": "提交電台" },
+      { "path": "/stations.html", "label": "電台" },
+      { "path": "/presskit.html", "label": "媒體資料" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. 保留一切權利。",
+    "support": "支援",
+    "privacy": "隱私權",
+    "presskit": "媒體資料",
+    "contact": "聯絡",
+    "language": "語言"
+  },
+  "socials": {
+    "x": "Macdio 的 X 帳號",
+    "instagram": "Macdio 的 Instagram",
+    "tiktok": "Macdio 的 TikTok",
+    "youtube": "Macdio 的 YouTube"
+  },
+  "guides": {
+    "title": "Mac、iPhone、Watch 與 CarPlay 的網路電台指南",
+    "h1": "指南",
+    "description": "為 Mac、iPhone、iPad、Apple Watch、Apple TV 和 CarPlay 上的網路電台聽眾所寫的簡短實用指南，由 Macdio 的開發者撰寫。",
+    "intro": "網路電台聽眾真正會問的問題，簡短而實用的解答，由 Macdio 的開發者撰寫。每篇指南都會說明適用的裝置，並在結尾整理大家常搜尋的問題。",
+    "allGuides": "所有指南",
+    "behindH2": "這些指南背後的 App",
+    "behind": "Macdio 是一款原生的網路電台與 Podcast 播放器，支援 <a href=\"/iphone.html\">iPhone</a>、<a href=\"/mac.html\">Mac</a>、<a href=\"/apple-tv.html\">Apple TV</a>、<a href=\"/ipad.html\">iPad</a> 和 <a href=\"/apple-watch.html\">Apple Watch</a>。60,000 多個電台、錄音、即時歌詞和不用麥克風的歌曲辨識，一次購買，沒有訂閱。",
+    "writtenBy": "由 Macdio 的開發者 <a href=\"/presskit.html\">Sait Firat NEMIS</a> 撰寫。",
+    "checkedOn": "最後確認日期：{date}。",
+    "groups": [
+      {
+        "label": "每部裝置上的電台",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Mac 上的電台", "title": "如何在 Mac 上收聽網路電台", "description": "瀏覽器、VLC、音樂 App 或選單列播放器：每一條路徑，以及各自的真實取捨。如果你剛開始在桌面上聽電台，先讀這一篇。" },
+          { "slug": "radio-on-apple-watch", "label": "不帶 iPhone 的 Apple Watch", "title": "不帶 iPhone 在 Apple Watch 上聽電台", "description": "附近沒有 iPhone 也能在手腕上串流：獨立運作真正的意思、你需要什麼，以及老實的電池數字。" },
+          { "slug": "carplay-radio", "label": "CarPlay 中的電台", "title": "CarPlay 上的網路電台", "description": "像傳統車用音響一樣的預設電台、用全球電台取代本地 FM，以及長途開車會用掉多少行動數據。" },
+          { "slug": "siri-radio", "label": "用 Siri 播放電台", "title": "用 Siri 播放電台", "description": "Macdio 聽得懂的每一句語音指令，支援 14 種語言，以及在車上說出的電台名稱如何變成正確的串流。" }
+        ]
+      },
+      {
+        "label": "電台功能",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "錄製網路電台", "title": "如何錄製網路電台", "description": "在 Mac 和 iPhone 上把直播節目變成有名稱的獨立曲目，以及個人錄音在法律上的實際立場。" },
+          { "slug": "identify-song-on-radio", "label": "現在播的是哪首歌？", "title": "電台正在播哪首歌？", "description": "辨識電台歌曲的三種方法，其中一種直接讀取串流本身，從不要求使用麥克風。" },
+          { "slug": "find-radio-stream-url", "label": "找到串流網址", "title": "如何找到電台的串流網址", "description": "取得直接網址的四種方法、你可以用它做什麼，以及如何加入自己的電台。" },
+          { "slug": "iphone-fm-radio", "label": "iPhone 有 FM 收音機嗎？", "title": "iPhone 有 FM 收音機嗎？", "description": "關於那顆不存在的晶片的老實答案、接收器與發射器的差別、緊急狀況的論點，以及該改用什麼。" }
+        ]
+      },
+      {
+        "label": "購買與比較",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "最佳網路電台 App", "title": "最佳網路電台 App 比較", "description": "Mac、iPhone、Apple Watch 和 Apple TV 上的七款播放器，附價格、電台數量，以及每一款少了什麼。" }
+        ]
+      }
+    ]
+  }
+}

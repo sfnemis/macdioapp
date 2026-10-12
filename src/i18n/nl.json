@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/nl/app/macdio/id6761737888",
+    "storeLabel": "Download Macdio in de App Store",
+    "storeAlt": "Download in de App Store"
+  },
+  "nav": {
+    "community": "Community",
+    "compare": "Vergelijken",
+    "features": "Functies",
+    "screenshots": "Schermafbeeldingen",
+    "more": "Meer",
+    "moreLabel": "Meer pagina's",
+    "openMenu": "Menu openen",
+    "pages": [
+      { "path": "/guides/", "label": "Gidsen" },
+      { "path": "/podcasts.html", "label": "Podcasts" },
+      { "path": "/pricing.html", "label": "Prijs" },
+      { "path": "/carplay.html", "label": "Radio in CarPlay" },
+      { "path": "/iphone.html", "label": "Radio voor iPhone" },
+      { "path": "/mac.html", "label": "Radio voor Mac" },
+      { "path": "/ipad.html", "label": "Radio voor iPad" },
+      { "path": "/apple-tv.html", "label": "Radio voor Apple TV" },
+      { "path": "/apple-watch.html", "label": "Radio voor Apple Watch" },
+      { "path": "/support.html", "label": "Support" },
+      { "path": "/privacy.html", "label": "Privacy" },
+      { "path": "/transparency.html", "label": "Transparantie" },
+      { "path": "/accessibility.html", "label": "Toegankelijkheid" },
+      { "path": "/submit-station.html", "label": "Zender aanmelden" },
+      { "path": "/stations.html", "label": "Zenders" },
+      { "path": "/presskit.html", "label": "Perskit" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. Alle rechten voorbehouden.",
+    "support": "Support",
+    "privacy": "Privacy",
+    "presskit": "Perskit",
+    "contact": "Contact",
+    "language": "Taal"
+  },
+  "socials": {
+    "x": "Macdio op X",
+    "instagram": "Macdio op Instagram",
+    "tiktok": "Macdio op TikTok",
+    "youtube": "Macdio op YouTube"
+  },
+  "guides": {
+    "title": "Internetradiogidsen voor Mac, iPhone, Watch en CarPlay",
+    "h1": "Gidsen",
+    "description": "Korte, praktische gidsen voor internetradioluisteraars op Mac, iPhone, iPad, Apple Watch, Apple TV en CarPlay, geschreven door de ontwikkelaar van Macdio.",
+    "intro": "Korte, praktische antwoorden op de vragen die internetradioluisteraars echt stellen, geschreven door de ontwikkelaar van Macdio. Elke gids noemt de apparaten waarvoor hij geldt en eindigt met de vragen waar mensen naar zoeken.",
+    "allGuides": "Alle gidsen",
+    "behindH2": "De app achter de gidsen",
+    "behind": "Macdio is een native internetradio- en podcastspeler voor <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> en <a href=\"/apple-watch.html\">Apple Watch</a>. Meer dan 60.000 zenders, opnemen, live songteksten en songherkenning zonder microfoon, in één aankoop zonder abonnement.",
+    "writtenBy": "Geschreven door <a href=\"/presskit.html\">Sait Firat NEMIS</a>, de ontwikkelaar van Macdio.",
+    "checkedOn": "Gecontroleerd op {date}.",
+    "groups": [
+      {
+        "label": "Radio op elk apparaat",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Radio op een Mac", "title": "Zo luister je naar internetradio op een Mac", "description": "Browser, VLC, de Muziek-app of een speler in de menubalk: elke route, met eerlijke voor- en nadelen. Lees deze eerst als radio op de desktop nieuw voor je is." },
+          { "slug": "radio-on-apple-watch", "label": "Apple Watch zonder iPhone", "title": "Radio op Apple Watch zonder iPhone", "description": "Streamen op je pols zonder iPhone in de buurt: wat zelfstandig echt betekent, wat je nodig hebt en eerlijke batterijcijfers." },
+          { "slug": "carplay-radio", "label": "Radio in CarPlay", "title": "Internetradio in CarPlay", "description": "Voorkeuzezenders zoals op een klassieke autoradio, zenders van over de hele wereld in plaats van lokale FM, en wat een lange rit aan mobiele data kost." },
+          { "slug": "siri-radio", "label": "Radio afspelen met Siri", "title": "Radio afspelen met Siri", "description": "Elke spraakopdracht die Macdio begrijpt, in 14 talen, en hoe een zendernaam die je in de auto uitspreekt de juiste stream wordt." }
+        ]
+      },
+      {
+        "label": "Radiofuncties",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "Internetradio opnemen", "title": "Zo neem je internetradio op", "description": "Maak van een live-uitzending losse nummers met een naam op Mac en iPhone, en waar de wet over opnemen voor eigen gebruik echt staat." },
+          { "slug": "identify-song-on-radio", "label": "Welk nummer is dit?", "title": "Welk nummer draait er op de radio?", "description": "Drie manieren om een radionummer te herkennen, waaronder één die de stream zelf leest en nooit om de microfoon vraagt." },
+          { "slug": "find-radio-stream-url", "label": "Een stream-URL vinden", "title": "Zo vind je de stream-URL van een zender", "description": "Vier manieren om het directe adres te krijgen, wat je ermee mag doen en hoe je zelf een zender toevoegt." },
+          { "slug": "iphone-fm-radio", "label": "Heeft de iPhone FM-radio?", "title": "Heeft de iPhone FM-radio?", "description": "Het eerlijke antwoord over de ontbrekende chip, ontvanger tegenover zender, het noodargument en wat je in plaats daarvan kunt doen." }
+        ]
+      },
+      {
+        "label": "Kopen en vergelijken",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "Beste internetradio-apps", "title": "De beste internetradio-apps vergeleken", "description": "Zeven spelers voor Mac, iPhone, Apple Watch en Apple TV, met prijzen, aantallen zenders en wat elke app weglaat." }
+        ]
+      }
+    ]
+  }
+}

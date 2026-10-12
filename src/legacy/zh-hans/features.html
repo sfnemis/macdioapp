@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Macdio 功能：这个应用能做的一切</title>
+<meta name="description" content="Macdio 完整功能列表：流媒体引擎、电台发现、不用麦克风的歌曲识别、按曲目分割的录音、同步歌词，以及带设备端转写文本的播客。">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/features.html">
+<meta property="og:title" content="Macdio 功能：这个应用能做的一切">
+<meta property="og:description" content="Macdio 完整功能列表：流媒体引擎、电台发现、不用麦克风的歌曲识别、按曲目分割的录音、同步歌词，以及带设备端转写文本的播客。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@macdioapp">
+<meta name="twitter:title" content="Macdio 功能：这个应用能做的一切">
+<meta name="twitter:description" content="Macdio 完整功能列表：流媒体引擎、电台发现、不用麦克风的歌曲识别、按曲目分割的录音、同步歌词，以及带设备端转写文本的播客。">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/features.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Macdio", "item": "https://macdio.app/" },
+    { "@type": "ListItem", "position": 2, "name": "功能", "item": "https://macdio.app/features.html" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="redesign.css">
+</head>
+<body>
+
+<div id="nav-slot"></div>
+
+<main>
+<header class="page-head">
+  <h1 class="reveal">所有功能，<span class="grad">集中在一页。</span></h1>
+  <p class="reveal d1">Macdio 小而快，但功能一点不少。这里是这个应用能做的一切，覆盖每一台 Apple 设备，一次性购买。</p>
+</header>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">00</span><h2>重点功能，深入了解</h2></div>
+  <div class="support-cards" style="margin-top:0">
+    <div class="support-card reveal"><h3><a href="features/podcast-transcripts.html">在你设备上生成的播客转写文本</a></h3><p>每一集都变成可搜索的文字，由 Apple 的语音识别在你收听的设备上完成。什么都不上传。</p></div>
+    <div class="support-card reveal"><h3><a href="features/highlights.html">高亮送进你的笔记</a></h3><p>用按钮、Siri 或手表标记一个瞬间，那句话就进入 Apple Notes、Notion、Obsidian、Bear、Craft 或 Readwise。</p></div>
+    <div class="support-card reveal"><h3><a href="features/song-id.html">不用麦克风的 Song ID</a></h3><p>一个不发歌名的电台正在放什么歌，直接从流本身识别出来，在每一台 Apple 设备上。</p></div>
+    <div class="support-card reveal"><h3><a href="features/recording.html">录音，按曲目分割</a></h3><p>一条直播流变成每首歌一个带名字的文件，每段录音里的歌曲都列出来。</p></div>
+    <div class="support-card reveal"><h3><a href="features/synced-lyrics.html">直播电台的同步歌词</a></h3><p>随歌曲一行行走，并有一个可调的偏移量，补上广播领先的那几秒。</p></div>
+    <div class="support-card reveal"><h3><a href="podcasts.html">播客，就在电台旁边</a></h3><p>470 万个节目、章节、摘要、每一集里的歌曲、OPML 导入导出，以及与直播电台共用的接下来播放。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">01</span><h2>播放与流媒体</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>所有流格式</h3><p>MP3、AAC、HLS，以及 PLS、M3U 和 ASX 播放列表，自动解析为直接的流地址。</p></div>
+    <div class="feat-item"><h3>Icecast 代理</h3><p>一个自定义的本地代理修正 Icecast 的 range 头，消除 AVPlayer 造成的随机断流。</p></div>
+    <div class="feat-item"><h3>实时令牌解析</h3><p>像 DI.FM 这样带令牌的地址在每次播放时重新解析，从不缓存，所以重连永远不会 403。</p></div>
+    <div class="feat-item"><h3>音质等级</h3><p>低、中、高三档，自动选择可用的最高码率，并在电台信息中显示。</p></div>
+    <div class="feat-item"><h3>自适应缓冲</h3><p>缓冲从 1 到 15 秒，卡顿后自动增加，并完整恢复。</p></div>
+    <div class="feat-item"><h3>系统集成</h3><p>锁定屏幕和控制中心里的正在播放、耳机和媒体键，以及后台播放。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">02</span><h2>电台发现</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>想怎么浏览都行</h3><p>按类型、国家、语言、热门和附近热门，从 60,000 多个电台中挑选。</p></div>
+    <div class="feat-item"><h3>多条件搜索</h3><p>同时组合国家、类型和语言，结果实时去抖动更新，一键重置。</p></div>
+    <div class="feat-item"><h3>丰富的电台数据</h3><p>每个电台的编码、码率、投票数、点击数、主页、位置和 SSL 状态。</p></div>
+    <div class="feat-item"><h3>自定义流地址</h3><p>添加任何 MP3、AAC 或 HLS 流，可附一条备注，在你的设备之间同步。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">03</span><h2>资料库</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>收藏随处可见</h3><p>给任何电台点个心，它就通过 iCloud 出现在 iPhone、iPad、Mac、Watch 和 TV 上。</p></div>
+    <div class="feat-item"><h3>最近播放</h3><p>保留数量从 5 到 50 可调，带播放次数和上次播放时间。</p></div>
+    <div class="feat-item"><h3>保存的歌曲</h3><p>在正在播放界面给单首曲目点心，连同封面保存并同步。</p></div>
+    <div class="feat-item"><h3>合集</h3><p>把任意组合的电台归入你自己命名的分类。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">04</span><h2>歌曲识别</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>不用麦克风</h3><p>Macdio 直接读取流来识别歌曲，不用麦克风，也没有权限弹窗。</p></div>
+    <div class="feat-item"><h3>在后台自动进行</h3><p>对不发送封面的电台自动触发，然后补上歌名、歌手和专辑封面。</p></div>
+    <div class="feat-item"><h3>预测歌曲周期</h3><p>它学习匹配发生在歌曲的哪个位置，并把下一次扫描对准下一首曲目。</p></div>
+    <div class="feat-item"><h3>广告时段恢复</h3><p>智能重试覆盖广告时段和无法识别的片段，然后再恢复电台品牌信息。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">05</span><h2>录音</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>按曲目分割</h3><p>连续录制，或者按 ICY 元数据边界分割成每首歌一个文件。</p></div>
+    <div class="feat-item"><h3>自动标记</h3><p>未知的录音在后台识别，并用歌名、歌手和封面命名。</p></div>
+    <div class="feat-item"><h3>高保真</h3><p>直接从网络捕获为 FLAC、AAC 或 MP3，零环境噪音。</p></div>
+    <div class="feat-item"><h3>可靠的文件</h3><p>磁盘检查和一个轮询循环，即使在不稳定的连接上也不会产生空文件。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">06</span><h2>同步歌词</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>一行一行</h3><p>按时间同步的歌词自动滚动，并高亮当前这一行。</p></div>
+    <div class="feat-item"><h3>可调偏移</h3><p>微调时间来补偿广播延迟，直到严丝合缝。</p></div>
+    <div class="feat-item"><h3>纯文本回退</h3><p>如果没有同步版本，就显示纯文本歌词。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">07</span><h2>睡眠定时器</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>预设</h3><p>15、30、45 分钟，1 或 2 小时，或者在当前曲目结束时停止。</p></div>
+    <div class="feat-item"><h3>柔和淡出</h3><p>停止前 30 秒的音量淡出，随时可以取消。</p></div>
+    <div class="feat-item"><h3>清晰的倒计时</h3><p>剩余时间和所选预设直接显示在播放器里。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">08</span><h2>iCloud 同步</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>无需账户</h3><p>收藏、历史、已保存曲目、统计和设置通过你现有的 Apple ID 同步。</p></div>
+    <div class="feat-item"><h3>私有数据库</h3><p>存放在你私有的 CloudKit 数据库中，Apple 也无法读取。</p></div>
+    <div class="feat-item"><h3>不漏掉任何一次导入</h3><p>三重触发架构加 60 秒轮询，保证变更一定到达。</p></div>
+    <div class="feat-item"><h3>智能去重</h3><p>识别变音符号的指纹算法正确去除重复项，连土耳其语字符也不例外。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">09</span><h2>统计与历史</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>收听时长</h3><p>本周、本月或全部时间，并列出你排名前五的电台。</p></div>
+    <div class="feat-item"><h3>按设备细分</h3><p>看看你在 iPhone、iPad、Mac、Watch 和 TV 上各听了多少。</p></div>
+    <div class="feat-item"><h3>每日活动</h3><p>精确到分钟的每日明细和会话次数。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">10</span><h2>iPhone 与 iPad</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>自适应布局</h3><p>iPhone 上是紧凑的迷你播放器，iPad 上是完整的边栏和分屏视图。</p></div>
+    <div class="feat-item"><h3>聚焦搜索</h3><p>收藏的电台会被索引，可以直接从聚焦搜索启动。</p></div>
+    <div class="feat-item"><h3>Apple Music 桥接</h3><p>一键在 Apple Music 中搜索或添加当前歌曲，授权在需要时才请求。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">11</span><h2>Mac</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>原生，不是 Catalyst</h3><p>用 SwiftUI 和 AppKit 从零打造，有真正的 Mac 窗口和菜单行为。</p></div>
+    <div class="feat-item"><h3>菜单栏播放器</h3><p>一个紧凑、随时可用的迷你播放器，带正在播放和音量。</p></div>
+    <div class="feat-item"><h3>动态程序坞图标</h3><p>收听时，专辑封面取代程序坞里的应用图标。</p></div>
+    <div class="feat-item"><h3>登录时启动</h3><p>自动打开，并遵守你选择的程序坞或菜单栏显示方式。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">12</span><h2>Apple Watch</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>通过 LTE 独立运行</h3><p>从手腕直接把直播电台送到蓝牙耳机，不需要 iPhone。</p></div>
+    <div class="feat-item"><h3>完整资料库</h3><p>收藏、列表、最近播放和保存的歌曲，全部在手表上。</p></div>
+    <div class="feat-item"><h3>空闲时 0% CPU</h3><p>SF Symbol 图标和一个去重缓存让手表应用空闲时 CPU 占用为零。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">13</span><h2>Apple TV</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>靠在沙发上用的界面</h3><p>为 Siri Remote 打造的大卡片布局，有浏览、收藏和正在播放。</p></div>
+    <div class="feat-item"><h3>完整播放器</h3><p>醒目的封面、完整的元数据、音质选择、歌词和 AirPlay。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">14</span><h2>CarPlay</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>四个完整标签页</h3><p>正在播放、收藏、浏览和最近播放，与应用实时同步。</p></div>
+    <div class="feat-item"><h3>硬件控制</h3><p>在车上切换上一个和下一个电台，封面有缓存，显示很快。</p></div>
+    <div class="feat-item"><h3>无线重连</h3><p>无线 CarPlay 重连时，音频会话干净地重新配置。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">15</span><h2>Siri 与快捷指令</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>免提播放</h3><p>让 Siri 播放一个电台、继续播放或停止，不用打开应用。</p></div>
+    <div class="feat-item"><h3>完整的快捷指令支持</h3><p>把电台自动化进早晨例程、专注模式和 CarPlay 操作。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">16</span><h2>小组件与锁定屏幕</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>主屏幕小组件</h3><p>小号和中号小组件，边到边的封面和元数据。</p></div>
+    <div class="feat-item"><h3>锁定屏幕</h3><p>圆形、矩形和内嵌式的配件小组件。</p></div>
+    <div class="feat-item"><h3>小组件</h3><p>主屏幕和锁定屏幕小组件显示正在播放的内容、你的电台列表、你的节目和最新剧集。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">17</span><h2>设置与自定义</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>外观</h3><p>跟随系统、浅色或深色，由你选择。</p></div>
+    <div class="feat-item"><h3>播放控制</h3><p>音质、缓冲长度、自适应缓冲、歌词自动滚动和偏移、自动识别。</p></div>
+    <div class="feat-item"><h3>资料库上限</h3><p>设置保留多少个最近播放的电台和听过的曲目，从 5 到 50。</p></div>
+    <div class="feat-item"><h3>录音选项</h3><p>模式、音质、最长时长和剩余磁盘空间。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">18</span><h2>本地化</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>14 种语言</h3><p>英语、土耳其语、阿拉伯语、俄语、中文（简体和繁体）、日语、德语、西班牙语、法语、意大利语、荷兰语、葡萄牙语和波兰语。</p></div>
+    <div class="feat-item"><h3>从右到左</h3><p>为阿拉伯语提供完整的 RTL 布局支持。</p></div>
+    <div class="feat-item"><h3>正确的复数形式</h3><p>每种语言中项目、播放次数、分钟、小时和天数的复数形式都正确。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">19</span><h2>工程</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>零依赖</h3><p>纯 Swift、SwiftUI 和 AppKit，没有第三方框架。</p></div>
+    <div class="feat-item"><h3>小而快</h3><p>约 7.8 MB，空闲时 0% CPU，后台播放时低于 1%。</p></div>
+    <div class="feat-item"><h3>后台不崩溃</h3><p>挂起时的三级 SQLite 刷写避免了 0xDEAD10CC 后台崩溃。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">20</span><h2>隐私</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>不收集数据</h3><p>没有分析 SDK，没有遥测，没有带个人数据的崩溃报告器。</p></div>
+    <div class="feat-item"><h3>无需账户</h3><p>除了你现有的 Apple ID，不用注册任何东西。</p></div>
+    <div class="feat-item"><h3>一次性购买</h3><p>没有订阅，没有广告，没有内购，以你当地货币公平定价。</p></div>
+  </div>
+</section>
+
+<section class="feat-cat reveal">
+  <div class="feat-cat-head"><span class="n">21</span><h2>播客</h2></div>
+  <div class="feat-list">
+    <div class="feat-item"><h3>关注节目</h3><p>搜索 Podcast Index 的 470 万个播客，浏览你所在国家的榜单，或从 OPML 文件导入你的节目。</p></div>
+    <div class="feat-item"><h3>设备端转写文本</h3><p>每一集都变成可搜索的文字，在你收听的设备上生成。在 Apple TV 上，iPhone 或 Mac 生成的转写文本通过 iCloud 送达。</p></div>
+    <div class="feat-item"><h3>章节和摘要</h3><p>跳到某个章节、读一段摘要，或在这一集里搜索。</p></div>
+    <div class="feat-item"><h3>每一集里的歌曲</h3><p>一集播客里放的歌从音频中识别出来，保存到曲目。</p></div>
+    <div class="feat-item"><h3>用按钮或 Siri 做高亮</h3><p>点书签按钮，或者对 Siri 说“在 Macdio 里标记此刻”。精确到秒的位置连同转写文本里的那句话一起保存，发送到 Apple Notes、Notion、Obsidian、Bear、Craft 或 Readwise，或分享给任何人。在 iPhone 上，Apple Notes 通过一个现成的快捷指令完成，添加一次即可。</p></div>
+    <div class="feat-item"><h3>与直播电台共用的接下来播放</h3><p>把剧集和电台排进同一个队列。电台时间到了就自动交接。</p></div>
+    <div class="feat-item"><h3>新剧集提醒</h3><p>你关注的节目发布新内容时推送一条通知。点一下就打开这一集。</p></div>
+  </div>
+</section>
+
+<section class="section final" id="get">
+  <h2 class="reveal">准备好调台了。</h2>
+  <p class="reveal d1">这一页上的每个功能，都在一个应用里，在你拥有的每一台设备上。</p>
+  <div class="reveal d2">
+    <a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener" aria-label="在 App Store 下载 Macdio">
+      <img src="download_button.svg" alt="在 App Store 下载" width="119" height="40">
+    </a>
+  </div>
+</section>
+<section class="section" style="padding-top:0"><div class="wrap"><p class="author-line reveal">本文由 Macdio 的开发者 <a href="presskit.html">Sait Firat NEMIS</a> 撰写。核对日期：2026年10月12日。</p></div></section>
+</main>
+
+<div id="footer-slot">
+  <nav class="static-sitelinks" aria-label="站点链接">
+  <a href="index.html">Macdio 网络电台</a>
+  <a href="mac.html">Mac 网络电台应用</a>
+  <a href="iphone.html">iPhone 网络电台应用</a>
+  <a href="ipad.html">iPad 网络电台应用</a>
+  <a href="apple-tv.html">Apple TV 网络电台应用</a>
+  <a href="apple-watch.html">Apple Watch 网络电台应用</a>
+  <a href="stations.html">网络电台目录</a>
+  <a href="guides/">电台指南</a>
+  <a href="guides/how-to-listen-to-radio-on-mac.html">如何在 Mac 上收听网络电台</a>
+  <a href="guides/iphone-fm-radio.html">iPhone 有 FM 收音机吗</a>
+  <a href="guides/record-internet-radio.html">如何录制网络电台</a> <a href="guides/best-internet-radio-apps.html">最佳网络电台应用对比</a>
+  <a href="guides/identify-song-on-radio.html">如何识别电台正在播放的歌曲</a>
+  <a href="guides/carplay-radio.html">如何在 CarPlay 中收听电台</a>
+  <a href="guides/siri-radio.html">如何用 Siri 播放电台</a>
+  <a href="guides/radio-on-apple-watch.html">如何在 Apple Watch 上收听电台</a>
+  <a href="guides/find-radio-stream-url.html">如何找到电台的流媒体地址</a>
+  <a href="tunein-alternative.html">Macdio 与 TuneIn 对比</a>
+  <a href="support.html">Macdio 支持</a>
+  <a href="privacy.html">隐私政策</a>
+  </nav>
+</div>
+
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
+</body>
+</html>

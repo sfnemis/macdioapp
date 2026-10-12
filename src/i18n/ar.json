@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/sa/app/macdio/id6761737888",
+    "storeLabel": "نزّل Macdio من App Store",
+    "storeAlt": "تنزيل من App Store"
+  },
+  "nav": {
+    "community": "المجتمع",
+    "compare": "مقارنة",
+    "features": "الميزات",
+    "screenshots": "لقطات الشاشة",
+    "more": "المزيد",
+    "moreLabel": "صفحات أخرى",
+    "openMenu": "افتح القائمة",
+    "pages": [
+      { "path": "/guides/", "label": "الأدلة" },
+      { "path": "/podcasts.html", "label": "البودكاست" },
+      { "path": "/pricing.html", "label": "الأسعار" },
+      { "path": "/carplay.html", "label": "الراديو في CarPlay" },
+      { "path": "/iphone.html", "label": "الراديو على iPhone" },
+      { "path": "/mac.html", "label": "الراديو على Mac" },
+      { "path": "/ipad.html", "label": "الراديو على iPad" },
+      { "path": "/apple-tv.html", "label": "الراديو على Apple TV" },
+      { "path": "/apple-watch.html", "label": "الراديو على Apple Watch" },
+      { "path": "/support.html", "label": "الدعم" },
+      { "path": "/privacy.html", "label": "الخصوصية" },
+      { "path": "/transparency.html", "label": "الشفافية" },
+      { "path": "/accessibility.html", "label": "تسهيلات الاستخدام" },
+      { "path": "/submit-station.html", "label": "إرسال محطة" },
+      { "path": "/stations.html", "label": "المحطات" },
+      { "path": "/presskit.html", "label": "الملف الصحفي" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. جميع الحقوق محفوظة.",
+    "support": "الدعم",
+    "privacy": "الخصوصية",
+    "presskit": "الملف الصحفي",
+    "contact": "تواصل معي",
+    "language": "اللغة"
+  },
+  "socials": {
+    "x": "Macdio على X",
+    "instagram": "Macdio على Instagram",
+    "tiktok": "Macdio على TikTok",
+    "youtube": "Macdio على YouTube"
+  },
+  "guides": {
+    "title": "أدلة راديو الإنترنت على Mac وiPhone وApple Watch وCarPlay",
+    "h1": "الأدلة",
+    "description": "أدلة قصيرة وعملية لمستمعي راديو الإنترنت على Mac وiPhone وiPad وApple Watch وApple TV وCarPlay، كتبها مطوّر Macdio.",
+    "intro": "إجابات قصيرة وعملية عن الأسئلة التي يطرحها مستمعو راديو الإنترنت فعلًا، كتبها مطوّر Macdio. يذكر كل دليل الأجهزة التي ينطبق عليها، وينتهي بالأسئلة التي يبحث عنها الناس.",
+    "allGuides": "كل الأدلة",
+    "behindH2": "التطبيق الذي خلف هذه الأدلة",
+    "behind": "Macdio مشغّل راديو إنترنت وبودكاست أصلي لأجهزة <a href=\"/iphone.html\">iPhone</a> و<a href=\"/mac.html\">Mac</a> و<a href=\"/apple-tv.html\">Apple TV</a> و<a href=\"/ipad.html\">iPad</a> و<a href=\"/apple-watch.html\">Apple Watch</a>. أكثر من 60,000 محطة، وتسجيل، وكلمات أغانٍ متزامنة، وتعرّف على الأغاني من دون ميكروفون، بشراء واحد ومن دون اشتراك.",
+    "writtenBy": "كتبه <a href=\"/presskit.html\">Sait Firat NEMIS</a>، مطوّر Macdio.",
+    "checkedOn": "تم التحقق منه بتاريخ {date}.",
+    "groups": [
+      {
+        "label": "الراديو على كل جهاز",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "الراديو على Mac", "title": "كيف تستمع إلى راديو الإنترنت على Mac", "description": "المتصفح أو VLC أو تطبيق الموسيقى أو مشغّل في شريط القائمة: كل الطرق مع مزاياها وعيوبها بصدق. ابدأ بهذا الدليل إن كنت جديدًا على الراديو على الكمبيوتر." },
+          { "slug": "radio-on-apple-watch", "label": "Apple Watch من دون iPhone", "title": "الراديو على Apple Watch من دون iPhone", "description": "البث على معصمك من دون iPhone قريب: ماذا يعني الاستقلال فعلًا، وما الذي تحتاج إليه، وأرقام صادقة عن البطارية." },
+          { "slug": "carplay-radio", "label": "الراديو في CarPlay", "title": "راديو الإنترنت في CarPlay", "description": "محطات مسبقة الضبط كما في مسجّل السيارة الكلاسيكي، ومحطات من كل العالم بدل FM المحلي، وكم تكلّف رحلة طويلة من بيانات الهاتف." },
+          { "slug": "siri-radio", "label": "شغّل الراديو بـ Siri", "title": "شغّل الراديو بـ Siri", "description": "كل العبارات الصوتية التي يفهمها Macdio بـ 14 لغة، وكيف يتحوّل اسم محطة تقوله في السيارة إلى البث الصحيح." }
+        ]
+      },
+      {
+        "label": "ميزات الراديو",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "تسجيل راديو الإنترنت", "title": "كيف تسجّل راديو الإنترنت", "description": "حوّل برنامجًا مباشرًا إلى مسارات منفصلة بأسمائها على Mac وiPhone، وأين يقف القانون فعلًا من التسجيل الشخصي." },
+          { "slug": "identify-song-on-radio", "label": "ما الأغنية التي تُشغَّل؟", "title": "ما الأغنية التي تُشغَّل على الراديو؟", "description": "ثلاث طرق للتعرّف على أغنية من الراديو، منها طريقة تقرأ البث نفسه ولا تطلب الميكروفون أبدًا." },
+          { "slug": "find-radio-stream-url", "label": "العثور على رابط البث", "title": "كيف تجد رابط بث محطة", "description": "أربع طرق للحصول على العنوان المباشر، وما يجوز لك فعله به، وكيف تضيف محطة خاصة بك." },
+          { "slug": "iphone-fm-radio", "label": "هل في iPhone راديو FM؟", "title": "هل في iPhone راديو FM؟", "description": "الإجابة الصادقة عن الشريحة الغائبة، والمستقبِل مقابل المرسِل، وحجة الطوارئ، وما الذي تفعله بدلًا من ذلك." }
+        ]
+      },
+      {
+        "label": "الشراء والمقارنة",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "أفضل تطبيقات راديو الإنترنت", "title": "مقارنة أفضل تطبيقات راديو الإنترنت", "description": "سبعة مشغّلات لأجهزة Mac وiPhone وApple Watch وApple TV، مع الأسعار وعدد المحطات وما يفتقر إليه كل منها." }
+        ]
+      }
+    ]
+  }
+}

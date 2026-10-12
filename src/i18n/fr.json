@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/fr/app/macdio/id6761737888",
+    "storeLabel": "Télécharger Macdio sur l'App Store",
+    "storeAlt": "Télécharger dans l'App Store"
+  },
+  "nav": {
+    "community": "Communauté",
+    "compare": "Comparer",
+    "features": "Fonctions",
+    "screenshots": "Captures d'écran",
+    "more": "Plus",
+    "moreLabel": "Autres pages",
+    "openMenu": "Ouvrir le menu",
+    "pages": [
+      { "path": "/guides/", "label": "Guides" },
+      { "path": "/podcasts.html", "label": "Podcasts" },
+      { "path": "/pricing.html", "label": "Prix" },
+      { "path": "/carplay.html", "label": "Radio dans CarPlay" },
+      { "path": "/iphone.html", "label": "Radio pour iPhone" },
+      { "path": "/mac.html", "label": "Radio pour Mac" },
+      { "path": "/ipad.html", "label": "Radio pour iPad" },
+      { "path": "/apple-tv.html", "label": "Radio pour Apple TV" },
+      { "path": "/apple-watch.html", "label": "Radio pour Apple Watch" },
+      { "path": "/support.html", "label": "Assistance" },
+      { "path": "/privacy.html", "label": "Confidentialité" },
+      { "path": "/transparency.html", "label": "Transparence" },
+      { "path": "/accessibility.html", "label": "Accessibilité" },
+      { "path": "/submit-station.html", "label": "Proposer une station" },
+      { "path": "/stations.html", "label": "Stations" },
+      { "path": "/presskit.html", "label": "Dossier de presse" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. Tous droits réservés.",
+    "support": "Assistance",
+    "privacy": "Confidentialité",
+    "presskit": "Dossier de presse",
+    "contact": "Contact",
+    "language": "Langue"
+  },
+  "socials": {
+    "x": "Macdio sur X",
+    "instagram": "Macdio sur Instagram",
+    "tiktok": "Macdio sur TikTok",
+    "youtube": "Macdio sur YouTube"
+  },
+  "guides": {
+    "title": "Guides radio Internet pour Mac, iPhone, Watch et CarPlay",
+    "h1": "Guides",
+    "description": "Guides courts et pratiques pour écouter la radio Internet sur Mac, iPhone, iPad, Apple Watch, Apple TV et CarPlay, écrits par le développeur de Macdio.",
+    "intro": "Des réponses courtes et concrètes aux questions que se posent vraiment les auditeurs de radio Internet, écrites par le développeur de Macdio. Chaque guide indique les appareils concernés et se termine par les questions que les gens tapent dans un moteur de recherche.",
+    "allGuides": "Tous les guides",
+    "behindH2": "L'app derrière les guides",
+    "behind": "Macdio est un lecteur natif de radio Internet et de podcasts pour <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> et <a href=\"/apple-watch.html\">Apple Watch</a>. Plus de 60 000 stations, l'enregistrement, les paroles en direct et l'identification des chansons sans micro, en un seul achat, sans abonnement.",
+    "writtenBy": "Écrit par <a href=\"/presskit.html\">Sait Firat NEMIS</a>, le développeur de Macdio.",
+    "checkedOn": "Vérifié le {date}.",
+    "groups": [
+      {
+        "label": "La radio sur chaque appareil",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "La radio sur un Mac", "title": "Comment écouter la radio Internet sur un Mac", "description": "Navigateur, VLC, l'app Musique ou un lecteur dans la barre des menus : chaque piste, avec ses compromis dits franchement. À lire en premier si la radio sur ordinateur est nouvelle pour vous." },
+          { "slug": "radio-on-apple-watch", "label": "Apple Watch sans iPhone", "title": "La radio sur Apple Watch sans iPhone", "description": "Écouter en streaming au poignet sans iPhone à proximité : ce que « autonome » veut vraiment dire, ce qu'il vous faut, et des chiffres d'autonomie honnêtes." },
+          { "slug": "carplay-radio", "label": "La radio dans CarPlay", "title": "La radio Internet dans CarPlay", "description": "Des présélections comme sur un autoradio classique, des stations du monde entier à la place de la FM locale, et ce qu'un long trajet coûte en données mobiles." },
+          { "slug": "siri-radio", "label": "Lancer la radio avec Siri", "title": "Lancer la radio avec Siri", "description": "Toutes les phrases vocales que Macdio comprend, en 14 langues, et comment un nom de station prononcé dans la voiture devient le bon flux." }
+        ]
+      },
+      {
+        "label": "Fonctions radio",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "Enregistrer la radio Internet", "title": "Comment enregistrer la radio Internet", "description": "Transformer une émission en direct en pistes individuelles et nommées sur Mac et iPhone, et où en est vraiment la loi sur l'enregistrement privé." },
+          { "slug": "identify-song-on-radio", "label": "Quelle chanson passe ?", "title": "Quelle chanson passe à la radio ?", "description": "Trois façons d'identifier une chanson à la radio, dont une qui lit le flux lui-même et ne demande jamais le micro." },
+          { "slug": "find-radio-stream-url", "label": "Trouver l'URL d'un flux", "title": "Comment trouver l'URL du flux d'une station", "description": "Quatre façons d'obtenir l'adresse directe, ce que vous avez le droit d'en faire, et comment ajouter une station à vous." },
+          { "slug": "iphone-fm-radio", "label": "L'iPhone a-t-il une radio FM ?", "title": "L'iPhone a-t-il une radio FM ?", "description": "La réponse honnête sur la puce absente, récepteur contre émetteur, l'argument des urgences, et quoi faire à la place." }
+        ]
+      },
+      {
+        "label": "Acheter et comparer",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "Meilleures apps de radio Internet", "title": "Les meilleures apps de radio Internet comparées", "description": "Sept lecteurs pour Mac, iPhone, Apple Watch et Apple TV, avec les prix, le nombre de stations et ce que chacun laisse de côté." }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transparence : comment Macdio est conçu</title>
+<meta name="description" content="Comment Macdio est conçu, ses sources de données et qui est derrière. Un projet de développeur solo en SwiftUI natif pour chaque plateforme Apple.">
+<meta name="keywords" content="transparence macdio, développeur macdio, sources de données app radio, lrclib, radio browser, app radio swiftui">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/transparency.html"><meta property="og:title" content="Transparence : comment Macdio est conçu">
+<meta property="og:description" content="Comment Macdio est conçu, ses sources de données et qui est derrière. Un projet SwiftUI de développeur solo pour chaque plateforme Apple.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/transparency.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Transparence : comment Macdio est conçu">
+<meta name="twitter:description" content="Comment Macdio est conçu, ses sources de données et qui est derrière.">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon-180.png"><link rel="stylesheet" href="redesign.css"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Macdio", "item": "https://macdio.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Transparence", "item": "https://macdio.app/transparency.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="nav-slot"></div>
+
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">Transparence</p>
+  <h1 class="reveal d1">Comment Macdio <span class="grad">est conçu.</span></h1>
+  <p class="reveal d1">Macdio est un projet solo. Voici un regard honnête sur le fonctionnement de l'app, les données qu'elle touche et ce qu'il faut pour la construire.</p>
+</header>
+
+<div class="content">
+  <h2 class="reveal">Qui développe Macdio</h2>
+  <p class="reveal">Macdio est le projet d'un développeur solo, <strong>Sait Fırat Nemis</strong>. Pas de société derrière, pas d'équipe, pas d'investisseurs. Juste une personne qui construit l'app de radio qui semblait manquer sur l'App Store.</p>
+  <p class="reveal">Je m'occupe du code SwiftUI sur les six plateformes, du site web, de la présence sur l'App Store et de la boîte d'assistance. Si vous écrivez à <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>, c'est moi que vous joignez directement.</p>
+
+  <h2 class="reveal">Comment il est conçu</h2>
+  <p class="reveal">Macdio est 100 % natif, en Swift et SwiftUI. Pas d'Electron, pas de React Native, pas de vues web. Chaque écran est écrit spécifiquement pour la plateforme sur laquelle il tourne : iPhone, iPad, Mac, Apple TV, Apple Watch et CarPlay.</p>
+  <p class="reveal">Comme la plupart des développeurs en 2026, j'utilise des outils modernes assistés par IA dans mon travail, pour explorer des cas limites, prototyper des idées et me sortir de séances de débogage épineuses. Mais l'architecture de fond, les choix de conception, le réglage des performances et le code final livré viennent tous d'une recherche délibérée et d'itérations à la main. Je tiens à ce que les détails soient justes, et cela veut dire comprendre chaque couche de la pile plutôt que d'accepter ce qu'un outil génère.</p>
+
+  <h2 class="reveal">Sources de données &amp; API</h2>
+  <p class="reveal">Macdio n'a pas sa propre base de stations. Il s'appuie sur des API publiques pour les listes de stations, les métadonnées de lecture et les paroles. Voici à quoi l'app parle :</p>
+  <div class="card-grid cols-auto reveal">
+    <div class="info-card">
+      <h3>Radio Browser</h3>
+      <p>Base de données de stations de radio Internet maintenue par la communauté. Fournit les métadonnées des stations, les URL de flux, le pays et les étiquettes de genre. C'est de là que vient le catalogue de dizaines de milliers de stations.</p>
+      <a class="ic-link" href="https://www.radio-browser.info" target="_blank" rel="noopener">radio-browser.info ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>iTunes Search API</h3>
+      <p>L'API de recherche publique d'Apple, utilisée pour enrichir les informations de lecture en récupérant la pochette, l'année de sortie et le nom de l'album à partir des métadonnées de titre que diffusent les stations de radio.</p>
+      <a class="ic-link" href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/" target="_blank" rel="noopener">iTunes Search API ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>LRCLIB</h3>
+      <p>API de paroles libre et gratuite. Fournit les paroles synchronisées (format LRC) et en texte brut pour la chanson en cours. Aucune clé d'API requise, aucun pistage.</p>
+      <a class="ic-link" href="https://lrclib.net" target="_blank" rel="noopener">lrclib.net ↗</a>
+    </div>
+  </div>
+
+  <h2 class="reveal">Dépendances</h2>
+  <p class="reveal">Macdio a une empreinte de dépendances minimale. L'app elle-même n'utilise aucun paquet Swift tiers. Elle est entièrement construite avec les frameworks d'Apple (SwiftUI, SwiftData, AVFoundation, CloudKit, MediaPlayer).</p>
+  <p class="reveal">Ce site web est tout aussi léger. Il n'embarque ni police web ni bibliothèque 3D. La typographie utilise la police système déjà présente sur votre appareil Apple, et chaque animation est du simple CSS et JavaScript. Les services externes sont :</p>
+  <table class="data-table reveal">
+    <thead>
+      <tr><th scope="col">Nom</th><th scope="col">Rôle</th><th scope="col">Type</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></th>
+        <td>Statistiques anonymes de pages vues (site web uniquement)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare Web Analytics</a></th>
+        <td>Comptage des visites sans cookie, ajouté en périphérie par l'hébergeur (site web uniquement)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a></th>
+        <td>Données des stations pour la page annuaire, interrogées depuis votre navigateur (site web uniquement)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row">dir.macdio.app</th>
+        <td>La copie de l'annuaire Radio Browser tenue par Macdio. La page annuaire ne l'interroge que lorsque Radio Browser ne répond pas. Elle ne conserve aucune adresse IP.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row">Serveurs de logos des stations</th>
+        <td>Sur la page annuaire, chaque logo de station est chargé depuis le serveur de la station elle-même, donc ces serveurs voient votre adresse IP. Les requêtes partent sans référent, et un logo qui ne se charge pas est remplacé par un glyphe local. Rien ne transite par ce site.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="reveal">Historique des versions</h2>
+  <p class="reveal">L'historique complet des versions de Macdio et ses notes de mise à jour sont disponibles sur la <a class="inline" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">fiche App Store</a>. Chaque mise à jour décrit exactement ce qui a changé.</p>
+</div>
+</main>
+
+<div id="footer-slot">
+  <nav class="static-sitelinks" aria-label="Liens du site">
+  <a href="index.html">Macdio, radio Internet</a>
+  <a href="mac.html">App de radio Internet pour Mac</a>
+  <a href="iphone.html">App de radio Internet pour iPhone</a>
+  <a href="ipad.html">App de radio Internet pour iPad</a>
+  <a href="apple-tv.html">App de radio Internet pour Apple TV</a>
+  <a href="apple-watch.html">App de radio Internet pour Apple Watch</a>
+  <a href="features.html">Toutes les fonctions de Macdio</a>
+  <a href="stations.html">Annuaire des stations de radio Internet</a>
+  <a href="guides/">Guides radio</a>
+  <a href="guides/how-to-listen-to-radio-on-mac.html">Comment écouter la radio Internet sur un Mac</a>
+  <a href="guides/iphone-fm-radio.html">L'iPhone a-t-il une radio FM</a>
+  <a href="guides/record-internet-radio.html">Comment enregistrer la radio Internet</a> <a href="guides/best-internet-radio-apps.html">Les meilleures apps de radio Internet comparées</a>
+  <a href="guides/identify-song-on-radio.html">Comment identifier une chanson qui passe à la radio</a>
+  <a href="guides/carplay-radio.html">Comment écouter la radio dans CarPlay</a>
+  <a href="guides/siri-radio.html">Comment lancer la radio avec Siri</a>
+  <a href="guides/radio-on-apple-watch.html">Comment écouter la radio sur Apple Watch</a>
+  <a href="guides/find-radio-stream-url.html">Comment trouver l'URL du flux d'une station de radio</a>
+  <a href="tunein-alternative.html">Macdio comparé à TuneIn</a>
+  <a href="support.html">Assistance Macdio</a>
+  <a href="privacy.html">Politique de confidentialité</a>
+  </nav>
+</div>
+
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دليل المحطات: أكثر من 60,000 محطة راديو إنترنت</title>
+<meta name="description" content="تصفح أكثر من 60,000 محطة راديو إنترنت حول العالم. ابحث بالاسم أو الدولة أو النوع. بدعم من Radio Browser، قاعدة البيانات التي يديرها المجتمع.">
+<meta name="keywords" content="محطات راديو إنترنت, دليل الراديو, راديو أونلاين, radio browser, محطات macdio, راديو العالم">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/stations.html">
+<meta property="og:title" content="دليل المحطات: أكثر من 60,000 محطة راديو إنترنت">
+<meta property="og:description" content="تصفح أكثر من 60,000 محطة راديو إنترنت حول العالم. ابحث بالاسم أو الدولة أو النوع. بدعم من Radio Browser، قاعدة البيانات التي يديرها المجتمع.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/stations.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="دليل المحطات: أكثر من 60,000 محطة راديو إنترنت">
+<meta name="twitter:description" content="تصفح أكثر من 60,000 محطة راديو إنترنت حول العالم. ابحث بالاسم أو الدولة أو النوع. بدعم من Radio Browser، قاعدة البيانات التي يديرها المجتمع.">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="stylesheet" href="redesign.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "الصفحة الرئيسية",
+      "item": "https://macdio.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "دليل المحطات",
+      "item": "https://macdio.app/stations.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="nav-slot"></div>
+
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">الدليل</p>
+  <h1 class="reveal d1"><span class="grad">دليل</span> المحطات.</h1>
+  <p class="reveal d1">تصفح أكثر من 60,000 محطة راديو إنترنت من كل أنحاء العالم. البيانات مقدَّمة من <a class="inline" href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a>، قاعدة بيانات مفتوحة يديرها المجتمع.</p>
+</header>
+
+<div class="content wide">
+  <form class="station-search" id="stationSearch" role="search" aria-label="البحث في دليل محطات الراديو" action="stations.html" method="get">
+  <div class="search-bar reveal">
+    <label class="vh" for="searchInput">اسم المحطة</label>
+    <input type="search" name="q" class="search-input" id="searchInput" placeholder="ابحث عن المحطات بالاسم…" autocomplete="off">
+    <button class="search-btn" id="searchBtn" type="submit">بحث</button>
+  </div>
+
+  <div class="filters reveal">
+    <label class="vh" for="countryFilter">الدولة</label>
+    <select class="filter-select" name="country" id="countryFilter"><option value="">كل الدول</option></select>
+    <label class="vh" for="genreFilter">النوع</label>
+    <select class="filter-select" name="genre" id="genreFilter"><option value="">كل الأنواع</option></select>
+  </div>
+  </form>
+
+  <div class="results-info" id="resultsInfo" role="status" aria-live="polite"></div>
+
+  <div id="stationResults">
+    <div class="loading"><div class="spinner"></div>جارٍ تحميل المحطات الشائعة…</div>
+  </div>
+
+  <div class="pagination" id="pagination"></div>
+<p class="author-line reveal">كتبه <a href="presskit.html">Sait Firat NEMIS</a>، مطوّر Macdio. تم التحقق منه بتاريخ 12 أكتوبر 2026.</p>
+</div>
+</main>
+
+<div id="footer-slot">
+  <nav class="static-sitelinks" aria-label="روابط الموقع">
+  <a href="index.html">Macdio لراديو الإنترنت</a>
+  <a href="mac.html">تطبيق راديو إنترنت لأجهزة Mac</a>
+  <a href="iphone.html">تطبيق راديو إنترنت لـ iPhone</a>
+  <a href="ipad.html">تطبيق راديو إنترنت لـ iPad</a>
+  <a href="apple-tv.html">تطبيق راديو إنترنت لـ Apple TV</a>
+  <a href="apple-watch.html">تطبيق راديو إنترنت لـ Apple Watch</a>
+  <a href="features.html">كل ميزات Macdio</a>
+  <a href="guides/">أدلة الراديو</a>
+  <a href="guides/how-to-listen-to-radio-on-mac.html">كيف تستمع إلى راديو الإنترنت على Mac</a>
+  <a href="guides/iphone-fm-radio.html">هل في iPhone راديو FM</a>
+  <a href="guides/record-internet-radio.html">كيف تسجّل راديو الإنترنت</a> <a href="guides/best-internet-radio-apps.html">مقارنة أفضل تطبيقات راديو الإنترنت</a>
+  <a href="guides/identify-song-on-radio.html">كيف تتعرّف على أغنية تُشغَّل على الراديو</a>
+  <a href="guides/carplay-radio.html">كيف تستمع إلى الراديو في CarPlay</a>
+  <a href="guides/siri-radio.html">كيف تشغّل الراديو بـ Siri</a>
+  <a href="guides/radio-on-apple-watch.html">كيف تستمع إلى الراديو على Apple Watch</a>
+  <a href="guides/find-radio-stream-url.html">كيف تجد رابط بث محطة راديو</a>
+  <a href="tunein-alternative.html">مقارنة Macdio مع TuneIn</a>
+  <a href="support.html">دعم Macdio</a>
+  <a href="privacy.html">سياسة الخصوصية</a>
+  </nav>
+</div>
+
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
+
+<script>
+// Radio Browser API, then Macdio's own copy of it when Radio Browser does not
+// answer (its single server returned 503 on 2026-10-11; dir.macdio.app is the
+// apps' fallback too and allows this site's origin).
+var API_BASES = ['https://de1.api.radio-browser.info/json', 'https://dir.macdio.app/json'];
+function getJSON(path, i) {
+  i = i || 0;
+  var ctrl = window.AbortController ? new AbortController() : null;
+  var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 8000) : null;
+  return fetch(API_BASES[i] + path, ctrl ? { signal: ctrl.signal } : {})
+    .then(function (r) {
+      if (timer) clearTimeout(timer);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    })
+    .catch(function (err) {
+      if (timer) clearTimeout(timer);
+      if (i + 1 < API_BASES.length) return getJSON(path, i + 1);
+      throw err;
+    });
+}
+var PAGE_SIZE = 30;
+var currentPage = 0;
+var lastQuery = {};
+
+var searchInput = document.getElementById('searchInput');
+var searchBtn = document.getElementById('searchBtn');
+var countryFilter = document.getElementById('countryFilter');
+var genreFilter = document.getElementById('genreFilter');
+var resultsContainer = document.getElementById('stationResults');
+var resultsInfo = document.getElementById('resultsInfo');
+var pagination = document.getElementById('pagination');
+
+// A search is addressable: stations.html?q=jazz&country=Turkey&genre=chill.
+// Read it before anything else so the first search already reflects the URL.
+// RadioBrowser is a public, community-editable database: a station name, tag or
+// logo URL is untrusted input. Everything below is escaped before it reaches
+// innerHTML, and a logo URL has to be an absolute http(s) address.
+function esc(v) {
+  return String(v == null ? '' : v)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+// https only: RadioBrowser stores plenty of http:// logos, and loading one from
+// an https page is mixed content the browser blocks or upgrades anyway. Those
+// stations get the local glyph instead of a broken image and a console error.
+function safeLogoUrl(u) {
+  return /^https:\/\//i.test(String(u || '')) ? esc(u) : '';
+}
+function fold(v) {
+  v = String(v).toLowerCase();
+  return v.normalize ? v.normalize('NFD').replace(/[\u0300-\u036f]/g, '') : v;
+}
+var initialQuery = new URLSearchParams(window.location.search);
+var pendingCountry = initialQuery.get('country') || '';
+if (initialQuery.get('q')) searchInput.value = initialQuery.get('q');
+
+// Populate country filter
+getJSON('/countries?order=stationcount&reverse=true&limit=60')
+  .then(function (countries) {
+    countries.forEach(function (c) {
+      if (c.name && c.stationcount > 50) {
+        var opt = document.createElement('option');
+        opt.value = c.name;
+        opt.textContent = c.name + ' (' + c.stationcount + ')';
+        countryFilter.appendChild(opt);
+      }
+    });
+    // The option only exists now, so a ?country= value can only be applied here.
+    // Match loosely: the directory spells countries the way RadioBrowser does,
+    // and a link built by hand or by an agent rarely gets the case and the
+    // accents right.
+    if (pendingCountry) {
+      var wanted = fold(pendingCountry);
+      for (var i = 0; i < countryFilter.options.length; i++) {
+        if (fold(countryFilter.options[i].value) === wanted) {
+          countryFilter.value = countryFilter.options[i].value;
+          break;
+        }
+      }
+      searchStations(0);
+    }
+  })
+  .catch(function () { if (pendingCountry) searchStations(0); });
+
+// Common genres
+var genres = ['pop','rock','jazz','classical','electronic','hip hop','country','blues','metal','reggae','latin','folk','indie','ambient','news','talk','sports','oldies','80s','90s','lounge','soul','r&b','punk','dance','house','techno','trance','chill'];
+genres.forEach(function (g) {
+  var opt = document.createElement('option');
+  opt.value = g;
+  opt.textContent = g.charAt(0).toUpperCase() + g.slice(1);
+  genreFilter.appendChild(opt);
+});
+
+function searchStations(page) {
+  currentPage = page || 0;
+  var name = searchInput.value.trim();
+  var country = countryFilter.value;
+  var tag = genreFilter.value;
+
+  var params = new URLSearchParams();
+  if (name) params.append('name', name);
+  if (country) params.append('country', country);
+  if (tag) params.append('tag', tag);
+  params.append('limit', PAGE_SIZE);
+  params.append('offset', currentPage * PAGE_SIZE);
+  params.append('order', 'votes');
+  params.append('reverse', 'true');
+  params.append('hidebroken', 'true');
+
+  lastQuery = { name: name, country: country, tag: tag };
+
+  resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Searching…</div>';
+  pagination.innerHTML = '';
+
+  getJSON('/stations/search?' + params.toString())
+    .then(function (stations) { renderStations(stations); })
+    .catch(function () {
+      resultsContainer.innerHTML = '<div class="empty-state"><h3>Connection error</h3><p>Could not reach the station database. Please try again.</p></div>';
+      resultsInfo.textContent = '';
+    });
+}
+
+function renderStations(stations) {
+  if (stations.length === 0) {
+    resultsContainer.innerHTML = '<div class="empty-state"><h3>No stations found</h3><p>Try a different search term or filter.</p></div>';
+    resultsInfo.textContent = '0 results';
+    pagination.innerHTML = '';
+    return;
+  }
+
+  var label = '';
+  if (lastQuery.name || lastQuery.country || lastQuery.tag) {
+    label = stations.length + (stations.length === PAGE_SIZE ? '+' : '') + ' results';
+    if (lastQuery.name) label += ' for "' + lastQuery.name + '"';
+    if (lastQuery.country) label += ' in ' + lastQuery.country;
+    if (lastQuery.tag) label += ' · ' + lastQuery.tag;
+  } else {
+    label = 'Showing popular stations · Page ' + (currentPage + 1);
+  }
+  resultsInfo.textContent = label;
+
+  var html = '<div class="station-grid">';
+  stations.forEach(function (s) {
+    // Station logos live on each station's own server. no-referrer keeps the
+    // visited page out of their logs; a dead logo falls back to the glyph.
+    var logo = safeLogoUrl(s.favicon);
+    var icon = logo.length > 5
+      ? '<img src="' + logo + '" alt="" width="44" height="44" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.innerHTML=\'<span class=fallback>📻</span>\'">'
+      : '<span class="fallback">📻</span>';
+
+    var meta = [];
+    if (s.country) meta.push(esc(s.country));
+    if (s.codec) meta.push(esc(s.codec));
+    if (s.bitrate && s.bitrate > 0) meta.push(Number(s.bitrate) + ' kbps');
+
+    var tags = '';
+    if (s.tags) {
+      var tagList = s.tags.split(',').slice(0, 3);
+      tags = '<div class="station-tags">';
+      tagList.forEach(function (t) {
+        t = t.trim();
+        if (t) tags += '<span class="station-tag">' + esc(t) + '</span>';
+      });
+      tags += '</div>';
+    }
+
+    html += '<div class="station-card">';
+    html += '<div class="station-icon">' + icon + '</div>';
+    html += '<div class="station-info">';
+    html += '<div class="station-name" title="' + esc(s.name || '') + '">' + esc(s.name || 'Unknown') + '</div>';
+    html += '<div class="station-meta">' + meta.join(' · ') + '</div>';
+    html += tags;
+    html += '</div></div>';
+  });
+  html += '</div>';
+  resultsContainer.innerHTML = html;
+
+  var pagHtml = '';
+  if (currentPage > 0) {
+    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage - 1) + ')">← Prev</button>';
+  }
+  pagHtml += '<button class="page-btn active" disabled>Page ' + (currentPage + 1) + '</button>';
+  if (stations.length === PAGE_SIZE) {
+    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage + 1) + ')">Next →</button>';
+  }
+  pagination.innerHTML = pagHtml;
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Keep the query in the URL so a search can be linked, shared, bookmarked and
+// reached directly by a crawler or an agent: stations.html?q=jazz&country=Turkey
+function syncUrl() {
+  if (!window.history || !window.history.replaceState) return;
+  var p = new URLSearchParams();
+  if (searchInput.value.trim()) p.set('q', searchInput.value.trim());
+  if (countryFilter.value) p.set('country', countryFilter.value);
+  if (genreFilter.value) p.set('genre', genreFilter.value);
+  var qs = p.toString();
+  window.history.replaceState(null, '', qs ? 'stations.html?' + qs : 'stations.html');
+}
+function runSearch(page) { syncUrl(); searchStations(page); }
+
+document.getElementById('stationSearch').addEventListener('submit', function (e) {
+  e.preventDefault();
+  runSearch(0);
+});
+countryFilter.addEventListener('change', function () { runSearch(0); });
+genreFilter.addEventListener('change', function () { runSearch(0); });
+
+if (initialQuery.get('genre')) genreFilter.value = initialQuery.get('genre');
+
+// With ?country= the first search waits for the country list to arrive.
+if (!pendingCountry) searchStations(0);
+</script>
+</body>
+</html>

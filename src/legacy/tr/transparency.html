@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Şeffaflık: Macdio Nasıl Yapılıyor</title>
+<meta name="description" content="Macdio nasıl yapılıyor, hangi veri kaynaklarını kullanıyor ve arkasında kim var. Her Apple platformu için yerel SwiftUI ile yapılmış tek geliştiricili bir proje.">
+<meta name="keywords" content="macdio şeffaflık, macdio geliştirici, radyo uygulaması veri kaynakları, lrclib, radio browser, swiftui radyo uygulaması">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/transparency.html"><meta property="og:title" content="Şeffaflık: Macdio Nasıl Yapılıyor">
+<meta property="og:description" content="Macdio nasıl yapılıyor, hangi veri kaynaklarını kullanıyor ve arkasında kim var. Her Apple platformu için tek geliştiricili bir SwiftUI projesi.">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/transparency.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Şeffaflık: Macdio Nasıl Yapılıyor">
+<meta name="twitter:description" content="Macdio nasıl yapılıyor, hangi veri kaynaklarını kullanıyor ve arkasında kim var.">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon-180.png"><link rel="stylesheet" href="redesign.css"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Macdio", "item": "https://macdio.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Şeffaflık", "item": "https://macdio.app/transparency.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="nav-slot"></div>
+
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">Şeffaflık</p>
+  <h1 class="reveal d1">Macdio <span class="grad">nasıl yapılıyor.</span></h1>
+  <p class="reveal d1">Macdio tek kişilik bir proje. Uygulamanın nasıl çalıştığına, hangi verilere dokunduğuna ve yapımına nelerin girdiğine dürüst bir bakış.</p>
+</header>
+
+<div class="content">
+  <h2 class="reveal">Macdio'yu kim yapıyor</h2>
+  <p class="reveal">Macdio, <strong>Sait Fırat Nemis</strong>'in tek geliştiricili projesi. Arkasında şirket yok, ekip yok, yatırımcı yok. Sadece App Store'da eksik hissettiği radyo uygulamasını yapan bir kişi.</p>
+  <p class="reveal">Altı platformun tamamındaki SwiftUI kodunu, web sitesini, App Store varlığını ve destek kutusunu ben yürütüyorum. <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a> adresine yazarsan doğrudan bana ulaşıyorsun.</p>
+
+  <h2 class="reveal">Nasıl yapılıyor</h2>
+  <p class="reveal">Macdio %100 yerel Swift ve SwiftUI. Electron yok, React Native yok, web görünümü yok. Her ekran çalıştığı platform için özel yazıldı: iPhone, iPad, Mac, Apple TV, Apple Watch ve CarPlay.</p>
+  <p class="reveal">2026'daki çoğu geliştirici gibi ben de iş akışımın bir parçası olarak modern yapay zekâ destekli araçlar kullanıyorum; uç durumları keşfetmek, fikirleri prototiplemek ve çetrefilli hata ayıklama oturumlarını aşmak için. Ama temel mimari, tasarım kararları, performans ayarı ve yayımlanan son kod, bilinçli araştırmadan ve elle yinelemeden geliyor. Ayrıntıları doğru yapmayı önemsiyorum ve bu, bir aracın ürettiğini olduğu gibi kabul etmek yerine yığının her katmanını anlamak demek.</p>
+
+  <h2 class="reveal">Veri kaynakları ve API'ler</h2>
+  <p class="reveal">Macdio'nun kendi istasyon veri tabanı yok. İstasyon listeleri, şimdi çalıyor üst verisi ve şarkı sözleri için herkese açık API'lere dayanır. Uygulamanın konuştuğu yerler şunlar:</p>
+  <div class="card-grid cols-auto reveal">
+    <div class="info-card">
+      <h3>Radio Browser</h3>
+      <p>Topluluk tarafından yürütülen internet radyosu istasyonları veri tabanı. İstasyon üst verisi, yayın adresleri, ülke bilgisi ve tür etiketleri sağlar. On binlerce istasyonluk katalog buradan geliyor.</p>
+      <a class="ic-link" href="https://www.radio-browser.info" target="_blank" rel="noopener">radio-browser.info ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>iTunes Search API</h3>
+      <p>Apple'ın herkese açık arama API'si; radyo istasyonlarının yayınladığı parça üst verisine göre albüm kapağı, çıkış yılı ve albüm adı çekerek şimdi çalıyor bilgisini zenginleştirmek için kullanılır.</p>
+      <a class="ic-link" href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/" target="_blank" rel="noopener">iTunes Search API ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>LRCLIB</h3>
+      <p>Açık kaynaklı, ücretsiz şarkı sözü API'si. Çalan şarkı için senkron (LRC biçimi) ve düz metin şarkı sözleri sağlar. API anahtarı gerekmez, takip yok.</p>
+      <a class="ic-link" href="https://lrclib.net" target="_blank" rel="noopener">lrclib.net ↗</a>
+    </div>
+  </div>
+
+  <h2 class="reveal">Bağımlılıklar</h2>
+  <p class="reveal">Macdio'nun bağımlılık ayak izi çok küçük. Uygulamanın kendisi sıfır üçüncü taraf Swift paketi kullanıyor. Tamamen Apple'ın kendi çerçeveleriyle (SwiftUI, SwiftData, AVFoundation, CloudKit, MediaPlayer) yapıldı.</p>
+  <p class="reveal">Bu web sitesi de aynı derecede yalın. Web yazı tipi yok, 3B kütüphanesi yok. Tipografi Apple cihazında zaten olan sistem yazı tipini kullanıyor ve her animasyon düz CSS ve JavaScript. Dış hizmetler şunlar:</p>
+  <table class="data-table reveal">
+    <thead>
+      <tr><th scope="col">Ad</th><th scope="col">Amaç</th><th scope="col">Tür</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></th>
+        <td>Anonim sayfa görüntüleme analitiği (yalnızca web sitesi)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare Web Analytics</a></th>
+        <td>Çerezsiz ziyaret sayımı, barındırıcı tarafından uçta eklenir (yalnızca web sitesi)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a></th>
+        <td>Dizin sayfası için istasyon verisi, tarayıcından sorgulanır (yalnızca web sitesi)</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row">dir.macdio.app</th>
+        <td>Macdio'nun Radio Browser dizininin kendi kopyası. Dizin sayfası ona yalnızca Radio Browser cevap vermediğinde sorar. IP adresi tutmaz.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://hub.devdio.pro" target="_blank" rel="noopener">hub.devdio.pro</a></th>
+        <td>Macdio'nun kendi topluluk forumu. Logodaki "Yeni" rozeti bu sitenin kendi sunucusundan en yeni üç sürüm notunu ister; tarayıcın forumla hiç iletişim kurmaz ve tutulan tek şey son gördüğün gönderinin kimliği, tarayıcının yerel deposunda.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row">İstasyon logo sunucuları</th>
+        <td>Dizin sayfasında her istasyon logosu o istasyonun kendi sunucusundan yüklenir, yani bu sunucular IP adresini görür. İstekler yönlendiren bilgisi olmadan gönderilir ve yüklenemeyen bir logonun yerine yerel bir simge konur. Hiçbir şey bu site üzerinden aktarılmaz.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="reveal">Değişiklik günlüğü</h2>
+  <p class="reveal">Macdio'nun tam sürüm geçmişi ve sürüm notları <a class="inline" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store sayfasında</a>. Her güncelleme tam olarak neyin değiştiğini anlatır.</p>
+</div>
+</main>
+
+<div id="footer-slot">
+  <nav class="static-sitelinks" aria-label="Site bağlantıları">
+  <a href="index.html">Macdio internet radyosu</a>
+  <a href="mac.html">Mac için internet radyosu uygulaması</a>
+  <a href="iphone.html">iPhone için internet radyosu uygulaması</a>
+  <a href="ipad.html">iPad için internet radyosu uygulaması</a>
+  <a href="apple-tv.html">Apple TV için internet radyosu uygulaması</a>
+  <a href="apple-watch.html">Apple Watch için internet radyosu uygulaması</a>
+  <a href="features.html">Tüm Macdio özellikleri</a>
+  <a href="stations.html">İnternet radyosu istasyon dizini</a>
+  <a href="guides/">Radyo rehberleri</a>
+  <a href="guides/how-to-listen-to-radio-on-mac.html">Mac'te internet radyosu nasıl dinlenir</a>
+  <a href="guides/iphone-fm-radio.html">iPhone'da FM radyo var mı</a>
+  <a href="guides/record-internet-radio.html">İnternet radyosu nasıl kaydedilir</a> <a href="guides/best-internet-radio-apps.html">En iyi internet radyosu uygulamaları karşılaştırması</a>
+  <a href="guides/identify-song-on-radio.html">Radyoda çalan şarkı nasıl bulunur</a>
+  <a href="guides/carplay-radio.html">CarPlay'de radyo nasıl dinlenir</a>
+  <a href="guides/siri-radio.html">Siri ile radyo nasıl açılır</a>
+  <a href="guides/radio-on-apple-watch.html">Apple Watch'ta radyo nasıl dinlenir</a>
+  <a href="guides/find-radio-stream-url.html">Bir radyo istasyonunun yayın adresi nasıl bulunur</a>
+  <a href="tunein-alternative.html">Macdio ile TuneIn karşılaştırması</a>
+  <a href="support.html">Macdio destek</a>
+  <a href="privacy.html">Gizlilik politikası</a>
+  </nav>
+</div>
+
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
+</body>
+</html>
