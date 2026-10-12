@@ -72,7 +72,7 @@ Uma gravação pesa o mesmo que o stream, já que nada é acrescentado nem compr
 
 ## Em que formato ficam os arquivos
 
-Uma gravação mantém o que a estação envia. Uma estação MP3 te dá um .mp3 e uma estação AAC te dá um .aac, sem nada recodificado no caminho até o disco, então o arquivo soa exatamente como o stream soava. Quando o Song ID deu nome a uma música numa gravação AAC, o título, o artista e a capa são gravados no arquivo, que vira um .m4a. Não há configuração de qualidade para errar aqui, porque o áudio nunca é codificado uma segunda vez.
+Uma gravação mantém o que a estação envia. Uma estação MP3 te dá um .mp3 e uma estação AAC te dá um .aac, sem nada recodificado no caminho até o disco, então o arquivo soa exatamente como o stream soava. Quando o Song ID deu nome a uma música numa gravação AAC, o título, o artista, a capa e a letra são gravados no arquivo, que vira um .m4a. Não há configuração de qualidade para errar aqui, porque o áudio nunca é codificado uma segunda vez.
 
 ## Onde as gravações ficam
 

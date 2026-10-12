@@ -72,7 +72,7 @@ Una registrazione pesa quanto lo stream, perché non viene aggiunto né compress
 
 ## In che formato sono i file
 
-Una registrazione mantiene quello che manda la stazione. Una stazione MP3 ti dà un .mp3 e una stazione AAC un .aac, senza ricodifica sulla strada verso il disco, quindi il file suona esattamente come lo stream. Quando Song ID ha dato un nome a una canzone in una registrazione AAC, titolo, artista e copertina vengono scritti nel file, che così diventa un .m4a. Qui non c'è nessuna impostazione di qualità da sbagliare, perché l'audio non viene mai codificato una seconda volta.
+Una registrazione mantiene quello che manda la stazione. Una stazione MP3 ti dà un .mp3 e una stazione AAC un .aac, senza ricodifica sulla strada verso il disco, quindi il file suona esattamente come lo stream. Quando Song ID ha dato un nome a una canzone in una registrazione AAC, titolo, artista, copertina e testo vengono scritti nel file, che così diventa un .m4a. Qui non c'è nessuna impostazione di qualità da sbagliare, perché l'audio non viene mai codificato una seconda volta.
 
 ## Dove stanno le registrazioni
 

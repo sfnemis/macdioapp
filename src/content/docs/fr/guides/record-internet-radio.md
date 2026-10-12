@@ -72,7 +72,7 @@ Un enregistrement pèse autant que le flux, puisque rien n'est ajouté ni compre
 
 ## Dans quel format sont les fichiers
 
-Un enregistrement garde ce que la station envoie. Une station MP3 vous donne un .mp3 et une station AAC un .aac, sans rien de réencodé en route vers le disque, donc le fichier sonne exactement comme le flux. Quand Song ID a nommé une chanson dans un enregistrement AAC, son titre, son artiste et sa pochette sont écrits dans le fichier, qui devient alors un .m4a. Il n'y a aucun réglage de qualité à rater ici, parce que l'audio n'est jamais encodé une seconde fois.
+Un enregistrement garde ce que la station envoie. Une station MP3 vous donne un .mp3 et une station AAC un .aac, sans rien de réencodé en route vers le disque, donc le fichier sonne exactement comme le flux. Quand Song ID a nommé une chanson dans un enregistrement AAC, son titre, son artiste, sa pochette et ses paroles sont écrits dans le fichier, qui devient alors un .m4a. Il n'y a aucun réglage de qualité à rater ici, parce que l'audio n'est jamais encodé une seconde fois.
 
 ## Où vivent les enregistrements
 

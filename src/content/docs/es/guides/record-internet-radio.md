@@ -72,7 +72,7 @@ Una grabación pesa lo mismo que el stream, ya que no se añade ni se comprime n
 
 ## En qué formato están los archivos
 
-Una grabación conserva lo que envíe la emisora. Una emisora MP3 te da un .mp3 y una emisora AAC te da un .aac, sin recodificar nada de camino al disco, así que el archivo suena exactamente como sonaba el stream. Cuando Song ID ha puesto nombre a una canción en una grabación AAC, su título, su artista y su carátula se escriben en el archivo, que pasa a ser un .m4a. Aquí no hay ningún ajuste de calidad que puedas equivocar, porque el audio nunca se codifica una segunda vez.
+Una grabación conserva lo que envíe la emisora. Una emisora MP3 te da un .mp3 y una emisora AAC te da un .aac, sin recodificar nada de camino al disco, así que el archivo suena exactamente como sonaba el stream. Cuando Song ID ha puesto nombre a una canción en una grabación AAC, su título, su artista, su carátula y su letra se escriben en el archivo, que pasa a ser un .m4a. Aquí no hay ningún ajuste de calidad que puedas equivocar, porque el audio nunca se codifica una segunda vez.
 
 ## Dónde viven las grabaciones
 
