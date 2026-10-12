@@ -740,9 +740,10 @@ body > footer{margin-top:auto;}
 .duo{display:grid;grid-template-columns:1fr;gap:16px;margin:0 0 10px;}
 @media (min-width:720px){.duo{grid-template-columns:300px 1fr;}}
 .duo .shot img{width:100%;height:100%;object-fit:cover;}
-.shot img{cursor:zoom-in;display:block;width:100%;height:auto;}
+.shot img,.shot video,.pod-shots img,.pod-shots video,.hl-block img,.hl-block video{cursor:zoom-in;}
+.shot img{display:block;width:100%;height:auto;}
 .lightbox{position:fixed;inset:0;z-index:1000;background:rgba(5,5,7,.88);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;cursor:zoom-out;animation:lbIn .18s ease;}
-.lightbox img{max-width:92vw;max-height:92vh;width:auto;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.65);}
+.lightbox img,.lightbox video{max-width:92vw;max-height:92vh;width:auto;height:auto;border-radius:14px;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.65);}
 @keyframes lbIn{from{opacity:0}to{opacity:1}}
 
 /* Static crawlable site links. JavaScript replaces this block with the real

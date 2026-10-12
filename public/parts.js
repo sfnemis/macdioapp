@@ -29,15 +29,36 @@
     }
   }
 
+  // Screenshots and clips open large: images in the galleries, the podcast
+  // section and the highlight block, and the clips next to them. A clip
+  // reopens as its own player with controls; clicking it does not close the
+  // overlay, the backdrop and Escape do.
+  var ZOOMABLE = '.shot img, .shot video, .pod-shots img, .pod-shots video, .hl-block img, .hl-block video';
   function bindLightbox() {
     document.addEventListener('click', function (e) {
-      var img = e.target && e.target.closest ? e.target.closest('.shot img') : null;
-      if (!img) return;
+      var el = e.target && e.target.closest ? e.target.closest(ZOOMABLE) : null;
+      if (!el) return;
       var ov = document.createElement('div');
       ov.className = 'lightbox';
-      var big = document.createElement('img');
-      big.src = img.currentSrc || img.src;
-      big.alt = img.alt || '';
+      var big;
+      if (el.tagName === 'VIDEO') {
+        big = document.createElement('video');
+        var sources = el.querySelectorAll('source');
+        for (var i = 0; i < sources.length; i++) {
+          var src = sources[i].getAttribute('src') || sources[i].getAttribute('data-src');
+          if (src && big.canPlayType(sources[i].type || '')) { big.src = src; break; }
+        }
+        if (!big.src && sources.length) big.src = sources[sources.length - 1].getAttribute('src') || sources[sources.length - 1].getAttribute('data-src');
+        big.poster = el.poster || el.getAttribute('data-poster') || '';
+        big.muted = true; big.loop = true; big.playsInline = true; big.controls = true;
+        big.autoplay = !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        big.setAttribute('aria-label', el.getAttribute('aria-label') || '');
+        big.addEventListener('click', function (ev) { ev.stopPropagation(); });
+      } else {
+        big = document.createElement('img');
+        big.src = el.currentSrc || el.src;
+        big.alt = el.alt || '';
+      }
       ov.appendChild(big);
       function onKey(ev) { if (ev.key === 'Escape') close(); }
       function close() { ov.remove(); document.removeEventListener('keydown', onKey); }
