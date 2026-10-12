@@ -18,18 +18,21 @@ read before the page that needs it is written).
 | Synced lyrics on live radio | `Macdio/Services/Lyrics/LyricsService.swift` (LRCLIB) | verified | 2026-10-12 |
 | On-device podcast transcripts, in the episode's language where the device supports it | `Macdio/Services/Podcast/TranscriptionService.swift` (SpeechTranscriber.supportedLocales, episode language first) | verified | 2026-10-12 |
 | Highlights to Apple Notes, Notion, Obsidian, Bear, Craft, Readwise | `Macdio/Services/Podcast/HighlightDelivery.swift` enum cases notion, readwise, bear, obsidian, craft, appleNotes | verified | 2026-10-12 |
-| Highlights by Siri | open | open | |
-| Chapters, episode summary, transcript search | showcase clips exist (iphone-chapters, iphone-summary, iphone-transcript-search); read the code before stating details | open | |
+| Highlights by Siri ("Mark This Moment" App Intent) and from the watch | `MacdioiOS/App/MacdioShortcuts.swift` (ten App Intents), `Macdio/Services/Podcast/HighlightStore.swift` | verified | 2026-10-12 |
+| Publisher chapters, generated chapters and episode summary (Apple language model: Private Cloud Compute on OS 27, on-device model elsewhere), transcript search | `Macdio/Services/Podcast/PodcastFeedParser.swift:118`, `ChapterGenerator.swift:257`, `TranscriptionService.swift:318` (inventory section 1) | verified | 2026-10-12 |
 | Up Next holds a live station next to an episode | `ShowcaseRuntime.swift` comment on #227 | verified | 2026-10-12 |
 | Apple Watch plays on its own (feeds on the watch's own Wi-Fi or cellular network, phone not needed) | `MacdioiOS/MacdioWatch Watch App/Services/WatchPodcastFeed.swift` | verified | 2026-10-12 |
 | Apple TV Top Shelf | `com.macdio.app.MacdioTopShelf` extension (CLAUDE.md) | verified | 2026-10-12 |
-| Clock Mode bedside radio (iOS only) | memory project_clock_mode (builds 133 to 141); alarm: open | open | |
+| Clock Mode bedside radio and Alarm (wake to a station or the newest episode; iPhone and iPad only) | `MacdioiOS/Views/Player/FullPlayerView.swift:1833,2106` | verified | 2026-10-12 |
 | Menu bar player (Mac only) | showcase clip mac-menubar recorded from the Mac build (AXPress on the menu bar extra, 2026-10-12) | verified | 2026-10-12 |
-| Importing favourites from TuneIn, myTuner or Broadcasts | open; likely not implemented | open | |
+| Importing favourites from TuneIn, myTuner or radio.net | not implemented (inventory not-found 5); the only imports are OPML for podcasts and Macdio's own JSON on the Mac | not implemented | 2026-10-12 |
 | OPML import and export of podcast subscriptions | `Macdio/Services/Podcast/OPML.swift` ("OPML in and out", #224 #225) | verified | 2026-10-12 |
 | Station count | `src/data/counts.json` stations, dated | verified by script | run date |
 | Podcast count | `src/data/counts.json` podcasts, dated | verified by script | run date |
 | Own station directory dir.macdio.app used when Radio Browser does not answer | tracker #561, memory reference_dir_macdio_app | verified | 2026-10-12 |
 | No account, no ads, no analytics SDK in the app | grep for Firebase, Mixpanel, Amplitude, Sentry, TelemetryDeck, GoogleAnalytics across Swift sources and pbxproj: none | verified | 2026-10-12 |
 | Station editor over Wi-Fi: the iPhone, iPad or Apple TV serves a PIN-protected editor page for the user's own stations | `Macdio/Services/StationEditorServer.swift`, `MacdioiOS/Views/Settings/iOSStationEditorView.swift`, `MacdioTV/Views/TVStationEditorView.swift`; no Mac view | verified | 2026-10-12 |
+| Scheduled recording (record at a set time) | not implemented (inventory not-found 2); recording starts by hand with a maximum length | not implemented | 2026-10-12 |
+| Live Activity or Dynamic Island | not implemented (no ActivityKit); the system Now Playing only | not implemented | 2026-10-12 |
+| Audio effects (equaliser, Voice Boost, trim silence) | not implemented (inventory not-found 4); podcast speed is the only audio control | not implemented | 2026-10-12 |
 | Android or web version | not implemented | not implemented | 2026-10-12 |

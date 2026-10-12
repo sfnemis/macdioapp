@@ -316,7 +316,7 @@
         "clip": "iphone-recordings",
         "caption": "Recordings, one file per song",
         "h": "Record the stream, get a tagged library.",
-        "p": "On iPhone, iPad and Mac, recording follows the station's song titles and splits the stream into tracks. Schedule a show and it records while you sleep."
+        "p": "On iPhone, iPad and Mac, recording follows the station's song titles and splits the stream into tracks. Set a maximum length and it stops on its own."
       },
       {
         "clip": "iphone-lyrics",
