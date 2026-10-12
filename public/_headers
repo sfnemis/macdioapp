@@ -5,18 +5,22 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
-# Media and images. Long lived but not immutable, because a file can be
-# replaced under the same name.
-/assets/*
+# Hashed build assets never change under the same name.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Search index files are hashed too.
+/pagefind/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Clips and posters. Long lived but not immutable, a file can be re-encoded
+# under the same name.
+/media/*
   Cache-Control: public, max-age=2592000
 
-# Root scripts and styles carry no version hash, so they must revalidate on
-# every visit. Otherwise a deploy takes days to reach returning visitors.
-/redesign.js
+# HTML and the sitemap revalidate on every visit so a deploy reaches
+# returning visitors at once.
+/*.html
   Cache-Control: public, max-age=0, must-revalidate
-
-/redesign.css
-  Cache-Control: public, max-age=0, must-revalidate
-
-/parts.js
+/sitemap.xml
   Cache-Control: public, max-age=0, must-revalidate

@@ -1,11 +1,11 @@
 {
   // Cloudflare Workers static assets config for macdio.app
   //
-  // "directory" is ./public and must stay that way. It used to be ".", which
+  // "directory" is ./dist (the Astro build output) and must stay a dedicated directory. It used to be ".", which
   // made the whole repository the public web root, and every file was served
   // until .assetsignore happened to name it. That leaked the wrangler account
   // cache, the worker sourcemap, CLAUDE.local.md, docs/ and .serena/ across
-  // three separate incidents. Anything outside ./public cannot ship now.
+  // three separate incidents. Anything outside ./dist cannot ship now.
   // Deploy: npx wrangler deploy   (needs `npx wrangler login` once)
   // Custom domain: add macdio.app under Workers > macdio-web > Settings > Domains & Routes
   "name": "macdio-web",
@@ -19,9 +19,14 @@
   // been exposed on all of them, and each one is a host that ignores the
   // canonical the pages carry.
   "workers_dev": false,
+
+  // Only the build output is served. src/, scripts/, docs/, old-site/ and every
+  // config file sit outside dist/ and cannot be reached, which is what
+  // scripts/check-public.sh proves after each deploy.
   "assets": {
-    "directory": "./public",
+    "directory": "./dist",
     "html_handling": "none",
+    "not_found_handling": "404-page",
     "binding": "ASSETS"
   },
 
