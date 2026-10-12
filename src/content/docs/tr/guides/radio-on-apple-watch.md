@@ -1,5 +1,5 @@
 ---
-title: "Apple Watch'ta Yakında iPhone Olmadan Radyo (2026)"
+title: "Apple Watch'ta Yanında iPhone Olmadan Radyo (2026)"
 description: "Watch canlı radyoyu LTE ile kendi başına çalar. Bağımsızlığın ne istediği, hangi modellerin yapabildiği ve yayının pil ile veriye maliyeti."
 datePublished: 2026-08-09
 lastUpdated: 2026-10-12
@@ -11,7 +11,7 @@ faq:
   - q: "Saat uygulaması ayrı bir satın alma mı?"
     a: "Hayır. Tek satın alma iPhone, iPad, Mac, Apple TV ve Apple Watch'ı birlikte kapsar."
   - q: "Apple Watch SE'de çalışıyor mu?"
-    a: "Evet, watchOS 11 ya da üstünü çalıştıran her saatte. Hücresel olmadan yayın için menzilde Wi-Fi ya da yakında iPhone gerekir."
+    a: "Evet, watchOS 11 ya da üstünü çalıştıran her saatte. Hücresel olmadan yayın için menzilde Wi-Fi ya da yanında iPhone gerekir."
   - q: "Telefon olmadan koşarken dinleyebilir miyim?"
     a: "Evet, hücresel bir saat ve Bluetooth kulaklıkla. Yalnızca GPS'li bir saatte koşunun bilinen bir Wi-Fi ağının içinde kalması gerekir."
   - q: "İstasyonlarım iPhone'dan eşitleniyor mu?"
@@ -30,7 +30,7 @@ Hayır. Hiçbir Apple Watch'ta FM alıcı olmadı ve açılacak gizli bir çip d
 
 Bu takas tamamen kötü değil. FM sana bileğinin menzilindeki vericileri verirdi; internet radyosu dünyada yayın yapan her istasyonu veriyor, ki bir saatte bu bir avuç yerel sinyalle 60.000 istasyon arasındaki fark.
 
-## Wi-Fi, hücresel ya da yakında iPhone
+## Wi-Fi, hücresel ya da yanında iPhone
 
 Üç durum, üç cevap. iPhone yakındayken saat telefonun bağlantısına yaslanabilir ve her şey düpedüz çalışır. Telefon uzakta ve menzilde bilinen bir Wi-Fi ağı varken saat kendi başına bağlanır; bu evi, ofisi ve spor salonunu kapsar. Telefon uzakta ve Wi-Fi yokken hücresel bir saat kendi tarifesinde yayın almaya devam eder, yalnızca GPS'li bir saatin ise bağlanacağı bir şey yoktur ve sessiz kalır.
 
@@ -74,7 +74,7 @@ Hayır. Tek satın alma iPhone, iPad, Mac, Apple TV ve Apple Watch'ı birlikte k
 
 ### Apple Watch SE'de çalışıyor mu?
 
-Evet, watchOS 11 ya da üstünü çalıştıran her saatte. Hücresel olmadan yayın için menzilde Wi-Fi ya da yakında iPhone gerekir.
+Evet, watchOS 11 ya da üstünü çalıştıran her saatte. Hücresel olmadan yayın için menzilde Wi-Fi ya da yanında iPhone gerekir.
 
 ### Telefon olmadan koşarken dinleyebilir miyim?
 

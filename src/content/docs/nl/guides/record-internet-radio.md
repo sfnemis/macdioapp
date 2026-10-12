@@ -72,7 +72,7 @@ Een opname is zo zwaar als de stream, omdat er niets wordt toegevoegd of verder 
 
 ## In welk formaat de bestanden zijn
 
-Een opname bewaart wat de zender stuurt. Een MP3-zender geeft je een .mp3 en een AAC-zender een .aac, zonder dat er onderweg naar de schijf iets opnieuw wordt gecodeerd, dus het bestand klinkt precies zoals de stream deed. Als Song ID een nummer in een AAC-opname heeft benoemd, worden titel, artiest en hoes in het bestand geschreven, en dan wordt het een .m4a. Er is hier geen kwaliteitsinstelling om verkeerd te zetten, omdat de audio nooit een tweede keer wordt gecodeerd.
+Een opname bewaart wat de zender stuurt. Een MP3-zender geeft je een .mp3 en een AAC-zender een .aac, zonder dat er onderweg naar de schijf iets opnieuw wordt gecodeerd, dus het bestand klinkt precies zoals de stream deed. Als Song ID een nummer in een AAC-opname heeft benoemd, worden titel, artiest, hoes en songtekst in het bestand geschreven, en dan wordt het een .m4a. Er is hier geen kwaliteitsinstelling om verkeerd te zetten, omdat de audio nooit een tweede keer wordt gecodeerd.
 
 ## Waar de opnames staan
 

@@ -4,7 +4,7 @@ description: "Zeg de zender en hij speelt. Elke Siri-zin die Macdio begrijpt, in
 datePublished: 2026-09-20
 lastUpdated: 2026-10-12
 faq:
-  - q: "Moet ik \"op Macdio\" zeggen?"
+  - q: "Moet ik \"Macdio\" erbij zeggen?"
     a: "Ja. Siri stuurt een zin naar een app op basis van de naam, dus elke opdracht eindigt met Macdio. Zonder speelt Siri Apple Music af of vraagt het wat je bedoelde."
   - q: "Welke zenders kent Siri?"
     a: "Je favorieten en de zenders die je onlangs hebt afgespeeld. Korte vormen werken ook, zoals BBC 1 voor BBC Radio 1, of Radio Paradise voor een stream waarvan de volledige naam een bitrate bevat."
@@ -20,7 +20,7 @@ faq:
 
 Zeg de naam van de zender en hij speelt. In de auto hoef je nooit naar het scherm te kijken.
 
-Sinds Macdio 2.7.7 kent Siri je zenders. "Hé Siri, speel Radio Paradise op Macdio" start de stream op de iPhone, via AirPods, of vanaf de spraakknop op het stuur. De zinnen hieronder zijn de zinnen die Siri accepteert, en dezelfde lijst staat in de app onder Instellingen, Siri, in je eigen taal.
+Sinds Macdio 2.7.7 kent Siri je zenders. "Hé Siri, speel Radio Paradise af in Macdio" start de stream op de iPhone, via AirPods, of vanaf de spraakknop op het stuur. De zinnen hieronder zijn de zinnen die Siri accepteert, en dezelfde lijst staat in de app onder Instellingen, Siri, in je eigen taal.
 
 ## Zeg de naam van de zender
 
@@ -30,16 +30,16 @@ Siri leert je favorieten en de zenders die je onlangs hebt afgespeeld, ongeveer 
 
 Begin elke zin met "Hé Siri". De zender komt op de plek van de haakjes.
 
-- Speel [zender] op Macdio
+- Speel [zender] af in Macdio
 - Luister naar [zender] met Macdio
-- Stem af op [zender] op Macdio
-- Speel mijn favorieten op Macdio
+- Zet [zender] op Macdio
+- Speel mijn favorieten af in Macdio
 - Speel mijn eerste favoriet op Macdio
 - Speel mijn favoriete zenders op Macdio
 - Hervat Macdio, Open Macdio, Start Macdio
 - Stop Macdio, Pauzeer Macdio, Stop de radio op Macdio
 
-"Speel mijn favorieten" start de eerste favoriet en zet de rest in de wachtrij, zodat de knoppen voor overslaan op je oordopjes of je stuur door de lijst bewegen.
+"Speel mijn favorieten af" start de eerste favoriet en zet de rest in de wachtrij, zodat de knoppen voor overslaan op je oordopjes of je stuur door de lijst bewegen.
 
 ## Veertien talen
 
@@ -51,11 +51,11 @@ Hou de spraakknop op het stuur ingedrukt, of de Siri-knop op het CarPlay-scherm,
 
 ## Waarom de naam van de app deel is van de zin
 
-Siri stuurt een zin alleen naar een app als die app erin wordt genoemd. "Speel Radio Paradise" alleen gaat naar Apple Music, dat zo'n zender niet heeft. "Speel Radio Paradise op Macdio" komt bij Macdio aan. Elke zin hierboven eindigt om die reden met de naam.
+Siri stuurt een zin alleen naar een app als die app erin wordt genoemd. "Speel Radio Paradise af" alleen gaat naar Apple Music, dat zo'n zender niet heeft. "Speel Radio Paradise af in Macdio" komt bij Macdio aan. Elke zin hierboven eindigt om die reden met de naam.
 
 ## Veelgestelde vragen
 
-### Moet ik "op Macdio" zeggen?
+### Moet ik "Macdio" erbij zeggen?
 
 Ja. Siri stuurt een zin naar een app op basis van de naam, dus elke opdracht eindigt met Macdio. Zonder speelt Siri Apple Music af of vraagt het wat je bedoelde.
 

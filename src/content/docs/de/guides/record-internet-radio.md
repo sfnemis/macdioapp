@@ -72,7 +72,7 @@ Eine Aufnahme ist so schwer wie der Stream, denn nichts wird hinzugefügt oder w
 
 ## In welchem Format die Dateien sind
 
-Eine Aufnahme behält, was der Sender schickt. Ein MP3-Sender ergibt eine .mp3, ein AAC-Sender eine .aac, ohne neue Kodierung auf dem Weg zur Festplatte, die Datei klingt also genau wie der Stream. Hat Song ID in einer AAC-Aufnahme einen Song erkannt, werden Titel, Künstler und Cover in die Datei geschrieben, und daraus wird eine .m4a. Hier gibt es keine Qualitätseinstellung, die du falsch setzen könntest, weil der Ton nie ein zweites Mal kodiert wird.
+Eine Aufnahme behält, was der Sender schickt. Ein MP3-Sender ergibt eine .mp3, ein AAC-Sender eine .aac, ohne neue Kodierung auf dem Weg zur Festplatte, die Datei klingt also genau wie der Stream. Hat Song ID in einer AAC-Aufnahme einen Song erkannt, werden Titel, Künstler, Cover und Liedtext in die Datei geschrieben, und daraus wird eine .m4a. Hier gibt es keine Qualitätseinstellung, die du falsch setzen könntest, weil der Ton nie ein zweites Mal kodiert wird.
 
 ## Wo die Aufnahmen liegen
 

@@ -20,7 +20,7 @@ faq:
 
 Powiedz nazwę stacji i gra. W aucie nigdy nie musisz patrzeć na ekran.
 
-Od Macdio 2.7.7 Siri zna twoje stacje. „Hej Siri, włącz Radio Paradise w Macdio” uruchamia strumień na iPhone'ie, przez AirPods albo z przycisku głosowego na kierownicy. Frazy poniżej to te, które Siri przyjmuje, a ta sama lista siedzi w aplikacji w Ustawieniach, Siri, w twoim własnym języku.
+Od Macdio 2.7.7 Siri zna twoje stacje. „Hej Siri, odtwórz Radio Paradise w Macdio” uruchamia strumień na iPhone'ie, przez AirPods albo z przycisku głosowego na kierownicy. Frazy poniżej to te, które Siri przyjmuje, a ta sama lista siedzi w aplikacji w Ustawieniach, Siri, w twoim własnym języku.
 
 ## Powiedz nazwę stacji
 
@@ -30,16 +30,16 @@ Siri uczy się twoich ulubionych i stacji, które grałeś ostatnio, w sumie oko
 
 Każdą zacznij od „Hej Siri”. Stacja idzie tam, gdzie są nawiasy.
 
-- Włącz [stację] w Macdio
-- Słuchaj [stacji] z Macdio
+- Odtwórz [stację] w Macdio
+- Słuchaj [stacji] w Macdio
 - Nastaw [stację] w Macdio
-- Włącz moje ulubione w Macdio
+- Odtwórz moje ulubione w Macdio
 - Włącz moją pierwszą ulubioną w Macdio
 - Włącz moje ulubione stacje w Macdio
 - Wznów Macdio, Otwórz Macdio, Uruchom Macdio
 - Zatrzymaj Macdio, Wstrzymaj Macdio, Zatrzymaj radio w Macdio
 
-„Włącz moje ulubione” uruchamia pierwszą ulubioną i ustawia resztę w kolejce, więc przyciski przeskoku na słuchawkach albo kierownicy przechodzą po liście.
+„Odtwórz moje ulubione” uruchamia pierwszą ulubioną i ustawia resztę w kolejce, więc przyciski przeskoku na słuchawkach albo kierownicy przechodzą po liście.
 
 ## Czternaście języków
 
@@ -51,7 +51,7 @@ Przytrzymaj przycisk głosowy na kierownicy albo przycisk Siri na ekranie CarPla
 
 ## Dlaczego nazwa aplikacji jest częścią frazy
 
-Siri wysyła frazę do aplikacji tylko wtedy, gdy aplikacja jest w niej nazwana. Samo „Włącz Radio Paradise” idzie do Apple Music, które nie ma takiej stacji. „Włącz Radio Paradise w Macdio” trafia do Macdio. Z tego powodu każda fraza powyżej kończy się nazwą.
+Siri wysyła frazę do aplikacji tylko wtedy, gdy aplikacja jest w niej nazwana. Samo „Odtwórz Radio Paradise” idzie do Apple Music, które nie ma takiej stacji. „Odtwórz Radio Paradise w Macdio” trafia do Macdio. Z tego powodu każda fraza powyżej kończy się nazwą.
 
 ## Najczęstsze pytania
 

@@ -72,7 +72,7 @@ Bir kayıt yayın kadar ağırdır, çünkü hiçbir şey eklenmez ya da daha fa
 
 ## Dosyalar hangi biçimde
 
-Bir kayıt istasyonun ne gönderdiyse onu tutar. MP3 istasyonu .mp3, AAC istasyonu .aac verir, diske giderken hiçbir şey yeniden kodlanmaz, yani dosya tam yayının sesi gibi çıkar. Şarkıyı Tanı bir AAC kaydındaki bir şarkıyı adlandırdığında başlığı, sanatçısı ve kapağı dosyaya yazılır ve dosya bir .m4a olur. Burada yanlış yapılacak kalite ayarı yok, çünkü ses hiçbir zaman ikinci kez kodlanmaz.
+Bir kayıt istasyonun ne gönderdiyse onu tutar. MP3 istasyonu .mp3, AAC istasyonu .aac verir, diske giderken hiçbir şey yeniden kodlanmaz, yani dosya tam yayının sesi gibi çıkar. Şarkıyı Tanı bir AAC kaydındaki bir şarkıyı adlandırdığında başlığı, sanatçısı, kapağı ve sözleri dosyaya yazılır ve dosya bir .m4a olur. Burada yanlış yapılacak kalite ayarı yok, çünkü ses hiçbir zaman ikinci kez kodlanmaz.
 
 ## Kayıtlar nerede yaşıyor
 

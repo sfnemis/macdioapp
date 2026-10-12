@@ -93,6 +93,35 @@ saying what happened to it.
   404 with the page. Note for the deploy check: `scripts/check-public.sh`
   must probe with `-H "Sec-Fetch-Mode: navigate"` too, or this class of bug
   stays invisible to curl.
+- [ ] **W15 Google Analytics cookies and EU consent** (found 2026-10-12 by the
+  German sync pass). macdio.app loads GA4 (gtag, G-QR2MZ9NF2N) on every page
+  with no consent banner; GA sets `_ga` cookies, which under GDPR and the
+  German TTDSG normally need consent first. The live site has worked this way
+  all along; the v2 privacy page now says so plainly ("This website" section).
+  Sait's call: a consent banner, GA consent mode with cookies off until consent,
+  or drop GA and keep Cloudflare Web Analytics (cookieless, already on).
+- [ ] **W16 Two support addresses** (found 2026-10-12). support.html and the
+  footer use support@devdio.pro; privacy, accessibility, submit-station and
+  transparency use support@macdio.app. Both may well work; Sait confirms which
+  one the site should name and the other is aligned in every locale.
+- [x] **W17 Facts on the site checked against the app** (2026-10-12 evening).
+  The translation agents read every English page line by line and flagged
+  contradictions; each was checked against the app source, App Store listings
+  or the competitor research and fixed in English, then in all 13
+  translations: recording keeps the stream's own format (no quality setting,
+  #298; the Mac format picker only renames the file, app tracker #571), the
+  station's own title always wins over Song ID (#150), Clock Mode and the Apple
+  Music favorites sync are not Macdio exclusives (Broadcasts has both),
+  requirements iOS 26 / macOS 26 / tvOS 18 / watchOS 11, recordings cannot be
+  exported, 175 countries, no app size (82 MB on the App Store, not 7.8) and no
+  crash-proof claim, Broadcasts moved to a subscription, privacy and
+  transparency pages list Podcast Index, ShazamKit, push.macdio.app and Private
+  Cloud Compute, the Mac sandbox has no microphone entitlement. FAQPage JSON-LD
+  is now generated from each page's visible FAQ (Google requires them to
+  match); `scripts/check-stale-facts.mjs` keeps the corrected numbers from
+  coming back in any language. The check found a real app bug on the way:
+  AAC recordings lost half their bitrate and their ending when tagged (app
+  tracker #570, fixed in code, not yet tested on a device).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

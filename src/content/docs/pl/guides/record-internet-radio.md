@@ -72,7 +72,7 @@ Nagranie jest tak ciężkie jak strumień, bo nic nie jest dodawane ani dodatkow
 
 ## W jakim formacie są pliki
 
-Nagranie zachowuje to, co wysyła stacja. Stacja MP3 daje ci .mp3, a stacja AAC daje ci .aac, bez ponownego kodowania po drodze na dysk, więc plik brzmi dokładnie jak strumień. Gdy Song ID nazwie utwór w nagraniu AAC, jego tytuł, wykonawca i okładka trafiają do pliku, który staje się wtedy plikiem .m4a. Nie ma tu ustawienia jakości, które można zepsuć, bo dźwięk nigdy nie jest kodowany drugi raz.
+Nagranie zachowuje to, co wysyła stacja. Stacja MP3 daje ci .mp3, a stacja AAC daje ci .aac, bez ponownego kodowania po drodze na dysk, więc plik brzmi dokładnie jak strumień. Gdy Song ID nazwie utwór w nagraniu AAC, jego tytuł, wykonawca, okładka i tekst piosenki trafiają do pliku, który staje się wtedy plikiem .m4a. Nie ma tu ustawienia jakości, które można zepsuć, bo dźwięk nigdy nie jest kodowany drugi raz.
 
 ## Gdzie mieszkają nagrania
 

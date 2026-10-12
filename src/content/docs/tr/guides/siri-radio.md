@@ -4,7 +4,7 @@ description: "İstasyonu söyle, çalsın. Macdio'nun anladığı her Siri ifade
 datePublished: 2026-09-20
 lastUpdated: 2026-10-12
 faq:
-  - q: "\"Macdio'da\" demek zorunda mıyım?"
+  - q: "\"Macdio\" demek zorunda mıyım?"
     a: "Evet. Siri bir ifadeyi uygulamaya adıyla yönlendirir, bu yüzden her komutta Macdio geçer. Onsuz Siri Apple Music'i çalar ya da ne demek istediğini sorar."
   - q: "Siri hangi istasyonları biliyor?"
     a: "Favorilerini ve son çaldığın istasyonları. Kısa biçimler de çalışır; BBC Radio 1 için BBC 1 ya da tam adında bit hızı geçen bir yayın için Radio Paradise gibi."
@@ -20,7 +20,7 @@ faq:
 
 İstasyonun adını söyle, çalsın. Arabada ekrana hiç bakmak zorunda kalmazsın.
 
-Macdio 2.7.7'den beri Siri istasyonlarını biliyor. "Hey Siri, Macdio'da Radio Paradise çal" yayını iPhone'da, AirPods üzerinden ya da direksiyondaki ses düğmesinden başlatır. Aşağıdaki ifadeler Siri'nin kabul ettikleri ve aynı liste uygulamada Ayarlar, Siri altında kendi dilinde duruyor.
+Macdio 2.7.7'den beri Siri istasyonlarını biliyor. "Hey Siri, Macdio ile Radio Paradise çal" yayını iPhone'da, AirPods üzerinden ya da direksiyondaki ses düğmesinden başlatır. Aşağıdaki ifadeler Siri'nin kabul ettikleri ve aynı liste uygulamada Ayarlar, Siri altında kendi dilinde duruyor.
 
 ## İstasyonun adını söyle
 
@@ -30,14 +30,14 @@ Siri favorilerini ve son çaldığın istasyonları öğrenir, toplam yirmi civa
 
 Her birine "Hey Siri" ile başla. İstasyon köşeli parantezlerin yerine gelir.
 
-- Macdio'da [istasyon] çal
+- Macdio ile [istasyon] çal
 - Macdio ile [istasyon] dinle
-- Macdio'da [istasyon]'a geç
-- Macdio'da favorilerimi çal
-- Macdio'da ilk favorimi çal
-- Macdio'da favori istasyonlarımı çal
-- Macdio'ya devam et, Macdio'yu aç, Macdio'yu başlat
-- Macdio'yu durdur, Macdio'yu duraklat, Macdio'da radyoyu durdur
+- Macdio ile [istasyon] aç
+- Macdio ile favorilerimi çal
+- Macdio ile ilk favorimi çal
+- Macdio ile favori istasyonlarımı çal
+- Macdio devam et, Macdio aç, Macdio başlat
+- Macdio durdur, Macdio duraklat, Macdio radyoyu durdur
 
 "Favorilerimi çal" ilk favoriyi başlatır ve gerisini sıraya koyar, böylece kulaklığındaki ya da direksiyondaki geçme düğmeleri listede ilerler.
 
@@ -51,11 +51,11 @@ Direksiyondaki ses düğmesini ya da CarPlay ekranındaki Siri düğmesini bası
 
 ## Uygulamanın adı neden ifadenin parçası
 
-Siri bir ifadeyi yalnızca uygulama içinde adıyla geçiyorsa o uygulamaya gönderir. Tek başına "Radio Paradise çal" Apple Music'e gider, orada da öyle bir istasyon yoktur. "Macdio'da Radio Paradise çal" Macdio'ya ulaşır. Yukarıdaki her ifadenin adı içermesinin sebebi bu.
+Siri bir ifadeyi yalnızca uygulama içinde adıyla geçiyorsa o uygulamaya gönderir. Tek başına "Radio Paradise çal" Apple Music'e gider, orada da öyle bir istasyon yoktur. "Macdio ile Radio Paradise çal" Macdio'ya ulaşır. Yukarıdaki her ifadenin adı içermesinin sebebi bu.
 
 ## Sık sorulan sorular
 
-### "Macdio'da" demek zorunda mıyım?
+### "Macdio" demek zorunda mıyım?
 
 Evet. Siri bir ifadeyi uygulamaya adıyla yönlendirir, bu yüzden her komutta Macdio geçer. Onsuz Siri Apple Music'i çalar ya da ne demek istediğini sorar.
 
