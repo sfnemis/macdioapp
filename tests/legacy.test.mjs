@@ -103,3 +103,18 @@ test('loadPage reads a live page with its links localized', () => {
   const tr = loadPage('tr', '/');
   assert.ok(tr.main.includes('src="/assets/screenshots/iPhone_web/Discover-b.webp"'));
 });
+
+test('faqJsonld builds FAQPage from the visible FAQ and syncFaq replaces a stale FAQPage block', async () => {
+  const { faqJsonld, syncFaq } = await import('../src/site/legacy.mjs');
+  const main = '<div class="faq"><details class="faq-item"><summary>Is it free?</summary><div class="faq-a">No. It is <a href="/pricing.html">14.99 US dollars</a> once &amp; for all.</div></details><details class="faq-item"><summary>Android?</summary><div class="faq-a">No.</div></details></div>';
+  const ld = JSON.parse(faqJsonld(main));
+  assert.equal(ld['@type'], 'FAQPage');
+  assert.deepEqual(ld.mainEntity.map((q) => [q.name, q.acceptedAnswer.text]), [['Is it free?', 'No. It is 14.99 US dollars once & for all.'], ['Android?', 'No.']]);
+  const stale = ['{"@type":"Article"}', '{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Old","acceptedAnswer":{"@type":"Answer","text":"old"}}]}'];
+  const out = syncFaq(stale, main);
+  assert.equal(out.length, 2);
+  assert.equal(out[0], '{"@type":"Article"}');
+  assert.equal(JSON.parse(out[1]).mainEntity.length, 2);
+  assert.deepEqual(syncFaq(['{"@type":"Article"}'], main).map((s) => JSON.parse(s)['@type']), ['Article', 'FAQPage']);
+  assert.deepEqual(syncFaq(['{"@type":"Article"}'], '<p>No FAQ</p>'), ['{"@type":"Article"}']);
+});

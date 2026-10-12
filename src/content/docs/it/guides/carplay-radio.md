@@ -1,6 +1,6 @@
 ---
-title: "Radio internet in CarPlay: configurazione e tasti di preselezione"
-description: "La radio internet sullo schermo dell'auto in circa un minuto, con tasti di preselezione che funzionano come un'autoradio. E quanti dati costa un'ora di streaming."
+title: "Radio internet in CarPlay: configurazione e preselezioni"
+description: "La radio internet sullo schermo dell'auto in circa un minuto, con preselezioni che funzionano come un'autoradio. E quanti dati costa un'ora di streaming."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

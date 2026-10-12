@@ -62,10 +62,32 @@ function walk(dir) {
   return readdirSync(dir).flatMap((n) => { const p = join(dir, n); return statSync(p).isDirectory() ? walk(p) : [p]; });
 }
 
-// One page, ready for Legacy.astro: extracted and with its links localized.
+// FAQPage JSON-LD built from the questions the page actually shows
+// (<details class="faq-item"><summary>Q</summary><div class="faq-a">A</div>).
+// Google requires the marked-up FAQ to match the visible one, and hand-kept
+// copies drifted (support.html listed 5 of 8 questions, tunein-alternative
+// worded two differently), so the visible FAQ is the only source.
+const plain = (h) => decode(h.replace(/<[^>]+>/g, '')).replace(/\s+/g, ' ').trim();
+export function faqJsonld(main) {
+  const items = [...main.matchAll(/<details class="faq-item">\s*<summary>([\s\S]*?)<\/summary>\s*<div class="faq-a">([\s\S]*?)<\/div>\s*<\/details>/g)];
+  if (!items.length) return null;
+  return JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: items.map((m) => ({ '@type': 'Question', name: plain(m[1]), acceptedAnswer: { '@type': 'Answer', text: plain(m[2]) } })) });
+}
+
+// A page with no visible FAQ keeps whatever JSON-LD it has.
+export function syncFaq(jsonld, main) {
+  const faq = faqJsonld(main);
+  if (!faq) return jsonld;
+  const isFaq = (s) => { try { return JSON.parse(s)['@type'] === 'FAQPage'; } catch { return false; } };
+  return [...jsonld.filter((s) => !isFaq(s)), faq];
+}
+
+// One page, ready for Legacy.astro: extracted, its links localized and its
+// FAQPage JSON-LD rebuilt from the visible FAQ.
 export function loadPage(code, path) {
   const page = extract(readFileSync(join(ROOT, code, pathToFile(path)), 'utf8'));
   page.main = localizeHtml(page.main, code, hasPage);
+  page.jsonld = syncFaq(page.jsonld, page.main);
   return page;
 }
 

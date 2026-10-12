@@ -1,6 +1,6 @@
 ---
 title: "4 modi per ascoltare la radio internet su un Mac (2026)"
-description: "Scheda del browser, VLC, l'app Musica o un lettore nativo nella barra dei menu. Provati tutti su macOS 26, con quanto costano davvero in clic, CPU e schede aperte."
+description: "Scheda del browser, VLC, l'app Musica o un lettore nativo nella barra dei menu. Provati su macOS 26, con quanto costano davvero in clic, CPU e schede aperte."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

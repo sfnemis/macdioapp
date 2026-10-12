@@ -1,6 +1,6 @@
 ---
 title: "Come trovare l'URL dello stream di una radio (4 modi)"
-description: "Recupera l'indirizzo diretto di qualsiasi stazione dal suo sito, dagli strumenti per sviluppatori del browser, da un elenco pubblico o dall'app. Con esempi reali."
+description: "Recupera l'indirizzo diretto di una stazione dal suo sito, dagli strumenti per sviluppatori del browser, da un elenco pubblico o dall'app. Con esempi reali."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:
