@@ -346,7 +346,7 @@ Sait's review gates: end of F2 (English marketing pages, local preview at
 | Phase | Output | Sait sees |
 | -- | -- | -- |
 | F1 Foundation | Astro project on branch `v2`, Base layout with hreflang and JSON-LD plumbing, i18n loader, Worker redirect, media encode script, sitemap and check scripts, wrangler config, counts and claims files, Hallmark audit of the live site | nothing yet (plumbing) |
-| F2 English marketing | Hallmark redesign: home, platform, feature, compare, pricing, podcasts, plain, stations templates and all 34 English marketing pages with new media; old media removed | local preview, gate 1 |
+| F2 English marketing | Hallmark redesign: home, platform, feature, compare, pricing, podcasts, plain, stations templates and all 33 English marketing pages with new media; old media removed | local preview, gate 1 |
 | F3 Guide hub | Starlight at `/guides/`, 9 guides migrated, 21 written, theme matched | local preview, gate 2 |
 | F4 Translations | 13 languages for marketing pages and guides, switcher, RTL check | local preview, tr spot check, gate 3 |
 | F5 Launch readiness | Lighthouse, link and hreflang checks, Worker tests, check-public, transparency and privacy text, llms.txt per language | full local review, gate 4, then "tamam" |
