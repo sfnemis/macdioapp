@@ -1,0 +1,7 @@
+---
+// Under build.format "file" a route named ".../index" is written as index.html
+// in that directory, which keeps the live URL /guides/ exactly.
+import GuidesIndex from '../../templates/GuidesIndex.astro';
+export function getStaticPaths() { return [{ params: { page: 'index' } }]; }
+---
+<GuidesIndex />

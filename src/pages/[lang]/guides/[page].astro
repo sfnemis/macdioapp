@@ -1,0 +1,8 @@
+---
+import GuidesIndex from '../../../templates/GuidesIndex.astro';
+import { liveLocales, DEFAULT } from '../../../site/locales.mjs';
+export function getStaticPaths() {
+  return liveLocales().filter((l) => l.code !== DEFAULT).map((l) => ({ params: { lang: l.code, page: 'index' } }));
+}
+---
+<GuidesIndex />

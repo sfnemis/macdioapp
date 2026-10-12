@@ -2,8 +2,11 @@
 import Page from '../../templates/Page.astro';
 import { liveLocales, DEFAULT } from '../../site/locales.mjs';
 import { ROOT_PAGES } from '../../site/pages.mjs';
+// "index" is the locale home: under build.format "file" the route /tr/index is
+// written as tr/index.html, which is the URL the Worker serves for /tr/.
 export function getStaticPaths() {
-  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => ROOT_PAGES.map((page) => ({ params: { lang: l.code, page } })));
+  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => ['index', ...ROOT_PAGES].map((page) => ({ params: { lang: l.code, page } })));
 }
+const { lang, page } = Astro.params;
 ---
-<Page lang={Astro.params.lang} path={`/${Astro.params.page}.html`} />
+<Page lang={lang} path={page === 'index' ? '/' : `/${page}.html`} />

@@ -1,38 +1,49 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import worker, { pickLocale, mapTag } from '../worker.js';
+import worker, { pickLocale, mapTag, handle } from '../worker.js';
+import { LOCALES } from '../src/site/locales.mjs';
 
+const ALL = LOCALES.map((l) => l.code);
 const env = { ASSETS: { fetch: async (req) => new Response('asset:' + new URL(req.url).pathname, { status: 200 }) } };
-const get = (path, headers = {}) => worker.fetch(new Request('https://macdio.app' + path, { headers }), env);
+// `handle` takes the live locale list explicitly so the redirect cases do not depend on
+// which languages are live today; `worker.fetch` uses the real list.
+const get = (path, headers = {}, live = ['en', 'tr', 'de']) => handle(new Request('https://macdio.app' + path, { headers }), env, live);
 
 test('mapTag maps regions and scripts to the 14 codes', () => {
-  assert.equal(mapTag('tr-tr'), 'tr');
-  assert.equal(mapTag('pt-pt'), 'pt-br');
-  assert.equal(mapTag('pt'), 'pt-br');
-  assert.equal(mapTag('zh-tw'), 'zh-hant');
-  assert.equal(mapTag('zh-hant-hk'), 'zh-hant');
-  assert.equal(mapTag('zh'), 'zh-hans');
-  assert.equal(mapTag('zh-cn'), 'zh-hans');
-  assert.equal(mapTag('en-gb'), 'en');
-  assert.equal(mapTag('sv'), null);
-  assert.equal(mapTag('*'), null);
+  assert.equal(mapTag('tr-tr', ALL), 'tr');
+  assert.equal(mapTag('pt-pt', ALL), 'pt-br');
+  assert.equal(mapTag('pt', ALL), 'pt-br');
+  assert.equal(mapTag('zh-tw', ALL), 'zh-hant');
+  assert.equal(mapTag('zh-hant-hk', ALL), 'zh-hant');
+  assert.equal(mapTag('zh', ALL), 'zh-hans');
+  assert.equal(mapTag('zh-cn', ALL), 'zh-hans');
+  assert.equal(mapTag('en-gb', ALL), 'en');
+  assert.equal(mapTag('sv', ALL), null);
+  assert.equal(mapTag('*', ALL), null);
 });
 
 test('pickLocale honours q values and order, falls back to en', () => {
-  assert.equal(pickLocale('de;q=0.8, en;q=0.9'), 'en');
-  assert.equal(pickLocale('tr-TR,tr;q=0.9,en;q=0.8'), 'tr');
-  assert.equal(pickLocale('sv, fi'), 'en');
-  assert.equal(pickLocale('*'), 'en');
-  assert.equal(pickLocale(''), 'en');
-  assert.equal(pickLocale(null), 'en');
-  assert.equal(pickLocale('tr;q=abc'), 'tr');
-  assert.equal(pickLocale(';;,,'), 'en');
+  assert.equal(pickLocale('de;q=0.8, en;q=0.9', '', ALL), 'en');
+  assert.equal(pickLocale('tr-TR,tr;q=0.9,en;q=0.8', '', ALL), 'tr');
+  assert.equal(pickLocale('sv, fi', '', ALL), 'en');
+  assert.equal(pickLocale('*', '', ALL), 'en');
+  assert.equal(pickLocale('', '', ALL), 'en');
+  assert.equal(pickLocale(null, '', ALL), 'en');
+  assert.equal(pickLocale('tr;q=abc', '', ALL), 'tr');
+  assert.equal(pickLocale(';;,,', '', ALL), 'en');
 });
 
 test('pickLocale lets a valid cookie win and ignores an unknown one', () => {
-  assert.equal(pickLocale('tr', 'lang=de'), 'de');
-  assert.equal(pickLocale('tr', 'a=b; lang=en; c=d'), 'en');
-  assert.equal(pickLocale('tr', 'lang=xx'), 'tr');
+  assert.equal(pickLocale('tr', 'lang=de', ALL), 'de');
+  assert.equal(pickLocale('tr', 'a=b; lang=en; c=d', ALL), 'en');
+  assert.equal(pickLocale('tr', 'lang=xx', ALL), 'tr');
+});
+
+test('pickLocale only returns codes from the list it is given', () => {
+  assert.equal(pickLocale('tr', '', ['en', 'de']), 'en');
+  assert.equal(pickLocale('tr, de;q=0.5', '', ['en', 'de']), 'de');
+  assert.equal(pickLocale('tr', 'lang=tr', ['en', 'de']), 'en');
+  assert.equal(pickLocale('pt-BR', '', ['en', 'de']), 'en');
 });
 
 test('/ redirects a Turkish browser, serves English to crawlers and to English browsers', async () => {
@@ -62,4 +73,12 @@ test('directory URLs serve their index.html and deep links are never redirected'
   assert.equal(await (await get('/tr/', { 'Accept-Language': 'de' })).text(), 'asset:/tr/index.html');
   assert.equal(await (await get('/guides/', {})).text(), 'asset:/guides/index.html');
   assert.equal(await (await get('/features.html', { 'Accept-Language': 'tr' })).text(), 'asset:/features.html');
+});
+
+test('a locale that is not live never gets a redirect, even when the browser asks for it', async () => {
+  const notLive = LOCALES.find((l) => !l.live);
+  if (!notLive) return;
+  const r = await worker.fetch(new Request('https://macdio.app/', { headers: { 'Accept-Language': notLive.code, Cookie: `lang=${notLive.code}` } }), env);
+  assert.equal(r.status, 200);
+  assert.equal(await r.text(), 'asset:/index.html');
 });
