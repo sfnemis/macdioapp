@@ -40,6 +40,14 @@ saying what happened to it.
   removed the user from the property or the property was recreated. Sait adds
   the address back under Search Console > Settings > Users and permissions
   (Restricted is enough). Until then the W6 baseline is the 2026-09-10 reading.
+- [ ] **W8 Google Analytics API hosts are DNS-blocked on this network** (found
+  2026-10-12 15:08). `analyticsadmin.googleapis.com` and
+  `analyticsdata.googleapis.com` resolve to `0.0.0.0` (A) and to a Cloudflare
+  block-page address (AAAA) from the LAN resolver 192.168.10.1, also when asking
+  1.1.1.1 directly, so the router intercepts DNS. `www.googleapis.com` and
+  `searchconsole.googleapis.com` resolve normally. The GA4 MCP server fails with
+  "No route to host"; it worked on 2026-09-10. Fix is in the network's DNS filter
+  (Sait): allow the two hosts. Not a code problem.
 
 ## 2026-09-14
 
