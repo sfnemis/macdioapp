@@ -266,6 +266,7 @@
     function load(v) {
       if (v.dataset.lazyLoaded) return;
       v.dataset.lazyLoaded = '1';
+      if (v.dataset.poster) v.poster = v.dataset.poster;
       var sources = v.querySelectorAll('source[data-src]');
       for (var i = 0; i < sources.length; i++) {
         sources[i].src = sources[i].getAttribute('data-src');

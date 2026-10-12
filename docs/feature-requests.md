@@ -87,6 +87,12 @@ saying what happened to it.
   video on macdio.app today is replaced by the showcase clips and stills made
   2026-10-12 (`~/MacdioBuild/showcase/media/web/`, 38 clips, iPhone, iPad, Mac,
   Apple TV, Apple Watch, CarPlay). Old `assets/` media goes.
+  Revised 2026-10-12 18:23 (W10): the clips and stills are added to the existing
+  pages, not a full swap. Sait, 2026-10-12 19:19, on the ported home page: the
+  App Preview galleries (Mac, iPhone, iPad, Apple TV, Watch) show nothing about
+  podcasts. Doing now: podcast clips first in every platform gallery, a CarPlay
+  tab, the podcast section's stills replaced by the matching clips, the same
+  clips on the five platform pages; posters load lazily with the clip.
 - [ ] **W6 SEO and GEO built in from the start** (Sait, 2026-10-12). Deep
   keyword and competitor analysis before the structure is fixed: "best radio
   app", "best podcast app", iPhone, Mac, Apple TV terms; competitors TuneIn,
