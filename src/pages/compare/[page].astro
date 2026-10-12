@@ -1,0 +1,10 @@
+---
+// Comparison pages: src/legacy/en/compare/<page>.html served at /compare/<page>.html.
+import Legacy from '../../layouts/Legacy.astro';
+import { legacyPages, loadPage } from '../../site/legacy.mjs';
+export function getStaticPaths() {
+  return legacyPages('en').filter((p) => /^\/compare\/[^/]+\.html$/.test(p)).map((p) => ({ params: { page: p.slice('/compare/'.length, -5) } }));
+}
+const path = `/compare/${Astro.params.page}.html`;
+---
+<Legacy lang="en" path={path} page={loadPage('en', path)} />

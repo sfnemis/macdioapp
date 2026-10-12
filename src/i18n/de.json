@@ -15,6 +15,9 @@
     "openMenu": "Menü öffnen",
     "pages": [
       { "path": "/guides/", "label": "Ratgeber" },
+      { "path": "/podcasts.html", "label": "Podcasts" },
+      { "path": "/pricing.html", "label": "Preis" },
+      { "path": "/carplay.html", "label": "Radio in CarPlay" },
       { "path": "/iphone.html", "label": "Radio für iPhone" },
       { "path": "/mac.html", "label": "Radio für Mac" },
       { "path": "/ipad.html", "label": "Radio für iPad" },

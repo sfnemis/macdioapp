@@ -1,0 +1,10 @@
+---
+// Feature pages: src/legacy/en/features/<page>.html served at /features/<page>.html.
+import Legacy from '../../layouts/Legacy.astro';
+import { legacyPages, loadPage } from '../../site/legacy.mjs';
+export function getStaticPaths() {
+  return legacyPages('en').filter((p) => /^\/features\/[^/]+\.html$/.test(p)).map((p) => ({ params: { page: p.slice('/features/'.length, -5) } }));
+}
+const path = `/features/${Astro.params.page}.html`;
+---
+<Legacy lang="en" path={path} page={loadPage('en', path)} />

@@ -36,3 +36,9 @@ read before the page that needs it is written).
 | Live Activity or Dynamic Island | not implemented (no ActivityKit); the system Now Playing only | not implemented | 2026-10-12 |
 | Audio effects (equaliser, Voice Boost, trim silence) | not implemented (inventory not-found 4); podcast speed is the only audio control | not implemented | 2026-10-12 |
 | Android or web version | not implemented | not implemented | 2026-10-12 |
+| Episode downloads for offline playback | `Macdio/Services/Podcast/PodcastLibrary.swift` `download(for:)`, download rows with `isDone` | verified | 2026-10-12 |
+| Repeat skipping: a show's repeated segments learned from two downloaded episodes and skipped | `Macdio/Services/Podcast/SegmentSkipService.swift` ("Needs two downloaded episodes") | verified | 2026-10-12 |
+| Playback speed is the only audio control (no trim silence, no volume boost) | grep `skipSilence`, `trimSilence`, `voiceBoost`, `volumeBoost` across Swift sources: none; rate in `PodcastLibrary.swift` | verified | 2026-10-12 |
+| Widgets: Now Playing (small, medium, Lock Screen circular, rectangular, inline), Station Lists, Shows, Latest Episodes; iPhone and iPad | feature inventory row "Widgets", `MacdioWidgets` target | verified | 2026-10-12 |
+| Family Sharing | an App Store Connect setting, not in code; the press kit page said "Family Sharing support" before 2026-10-12 and still does; Sait confirms in App Store Connect | open | 2026-10-12 |
+| Ad-break recovery and predictive song cycle (features.html Song Identification section) | not read in code yet; `ShazamService.swift` to read before the next copy pass | open | 2026-10-12 |

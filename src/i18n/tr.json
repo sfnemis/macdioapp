@@ -15,6 +15,9 @@
     "openMenu": "Menüyü aç",
     "pages": [
       { "path": "/guides/", "label": "Rehberler" },
+      { "path": "/podcasts.html", "label": "Podcast'ler" },
+      { "path": "/pricing.html", "label": "Fiyat" },
+      { "path": "/carplay.html", "label": "CarPlay'de radyo" },
       { "path": "/iphone.html", "label": "iPhone için radyo" },
       { "path": "/mac.html", "label": "Mac için radyo" },
       { "path": "/ipad.html", "label": "iPad için radyo" },
