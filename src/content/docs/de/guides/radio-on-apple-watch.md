@@ -15,7 +15,7 @@ faq:
   - q: "Kann ich beim Laufen ohne Telefon hören?"
     a: "Ja, mit einer Watch mit Mobilfunk und Bluetooth-Kopfhörern. Mit einer Watch, die nur GPS hat, muss die Laufstrecke in einem bekannten WLAN bleiben."
   - q: "Werden meine Sender vom iPhone synchronisiert?"
-    a: "Ja. Favoriten und Ordner kommen über iCloud, und die Watch hat auch eine eigene Bibliotheksansicht und Suche."
+    a: "Ja. Favoriten und Ordner kommen von Macdio auf deinem iPhone, und die Watch hat auch eine eigene Bibliotheksansicht und Suche."
   - q: "Kann ich auf der Watch Radio aufnehmen?"
     a: "Nein. Aufnehmen ist eine Funktion für iPhone, iPad und Mac. Songs, die du auf der Watch mit dem Herz markierst, werden trotzdem überall synchronisiert."
 ---
@@ -52,7 +52,7 @@ AirPods oder beliebige Bluetooth-Kopfhörer. watchOS schickt gestreamten Ton an 
 
 ### Deine Sender
 
-Favoriten kommen über iCloud von deinen anderen Geräten, und die Watch hat eine eigene Bibliotheksansicht und Suche.
+Favoriten und Listen kommen von Macdio auf deinem iPhone, das sie über iCloud mit deinen anderen Geräten abgleicht, und die Watch hat eine eigene Bibliotheksansicht und Suche.
 
 ## Ehrlich zum Akku
 
@@ -82,7 +82,7 @@ Ja, mit einer Watch mit Mobilfunk und Bluetooth-Kopfhörern. Mit einer Watch, di
 
 ### Werden meine Sender vom iPhone synchronisiert?
 
-Ja. Favoriten und Ordner kommen über iCloud, und die Watch hat auch eine eigene Bibliotheksansicht und Suche.
+Ja. Favoriten und Ordner kommen von Macdio auf deinem iPhone, und die Watch hat auch eine eigene Bibliotheksansicht und Suche.
 
 ### Kann ich auf der Watch Radio aufnehmen?
 

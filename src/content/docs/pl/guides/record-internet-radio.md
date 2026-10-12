@@ -9,7 +9,7 @@ faq:
   - q: "Czy mogę wyeksportować nagranie do Findera albo aplikacji Pliki?"
     a: "Nie. Nagrania zostają w aplikacji na twoim urządzeniu, gdzie możesz je odtwarzać lub usuwać. Nie ma dla nich udostępniania, eksportu ani synchronizacji plików przez iCloud."
   - q: "Czy mogę nagrywać, używając innych aplikacji?"
-    a: "Tak. Nagrywanie przechwytuje strumień, a nie głośniki, więc trwa w tle na Macu i iPhone'ie, gdy robisz coś innego, i przy wygaszonym ekranie."
+    a: "Tak. Nagrywanie przechwytuje strumień, a nie głośniki, więc trwa w tle na Macu i iPhone'ie, gdy robisz coś innego, i przy wygaszonym ekranie, o ile stacja dalej gra."
   - q: "Czy mogę nagrywać na Apple Watch albo Apple TV?"
     a: "Nie. Nagrywanie to funkcja Maca, iPhone'a i iPada. Aplikacje na zegarek i telewizor odtwarzają stacje i sterują odtwarzaniem."
   - q: "Jak nagrać audycję radiową, która leci w nocy?"
@@ -76,7 +76,7 @@ Nagranie zachowuje to, co wysyła stacja. Stacja MP3 daje ci .mp3, a stacja AAC 
 
 ## Gdzie mieszkają nagrania
 
-W aplikacji, na twoim własnym urządzeniu, w zakładce Nagrania, gdzie każdą sesję i każdy wycięty utwór można odtworzyć lub usunąć. Nie są kopiowane do biblioteki muzyki, nie pojawiają się w aplikacji Pliki ani w Finderze i nie ma przycisku udostępniania ani eksportu. To celowe ograniczenie funkcji nagrywania na własny użytek, a nie coś, co czeka na dokończenie, i utrzymuje nagranie prywatnym. Nic nie jest nigdzie wysyłane.
+W aplikacji, na twoim własnym urządzeniu, w zakładce Nagrania, gdzie każdą sesję i każdy wycięty utwór można odtworzyć lub usunąć. Nie są kopiowane do biblioteki muzyki, Macdio nie pokazuje ich w aplikacji Pliki ani w twoich folderach w Finderze i nie ma przycisku udostępniania ani eksportu. To celowe ograniczenie funkcji nagrywania na własny użytek, a nie coś, co czeka na dokończenie, i utrzymuje nagranie prywatnym. Nic nie jest nigdzie wysyłane.
 
 ## Czy nagrywanie radia internetowego jest legalne?
 
@@ -94,7 +94,7 @@ Nie. Nagrania zostają w aplikacji na twoim urządzeniu, gdzie możesz je odtwar
 
 ### Czy mogę nagrywać, używając innych aplikacji?
 
-Tak. Nagrywanie przechwytuje strumień, a nie głośniki, więc trwa w tle na Macu i iPhone'ie, gdy robisz coś innego, i przy wygaszonym ekranie.
+Tak. Nagrywanie przechwytuje strumień, a nie głośniki, więc trwa w tle na Macu i iPhone'ie, gdy robisz coś innego, i przy wygaszonym ekranie, o ile stacja dalej gra.
 
 ### Czy mogę nagrywać na Apple Watch albo Apple TV?
 

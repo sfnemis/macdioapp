@@ -15,7 +15,7 @@ faq:
   - q: "Kan ik luisteren tijdens het hardlopen zonder telefoon?"
     a: "Ja, met een Watch met mobiel netwerk en een Bluetooth-koptelefoon. Op een Watch met alleen GPS moet de route binnen een bekend wifinetwerk blijven."
   - q: "Synchroniseren mijn zenders vanaf de iPhone?"
-    a: "Ja. Favorieten en mappen komen binnen via iCloud, en het horloge heeft ook zijn eigen bibliotheekweergave en zoekfunctie."
+    a: "Ja. Favorieten en mappen komen van Macdio op je iPhone, en het horloge heeft ook zijn eigen bibliotheekweergave en zoekfunctie."
   - q: "Kan ik radio opnemen op het horloge?"
     a: "Nee. Opnemen is een functie voor iPhone, iPad en Mac. Nummers die je op het horloge een hartje geeft synchroniseren wel overal."
 ---
@@ -52,7 +52,7 @@ AirPods of een andere Bluetooth-koptelefoon. watchOS stuurt gestreamde audio naa
 
 ### Je zenders
 
-Favorieten synchroniseren via iCloud vanaf je andere apparaten, en het horloge heeft zijn eigen bibliotheekweergave en zoekfunctie.
+Favorieten en lijsten komen van Macdio op je iPhone, die ze via iCloud gelijk houdt met je andere apparaten, en het horloge heeft zijn eigen bibliotheekweergave en zoekfunctie.
 
 ## Eerlijk over de batterij
 
@@ -82,7 +82,7 @@ Ja, met een Watch met mobiel netwerk en een Bluetooth-koptelefoon. Op een Watch 
 
 ### Synchroniseren mijn zenders vanaf de iPhone?
 
-Ja. Favorieten en mappen komen binnen via iCloud, en het horloge heeft ook zijn eigen bibliotheekweergave en zoekfunctie.
+Ja. Favorieten en mappen komen van Macdio op je iPhone, en het horloge heeft ook zijn eigen bibliotheekweergave en zoekfunctie.
 
 ### Kan ik radio opnemen op het horloge?
 

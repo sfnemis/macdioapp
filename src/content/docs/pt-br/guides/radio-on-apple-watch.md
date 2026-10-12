@@ -15,7 +15,7 @@ faq:
   - q: "Posso ouvir enquanto corro sem o celular?"
     a: "Sim, com um relógio celular e fones Bluetooth. Num relógio só com GPS, a corrida precisa ficar dentro de uma rede Wi-Fi conhecida."
   - q: "Minhas estações sincronizam a partir do iPhone?"
-    a: "Sim. Favoritos e pastas chegam pelo iCloud, e o relógio também tem a própria visão de biblioteca e busca."
+    a: "Sim. Favoritos e pastas vêm do Macdio no seu iPhone, e o relógio também tem a própria visão de biblioteca e busca."
   - q: "Posso gravar rádio no relógio?"
     a: "Não. Gravação é um recurso do iPhone, do iPad e do Mac. As músicas que você marca com coração no relógio ainda sincronizam em todo lugar."
 ---
@@ -52,7 +52,7 @@ AirPods ou qualquer fone Bluetooth. O watchOS envia áudio em streaming para o B
 
 ### Suas estações
 
-Os favoritos sincronizam dos seus outros aparelhos pelo iCloud, e o relógio tem a própria visão de biblioteca e busca.
+Favoritos e listas vêm do Macdio no seu iPhone, que os mantém em dia com seus outros aparelhos pelo iCloud, e o relógio tem a própria visão de biblioteca e busca.
 
 ## Honestidade sobre a bateria
 
@@ -82,7 +82,7 @@ Sim, com um relógio celular e fones Bluetooth. Num relógio só com GPS, a corr
 
 ### Minhas estações sincronizam a partir do iPhone?
 
-Sim. Favoritos e pastas chegam pelo iCloud, e o relógio também tem a própria visão de biblioteca e busca.
+Sim. Favoritos e pastas vêm do Macdio no seu iPhone, e o relógio também tem a própria visão de biblioteca e busca.
 
 ### Posso gravar rádio no relógio?
 

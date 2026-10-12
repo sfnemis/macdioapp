@@ -9,7 +9,7 @@ faq:
   - q: "Kann ich eine Aufnahme in den Finder oder die Dateien-App exportieren?"
     a: "Nein. Aufnahmen bleiben in der App auf deinem Gerät, wo du sie abspielen oder löschen kannst. Es gibt für sie kein Teilen, keinen Export und keine Dateisynchronisierung über iCloud."
   - q: "Kann ich aufnehmen, während ich andere Apps nutze?"
-    a: "Ja. Die Aufnahme greift den Stream ab, nicht die Lautsprecher, sie läuft also auf Mac und iPhone im Hintergrund weiter, während du etwas anderes machst, auch bei ausgeschaltetem Bildschirm."
+    a: "Ja. Die Aufnahme greift den Stream ab, nicht die Lautsprecher, sie läuft also auf Mac und iPhone im Hintergrund weiter, während du etwas anderes machst, auch bei ausgeschaltetem Bildschirm, solange der Sender weiterspielt."
   - q: "Kann ich auf der Apple Watch oder dem Apple TV aufnehmen?"
     a: "Nein. Aufnehmen ist eine Funktion für Mac, iPhone und iPad. Die Apps für Watch und TV spielen Sender und steuern die Wiedergabe."
   - q: "Wie nehme ich eine Radiosendung auf, die nachts läuft?"
@@ -76,7 +76,7 @@ Eine Aufnahme behält, was der Sender schickt. Ein MP3-Sender ergibt eine .mp3, 
 
 ## Wo die Aufnahmen liegen
 
-In der App, auf deinem eigenen Gerät, im Tab „Aufnahmen“, wo jede Sitzung und jeder geteilte Titel abgespielt oder gelöscht werden kann. Sie werden nicht in deine Musikmediathek kopiert, erscheinen nicht in der Dateien-App oder im Finder, und es gibt keine Taste zum Teilen oder Exportieren. Das ist eine bewusste Grenze für eine private Aufnahmefunktion, nichts, was noch fertig werden müsste, und sie sorgt dafür, dass eine private Aufnahme privat bleibt. Nichts wird irgendwohin hochgeladen.
+In der App, auf deinem eigenen Gerät, im Tab „Aufnahmen“, wo jede Sitzung und jeder geteilte Titel abgespielt oder gelöscht werden kann. Sie werden nicht in deine Musikmediathek kopiert, die App zeigt sie weder in der Dateien-App noch in deinen Finder-Ordnern, und es gibt keine Taste zum Teilen oder Exportieren. Das ist eine bewusste Grenze für eine private Aufnahmefunktion, nichts, was noch fertig werden müsste, und sie sorgt dafür, dass eine private Aufnahme privat bleibt. Nichts wird irgendwohin hochgeladen.
 
 ## Ist es legal, Internetradio aufzunehmen?
 
@@ -94,7 +94,7 @@ Nein. Aufnahmen bleiben in der App auf deinem Gerät, wo du sie abspielen oder l
 
 ### Kann ich aufnehmen, während ich andere Apps nutze?
 
-Ja. Die Aufnahme greift den Stream ab, nicht die Lautsprecher, sie läuft also auf Mac und iPhone im Hintergrund weiter, während du etwas anderes machst, auch bei ausgeschaltetem Bildschirm.
+Ja. Die Aufnahme greift den Stream ab, nicht die Lautsprecher, sie läuft also auf Mac und iPhone im Hintergrund weiter, während du etwas anderes machst, auch bei ausgeschaltetem Bildschirm, solange der Sender weiterspielt.
 
 ### Kann ich auf der Apple Watch oder dem Apple TV aufnehmen?
 

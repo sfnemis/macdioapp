@@ -47,16 +47,56 @@
     "youtube": "Macdio на YouTube"
   },
   "guides": {
-    "title": "Руководства по интернет-радио: Mac, iPhone, часы и CarPlay",
+    "title": "Руководства Macdio: как пользоваться Macdio и интернет-радио",
     "h1": "Руководства",
-    "description": "Короткие практичные руководства для слушателей интернет-радио на Mac, iPhone, iPad, Apple Watch, Apple TV и в CarPlay от разработчика Macdio.",
-    "intro": "Короткие практичные ответы на вопросы, которые на самом деле задают слушатели интернет-радио, от разработчика Macdio. В каждом руководстве указано, к каким устройствам оно относится, а в конце собраны вопросы, которые люди ищут.",
+    "description": "Как пользоваться каждой функцией Macdio на iPhone, iPad, Mac, Apple TV и Apple Watch, плюс практичные ответы об интернет-радио от разработчика.",
+    "intro": "Как пользоваться Macdio, по одной функции за раз, и короткие практичные ответы на вопросы, которые задают слушатели интернет-радио, от разработчика Macdio. В каждом руководстве указано, к каким устройствам оно относится, а в конце собраны вопросы, которые люди ищут.",
     "allGuides": "Все руководства",
     "behindH2": "Приложение, стоящее за руководствами",
     "behind": "Macdio это нативный плеер интернет-радио и подкастов для <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> и <a href=\"/apple-watch.html\">Apple Watch</a>. Более 60 000 станций, запись, синхронный текст песен и распознавание песен без микрофона, за одну покупку и без подписки.",
     "writtenBy": "Автор: <a href=\"/presskit.html\">Sait Firat NEMIS</a>, разработчик Macdio.",
     "checkedOn": "Проверено {date}.",
     "groups": [
+      {
+        "label": "С чего начать",
+        "guides": [
+          { "slug": "macdio-on-iphone-and-ipad", "label": "Macdio на iPhone и iPad", "title": "Macdio на iPhone и iPad", "description": "Как устроен Macdio на iPhone и iPad: вкладки и настройки, мини-плеер и полноэкранный плеер, режим часов с будильником, виджеты, экран блокировки и CarPlay." },
+          { "slug": "macdio-on-mac", "label": "Macdio на Mac", "title": "Macdio на Mac", "description": "Как устроен Macdio на Mac: главное окно, панель плеера, компактный плеер, плеер в строке меню, меню в Dock, сочетания клавиш и настройки." },
+          { "slug": "macdio-on-apple-tv", "label": "Macdio на Apple TV", "title": "Macdio на Apple TV", "description": "Как устроен Macdio на Apple TV: вкладки, пульт Siri Remote, «Сейчас играет» и экран «Эмбиент», ряды Top Shelf, расшифровки из iCloud и станции с компьютера." }
+        ]
+      },
+      {
+        "label": "Ваши станции",
+        "guides": [
+          { "slug": "add-a-custom-station", "label": "Добавить свою станцию", "title": "Как добавить свою станцию по адресу потока", "description": "Добавьте в Macdio любой поток интернет-радио по адресу на iPhone, iPad или Mac, проверьте его, дайте логотип, измените или удалите. На Apple TV через браузер." },
+          { "slug": "edit-stations-on-computer", "label": "Станции на компьютере", "title": "Редактирование станций в браузере на компьютере", "description": "Ваши станции Macdio в браузере компьютера в той же сети Wi-Fi, с iPhone, iPad или Apple TV: добавление, правка, импорт и экспорт JSON, CSV и M3U." },
+          { "slug": "favorites-lists-and-sync", "label": "Избранное, списки и синхронизация", "title": "Избранное, списки и синхронизация iCloud", "description": "Как в Macdio устроены избранное, «Мои станции» и ваши списки, как задать их порядок и что iCloud синхронизирует между iPhone, iPad, Mac и Apple TV." }
+        ]
+      },
+      {
+        "label": "Распознавание, запись и сон",
+        "guides": [
+          { "slug": "song-id-and-auto-shazam", "label": "«Распознать трек» и Авто-Shazam", "title": "«Распознать трек» и Авто-Shazam в Macdio", "description": "Как «Распознать трек» и Авто-Shazam называют песню, которая играет на станции, в Macdio на iPhone, iPad, Mac, Apple TV и Apple Watch, и куда эти песни попадают." },
+          { "slug": "recording-in-macdio", "label": "Запись станции", "title": "Как записывать радио в Macdio", "description": "Записывайте любую станцию в Macdio на iPhone, iPad и Mac: старт и стоп, один файл или файл на каждую песню, ограничения по длине и месту, где хранятся записи." },
+          { "slug": "sleep-timer-and-clock-mode", "label": "Таймер сна и режим часов", "title": "Таймер сна и режим часов", "description": "Таймер сна в Macdio на iPhone, iPad, Mac, Apple TV и Apple Watch, его возврат через «Повтор таймера» и режим часов на iPhone как прикроватный будильник." }
+        ]
+      },
+      {
+        "label": "Подкасты",
+        "guides": [
+          { "slug": "podcasts-in-macdio", "label": "Подкасты в Macdio", "title": "Подписки, очередь и загрузка подкастов", "description": "Подписывайтесь на подкасты через поиск, чарт, адрес ленты или OPML, ставьте выпуски и прямой эфир в одну очередь «Далее», загружайте офлайн и меняйте скорость." },
+          { "slug": "podcast-transcripts-and-highlights", "label": "Расшифровки и выделения", "title": "Расшифровки, главы и выделения", "description": "Macdio расшифровывает подкасты на iPhone, iPad или Mac. Ищите по выпускам, отмечайте фразу нажатием или через Siri и шлите в Apple Notes, Notion или Readwise." }
+        ]
+      },
+      {
+        "label": "Управление и настройки",
+        "guides": [
+          { "slug": "shortcuts-and-automations", "label": "Быстрые команды и автоматизации", "title": "Действия для Быстрых команд и автоматизации", "description": "Все девять действий Macdio в «Быстрых командах» Apple, что делает каждое, и автоматизации, которые включают станцию в 7:00 или новый выпуск подкаста." },
+          { "slug": "airpods-and-headphone-controls", "label": "AirPods и наушники", "title": "AirPods и управление с наушников", "description": "Что делают одно, два и три нажатия на AirPods или наушниках в Macdio в прямом эфире и в подкастах, а ещё «Живая пауза» и мультимедийные клавиши Mac." },
+          { "slug": "game-controllers", "label": "Игровые контроллеры", "title": "Как пользоваться игровым контроллером", "description": "Запускайте, ставьте на паузу, переключайте станции и листайте радио и подкасты в Macdio с DualSense, Xbox или Backbone и переназначайте любую кнопку на iPhone." },
+          { "slug": "customize-macdio", "label": "Настройка Macdio", "title": "Настройки, которые стоит поменять", "description": "Что стоит поменять в Macdio на iPhone, iPad, Mac и Apple TV: тёмная тема, значок, панель вкладок, разделы библиотеки, «Живая пауза», Dock и строка меню." }
+        ]
+      },
       {
         "label": "Радио на любом устройстве",
         "guides": [

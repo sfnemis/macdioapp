@@ -78,7 +78,7 @@ All in the Settings window, "General" tab:
 
 "Dock Icon" changes the icon in the Dock while Macdio runs; the icon in Finder stays the default. With "Dynamic Dock Artwork" on, the album art covers your chosen icon during playback.
 
-The menu bar player shows what is playing, the controls, your Favorites, volume, a "Sleep Timer", "Compact Mode", "Settings ⌘," and "Quit Macdio". Right-clicking the Dock icon gives Play or Pause, Stop and the current song. ⌘⇧M is "Toggle Compact Mode", and if you quit in compact mode, Macdio opens in compact mode again. See [Macdio on Mac](/guides/macdio-on-mac.html) for the rest.
+The menu bar player shows what is playing, the controls, your Favorites, volume, a "Sleep Timer", "Compact Mode", "Settings ⌘," and "Quit Macdio". Right-clicking the Dock icon gives Play or Pause, Stop and the current song. ⇧⌘M is "Toggle Compact Mode", and if you quit in compact mode, Macdio opens in compact mode again. See [Macdio on Mac](/guides/macdio-on-mac.html) for the rest.
 
 ## What can I change on Apple TV?
 

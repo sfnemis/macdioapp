@@ -9,7 +9,7 @@ faq:
   - q: "Posso esportare una registrazione nel Finder o nell'app File?"
     a: "No. Le registrazioni restano dentro l'app sul tuo dispositivo, dove puoi ascoltarle o cancellarle. Non c'è condivisione, esportazione né sincronizzazione dei file con iCloud."
   - q: "Posso registrare mentre uso altre app?"
-    a: "Sì. La registrazione cattura lo stream e non gli altoparlanti, quindi continua in sottofondo su Mac e iPhone mentre fai altro, anche a schermo spento."
+    a: "Sì. La registrazione cattura lo stream e non gli altoparlanti, quindi continua in sottofondo su Mac e iPhone mentre fai altro, anche a schermo spento, purché la stazione continui a trasmettere."
   - q: "Posso registrare su Apple Watch o Apple TV?"
     a: "No. La registrazione è una funzione di Mac, iPhone e iPad. Le app per l'orologio e la TV riproducono le stazioni e controllano la riproduzione."
   - q: "Come registro un programma radio che va in onda di notte?"
@@ -76,7 +76,7 @@ Una registrazione mantiene quello che manda la stazione. Una stazione MP3 ti dà
 
 ## Dove stanno le registrazioni
 
-Dentro l'app, sul tuo dispositivo, nella scheda Registrazioni, dove ogni sessione e ogni brano diviso si può ascoltare o cancellare. Non vengono copiate nella tua libreria musicale, non compaiono nell'app File o nel Finder, e non c'è un pulsante per condividere o esportare. È un limite voluto per una funzione di registrazione personale, non qualcosa in attesa di essere finito, e tiene personale una registrazione personale. Niente viene caricato da nessuna parte.
+Dentro l'app, sul tuo dispositivo, nella scheda Registrazioni, dove ogni sessione e ogni brano diviso si può ascoltare o cancellare. Non vengono copiate nella tua libreria musicale, l'app non le mostra nell'app File né nelle tue cartelle del Finder, e non c'è un pulsante per condividere o esportare. È un limite voluto per una funzione di registrazione personale, non qualcosa in attesa di essere finito, e tiene personale una registrazione personale. Niente viene caricato da nessuna parte.
 
 ## Registrare la radio internet è legale?
 
@@ -94,7 +94,7 @@ No. Le registrazioni restano dentro l'app sul tuo dispositivo, dove puoi ascolta
 
 ### Posso registrare mentre uso altre app?
 
-Sì. La registrazione cattura lo stream e non gli altoparlanti, quindi continua in sottofondo su Mac e iPhone mentre fai altro, anche a schermo spento.
+Sì. La registrazione cattura lo stream e non gli altoparlanti, quindi continua in sottofondo su Mac e iPhone mentre fai altro, anche a schermo spento, purché la stazione continui a trasmettere.
 
 ### Posso registrare su Apple Watch o Apple TV?
 

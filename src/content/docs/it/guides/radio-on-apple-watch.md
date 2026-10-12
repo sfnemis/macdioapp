@@ -15,7 +15,7 @@ faq:
   - q: "Posso ascoltare mentre corro senza il telefono?"
     a: "Sì, con un orologio cellulare e cuffie Bluetooth. Con un orologio solo GPS la corsa deve restare dentro una rete Wi-Fi conosciuta."
   - q: "Le mie stazioni si sincronizzano dall'iPhone?"
-    a: "Sì. Preferiti e cartelle arrivano con iCloud, e l'orologio ha anche una sua vista della libreria e la ricerca."
+    a: "Sì. Preferiti e cartelle arrivano da Macdio sul tuo iPhone, e l'orologio ha anche una sua vista della libreria e la ricerca."
   - q: "Posso registrare la radio sull'orologio?"
     a: "No. La registrazione è una funzione di iPhone, iPad e Mac. Le canzoni a cui metti il cuore sull'orologio si sincronizzano comunque ovunque."
 ---
@@ -52,7 +52,7 @@ AirPods o cuffie Bluetooth qualsiasi. watchOS manda l'audio in streaming al Blue
 
 ### Le tue stazioni
 
-I preferiti si sincronizzano dagli altri tuoi dispositivi con iCloud, e l'orologio ha una sua vista della libreria e la ricerca.
+Preferiti e liste arrivano da Macdio sul tuo iPhone, che li tiene allineati con gli altri tuoi dispositivi tramite iCloud, e l'orologio ha una sua vista della libreria e la ricerca.
 
 ## La verità sulla batteria
 
@@ -82,7 +82,7 @@ Sì, con un orologio cellulare e cuffie Bluetooth. Con un orologio solo GPS la c
 
 ### Le mie stazioni si sincronizzano dall'iPhone?
 
-Sì. Preferiti e cartelle arrivano con iCloud, e l'orologio ha anche una sua vista della libreria e la ricerca.
+Sì. Preferiti e cartelle arrivano da Macdio sul tuo iPhone, e l'orologio ha anche una sua vista della libreria e la ricerca.
 
 ### Posso registrare la radio sull'orologio?
 

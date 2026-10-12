@@ -9,7 +9,7 @@ faq:
   - q: "Kan ik een opname exporteren naar de Finder of de Bestanden-app?"
     a: "Nee. Opnames blijven in de app op je apparaat, waar je ze kunt afspelen of verwijderen. Er is geen delen, exporteren of iCloud-bestandssynchronisatie voor."
   - q: "Kan ik opnemen terwijl ik andere apps gebruik?"
-    a: "Ja. Opnemen legt de stream vast en niet de speakers, dus het gaat op Mac en iPhone op de achtergrond door terwijl je iets anders doet, en met het scherm uit."
+    a: "Ja. Opnemen legt de stream vast en niet de speakers, dus het gaat op Mac en iPhone op de achtergrond door terwijl je iets anders doet, en met het scherm uit, zolang de zender blijft spelen."
   - q: "Kan ik opnemen op Apple Watch of Apple TV?"
     a: "Nee. Opnemen is een functie voor Mac, iPhone en iPad. De apps voor horloge en tv spelen zenders af en bedienen het afspelen."
   - q: "Hoe neem ik een radioprogramma op dat 's nachts wordt uitgezonden?"
@@ -76,7 +76,7 @@ Een opname bewaart wat de zender stuurt. Een MP3-zender geeft je een .mp3 en een
 
 ## Waar de opnames staan
 
-In de app, op je eigen apparaat, op het tabblad Opnames waar elke sessie en elk gesplitst nummer kan worden afgespeeld of verwijderd. Ze worden niet naar je muziekbibliotheek gekopieerd, ze verschijnen niet in de Bestanden-app of de Finder, en er is geen knop om te delen of te exporteren. Dat is een bewuste grens voor een functie voor persoonlijke opnames, niet iets wat nog afgemaakt moet worden, en het houdt een persoonlijke opname persoonlijk. Er wordt nergens iets geüpload.
+In de app, op je eigen apparaat, op het tabblad Opnames waar elke sessie en elk gesplitst nummer kan worden afgespeeld of verwijderd. Ze worden niet naar je muziekbibliotheek gekopieerd, de app toont ze niet in de Bestanden-app of in je Finder-mappen, en er is geen knop om te delen of te exporteren. Dat is een bewuste grens voor een functie voor persoonlijke opnames, niet iets wat nog afgemaakt moet worden, en het houdt een persoonlijke opname persoonlijk. Er wordt nergens iets geüpload.
 
 ## Is internetradio opnemen legaal?
 
@@ -94,7 +94,7 @@ Nee. Opnames blijven in de app op je apparaat, waar je ze kunt afspelen of verwi
 
 ### Kan ik opnemen terwijl ik andere apps gebruik?
 
-Ja. Opnemen legt de stream vast en niet de speakers, dus het gaat op Mac en iPhone op de achtergrond door terwijl je iets anders doet, en met het scherm uit.
+Ja. Opnemen legt de stream vast en niet de speakers, dus het gaat op Mac en iPhone op de achtergrond door terwijl je iets anders doet, en met het scherm uit, zolang de zender blijft spelen.
 
 ### Kan ik opnemen op Apple Watch of Apple TV?
 

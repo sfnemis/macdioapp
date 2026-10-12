@@ -15,7 +15,7 @@ faq:
   - q: "Telefon olmadan koşarken dinleyebilir miyim?"
     a: "Evet, hücresel bir saat ve Bluetooth kulaklıkla. Yalnızca GPS'li bir saatte koşunun bilinen bir Wi-Fi ağının içinde kalması gerekir."
   - q: "İstasyonlarım iPhone'dan eşitleniyor mu?"
-    a: "Evet. Favoriler ve klasörler iCloud üzerinden gelir; saatin kendi kütüphane görünümü ve araması da var."
+    a: "Evet. Favoriler ve klasörler iPhone'undaki Macdio'dan gelir; saatin kendi kütüphane görünümü ve araması da var."
   - q: "Saatte radyo kaydedebilir miyim?"
     a: "Hayır. Kayıt bir iPhone, iPad ve Mac özelliği. Saatte beğendiğin şarkılar yine her yere eşitlenir."
 ---
@@ -52,7 +52,7 @@ AirPods ya da herhangi bir Bluetooth kulaklık. watchOS yayın sesini yerleşik 
 
 ### İstasyonların
 
-Favoriler diğer cihazlarından iCloud ile eşitlenir ve saatin kendi kütüphane görünümü ve araması var.
+Favoriler ve listeler iPhone'undaki Macdio'dan gelir; o da onları iCloud ile diğer cihazlarınla eşit tutar. Saatin ayrıca kendi kütüphane görünümü ve araması var.
 
 ## Pil dürüstlüğü
 
@@ -82,7 +82,7 @@ Evet, hücresel bir saat ve Bluetooth kulaklıkla. Yalnızca GPS'li bir saatte k
 
 ### İstasyonlarım iPhone'dan eşitleniyor mu?
 
-Evet. Favoriler ve klasörler iCloud üzerinden gelir; saatin kendi kütüphane görünümü ve araması da var.
+Evet. Favoriler ve klasörler iPhone'undaki Macdio'dan gelir; saatin kendi kütüphane görünümü ve araması da var.
 
 ### Saatte radyo kaydedebilir miyim?
 

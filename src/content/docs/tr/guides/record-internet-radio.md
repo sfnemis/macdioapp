@@ -9,7 +9,7 @@ faq:
   - q: "Bir kaydı Finder'a ya da Dosyalar uygulamasına aktarabilir miyim?"
     a: "Hayır. Kayıtlar cihazındaki uygulamanın içinde kalır; orada çalabilir ya da silebilirsin. Onlar için paylaşma, dışa aktarma ya da iCloud dosya eşitlemesi yok."
   - q: "Başka uygulamaları kullanırken kayıt yapabilir miyim?"
-    a: "Evet. Kayıt hoparlörleri değil yayını yakalar, bu yüzden Mac ve iPhone'da sen başka bir şey yaparken ve ekran kapalıyken arka planda devam eder."
+    a: "Evet. Kayıt hoparlörleri değil yayını yakalar, bu yüzden istasyon çaldığı sürece Mac ve iPhone'da sen başka bir şey yaparken ve ekran kapalıyken arka planda devam eder."
   - q: "Apple Watch'ta ya da Apple TV'de kayıt yapabilir miyim?"
     a: "Hayır. Kayıt bir Mac, iPhone ve iPad özelliği. Saat ve TV uygulamaları istasyon çalar ve çalmayı kontrol eder."
   - q: "Gece yayınlanan bir radyo programını nasıl kaydederim?"
@@ -76,7 +76,7 @@ Bir kayıt istasyonun ne gönderdiyse onu tutar. MP3 istasyonu .mp3, AAC istasyo
 
 ## Kayıtlar nerede yaşıyor
 
-Uygulamanın içinde, kendi cihazında, her oturumun ve her bölünmüş parçanın çalınıp silinebildiği Kayıtlar sekmesinde. Müzik kütüphanene kopyalanmazlar, Dosyalar uygulamasında ya da Finder'da görünmezler ve paylaş ya da dışa aktar düğmesi yok. Bu kişisel bir kayıt özelliği için bilinçli bir sınır, tamamlanmayı bekleyen bir şey değil ve kişisel bir kaydı kişisel tutuyor. Hiçbir şey hiçbir yere yüklenmez.
+Uygulamanın içinde, kendi cihazında, her oturumun ve her bölünmüş parçanın çalınıp silinebildiği Kayıtlar sekmesinde. Müzik kütüphanene kopyalanmazlar, uygulama onları Dosyalar uygulamasında ya da Finder klasörlerinde göstermez ve paylaş ya da dışa aktar düğmesi yok. Bu kişisel bir kayıt özelliği için bilinçli bir sınır, tamamlanmayı bekleyen bir şey değil ve kişisel bir kaydı kişisel tutuyor. Hiçbir şey hiçbir yere yüklenmez.
 
 ## İnternet radyosu kaydetmek yasal mı?
 
@@ -94,7 +94,7 @@ Hayır. Kayıtlar cihazındaki uygulamanın içinde kalır; orada çalabilir ya 
 
 ### Başka uygulamaları kullanırken kayıt yapabilir miyim?
 
-Evet. Kayıt hoparlörleri değil yayını yakalar, bu yüzden Mac ve iPhone'da sen başka bir şey yaparken ve ekran kapalıyken arka planda devam eder.
+Evet. Kayıt hoparlörleri değil yayını yakalar, bu yüzden istasyon çaldığı sürece Mac ve iPhone'da sen başka bir şey yaparken ve ekran kapalıyken arka planda devam eder.
 
 ### Apple Watch'ta ya da Apple TV'de kayıt yapabilir miyim?
 

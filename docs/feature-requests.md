@@ -213,7 +213,7 @@ saying what happened to it.
   so the "Continue Listening" heading stays sharp). Originals stay in
   ~/MacdioBuild/showcase/media/web/. The CarPlay Home, Favorites and Discover
   clips still show real station logos, as the live site's screenshots do.
-- [ ] **W23 Guides that teach Macdio's own features** (Sait, 2026-10-13 00:16,
+- [x] **W23 Guides that teach Macdio's own features** (Sait, 2026-10-13 00:16,
   "do not forget this"). The guide hub has 9 articles in three groups (Radio on
   every device, Radio features, Buying and comparing); they stay, but they are
   search articles, not guides. The hub needs real how-to guides for using
@@ -243,6 +243,46 @@ saying what happened to it.
   privacy.html said they stay on the device); Apple Watch gets favorites and
   lists from the iPhone, not iCloud (apple-watch.html, features.html,
   radio-on-apple-watch.md); record-internet-radio.md overstated two points.
+  Done 2026-10-13 01:40: all 15 guides translated into the 13 other
+  languages (one agent per language, quoting each app label in the app's own
+  translation per platform, Siri phrases from AppShortcuts), plus two sweep
+  rounds for the English corrections made meanwhile (W25). Build: 812 URLs,
+  all 10 checks green; 350 guide pages checked at 375 px with no overflow;
+  476 marketing pages clean in the layout check; worker probes 102/102.
+  Labels the app itself shows in English in every language (browser editor,
+  add-station errors, reorder sheets, sync test, alarm actions) are quoted in
+  English with a short gloss; those are app bugs #628-#633.
+- [x] **W25 Wrong claims on the site, found by the guide research** (2026-10-13).
+  Each checked against the app source and corrected in English, then in all
+  13 translations:
+  - features/highlights.html said Apple TV shows your highlights. There is no
+    highlight code in the tvOS app; the FAQ now says highlights are made and
+    sent on iPhone, iPad, Mac and Apple Watch.
+  - highlights.html and privacy.html said Notion and Readwise tokens stay on
+    the device. `Keychain.swift` stores them with `kSecAttrSynchronizable`,
+    so iCloud Keychain carries them to the user's other devices; both pages
+    now say so.
+  - apple-watch.html (support card, gallery, paragraph), features.html,
+    iphone.html, mac.html, privacy-watchos.html and the Apple Watch guide said
+    the watch syncs through iCloud. The watch store has `cloudKitDatabase:
+    .none` and gets favorites, lists, saved songs and history from the
+    iPhone (WatchSync); every page now says that. The watch screenshot showing
+    an "iCloud Sync" switch was removed: the current watch app has no such
+    switch.
+  - apple-tv.html promised game controller support with every key remappable,
+    shoulder buttons switching tabs and playback on face buttons. The tvOS
+    target has no controller code; Apple TV's own controller support moves
+    the focus. The page now says exactly that and points to iPhone and iPad
+    for remappable buttons.
+  - record-internet-radio.md said recordings never appear in Finder (the
+    sandbox container is reachable) and did not say recording needs the
+    station to keep playing; both reworded.
+  - Later in the same pass: support.html said settings sync to Apple Watch
+    through iCloud; the home page hero said "sync everything through iCloud"
+    (recordings and downloads stay on the device, now "keep your library in
+    sync"); the press kit said "effortless iCloud sync across all devices";
+    the controller guide's Apple TV answer now matches apple-tv.html. The
+    unused watch screenshot file was deleted from public/.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

@@ -95,16 +95,131 @@
     "youtube": "Macdio YouTube'da"
   },
   "guides": {
-    "title": "Mac, iPhone, Watch ve CarPlay için İnternet Radyosu Rehberi",
+    "title": "Macdio Rehberleri: Macdio ve İnternet Radyosu Kullanımı",
     "h1": "Rehberler",
-    "description": "Mac, iPhone, iPad, Apple Watch, Apple TV ve CarPlay'de internet radyosu dinleyenler için kısa, pratik rehberler; Macdio'nun geliştiricisinden.",
-    "intro": "İnternet radyosu dinleyicilerinin gerçekten sorduğu sorulara kısa, pratik cevaplar; Macdio'nun geliştiricisi tarafından yazıldı. Her rehber geçerli olduğu cihazları söyler ve insanların aradığı sorularla biter.",
+    "description": "iPhone, iPad, Mac, Apple TV ve Apple Watch'ta her Macdio özelliğinin nasıl kullanıldığı ve internet radyosuna dair pratik cevaplar, geliştiricisinden.",
+    "intro": "Macdio'yu her seferinde bir özellikle nasıl kullanacağın ve internet radyosu dinleyicilerinin sorduğu sorulara kısa, pratik cevaplar; Macdio'nun geliştiricisi tarafından yazıldı. Her rehber geçerli olduğu cihazları söyler ve insanların aradığı sorularla biter.",
     "allGuides": "Tüm rehberler",
     "behindH2": "Rehberlerin arkasındaki uygulama",
     "behind": "Macdio, <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> ve <a href=\"/apple-watch.html\">Apple Watch</a> için yerel bir internet radyosu ve podcast oynatıcısı. 60.000+ istasyon, kayıt, canlı şarkı sözleri ve mikrofonsuz şarkı tanıma, aboneliksiz tek satın almada.",
     "writtenBy": "Macdio'nun geliştiricisi <a href=\"/presskit.html\">Sait Firat NEMIS</a> tarafından yazıldı.",
     "checkedOn": "{date} tarihinde kontrol edildi.",
     "groups": [
+      {
+        "label": "Başlarken",
+        "guides": [
+          {
+            "slug": "macdio-on-iphone-and-ipad",
+            "label": "iPhone ve iPad'de Macdio",
+            "title": "iPhone ve iPad'de Macdio",
+            "description": "iPhone ve iPad'de Macdio'da yolunu bul: sekmeler ve Ayarlar, mini ve tam oynatıcı, Saat Modu ve alarmı, widget'lar, Kilitli Ekran ve CarPlay."
+          },
+          {
+            "slug": "macdio-on-mac",
+            "label": "Mac'te Macdio",
+            "title": "Mac'te Macdio",
+            "description": "Macdio Mac'te nasıl çalışır: ana pencere, oynatıcı paneli, kompakt oynatıcı, menü çubuğu oynatıcısı, Dock menüsü, klavye kısayolları ve Ayarlar."
+          },
+          {
+            "slug": "macdio-on-apple-tv",
+            "label": "Apple TV'de Macdio",
+            "title": "Apple TV'de Macdio",
+            "description": "Macdio Apple TV'de nasıl çalışır: sekmeler, Siri Remote, Şimdi Çalıyor ve ambiyans ekranı, Top Shelf, eşitlenen transkriptler, bilgisayardan istasyon ekleme."
+          }
+        ]
+      },
+      {
+        "label": "İstasyonların",
+        "guides": [
+          {
+            "slug": "add-a-custom-station",
+            "label": "Kendi istasyonunu ekle",
+            "title": "Yayın adresiyle kendi istasyonunu ekle",
+            "description": "Her internet radyosu yayınını iPhone, iPad ya da Mac'te adresiyle Macdio'ya ekle, test et, logo ver, sonra düzenle ya da sil. Apple TV tarayıcı kullanır."
+          },
+          {
+            "slug": "edit-stations-on-computer",
+            "label": "İstasyonları bilgisayarda düzenle",
+            "title": "İstasyonlarını bilgisayar tarayıcısından düzenle",
+            "description": "Bilgisayarda Düzenle, iPhone, iPad ya da Apple TV'deki kendi istasyonlarını aynı Wi-Fi'daki bir tarayıcıda açar. Ekle, düzenle, JSON, CSV ya da M3U al ve ver."
+          },
+          {
+            "slug": "favorites-lists-and-sync",
+            "label": "Favoriler, listeler ve eşitleme",
+            "title": "Favoriler, listeler ve iCloud eşitleme",
+            "description": "Macdio'da favoriler, İstasyonlarım ve kendi listelerin nasıl çalışır, sıraları nasıl belirlenir ve iCloud iPhone, iPad, Mac ve Apple TV arasında neyi eşitler."
+          }
+        ]
+      },
+      {
+        "label": "Şarkıyı Tanı, kayıt ve uyku",
+        "guides": [
+          {
+            "slug": "song-id-and-auto-shazam",
+            "label": "Şarkıyı Tanı ve Otomatik Shazam",
+            "title": "Macdio'da Şarkıyı Tanı ve Otomatik Shazam",
+            "description": "Şarkıyı Tanı ve Otomatik Shazam, iPhone, iPad, Mac, Apple TV ve Apple Watch'ta istasyonun çaldığı şarkıyı nasıl adlandırır, o şarkılar nereye gider."
+          },
+          {
+            "slug": "recording-in-macdio",
+            "label": "İstasyon kaydet",
+            "title": "Macdio'da radyo nasıl kaydedilir",
+            "description": "iPhone, iPad ve Mac'te Macdio ile her istasyonu kaydet: başlat ve durdur, tek dosya ya da şarkı başına dosya, süre ve disk sınırları, kayıtların yeri."
+          },
+          {
+            "slug": "sleep-timer-and-clock-mode",
+            "label": "Uyku zamanlayıcısı ve Saat Modu",
+            "title": "Uyku zamanlayıcısı ve Saat Modu",
+            "description": "iPhone, iPad, Mac, Apple TV ve Apple Watch'ta Macdio'da uyku zamanlayıcısı kur, Zamanlayıcıyı Tekrarla ile geri getir, iPhone'da Saat Modu'nu başucu alarmı yap."
+          }
+        ]
+      },
+      {
+        "label": "Podcast'ler",
+        "guides": [
+          {
+            "slug": "podcasts-in-macdio",
+            "label": "Macdio'da podcast'ler",
+            "title": "Podcast'leri takip et, sıraya al ve indir",
+            "description": "Podcast'leri arama, liste, akış adresi ya da OPML ile takip et, bölümleri ve canlı radyoyu Sıradakiler'de sırala, çevrimdışı için indir, hızı ayarla."
+          },
+          {
+            "slug": "podcast-transcripts-and-highlights",
+            "label": "Transkriptler ve Vurgular",
+            "title": "Transkriptler, bölüm başlıkları ve Vurgular",
+            "description": "Macdio transkripti iPhone, iPad ya da Mac'inde yazar. Bölümlerde ara, bir cümleyi dokunarak ya da Siri ile işaretle, Notlar, Notion ya da Readwise'a gönder."
+          }
+        ]
+      },
+      {
+        "label": "Kontroller ve ayarlar",
+        "guides": [
+          {
+            "slug": "shortcuts-and-automations",
+            "label": "Kestirmeler ve otomasyonlar",
+            "title": "Kestirmeler eylemleri ve otomasyonlar",
+            "description": "Apple'ın Kestirmeler uygulamasındaki dokuz Macdio eylemi, her birinin ne yaptığı ve 7:00'de istasyon başlatan ya da en yeni podcast bölümünü çalan otomasyonlar."
+          },
+          {
+            "slug": "airpods-and-headphone-controls",
+            "label": "AirPods ve kulaklıklar",
+            "title": "AirPods ve kulaklık kontrolleri",
+            "description": "AirPods ya da kulaklıkta tek, çift ve üç basışın Macdio'da canlı radyo ve podcast'lerde ne yaptığı, artı Canlı Duraklatma ve Mac'in ortam tuşları."
+          },
+          {
+            "slug": "game-controllers",
+            "label": "Oyun kumandaları",
+            "title": "Oyun kumandası kullan",
+            "description": "Macdio'da DualSense, Xbox ya da Backbone kumandasıyla çal, duraklat, istasyon değiştir, radyonda ve podcast'lerinde gezin; iPhone'da her düğmeyi yeniden ata."
+          },
+          {
+            "slug": "customize-macdio",
+            "label": "Macdio'yu özelleştir",
+            "title": "Değiştirmeye değer ayarlar",
+            "description": "iPhone, iPad, Mac ve Apple TV'de değiştirmeye değer Macdio ayarları: karanlık mod, simge, sekme çubuğu, Kütüphane, Canlı Duraklatma, Dock ve menü çubuğu."
+          }
+        ]
+      },
       {
         "label": "Her cihazda radyo",
         "guides": [

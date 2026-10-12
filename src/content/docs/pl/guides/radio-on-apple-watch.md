@@ -15,7 +15,7 @@ faq:
   - q: "Czy mogę słuchać podczas biegania bez telefonu?"
     a: "Tak, z zegarkiem z siecią komórkową i słuchawkami Bluetooth. Na zegarku tylko z GPS bieg musi się trzymać znanej sieci Wi-Fi."
   - q: "Czy moje stacje synchronizują się z iPhone'a?"
-    a: "Tak. Ulubione i foldery przychodzą przez iCloud, a zegarek ma też własny widok biblioteki i wyszukiwanie."
+    a: "Tak. Ulubione i foldery przychodzą z Macdio na twoim iPhone'ie, a zegarek ma też własny widok biblioteki i wyszukiwanie."
   - q: "Czy mogę nagrywać radio na zegarku?"
     a: "Nie. Nagrywanie to funkcja iPhone'a, iPada i Maca. Utwory, które polubisz na zegarku, i tak synchronizują się wszędzie."
 ---
@@ -52,7 +52,7 @@ AirPods albo dowolnych słuchawek Bluetooth. watchOS wysyła streamowany dźwię
 
 ### Swoich stacji
 
-Ulubione synchronizują się z twoich innych urządzeń przez iCloud, a zegarek ma własny widok biblioteki i wyszukiwanie.
+Ulubione i listy przychodzą z Macdio na twoim iPhone'ie, które utrzymuje je w zgodzie z twoimi innymi urządzeniami przez iCloud, a zegarek ma własny widok biblioteki i wyszukiwanie.
 
 ## Uczciwie o baterii
 
@@ -82,7 +82,7 @@ Tak, z zegarkiem z siecią komórkową i słuchawkami Bluetooth. Na zegarku tylk
 
 ### Czy moje stacje synchronizują się z iPhone'a?
 
-Tak. Ulubione i foldery przychodzą przez iCloud, a zegarek ma też własny widok biblioteki i wyszukiwanie.
+Tak. Ulubione i foldery przychodzą z Macdio na twoim iPhone'ie, a zegarek ma też własny widok biblioteki i wyszukiwanie.
 
 ### Czy mogę nagrywać radio na zegarku?
 

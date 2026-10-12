@@ -47,16 +47,56 @@
     "youtube": "Macdio على YouTube"
   },
   "guides": {
-    "title": "أدلة راديو الإنترنت على Mac وiPhone وApple Watch وCarPlay",
+    "title": "أدلة Macdio: كيف تستخدم Macdio وراديو الإنترنت",
     "h1": "الأدلة",
-    "description": "أدلة قصيرة وعملية لمستمعي راديو الإنترنت على Mac وiPhone وiPad وApple Watch وApple TV وCarPlay، كتبها مطوّر Macdio.",
-    "intro": "إجابات قصيرة وعملية عن الأسئلة التي يطرحها مستمعو راديو الإنترنت فعلًا، كتبها مطوّر Macdio. يذكر كل دليل الأجهزة التي ينطبق عليها، وينتهي بالأسئلة التي يبحث عنها الناس.",
+    "description": "كيف تستخدم كل ميزة في Macdio على iPhone وiPad وMac وApple TV وApple Watch، مع إجابات عملية عن راديو الإنترنت، كتبها مطوّر التطبيق.",
+    "intro": "كيف تستخدم Macdio، ميزة بعد ميزة، مع إجابات قصيرة وعملية عن الأسئلة التي يطرحها مستمعو راديو الإنترنت، كتبها مطوّر Macdio. يذكر كل دليل الأجهزة التي ينطبق عليها، وينتهي بالأسئلة التي يبحث عنها الناس.",
     "allGuides": "كل الأدلة",
     "behindH2": "التطبيق الذي خلف هذه الأدلة",
     "behind": "Macdio مشغّل راديو إنترنت وبودكاست أصلي لأجهزة <a href=\"/iphone.html\">iPhone</a> و<a href=\"/mac.html\">Mac</a> و<a href=\"/apple-tv.html\">Apple TV</a> و<a href=\"/ipad.html\">iPad</a> و<a href=\"/apple-watch.html\">Apple Watch</a>. أكثر من 60,000 محطة، وتسجيل، وكلمات أغانٍ متزامنة، وتعرّف على الأغاني من دون ميكروفون، بشراء واحد ومن دون اشتراك.",
     "writtenBy": "كتبه <a href=\"/presskit.html\">Sait Firat NEMIS</a>، مطوّر Macdio.",
     "checkedOn": "تم التحقق منه بتاريخ {date}.",
     "groups": [
+      {
+        "label": "البداية",
+        "guides": [
+          { "slug": "macdio-on-iphone-and-ipad", "label": "Macdio على iPhone وiPad", "title": "Macdio على iPhone وiPad", "description": "دليلك إلى Macdio على iPhone وiPad: علامات التبويب والإعدادات، والمشغّل المصغّر والكامل، ووضع الساعة ومنبّهه، والأدوات وشاشة القفل وCarPlay." },
+          { "slug": "macdio-on-mac", "label": "Macdio على Mac", "title": "Macdio على Mac", "description": "كيف يعمل Macdio على Mac: النافذة الرئيسية، ولوحة المشغّل، والمشغّل المضغوط، ومشغّل شريط القوائم، وقائمة Dock، واختصارات لوحة المفاتيح والإعدادات." },
+          { "slug": "macdio-on-apple-tv", "label": "Macdio على Apple TV", "title": "Macdio على Apple TV", "description": "كيف يعمل Macdio على Apple TV: علامات التبويب وSiri Remote، وشاشة قيد التشغيل وشاشة الأجواء، وصفوف Top Shelf، والنصوص المتزامنة وإضافة المحطات من كمبيوتر." }
+        ]
+      },
+      {
+        "label": "محطاتك",
+        "guides": [
+          { "slug": "add-a-custom-station", "label": "أضف محطتك الخاصة", "title": "كيف تضيف محطتك الخاصة برابط البث", "description": "أضف أي بث راديو إنترنت إلى Macdio بعنوانه على iPhone أو iPad أو Mac، واختبره وامنحه شعاراً، ثم عدّله أو احذفه. وعلى Apple TV يتولى ذلك متصفح." },
+          { "slug": "edit-stations-on-computer", "label": "عدّل المحطات على الكمبيوتر", "title": "عدّل محطاتك من متصفح الكمبيوتر", "description": "«التعديل على الكمبيوتر» يفتح محطاتك الخاصة في Macdio في متصفح على شبكة Wi-Fi نفسها، من iPhone أو iPad أو Apple TV. أضف وعدّل واستورد وصدّر JSON أو CSV أو M3U." },
+          { "slug": "favorites-lists-and-sync", "label": "المفضلة والقوائم والمزامنة", "title": "المفضلة والقوائم ومزامنة iCloud", "description": "كيف تعمل المفضلة و«محطاتي» وقوائمك الخاصة في Macdio، وكيف تضبط ترتيبها، وما الذي يزامنه iCloud بين iPhone وiPad وMac وApple TV." }
+        ]
+      },
+      {
+        "label": "تعريف الأغنية والتسجيل والنوم",
+        "guides": [
+          { "slug": "song-id-and-auto-shazam", "label": "تعريف الأغنية وShazam التلقائي", "title": "تعريف الأغنية وShazam التلقائي في Macdio", "description": "كيف يسمّي تعريف الأغنية وShazam التلقائي الأغنية التي تبثها المحطة في Macdio على iPhone وiPad وMac وApple TV وApple Watch، وإلى أين تذهب تلك الأغاني بعدها." },
+          { "slug": "recording-in-macdio", "label": "سجّل محطة", "title": "كيف تسجّل الراديو في Macdio", "description": "سجّل أي محطة في Macdio على iPhone وiPad وMac: البدء والإيقاف، وملف واحد أو ملف لكل أغنية، وحدود المدة والقرص، وأين تُحفظ تسجيلاتك." },
+          { "slug": "sleep-timer-and-clock-mode", "label": "مؤقت النوم ووضع الساعة", "title": "مؤقت النوم ووضع الساعة", "description": "اضبط مؤقت النوم في Macdio على iPhone وiPad وMac وApple TV وApple Watch، وأعِده بـ «تكرار المؤقت»، واستخدم وضع الساعة على iPhone منبّهاً بجانب السرير." }
+        ]
+      },
+      {
+        "label": "البودكاست",
+        "guides": [
+          { "slug": "podcasts-in-macdio", "label": "البودكاست في Macdio", "title": "تابع البودكاست ورتّبه ونزّله", "description": "تابع البودكاست بالبحث أو القائمة الرائجة أو رابط الخلاصة أو OPML، وضع الحلقات والراديو معاً في «التالي»، ونزّل للاستماع دون اتصال، واضبط السرعة." },
+          { "slug": "podcast-transcripts-and-highlights", "label": "النصوص والتمييزات", "title": "النصوص والفصول والتمييزات", "description": "يكتب Macdio نصوص البودكاست على iPhone أو iPad أو Mac. ابحث داخل الحلقات، وعلّم جملة بلمسة أو بـ Siri، وأرسلها إلى Notes أو Notion أو Readwise." }
+        ]
+      },
+      {
+        "label": "التحكم والإعدادات",
+        "guides": [
+          { "slug": "shortcuts-and-automations", "label": "الاختصارات والأتمتة", "title": "إجراءات الاختصارات والأتمتة", "description": "إجراءات Macdio التسعة كلها في تطبيق الاختصارات من Apple، وما يفعله كل منها، وأتمتة تبدأ محطة في الساعة 7:00 أو تشغّل أحدث حلقة بودكاست." },
+          { "slug": "airpods-and-headphone-controls", "label": "AirPods والسماعات", "title": "أزرار AirPods والسماعات", "description": "ما تفعله الضغطة الواحدة والمزدوجة والثلاثية على AirPods أو السماعات في Macdio، للراديو المباشر وللبودكاست، إضافة إلى «إيقاف البث المؤقت» ومفاتيح الوسائط في Mac." },
+          { "slug": "game-controllers", "label": "وحدات تحكم الألعاب", "title": "استخدم وحدة تحكم ألعاب", "description": "شغّل وأوقف مؤقتاً وبدّل المحطات وتصفّح الراديو والبودكاست في Macdio بوحدة تحكم DualSense أو Xbox أو Backbone، وأعد تعيين كل زر على iPhone." },
+          { "slug": "customize-macdio", "label": "خصّص Macdio", "title": "إعدادات تستحق التغيير", "description": "إعدادات Macdio التي تستحق التغيير على iPhone وiPad وMac وApple TV: الوضع الداكن والأيقونة وشريط التبويب وأقسام المكتبة وإيقاف البث المؤقت وDock." }
+        ]
+      },
       {
         "label": "الراديو على كل جهاز",
         "guides": [

@@ -95,16 +95,131 @@
     "youtube": "Macdio na YouTube"
   },
   "guides": {
-    "title": "Poradniki radia internetowego: Mac, iPhone, Watch, CarPlay",
+    "title": "Poradniki Macdio: jak używać Macdio i radia internetowego",
     "h1": "Poradniki",
-    "description": "Krótkie, praktyczne poradniki dla słuchaczy radia internetowego na Macu, iPhone'ie, iPadzie, Apple Watch, Apple TV i w CarPlay, napisane przez twórcę Macdio.",
-    "intro": "Krótkie, praktyczne odpowiedzi na pytania, które słuchacze radia internetowego naprawdę zadają, napisane przez twórcę Macdio. Każdy poradnik wymienia urządzenia, których dotyczy, i kończy się pytaniami, które ludzie wyszukują.",
+    "description": "Jak używać każdej funkcji Macdio na iPhone'ie, iPadzie, Macu, Apple TV i Apple Watch, plus praktyczne odpowiedzi o radiu internetowym od twórcy aplikacji.",
+    "intro": "Jak używać Macdio, funkcja po funkcji, oraz krótkie, praktyczne odpowiedzi na pytania, które zadają słuchacze radia internetowego, napisane przez twórcę Macdio. Każdy poradnik wymienia urządzenia, których dotyczy, i kończy się pytaniami, które ludzie wyszukują.",
     "allGuides": "Wszystkie poradniki",
     "behindH2": "Aplikacja za poradnikami",
     "behind": "Macdio to natywny odtwarzacz radia internetowego i podcastów na <a href=\"/iphone.html\">iPhone'a</a>, <a href=\"/mac.html\">Maca</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPada</a> i <a href=\"/apple-watch.html\">Apple Watch</a>. Ponad 60 000 stacji, nagrywanie, tekst utworów na żywo i rozpoznawanie utworów bez mikrofonu, w jednym zakupie bez subskrypcji.",
     "writtenBy": "Napisał <a href=\"/presskit.html\">Sait Firat NEMIS</a>, twórca Macdio.",
     "checkedOn": "Sprawdzono {date}.",
     "groups": [
+      {
+        "label": "Na początek",
+        "guides": [
+          {
+            "slug": "macdio-on-iphone-and-ipad",
+            "label": "Macdio na iPhone'ie i iPadzie",
+            "title": "Macdio na iPhone'ie i iPadzie",
+            "description": "Jak poruszać się po Macdio na iPhone'ie i iPadzie: karty i Ustawienia, mini i pełny odtwarzacz, tryb zegara z alarmem, widżety, ekran blokady i CarPlay."
+          },
+          {
+            "slug": "macdio-on-mac",
+            "label": "Macdio na Macu",
+            "title": "Macdio na Macu",
+            "description": "Jak działa Macdio na Macu: główne okno, panel odtwarzacza, kompaktowy odtwarzacz, odtwarzacz na pasku menu, menu w Docku, skróty klawiszowe i Ustawienia."
+          },
+          {
+            "slug": "macdio-on-apple-tv",
+            "label": "Macdio na Apple TV",
+            "title": "Macdio na Apple TV",
+            "description": "Jak działa Macdio na Apple TV: karty, pilot Siri Remote, Teraz gra i ekran Ambient, rzędy Top Shelf, transkrypcje z iCloud i dodawanie stacji z komputera."
+          }
+        ]
+      },
+      {
+        "label": "Twoje stacje",
+        "guides": [
+          {
+            "slug": "add-a-custom-station",
+            "label": "Dodaj własną stację",
+            "title": "Jak dodać własną stację po adresie strumienia",
+            "description": "Dodaj strumień radia internetowego do Macdio po adresie na iPhone'ie, iPadzie lub Macu, przetestuj, nadaj logo, edytuj albo usuń. Apple TV używa przeglądarki."
+          },
+          {
+            "slug": "edit-stations-on-computer",
+            "label": "Edytuj stacje na komputerze",
+            "title": "Edytuj stacje z przeglądarki na komputerze",
+            "description": "Edytuj na komputerze otwiera twoje stacje Macdio w przeglądarce w tej samej sieci Wi-Fi, z iPhone'a, iPada lub Apple TV. Import i eksport JSON, CSV, M3U."
+          },
+          {
+            "slug": "favorites-lists-and-sync",
+            "label": "Ulubione, listy i synchronizacja",
+            "title": "Ulubione, listy i synchronizacja iCloud",
+            "description": "Jak działają ulubione, Moje stacje i twoje listy w Macdio, jak ustawić ich kolejność i co iCloud synchronizuje między iPhone'em, iPadem, Makiem i Apple TV."
+          }
+        ]
+      },
+      {
+        "label": "Song ID, nagrywanie i zasypianie",
+        "guides": [
+          {
+            "slug": "song-id-and-auto-shazam",
+            "label": "Song ID i Auto Shazam",
+            "title": "Song ID i Auto Shazam w Macdio",
+            "description": "Jak Song ID i Auto Shazam nazywają utwór grany przez stację w Macdio na iPhone'ie, iPadzie, Macu, Apple TV i Apple Watch i dokąd te utwory trafiają dalej."
+          },
+          {
+            "slug": "recording-in-macdio",
+            "label": "Nagraj stację",
+            "title": "Jak nagrywać radio w Macdio",
+            "description": "Nagrywaj dowolną stację w Macdio na iPhone'ie, iPadzie i Macu: start i stop, jeden plik albo plik na utwór, limity długości i dysku oraz gdzie są nagrania."
+          },
+          {
+            "slug": "sleep-timer-and-clock-mode",
+            "label": "Wyłącznik czasowy i tryb zegara",
+            "title": "Wyłącznik czasowy i tryb zegara",
+            "description": "Wyłącznik czasowy w Macdio na iPhone'ie, iPadzie, Macu, Apple TV i Apple Watch, jego powtarzanie i tryb zegara na iPhone'ie jako budzik przy łóżku."
+          }
+        ]
+      },
+      {
+        "label": "Podcasty",
+        "guides": [
+          {
+            "slug": "podcasts-in-macdio",
+            "label": "Podcasty w Macdio",
+            "title": "Subskrybuj, kolejkuj i pobieraj podcasty",
+            "description": "Subskrybuj podcasty z wyszukiwania, listy przebojów, URL kanału albo OPML, kolejkuj odcinki z radiem w Następne, pobieraj offline i ustaw prędkość."
+          },
+          {
+            "slug": "podcast-transcripts-and-highlights",
+            "label": "Transkrypcje i zaznaczenia",
+            "title": "Transkrypcje, rozdziały i zaznaczenia",
+            "description": "Macdio robi transkrypcje podcastów na iPhone'ie, iPadzie i Macu. Szukaj w odcinkach, zaznaczaj zdania dotykiem lub przez Siri, wysyłaj je do Notion i Readwise."
+          }
+        ]
+      },
+      {
+        "label": "Sterowanie i ustawienia",
+        "guides": [
+          {
+            "slug": "shortcuts-and-automations",
+            "label": "Skróty i automatyzacje",
+            "title": "Czynności w Skrótach i automatyzacje",
+            "description": "Wszystkie dziewięć czynności Macdio w aplikacji Skróty, co każda robi, i automatyzacje, które włączają stację o 7:00 albo grają najnowszy odcinek podcastu."
+          },
+          {
+            "slug": "airpods-and-headphone-controls",
+            "label": "AirPods i słuchawki",
+            "title": "AirPods i sterowanie słuchawkami",
+            "description": "Co robi pojedyncze, podwójne i potrójne naciśnięcie AirPods lub słuchawek w Macdio, w radiu na żywo i w podcastach, plus Pauza na żywo i klawisze Maca."
+          },
+          {
+            "slug": "game-controllers",
+            "label": "Kontrolery gier",
+            "title": "Używaj kontrolera gier",
+            "description": "Odtwarzaj, wstrzymuj, przełączaj stacje i przeglądaj radio i podcasty w Macdio kontrolerem DualSense, Xbox lub Backbone, a na iPhone'ie zmień każdy przycisk."
+          },
+          {
+            "slug": "customize-macdio",
+            "label": "Dostosuj Macdio",
+            "title": "Ustawienia warte zmiany",
+            "description": "Ustawienia Macdio warte zmiany na iPhone'ie, iPadzie, Macu i Apple TV: tryb ciemny, ikona, pasek kart, sekcje Biblioteki, Pauza na żywo, Dock i pasek menu."
+          }
+        ]
+      },
       {
         "label": "Radio na każdym urządzeniu",
         "guides": [

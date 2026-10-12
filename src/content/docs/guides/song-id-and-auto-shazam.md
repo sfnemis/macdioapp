@@ -5,7 +5,7 @@ datePublished: 2026-10-13
 lastUpdated: 2026-10-13
 faq:
   - q: "Does Macdio use the microphone to identify songs?"
-    a: "No. Macdio makes a short fingerprint of the stream it is already playing and sends only that fingerprint to Apple's Shazam catalog. The app never asks for microphone permission."
+    a: "No. Macdio makes a short fingerprint of the stream it is already playing and sends only that fingerprint to Apple's Shazam catalog. The app never asks for microphone permission, so the phone can stay in your pocket."
   - q: "Why is the Shazam button greyed out?"
     a: "The station already sends the artist, the title and the song's own cover, so Macdio uses the station's information and turns the button off for that song."
   - q: "Where do the songs I identify go?"

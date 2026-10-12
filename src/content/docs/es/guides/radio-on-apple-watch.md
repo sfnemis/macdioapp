@@ -15,7 +15,7 @@ faq:
   - q: "¿Puedo escuchar mientras corro sin el teléfono?"
     a: "Sí, con un reloj con datos móviles y auriculares Bluetooth. En un reloj solo GPS la ruta tiene que quedarse dentro de una red Wi-Fi conocida."
   - q: "¿Mis emisoras se sincronizan desde el iPhone?"
-    a: "Sí. Favoritos y carpetas llegan por iCloud, y el reloj también tiene su propia vista de biblioteca y su buscador."
+    a: "Sí. Favoritos y carpetas vienen de Macdio en tu iPhone, y el reloj también tiene su propia vista de biblioteca y su buscador."
   - q: "¿Puedo grabar la radio en el reloj?"
     a: "No. Grabar es una función de iPhone, iPad y Mac. Las canciones que marques con el corazón en el reloj se sincronizan igualmente en todas partes."
 ---
@@ -52,7 +52,7 @@ AirPods o cualquier auricular Bluetooth. watchOS envía el audio en streaming al
 
 ### Tus emisoras
 
-Los favoritos se sincronizan desde tus otros dispositivos a través de iCloud, y el reloj tiene su propia vista de biblioteca y su buscador.
+Favoritos y listas vienen de Macdio en tu iPhone, que los mantiene al día con tus otros dispositivos a través de iCloud, y el reloj tiene su propia vista de biblioteca y su buscador.
 
 ## Hablando claro de la batería
 
@@ -82,7 +82,7 @@ Sí, con un reloj con datos móviles y auriculares Bluetooth. En un reloj solo G
 
 ### ¿Mis emisoras se sincronizan desde el iPhone?
 
-Sí. Favoritos y carpetas llegan por iCloud, y el reloj también tiene su propia vista de biblioteca y su buscador.
+Sí. Favoritos y carpetas vienen de Macdio en tu iPhone, y el reloj también tiene su propia vista de biblioteca y su buscador.
 
 ### ¿Puedo grabar la radio en el reloj?
 

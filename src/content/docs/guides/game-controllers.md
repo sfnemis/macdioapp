@@ -11,11 +11,11 @@ faq:
   - q: "What does each button do by default?"
     a: "A plays and pauses, B stops, X starts Song ID, Y toggles the favorite, L1 and R1 switch to the previous and next station, L2 and R2 change the volume, Options opens and closes the player, and Menu opens the browser on iPhone and iPad."
   - q: "Why does Clock Mode open and the radio start when I connect my controller?"
-    a: "Clock Mode on Connect is on by default. It opens the landscape Clock Mode and starts your last station or episode if nothing is playing. Turn it off in Settings, Playback section."
+    a: "Clock Mode on Connect (Game Controller) is on by default. It opens the landscape Clock Mode and starts your last station or episode if nothing is playing. Turn it off in Settings, Playback section."
   - q: "Can I browse stations with a controller?"
     a: "Yes, on iPhone and iPad. Press Menu, move with the d-pad or the left stick, press A to open or play and B to go back."
   - q: "Does Macdio support game controllers on Apple TV?"
-    a: "No. Macdio has no button mapping on Apple TV. Use the Siri Remote there."
+    a: "Only for moving around. A controller paired with the Apple TV moves through Macdio like the Siri Remote, through Apple TV's own controller support. Macdio adds no button mapping there."
 ---
 
 Macdio works with game controllers that use Apple's extended gamepad profile, such as a PlayStation DualSense, an Xbox controller or a Backbone grip. On iPhone and iPad you can remap every button, with separate maps for radio and podcasts, and the Menu button opens a browser for your stations and shows. The Mac uses a fixed default map, and Apple TV has no Macdio button mapping.
@@ -96,7 +96,7 @@ The Mac has no remap screen and no controller browser. Menu, Options and up and 
 
 ## What about Apple TV?
 
-Macdio does not map controller buttons on Apple TV. Use the Siri Remote, as described in [Macdio on Apple TV](/guides/macdio-on-apple-tv.html).
+On Apple TV a paired controller moves through Macdio the way the Siri Remote does, through Apple TV's own controller support: stick or d-pad to move, A to choose, B to go back. Macdio does not map controller buttons there, so there is no remapping and no Song ID or favorite button on the controller. The Siri Remote is described in [Macdio on Apple TV](/guides/macdio-on-apple-tv.html).
 
 ## Limits worth knowing
 
@@ -128,7 +128,7 @@ Yes, on iPhone and iPad. Press Menu, move with the d-pad or the left stick, pres
 
 ### Does Macdio support game controllers on Apple TV?
 
-No. Macdio has no button mapping on Apple TV. Use the Siri Remote there.
+Only for moving around. A controller paired with the Apple TV moves through Macdio like the Siri Remote, through Apple TV's own controller support. Macdio adds no button mapping there.
 
 ## Try it
 

@@ -9,7 +9,7 @@ faq:
   - q: "Posso exportar uma gravação para o Finder ou para o app Arquivos?"
     a: "Não. As gravações ficam dentro do app, no seu aparelho, onde você pode tocá-las ou apagá-las. Não há compartilhamento, exportação nem sincronização de arquivos pelo iCloud para elas."
   - q: "Posso gravar enquanto uso outros apps?"
-    a: "Sim. A gravação captura o stream e não os alto-falantes, então continua em segundo plano no Mac e no iPhone enquanto você faz outra coisa, e com a tela apagada."
+    a: "Sim. A gravação captura o stream e não os alto-falantes, então continua em segundo plano no Mac e no iPhone enquanto você faz outra coisa, e com a tela apagada, desde que a estação continue tocando."
   - q: "Posso gravar no Apple Watch ou na Apple TV?"
     a: "Não. Gravação é um recurso do Mac, do iPhone e do iPad. Os apps do relógio e da TV tocam estações e controlam a reprodução."
   - q: "Como gravo um programa de rádio que vai ao ar de noite?"
@@ -76,7 +76,7 @@ Uma gravação mantém o que a estação envia. Uma estação MP3 te dá um .mp3
 
 ## Onde as gravações ficam
 
-Dentro do app, no seu próprio aparelho, na aba Gravações, onde cada sessão e cada faixa dividida pode ser tocada ou apagada. Elas não são copiadas para a sua biblioteca de músicas, não aparecem no app Arquivos nem no Finder, e não há botão de compartilhar ou exportar. Esse é um limite deliberado de um recurso de gravação pessoal, não algo esperando para ser terminado, e ele mantém uma gravação pessoal pessoal. Nada é enviado para lugar nenhum.
+Dentro do app, no seu próprio aparelho, na aba Gravações, onde cada sessão e cada faixa dividida pode ser tocada ou apagada. Elas não são copiadas para a sua biblioteca de músicas, o Macdio não as mostra no app Arquivos nem nas suas pastas do Finder, e não há botão de compartilhar ou exportar. Esse é um limite deliberado de um recurso de gravação pessoal, não algo esperando para ser terminado, e ele mantém uma gravação pessoal pessoal. Nada é enviado para lugar nenhum.
 
 ## Gravar rádio pela internet é legal?
 
@@ -94,7 +94,7 @@ Não. As gravações ficam dentro do app, no seu aparelho, onde você pode tocá
 
 ### Posso gravar enquanto uso outros apps?
 
-Sim. A gravação captura o stream e não os alto-falantes, então continua em segundo plano no Mac e no iPhone enquanto você faz outra coisa, e com a tela apagada.
+Sim. A gravação captura o stream e não os alto-falantes, então continua em segundo plano no Mac e no iPhone enquanto você faz outra coisa, e com a tela apagada, desde que a estação continue tocando.
 
 ### Posso gravar no Apple Watch ou na Apple TV?
 

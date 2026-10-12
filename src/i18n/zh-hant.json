@@ -47,16 +47,56 @@
     "youtube": "Macdio 的 YouTube"
   },
   "guides": {
-    "title": "Mac、iPhone、Watch 與 CarPlay 的網路電台指南",
+    "title": "Macdio 指南：如何使用 Macdio 和收聽網路電台",
     "h1": "指南",
-    "description": "為 Mac、iPhone、iPad、Apple Watch、Apple TV 和 CarPlay 上的網路電台聽眾所寫的簡短實用指南，由 Macdio 的開發者撰寫。",
-    "intro": "網路電台聽眾真正會問的問題，簡短而實用的解答，由 Macdio 的開發者撰寫。每篇指南都會說明適用的裝置，並在結尾整理大家常搜尋的問題。",
+    "description": "如何在 iPhone、iPad、Mac、Apple TV 和 Apple Watch 上使用 Macdio 的每一項功能，以及關於網路電台的實用解答，由開發者撰寫。",
+    "intro": "一次一項功能，說明如何使用 Macdio，再加上網路電台聽眾常問問題的簡短實用解答，由 Macdio 的開發者撰寫。每篇指南都會說明適用的裝置，並在結尾整理大家常搜尋的問題。",
     "allGuides": "所有指南",
     "behindH2": "這些指南背後的 App",
     "behind": "Macdio 是一款原生的網路電台與 Podcast 播放器，支援 <a href=\"/iphone.html\">iPhone</a>、<a href=\"/mac.html\">Mac</a>、<a href=\"/apple-tv.html\">Apple TV</a>、<a href=\"/ipad.html\">iPad</a> 和 <a href=\"/apple-watch.html\">Apple Watch</a>。60,000 多個電台、錄音、即時歌詞和不用麥克風的歌曲辨識，一次購買，沒有訂閱。",
     "writtenBy": "由 Macdio 的開發者 <a href=\"/presskit.html\">Sait Firat NEMIS</a> 撰寫。",
     "checkedOn": "最後確認日期：{date}。",
     "groups": [
+      {
+        "label": "開始使用",
+        "guides": [
+          { "slug": "macdio-on-iphone-and-ipad", "label": "iPhone 和 iPad 上的 Macdio", "title": "iPhone 和 iPad 上的 Macdio", "description": "在 iPhone 和 iPad 上熟悉 Macdio：分頁和設定、迷你和完整播放器、時鐘模式和它的鬧鐘、小工具、鎖定畫面和 CarPlay。" },
+          { "slug": "macdio-on-mac", "label": "Mac 上的 Macdio", "title": "Mac 上的 Macdio", "description": "Macdio 在 Mac 上怎麼運作：主視窗、播放器面板、緊湊播放器、選單列播放器、Dock 選單、鍵盤快速鍵和設定。" },
+          { "slug": "macdio-on-apple-tv", "label": "Apple TV 上的 Macdio", "title": "Apple TV 上的 Macdio", "description": "Macdio 在 Apple TV 上怎麼運作：分頁、Siri Remote、正在播放和氛圍畫面、Top Shelf 各列、同步的轉錄文字，以及從電腦加入電台。" }
+        ]
+      },
+      {
+        "label": "你的電台",
+        "guides": [
+          { "slug": "add-a-custom-station", "label": "加入你自己的電台", "title": "如何用串流網址加入自己的電台", "description": "在 iPhone、iPad 或 Mac 上用串流位址把任何網路電台加入 Macdio，測試它、給它一個標誌，之後再編輯或刪除。Apple TV 則使用瀏覽器。" },
+          { "slug": "edit-stations-on-computer", "label": "在電腦上編輯電台", "title": "用電腦瀏覽器編輯你的電台", "description": "「在電腦上編輯」從 iPhone、iPad 或 Apple TV，在同一個 Wi-Fi 上的瀏覽器打開你自己的 Macdio 電台。新增、編輯，匯入和匯出 JSON、CSV 或 M3U。" },
+          { "slug": "favorites-lists-and-sync", "label": "收藏、清單和同步", "title": "收藏、清單和 iCloud 同步", "description": "Macdio 的收藏、「我的電台」和你自己的清單怎麼運作、如何設定它們的順序，以及 iCloud 在你的 iPhone、iPad、Mac 和 Apple TV 之間同步什麼。" }
+        ]
+      },
+      {
+        "label": "Song ID、錄音和睡眠",
+        "guides": [
+          { "slug": "song-id-and-auto-shazam", "label": "Song ID 和自動 Shazam", "title": "Macdio 的 Song ID 和自動 Shazam", "description": "在 iPhone、iPad、Mac、Apple TV 和 Apple Watch 上，Macdio 的 Song ID 和自動 Shazam 如何說出電台正在播放的歌曲，以及這些歌曲接著會去哪裡。" },
+          { "slug": "recording-in-macdio", "label": "錄製電台", "title": "如何在 Macdio 中錄製電台", "description": "在 iPhone、iPad 和 Mac 上用 Macdio 錄下任何電台：開始和停止、單一檔案或每首歌一個檔案、長度和磁碟限制，以及錄音存放在哪裡。" },
+          { "slug": "sleep-timer-and-clock-mode", "label": "睡眠計時器和時鐘模式", "title": "睡眠計時器和時鐘模式", "description": "在 iPhone、iPad、Mac、Apple TV 和 Apple Watch 上設定 Macdio 的睡眠計時器，用重複計時器讓它再來一次，並把 iPhone 上的時鐘模式當成床頭鬧鐘。" }
+        ]
+      },
+      {
+        "label": "Podcast",
+        "guides": [
+          { "slug": "podcasts-in-macdio", "label": "Macdio 中的 Podcast", "title": "追蹤、排入佇列和下載 Podcast", "description": "用搜尋、排行榜、RSS 網址或 OPML 追蹤 Podcast，在「接著播放」裡把單集和直播電台排在一起，下載離線收聽，並在每部裝置上設定速度。" },
+          { "slug": "podcast-transcripts-and-highlights", "label": "轉錄文字和重點", "title": "轉錄文字、章節和重點", "description": "Macdio 在你的 iPhone、iPad 或 Mac 上製作 Podcast 轉錄文字。在單集裡搜尋，用點按或 Siri 標記一句話，再傳送到 Apple Notes、Notion 或 Readwise。" }
+        ]
+      },
+      {
+        "label": "控制和設定",
+        "guides": [
+          { "slug": "shortcuts-and-automations", "label": "捷徑和自動化", "title": "捷徑動作和自動化", "description": "Apple「捷徑」App 裡 Macdio 的全部九個動作、各自的作用，以及在 7:00 開始播放電台或播放 Podcast 最新一集的自動化。" },
+          { "slug": "airpods-and-headphone-controls", "label": "AirPods 和耳機", "title": "AirPods 和耳機控制", "description": "在 Macdio 裡，按 AirPods 或耳機一下、兩下、三下各會做什麼，直播電台和 Podcast 各有不同，還有直播暫停和 Mac 的媒體鍵。" },
+          { "slug": "game-controllers", "label": "遊戲控制器", "title": "使用遊戲控制器", "description": "用 DualSense、Xbox 或 Backbone 控制器在 Macdio 裡播放、暫停、切換電台，瀏覽你的電台和 Podcast，並在 iPhone 上重新對應每一個按鍵。" },
+          { "slug": "customize-macdio", "label": "自訂 Macdio", "title": "值得更改的設定", "description": "在 iPhone、iPad、Mac 和 Apple TV 上值得更改的 Macdio 設定：深色模式、App 圖示、標籤列、資料庫區塊、直播暫停、Dock 和選單列。" }
+        ]
+      },
       {
         "label": "每部裝置上的電台",
         "guides": [

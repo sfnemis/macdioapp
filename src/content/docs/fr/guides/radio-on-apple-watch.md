@@ -15,7 +15,7 @@ faq:
   - q: "Puis-je écouter en courant sans le téléphone ?"
     a: "Oui, avec une montre cellulaire et des écouteurs Bluetooth. Sur une montre GPS seul, la course doit rester dans un réseau Wi-Fi connu."
   - q: "Mes stations se synchronisent-elles depuis l'iPhone ?"
-    a: "Oui. Les favoris et les dossiers arrivent par iCloud, et la montre a aussi sa propre vue bibliothèque et sa recherche."
+    a: "Oui. Les favoris et les dossiers viennent de Macdio sur votre iPhone, et la montre a aussi sa propre vue bibliothèque et sa recherche."
   - q: "Puis-je enregistrer la radio sur la montre ?"
     a: "Non. L'enregistrement est une fonction de l'iPhone, de l'iPad et du Mac. Les chansons que vous aimez sur la montre se synchronisent quand même partout."
 ---
@@ -52,7 +52,7 @@ Des AirPods ou n'importe quels écouteurs Bluetooth. watchOS envoie l'audio en s
 
 ### Vos stations
 
-Les favoris se synchronisent depuis vos autres appareils par iCloud, et la montre a sa propre vue bibliothèque et sa recherche.
+Les favoris et les listes viennent de Macdio sur votre iPhone, qui les garde à jour avec vos autres appareils par iCloud, et la montre a sa propre vue bibliothèque et sa recherche.
 
 ## Franchise sur la batterie
 
@@ -82,7 +82,7 @@ Oui, avec une montre cellulaire et des écouteurs Bluetooth. Sur une montre GPS 
 
 ### Mes stations se synchronisent-elles depuis l'iPhone ?
 
-Oui. Les favoris et les dossiers arrivent par iCloud, et la montre a aussi sa propre vue bibliothèque et sa recherche.
+Oui. Les favoris et les dossiers viennent de Macdio sur votre iPhone, et la montre a aussi sa propre vue bibliothèque et sa recherche.
 
 ### Puis-je enregistrer la radio sur la montre ?
 

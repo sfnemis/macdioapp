@@ -9,7 +9,7 @@ faq:
   - q: "Puis-je exporter un enregistrement vers le Finder ou l'app Fichiers ?"
     a: "Non. Les enregistrements restent dans l'app sur votre appareil, où vous pouvez les lire ou les supprimer. Il n'y a ni partage, ni export, ni synchronisation de fichiers iCloud pour eux."
   - q: "Puis-je enregistrer en utilisant d'autres apps ?"
-    a: "Oui. L'enregistrement capture le flux et non les haut-parleurs, donc il continue en arrière-plan sur Mac et iPhone pendant que vous faites autre chose, et écran éteint."
+    a: "Oui. L'enregistrement capture le flux et non les haut-parleurs, donc il continue en arrière-plan sur Mac et iPhone pendant que vous faites autre chose, et écran éteint, tant que la station continue de jouer."
   - q: "Puis-je enregistrer sur Apple Watch ou Apple TV ?"
     a: "Non. L'enregistrement est une fonction Mac, iPhone et iPad. Les apps montre et télé lisent les stations et pilotent la lecture."
   - q: "Comment enregistrer une émission de radio diffusée la nuit ?"
@@ -76,7 +76,7 @@ Un enregistrement garde ce que la station envoie. Une station MP3 vous donne un 
 
 ## Où vivent les enregistrements
 
-Dans l'app, sur votre propre appareil, dans l'onglet Enregistrements où chaque session et chaque piste découpée peut être lue ou supprimée. Ils ne sont pas copiés dans votre bibliothèque musicale, ils n'apparaissent ni dans l'app Fichiers ni dans le Finder, et il n'y a pas de bouton de partage ou d'export. C'est une limite délibérée pour une fonction d'enregistrement personnel, pas quelque chose qui attend d'être terminé, et elle garde un enregistrement personnel vraiment personnel. Rien n'est envoyé nulle part.
+Dans l'app, sur votre propre appareil, dans l'onglet Enregistrements où chaque session et chaque piste découpée peut être lue ou supprimée. Ils ne sont pas copiés dans votre bibliothèque musicale, l'app ne les montre ni dans l'app Fichiers ni dans vos dossiers du Finder, et il n'y a pas de bouton de partage ou d'export. C'est une limite délibérée pour une fonction d'enregistrement personnel, pas quelque chose qui attend d'être terminé, et elle garde un enregistrement personnel vraiment personnel. Rien n'est envoyé nulle part.
 
 ## Enregistrer la radio Internet est-il légal ?
 
@@ -94,7 +94,7 @@ Non. Les enregistrements restent dans l'app sur votre appareil, où vous pouvez 
 
 ### Puis-je enregistrer en utilisant d'autres apps ?
 
-Oui. L'enregistrement capture le flux et non les haut-parleurs, donc il continue en arrière-plan sur Mac et iPhone pendant que vous faites autre chose, et écran éteint.
+Oui. L'enregistrement capture le flux et non les haut-parleurs, donc il continue en arrière-plan sur Mac et iPhone pendant que vous faites autre chose, et écran éteint, tant que la station continue de jouer.
 
 ### Puis-je enregistrer sur Apple Watch ou Apple TV ?
 

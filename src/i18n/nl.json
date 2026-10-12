@@ -47,16 +47,56 @@
     "youtube": "Macdio op YouTube"
   },
   "guides": {
-    "title": "Internetradiogidsen voor Mac, iPhone, Watch en CarPlay",
+    "title": "Macdio-gidsen: zo gebruik je Macdio en internetradio",
     "h1": "Gidsen",
-    "description": "Korte, praktische gidsen voor internetradioluisteraars op Mac, iPhone, iPad, Apple Watch, Apple TV en CarPlay, geschreven door de ontwikkelaar van Macdio.",
-    "intro": "Korte, praktische antwoorden op de vragen die internetradioluisteraars echt stellen, geschreven door de ontwikkelaar van Macdio. Elke gids noemt de apparaten waarvoor hij geldt en eindigt met de vragen waar mensen naar zoeken.",
+    "description": "Zo gebruik je elke functie van Macdio op iPhone, iPad, Mac, Apple TV en Apple Watch, plus praktische antwoorden over internetradio, van de ontwikkelaar.",
+    "intro": "Zo gebruik je Macdio, functie voor functie, plus korte, praktische antwoorden op de vragen die internetradioluisteraars stellen, geschreven door de ontwikkelaar van Macdio. Elke gids noemt de apparaten waarvoor hij geldt en eindigt met de vragen waar mensen naar zoeken.",
     "allGuides": "Alle gidsen",
     "behindH2": "De app achter de gidsen",
     "behind": "Macdio is een native internetradio- en podcastspeler voor <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> en <a href=\"/apple-watch.html\">Apple Watch</a>. Meer dan 60.000 zenders, opnemen, live songteksten en songherkenning zonder microfoon, in één aankoop zonder abonnement.",
     "writtenBy": "Geschreven door <a href=\"/presskit.html\">Sait Firat NEMIS</a>, de ontwikkelaar van Macdio.",
     "checkedOn": "Gecontroleerd op {date}.",
     "groups": [
+      {
+        "label": "Aan de slag",
+        "guides": [
+          { "slug": "macdio-on-iphone-and-ipad", "label": "Macdio op iPhone en iPad", "title": "Macdio op iPhone en iPad", "description": "De weg in Macdio op iPhone en iPad: de tabs en Instellingen, de mini- en volledige speler, de klokmodus met wekker, widgets, toegangsscherm en CarPlay." },
+          { "slug": "macdio-on-mac", "label": "Macdio op de Mac", "title": "Macdio op de Mac", "description": "Zo werkt Macdio op een Mac: het hoofdvenster, het spelerpaneel, de compacte speler, de speler in de menubalk, het Dock-menu, sneltoetsen en Instellingen." },
+          { "slug": "macdio-on-apple-tv", "label": "Macdio op Apple TV", "title": "Macdio op Apple TV", "description": "Zo werkt Macdio op Apple TV: tabs, de Siri Remote, Wordt nu afgespeeld en het ambient-scherm, Top Shelf, transcripties en zenders toevoegen via een computer." }
+        ]
+      },
+      {
+        "label": "Je zenders",
+        "guides": [
+          { "slug": "add-a-custom-station", "label": "Je eigen zender toevoegen", "title": "Zo voeg je je eigen zender toe via de stream-URL", "description": "Voeg elke radiostream via het adres toe aan Macdio op iPhone, iPad of Mac, test hem, geef hem een logo, wijzig of verwijder hem. Apple TV gaat via een browser." },
+          { "slug": "edit-stations-on-computer", "label": "Zenders bewerken op een computer", "title": "Je zenders bewerken in een browser op je computer", "description": "Bewerken op de computer opent je eigen zenders in een browser op hetzelfde wifi, vanaf iPhone, iPad of Apple TV. Toevoegen, wijzigen, JSON, CSV of M3U." },
+          { "slug": "favorites-lists-and-sync", "label": "Favorieten, lijsten en synchronisatie", "title": "Favorieten, lijsten en iCloud-synchronisatie", "description": "Zo werken favorieten, Mijn zenders en je eigen lijsten in Macdio, zo zet je ze op volgorde, en dit synchroniseert iCloud tussen iPhone, iPad, Mac en Apple TV." }
+        ]
+      },
+      {
+        "label": "Songherkenning, opnemen en slapen",
+        "guides": [
+          { "slug": "song-id-and-auto-shazam", "label": "Nummer herkennen en Auto-Shazam", "title": "Nummer herkennen en Auto-Shazam in Macdio", "description": "Zo vinden Nummer herkennen en Auto-Shazam het nummer dat een zender speelt, op iPhone, iPad, Mac, Apple TV en Apple Watch, en waar die nummers daarna heen gaan." },
+          { "slug": "recording-in-macdio", "label": "Een zender opnemen", "title": "Zo neem je radio op in Macdio", "description": "Neem elke zender op in Macdio op iPhone, iPad en Mac: starten en stoppen, één bestand of één per nummer, grenzen aan duur en ruimte, en waar je opnames staan." },
+          { "slug": "sleep-timer-and-clock-mode", "label": "Slaaptimer en klokmodus", "title": "Slaaptimer en klokmodus", "description": "Zet een slaaptimer in Macdio op iPhone, iPad, Mac, Apple TV en Apple Watch, haal hem terug met Timer herhalen, en gebruik de klokmodus op iPhone als wekker." }
+        ]
+      },
+      {
+        "label": "Podcasts",
+        "guides": [
+          { "slug": "podcasts-in-macdio", "label": "Podcasts in Macdio", "title": "Podcasts volgen, in de wachtrij zetten en downloaden", "description": "Volg podcasts via zoeken, hitlijst, feed-URL of OPML, zet afleveringen en live radio samen in Volgende, download ze offline en stel per apparaat de snelheid in." },
+          { "slug": "podcast-transcripts-and-highlights", "label": "Transcripties en markeringen", "title": "Transcripties, hoofdstukken en markeringen", "description": "Macdio transcribeert podcasts op je iPhone, iPad of Mac. Zoek in afleveringen, markeer een zin met een tik of Siri, stuur hem naar Notities, Notion of Readwise." }
+        ]
+      },
+      {
+        "label": "Bediening en instellingen",
+        "guides": [
+          { "slug": "shortcuts-and-automations", "label": "Opdrachten en automatiseringen", "title": "Acties en automatiseringen in Opdrachten", "description": "Alle negen acties van Macdio in de Opdrachten-app, wat elke actie doet, en automatiseringen die om 7:00 een zender starten of de nieuwste aflevering afspelen." },
+          { "slug": "airpods-and-headphone-controls", "label": "AirPods en koptelefoons", "title": "AirPods en koptelefoonbediening", "description": "Wat een enkele, dubbele en driedubbele druk op AirPods of een koptelefoon doet in Macdio, bij live radio en podcasts, plus Live-pauze en de mediatoetsen." },
+          { "slug": "game-controllers", "label": "Gamecontrollers", "title": "Een gamecontroller gebruiken", "description": "Speel, pauzeer, wissel van zender en blader door radio en podcasts in Macdio met een DualSense-, Xbox- of Backbone-controller, en wijs op iPhone elke knop toe." },
+          { "slug": "customize-macdio", "label": "Macdio aanpassen", "title": "Instellingen die het wijzigen waard zijn", "description": "Instellingen van Macdio die het wijzigen waard zijn op iPhone, iPad, Mac en Apple TV: donkere modus, app-symbool, tabbalk, bibliotheek, Live-pauze, Dock." }
+        ]
+      },
       {
         "label": "Radio op elk apparaat",
         "guides": [

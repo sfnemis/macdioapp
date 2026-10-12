@@ -47,16 +47,56 @@
     "youtube": "YouTubeのMacdio"
   },
   "guides": {
-    "title": "Mac、iPhone、Watch、CarPlay向けインターネットラジオガイド",
+    "title": "Macdioガイド: Macdioとインターネットラジオの使い方",
     "h1": "ガイド",
-    "description": "Mac、iPhone、iPad、Apple Watch、Apple TV、CarPlayでインターネットラジオを聴く人のための、短くて実用的なガイド。Macdioの開発者が書いています。",
-    "intro": "インターネットラジオのリスナーが実際に抱く疑問への、短くて実用的な答えです。Macdioの開発者が書いています。どのガイドにも対象のデバイスを明記し、最後にみなさんがよく検索する質問をまとめています。",
+    "description": "iPhone、iPad、Mac、Apple TV、Apple WatchでMacdioのすべての機能を使う方法と、インターネットラジオについての実用的な答え。開発者が書いています。",
+    "intro": "Macdioの使い方を機能ごとに、そしてインターネットラジオのリスナーが抱く疑問への短くて実用的な答えを、Macdioの開発者が書いています。どのガイドにも対象のデバイスを明記し、最後にみなさんがよく検索する質問をまとめています。",
     "allGuides": "すべてのガイド",
     "behindH2": "ガイドの裏にあるアプリ",
     "behind": "Macdioは、<a href=\"/iphone.html\">iPhone</a>、<a href=\"/mac.html\">Mac</a>、<a href=\"/apple-tv.html\">Apple TV</a>、<a href=\"/ipad.html\">iPad</a>、<a href=\"/apple-watch.html\">Apple Watch</a>向けのネイティブなインターネットラジオとポッドキャストのプレーヤーです。60,000以上の局、録音、ライブ歌詞、マイクを使わない曲の識別を、サブスクリプションなしの1回の購入で。",
     "writtenBy": "執筆: Macdioの開発者 <a href=\"/presskit.html\">Sait Firat NEMIS</a>。",
     "checkedOn": "{date}確認。",
     "groups": [
+      {
+        "label": "はじめに",
+        "guides": [
+          { "slug": "macdio-on-iphone-and-ipad", "label": "iPhoneとiPadのMacdio", "title": "iPhoneとiPadのMacdio", "description": "iPhoneとiPadのMacdioの使い方。タブと設定、ミニプレーヤーとフルプレーヤー、時計モードとアラーム、ウィジェット、ロック画面、CarPlay。" },
+          { "slug": "macdio-on-mac", "label": "MacのMacdio", "title": "MacのMacdio", "description": "MacでのMacdioの使い方。メインウィンドウ、プレーヤーパネル、コンパクトプレーヤー、メニューバーのプレーヤー、Dockメニュー、キーボードショートカット、設定。" },
+          { "slug": "macdio-on-apple-tv", "label": "Apple TVのMacdio", "title": "Apple TVのMacdio", "description": "Apple TVでのMacdioの使い方。タブ、Siri Remote、再生中画面とアンビエント画面、Top Shelfの列、同期される文字起こし、コンピュータからの局の追加。" }
+        ]
+      },
+      {
+        "label": "あなたの局",
+        "guides": [
+          { "slug": "add-a-custom-station", "label": "自分の局を追加", "title": "ストリームURLで自分の局を追加する方法", "description": "iPhone、iPad、Macで、どんなインターネットラジオのストリームもアドレスでMacdioに追加し、テストしてロゴを付け、編集や削除をする方法。Apple TVはブラウザを使います。" },
+          { "slug": "edit-stations-on-computer", "label": "コンピュータで局を編集", "title": "コンピュータのブラウザで局を編集する", "description": "「コンピュータで編集」は、iPhone、iPad、Apple TVの自分の局を同じWi-Fiのブラウザで開きます。追加、編集、JSON、CSV、M3Uの読み込みと書き出し。" },
+          { "slug": "favorites-lists-and-sync", "label": "お気に入り、リスト、同期", "title": "お気に入り、リスト、iCloud同期", "description": "Macdioのお気に入り、マイステーション、自分のリストの仕組みと順番の決め方、そしてiPhone、iPad、Mac、Apple TVのあいだでiCloudが同期するもの。" }
+        ]
+      },
+      {
+        "label": "Song ID、録音、スリープ",
+        "guides": [
+          { "slug": "song-id-and-auto-shazam", "label": "Song IDと自動 Shazam", "title": "MacdioのSong IDと自動 Shazam", "description": "iPhone、iPad、Mac、Apple TV、Apple WatchのMacdioで、Song IDと自動 Shazamが局で流れている曲を言い当てる仕組みと、見つけた曲の行き先。" },
+          { "slug": "recording-in-macdio", "label": "局を録音", "title": "Macdioでラジオを録音する方法", "description": "iPhone、iPad、MacのMacdioでどの局でも録音する方法。開始と停止、1つのファイルか曲ごとのファイルか、長さと空き容量の制限、録音の保存場所。" },
+          { "slug": "sleep-timer-and-clock-mode", "label": "スリープタイマーと時計モード", "title": "スリープタイマーと時計モード", "description": "iPhone、iPad、Mac、Apple TV、Apple WatchのMacdioでスリープタイマーを設定し、「タイマーを繰り返す」で呼び戻し、iPhoneの時計モードを枕元のアラームにする方法。" }
+        ]
+      },
+      {
+        "label": "ポッドキャスト",
+        "guides": [
+          { "slug": "podcasts-in-macdio", "label": "Macdioのポッドキャスト", "title": "ポッドキャストをフォロー、キュー、ダウンロード", "description": "検索、ランキング、フィードURL、OPMLでポッドキャストをフォローし、エピソードとライブラジオを「次に再生」に一緒に並べ、オフライン用にダウンロードし、デバイスごとに速度を決める。" },
+          { "slug": "podcast-transcripts-and-highlights", "label": "文字起こしとハイライト", "title": "文字起こし、チャプター、ハイライト", "description": "MacdioはiPhone、iPad、Macの中でポッドキャストを文字起こしします。エピソードの中を検索し、タップかSiriで文をマークして、メモ、Notion、Readwiseに送れます。" }
+        ]
+      },
+      {
+        "label": "操作と設定",
+        "guides": [
+          { "slug": "shortcuts-and-automations", "label": "ショートカットとオートメーション", "title": "ショートカットのアクションとオートメーション", "description": "Appleのショートカットアプリにある9つのMacdioのアクションと、それぞれの動き。7:00に局を流したり、最新のポッドキャストのエピソードを再生したりするオートメーション。" },
+          { "slug": "airpods-and-headphone-controls", "label": "AirPodsとヘッドフォン", "title": "AirPodsとヘッドフォンの操作", "description": "AirPodsやヘッドフォンを1回、2回、3回押したときにMacdioで起きること。ライブラジオとポッドキャストのそれぞれ、ライブ一時停止とMacのメディアキーも。" },
+          { "slug": "game-controllers", "label": "ゲームコントローラ", "title": "ゲームコントローラを使う", "description": "DualSense、Xbox、BackboneのコントローラでMacdioのラジオとポッドキャストを再生、一時停止、局の切り替え、ブラウズ。iPhoneではすべてのボタンを割り当て直せます。" },
+          { "slug": "customize-macdio", "label": "Macdioをカスタマイズ", "title": "変える価値のある設定", "description": "iPhone、iPad、Mac、Apple TVで変える価値のあるMacdioの設定。ダークモード、アプリのアイコン、タブバー、ライブラリのセクション、ライブ一時停止、Dock、メニューバー。" }
+        ]
+      },
       {
         "label": "どのデバイスでもラジオを",
         "guides": [
