@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio, macOS App Sandbox içinde en az yetkiyle çalışır: yayın için ağ erişimi, kayıt için mikrofon ve eşitleme için iCloud. Açık iznin olmadan dosyalara, kişilere ya da diğer uygulamalara erişemez.</p>
+  <p class="reveal">Macdio, macOS App Sandbox içinde özelliklerinin gerektirdiği yetkilerle çalışır: yayın ve yayınları kararlı tutan yerel aktarıcı için ağ erişimi, eşitleme için iCloud, yeni bölümler için bildirimler, sen istediğinde vurguları Apple Notes'a göndermek için Apple Events ve bölüm özetleri için Apple Private Cloud Compute. Mikrofon erişimi yok. Yalnızca kendi seçtiğin dosyaları, örneğin bir OPML dosyasını ya da bir istasyon listesini okur ya da yazar; kişilere ya da diğer uygulamalara ulaşamaz.</p>
 
   <h2 class="sec reveal">Üçüncü taraf hizmetler</h2>
   <p class="reveal">Macdio aşağıdaki dış hizmetlere yalnızca temel işlevler için bağlanır:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong>, senkron şarkı sözlerini almak için. Kişisel veri gönderilmez.</li>
     <li><strong>iTunes Search API</strong>, albüm kapağı almak için. Kişisel veri gönderilmez.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong>, kendisi logo sağlamayan radyo istasyonlarının logolarını sağlar. Yalnızca istasyonun web alan adı gönderilir, kişisel veri gönderilmez.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>, podcast araması, listeler ve kategoriler için. Yalnızca arama terimi ya da kategori gönderilir. Bölümler ve beslemeler doğrudan her programın kendi sunucusundan indirilir.</li>
+    <li><strong>Apple ShazamKit</strong>, Şarkıyı Tanı için. Apple'ın Shazam hizmetine bir kayıt değil, yayının kısa bir ses imzası gider. Mikrofon hiç kullanılmaz.</li>
+    <li><strong>Apple'ın dil modeli</strong>, bir podcast bölümünün bölüm başlıklarını ve özetini cihazda ya da metni saklamayan Apple Private Cloud Compute'ta yazar.</li>
+    <li><strong>push.macdio.app</strong>, Macdio'nun bildirim sunucusu, yalnızca Yeni Bölüm Bildirimleri açıkken bu Mac'in bildirim adresini ve takip ettiğin programları alır. Başka hiçbir şey saklamaz.</li>
   </ul>
 
   <h2 class="sec reveal">iCloud eşitleme</h2>

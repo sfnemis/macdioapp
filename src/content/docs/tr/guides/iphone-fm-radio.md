@@ -28,7 +28,7 @@ Kısa cevap hayır ve gelmiyor da. Nedeninin dürüst hâli ve dinleyicilerin ye
 
 Kullanabildiğin bir tane yok. Eski iPhone'ların içindeki kablosuz çipler silikonda bir FM alıcı bloğu içeriyordu, söylenti oradan başladı, ama o blok hiçbir zaman bir antene bağlanmadı ve hiçbir zaman yazılıma açılmadı. Uyuyan bir transistör radyo değildir. 2017'de, kasırga mevsiminde FM'in açılması için halk kampanyasının ardından Apple, telefonlarında etkinleştirilebilecek bir FM radyo çipi ve FM sinyallerini destekleyecek şekilde tasarlanmış bir anten bulunmadığını açıkladı.
 
-Bu bugüne kadarki her modeli kapsıyor. İlk iPhone değil, iPhone 17 nesli değil, aradaki hiçbir şey değil. Soru her eylül geri geliyor çünkü her yeni model yeni bir arama dalgası getiriyor, ama cevap on sekiz yıldır değişmedi.
+Bu bugüne kadarki her modeli kapsıyor. İlk iPhone değil, iPhone 17 nesli değil, aradaki hiçbir şey değil. Soru her eylül geri geliyor çünkü her yeni model yeni bir arama dalgası getiriyor, ama cevap 2007'den beri değişmedi.
 
 ## Apple iPhone'da FM radyoyu neden açmıyor
 

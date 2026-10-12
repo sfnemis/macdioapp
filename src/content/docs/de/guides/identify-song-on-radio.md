@@ -2,12 +2,12 @@
 title: "Welcher Song läuft gerade im Radio? 3 Wege zur Antwort"
 description: "Drei Wege, einen Song im Radio zu erkennen, darunter einer, der den Stream selbst liest und nie nach dem Mikrofon fragt. Das Telefon bleibt in der Tasche."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Funktioniert das wirklich ohne Mikrofon?"
     a: "Ja. Macdio erkennt den Song aus dem Audiostream, den es ohnehin abspielt, und fragt deshalb zu keinem Zeitpunkt nach Mikrofonzugriff."
   - q: "Was, wenn der Sender den falschen Titel anzeigt?"
-    a: "Die Erkennung aus dem Ton hat Vorrang, wenn sie belegen kann, dass sie den Moment auf dem Bildschirm beschreibt. Die falsche Angabe wird also korrigiert statt übernommen."
+    a: "Macdio zeigt den eigenen Titel des Senders, sobald er einen schickt. Auch ein Fingerabdruck kann sich irren, bei Werbung, einem Remix oder einer Live-Version, und eine selbstsichere falsche Korrektur ist schlimmer als ein verspäteter Titel. Song ID springt dort ein, wo der Sender nichts schickt."
   - q: "Funktioniert es im Auto?"
     a: "Ja, auch über CarPlay, und ein Herz am Steuer landet trotzdem in Apple Music. Siehe den CarPlay-Ratgeber."
   - q: "Funktioniert das mit UKW- oder Mittelwellenradio?"
@@ -44,7 +44,7 @@ Die meisten Sender senden Künstler und Titel zusammen mit dem Ton, und ein gute
 
 Läuft der Ton ohnehin durch eine App, kann die App ihn direkt erkennen, ganz ohne Mikrofon. So macht es [Macdio](/iphone.html): Song ID hört auf den Stream statt in den Raum, funktioniert also mit dem gesperrten Telefon in der Tasche, in einem lauten Auto oder auf einem [Apple TV](/apple-tv.html) am anderen Ende des Wohnzimmers. Macdio fragt nie nach Mikrofonzugriff, weil es nie einen braucht.
 
-Weil es den tatsächlichen Ton hört, korrigiert es den Sender auch, wenn der sich irrt, und es kann einen Song in einer Strecke benennen, die der Sender gar nicht ansagt. Denselben Stream kannst du beim Hören auch behalten: [Internetradio aufnehmen](/guides/record-internet-radio.html), auf dem [Mac](/mac.html) genauso wie auf dem iPhone.
+Weil es den tatsächlichen Ton hört, kann es einen Song in einer Strecke benennen, die der Sender gar nicht ansagt, und das Cover ergänzen, wenn der Sender nur einen Titel schickt. Denselben Stream kannst du beim Hören auch behalten: [Internetradio aufnehmen](/guides/record-internet-radio.html), auf dem [Mac](/mac.html) genauso wie auf dem iPhone.
 
 ## Warum das Mikrofon im Auto scheitert
 
@@ -62,7 +62,7 @@ Der alte Notbehelf funktioniert auch noch: Tipp eine Zeile aus dem Liedtext, die
 
 Die Metadaten eines Senders schreibt die Automatisierung, die der Sender nutzt, und sie verrutschen. Die üblichen Fehler: Eine Werbung oder ein Jingle erbt den Titel des vorigen Songs, ein Titel kommt ein paar Sekunden zu früh oder zu spät, und ein Platzhalter wie der Sendername steht dort, wo der Song stehen sollte.
 
-Die Erkennung aus dem Ton korrigiert alle drei, weil sie meldet, was tatsächlich erklingt, und nicht, was das Sendesystem behauptet. Liegt der Sender richtig, gewinnt sein eigener Text, denn der Sender kennt seinen Katalog besser als jeder Fingerabdruck.
+Die Erkennung aus dem Ton meldet, was tatsächlich erklingt, und nicht, was das Sendesystem behauptet, deshalb ist sie das richtige Werkzeug für die Strecken, die ein Sender leer lässt. Macdio lässt trotzdem den eigenen Text des Senders gewinnen, sobald er einen schickt, denn der Sender kennt seinen Katalog besser als jeder Fingerabdruck, und eine selbstsichere falsche Korrektur ist schlimmer als ein verspäteter Titel.
 
 ## Dann behalte den Song
 
@@ -86,7 +86,7 @@ Ja. Macdio erkennt den Song aus dem Audiostream, den es ohnehin abspielt, und fr
 
 ### Was, wenn der Sender den falschen Titel anzeigt?
 
-Die Erkennung aus dem Ton hat Vorrang, wenn sie belegen kann, dass sie den Moment auf dem Bildschirm beschreibt. Die falsche Angabe wird also korrigiert statt übernommen.
+Macdio zeigt den eigenen Titel des Senders, sobald er einen schickt. Auch ein Fingerabdruck kann sich irren, bei Werbung, einem Remix oder einer Live-Version, und eine selbstsichere falsche Korrektur ist schlimmer als ein verspäteter Titel. Song ID springt dort ein, wo der Sender nichts schickt.
 
 ### Funktioniert es im Auto?
 

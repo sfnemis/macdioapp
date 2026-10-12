@@ -1,8 +1,8 @@
 ---
 title: "Internetradio auf dem Mac aufnehmen: Schritt für Schritt"
-description: "Drei Wege, Internetradio auf dem Mac aufzunehmen, plus das iPhone: Player mit Aufnahme, Mitschnitt-Tool für den Systemton oder Audacity mit virtuellem Gerät."
+description: "Drei Wege, Internetradio auf dem Mac aufzunehmen, und was auf dem iPhone geht: ein Player mit Aufnahme, ein Tool für den Systemton oder Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Welche Qualität haben die Aufnahmen?"
     a: "Dieselbe wie der Stream. Der eingehende Ton wird so geschrieben, wie er ankommt, ohne neue Kodierung. Ein Sender mit 128 kbps ergibt eine Datei mit 128 kbps, ein Sender mit 320 kbps eine mit 320 kbps."
@@ -64,7 +64,7 @@ Was Macdio hat, ist die umgekehrte Absicherung: Eine Sitzung stoppt nach drei St
 
 ## Was eine Aufnahme vorzeitig beendet
 
-Zwei Dinge beenden eine Sitzung vor dir, und beide sichern die Datei, statt sie zu verlieren. Das erste ist das Drei-Stunden-Limit oben. Das zweite ist der Speicher. Macdio beobachtet beim Schreiben den freien Platz, warnt dich alle fünf Minuten, sobald das Laufwerk unter 500 MB fällt, und stoppt die Aufnahme mit einer Mitteilung, wenn der Platz kritisch wird. Schlimmstenfalls bekommst du also eine kürzere Datei statt einer vollen Festplatte und einer kaputten Datei. Eine lange Nachtsitzung auf einem fast vollen Laptop ist der Fall, auf den du achten solltest, denn ein Sender mit 320 kbps schreibt etwa 144 MB pro Stunde.
+Zwei Dinge beenden eine Sitzung vor dir, und beide sichern die Datei, statt sie zu verlieren. Das erste ist das Drei-Stunden-Limit oben. Das zweite ist der Speicher. Macdio startet keine Aufnahme mit weniger als 500 MB freiem Platz, beobachtet beim Schreiben den freien Platz, warnt dich alle fünf Minuten, sobald das Laufwerk unter 500 MB fällt, und stoppt die Aufnahme mit einer Mitteilung, wenn der Platz kritisch wird. Schlimmstenfalls bekommst du also eine kürzere Datei statt einer vollen Festplatte und einer kaputten Datei. Eine lange Nachtsitzung auf einem fast vollen Laptop ist der Fall, auf den du achten solltest, denn ein Sender mit 320 kbps schreibt etwa 144 MB pro Stunde.
 
 ## Wie groß werden die Dateien?
 
@@ -72,7 +72,7 @@ Eine Aufnahme ist so schwer wie der Stream, denn nichts wird hinzugefügt oder w
 
 ## In welchem Format die Dateien sind
 
-Eine Aufnahme behält, was der Sender schickt. Ein MP3-Sender ergibt eine .mp3, ein AAC-Sender eine .aac, ohne neue Kodierung auf dem Weg zur Festplatte, die Datei klingt also genau wie der Stream. Titel, die „Nach Titel aufteilen“ herausschneidet, werden als .m4a geschrieben. Hier gibt es keine Qualitätseinstellung, die du falsch setzen könntest, weil es keine zweite Kodierung gibt.
+Eine Aufnahme behält, was der Sender schickt. Ein MP3-Sender ergibt eine .mp3, ein AAC-Sender eine .aac, ohne neue Kodierung auf dem Weg zur Festplatte, die Datei klingt also genau wie der Stream. Hat Song ID in einer AAC-Aufnahme einen Song erkannt, werden Titel, Künstler und Cover in die Datei geschrieben, und daraus wird eine .m4a. Hier gibt es keine Qualitätseinstellung, die du falsch setzen könntest, weil der Ton nie ein zweites Mal kodiert wird.
 
 ## Wo die Aufnahmen liegen
 

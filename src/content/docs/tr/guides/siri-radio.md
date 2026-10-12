@@ -2,7 +2,7 @@
 title: "Siri ile İnternet Radyosu Çal: Tüm Macdio Sesli Komutları"
 description: "İstasyonu söyle, çalsın. Macdio'nun anladığı her Siri ifadesi, 14 dilde, iPhone'da, AirPods ile ve CarPlay'deki ses düğmesinden."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "\"Macdio'da\" demek zorunda mıyım?"
     a: "Evet. Siri bir ifadeyi uygulamaya adıyla yönlendirir, bu yüzden her komutta Macdio geçer. Onsuz Siri Apple Music'i çalar ya da ne demek istediğini sorar."
@@ -43,7 +43,7 @@ Her birine "Hey Siri" ile başla. İstasyon köşeli parantezlerin yerine gelir.
 
 ## On dört dil
 
-Siri hangi dile ayarlıysa o dildeki ifadeyi kullanır ve Macdio ifadeleri İngilizce, Arapça, Çince (Basitleştirilmiş ve Geleneksel), Felemenkçe, Fransızca, Almanca, İtalyanca, Japonca, Lehçe, Portekizce (Brezilya), Rusça, İspanyolca ve Türkçe olarak sunar. Türkçe bir Siri "Macdio ile Radio Paradise çal" duyar, Almanca bir Siri "Spiele Radio Paradise auf Macdio", İspanyolca bir Siri "Pon Radio Paradise en Macdio". İstasyon adları her dilde aynıdır, yani İspanyol favorileri olan bir Türk dinleyici için sorun yok.
+Siri hangi dile ayarlıysa o dildeki ifadeyi kullanır ve Macdio ifadeleri İngilizce, Arapça, Çince (Basitleştirilmiş ve Geleneksel), Felemenkçe, Fransızca, Almanca, İtalyanca, Japonca, Lehçe, Portekizce (Brezilya), Rusça, İspanyolca ve Türkçe olarak sunar. Türkçe bir Siri "Macdio ile Radio Paradise çal" duyar, Almanca bir Siri "Radio Paradise in Macdio abspielen", İspanyolca bir Siri "Reproducir Radio Paradise en Macdio". İstasyon adları her dilde aynıdır, yani İspanyol favorileri olan bir Türk dinleyici için sorun yok.
 
 ## Arabada
 

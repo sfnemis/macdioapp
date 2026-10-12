@@ -1,8 +1,8 @@
 ---
 title: "Apple Watch'ta Yakında iPhone Olmadan Radyo (2026)"
-description: "Watch canlı radyoyu LTE ile kendi başına çalar. Bağımsızlığın ne istediği, hangi modellerin yapabildiği ve bir saatlik kullanımdan gerçek pil rakamları."
+description: "Watch canlı radyoyu LTE ile kendi başına çalar. Bağımsızlığın ne istediği, hangi modellerin yapabildiği ve yayının pil ile veriye maliyeti."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Apple Watch iPhone olmadan radyo çalabilir mi?"
     a: "Evet, bağımsız bir uygulamayla. Macdio'nun saat uygulaması Wi-Fi ya da hücresel üzerinden kendi başına yayın alır."
@@ -17,7 +17,7 @@ faq:
   - q: "İstasyonlarım iPhone'dan eşitleniyor mu?"
     a: "Evet. Favoriler ve klasörler iCloud üzerinden gelir; saatin kendi kütüphane görünümü ve araması da var."
   - q: "Saatte radyo kaydedebilir miyim?"
-    a: "Hayır. Kayıt bir Mac ve iPhone özelliği. Saatte beğendiğin şarkılar yine her yere eşitlenir."
+    a: "Hayır. Kayıt bir iPhone, iPad ve Mac özelliği. Saatte beğendiğin şarkılar yine her yere eşitlenir."
 ---
 
 Bir koşu, bir yüzme çantası, hızlı bir alışveriş: saat çoğu zaman üzerindeki tek cihaz. İnternet radyosu doğrudan Apple Watch'ta nasıl çalışıyor, burada.
@@ -86,7 +86,7 @@ Evet. Favoriler ve klasörler iCloud üzerinden gelir; saatin kendi kütüphane 
 
 ### Saatte radyo kaydedebilir miyim?
 
-Hayır. Kayıt bir Mac ve iPhone özelliği. Saatte beğendiğin şarkılar yine her yere eşitlenir.
+Hayır. Kayıt bir iPhone, iPad ve Mac özelliği. Saatte beğendiğin şarkılar yine her yere eşitlenir.
 
 ## Denemeye hazır mısın?
 

@@ -1,6 +1,6 @@
 ---
 title: "Stream-URL eines Radiosenders finden: 4 Wege"
-description: "Die direkte Adresse jedes Senders: von seiner Website, aus den Entwicklertools des Browsers, aus einem offenen Verzeichnis oder aus der App selbst."
+description: "Die direkte Adresse jedes Senders: von seiner Website, aus einem offenen Verzeichnis, aus den Entwicklertools des Browsers oder per Nachfrage beim Sender."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

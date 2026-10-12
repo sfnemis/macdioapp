@@ -1,8 +1,8 @@
 ---
 title: "Radio auf der Apple Watch ohne iPhone in der Nähe (2026)"
-description: "Die Watch streamt Live-Radio allein über LTE. Was eigenständig wirklich braucht, welche Modelle das können und was das Streamen am Akku kostet."
+description: "Die Watch streamt Live-Radio allein über LTE. Was eigenständig wirklich braucht, welche Modelle das können und was das Streamen an Akku und Daten kostet."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Kann die Apple Watch ohne iPhone Radio spielen?"
     a: "Ja, mit einer eigenständigen App. Die Watch-App von Macdio streamt selbst über WLAN oder Mobilfunk."
@@ -17,7 +17,7 @@ faq:
   - q: "Werden meine Sender vom iPhone synchronisiert?"
     a: "Ja. Favoriten und Ordner kommen über iCloud, und die Watch hat auch eine eigene Bibliotheksansicht und Suche."
   - q: "Kann ich auf der Watch Radio aufnehmen?"
-    a: "Nein. Aufnehmen ist eine Funktion für Mac und iPhone. Songs, die du auf der Watch mit dem Herz markierst, werden trotzdem überall synchronisiert."
+    a: "Nein. Aufnehmen ist eine Funktion für iPhone, iPad und Mac. Songs, die du auf der Watch mit dem Herz markierst, werden trotzdem überall synchronisiert."
 ---
 
 Ein Lauf, die Schwimmtasche, ein schneller Einkauf: Oft ist die Watch das einzige Gerät, das du dabeihast. So funktioniert Internetradio direkt auf der Apple Watch.
@@ -86,7 +86,7 @@ Ja. Favoriten und Ordner kommen über iCloud, und die Watch hat auch eine eigene
 
 ### Kann ich auf der Watch Radio aufnehmen?
 
-Nein. Aufnehmen ist eine Funktion für Mac und iPhone. Songs, die du auf der Watch mit dem Herz markierst, werden trotzdem überall synchronisiert.
+Nein. Aufnehmen ist eine Funktion für iPhone, iPad und Mac. Songs, die du auf der Watch mit dem Herz markierst, werden trotzdem überall synchronisiert.
 
 ## Willst du es ausprobieren?
 

@@ -16,7 +16,7 @@ faq:
     a: "Yayın için kapsama gerekir; kısa boşlukları ön bellek köprüler, uzun olanlar sinyal dönene kadar çalmayı duraklatır."
 ---
 
-FM sana bir şehrin istasyonlarını verir. CarPlay artı internet radyosu her şehri verir. Kurulum bir dakikadan az sürer.
+FM sana bir şehrin istasyonlarını verir. CarPlay artı internet radyosu her şehri verir.
 
 Arabada internet radyosu, menzildeki vericiler yerine iPhone'undaki istasyonları kullanarak CarPlay üzerinden çalışır. Kurulum bir dakikanın altında, düzen okumak için değil göz atmak için yapılmış ve favorilerin bakmadan basabileceğin ön ayarlara dönüşüyor.
 

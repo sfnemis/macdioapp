@@ -2,12 +2,12 @@
 title: "Die besten Internetradio-Apps für Mac und iPhone (2026)"
 description: "Sieben Internetradio-Apps für Mac, iPhone, iPad, Apple Watch und Apple TV im Vergleich: Preis, Senderzahl, Aufnahme und Werbung, alles aus dem App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Was ist die beste Internetradio-App für den Mac?"
-    a: "Das hängt davon ab, wie du zahlen willst. Macdio ist ein Einmalkauf ohne Werbung, mit Aufnahme und Songerkennung, und braucht macOS 26. Eter und Broadcasts lassen sich beide kostenlos ausprobieren, haben eine einmalige Freischaltung und laufen auf älteren macOS-Versionen. myTuner Radio Pro ist ein separater Kauf für 9,99 US-Dollar im Mac App Store."
+    a: "Das hängt davon ab, wie du zahlen willst. Macdio ist ein Einmalkauf ohne Werbung, mit Aufnahme und Songerkennung, und braucht macOS 26. Eter lässt sich kostenlos ausprobieren und hat eine einmalige Freischaltung, Broadcasts ist mit einer Handvoll Sendern kostenlos und für den Rest gibt es ein Abo, und beide laufen auf älteren macOS-Versionen. myTuner Radio Pro ist ein separater Kauf für 9,99 US-Dollar im Mac App Store."
   - q: "Welche Internetradio-Apps haben keine Werbung?"
-    a: "Macdio hat keine Werbung und keine In-App-Käufe. Eter und Broadcasts erwähnen in ihren App-Store-Einträgen keine Werbung und verkaufen stattdessen eine einmalige Freischaltung. Simple Radio zeigt in der kostenlosen Version Werbebanner und entfernt sie mit dem Premium-Kauf, und TuneIn verkauft ein Premium-Abo, das mit werbefreien Nachrichten und Musik ohne Werbeunterbrechungen wirbt."
+    a: "Macdio hat keine Werbung und keine In-App-Käufe. Eter und Broadcasts erwähnen in ihren App-Store-Einträgen keine Werbung; Eter verkauft eine einmalige Freischaltung und Broadcasts ein Abo. Simple Radio zeigt in der kostenlosen Version Werbebanner und entfernt sie mit dem Premium-Kauf, und TuneIn verkauft ein Premium-Abo, das mit werbefreien Nachrichten und Musik ohne Werbeunterbrechungen wirbt."
   - q: "Wie viele Sender haben diese Apps?"
     a: "Die am 14. September 2026 im App Store beworbenen Zahlen sind über 100.000 bei TuneIn, über 90.000 bei Simple Radio, über 60.000 bei Macdio und 50.000 bei myTuner Radio. Eter, Broadcasts und Radio Garden nennen keine Zahl. Die meisten dieser Apps greifen auf dieselben öffentlichen Verzeichnisse zurück, die Zahlen sagen also mehr darüber, wie jede App zählt, als darüber, was du tatsächlich hören kannst."
   - q: "Kann eine davon eine Radiosendung aufnehmen?"
@@ -18,7 +18,7 @@ faq:
 
 Was jede kostet, was sie tatsächlich kann und für wen sie passt. Geschrieben vom Entwickler einer davon.
 
-**Für die meisten läuft die Wahl darauf hinaus, wie du zahlen willst. TuneIn und Simple Radio sind kostenlos und haben Werbung. Eter und Broadcasts lassen sich kostenlos ausprobieren und haben eine einmalige Freischaltung. Macdio kostet einmal 14,99 US-Dollar für jedes Apple-Gerät, ohne Werbung und ohne Abo, und ist die einzige der sieben, die mit einer Aufnahmefunktion wirbt. Radio Garden installierst du zum Stöbern, nicht zum Hören.**
+**Für die meisten läuft die Wahl darauf hinaus, wie du zahlen willst. TuneIn und Simple Radio sind kostenlos und haben Werbung. Eter lässt sich kostenlos ausprobieren und hat eine einmalige Freischaltung, und Broadcasts ist mit einer Handvoll Sendern kostenlos und hat für den Rest ein Abo. Macdio kostet einmal 14,99 US-Dollar für jedes Apple-Gerät, ohne Werbung und ohne Abo, und ist die einzige der sieben, die mit einer Aufnahmefunktion wirbt. Radio Garden installierst du zum Stöbern, nicht zum Hören.**
 
 ## Woher die Angaben stammen
 
@@ -32,7 +32,7 @@ Diese Methode hat eine Grenze, die ich nennen will. Ein App-Store-Eintrag ist We
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone, iPad, Mac, TV, Watch | 60.000+ | 14,99 USD einmalig | Ja, nach Titel aufgeteilt | Keine |
 | Eter | iPhone, iPad, Mac, TV, Watch | Nicht veröffentlicht | Kostenlos, einmalige Freischaltung | Nicht beworben | Laut Eintrag keine |
-| Broadcasts | iPhone, iPad, Mac, TV, Watch | Nicht veröffentlicht | Kostenlos, einmalige Freischaltung | Nicht beworben | Laut Eintrag keine |
+| Broadcasts | iPhone, iPad, Mac, TV, Watch | Nicht veröffentlicht | Kostenlos, Abo ab 1,99 USD/Monat | Nicht beworben | Laut Eintrag keine |
 | Simple Radio | iPhone, iPad, Watch | 90.000+ | Kostenlos, Premium-Kauf | Nicht beworben | Ja, Werbebanner |
 | myTuner Radio | iPhone, iPad, TV, Watch, Pro-App für Mac | 50.000 | Kostenlos, Abos ab 0,99 USD/Woche | Nicht beworben | Nicht angegeben |
 | TuneIn | iPhone, iPad, TV, Watch, Lautsprecher | 100.000+ | Kostenlos, Premium-Abo | Nicht beworben | Ja, Premium reduziert sie |
@@ -52,7 +52,7 @@ Nimm es, wenn du einmal zahlen willst, keine Werbung willst und die Funktionen f
 
 ## Eter, die kostenlose Option, die gut mitwächst
 
-Eter von Apparent Software ist kostenlos und läuft auf macOS, iOS, iPadOS, watchOS und tvOS, CarPlay inklusive. Es durchsucht die Datenbank von radio-browser.info und ergänzt eine handverlesene Liste empfohlener Sender, und du kannst jede eigene Stream-URL hinzufügen. Ein einziger einmaliger In-App-Kauf schaltet gespeicherte Favoriten frei und blendet die Empfehlungsliste aus, sodass du nur deine eigenen Sender siehst. Der Eintrag nennt dazu einen Schlaf-Timer, und unbegrenztes Hören ist auch ohne Freischaltung kostenlos.
+Eter von Apparent Software ist kostenlos und läuft auf macOS, iOS, iPadOS, watchOS und tvOS, CarPlay inklusive. Es durchsucht die Datenbank von Radio Browser und ergänzt eine handverlesene Liste empfohlener Sender, und du kannst jede eigene Stream-URL hinzufügen. Ein einziger einmaliger In-App-Kauf schaltet gespeicherte Favoriten frei und blendet die Empfehlungsliste aus, sodass du nur deine eigenen Sender siehst. Der Eintrag erwähnt dazu einen Schlaf-Timer, und unbegrenztes Hören ist auch ohne Freischaltung kostenlos.
 
 Sein App-Store-Eintrag nennt keine Senderzahl und wirbt nicht mit einer Aufnahmefunktion. Mindestvoraussetzung ist iOS 16, es reicht also mehrere Generationen weiter zurück als Macdio.
 
@@ -60,7 +60,7 @@ Nimm es, wenn du nichts ausgeben willst, eine Woche lang schauen willst, ob dir 
 
 ## Broadcasts, für alle, die ihre eigene Liste kuratieren
 
-Broadcasts von Steven Troughton-Smith geht den umgekehrten Weg zu einem riesigen Verzeichnis: Du baust eine Bibliothek aus den Sendern auf, die du wirklich hörst, und die App zeigt sie als Raster aus Artwork. Die kostenlose Version hat eine Bibliothek in begrenzter Größe, und die Freischaltung der Vollversion hebt diese Grenze auf und bringt einen Bildschirm für den laufenden Titel mit Sender- und Titel-Artwork. Die App synchronisiert die Bibliothek über iCloud zwischen iPhone, iPad, Mac, Apple Watch und Apple TV, ist ein Universal Purchase, unterstützt CarPlay auf zertifizierten Autoradios und nutzt Shazam in einer Beta, um Metadaten zu ergänzen, wenn ein Sender keine liefert.
+Broadcasts von Steven Troughton-Smith geht den umgekehrten Weg zu einem riesigen Verzeichnis: Du baust eine Bibliothek aus den Sendern auf, die du wirklich hörst, und die App zeigt sie als Raster aus Artwork. Die kostenlose Version fasst eine Handvoll Sender, und ein Abo für 1,99 US-Dollar im Monat oder 11,99 US-Dollar im Jahr hebt diese Grenze auf und bringt einen Bildschirm für den laufenden Titel mit Sender- und Titel-Artwork. Die App synchronisiert die Bibliothek über iCloud zwischen iPhone, iPad, Mac, Apple Watch und Apple TV, ist ein Universal Purchase, unterstützt CarPlay auf zertifizierten Autoradios und nutzt Shazam in einer Beta, um Metadaten zu ergänzen, wenn ein Sender keine liefert.
 
 Nichts im Eintrag erwähnt eine Aufnahme, und es gibt keine beworbene Senderzahl, denn das Verzeichnis ist nicht der Sinn der App.
 
@@ -76,7 +76,7 @@ Nimm sie, wenn du ein Telefon für jemanden einrichtest, der einen Sender mit ei
 
 ## myTuner Radio, das weltweite Verzeichnis mit Mac-Version
 
-myTuner Radio von Appgeneration wirbt mit 50.000 Radiosendern und unterstützt Apple Watch, Apple TV und CarPlay. Die iPhone-App ist kostenlos, mit Abos von 0,99 US-Dollar pro Woche bis 7,99 US-Dollar für sechs Monate, und im Mac App Store gibt es für 9,99 US-Dollar ein separates myTuner Radio Pro. Es verbindet sich außerdem mit Apple Music für Playlists, wenn du dort ein Abo hast.
+myTuner Radio von Appgeneration wirbt mit 50.000 Radiosendern und unterstützt Apple Watch, Apple TV und CarPlay. Die iPhone-App ist kostenlos, mit Abos von 0,99 US-Dollar pro Woche bis 34,99 US-Dollar im Jahr, und im Mac App Store gibt es für 9,99 US-Dollar ein separates myTuner Radio Pro. Es verbindet sich außerdem mit Apple Music für Playlists, wenn du dort ein Abo hast.
 
 Der Eintrag beschreibt die Werbung in der kostenlosen Version nicht, deshalb behauptet diese Seite weder das eine noch das andere, und eine Aufnahme wird nicht erwähnt. Mindestvoraussetzung ist iOS 15.
 
@@ -110,7 +110,7 @@ Apple Music hat Radiosender, ist aber ein Musik-Abo mit angehängtem Radio und k
 
 ## In einer Minute entscheiden
 
-Fang beim Geld an. Willst du gar nichts zahlen, ist Eter das beste kostenlose Erlebnis und Simple Radio die einfachste App, die du jemand anderem in die Hand geben kannst. Magst du keine Abos, zahlst aber einmal, dann sind Macdio, Broadcasts und myTuner Radio Pro alle Einmalkäufe mit sehr unterschiedlichem Charakter: ein vollständiger Player, eine kuratierte Bibliothek und ein Verzeichnis.
+Fang beim Geld an. Willst du gar nichts zahlen, ist Eter das beste kostenlose Erlebnis und Simple Radio die einfachste App, die du jemand anderem in die Hand geben kannst. Magst du keine Abos, zahlst aber einmal, dann sind Macdio, Eter und myTuner Radio Pro alle Einmalkäufe mit sehr unterschiedlichem Charakter: ein vollständiger Player, ein schlanker Verzeichnis-Player und ein älteres Verzeichnis nur für den Mac. Broadcasts, die kuratierte Bibliothek, ist zu einem Abo gewechselt.
 
 Dann prüf die Geräteliste. Ein älteres iPhone oder ein Intel-Mac schließt Macdio sofort aus und zeigt auf Eter oder Broadcasts. Ein smarter Lautsprecher in der Küche zeigt auf TuneIn. Eine Apple Watch, mit der du ohne Telefon läufst, grenzt es auf die Apps ein, die auf der Watch selbst streamen.
 
@@ -120,11 +120,11 @@ Zuletzt überleg, was du machst, während das Radio läuft. Drückst du immer nu
 
 ### Was ist die beste Internetradio-App für den Mac?
 
-Das hängt davon ab, wie du zahlen willst. Macdio ist ein Einmalkauf ohne Werbung, mit Aufnahme und Songerkennung, und braucht macOS 26. Eter und Broadcasts lassen sich beide kostenlos ausprobieren, haben eine einmalige Freischaltung und laufen auf älteren macOS-Versionen. myTuner Radio Pro ist ein separater Kauf für 9,99 US-Dollar im Mac App Store.
+Das hängt davon ab, wie du zahlen willst. Macdio ist ein Einmalkauf ohne Werbung, mit Aufnahme und Songerkennung, und braucht macOS 26. Eter lässt sich kostenlos ausprobieren und hat eine einmalige Freischaltung, Broadcasts ist mit einer Handvoll Sendern kostenlos und für den Rest gibt es ein Abo, und beide laufen auf älteren macOS-Versionen. myTuner Radio Pro ist ein separater Kauf für 9,99 US-Dollar im Mac App Store.
 
 ### Welche Internetradio-Apps haben keine Werbung?
 
-Macdio hat keine Werbung und keine In-App-Käufe. Eter und Broadcasts erwähnen in ihren App-Store-Einträgen keine Werbung und verkaufen stattdessen eine einmalige Freischaltung. Simple Radio zeigt in der kostenlosen Version Werbebanner und entfernt sie mit dem Premium-Kauf, und TuneIn verkauft ein Premium-Abo, das mit werbefreien Nachrichten und Musik ohne Werbeunterbrechungen wirbt.
+Macdio hat keine Werbung und keine In-App-Käufe. Eter und Broadcasts erwähnen in ihren App-Store-Einträgen keine Werbung; Eter verkauft eine einmalige Freischaltung und Broadcasts ein Abo. Simple Radio zeigt in der kostenlosen Version Werbebanner und entfernt sie mit dem Premium-Kauf, und TuneIn verkauft ein Premium-Abo, das mit werbefreien Nachrichten und Musik ohne Werbeunterbrechungen wirbt.
 
 ### Wie viele Sender haben diese Apps?
 

@@ -1,6 +1,6 @@
 ---
 title: "Bir Radyo İstasyonunun Yayın Adresi Nasıl Bulunur (4 Yol)"
-description: "Bir istasyonun doğrudan adresini kendi sitesinden, tarayıcı geliştirici araçlarından, açık bir dizinden ya da uygulamanın kendisinden al. Gerçek örneklerle."
+description: "Bir istasyonun doğrudan adresini kendi sitesinden, açık bir dizinden, tarayıcı geliştirici araçlarından ya da istasyona sorarak al. Gerçek örneklerle."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

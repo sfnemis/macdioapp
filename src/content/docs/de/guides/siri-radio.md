@@ -2,7 +2,7 @@
 title: "Internetradio mit Siri: Jeder Sprachbefehl für Macdio"
 description: "Sag den Sender, und er läuft. Jede Siri-Phrase, die Macdio versteht, in 14 Sprachen, auf dem iPhone, mit AirPods und über die Sprachtaste in CarPlay."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "Muss ich „Macdio“ dazusagen?"
     a: "Ja. Siri leitet eine Phrase anhand des App-Namens an eine App weiter, deshalb steckt in jedem Befehl das Wort Macdio. Ohne es spielt Siri Apple Music oder fragt nach, was du gemeint hast."

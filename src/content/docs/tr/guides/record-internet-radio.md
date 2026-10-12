@@ -1,8 +1,8 @@
 ---
 title: "Mac'te İnternet Radyosu Nasıl Kaydedilir (Adım Adım)"
-description: "Mac'te internet radyosu kaydetmenin üç yolu ve iPhone'da ne çalışıyor: kaydı yerleşik bir oynatıcı, sistem sesi yakalama aracı ve sanal ses aygıtıyla Audacity."
+description: "Mac'te internet radyosu kaydetmenin üç yolu ve iPhone'da ne çalışıyor: kaydı yerleşik bir oynatıcı, bir sistem sesi aracı ya da Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Kayıtların kalitesi ne?"
     a: "Yayınla aynı. Gelen ses geldiği gibi, yeniden kodlanmadan yazılır; yani 128 kbps'lik bir istasyon 128 kbps'lik, 320 kbps'lik bir istasyon 320 kbps'lik dosya verir."
@@ -64,7 +64,7 @@ Macdio'da olan şey tersi koruma: bir oturum üç saat sonra kendi başına duru
 
 ## Bir kaydı erken durduran şeyler
 
-İki şey oturumu senden önce bitirir ve ikisi de dosyayı kaybetmez, kaydeder. Birincisi yukarıdaki üç saat sınırı. İkincisi disk. Macdio yazarken boş alanı izler, sürücü 500 MB'ın altına düşünce her beş dakikada uyarır ve alan kritikleşirse bildirimle kaydı durdurur; yani en kötü durum dolu bir disk ve bozuk bir dosya değil, daha kısa bir dosya. Neredeyse dolu bir dizüstünde uzun bir gece oturumu dikkat edilecek durum, çünkü 320 kbps'lik bir istasyon saatte yaklaşık 144 MB yazar.
+İki şey oturumu senden önce bitirir ve ikisi de dosyayı kaybetmez, kaydeder. Birincisi yukarıdaki üç saat sınırı. İkincisi disk. Macdio 500 MB'tan az boş alan varken kayda başlamaz, yazarken boş alanı izler, sürücü 500 MB'ın altına düşünce her beş dakikada uyarır ve alan kritikleşirse bildirimle kaydı durdurur; yani en kötü durum dolu bir disk ve bozuk bir dosya değil, daha kısa bir dosya. Neredeyse dolu bir dizüstünde uzun bir gece oturumu dikkat edilecek durum, çünkü 320 kbps'lik bir istasyon saatte yaklaşık 144 MB yazar.
 
 ## Dosyalar ne kadar büyür?
 
@@ -72,7 +72,7 @@ Bir kayıt yayın kadar ağırdır, çünkü hiçbir şey eklenmez ya da daha fa
 
 ## Dosyalar hangi biçimde
 
-Bir kayıt istasyonun ne gönderdiyse onu tutar. MP3 istasyonu .mp3, AAC istasyonu .aac verir, diske giderken hiçbir şey yeniden kodlanmaz, yani dosya tam yayının sesi gibi çıkar. Parçaya Göre Böl'ün kestiği parçalar .m4a olarak yazılır. Burada yanlış yapılacak kalite ayarı yok, çünkü ikinci bir kodlama yok.
+Bir kayıt istasyonun ne gönderdiyse onu tutar. MP3 istasyonu .mp3, AAC istasyonu .aac verir, diske giderken hiçbir şey yeniden kodlanmaz, yani dosya tam yayının sesi gibi çıkar. Şarkıyı Tanı bir AAC kaydındaki bir şarkıyı adlandırdığında başlığı, sanatçısı ve kapağı dosyaya yazılır ve dosya bir .m4a olur. Burada yanlış yapılacak kalite ayarı yok, çünkü ses hiçbir zaman ikinci kez kodlanmaz.
 
 ## Kayıtlar nerede yaşıyor
 

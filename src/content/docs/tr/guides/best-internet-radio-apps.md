@@ -2,12 +2,12 @@
 title: "En İyi İnternet Radyosu Uygulamaları: Mac ve iPhone (2026)"
 description: "Mac, iPhone, iPad, Apple Watch ve Apple TV için yedi internet radyosu uygulaması fiyat, istasyon sayısı, kayıt ve reklamda kıyaslandı, rakamlar App Store'dan."
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Mac için en iyi internet radyosu uygulaması hangisi?"
-    a: "Nasıl ödediğine bağlı. Macdio reklamsız, kayıt ve şarkı tanımalı tek bir satın alma ve macOS 26 istiyor. Eter ve Broadcasts tek seferlik açmayla denemesi ücretsiz ve macOS'in eski sürümlerinde çalışıyor. myTuner Radio Pro Mac App Store'da ayrı bir 9,99 ABD doları satın alma."
+    a: "Nasıl ödediğine bağlı. Macdio reklamsız, kayıt ve şarkı tanımalı tek bir satın alma ve macOS 26 istiyor. Eter tek seferlik açmayla denemesi ücretsiz, Broadcasts birkaç istasyonla ücretsiz ve gerisi için abonelik istiyor; ikisi de macOS'in eski sürümlerinde çalışıyor. myTuner Radio Pro Mac App Store'da ayrı bir 9,99 ABD doları satın alma."
   - q: "Hangi internet radyosu uygulamalarında reklam yok?"
-    a: "Macdio'da reklam ve uygulama içi satın alma yok. Eter ve Broadcasts App Store sayfalarında reklamdan söz etmiyor ve yerine tek seferlik bir açma satıyor. Simple Radio ücretsiz kademede görsel reklam gösteriyor ve Premium satın almayla kaldırıyor; TuneIn ise reklamsız haber ve reklamsız müzik vadeden bir Premium aboneliği satıyor."
+    a: "Macdio'da reklam ve uygulama içi satın alma yok. Eter ve Broadcasts App Store sayfalarında reklamdan söz etmiyor; Eter tek seferlik bir açma, Broadcasts ise bir abonelik satıyor. Simple Radio ücretsiz kademede görsel reklam gösteriyor ve Premium satın almayla kaldırıyor; TuneIn ise reklamsız haber ve reklamsız müzik vadeden bir Premium aboneliği satıyor."
   - q: "Bu uygulamalarda kaç istasyon var?"
     a: "14 Eylül 2026'da App Store'da duyurulan sayılar TuneIn için 100.000+, Simple Radio için 90.000+, Macdio için 60.000+ ve myTuner Radio için 50.000. Eter, Broadcasts ve Radio Garden sayı yayımlamıyor. Bu uygulamaların çoğu aynı açık dizinlerden beslendiği için rakamlar gerçekte ne dinleyebildiğinden çok her birinin nasıl saydığını anlatıyor."
   - q: "Herhangi biri bir radyo programını kaydedebiliyor mu?"
@@ -18,7 +18,7 @@ faq:
 
 Her biri ne kadara geliyor, gerçekte ne yapıyor ve kim hangisini seçmeli. İçlerinden birinin geliştiricisi tarafından yazıldı.
 
-**Çoğu insan için seçim nasıl ödemek istediğine iniyor. TuneIn ve Simple Radio ücretsiz ve reklamlı. Eter ve Broadcasts tek seferlik açmayla denemesi ücretsiz. Macdio her Apple cihazı için bir kez 14,99 ABD doları, reklamsız ve aboneliksiz, ve yedisi arasında kayıttan söz eden tek uygulama. Radio Garden dinlemek için değil göz atmak için kurulacak olan.**
+**Çoğu insan için seçim nasıl ödemek istediğine iniyor. TuneIn ve Simple Radio ücretsiz ve reklamlı. Eter tek seferlik açmayla denemesi ücretsiz, Broadcasts ise birkaç istasyonla ücretsiz ve gerisi için abonelik istiyor. Macdio her Apple cihazı için bir kez 14,99 ABD doları, reklamsız ve aboneliksiz, ve yedisi arasında kayıttan söz eden tek uygulama. Radio Garden dinlemek için değil göz atmak için kurulacak olan.**
 
 ## Bu nereden geliyor
 
@@ -32,7 +32,7 @@ Bu yöntemin adını koymaya değer bir sınırı var. Bir App Store sayfası pa
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone, iPad, Mac, TV, Watch | 60.000+ | 14,99 USD bir kez | Evet, parçaya göre böl | Yok |
 | Eter | iPhone, iPad, Mac, TV, Watch | Yayımlanmamış | Ücretsiz, tek seferlik açma | Söz edilmiyor | Söz edilen yok |
-| Broadcasts | iPhone, iPad, Mac, TV, Watch | Yayımlanmamış | Ücretsiz, tek seferlik açma | Söz edilmiyor | Söz edilen yok |
+| Broadcasts | iPhone, iPad, Mac, TV, Watch | Yayımlanmamış | Ücretsiz, abonelik 1,99 USD/aydan | Söz edilmiyor | Söz edilen yok |
 | Simple Radio | iPhone, iPad, Watch | 90.000+ | Ücretsiz, Premium satın alma | Söz edilmiyor | Evet, görsel reklam |
 | myTuner Radio | iPhone, iPad, TV, Watch, Mac Pro uygulaması | 50.000 | Ücretsiz, abonelik 0,99 USD/haftadan | Söz edilmiyor | Belirtilmemiş |
 | TuneIn | iPhone, iPad, TV, Watch, hoparlörler | 100.000+ | Ücretsiz, Premium abonelik | Söz edilmiyor | Evet, Premium azaltıyor |
@@ -42,7 +42,7 @@ Her rakam her uygulamanın ABD mağazasındaki App Store sayfasından, 14 Eylül
 
 ## Macdio, bir kez satın almayı tercih edenler için
 
-Macdio ABD mağazasında 14,99 ABD doları, bir kez ödeniyor ve o satın alma Evrensel Satın Alma ile iPhone, iPad, Mac, Apple TV ve Apple Watch'ı kapsıyor. Reklam yok, uygulama içi satın alma yok, hesap yok. RadioBrowser dizininden 60.000+ istasyon taşıyor, artı kendin yapıştırdığın her yayın adresi.
+Macdio ABD mağazasında 14,99 ABD doları, bir kez ödeniyor ve o satın alma Evrensel Satın Alma ile iPhone, iPad, Mac, Apple TV ve Apple Watch'ı kapsıyor. Reklam yok, uygulama içi satın alma yok, hesap yok. Radio Browser dizininden 60.000+ istasyon taşıyor, artı kendin yapıştırdığın her yayın adresi.
 
 Başka yerde bulunması zor özellikler kayıt ve şarkı tanıma. Hoparlör çıkışını değil yayının kendisini kaydeder ve Parçaya Göre Böl bir oturumu şarkı başına bir dosyaya keser, her biri kendi kapağıyla adlandırılmış; bunu [kayıt rehberi](/guides/record-internet-radio.html) anlatıyor. Şarkı tanıma sesi yayından okur, yani telefon cepteyken çalışmaya devam eder ve uygulama hiç mikrofon izni istemez. Senkron şarkı sözleri duyduğunla aynı zamanda kayar. Favoriler ve geçmiş cihazlar arasında iCloud ile eşitlenir ve saat uygulaması yakında iPhone olmadan LTE üzerinden yayın alır.
 
@@ -52,7 +52,7 @@ Tek ödeme, reklamsızlık ve kayıt ile şarkı adlandırma özelliklerini isti
 
 ## Eter, güzel büyüyen ücretsiz seçenek
 
-Apparent Software'in Eter'i indirmesi ücretsiz ve macOS, iOS, iPadOS, watchOS ve tvOS'te çalışıyor, CarPlay dahil. radio-browser.info veri tabanında arar ve elle seçilmiş bir önerilen istasyon listesi ekler, kendi yayın adresini de ekleyebilirsin. Tek seferlik bir uygulama içi satın alma kaydedilen favorileri açar ve önerilen listeyi gizler, böylece yalnızca kendi istasyonlarını görürsün. Sayfa bunun yanına bir uyku zamanlayıcısı koyuyor ve sınırsız dinleme açma olmadan da ücretsiz.
+Apparent Software'in Eter'i indirmesi ücretsiz ve macOS, iOS, iPadOS, watchOS ve tvOS'te çalışıyor, CarPlay dahil. Radio Browser veri tabanında arar ve elle seçilmiş bir önerilen istasyon listesi ekler, kendi yayın adresini de ekleyebilirsin. Tek seferlik bir uygulama içi satın alma kaydedilen favorileri açar ve önerilen listeyi gizler, böylece yalnızca kendi istasyonlarını görürsün. Sayfa bunun yanında bir uyku zamanlayıcısından da söz ediyor ve sınırsız dinleme açma olmadan da ücretsiz.
 
 App Store sayfası istasyon sayısı yayımlamıyor ve kayıttan söz etmiyor. En düşük sürüm iOS 16, yani Macdio'dan birkaç nesil daha geriye uzanıyor.
 
@@ -60,7 +60,7 @@ Hiçbir şey harcamak istemiyorsan, uygulamayı bir hafta sevip sevmediğine bak
 
 ## Broadcasts, kendi listesini derleyenler için
 
-Steven Troughton-Smith'in Broadcasts'i dev bir dizinin tersi yaklaşımı alıyor: gerçekten dinlediğin istasyonlardan bir kütüphane kurarsın ve onları kapak ızgarası olarak gösterir. Ücretsiz sürüm sınırlı boyutta bir kütüphane tutar, tam sürüm açması o sınırı kaldırır ve istasyon ve parça kapaklı bir Şimdi Çalıyor ekranı ekler. Kütüphaneyi iPhone, iPad, Mac, Apple Watch ve Apple TV arasında iCloud ile eşitler, Evrensel Satın Alma, sertifikalı araç ünitelerinde CarPlay destekler ve bir istasyon üst veri sağlamadığında boşluğu doldurmak için beta olarak Shazam kullanır.
+Steven Troughton-Smith'in Broadcasts'i dev bir dizinin tersi yaklaşımı alıyor: gerçekten dinlediğin istasyonlardan bir kütüphane kurarsın ve onları kapak ızgarası olarak gösterir. Ücretsiz sürüm birkaç istasyon tutar, ayda 1,99 ya da yılda 11,99 ABD doları olan bir abonelik o sınırı kaldırır ve istasyon ve parça kapaklı bir Şimdi Çalıyor ekranı ekler. Kütüphaneyi iPhone, iPad, Mac, Apple Watch ve Apple TV arasında iCloud ile eşitler, Evrensel Satın Alma, sertifikalı araç ünitelerinde CarPlay destekler ve bir istasyon üst veri sağlamadığında boşluğu doldurmak için beta olarak Shazam kullanır.
 
 Sayfada kayıttan söz eden hiçbir şey yok ve duyurulan istasyon sayısı yok, çünkü dizin uygulamanın derdi değil.
 
@@ -76,7 +76,7 @@ Tek dokunuşla tek istasyon isteyen ve ikinci ekranı asla keşfetmeyecek biri i
 
 ## myTuner Radio, Mac sürümü olan küresel dizin
 
-Appgeneration'ın myTuner Radio'su 50.000 radyo istasyonu duyuruyor ve Apple Watch, Apple TV ve CarPlay destekliyor. iPhone uygulaması haftada 0,99 ABD dolarından altı ay için 7,99 ABD dolarına kadar aboneliklerle ücretsiz ve Mac App Store'da 9,99 ABD dolarına ayrı bir myTuner Radio Pro var. Orada aboneliğin varsa çalma listeleri için Apple Music'e de bağlanıyor.
+Appgeneration'ın myTuner Radio'su 50.000 radyo istasyonu duyuruyor ve Apple Watch, Apple TV ve CarPlay destekliyor. iPhone uygulaması haftada 0,99 ABD dolarından yılda 34,99 ABD dolarına kadar aboneliklerle ücretsiz ve Mac App Store'da 9,99 ABD dolarına ayrı bir myTuner Radio Pro var. Orada aboneliğin varsa çalma listeleri için Apple Music'e de bağlanıyor.
 
 Sayfa ücretsiz kademenin reklamını tarif etmiyor, bu yüzden bu sayfa iki yönde de iddia etmiyor ve kayıttan söz yok. En düşük sürüm iOS 15.
 
@@ -110,7 +110,7 @@ Apple Music'te radyo istasyonları var ama yerel yayıncına ulaşmanın bir yol
 
 ## Bir dakikada nasıl seçilir
 
-Parayla başla. Hiçbir şey ödemeyeceksen Eter en iyi ücretsiz deneyim, Simple Radio da başkasına vermesi en kolay olan. Aboneliği sevmiyorsan ama bir kez ödeyeceksen Macdio, Broadcasts ve myTuner Radio Pro çok farklı kişiliklere sahip tek seferlik satın almalar: tam bir oynatıcı, derlenmiş bir kütüphane ve bir dizin.
+Parayla başla. Hiçbir şey ödemeyeceksen Eter en iyi ücretsiz deneyim, Simple Radio da başkasına vermesi en kolay olan. Aboneliği sevmiyorsan ama bir kez ödeyeceksen Macdio, Eter ve myTuner Radio Pro çok farklı kişiliklere sahip tek seferlik satın almalar: tam bir oynatıcı, sade bir dizin oynatıcısı ve yalnızca Mac'te çalışan daha eski bir dizin. Derlenmiş kütüphane olan Broadcasts ise aboneliğe geçti.
 
 Sonra cihaz listesine bak. Eski bir iPhone ya da Intel Mac Macdio'yu hemen eler ve Eter'i ya da Broadcasts'i işaret eder. Mutfaktaki bir akıllı hoparlör TuneIn'i işaret eder. Telefonsuz koşuda kullanılan bir Apple Watch seçimi saatin kendisinde yayın alan uygulamalara daraltır.
 
@@ -120,11 +120,11 @@ Son olarak radyo açıkken ne yaptığını düşün. Yalnızca çal'a basıyors
 
 ### Mac için en iyi internet radyosu uygulaması hangisi?
 
-Nasıl ödediğine bağlı. Macdio reklamsız, kayıt ve şarkı tanımalı tek bir satın alma ve macOS 26 istiyor. Eter ve Broadcasts tek seferlik açmayla denemesi ücretsiz ve macOS'in eski sürümlerinde çalışıyor. myTuner Radio Pro Mac App Store'da ayrı bir 9,99 ABD doları satın alma.
+Nasıl ödediğine bağlı. Macdio reklamsız, kayıt ve şarkı tanımalı tek bir satın alma ve macOS 26 istiyor. Eter tek seferlik açmayla denemesi ücretsiz, Broadcasts birkaç istasyonla ücretsiz ve gerisi için abonelik istiyor; ikisi de macOS'in eski sürümlerinde çalışıyor. myTuner Radio Pro Mac App Store'da ayrı bir 9,99 ABD doları satın alma.
 
 ### Hangi internet radyosu uygulamalarında reklam yok?
 
-Macdio'da reklam ve uygulama içi satın alma yok. Eter ve Broadcasts App Store sayfalarında reklamdan söz etmiyor ve yerine tek seferlik bir açma satıyor. Simple Radio ücretsiz kademede görsel reklam gösteriyor ve Premium satın almayla kaldırıyor; TuneIn ise reklamsız haber ve reklamsız müzik vadeden bir Premium aboneliği satıyor.
+Macdio'da reklam ve uygulama içi satın alma yok. Eter ve Broadcasts App Store sayfalarında reklamdan söz etmiyor; Eter tek seferlik bir açma, Broadcasts ise bir abonelik satıyor. Simple Radio ücretsiz kademede görsel reklam gösteriyor ve Premium satın almayla kaldırıyor; TuneIn ise reklamsız haber ve reklamsız müzik vadeden bir Premium aboneliği satıyor.
 
 ### Bu uygulamalarda kaç istasyon var?
 

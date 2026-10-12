@@ -2,12 +2,12 @@
 title: "Radyoda Çalan Şarkı Hangisi? Bulmanın 3 Yolu"
 description: "Radyodaki bir şarkıyı adlandırmanın üç yolu; biri yayının kendisini okur ve mikrofonu hiç istemez, yani telefon cebinde kalır."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Gerçekten mikrofonsuz çalışıyor mu?"
     a: "Evet. Macdio şarkıyı zaten çaldığı ses yayınından tanır, bu yüzden hiçbir noktada mikrofon izni istenmez."
   - q: "İstasyon yanlış başlık duyurursa ne olur?"
-    a: "Ekrandaki anı tarif ettiğini kanıtlayabildiğinde sesten tanıma öncelik alır, böylece yanlış duyuru kopyalanmaz, düzeltilir."
+    a: "İstasyon kendi başlığını gönderdiği sürece Macdio onu gösterir. Parmak izi de yanılabilir; bir reklamda, bir remikste ya da canlı bir versiyonda. Kendinden emin yanlış bir düzeltme, geç gelen bir başlıktan daha kötüdür. Şarkıyı Tanı, istasyonun hiçbir şey göndermediği yerde boşluğu doldurur."
   - q: "Arabada çalışıyor mu?"
     a: "Evet, CarPlay üzerinden de; direksiyonda beğenilen bir şarkı yine Apple Music'e ulaşır. CarPlay rehberine bak."
   - q: "Bu FM ya da AM radyoyla çalışıyor mu?"
@@ -44,7 +44,7 @@ Bildiğin hareket: bir tanıma uygulaması aç ve mikrofon dinlesin. Çalışır
 
 Ses zaten bir uygulamadan akıyorsa uygulama onu doğrudan, mikrofonsuz tanıyabilir. [Macdio](/iphone.html) bunu böyle yapıyor: Şarkıyı Tanı odayı değil yayını dinler, bu yüzden telefon cepte kilitliyken, gürültülü bir arabada ya da oturma odasının öbür ucundaki bir [Apple TV](/apple-tv.html)'de çalışır. Macdio hiç mikrofon izni istemez, çünkü hiç ihtiyacı yoktur.
 
-Gerçek sesi duyduğu için istasyon yanıldığında onu düzeltir de ve istasyonun hiç duyurmadığı bir bölümde bir şarkıyı adlandırabilir. Aynı yayın dinlerken saklanabilir de: [internet radyosu nasıl kaydedilir](/guides/record-internet-radio.html), iPhone'da olduğu gibi [Mac](/mac.html)'te de.
+Gerçek sesi duyduğu için istasyonun hiç duyurmadığı bir bölümde bir şarkıyı adlandırabilir ve istasyon yalnızca başlık gönderdiğinde kapağı ekleyebilir. Aynı yayın dinlerken saklanabilir de: [internet radyosu nasıl kaydedilir](/guides/record-internet-radio.html), iPhone'da olduğu gibi [Mac](/mac.html)'te de.
 
 ## Mikrofon arabada neden zorlanıyor
 
@@ -62,7 +62,7 @@ Eski yedek de hâlâ çalışıyor: hatırladığın bir dizeyi tırnak içinde 
 
 İstasyon üst verisini istasyonun çalıştırdığı otomasyon yazar ve kayar. Olağan hatalar şunlar: bir reklamın ya da jingle'ın önceki parçanın başlığını devralması, bir başlığın birkaç saniye erken ya da geç gelmesi ve şarkının olması gereken yerde istasyon adı gibi bir yer tutucunun durması.
 
-Sesten tanıma üçünü de düzeltir, çünkü yayın sisteminin iddia ettiğini değil gerçekten çalanı bildirir. İstasyon haklıysa kendi metni kazanır, çünkü yayıncı kataloğunu her parmak izinden iyi bilir.
+Sesten tanıma, yayın sisteminin iddia ettiğini değil gerçekten çalanı bildirir; istasyonun boş bıraktığı bölümler için doğru araç olmasının sebebi bu. Macdio yine de istasyon kendi metnini gönderdiği sürece onu kazandırır, çünkü yayıncı kataloğunu her parmak izinden iyi bilir ve kendinden emin yanlış bir düzeltme, geç gelen bir başlıktan daha kötüdür.
 
 ## Sonra şarkıyı sakla
 
@@ -86,7 +86,7 @@ Evet. Macdio şarkıyı zaten çaldığı ses yayınından tanır, bu yüzden hi
 
 ### İstasyon yanlış başlık duyurursa ne olur?
 
-Ekrandaki anı tarif ettiğini kanıtlayabildiğinde sesten tanıma öncelik alır, böylece yanlış duyuru kopyalanmaz, düzeltilir.
+İstasyon kendi başlığını gönderdiği sürece Macdio onu gösterir. Parmak izi de yanılabilir; bir reklamda, bir remikste ya da canlı bir versiyonda. Kendinden emin yanlış bir düzeltme, geç gelen bir başlıktan daha kötüdür. Şarkıyı Tanı, istasyonun hiçbir şey göndermediği yerde boşluğu doldurur.
 
 ### Arabada çalışıyor mu?
 

@@ -175,5 +175,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Aranıyor…",
+    "errorTitle": "Bağlantı hatası",
+    "errorText": "İstasyon veri tabanına ulaşılamadı. Lütfen tekrar dene.",
+    "noneTitle": "İstasyon bulunamadı",
+    "noneText": "Farklı bir arama terimi ya da filtre dene.",
+    "results": "{n} sonuç",
+    "resultsFor": "· \"{q}\"",
+    "resultsIn": "· {country}",
+    "popular": "Popüler istasyonlar gösteriliyor · Sayfa {page}",
+    "prev": "← Önceki",
+    "next": "Sonraki →",
+    "page": "Sayfa {page}",
+    "unknown": "Bilinmiyor"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Caz",
+    "classical": "Klasik",
+    "electronic": "Elektronik",
+    "hip hop": "Hip Hop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latin",
+    "folk": "Folk",
+    "indie": "Indie",
+    "ambient": "Ambient",
+    "news": "Haber",
+    "talk": "Sohbet",
+    "sports": "Spor",
+    "oldies": "Nostalji",
+    "80s": "80'ler",
+    "90s": "90'lar",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dans",
+    "house": "House",
+    "techno": "Tekno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "Yeni",
+    "label": "Yenilikler: {title}",
+    "title": "Yenilikler",
+    "dialog": "Macdio'daki yenilikler",
+    "all": "Tüm sürüm notları",
+    "gotIt": "Tamam"
   }
 }

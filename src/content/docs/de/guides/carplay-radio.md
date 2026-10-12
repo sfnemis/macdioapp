@@ -16,7 +16,7 @@ faq:
     a: "Streaming braucht Netz. Kurze Lücken überbrückt der Puffer, längere pausieren die Wiedergabe, bis das Signal zurück ist."
 ---
 
-UKW bringt dir die Sender einer Stadt. CarPlay mit Internetradio bringt dir jede Stadt. Die Einrichtung dauert weniger als eine Minute.
+UKW bringt dir die Sender einer Stadt. CarPlay mit Internetradio bringt dir jede Stadt.
 
 Internetradio im Auto läuft über CarPlay, mit den Sendern auf deinem iPhone statt den Sendemasten in Reichweite. Die Einrichtung dauert unter einer Minute, die Oberfläche ist für kurze Blicke gemacht statt zum Lesen, und deine Favoriten werden zu Stationstasten, die du ohne Hinsehen triffst.
 
