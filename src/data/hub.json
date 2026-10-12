@@ -1,0 +1,43 @@
+{
+  "fetchedOn": "2026-10-12",
+  "releaseNotes": [
+    {
+      "title": "Macdio 3.0 is out: live radio and podcasts, transcribed on your device",
+      "url": "https://hub.devdio.pro/t/macdio-3-0-is-out-live-radio-and-podcasts-transcribed-on-your-device/109",
+      "date": "2026-09-30",
+      "category": "Release Notes"
+    },
+    {
+      "title": "Macdio 2.7.5 is out on iPhone, iPad, Mac and Apple TV",
+      "url": "https://hub.devdio.pro/t/macdio-2-7-5-is-out-on-iphone-ipad-mac-and-apple-tv/105",
+      "date": "2026-09-16",
+      "category": "Release Notes"
+    },
+    {
+      "title": "Macdio 2.7 is live: Live Pause, your own station logos, song titles on time",
+      "url": "https://hub.devdio.pro/t/macdio-2-7-is-live-live-pause-your-own-station-logos-song-titles-on-time/102",
+      "date": "2026-09-12",
+      "category": "Release Notes"
+    }
+  ],
+  "latest": [
+    {
+      "title": "Persistent / recurring sleep timer",
+      "url": "https://hub.devdio.pro/t/persistent-recurring-sleep-timer/112",
+      "date": "2026-10-06",
+      "category": "Feature Requests"
+    },
+    {
+      "title": "Library Page my station and Favorite sec",
+      "url": "https://hub.devdio.pro/t/library-page-my-station-and-favorite-sec/110",
+      "date": "2026-10-01",
+      "category": "Bug Reports"
+    },
+    {
+      "title": "Song recognition are better, but…",
+      "url": "https://hub.devdio.pro/t/song-recognition-are-better-but/108",
+      "date": "2026-09-27",
+      "category": "Bug Reports"
+    }
+  ]
+}

@@ -256,5 +256,13 @@
       "title": "Macdio vs Apple Podcasts: Transcripts and Highlights",
       "description": "Where Apple Podcasts transcripts stop and Macdio continues: every episode on device, search inside, Highlights to your notes app, plus live radio in one app."
     }
+  },
+  "hub": {
+    "heading": "What changed, and what people are asking",
+    "lede": "Release notes, bug reports and feature requests live on the community hub. Every entry below links to the thread.",
+    "releaseNotes": "Release notes",
+    "latest": "Latest on the hub",
+    "asOf": "As of",
+    "open": "Open the hub"
   }
 }
