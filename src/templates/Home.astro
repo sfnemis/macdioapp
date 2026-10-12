@@ -66,10 +66,10 @@ const p = (english) => localePath(lang, english);
   <AuthorLine lang={lang} checkedOn={counts.checkedOn} />
 </Base>
 <style>
-  .hero { display: grid; gap: var(--space-xl); padding-block: var(--space-2xl); align-items: center; }
+  .hero { display: grid; gap: var(--space-xl); padding-block: var(--space-xl) var(--space-2xl); align-items: center; }
   .hero__text h1 { max-inline-size: 14ch; }
-  .hero__lede { font-size: var(--text-md); color: var(--color-ink-2); max-inline-size: 44ch; margin-block-start: var(--space-lg); }
-  .hero__cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-block-start: var(--space-xl); }
+  .hero__lede { font-size: var(--text-md); color: var(--color-ink-2); max-inline-size: 46ch; margin-block-start: var(--space-lg); }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-sm); margin-block-start: var(--space-xl); }
   .hero :global(figure) { max-inline-size: 17rem; }
   .tour { display: grid; gap: var(--space-2xl); padding-block: var(--space-2xl); position: relative; }
   .tour__block { display: grid; gap: var(--space-lg); align-items: center; }
@@ -85,12 +85,12 @@ const p = (english) => localePath(lang, english);
   .business { padding-block: var(--space-2xl); }
   .business h2 { margin-block-start: 0; }
   @media (min-width: 60rem) {
-    .hero { grid-template-columns: 7fr 5fr; gap: var(--space-2xl); padding-block: var(--space-3xl); }
+    .hero { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: var(--space-2xl); padding-block: var(--space-2xl) var(--space-3xl); }
     .hero :global(figure) { justify-self: center; max-inline-size: 19rem; }
-    .tour__block { grid-template-columns: 5fr 7fr; gap: var(--space-3xl); }
+    .tour__block { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); }
     .tour__block--flip > :global(:first-child) { order: 2; }
     .tour__block :global(figure) { max-inline-size: 19rem; justify-self: center; }
     .tour__block :global(figure[data-clip^="mac-"]) { max-inline-size: 30rem; }
-    .screens__row { grid-template-columns: 1.4fr 0.8fr 1.4fr; align-items: center; }
+    .screens__row { grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: center; }
   }
 </style>

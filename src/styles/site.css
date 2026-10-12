@@ -1,6 +1,7 @@
 /* Hallmark · genre: modern-minimal · macrostructure: Workbench (home) · H2 split knobs: ratio=7/5, right=capture, divider=negative-space
  * theme: custom · vibe: "precise, calm, indigo, honest, one person" · paper: oklch(98.5% 0.006 277) / dark oklch(13% 0.012 277) · accent: oklch(54% 0.19 277) / dark oklch(74% 0.15 277)
  * display: system stack (SF, Segoe, Roboto) · body: same · axes: light / system-native / cool · nav: N11 · footer: Ft5
+ * pre-emit critique: P4 H4 E4 S4 R4 V5 · contrast: pass (40-41) · slop: pass (42-45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: pass (49) · mobile: pass (34, 49, 50-57) · gate 1 open by ruling (system stack for 14 languages)
  * studied: no · context: user-provided · 2026-10-12 */
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -60,7 +61,7 @@ small, .small { font-size: var(--text-sm); }
 
 .btn {
   display: inline-flex; align-items: center; gap: 0.5em;
-  min-block-size: 44px; padding: 0.65rem 1.1rem;
+  min-block-size: 44px; padding: var(--space-sm) var(--space-md);
   border-radius: var(--radius-sm); border: var(--rule-hair) solid var(--color-ink);
   color: var(--color-ink); background: transparent; text-decoration: none; white-space: nowrap;
   font-weight: 600; font-size: var(--text-base); line-height: 1;
@@ -68,6 +69,7 @@ small, .small { font-size: var(--text-sm); }
 }
 .btn:hover { transform: translateY(-1px); color: var(--color-ink); }
 .btn:active { transform: translateY(0); }
+.btn:disabled, .btn[aria-disabled="true"] { opacity: 0.55; cursor: not-allowed; transform: none; }
 .btn--fill { background: var(--color-accent-strong); border-color: var(--color-accent-strong); color: var(--color-accent-ink); }
 .btn--fill:hover { color: var(--color-accent-ink); }
 .btn--chip { border-color: var(--color-rule); }
