@@ -1,6 +1,6 @@
 // Each live locale must carry exactly the keys of en.json, within the title
 // and description limits, with no em dash. English must not say we/our/us
-// for the developer (one person makes Macdio). Non-live locales only warn.
+// for the developer (one person makes Macdio). Non-live locales are skipped.
 import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -27,7 +27,8 @@ export function checkLocale(code, strings, en, { live }) {
     if (v.includes('—')) problems.push(`${code}: em dash in ${k}`);
     if (/\.title$/.test(k) && v.length > 60) problems.push(`${code}: ${k} title is ${v.length} chars (max 60)`);
     if (/\.description$/.test(k) && v.length > 160) problems.push(`${code}: ${k} description is ${v.length} chars (max 160)`);
-    if (code === 'en' && /\b(we|our|us)\b/i.test(v)) problems.push(`${code}: "we/our/us" in ${k}: ${v}`);
+    // Case-sensitive on purpose: "US" (the country) is fine, "us" and "Us" are not.
+    if (code === 'en' && /(?:\b(?:we|We|our|Our)\b|\bus\b|\bUs\b)/.test(v)) problems.push(`${code}: "we/our/us" in ${k}: ${v}`);
   }
   return live ? problems : [];
 }

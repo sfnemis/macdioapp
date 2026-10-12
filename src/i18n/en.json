@@ -232,7 +232,7 @@
     },
     "/features/recording.html": {
       "title": "Record Internet Radio with Split Tracks: Macdio",
-      "description": "Record a live radio stream on Mac, iPhone or iPad and get one file per song where the station sends titles. Scheduled recording, sleep-safe."
+      "description": "Record a live radio stream on Mac, iPhone or iPad and get one file per song where the station sends titles. Set a maximum length and it stops on its own."
     },
     "/features/synced-lyrics.html": {
       "title": "Synced Lyrics for Live Radio: Macdio",
@@ -290,7 +290,7 @@
       },
       {
         "value": "{price}",
-        "label": "once, in {countries} countries"
+        "label": "US price, sold in {countries} countries"
       }
     ],
     "tour": [
@@ -397,7 +397,7 @@
       },
       {
         "q": "Can I transfer my subscriptions between apps?",
-        "a": "Yes. Macdio imports and exports OPML, so subscriptions move over from Apple Podcasts, Overcast or Pocket Casts, and back out again if you leave."
+        "a": "Yes. Macdio imports and exports OPML, so subscriptions move over from Overcast, Pocket Casts or any app that exports OPML, and back out again if you leave."
       },
       {
         "q": "Is there an Android or web version?",

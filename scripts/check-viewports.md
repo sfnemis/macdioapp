@@ -8,14 +8,15 @@ Matrix: widths 320, 375, 414, 768, 1280; themes light and dark (set
 `localStorage.starlight-theme` to `light` or `dark`, reload); locales en, ar, ja
 once they are live.
 
-At each cell run this in the page and expect `scrollWidth === clientWidth`,
-`wrapped: []` and `nowrapOverflow: []`:
+At each cell run this in the page and expect `rightEdge <= innerWidth`, `wrapped: []`
+and `nowrapOverflow: []`. (`scrollWidth` cannot see overflow here: `html, body` carry
+`overflow-x: clip`, so the right edge of the widest element is the measure.)
 
 ```js
-({ scrollWidth: document.documentElement.scrollWidth,
-   clientWidth: document.documentElement.clientWidth,
+({ innerWidth,
+   rightEdge: Math.max(...[...document.querySelectorAll('body *')].filter(e => !e.closest('.visually-hidden') && !e.classList.contains('visually-hidden')).map(e => Math.round(e.getBoundingClientRect().right))),
    wrapped: [...document.querySelectorAll('.btn, .nav__link, .foot__links a, .link')].filter(e => e.getClientRects().length > 1).map(e => e.textContent.trim()),
-   nowrapOverflow: [...document.querySelectorAll('*')].filter(e => getComputedStyle(e).whiteSpace === 'nowrap' && e.scrollWidth > Math.ceil(e.getBoundingClientRect().width) + 1).map(e => e.className) })
+   nowrapOverflow: [...document.querySelectorAll('*')].filter(e => !e.classList.contains('visually-hidden') && getComputedStyle(e).whiteSpace === 'nowrap' && e.scrollWidth > Math.ceil(e.getBoundingClientRect().width) + 1).map(e => e.className) })
 ```
 
 Then, once per template:

@@ -6,6 +6,5 @@ const s = t(lang).pages[path];
 if (!s) throw new Error(`No strings for ${path} in ${lang}`);
 ---
 <Base lang={lang} path={path} title={s.title} description={s.description}>
-  <h1>{s.title}</h1>
-  <p>{s.description}</p>
+  <div class="wrap"><h1>{s.title}</h1><p>{s.description}</p></div>
 </Base>

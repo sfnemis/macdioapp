@@ -3,15 +3,24 @@
 // height from the manifest. The sources are attached by a small inline
 // script when the figure nears the viewport, so a page never downloads a
 // clip the visitor does not reach; with reduced motion, or without
-// JavaScript, the poster stays.
+// JavaScript, the poster (drawn natively by the video element) stays.
+// The three files are checked on disk at build time, so a stale manifest
+// cannot ship a clip that never plays.
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import manifest from '../data/media.json';
-const { name, caption, priority = false } = Astro.props;
+const { name, caption } = Astro.props;
 const m = manifest[name];
 if (!m || m.kind !== 'clip') throw new Error(`Clip "${name}" is not in src/data/media.json (run scripts/media-manifest.mjs)`);
+// astro build runs from the project root; compiled components live in dist/chunks,
+// so the path is taken from the working directory, not import.meta.url.
+const dir = join(process.cwd(), 'public', 'media');
+for (const ext of ['mp4', 'webm', 'jpg']) {
+  if (!existsSync(join(dir, `${name}.${ext}`))) throw new Error(`Clip "${name}": public/media/${name}.${ext} is missing`);
+}
 ---
 <figure class="clip" data-clip={name}>
-  <video muted loop playsinline preload="none" poster={`/media/${name}.jpg`} width={m.w} height={m.h} data-webm={`/media/${name}.webm`} data-mp4={`/media/${name}.mp4`} aria-label={caption} fetchpriority={priority ? 'high' : undefined}></video>
-  <noscript><img src={`/media/${name}.jpg`} alt={caption} width={m.w} height={m.h}></noscript>
+  <video muted loop playsinline preload="none" poster={`/media/${name}.jpg`} width={m.w} height={m.h} data-webm={`/media/${name}.webm`} data-mp4={`/media/${name}.mp4`}></video>
   <figcaption>{caption}</figcaption>
 </figure>
 <script is:inline>
@@ -39,6 +48,6 @@ if (!m || m.kind !== 'clip') throw new Error(`Clip "${name}" is not in src/data/
 </script>
 <style>
   .clip { display: grid; gap: var(--space-xs); }
-  .clip video, .clip img { border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper-2); inline-size: 100%; block-size: auto; }
+  .clip video { border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-md); background: var(--color-paper-2); inline-size: 100%; block-size: auto; }
   .clip figcaption { font-size: var(--text-sm); color: var(--color-muted); }
 </style>

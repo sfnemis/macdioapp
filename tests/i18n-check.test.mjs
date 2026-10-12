@@ -22,7 +22,9 @@ test('length limits, em dash and extra keys are problems', () => {
   assert.ok(problems.some((p) => /extra key site\.extra/.test(p)));
 });
 
-test('English must not say we, our or us for the developer', () => {
+test('English must not say we, our or us for the developer, but US the country is fine', () => {
+  const ok = { site: { name: 'Macdio' }, pages: { '/': { title: 'US price', description: 'Sold in the US store.' } } };
+  assert.deepEqual(checkLocale('en', ok, ok, { live: true }), []);
   const enBad = { site: { name: 'Macdio' }, pages: { '/': { title: 'Our radio app', description: 'We built it.' } } };
   const problems = checkLocale('en', enBad, enBad, { live: true });
   assert.ok(problems.some((p) => /"we\/our\/us"/.test(p)));
