@@ -1,10 +1,24 @@
 :root {
   --sl-font: var(--font-body);
+  --sl-color-accent-low: var(--color-paper-2);
   --sl-color-accent: var(--color-accent);
   --sl-color-accent-high: var(--color-accent-strong);
-  --sl-color-bg: var(--color-bg);
-  --sl-color-bg-nav: var(--color-bg);
-  --sl-color-bg-sidebar: var(--color-surface);
-  --sl-color-text: var(--color-text);
-  --sl-color-gray-5: var(--color-border);
+  --sl-color-white: var(--color-ink);
+  --sl-color-gray-1: var(--color-ink-2);
+  --sl-color-gray-2: var(--color-muted);
+  --sl-color-gray-3: var(--color-muted);
+  --sl-color-gray-4: var(--color-rule);
+  --sl-color-gray-5: var(--color-rule-2);
+  --sl-color-gray-6: var(--color-paper-2);
+  --sl-color-black: var(--color-paper);
+  --sl-color-bg: var(--color-paper);
+  --sl-color-bg-nav: var(--color-paper);
+  --sl-color-bg-sidebar: var(--color-paper-2);
+  --sl-color-text: var(--color-ink);
+  --sl-color-text-accent: var(--color-accent);
+  --sl-text-base: var(--text-base);
+}
+:root[data-theme="dark"] {
+  --sl-color-white: var(--color-ink);
+  --sl-color-black: var(--color-paper);
 }

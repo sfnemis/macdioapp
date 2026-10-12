@@ -1,23 +1,103 @@
+/* macdio.app v2 tokens. Every colour and font on the site is one of these.
+   Light paper by default; dark paper under the data-theme attribute set by the
+   theme script, and under prefers-color-scheme when no script ran. */
 :root {
-  --font-body: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: var(--font-body);
-  --color-accent: #6366f1;
-  --color-accent-strong: #4f46e5;
-  --color-bg: #ffffff;
-  --color-surface: #f4f4f7;
-  --color-text: #0b0b10;
-  --color-text-muted: #51515c;
-  --color-border: #d9d9e0;
-  --maxw: 72rem;
-  --space-1: 0.25rem; --space-2: 0.5rem; --space-3: 1rem; --space-4: 1.5rem; --space-5: 2.5rem; --space-6: 4rem;
-  --radius: 12px;
+  --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --text-xs: 0.8rem;
+  --text-sm: 0.9rem;
+  --text-base: 1rem;
+  --text-md: 1.25rem;
+  --text-lg: 1.5625rem;
+  --text-xl: 1.9531rem;
+  --text-2xl: 2.4414rem;
+  --text-3xl: 3.0518rem;
+  --text-4xl: 3.8147rem;
+  --text-display: clamp(2.5rem, 4.5vw + 1rem, 4.75rem);
+  --text-display-s: clamp(2rem, 3.5vw + 0.75rem, 3.5rem);
+
+  --space-3xs: 0.125rem;
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
+  --space-4xl: 9rem;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --rule-hair: 1px;
+  --page-max: 72rem;
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
+  --measure: 65ch;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+  --dur-long: 420ms;
+
+  --z-base: 1;
+  --z-raised: 10;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 400;
+  --z-toast: 500;
+  --z-tooltip: 600;
+
+  /* light paper, indigo-tinted neutrals (hue 277) */
+  --color-paper: oklch(98.5% 0.006 277);
+  --color-paper-2: oklch(96% 0.008 277);
+  --color-paper-3: oklch(93% 0.010 277);
+  --color-ink: oklch(20% 0.012 277);
+  --color-ink-2: oklch(34% 0.012 277);
+  --color-muted: oklch(48% 0.012 277);
+  --color-rule: oklch(86% 0.010 277);
+  --color-rule-2: oklch(91% 0.008 277);
+  --color-accent: oklch(54% 0.19 277);
+  --color-accent-strong: oklch(47% 0.20 277);
+  --color-accent-ink: oklch(98.5% 0.006 277);
+  --color-focus: oklch(56% 0.22 277);
+  color-scheme: light;
 }
+
 :root[data-theme="dark"] {
-  --color-accent: #818cf8;
-  --color-accent-strong: #a5b4fc;
-  --color-bg: #050507;
-  --color-surface: #111118;
-  --color-text: #f3f3f6;
-  --color-text-muted: #a0a0ad;
-  --color-border: #26262f;
+  --color-paper: oklch(13% 0.012 277);
+  --color-paper-2: oklch(17% 0.014 277);
+  --color-paper-3: oklch(22% 0.014 277);
+  --color-ink: oklch(94% 0.008 277);
+  --color-ink-2: oklch(80% 0.010 277);
+  --color-muted: oklch(66% 0.012 277);
+  --color-rule: oklch(30% 0.014 277);
+  --color-rule-2: oklch(24% 0.012 277);
+  --color-accent: oklch(74% 0.15 277);
+  --color-accent-strong: oklch(80% 0.12 277);
+  --color-accent-ink: oklch(13% 0.012 277);
+  --color-focus: oklch(76% 0.19 277);
+  color-scheme: dark;
+}
+
+/* Without JavaScript the system preference decides. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-paper: oklch(13% 0.012 277);
+    --color-paper-2: oklch(17% 0.014 277);
+    --color-paper-3: oklch(22% 0.014 277);
+    --color-ink: oklch(94% 0.008 277);
+    --color-ink-2: oklch(80% 0.010 277);
+    --color-muted: oklch(66% 0.012 277);
+    --color-rule: oklch(30% 0.014 277);
+    --color-rule-2: oklch(24% 0.012 277);
+    --color-accent: oklch(74% 0.15 277);
+    --color-accent-strong: oklch(80% 0.12 277);
+    --color-accent-ink: oklch(13% 0.012 277);
+    --color-focus: oklch(76% 0.19 277);
+    color-scheme: dark;
+  }
 }
