@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">2026年10月12日時点で、MacdioはiPhone、iPad、Macでライブラジオを録音します。録音はストリームそのものから取るので、マイクも周囲の雑音もありません。トラックで分割は、局自身が送る曲の区切りを使ってセッションを曲ごとの1ファイルに切り分けます。最短の長さのガードがあるので、曲名が後から訂正されても曲が2つに切れることはありません。録音が終わるとSong IDのエンジンがそれをスキャンし、中の曲をタイムスタンプ付きで一覧にします。形式は元のストリーム、MP3、AAC、M4Aで、元の音質か128、192、256 kbpsです。</p>
+  <p class="reveal">2026年10月12日時点で、MacdioはiPhone、iPad、Macでライブラジオを録音します。録音はストリームそのものから取るので、マイクも周囲の雑音もありません。トラックで分割は、局自身が送る曲の区切りを使ってセッションを曲ごとの1ファイルに切り分けます。最短の長さのガードがあるので、曲名が後から訂正されても曲が2つに切れることはありません。録音が終わるとSong IDのエンジンがそれをスキャンし、中の曲をタイムスタンプ付きで一覧にします。ファイルはストリームそのものの音声で、局が放送している形式とビットレートのままです。</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="iPhoneの保存済み録音。長さ、サイズ、それぞれで見つかった曲が表示される"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="iPhone版Macdioで、カバーと元の局が付いた保存済みの曲"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>録音できるのはiPhone、iPad、Macです。Apple TVとApple Watchは再生しますが、録音はしません。</li>
     <li>録音は初期設定では3時間で自動的に止まり、最大の長さは変更できます。決まった時刻に録音する予約機能はありません。</li>
-    <li>空き容量が500 MB未満だと録音は始まらないので、デバイスがいっぱいになることはありません。</li>
+    <li>空き容量が500 MB未満だと録音は始まりません。録音中は、空きが500 MBを下回ると5分ごとに警告し、危険なほど減るとファイルを保存して録音を止めるので、デバイスがいっぱいになることはありません。</li>
     <li>録音はアプリの中に残ります。書き出し、共有シート、AirDrop、ファイルへのコピーはありません。これはApp Reviewと一緒に決めたことで、変わりません。</li>
   </ul>
   <h2 class="reveal">形式と音質</h2>
-  <p class="reveal">オリジナルは放送されたままのストリームを保存し、AACやMP3の局ならこれが最高のコピーです。ファイルを小さくしたいときや、特定のプレーヤーが好む形式にしたいときは、MP3、AAC、M4Aで128、192、256 kbpsに再エンコードします。FLACとOggのストリームは、オリジナルならそのまま保存されます。</p>
+  <p class="reveal">間違える音質の設定はありません。Macdioは届いた音声をそのまま書き込むので、MP3の局ならMP3に、AACの局ならAACになり、FLACやOggの局もその形式のままです。320 kbpsの局なら320 kbpsのファイルになります。AACの録音でSong IDが曲を特定すると、その曲名、アーティスト、カバー、歌詞がファイルに書き込まれ、ファイルは.m4aになります。</p>
   <h2 class="reveal">録音してもいいのか</h2>
-  <p class="reveal">自分で聴くために放送を録音するのは、カセットデッキが何十年もしてきたことと同じで、ほとんどの国で個人的な利用は問題ありません。録音を共有したり売ったりするのは別の話で、それもMacdioが録音をアプリの中に置いておく理由です。<a class="inline" href="../guides/record-internet-radio.html">録音のガイド</a>で国ごとの法律を説明しています。</p>
+  <p class="reveal">自分で聴くために放送を録音するのは、カセットデッキが何十年もしてきたことと同じで、ほとんどの国で個人的な利用は問題ありません。録音を共有したり売ったりするのは別の話で、それもMacdioが録音をアプリの中に置いておく理由です。<a class="inline" href="../guides/record-internet-radio.html">録音のガイド</a>で、個人的な録音の扱いについてもっと詳しく説明しています。</p>
   <h2 class="reveal">よくある質問</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>Macdioでネットラジオを録音できますか？</summary><div class="faq-a">できます。iPhone、iPad、Macで、マイクを使わずストリームから直接録音します。トラックで分割をオンにすると、曲ごとに名前の付いた1ファイルになります。</div></details>
     <details class="faq-item"><summary>録音を予約できますか？</summary><div class="faq-a">できません。録音は手動で始め、設定した最大の長さ（初期設定は3時間）で止まります。</div></details>
     <details class="faq-item"><summary>録音を書き出したり共有したりできますか？</summary><div class="faq-a">できません。録音はアプリの中に残ります。設計上の判断で、App Reviewとの合意でもあります。</div></details>
-    <details class="faq-item"><summary>どの形式で録音できますか？</summary><div class="faq-a">元のストリーム、MP3、AAC、M4Aで、元の音質か128、192、256 kbpsです。</div></details>
+    <details class="faq-item"><summary>どの形式で録音できますか？</summary><div class="faq-a">局そのままの形式です。MP3、AAC、FLAC、Oggで、ビットレートも局のままです。AACの録音は、曲のタグが付くと.m4aファイルになります。</div></details>
     <details class="faq-item"><summary>Apple TVやApple Watchで使えますか？</summary><div class="faq-a">使えません。これらのバージョンはラジオを再生しますが、録音はしません。</div></details>
   </div>
   <h2 class="reveal">試してみる</h2>

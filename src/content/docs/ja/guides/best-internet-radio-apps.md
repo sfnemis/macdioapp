@@ -2,12 +2,12 @@
 title: "MacとiPhone向けのおすすめインターネットラジオアプリ（2026年）"
 description: "Mac、iPhone、iPad、Apple Watch、Apple TV向けの7つのインターネットラジオアプリを、価格、局数、録音、広告で比較。数字はすべてApp Storeから。"
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Mac向けで一番いいインターネットラジオアプリは？"
-    a: "支払い方によります。Macdioは広告なしの1回の購入で、録音と曲の識別があり、macOS 26が必要です。EterとBroadcastsはどちらも無料で試せて1回限りのアンロックがあり、古いバージョンのmacOSでも動きます。myTuner Radio ProはMac App Storeで別売りの9.99米ドルです。"
+    a: "支払い方によります。Macdioは広告なしの1回の購入で、録音と曲の識別があり、macOS 26が必要です。Eterは無料で試せて1回限りのアンロックがあり、Broadcastsは数局までなら無料で、それ以上はサブスクリプションです。どちらも古いバージョンのmacOSでも動きます。myTuner Radio ProはMac App Storeで別売りの9.99米ドルです。"
   - q: "広告のないインターネットラジオアプリは？"
-    a: "Macdioには広告もアプリ内課金もありません。EterとBroadcastsはApp Storeの掲載情報で広告をうたっておらず、代わりに1回限りのアンロックを販売しています。Simple Radioは無料版でディスプレイ広告を表示し、Premiumの購入で消えます。TuneInは、広告なしのニュースとCMなしの音楽をうたうPremiumのサブスクリプションを販売しています。"
+    a: "Macdioには広告もアプリ内課金もありません。EterとBroadcastsはApp Storeの掲載情報で広告をうたっていません。Eterは1回限りのアンロックを、Broadcastsはサブスクリプションを販売しています。Simple Radioは無料版でディスプレイ広告を表示し、Premiumの購入で消えます。TuneInは、広告なしのニュースとCMなしの音楽をうたうPremiumのサブスクリプションを販売しています。"
   - q: "これらのアプリにはいくつの局がありますか？"
     a: "2026年9月14日にApp Storeでうたわれていた数は、TuneInが100,000以上、Simple Radioが90,000以上、Macdioが60,000以上、myTuner Radioが50,000です。Eter、Broadcasts、Radio Gardenは数を公表していません。ほとんどのアプリは同じ公開ディレクトリを使っているので、数字は実際に聴けるものより、それぞれの数え方を表しています。"
   - q: "ラジオ番組を録音できるアプリはありますか？"
@@ -18,7 +18,7 @@ faq:
 
 それぞれの価格、実際にできること、そして誰が選ぶべきか。そのうちの1つの開発者が書いています。
 
-**ほとんどの人にとって、選択は支払い方で決まります。TuneInとSimple Radioは無料で広告が付きます。EterとBroadcastsは無料で試せて、1回限りのアンロックがあります。Macdioは14.99米ドルの買い切りですべてのAppleデバイスで使え、広告もサブスクリプションもなく、7つの中で録音をうたっている唯一のアプリです。Radio Gardenは、聴くためではなく眺めて回るために入れるアプリです。**
+**ほとんどの人にとって、選択は支払い方で決まります。TuneInとSimple Radioは無料で広告が付きます。Eterは無料で試せて、1回限りのアンロックがあります。Broadcastsは数局までなら無料で、それ以上はサブスクリプションです。Macdioは14.99米ドルの買い切りですべてのAppleデバイスで使え、広告もサブスクリプションもなく、7つの中で録音をうたっている唯一のアプリです。Radio Gardenは、聴くためではなく眺めて回るために入れるアプリです。**
 
 ## この記事の情報源
 
@@ -32,7 +32,7 @@ faq:
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone、iPad、Mac、TV、Watch | 60,000以上 | 14.99 USD（1回のみ） | あり、トラックで分割 | なし |
 | Eter | iPhone、iPad、Mac、TV、Watch | 非公表 | 無料、1回限りのアンロック | うたっていない | うたっていない |
-| Broadcasts | iPhone、iPad、Mac、TV、Watch | 非公表 | 無料、1回限りのアンロック | うたっていない | うたっていない |
+| Broadcasts | iPhone、iPad、Mac、TV、Watch | 非公表 | 無料、サブスクは月1.99 USDから | うたっていない | うたっていない |
 | Simple Radio | iPhone、iPad、Watch | 90,000以上 | 無料、Premiumの購入 | うたっていない | あり、ディスプレイ広告 |
 | myTuner Radio | iPhone、iPad、TV、Watch、Mac版Pro | 50,000 | 無料、サブスクは週0.99 USDから | うたっていない | 記載なし |
 | TuneIn | iPhone、iPad、TV、Watch、スピーカー | 100,000以上 | 無料、Premiumのサブスク | うたっていない | あり、Premiumで減る |
@@ -42,7 +42,7 @@ faq:
 
 ## Macdio、1回で買い切りたい人に
 
-Macdioは米国のApp Storeで14.99米ドルの買い切りで、その購入でUniversal Purchaseを通じてiPhone、iPad、Mac、Apple TV、Apple Watchが使えます。広告も、アプリ内課金も、アカウントもありません。RadioBrowserのディレクトリから60,000以上の局を収録し、自分で貼り付けたどのストリームURLも再生できます。
+Macdioは米国のApp Storeで14.99米ドルの買い切りで、その購入でUniversal Purchaseを通じてiPhone、iPad、Mac、Apple TV、Apple Watchが使えます。広告も、アプリ内課金も、アカウントもありません。Radio Browserのディレクトリから60,000以上の局を収録し、自分で貼り付けたどのストリームURLも再生できます。
 
 他ではなかなか見つからない機能は、録音と曲の識別です。スピーカーの出力ではなくストリームそのものを録音し、トラックで分割がセッションを曲ごとに1ファイルに切り分け、それぞれにアートワーク付きで名前を付けます。これは[録音のガイド](/guides/record-internet-radio.html)で説明しています。曲の識別はストリームから音声を読むので、iPhoneがポケットの中でも動き続け、アプリがマイクの許可を求めることはありません。同期歌詞は聴こえている曲に合わせてスクロールします。お気に入りと履歴はiCloudでデバイス間を同期し、WatchアプリはiPhoneが近くになくてもLTEでストリーミングします。
 
@@ -52,7 +52,7 @@ Macdioは米国のApp Storeで14.99米ドルの買い切りで、その購入で
 
 ## Eter、上手に育つ無料の選択肢
 
-Apparent SoftwareのEterは無料でダウンロードでき、macOS、iOS、iPadOS、watchOS、tvOSで動き、CarPlayにも対応しています。radio-browser.infoのデータベースを検索し、手で選んだおすすめの局のリストを加え、自分のストリームURLも追加できます。1回限りのアプリ内課金で、お気に入りの保存が解放され、おすすめのリストが隠れて自分の局だけが見えるようになります。掲載情報にはそれと並んでスリープタイマーも書かれていて、アンロックしなくても無制限に聴けます。
+Apparent SoftwareのEterは無料でダウンロードでき、macOS、iOS、iPadOS、watchOS、tvOSで動き、CarPlayにも対応しています。Radio Browserのデータベースを検索し、手で選んだおすすめの局のリストを加え、自分のストリームURLも追加できます。1回限りのアプリ内課金で、お気に入りの保存が解放され、おすすめのリストが隠れて自分の局だけが見えるようになります。掲載情報にはそれと並んでスリープタイマーも書かれていて、アンロックしなくても無制限に聴けます。
 
 App Storeの掲載情報は局数を公表しておらず、録音もうたっていません。最低要件はiOS 16なので、Macdioより何世代も前の機種までカバーしています。
 
@@ -60,7 +60,7 @@ App Storeの掲載情報は局数を公表しておらず、録音もうたっ�
 
 ## Broadcasts、自分でリストを作り込む人に
 
-Steven Troughton-SmithのBroadcastsは、巨大なディレクトリとは逆の考え方です。実際に聴く局でライブラリを作り、それをアートワークのグリッドとして表示します。無料版はライブラリの大きさに制限があり、フルバージョンのアンロックでその制限が外れ、局と曲のアートワーク付きの再生中画面が加わります。ライブラリはiCloudでiPhone、iPad、Mac、Apple Watch、Apple TVの間を同期し、Universal Purchaseで、認定されたヘッドユニットのCarPlayに対応し、局が情報を送らないときはベータ版のShazamでメタデータを補います。
+Steven Troughton-SmithのBroadcastsは、巨大なディレクトリとは逆の考え方です。実際に聴く局でライブラリを作り、それをアートワークのグリッドとして表示します。無料版で使えるのは数局までで、月1.99米ドルまたは年11.99米ドルのサブスクリプションでその制限が外れ、局と曲のアートワーク付きの再生中画面が加わります。ライブラリはiCloudでiPhone、iPad、Mac、Apple Watch、Apple TVの間を同期し、Universal Purchaseで、認定されたヘッドユニットのCarPlayに対応し、局が情報を送らないときはベータ版のShazamでメタデータを補います。
 
 掲載情報には録音の記載がなく、局数もうたっていません。ディレクトリはこのアプリの目的ではないからです。
 
@@ -76,7 +76,7 @@ Mac App StoreにMacアプリはなく、録音の記載もなく、最低要件�
 
 ## myTuner Radio、Mac版もある世界的なディレクトリ
 
-AppgenerationのmyTuner Radioは50,000のラジオ局をうたっていて、Apple Watch、Apple TV、CarPlayに対応しています。iPhoneアプリは無料で、サブスクリプションは週0.99米ドルから6か月7.99米ドルまであり、Mac App Storeには別売りで9.99米ドルのmyTuner Radio Proがあります。Apple Musicのサブスクリプションがあれば、プレイリストのためにApple Musicとも連携します。
+AppgenerationのmyTuner Radioは50,000のラジオ局をうたっていて、Apple Watch、Apple TV、CarPlayに対応しています。iPhoneアプリは無料で、サブスクリプションは週0.99米ドルから年34.99米ドルまであり、Mac App Storeには別売りで9.99米ドルのmyTuner Radio Proがあります。Apple Musicのサブスクリプションがあれば、プレイリストのためにApple Musicとも連携します。
 
 掲載情報は無料版の広告について書いていないので、このページはどちらとも言いません。録音の記載もありません。最低要件はiOS 15です。
 
@@ -110,7 +110,7 @@ Apple Musicにはラジオ局がありますが、地元の放送局を聴くた
 
 ## 1分で選ぶ方法
 
-まずはお金から。何も払うつもりがないなら、Eterが一番いい無料の体験で、Simple Radioは人に渡すのに一番簡単です。サブスクリプションは嫌いだけど1回なら払うという人には、Macdio、Broadcasts、myTuner Radio Proがどれも買い切りで、性格はまったく違います。フル機能のプレーヤー、作り込むライブラリ、そしてディレクトリです。
+まずはお金から。何も払うつもりがないなら、Eterが一番いい無料の体験で、Simple Radioは人に渡すのに一番簡単です。サブスクリプションは嫌いだけど1回なら払うという人には、Macdio、Eter、myTuner Radio Proがどれも買い切りで、性格はまったく違います。フル機能のプレーヤー、身軽なディレクトリのプレーヤー、そして古いMac専用のディレクトリです。作り込むライブラリのBroadcastsは、サブスクリプションに移りました。
 
 次にデバイスの一覧を確認します。古いiPhoneやIntel Macなら、Macdioはすぐに外れ、EterかBroadcastsになります。キッチンにスマートスピーカーがあるならTuneInです。iPhoneを持たずにランニングで使うApple Watchなら、Watch単体でストリーミングできるアプリに絞られます。
 
@@ -120,11 +120,11 @@ Apple Musicにはラジオ局がありますが、地元の放送局を聴くた
 
 ### Mac向けで一番いいインターネットラジオアプリは？
 
-支払い方によります。Macdioは広告なしの1回の購入で、録音と曲の識別があり、macOS 26が必要です。EterとBroadcastsはどちらも無料で試せて1回限りのアンロックがあり、古いバージョンのmacOSでも動きます。myTuner Radio ProはMac App Storeで別売りの9.99米ドルです。
+支払い方によります。Macdioは広告なしの1回の購入で、録音と曲の識別があり、macOS 26が必要です。Eterは無料で試せて1回限りのアンロックがあり、Broadcastsは数局までなら無料で、それ以上はサブスクリプションです。どちらも古いバージョンのmacOSでも動きます。myTuner Radio ProはMac App Storeで別売りの9.99米ドルです。
 
 ### 広告のないインターネットラジオアプリは？
 
-Macdioには広告もアプリ内課金もありません。EterとBroadcastsはApp Storeの掲載情報で広告をうたっておらず、代わりに1回限りのアンロックを販売しています。Simple Radioは無料版でディスプレイ広告を表示し、Premiumの購入で消えます。TuneInは、広告なしのニュースとCMなしの音楽をうたうPremiumのサブスクリプションを販売しています。
+Macdioには広告もアプリ内課金もありません。EterとBroadcastsはApp Storeの掲載情報で広告をうたっていません。Eterは1回限りのアンロックを、Broadcastsはサブスクリプションを販売しています。Simple Radioは無料版でディスプレイ広告を表示し、Premiumの購入で消えます。TuneInは、広告なしのニュースとCMなしの音楽をうたうPremiumのサブスクリプションを販売しています。
 
 ### これらのアプリにはいくつの局がありますか？
 

@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "正在搜索…",
+    "errorTitle": "连接错误",
+    "errorText": "无法连接电台数据库，请重试。",
+    "noneTitle": "没有找到电台",
+    "noneText": "换个搜索词或筛选条件试试。",
+    "results": "{n} 个结果",
+    "resultsFor": "关键词“{q}”",
+    "resultsIn": "国家/地区：{country}",
+    "popular": "正在显示热门电台 · 第 {page} 页",
+    "prev": "← 上一页",
+    "next": "下一页 →",
+    "page": "第 {page} 页",
+    "unknown": "未知"
+  },
+  "genres": {
+    "pop": "流行",
+    "rock": "摇滚",
+    "jazz": "爵士",
+    "classical": "古典",
+    "electronic": "电子",
+    "hip hop": "嘻哈",
+    "country": "乡村",
+    "blues": "蓝调",
+    "metal": "金属",
+    "reggae": "雷鬼",
+    "latin": "拉丁",
+    "folk": "民谣",
+    "indie": "独立",
+    "ambient": "氛围音乐",
+    "news": "新闻",
+    "talk": "谈话节目",
+    "sports": "体育",
+    "oldies": "怀旧金曲",
+    "80s": "80 年代",
+    "90s": "90 年代",
+    "lounge": "沙发音乐",
+    "soul": "灵魂乐",
+    "r&b": "R&B",
+    "punk": "朋克",
+    "dance": "舞曲",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "新",
+    "label": "新功能：{title}",
+    "title": "新功能",
+    "dialog": "Macdio 的新功能",
+    "all": "全部更新说明",
+    "gotIt": "知道了"
   }
 }

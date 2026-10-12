@@ -2,7 +2,7 @@
 title: "用 Siri 播放网络电台：Macdio 的全部语音指令"
 description: "说出电台名就能播放。Macdio 能听懂的每一句 Siri 指令，支持 14 种语言，在 iPhone、AirPods 和 CarPlay 的语音按钮上都能用。"
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "一定要说“在 Macdio 中”吗？"
     a: "是的。Siri 根据应用的名字把一句话交给对应的应用，所以每条指令都带着 Macdio。不说的话，Siri 会去播放 Apple Music，或者问你是什么意思。"
@@ -43,7 +43,7 @@ Siri 会记住你的收藏和最近播放过的电台，总共大约二十个，
 
 ## 十四种语言
 
-Siri 用的是它当前设置的语言的指令，Macdio 提供的语言有英语、阿拉伯语、中文（简体和繁体）、荷兰语、法语、德语、意大利语、日语、波兰语、葡萄牙语（巴西）、俄语、西班牙语和土耳其语。简体中文的 Siri 听到的是“在 Macdio 中播放 Radio Paradise”，土耳其语的 Siri 听到的是“Macdio ile Radio Paradise çal”，德语的是“Spiele Radio Paradise auf Macdio”，西班牙语的是“Pon Radio Paradise en Macdio”。电台名在每种语言里都一样，所以一个收藏了西班牙电台的中文用户也没问题。
+Siri 用的是它当前设置的语言的指令，Macdio 提供的语言有英语、阿拉伯语、中文（简体和繁体）、荷兰语、法语、德语、意大利语、日语、波兰语、葡萄牙语（巴西）、俄语、西班牙语和土耳其语。简体中文的 Siri 听到的是“在 Macdio 中播放 Radio Paradise”，土耳其语的 Siri 听到的是“Macdio ile Radio Paradise çal”，德语的是“Radio Paradise in Macdio abspielen”，西班牙语的是“Reproducir Radio Paradise en Macdio”。电台名在每种语言里都一样，所以一个收藏了西班牙电台的中文用户也没问题。
 
 ## 在车上
 

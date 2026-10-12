@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">截至 2026年10月12日，Macdio 可以在 iPhone、iPad 和 Mac 上录制直播电台。录音直接取自流本身，所以不用麦克风，也没有环境噪音。按曲目分割利用电台自己的歌曲边界，把一次录音切成每首歌一个文件，并设有最短时长保护，所以电台更正一次歌名不会把一首歌切成两半。之后 Song ID 引擎会扫描完成的录音，列出其中的歌曲和时间点。格式有原始流、MP3、AAC 或 M4A，可选原始音质，或 128、192、256 kbps。</p>
+  <p class="reveal">截至 2026年10月12日，Macdio 可以在 iPhone、iPad 和 Mac 上录制直播电台。录音直接取自流本身，所以不用麦克风，也没有环境噪音。按曲目分割利用电台自己的歌曲边界，把一次录音切成每首歌一个文件，并设有最短时长保护，所以电台更正一次歌名不会把一首歌切成两半。之后 Song ID 引擎会扫描完成的录音，列出其中的歌曲和时间点。文件就是流本身的音频，格式和码率与电台播出的一致。</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="iPhone 上保存的录音，显示时长、大小和每段录音里找到的歌曲"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="iPhone 上的 Macdio 里保存的歌曲，带封面和来源电台"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>录音在 iPhone、iPad 和 Mac 上可用。Apple TV 和 Apple Watch 能播放，但不能录音。</li>
     <li>录音默认在三小时后自动停止；最长时长可以修改。没有在指定时间自动开始的定时录音。</li>
-    <li>剩余空间不足 500 MB 时不会开始录音，所以永远不会把设备塞满。</li>
+    <li>剩余空间不足 500 MB 时不会开始录音。录音过程中，一旦剩余空间低于 500 MB，Macdio 每五分钟提醒一次，空间到了临界状态就停止录音并保存文件，所以永远不会把设备塞满。</li>
     <li>录音留在应用里。没有导出、共享表单、隔空投送，也不能复制到“文件”；这是和 App 审核团队一起做出的决定，不会改变。</li>
   </ul>
   <h2 class="reveal">格式和音质</h2>
-  <p class="reveal">“原始”完全按广播的样子保留流，对 AAC 或 MP3 电台来说就是最好的副本。想要更小的文件，或者某个播放器偏好的格式时，MP3、AAC 和 M4A 会以 128、192 或 256 kbps 重新编码。FLAC 和 Ogg 流在“原始”模式下按原样保留。</p>
+  <p class="reveal">这里没有会设错的音质选项：Macdio 把收到的音频原样写入，所以 MP3 电台得到 MP3，AAC 电台得到 AAC，FLAC 或 Ogg 电台也保留各自的格式。320 kbps 的电台得到 320 kbps 的文件。在 AAC 录音里，Song ID 一旦识别出歌曲，就会把歌名、歌手、封面和歌词写进文件，文件随之变成 .m4a。</p>
   <h2 class="reveal">这样做合法吗？</h2>
-  <p class="reveal">为自己收听而录下广播，和磁带录音机几十年来做的事一样，在大多数国家，个人使用没有问题。共享或出售录音则不行，这也是 Macdio 把录音留在应用里的原因。<a class="inline" href="../guides/record-internet-radio.html">录音指南</a>逐个国家讲了相关法律。</p>
+  <p class="reveal">为自己收听而录下广播，和磁带录音机几十年来做的事一样，在大多数国家，个人使用没有问题。共享或出售录音则不行，这也是 Macdio 把录音留在应用里的原因。<a class="inline" href="../guides/record-internet-radio.html">录音指南</a>里有更多关于个人录音的说明。</p>
   <h2 class="reveal">常见问题</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>Macdio 能录制网络电台吗？</summary><div class="faq-a">能，在 iPhone、iPad 和 Mac 上，直接从流录制，不用麦克风。按曲目分割会为每首歌生成一个带名字的文件。</div></details>
     <details class="faq-item"><summary>能定时录音吗？</summary><div class="faq-a">不能。录音需要手动开始，到达你设定的最长时长后停止，默认三小时。</div></details>
     <details class="faq-item"><summary>能导出或共享录音吗？</summary><div class="faq-a">不能。录音留在应用里，这是有意的设计，也是和 App 审核团队达成的约定。</div></details>
-    <details class="faq-item"><summary>用什么格式录音？</summary><div class="faq-a">原始流、MP3、AAC 或 M4A，可选原始音质，或 128、192、256 kbps。</div></details>
+    <details class="faq-item"><summary>用什么格式录音？</summary><div class="faq-a">电台自己的格式：MP3、AAC、FLAC 或 Ogg，码率与电台一致。AAC 录音在歌曲加上标签后会变成 .m4a 文件。</div></details>
     <details class="faq-item"><summary>在 Apple TV 或 Apple Watch 上能录音吗？</summary><div class="faq-a">不能。这两个版本能播放电台，但不能录音。</div></details>
   </div>
   <h2 class="reveal">试试看</h2>

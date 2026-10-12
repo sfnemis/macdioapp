@@ -2,7 +2,7 @@
 title: "Siriでインターネットラジオを再生: Macdioの音声コマンド一覧"
 description: "局名を言えば再生が始まります。Macdioが理解するSiriのフレーズを14の言語で。iPhoneで、AirPodsで、CarPlayの音声ボタンから使えます。"
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "「Macdioで」と言う必要がありますか？"
     a: "あります。Siriはアプリの名前でフレーズの送り先を決めるので、どのコマンドにもMacdioが入ります。名前がないと、SiriはApple Musicを再生するか、何のことかを聞き返します。"
@@ -43,7 +43,7 @@ Siriはお気に入りと最近再生した局、合わせて20局ほどを覚�
 
 ## 14の言語
 
-Siriは設定されている言語のフレーズを使い、Macdioは英語、アラビア語、中国語（簡体字と繁体字）、オランダ語、フランス語、ドイツ語、イタリア語、日本語、ポーランド語、ポルトガル語（ブラジル）、ロシア語、スペイン語、トルコ語のフレーズを収録しています。トルコ語のSiriなら「Macdio ile Radio Paradise çal」、ドイツ語なら「Spiele Radio Paradise auf Macdio」、スペイン語なら「Pon Radio Paradise en Macdio」です。局名はどの言語でも同じなので、スペインの局をお気に入りにしているトルコのリスナーでも問題ありません。
+Siriは設定されている言語のフレーズを使い、Macdioは英語、アラビア語、中国語（簡体字と繁体字）、オランダ語、フランス語、ドイツ語、イタリア語、日本語、ポーランド語、ポルトガル語（ブラジル）、ロシア語、スペイン語、トルコ語のフレーズを収録しています。トルコ語のSiriなら「Macdio ile Radio Paradise çal」、ドイツ語なら「Radio Paradise in Macdio abspielen」、スペイン語なら「Reproducir Radio Paradise en Macdio」です。局名はどの言語でも同じなので、スペインの局をお気に入りにしているトルコのリスナーでも問題ありません。
 
 ## 車の中で
 

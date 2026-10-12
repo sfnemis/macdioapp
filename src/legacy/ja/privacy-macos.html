@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">MacdioはmacOSのApp Sandboxの中で、最小限のエンタイトルメントで動作します。ストリーミングのためのネットワークアクセス、録音のためのマイク、同期のためのiCloudです。あなたの明示的な許可なしに、ファイル、連絡先、他のアプリにアクセスすることはできません。</p>
+  <p class="reveal">MacdioはmacOSのApp Sandboxの中で、機能に必要なエンタイトルメントだけで動作します。ストリーミングと、ストリームを安定させるローカルのリレーのためのネットワークアクセス、同期のためのiCloud、新しいエピソードのための通知、頼まれたときにハイライトをApple Notesに送るためのApple Events、そしてエピソードの要約のためのAppleのPrivate Cloud Computeです。マイクへのアクセスはありません。読み書きするのは、OPMLファイルや局リストなど、あなたが自分で選んだファイルだけで、連絡先や他のアプリには触れられません。</p>
 
   <h2 class="sec reveal">サードパーティのサービス</h2>
   <p class="reveal">Macdioは、主要な機能のためだけに次の外部サービスに接続します。</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong>: 同期した歌詞を取得するため。個人データは送られません。</li>
     <li><strong>iTunes Search API</strong>: アルバムアートワークを取得するため。個人データは送られません。</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong>: 自身でロゴを提供しないラジオ局のロゴを供給します。送られるのは局のウェブドメインだけで、個人データは送られません。</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>: ポッドキャストの検索、チャート、カテゴリのため。送られるのは検索語かカテゴリだけです。エピソードとフィードは、各番組のサーバーから直接ダウンロードされます。</li>
+    <li><strong>Apple ShazamKit</strong>: Song IDのため。録音ではなく、ストリームの短い音声シグネチャがAppleのShazamサービスに送られます。マイクが使われることはありません。</li>
+    <li><strong>Appleの言語モデル</strong>: ポッドキャストのエピソードのチャプターと要約を、デバイス上か、テキストを保持しないAppleのPrivate Cloud Computeで作ります。</li>
+    <li><strong>push.macdio.app</strong>: Macdioの通知サーバーで、新しいエピソードの通知がオンのあいだだけ、このMacの通知アドレスとあなたがフォローしている番組を受け取ります。それ以外は何も保持しません。</li>
   </ul>
 
   <h2 class="sec reveal">iCloud同期</h2>

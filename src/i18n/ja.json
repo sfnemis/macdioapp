@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "検索中…",
+    "errorTitle": "接続エラー",
+    "errorText": "局のデータベースに接続できませんでした。もう一度お試しください。",
+    "noneTitle": "局が見つかりません",
+    "noneText": "別の検索語かフィルタをお試しください。",
+    "results": "{n}件",
+    "resultsFor": "キーワード「{q}」",
+    "resultsIn": "国: {country}",
+    "popular": "人気の局を表示中 · {page}ページ目",
+    "prev": "← 前へ",
+    "next": "次へ →",
+    "page": "{page}ページ目",
+    "unknown": "不明"
+  },
+  "genres": {
+    "pop": "ポップ",
+    "rock": "ロック",
+    "jazz": "ジャズ",
+    "classical": "クラシック",
+    "electronic": "エレクトロニック",
+    "hip hop": "ヒップホップ",
+    "country": "カントリー",
+    "blues": "ブルース",
+    "metal": "メタル",
+    "reggae": "レゲエ",
+    "latin": "ラテン",
+    "folk": "フォーク",
+    "indie": "インディー",
+    "ambient": "アンビエント",
+    "news": "ニュース",
+    "talk": "トーク",
+    "sports": "スポーツ",
+    "oldies": "オールディーズ",
+    "80s": "80年代",
+    "90s": "90年代",
+    "lounge": "ラウンジ",
+    "soul": "ソウル",
+    "r&b": "R&B",
+    "punk": "パンク",
+    "dance": "ダンス",
+    "house": "ハウス",
+    "techno": "テクノ",
+    "trance": "トランス",
+    "chill": "チル"
+  },
+  "badge": {
+    "new": "新着",
+    "label": "最新情報: {title}",
+    "title": "最新情報",
+    "dialog": "Macdioの最新情報",
+    "all": "すべてのリリースノート",
+    "gotIt": "OK"
   }
 }

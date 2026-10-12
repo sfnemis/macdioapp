@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio 运行在 macOS App Sandbox 内，权限降到最低：流媒体所需的网络访问、录音所需的麦克风，以及同步所需的 iCloud。未经你明确许可，它无法访问文件、通讯录或其他应用。</p>
+  <p class="reveal">Macdio 运行在 macOS App Sandbox 内，只拥有功能所需的权限：用于流媒体和让流保持稳定的本地中继的网络访问、用于同步的 iCloud、用于新剧集的通知、在你要求时把高亮发送到 Apple Notes 的 Apple Events，以及用于剧集摘要的 Apple 私密云计算（Private Cloud Compute）。它没有麦克风权限。它只读写你自己选择的文件，比如一个 OPML 文件或一份电台列表，也无法访问通讯录或其他应用。</p>
 
   <h2 class="sec reveal">第三方服务</h2>
   <p class="reveal">Macdio 连接以下外部服务，仅用于核心功能：</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong>，用于获取同步歌词。不发送任何个人数据。</li>
     <li><strong>iTunes Search API</strong>，用于获取专辑封面。不发送任何个人数据。</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> 为自身不提供台标的电台提供台标。只发送电台的网站域名，不发送个人数据。</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>，用于播客搜索、榜单和分类。只发送搜索词或分类。剧集和订阅源直接从每个节目自己的服务器下载。</li>
+    <li><strong>Apple ShazamKit</strong>，用于 Song ID。发送到 Apple Shazam 服务的是流的一段简短音频签名，而不是录音。从不使用麦克风。</li>
+    <li><strong>Apple 的语言模型</strong>，在设备上或在 Apple 的私密云计算（Private Cloud Compute）上为播客剧集生成章节和摘要，私密云计算不会保留这些文字。</li>
+    <li><strong>push.macdio.app</strong>，Macdio 的通知服务器，只在“新剧集通知”开启时接收这台 Mac 的通知地址和你关注的节目。它不保留任何其他东西。</li>
   </ul>
 
   <h2 class="sec reveal">iCloud 同步</h2>

@@ -8,16 +8,16 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>隐私政策：Macdio 网络电台</title>
-<meta name="description" content="Macdio 隐私政策。没有个人数据，没有分析，没有追踪。可选的新剧集通知会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
+<meta name="description" content="Macdio 隐私政策：没有个人数据，没有分析，没有追踪。可选的剧集提醒会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
 <meta name="keywords" content="macdio 隐私政策, macdio ios 隐私, macdio mac 隐私, 电台应用隐私, 网络电台隐私">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://macdio.app/privacy.html"><meta property="og:title" content="隐私政策：Macdio 网络电台">
-<meta property="og:description" content="Macdio 隐私政策。没有个人数据，没有分析，没有追踪。可选的新剧集通知会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
+<meta property="og:description" content="Macdio 隐私政策：没有个人数据，没有分析，没有追踪。可选的剧集提醒会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
 <meta name="twitter:title" content="隐私政策：Macdio 网络电台">
-<meta name="twitter:description" content="Macdio 隐私政策。没有个人数据，没有分析，没有追踪。可选的新剧集通知会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
+<meta name="twitter:description" content="Macdio 隐私政策：没有个人数据，没有分析，没有追踪。可选的剧集提醒会发送什么，以及 iOS、macOS、tvOS 和 watchOS 各自的政策。">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/privacy.html">
@@ -54,7 +54,7 @@
     <a class="info-card" href="privacy-ios.html"><h2>iOS · iPhone · iPad · CarPlay <span class="ic-arrow">→</span></h2><p>Macdio 在 iPhone、iPad 和 CarPlay 上如何处理数据。</p></a>
     <a class="info-card" href="privacy-macos.html"><h2>macOS <span class="ic-arrow">→</span></h2><p>App Sandbox、权限，以及你 Mac 上的本地录音。</p></a>
     <a class="info-card" href="privacy-tvos.html"><h2>tvOS · Apple TV <span class="ic-arrow">→</span></h2><p>客厅里只做流媒体播放的隐私细节。</p></a>
-    <a class="info-card" href="privacy-watchos.html"><h2>watchOS · Apple Watch <span class="ic-arrow">→</span></h2><p>复杂功能和手表上的数据处理。</p></a>
+    <a class="info-card" href="privacy-watchos.html"><h2>watchOS · Apple Watch <span class="ic-arrow">→</span></h2><p>通过手表自己的网络连接播放，以及手表上的数据处理。</p></a>
   </div>
 
   <h2 class="sec reveal">总体概述</h2>
@@ -80,6 +80,7 @@
     <li><strong>LRCLIB</strong>，用于正在播放歌曲的同步歌词。</li>
     <li><strong>iTunes Search API</strong>，用于专辑封面和曲目详情。</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong>，用于不提供台标的电台的台标。只发送电台的网站域名。</li>
+    <li><strong>Apple ShazamKit</strong>，用于 Song ID。发送到 Apple Shazam 服务的是流的一段简短音频签名，而不是录音，用来找出这首歌。从不使用麦克风。</li>
     <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>，用于播客搜索、榜单和分类。</li>
   </ul>
   <p class="reveal">每个服务只收到一次请求所需的内容，比如一个歌名或一个搜索词。不会发送任何关于你或你设备的标识符。</p>
@@ -89,6 +90,9 @@
 
   <h2 class="sec reveal">音频与录音</h2>
   <p class="reveal">你用 Macdio 做的录音留在你的设备上。它们从不上传或分享。</p>
+
+  <h2 class="sec reveal">本网站</h2>
+  <p class="reveal">macdio.app 用 Google Analytics 统计访问量，它会设置 Cookie 来区分不同的访问；同时也用 Cloudflare Web Analytics，它不设置 Cookie。电台目录页面从你的浏览器连接 Radio Browser，“新”标记会向本站自己的服务器请求最新的更新说明。<a class="inline" href="transparency.html">透明度页面</a>列出了所有服务。</p>
 
   <h2 class="sec reveal">儿童隐私</h2>
   <p class="reveal">Macdio 不会有意收集任何人的个人数据，包括 13 岁以下的儿童。上面描述的通知数据不是个人数据，也不与任何人关联。</p>

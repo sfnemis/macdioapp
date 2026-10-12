@@ -2,12 +2,12 @@
 title: "Mac 和 iPhone 上最好的网络电台应用（2026）"
 description: "七款支持 Mac、iPhone、iPad、Apple Watch 和 Apple TV 的网络电台应用，按价格、电台数量、录音和广告对比，每个数字都来自 App Store。"
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Mac 上最好的网络电台应用是哪个？"
-    a: "取决于你想怎么付钱。Macdio 一次购买，没有广告，有录音和歌曲识别，需要 macOS 26。Eter 和 Broadcasts 都可以免费试用，一次性解锁，能在较旧的 macOS 版本上运行。myTuner Radio Pro 是 Mac App Store 上单独的一个应用，9.99 美元。"
+    a: "取决于你想怎么付钱。Macdio 一次购买，没有广告，有录音和歌曲识别，需要 macOS 26。Eter 可以免费试用，一次性解锁；Broadcasts 免费提供少量电台，其余部分需要订阅；两者都能在较旧的 macOS 版本上运行。myTuner Radio Pro 是 Mac App Store 上单独的一个应用，9.99 美元。"
   - q: "哪些网络电台应用没有广告？"
-    a: "Macdio 没有广告，也没有 App 内购买。Eter 和 Broadcasts 的 App Store 页面没有提到广告，而是出售一次性解锁。Simple Radio 在免费版里显示展示广告，购买 Premium 后去除；TuneIn 出售 Premium 订阅，宣传的是无广告新闻和无广告音乐。"
+    a: "Macdio 没有广告，也没有 App 内购买。Eter 和 Broadcasts 的 App Store 页面没有提到广告；Eter 出售一次性解锁，Broadcasts 出售订阅。Simple Radio 在免费版里显示展示广告，购买 Premium 后去除；TuneIn 出售 Premium 订阅，宣传的是无广告新闻和无广告音乐。"
   - q: "这些应用有多少个电台？"
     a: "2026年9月14日 App Store 上宣传的数字是：TuneIn 100,000 多个，Simple Radio 90,000 多个，Macdio 60,000 多个，myTuner Radio 50,000 个。Eter、Broadcasts 和 Radio Garden 没有公布数字。这些应用大多取自同样的公共目录，所以这些数字更多反映的是各家怎么计数，而不是你实际能听到什么。"
   - q: "有哪个能录电台节目吗？"
@@ -18,7 +18,7 @@ faq:
 
 每一款要花多少钱、实际能做什么、适合谁选。作者是其中一款应用的开发者。
 
-**对大多数人来说，选择取决于你想怎么付钱。TuneIn 和 Simple Radio 免费，带广告。Eter 和 Broadcasts 可以免费试用，一次性解锁。Macdio 一次性 14.99 美元，涵盖每一台 Apple 设备，没有广告，也没有订阅，而且是七款里唯一宣传录音功能的。Radio Garden 适合装来浏览，而不是用来日常收听。**
+**对大多数人来说，选择取决于你想怎么付钱。TuneIn 和 Simple Radio 免费，带广告。Eter 可以免费试用，一次性解锁；Broadcasts 免费提供少量电台，其余部分需要订阅。Macdio 一次性 14.99 美元，涵盖每一台 Apple 设备，没有广告，也没有订阅，而且是七款里唯一宣传录音功能的。Radio Garden 适合装来浏览，而不是用来日常收听。**
 
 ## 这些信息从哪里来
 
@@ -32,7 +32,7 @@ Macdio 是我写的，所以读关于它的那一节时，请记住这一点。�
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone、iPad、Mac、TV、Watch | 60,000+ | 14.99 USD 一次性 | 有，按曲目分割 | 无 |
 | Eter | iPhone、iPad、Mac、TV、Watch | 未公布 | 免费，一次性解锁 | 未宣传 | 未宣传有广告 |
-| Broadcasts | iPhone、iPad、Mac、TV、Watch | 未公布 | 免费，一次性解锁 | 未宣传 | 未宣传有广告 |
+| Broadcasts | iPhone、iPad、Mac、TV、Watch | 未公布 | 免费，订阅每月 1.99 USD 起 | 未宣传 | 未宣传有广告 |
 | Simple Radio | iPhone、iPad、Watch | 90,000+ | 免费，Premium 购买 | 未宣传 | 有，展示广告 |
 | myTuner Radio | iPhone、iPad、TV、Watch、Mac 版 Pro 应用 | 50,000 | 免费，订阅每周 0.99 USD 起 | 未宣传 | 未说明 |
 | TuneIn | iPhone、iPad、TV、Watch、智能音箱 | 100,000+ | 免费，Premium 订阅 | 未宣传 | 有，Premium 可减少 |
@@ -42,7 +42,7 @@ Macdio 是我写的，所以读关于它的那一节时，请记住这一点。�
 
 ## Macdio，适合宁愿一次买断的人
 
-Macdio 在美国 App Store 售价 14.99 美元，一次付清，通过通用购买涵盖 iPhone、iPad、Mac、Apple TV 和 Apple Watch。没有广告，没有 App 内购买，也没有账户。它带有来自 RadioBrowser 目录的 60,000 多个电台，外加你自己粘贴进去的任何流地址。
+Macdio 在美国 App Store 售价 14.99 美元，一次付清，通过通用购买涵盖 iPhone、iPad、Mac、Apple TV 和 Apple Watch。没有广告，没有 App 内购买，也没有账户。它带有来自 Radio Browser 目录的 60,000 多个电台，外加你自己粘贴进去的任何流地址。
 
 在别处很难找到的功能是录音和歌曲识别。它录制的是流本身，而不是扬声器的输出，按曲目分割会把一次录音切成每首歌一个文件，每个都带名字和封面，[录音指南](/guides/record-internet-radio.html)里有详细介绍。歌曲识别从流中读取音频，所以手机放在口袋里也照样工作，应用也从来不请求麦克风权限。同步歌词随你听到的内容按时滚动。收藏和历史通过 iCloud 在设备之间同步，手表应用通过 LTE 播放，附近不需要 iPhone。
 
@@ -52,7 +52,7 @@ Macdio 在美国 App Store 售价 14.99 美元，一次付清，通过通用购�
 
 ## Eter，越用越好的免费选择
 
-Apparent Software 的 Eter 免费下载，运行在 macOS、iOS、iPadOS、watchOS 和 tvOS 上，并支持 CarPlay。它搜索 radio-browser.info 数据库，再加上一份精选的推荐电台列表，你也可以添加自己的任何流地址。一次性的 App 内购买可以解锁保存收藏，并隐藏推荐列表，让你只看到自己的电台。页面上还提到了睡眠定时器，而且即使不解锁，收听也不限时间、完全免费。
+Apparent Software 的 Eter 免费下载，运行在 macOS、iOS、iPadOS、watchOS 和 tvOS 上，并支持 CarPlay。它搜索 Radio Browser 数据库，再加上一份精选的推荐电台列表，你也可以添加自己的任何流地址。一次性的 App 内购买可以解锁保存收藏，并隐藏推荐列表，让你只看到自己的电台。页面上还提到了睡眠定时器，而且即使不解锁，收听也不限时间、完全免费。
 
 它的 App Store 页面没有公布电台数量，也没有宣传录音。最低要求是 iOS 16，所以它能支持的机型比 Macdio 往前多好几代。
 
@@ -60,7 +60,7 @@ Apparent Software 的 Eter 免费下载，运行在 macOS、iOS、iPadOS、watch
 
 ## Broadcasts，适合自己整理电台列表的人
 
-Steven Troughton-Smith 开发的 Broadcasts 走的是和庞大目录相反的路线：你把自己真正常听的电台建成一个资料库，它以封面网格的方式展示出来。免费版的资料库大小有限，完整版解锁会去掉这个限制，并加上一个带电台和曲目封面的正在播放界面。它通过 iCloud 在 iPhone、iPad、Mac、Apple Watch 和 Apple TV 之间同步资料库，属于通用购买，支持经过认证的车机上的 CarPlay，并在电台不提供元数据时用 Shazam（测试版）来补全。
+Steven Troughton-Smith 开发的 Broadcasts 走的是和庞大目录相反的路线：你把自己真正常听的电台建成一个资料库，它以封面网格的方式展示出来。免费版只能保存少量电台，每月 1.99 美元或每年 11.99 美元的订阅会去掉这个限制，并加上一个带电台和曲目封面的正在播放界面。它通过 iCloud 在 iPhone、iPad、Mac、Apple Watch 和 Apple TV 之间同步资料库，属于通用购买，支持经过认证的车机上的 CarPlay，并在电台不提供元数据时用 Shazam（测试版）来补全。
 
 页面上没有提到录音，也没有宣传电台数量，因为目录不是这个应用的重点。
 
@@ -76,7 +76,7 @@ Mac App Store 页面上没有 Mac 应用，没有提到录音，最低要求是 
 
 ## myTuner Radio，有 Mac 版的全球目录
 
-Appgeneration 的 myTuner Radio 宣传有 50,000 个电台，支持 Apple Watch、Apple TV 和 CarPlay。iPhone 应用免费，订阅价格从每周 0.99 美元到六个月 7.99 美元不等，Mac App Store 上还有一个单独的 myTuner Radio Pro，售价 9.99 美元。如果你订阅了 Apple Music，它也能连接 Apple Music 使用播放列表。
+Appgeneration 的 myTuner Radio 宣传有 50,000 个电台，支持 Apple Watch、Apple TV 和 CarPlay。iPhone 应用免费，订阅价格从每周 0.99 美元到每年 34.99 美元不等，Mac App Store 上还有一个单独的 myTuner Radio Pro，售价 9.99 美元。如果你订阅了 Apple Music，它也能连接 Apple Music 使用播放列表。
 
 页面没有描述免费版的广告情况，所以这里不做任何判断，也没有提到录音。最低要求是 iOS 15。
 
@@ -110,7 +110,7 @@ Apple Music 有电台，但它是一个附带电台的音乐订阅，而不是�
 
 ## 一分钟内怎么选
 
-先从钱说起。如果你一分钱都不想花，Eter 是最好的免费体验，Simple Radio 是最容易交给别人用的。如果你不喜欢订阅但愿意一次付清，Macdio、Broadcasts 和 myTuner Radio Pro 都是一次性购买，性格却很不一样：一个完整的播放器、一个精心整理的资料库，以及一个目录。
+先从钱说起。如果你一分钱都不想花，Eter 是最好的免费体验，Simple Radio 是最容易交给别人用的。如果你不喜欢订阅但愿意一次付清，Macdio、Eter 和 myTuner Radio Pro 都是一次性购买，性格却很不一样：一个完整的播放器、一个轻巧的目录播放器，以及一个较老的 Mac 专用目录。精心整理资料库的 Broadcasts 已经改成了订阅。
 
 然后看设备清单。较旧的 iPhone 或 Intel Mac 会立刻排除 Macdio，指向 Eter 或 Broadcasts。厨房里的智能音箱指向 TuneIn。跑步时不带手机、只戴 Apple Watch，就只剩下能在手表本身上串流的应用。
 
@@ -120,11 +120,11 @@ Apple Music 有电台，但它是一个附带电台的音乐订阅，而不是�
 
 ### Mac 上最好的网络电台应用是哪个？
 
-取决于你想怎么付钱。Macdio 一次购买，没有广告，有录音和歌曲识别，需要 macOS 26。Eter 和 Broadcasts 都可以免费试用，一次性解锁，能在较旧的 macOS 版本上运行。myTuner Radio Pro 是 Mac App Store 上单独的一个应用，9.99 美元。
+取决于你想怎么付钱。Macdio 一次购买，没有广告，有录音和歌曲识别，需要 macOS 26。Eter 可以免费试用，一次性解锁；Broadcasts 免费提供少量电台，其余部分需要订阅；两者都能在较旧的 macOS 版本上运行。myTuner Radio Pro 是 Mac App Store 上单独的一个应用，9.99 美元。
 
 ### 哪些网络电台应用没有广告？
 
-Macdio 没有广告，也没有 App 内购买。Eter 和 Broadcasts 的 App Store 页面没有提到广告，而是出售一次性解锁。Simple Radio 在免费版里显示展示广告，购买 Premium 后去除；TuneIn 出售 Premium 订阅，宣传的是无广告新闻和无广告音乐。
+Macdio 没有广告，也没有 App 内购买。Eter 和 Broadcasts 的 App Store 页面没有提到广告；Eter 出售一次性解锁，Broadcasts 出售订阅。Simple Radio 在免费版里显示展示广告，购买 Premium 后去除；TuneIn 出售 Premium 订阅，宣传的是无广告新闻和无广告音乐。
 
 ### 这些应用有多少个电台？
 
