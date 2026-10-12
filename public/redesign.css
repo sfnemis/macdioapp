@@ -817,3 +817,8 @@ body > footer{margin-top:auto;}
 /* Author line at the end of a marketing page: who wrote it and when it was last checked. */
 .author-line { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-3); }
 .author-line a { color: #c4b5fd; }
+
+/* Language switcher in the footer (tracker W4). */
+.lang-select select { appearance: none; -webkit-appearance: none; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 6px 28px 6px 12px; color: var(--text-2); font: inherit; font-size: 13px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 5 5-5' stroke='%236e6e7a' fill='none' stroke-width='1.2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 11px center; }
+.lang-select select:hover, .lang-select select:focus { border-color: rgba(168,85,247,.5); outline: none; color: var(--text); }

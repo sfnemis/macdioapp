@@ -3,11 +3,12 @@
 // then the Guides hub. Starlight's default links the locale root through its
 // path formatter, which under build.format "file" becomes "/tr.html".
 import { localePath } from '../site/paths.mjs';
+import { t } from '../i18n/index.mjs';
 const { locale } = Astro.locals.starlightRoute;
 const code = locale ?? 'en';
 ---
 <span class="guides-brand">
   <a class="guides-brand" href={localePath(code, '/')}><img src="/icon-192.png" alt="" width="192" height="192">Macdio</a>
   <span class="sep" aria-hidden="true">/</span>
-  <a class="guides-brand hub" href={localePath(code, '/guides/')}>Guides</a>
+  <a class="guides-brand hub" href={localePath(code, '/guides/')}>{t(code).guides.h1}</a>
 </span>

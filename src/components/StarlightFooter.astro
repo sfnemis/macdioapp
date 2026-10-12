@@ -2,9 +2,15 @@
 // Starlight's footer (last updated, previous/next) with the author line every
 // guide carries: who wrote it and when it was last checked.
 import Default from '@astrojs/starlight/components/Footer.astro';
-const { entry } = Astro.locals.starlightRoute;
+import { t } from '../i18n/index.mjs';
+import { byCode } from '../site/locales.mjs';
+import { localePath } from '../site/paths.mjs';
+const { entry, locale } = Astro.locals.starlightRoute;
+const code = locale ?? 'en';
+const g = t(code).guides;
 const checked = entry.data.lastUpdated instanceof Date ? entry.data.lastUpdated : null;
-const date = checked ? checked.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
+const date = checked ? checked.toLocaleDateString(byCode(code).lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
+const line = g.writtenBy.replace(/href="(\/[^"]*)"/g, (m, p) => `href="${localePath(code, p)}"`) + (date ? ' ' + g.checkedOn.replace('{date}', date) : '');
 ---
-<p class="guide-author">Written by <a href="/presskit.html">Sait Firat NEMIS</a>, the developer of Macdio.{date && ` Checked on ${date}.`}</p>
+<p class="guide-author" set:html={line} />
 <Default {...Astro.props}><slot /></Default>

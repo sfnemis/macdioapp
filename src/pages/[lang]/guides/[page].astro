@@ -1,0 +1,11 @@
+---
+// The hub index for every locale whose guides exist as Markdown (Starlight
+// renders the guides themselves from src/content/docs/<code>/guides/).
+import GuidesIndex from '../../../templates/GuidesIndex.astro';
+import { guideLocales } from '../../../data/guides.mjs';
+import { DEFAULT } from '../../../site/locales.mjs';
+export function getStaticPaths() {
+  return guideLocales().filter((l) => l.code !== DEFAULT).map((l) => ({ params: { lang: l.code, page: 'index' } }));
+}
+---
+<GuidesIndex lang={Astro.params.lang} />

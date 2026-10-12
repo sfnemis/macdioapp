@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { sidebar } from './src/data/guides.mjs';
+import { sidebar, guideLocales } from './src/data/guides.mjs';
 
-// Starlight owns Astro's i18n config (setting both is an error). The guides
-// are English only until a locale has translated guides under
-// src/content/docs/<code>/; then that locale is added here (W3). The
-// marketing pages handle their own locales (src/legacy/<code>/).
+// Starlight owns Astro's i18n config (setting both is an error). A locale
+// joins the guide hub when its guides exist under src/content/docs/<code>/
+// (guideLocales); the marketing pages handle their own locales through
+// src/legacy/<code>/.
+const starlightLocales = Object.fromEntries(guideLocales().map((l) => [l.code === 'en' ? 'root' : l.code, { label: l.label, lang: l.lang, ...(l.dir === 'rtl' ? { dir: 'rtl' } : {}) }]));
 export default defineConfig({
   site: 'https://macdio.app',
   // file: features.astro -> /features.html and Starlight writes ".html" on every
@@ -26,7 +27,8 @@ export default defineConfig({
     { name: '@astrojs/sitemap', hooks: {} },
     starlight({
       title: 'Macdio Guides',
-      locales: { root: { label: 'English', lang: 'en' } },
+      locales: starlightLocales,
+      defaultLocale: 'root',
       sidebar: sidebar(),
       social: [
         { icon: 'x.com', label: 'Macdio on X', href: 'https://x.com/macdioapp' },
@@ -35,6 +37,8 @@ export default defineConfig({
         { icon: 'youtube', label: 'Macdio on YouTube', href: 'https://www.youtube.com/@macdioapp' },
       ],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
+      // src/pages/404.astro is the site's 404 in the marketing shell.
+      disable404Route: true,
       pagefind: true,
       lastUpdated: true,
       credits: false,

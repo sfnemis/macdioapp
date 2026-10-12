@@ -57,7 +57,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <body>
 <LegacyNav lang={lang} />
 <main {...mainAttrs} set:html={page.main} />
-<LegacyFooter lang={lang} />
+<LegacyFooter lang={lang} path={path} />
 <script is:inline src="/parts.js"></script>
 <script is:inline src="/redesign.js"></script>
 <script is:inline src="/hub-badge.js" defer></script>

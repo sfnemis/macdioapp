@@ -1,23 +1,5 @@
 ---
-// The guide hub index with the full Starlight chrome (sidebar, search,
-// pager). It lives here so its URL is exactly /guides/ (guides/index.html
-// under build.format "file"); a content page would be written as guides.html.
-// The nine guides themselves are Markdown under src/content/docs/guides/.
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { LinkCard, CardGrid } from '@astrojs/starlight/components';
-import { GROUPS } from '../../data/guides.mjs';
+import GuidesIndex from '../../templates/GuidesIndex.astro';
 export function getStaticPaths() { return [{ params: { page: 'index' } }]; }
-const title = 'Internet Radio Guides for Mac, iPhone, Watch and CarPlay';
-const description = 'Short, practical guides for internet radio listeners on Mac, iPhone, iPad, Apple Watch, Apple TV and CarPlay, written by the developer of Macdio.';
 ---
-<StarlightPage frontmatter={{ title: 'Guides', description, tableOfContents: false, head: [{ tag: 'title', content: title }] }}>
-  <p>Short, practical answers to the questions internet radio listeners actually ask, written by the developer of Macdio. Each guide names the devices it applies to and ends with the questions people search for.</p>
-  {GROUPS.map((g) => (
-    <Fragment>
-      <h2 id={g.label.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>{g.label}</h2>
-      <CardGrid>{g.guides.map((x) => <LinkCard title={x.title} description={x.description} href={`/guides/${x.slug}.html`} />)}</CardGrid>
-    </Fragment>
-  ))}
-  <h2 id="the-app-behind-the-guides">The app behind the guides</h2>
-  <p>Macdio is a native internet radio and podcast player for <a href="/iphone.html">iPhone</a>, <a href="/mac.html">Mac</a>, <a href="/apple-tv.html">Apple TV</a>, <a href="/ipad.html">iPad</a> and <a href="/apple-watch.html">Apple Watch</a>. 60,000+ stations, recording, live lyrics and microphone-free song identification, in one purchase with no subscription.</p>
-</StarlightPage>
+<GuidesIndex lang="en" />

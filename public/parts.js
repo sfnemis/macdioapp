@@ -68,7 +68,19 @@
     });
   }
 
-  function init() { bindNav(); bindLightbox(); }
+  // Language switcher in the footer: remember the choice for a year (the
+  // Worker reads the cookie when a visitor lands on "/") and go there.
+  function bindLang() {
+    var sel = document.getElementById('langSelect');
+    if (!sel) return;
+    sel.addEventListener('change', function () {
+      var opt = sel.options[sel.selectedIndex];
+      document.cookie = 'lang=' + opt.value + '; Path=/; Max-Age=31536000; SameSite=Lax';
+      window.location.href = opt.getAttribute('data-href');
+    });
+  }
+
+  function init() { bindNav(); bindLightbox(); bindLang(); }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

@@ -1,0 +1,12 @@
+---
+import Legacy from '../../../layouts/Legacy.astro';
+import { liveLocales, DEFAULT } from '../../../site/locales.mjs';
+import { legacyPages, loadPage } from '../../../site/legacy.mjs';
+export function getStaticPaths() {
+  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) =>
+    legacyPages(l.code).filter((p) => /^\/compare\/[^/]+\.html$/.test(p)).map((p) => ({ params: { lang: l.code, page: p.slice('/compare/'.length, -5) } })));
+}
+const { lang, page } = Astro.params;
+const path = `/compare/${page}.html`;
+---
+<Legacy lang={lang} path={path} page={loadPage(lang, path)} />

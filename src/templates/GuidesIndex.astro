@@ -1,0 +1,25 @@
+---
+// The guide hub index with the full Starlight chrome (sidebar, search,
+// pager), one per locale. It lives in src/pages so its URL is exactly
+// /guides/ (guides/index.html under build.format "file"); a content page
+// would be written as guides.html. The guides themselves are Markdown under
+// src/content/docs/[<code>/]guides/.
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { t } from '../i18n/index.mjs';
+import { localePath } from '../site/paths.mjs';
+const { lang } = Astro.props;
+const g = t(lang).guides;
+const behind = g.behind.replace(/href="(\/[^"]*)"/g, (m, p) => `href="${localePath(lang, p)}"`);
+---
+<StarlightPage frontmatter={{ title: g.h1, description: g.description, tableOfContents: false, head: [{ tag: 'title', content: g.title }] }}>
+  <p>{g.intro}</p>
+  {g.groups.map((group) => (
+    <Fragment>
+      <h2 id={group.label.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '-')}>{group.label}</h2>
+      <CardGrid>{group.guides.map((x) => <LinkCard title={x.title} description={x.description} href={localePath(lang, `/guides/${x.slug}.html`)} />)}</CardGrid>
+    </Fragment>
+  ))}
+  <h2 id="the-app-behind-the-guides">{g.behindH2}</h2>
+  <p set:html={behind} />
+</StarlightPage>
