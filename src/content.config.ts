@@ -1,6 +1,7 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
-import { docsSchema } from '@astrojs/starlight/schema';
+import { i18nLoader } from '@astrojs/starlight/loaders';
+import { docsSchema, i18nSchema } from '@astrojs/starlight/schema';
 import { liveLocales, DEFAULT } from './site/locales.mjs';
 
 // Guide pages carry their first publication date and their FAQ pairs in the
@@ -13,7 +14,11 @@ import { liveLocales, DEFAULT } from './site/locales.mjs';
 const folders = liveLocales().map((l) => (l.code === DEFAULT ? 'guides' : `${l.code}/guides`));
 const pattern = `{${folders.map((f) => `${f}/**/[^_]*.{md,mdx}`).join(',')}}`;
 
+// Starlight ships its interface strings as zh-CN and zh-TW; the site's locales
+// are zh-Hans and zh-Hant, so the same strings are provided under those tags
+// (src/content/i18n/), or the Chinese guides show "On this page" in English.
 export const collections = {
+  i18n: defineCollection({ loader: i18nLoader(), schema: i18nSchema() }),
   docs: defineCollection({
     loader: glob({ base: './src/content/docs', pattern }),
     schema: docsSchema({

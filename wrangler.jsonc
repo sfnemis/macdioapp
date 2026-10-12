@@ -6,7 +6,9 @@
   // until .assetsignore happened to name it. That leaked the wrangler account
   // cache, the worker sourcemap, CLAUDE.local.md, docs/ and .serena/ across
   // three separate incidents. Anything outside ./dist cannot ship now.
-  // Deploy: npx wrangler deploy   (needs `npx wrangler login` once)
+  // Deploy: npm run deploy (tests, build with every check, wrangler deploy,
+  // then scripts/check-public.sh and scripts/check-worker.mjs against the live
+  // host). A bare `npx wrangler deploy` skips the checks; do not use it.
   // Custom domain: add macdio.app under Workers > macdio-web > Settings > Domains & Routes
   "name": "macdio-web",
   "main": "worker.js",

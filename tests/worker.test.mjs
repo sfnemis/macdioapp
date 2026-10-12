@@ -50,13 +50,13 @@ test('/ redirects a Turkish browser, serves English to crawlers and to English b
   const r1 = await get('/', { 'Accept-Language': 'tr-TR,tr;q=0.9' });
   assert.equal(r1.status, 302);
   assert.equal(r1.headers.get('Location'), 'https://macdio.app/tr/');
-  assert.equal(r1.headers.get('Vary'), 'Accept-Language');
+  assert.equal(r1.headers.get('Vary'), 'Accept-Language, Cookie');
   const r2 = await get('/', { 'Accept-Language': 'tr', 'User-Agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)' });
   assert.equal(r2.status, 200);
   assert.equal(await r2.text(), 'asset:/index.html');
   const r3 = await get('/', { 'Accept-Language': 'en-US,en;q=0.9' });
   assert.equal(r3.status, 200);
-  assert.equal(r3.headers.get('Vary'), 'Accept-Language');
+  assert.equal(r3.headers.get('Vary'), 'Accept-Language, Cookie');
   const r4 = await get('/', {});
   assert.equal(r4.status, 200);
 });
@@ -94,7 +94,7 @@ test('/api/hub returns the three newest release notes with ids, and a 502 with a
   const fakeFetch = async (url) => { assert.match(url, /hub\.devdio\.pro\/c\/macdio\/release-notes\/6\.json/); return new Response(JSON.stringify({ topic_list: { topics } }), { status: 200 }); };
   const res = await handle(new Request('https://macdio.app/api/hub'), env, ['en'], fakeFetch);
   assert.equal(res.status, 200);
-  assert.match(res.headers.get('Cache-Control'), /max-age=300/);
+  assert.match(res.headers.get('Cache-Control'), /max-age=600/);
   const body = await res.json();
   assert.deepEqual(body.releaseNotes.map((t) => t.id), [109, 105, 102]);
   assert.equal(body.releaseNotes[0].url, 'https://hub.devdio.pro/t/macdio-3-0/109');
@@ -114,4 +114,57 @@ test('a miss is answered with the site 404 page, status 404; directory URLs stil
   const guides = await handle(new Request('https://macdio.app/guides/'), assets, ['en']);
   assert.equal(guides.status, 200);
   assert.equal(await guides.text(), 'page:/guides/index.html');
+});
+
+// Asset mock that knows which files exist, for the routing tests below.
+const files = {
+  '/index.html': 'home', '/tr/index.html': 'tr home', '/guides/index.html': 'guides', '/tr/guides/index.html': 'tr guides',
+  '/404.html': 'not found', '/tr/404.html': 'bulunamadı',
+};
+const assetsEnv = { ASSETS: { fetch: async (req) => { const p = new URL(req.url).pathname; return p in files ? new Response(files[p], { status: 200, headers: { 'Content-Type': 'text/html' } }) : new Response('', { status: 404 }); } } };
+
+test('a directory URL without its slash is sent to the slashed URL', async () => {
+  for (const [from, to] of [['/tr', '/tr/'], ['/guides', '/guides/'], ['/tr/guides', '/tr/guides/']]) {
+    const r = await handle(new Request('https://macdio.app' + from + '?x=1'), assetsEnv, ['en', 'tr']);
+    assert.equal(r.status, 301, from);
+    assert.equal(r.headers.get('Location'), 'https://macdio.app' + to + '?x=1');
+  }
+  const miss = await handle(new Request('https://macdio.app/nothing'), assetsEnv, ['en', 'tr']);
+  assert.equal(miss.status, 404);
+});
+
+test('a miss under a locale gets that locale 404 page', async () => {
+  const r = await handle(new Request('https://macdio.app/tr/nope.html'), assetsEnv, ['en', 'tr']);
+  assert.equal(r.status, 404);
+  assert.equal(await r.text(), 'bulunamadı');
+  const en = await handle(new Request('https://macdio.app/nope.html'), assetsEnv, ['en', 'tr']);
+  assert.equal(await en.text(), 'not found');
+});
+
+test('the English home varies on the language and the cookie and is not shared-cached', async () => {
+  const r = await handle(new Request('https://macdio.app/', { headers: { 'Accept-Language': 'en' } }), assetsEnv, ['en', 'tr']);
+  assert.equal(r.status, 200);
+  assert.match(r.headers.get('Vary'), /Accept-Language/);
+  assert.match(r.headers.get('Vary'), /Cookie/);
+  assert.match(r.headers.get('Cache-Control'), /private/);
+});
+
+test('/api/hub is served from a cache when present, sets nosniff, and hides upstream errors', async () => {
+  const store = new Map();
+  const cache = { match: async (req) => store.get(req.url), put: async (req, res) => { store.set(req.url, res); } };
+  const waits = [];
+  const ctx = { waitUntil: (p) => waits.push(p) };
+  let calls = 0;
+  const topics = [{ id: 109, slug: 'a', title: 'A', created_at: '2026-09-30T10:00:00Z', category_id: 6 }];
+  const fetchFn = async () => { calls++; return new Response(JSON.stringify({ topic_list: { topics } }), { status: 200 }); };
+  const first = await handle(new Request('https://macdio.app/api/hub'), assetsEnv, ['en'], fetchFn, ctx, cache);
+  await Promise.all(waits);
+  assert.equal(first.status, 200);
+  assert.equal(first.headers.get('X-Content-Type-Options'), 'nosniff');
+  const second = await handle(new Request('https://macdio.app/api/hub'), assetsEnv, ['en'], fetchFn, ctx, cache);
+  assert.equal(second.status, 200);
+  assert.equal(calls, 1);
+  const broken = await handle(new Request('https://macdio.app/api/hub'), assetsEnv, ['en'], async () => { throw new Error('<html>secret upstream page</html>'); }, ctx, null);
+  assert.equal(broken.status, 502);
+  assert.doesNotMatch(await broken.text(), /secret/);
 });

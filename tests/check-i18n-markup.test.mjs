@@ -24,3 +24,11 @@ test('a guide keeps its headings, table rows, list items, frontmatter keys and f
   assert.match(compareMd(enMd, ok.replace('### İki\n', ''))[0], /### headings: 1 in en, 0 here/);
   assert.match(compareMd(enMd, ok.replace('  - q: "Q1"\n    a: "A1"\n', ''))[0], /faq entries: 1 vs 0/);
 });
+
+test('a dropped rel, a changed target or id, or an added event handler is a markup difference', () => {
+  const en = '<a class="x" href="https://y.z" target="_blank" rel="noopener" id="a1">Y</a><img src="/i.png" alt="An image">';
+  assert.deepEqual(compareHtml(en, en.replace('>Y<', '>Ü<').replace('An image', 'Bir görsel')), []);
+  assert.match(compareHtml(en, en.replace(' rel="noopener"', ''))[0], /markup differs/);
+  assert.match(compareHtml(en, en.replace('id="a1"', 'id="b1"'))[0], /markup differs/);
+  assert.match(compareHtml(en, en.replace('<img ', '<img onerror="alert(1)" '))[0], /markup differs/);
+});

@@ -11,9 +11,10 @@
         var open = navMore.classList.toggle('open');
         navMoreBtn.setAttribute('aria-expanded', open);
       });
-      document.addEventListener('click', function () {
-        navMore.classList.remove('open');
-        navMoreBtn.setAttribute('aria-expanded', 'false');
+      var closeMore = function () { navMore.classList.remove('open'); navMoreBtn.setAttribute('aria-expanded', 'false'); };
+      document.addEventListener('click', closeMore);
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navMore.classList.contains('open')) { closeMore(); navMoreBtn.focus(); }
       });
     }
     var burger = document.getElementById('navBurger');
@@ -68,15 +69,13 @@
     });
   }
 
-  // Language switcher in the footer: remember the choice for a year (the
-  // Worker reads the cookie when a visitor lands on "/") and go there.
+  // Language menu in the footer: remember the choice for a year (the Worker
+  // reads the cookie when a visitor lands on "/"); the link itself navigates.
   function bindLang() {
-    var sel = document.getElementById('langSelect');
-    if (!sel) return;
-    sel.addEventListener('change', function () {
-      var opt = sel.options[sel.selectedIndex];
-      document.cookie = 'lang=' + opt.value + '; Path=/; Max-Age=31536000; SameSite=Lax';
-      window.location.href = opt.getAttribute('data-href');
+    document.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
+      a.addEventListener('click', function () {
+        document.cookie = 'lang=' + a.getAttribute('data-lang') + '; Path=/; Max-Age=31536000; SameSite=Lax';
+      });
     });
   }
 

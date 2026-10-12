@@ -33,6 +33,6 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     problems = problems.concat(cssProblems(readFileSync(f, 'utf8'), rel));
   }
   for (const p of problems) console.error(p);
-  console.log(problems.length ? `check-css: ${problems.length} problem(s)` : 'check-css: ok, every colour and font is a token');
+  console.log(problems.length ? `check-css: ${problems.length} problem(s)` : 'check-css: ok, every colour and font under src/ is a token (public/*.css and the legacy pages are not scanned)');
   process.exit(problems.length ? 1 : 0);
 }

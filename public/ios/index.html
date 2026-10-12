@@ -5,28 +5,34 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Macdio for iOS</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-QR2MZ9NF2N');
-
     var destination = 'https://apps.apple.com/app/macdio/id6761737888';
-
-    gtag('event', 'app_store_redirect', {
-      'event_category': 'outbound',
-      'event_label': 'ios_app_store',
-      'event_callback': function() {
+    // The redirect is counted in GA4 on macdio.app only; localhost and
+    // previews go straight to the App Store without a hit.
+    if (location.hostname === 'macdio.app') {
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){dataLayer.push(arguments);};
+      gtag('js', new Date());
+      gtag('config', 'G-QR2MZ9NF2N');
+      var g = document.createElement('script');
+      g.async = true;
+      g.src = 'https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N';
+      document.head.appendChild(g);
+      gtag('event', 'app_store_redirect', {
+        'event_category': 'outbound',
+        'event_label': 'ios_app_store',
+        'event_callback': function() {
+          window.location.replace(destination);
+        },
+        'event_timeout': 2000
+      });
+      // Fallback: redirect after 2s regardless of GA response
+      setTimeout(function() {
         window.location.replace(destination);
-      },
-      'event_timeout': 2000
-    });
-
-    // Fallback: redirect after 2s regardless of GA response
-    setTimeout(function() {
+      }, 2000);
+    } else {
       window.location.replace(destination);
-    }, 2000);
+    }
   </script>
   <style>
     body { margin: 0; display: flex; align-items: center; justify-content: center;

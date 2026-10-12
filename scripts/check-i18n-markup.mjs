@@ -16,7 +16,12 @@ export function skeleton(html) {
     const cls = m[2].match(/\bclass="([^"]*)"/);
     const href = m[2].match(/\bhref="([^"]*)"/);
     const src = m[2].match(/\b(?:src|data-src|data-poster|poster)="([^"]*)"/);
-    return (m[0].startsWith('</') ? '/' : '') + m[1].toLowerCase() + (cls ? '.' + cls[1].trim().split(/\s+/).join('.') : '') + (href ? `[${href[1]}]` : '') + (src ? `(${src[1]})` : '');
+    // Attributes that must not change in a translation (words in alt, title,
+    // aria-label and content may); any event handler is a difference too.
+    const fixed = ['id', 'rel', 'target', 'type', 'role', 'loading', 'width', 'height', 'name', 'for', 'value']
+      .map((a) => [a, m[2].match(new RegExp(`\\b${a}="([^"]*)"`))]).filter(([, v]) => v).map(([a, v]) => `${a}=${v[1]}`);
+    const handlers = [...m[2].matchAll(/\b(on[a-z]+)=/g)].map((h) => h[1]);
+    return (m[0].startsWith('</') ? '/' : '') + m[1].toLowerCase() + (cls ? '.' + cls[1].trim().split(/\s+/).join('.') : '') + (href ? `[${href[1]}]` : '') + (src ? `(${src[1]})` : '') + (fixed.length || handlers.length ? `{${[...fixed, ...handlers].join(',')}}` : '');
   });
 }
 

@@ -26,8 +26,8 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <html lang={locale.lang} dir={locale.dir}>
 <head>
 <meta charset="UTF-8">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
-<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+<!-- GA4 on macdio.app only: localhost, wrangler dev and previews would otherwise count as visits. -->
+<script is:inline>if(location.hostname==='macdio.app'){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N';document.head.appendChild(g);}</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title set:html={page.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')} />
 <meta name="description" content={page.description}>
@@ -56,7 +56,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
-{page.jsonld.map((s) => <script type="application/ld+json" set:html={s} />)}
+{page.jsonld.map((s) => <script type="application/ld+json" set:html={s.replace(/</g, '\\u003c')} />)}
 <link rel="stylesheet" href="/redesign.css">
 </head>
 <body>

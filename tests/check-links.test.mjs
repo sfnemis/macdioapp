@@ -10,3 +10,19 @@ test('linkTargets reads href, src, poster and the clip data attributes, as serve
 test('a percent-encoded URL is checked against the decoded file name', () => {
   assert.deepEqual(linkTargets('<img src="/assets/Popular%20Nearby.webp">'), ['/assets/Popular Nearby.webp']);
 });
+
+test('a link resolves only to a file whose name matches exactly, as on Cloudflare', async () => {
+  const { existsExactly } = await import('../scripts/check-links.mjs');
+  const { mkdtempSync, mkdirSync, writeFileSync } = await import('node:fs');
+  const { join } = await import('node:path');
+  const { tmpdir } = await import('node:os');
+  const dir = mkdtempSync(join(tmpdir(), 'links-'));
+  mkdirSync(join(dir, 'tr'));
+  writeFileSync(join(dir, 'mac.html'), 'x');
+  writeFileSync(join(dir, 'tr', 'index.html'), 'x');
+  assert.equal(existsExactly(dir, '/mac.html'), true);
+  assert.equal(existsExactly(dir, '/Mac.html'), false);
+  assert.equal(existsExactly(dir, '/tr'), false);
+  assert.equal(existsExactly(dir, '/tr/index.html'), true);
+  assert.equal(existsExactly(dir, '/TR/index.html'), false);
+});

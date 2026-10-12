@@ -122,6 +122,34 @@ saying what happened to it.
   coming back in any language. The check found a real app bug on the way:
   AAC recordings lost half their bitrate and their ending when tagged (app
   tracker #570, fixed in code, not yet tested on a device).
+- [x] **W18 GA4 counted localhost and preview loads as visits** (found
+  2026-10-13 by the keyboard test). Every page, and the /ios/ App Store
+  redirect, loaded gtag on any host, so `astro preview`, `wrangler dev` and any
+  test run sent page_view hits to the production property G-QR2MZ9NF2N with
+  `dl=http://localhost/...`. On Sait's Mac the hits happened to die at the home
+  network's DNS (192.168.10.1 answers 0.0.0.0 for analytics.google.com), which
+  hid the problem. GA now loads from an inline script only when
+  `location.hostname` is `macdio.app`; `scripts/check-scripts.mjs` fails on any
+  static gtag tag, guides included. Verified in Chrome: no Google request on
+  localhost, gtag.js loads under https://macdio.app (served from the local
+  build, collect hits blocked by the test). Independent of the consent question
+  in W15.
+- [x] **W19 Review fixes before deploy** (2026-10-12/13). From a fresh review of
+  the v2 infrastructure: hub feed cached at the edge, nosniff, fixed upstream
+  error text; slashless directory URLs 301 to the slashed URL; a miss under a
+  locale gets that locale's 404 page; the English "/" varies on
+  Accept-Language and Cookie and is not shared-cached; JSON-LD escaped and
+  parsed by the build; link check is exact-case; translated markup must keep
+  id/rel/target/type and may not add event handlers; `/index.html` links
+  rewritten to directory URLs; Starlight UI strings in zh-Hans and zh-Hant;
+  footer language picker is a disclosure of plain links (works without script,
+  keyboard reachable, stores the choice); the "New" pill sits beside the logo
+  link, its list follows it in the page with focus moved in and back on
+  Escape, positioned for RTL (an Escape lost to a setTimeout race was found
+  and fixed: 3 of 5 runs failed before, 0 of 9 after); closed menus leave the
+  tab order; breadcrumb names localized; `npm run deploy` runs tests, build,
+  deploy, `check-public.sh` and `scripts/check-worker.mjs` (102 probes) in one
+  command.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
