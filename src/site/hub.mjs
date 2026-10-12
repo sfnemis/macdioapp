@@ -7,7 +7,9 @@ export const RELEASE_NOTES_PATH = '/c/macdio/release-notes/6.json';
 
 export function pickTopics(json, categories, limit) {
   return json.topic_list.topics
-    .filter((t) => !t.pinned && !/^About the /.test(t.title))
+    // Only the category's own "About the ... category" topic is left out. A
+    // release note can be pinned too (3.0.4 was), so pinned is no filter.
+    .filter((t) => !/^About the /.test(t.title))
     .sort((a, b) => b.created_at.localeCompare(a.created_at))
     .slice(0, limit)
     .map((t) => ({ id: t.id, title: t.title, url: `${HUB}/t/${t.slug}/${t.id}`, date: t.created_at.slice(0, 10), category: categories[t.category_id] ?? '' }));
