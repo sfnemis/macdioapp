@@ -18,9 +18,20 @@ saying what happened to it.
   zh-Hant); the site gets the same 14, every page, with hreflang. Today only
   `/tr/` and `/de/` exist, one page each.
 - [ ] **W4 Automatic language by visitor** (Sait, 2026-10-12). The visitor lands
-  in their own language without choosing. Sait asked for country based; see the
-  design spec for why browser language (Accept-Language) is proposed instead,
-  with crawlers never redirected and a manual switcher on every page.
+  in their own language without choosing. Decided 2026-10-12 15:00 (Sait):
+  browser language (Accept-Language), Google's recommended method, not country.
+  Crawlers never redirected, a manual switcher on every page, choice kept in a
+  cookie.
+- [ ] **W5 All site media replaced** (Sait, 2026-10-12). Every screenshot and
+  video on macdio.app today is replaced by the showcase clips and stills made
+  2026-10-12 (`~/MacdioBuild/showcase/media/web/`, 38 clips, iPhone, iPad, Mac,
+  Apple TV, Apple Watch, CarPlay). Old `assets/` media goes.
+- [ ] **W6 SEO and GEO built in from the start** (Sait, 2026-10-12). Deep
+  keyword and competitor analysis before the structure is fixed: "best radio
+  app", "best podcast app", iPhone, Mac, Apple TV terms; competitors TuneIn,
+  Radio Garden, myTuner, Broadcasts, Overcast and the rest of the field. Every
+  page, guide and language is planned against that map; GSC data for the
+  current site is the baseline.
 
 ## 2026-09-14
 
