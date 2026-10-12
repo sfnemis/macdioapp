@@ -1,5 +1,6 @@
 ---
 import Page from '../../templates/Page.astro';
+import Home from '../../templates/Home.astro';
 import { liveLocales, DEFAULT } from '../../site/locales.mjs';
 import { ROOT_PAGES } from '../../site/pages.mjs';
 // "index" is the locale home: under build.format "file" the route /tr/index is
@@ -9,4 +10,4 @@ export function getStaticPaths() {
 }
 const { lang, page } = Astro.params;
 ---
-<Page lang={lang} path={page === 'index' ? '/' : `/${page}.html`} />
+{page === 'index' ? <Home lang={lang} /> : <Page lang={lang} path={`/${page}.html`} />}

@@ -3,4 +3,4 @@ import { t } from '../i18n/index.mjs';
 const { lang, variant = 'fill' } = Astro.props;
 const s = t(lang);
 ---
-<a class={`btn btn--${variant}`} href="https://apps.apple.com/app/macdio/id6761737888" rel="noopener"><span class="btn__long">{s.nav.appStore}</span><span class="btn__short" aria-hidden="true">{s.nav.appStoreShort}</span></a>
+<a class={`btn btn--${variant}`} href="https://apps.apple.com/app/macdio/id6761737888" rel="noopener" aria-label={s.nav.appStore}><span class="btn__long">{s.nav.appStore}</span><span class="btn__short">{s.nav.appStoreShort}</span></a>

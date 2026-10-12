@@ -1,0 +1,8 @@
+---
+import { t } from '../i18n/index.mjs';
+import { longDate } from '../site/format.mjs';
+const { lang, checkedOn } = Astro.props;
+const s = t(lang);
+---
+<p class="author muted small wrap">{s.site.authorLine} {longDate(checkedOn, lang)}.</p>
+<style>.author { padding-block: var(--space-lg); }</style>

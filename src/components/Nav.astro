@@ -43,7 +43,7 @@ const plain = [
     <div class="nav__right">
       <ThemeToggle lang={lang} />
       <details class="mega mega--tools" name="mega">
-        <summary class="nav__link" aria-label={s.nav.language}>{lang.toUpperCase()}</summary>
+        <summary class="nav__link"><span class="visually-hidden">{s.nav.language}: </span>{lang.toUpperCase()}</summary>
         <div class="mega__panel mega__panel--narrow"><LangSwitcher lang={lang} path={path} /></div>
       </details>
       <AppStoreButton lang={lang} variant="fill" />

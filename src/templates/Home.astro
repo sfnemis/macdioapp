@@ -1,0 +1,96 @@
+---
+// Home: Workbench macrostructure. A split opener with a real capture, the
+// dated numbers, a guided tour of the app in use (one capture per block),
+// the other screens, the community hub feed, how the business works, the
+// comparison links, questions people search for, and the author line.
+import Base from '../layouts/Base.astro';
+import Clip from '../components/Clip.astro';
+import AppStoreButton from '../components/AppStoreButton.astro';
+import StatStrip from '../components/StatStrip.astro';
+import HubFeed from '../components/HubFeed.astro';
+import Faq from '../components/Faq.astro';
+import AuthorLine from '../components/AuthorLine.astro';
+import counts from '../data/counts.json';
+import pricing from '../../public/pricing.json';
+import { t } from '../i18n/index.mjs';
+import { localePath } from '../site/paths.mjs';
+import { formatCount } from '../site/format.mjs';
+import { softwareApplication, faqPage, webSite } from '../site/jsonld.mjs';
+const { lang } = Astro.props;
+const s = t(lang);
+const h = s.home;
+const page = s.pages['/'];
+const lede = h.lede.replace('{stations}', formatCount(counts.stations, lang)).replace('{podcasts}', formatCount(counts.podcasts, lang));
+const faq = h.faq.map((f) => ({ q: f.q, a: f.a }));
+const jsonld = [webSite(lang), softwareApplication(lang, counts, pricing), faqPage(faq)];
+const p = (english) => localePath(lang, english);
+---
+<Base lang={lang} path="/" title={page.title} description={page.description} jsonld={jsonld}>
+  <div class="band"><section class="hero wrap">
+    <div class="hero__text">
+      <h1>{h.h1}</h1>
+      <p class="hero__lede">{lede}</p>
+      <div class="hero__cta"><AppStoreButton lang={lang} /><a class="btn btn--chip" href="#tour">{h.secondary}</a></div>
+    </div>
+    <Clip name={h.heroClip} caption={h.heroCaption} priority={true} />
+  </section></div>
+
+  <StatStrip lang={lang} />
+
+  <section id="tour" class="tour wrap" aria-label={h.tourLabel}>
+    {h.tour.map((b, i) => (
+      <article class:list={['tour__block', { 'tour__block--flip': i % 2 === 1 }]}>
+        <Clip name={b.clip} caption={b.caption} />
+        <div class="tour__text"><h2>{b.h}</h2><p>{b.p}</p></div>
+      </article>
+    ))}
+    <aside class="tour__cta"><span>{h.h1}</span><AppStoreButton lang={lang} variant="chip" /></aside>
+  </section>
+
+  <div class="band"><section class="screens wrap">
+    <div class="head-hang"><h2>{h.screens.h}</h2><p>{h.screens.p}</p></div>
+    <div class="screens__row">{h.screens.items.map((it) => <Clip name={it.clip} caption={it.caption} />)}</div>
+  </section></div>
+
+  <HubFeed lang={lang} />
+
+  <section class="business wrap">
+    <div class="prose">
+      <h2>{h.business.h}</h2>
+      <p>{h.business.p}</p>
+      <p>{h.compare.h}: {h.compare.items.map((c, i) => <Fragment><a class="link" href={p(c.path)}>{c.label}</a>{i < h.compare.items.length - 1 ? ', ' : '.'}</Fragment>)}</p>
+    </div>
+  </section>
+
+  <Faq items={faq} heading={s.site.faqHeading} />
+  <AuthorLine lang={lang} checkedOn={counts.checkedOn} />
+</Base>
+<style>
+  .hero { display: grid; gap: var(--space-xl); padding-block: var(--space-2xl); align-items: center; }
+  .hero__text h1 { max-inline-size: 14ch; }
+  .hero__lede { font-size: var(--text-md); color: var(--color-ink-2); max-inline-size: 44ch; margin-block-start: var(--space-lg); }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-block-start: var(--space-xl); }
+  .hero :global(figure) { max-inline-size: 17rem; }
+  .tour { display: grid; gap: var(--space-2xl); padding-block: var(--space-2xl); position: relative; }
+  .tour__block { display: grid; gap: var(--space-lg); align-items: center; }
+  .tour__block :global(figure) { max-inline-size: 17rem; }
+  .tour__text { max-inline-size: 36ch; }
+  .tour__text h2 { font-size: var(--text-2xl); }
+  .tour__text p { margin-block-start: var(--space-md); color: var(--color-ink-2); font-size: var(--text-md); }
+  .tour__cta { position: sticky; inset-block-end: var(--space-sm); display: flex; align-items: center; justify-content: space-between; gap: var(--space-md); padding: var(--space-sm) var(--space-md); background: var(--color-paper); border: var(--rule-hair) solid var(--color-rule); border-radius: var(--radius-md); z-index: var(--z-sticky); box-shadow: 0 12px 32px -20px oklch(from var(--color-ink) l c h / 0.3); }
+  .tour__cta span { font-weight: 600; min-inline-size: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .screens { padding-block: var(--space-xl) var(--space-2xl); }
+  .screens__row { display: grid; gap: var(--space-lg); grid-template-columns: minmax(0, 1fr); }
+  .screens__row :global(figure:nth-child(2)) { max-inline-size: 14rem; justify-self: center; }
+  .business { padding-block: var(--space-2xl); }
+  .business h2 { margin-block-start: 0; }
+  @media (min-width: 60rem) {
+    .hero { grid-template-columns: 7fr 5fr; gap: var(--space-2xl); padding-block: var(--space-3xl); }
+    .hero :global(figure) { justify-self: center; max-inline-size: 19rem; }
+    .tour__block { grid-template-columns: 5fr 7fr; gap: var(--space-3xl); }
+    .tour__block--flip > :global(:first-child) { order: 2; }
+    .tour__block :global(figure) { max-inline-size: 19rem; justify-self: center; }
+    .tour__block :global(figure[data-clip^="mac-"]) { max-inline-size: 30rem; }
+    .screens__row { grid-template-columns: 1.4fr 0.8fr 1.4fr; align-items: center; }
+  }
+</style>

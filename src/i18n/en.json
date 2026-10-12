@@ -1,7 +1,9 @@
 {
   "site": {
     "name": "Macdio",
-    "url": "https://macdio.app"
+    "url": "https://macdio.app",
+    "authorLine": "Written by Sait Firat NEMIS, developer of Macdio. Checked on",
+    "faqHeading": "Questions people ask"
   },
   "nav": {
     "skip": "Skip to content",
@@ -264,5 +266,143 @@
     "latest": "Latest on the hub",
     "asOf": "As of",
     "open": "Open the hub"
+  },
+  "home": {
+    "h1": "Radio and podcasts, on every Apple screen.",
+    "lede": "{stations} live stations and {podcasts} podcasts in one app, bought once for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Song ID reads the stream, so there is no microphone. Transcripts are made on your device.",
+    "secondary": "See it on your device",
+    "heroClip": "iphone-songid",
+    "heroCaption": "Song ID on iPhone, from the stream",
+    "statsLabel": "Macdio in numbers",
+    "tourLabel": "The app in use",
+    "stats": [
+      {
+        "value": "{stations}",
+        "label": "live stations"
+      },
+      {
+        "value": "{podcasts}",
+        "label": "podcasts"
+      },
+      {
+        "value": "6",
+        "label": "Apple platforms, one purchase"
+      },
+      {
+        "value": "{price}",
+        "label": "once, in {countries} countries"
+      }
+    ],
+    "tour": [
+      {
+        "clip": "iphone-songid",
+        "caption": "Song ID while a station plays",
+        "h": "Name the song without listening in.",
+        "p": "Tap Song ID and Macdio identifies what the station is playing from the audio it is already receiving. No microphone permission, nothing recorded. Save the track or open it in Apple Music."
+      },
+      {
+        "clip": "iphone-transcript",
+        "caption": "A podcast transcript, made on the phone",
+        "h": "Every episode, in writing.",
+        "p": "Play a podcast and the transcript is made on your iPhone, iPad or Mac, in the episode's language. Search inside it and jump to the sentence."
+      },
+      {
+        "clip": "iphone-mark-notes",
+        "caption": "A highlight sent to Apple Notes",
+        "h": "Keep the moment.",
+        "p": "Highlight what you just heard and it goes to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise with the sentence and a link back to the episode."
+      },
+      {
+        "clip": "iphone-recordings",
+        "caption": "Recordings, one file per song",
+        "h": "Record the stream, get a tagged library.",
+        "p": "Recording follows the station's song titles and splits the stream into tracks. Schedule a show and it records while you sleep."
+      },
+      {
+        "clip": "iphone-lyrics",
+        "caption": "Synced lyrics on live radio",
+        "h": "Lyrics that keep up with live radio.",
+        "p": "Synced lyrics line up with what you hear, anchored on the identified song."
+      },
+      {
+        "clip": "mac-menubar",
+        "caption": "The Mac menu bar player",
+        "h": "A real Mac app.",
+        "p": "Native, with a menu bar player, keyboard shortcuts and a station editor you can open from any computer on your Wi-Fi to fix your own stations."
+      }
+    ],
+    "screens": {
+      "h": "The same library on the big screen, on your wrist and in the car.",
+      "p": "One purchase, one iCloud library. Nothing to set up twice.",
+      "items": [
+        {
+          "clip": "tv-songid",
+          "caption": "Apple TV"
+        },
+        {
+          "clip": "watch-songid",
+          "caption": "Apple Watch, on its own"
+        },
+        {
+          "clip": "carplay-favorites",
+          "caption": "CarPlay"
+        }
+      ]
+    },
+    "business": {
+      "h": "A normal business.",
+      "p": "Macdio is made by one person. You pay once on the App Store and get every platform and every update. There is no account to create, no advertising, no analytics in the app, and no subscription."
+    },
+    "compare": {
+      "h": "Compared with the apps you may be using now",
+      "items": [
+        {
+          "label": "TuneIn",
+          "path": "/tunein-alternative.html"
+        },
+        {
+          "label": "myTuner",
+          "path": "/mytuner-alternative.html"
+        },
+        {
+          "label": "Pocket Casts",
+          "path": "/pocket-casts-alternative.html"
+        },
+        {
+          "label": "Overcast",
+          "path": "/overcast-alternative.html"
+        },
+        {
+          "label": "Snipd",
+          "path": "/snipd-alternative.html"
+        },
+        {
+          "label": "Apple Podcasts",
+          "path": "/compare/apple-podcasts.html"
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is there an app that allows me to listen to FM radio on all my Apple devices?",
+        "a": "Macdio plays internet streams of FM and AM stations on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay from one purchase. It does not receive FM over the air; no iPhone does."
+      },
+      {
+        "q": "Which radio app has the fewest ads?",
+        "a": "Macdio shows none and never has. The stations' own broadcast ads are part of the stream, as on the air."
+      },
+      {
+        "q": "Is it worth paying for a podcast app?",
+        "a": "Macdio is one payment, not a subscription. Transcripts, chapters, highlights and sync are included; nothing is held back for a higher tier."
+      },
+      {
+        "q": "Can I transfer my subscriptions between apps?",
+        "a": "{opml}"
+      },
+      {
+        "q": "Is there an Android or web version?",
+        "a": "No. Macdio is built for Apple devices only, and the directory of stations is on this site."
+      }
+    ]
   }
 }
