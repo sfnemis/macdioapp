@@ -28,7 +28,7 @@
     },
     "/features.html": {
       "title": "Macdio Features: Everything the App Does",
-      "description": "The complete Macdio feature list: streaming engine, station discovery, song identification with no microphone, split-track recording, synced lyrics and podcasts with on-device transcripts."
+      "description": "The complete Macdio feature list: streaming engine, station discovery, song identification with no microphone, split-track recording, synced lyrics, podcasts."
     },
     "/iphone.html": {
       "title": "Internet Radio App for iPhone with CarPlay | Macdio",
@@ -36,7 +36,7 @@
     },
     "/ipad.html": {
       "title": "Internet Radio App for iPad | Macdio",
-      "description": "Internet radio on iPad with Macdio: 60,000+ stations, full-screen synced lyrics, recording, and microphone-free song identification. One purchase, no subscription."
+      "description": "Internet radio on iPad with Macdio: 60,000+ stations, full-screen synced lyrics, recording, microphone-free song identification. One purchase, no subscription."
     },
     "/mac.html": {
       "title": "Mac Radio App: 60,000 Stations in the Menu Bar | Macdio",
@@ -64,7 +64,7 @@
     },
     "/privacy.html": {
       "title": "Privacy Policy: Macdio Internet Radio",
-      "description": "Macdio privacy policy. No personal data, no analytics, no tracking. What optional new-episode notifications send, and the policies for iOS, macOS, tvOS and watchOS."
+      "description": "Privacy policy. No personal data, no analytics, no tracking. What optional new-episode notifications send, and the policies for iOS, macOS, tvOS, watchOS."
     },
     "/privacy-ios.html": {
       "title": "Privacy Policy: Macdio for iOS, iPad and CarPlay",
@@ -108,7 +108,7 @@
     },
     "/podcasts.html": {
       "title": "Macdio Podcasts: Transcripts on Device, Highlights",
-      "description": "4.7 million podcasts with on-device transcripts, search inside an episode and Highlights to Apple Notes, Notion, Obsidian, Bear, Craft and Readwise. One purchase."
+      "description": "4.7 million podcasts with on-device transcripts, search inside an episode and Highlights to Apple Notes, Notion, Obsidian, Bear, Craft, Readwise. One purchase."
     },
     "/pricing.html": {
       "title": "Macdio Pricing: One Purchase, Every Apple Device",
@@ -152,7 +152,7 @@
     },
     "/compare/apple-podcasts.html": {
       "title": "Macdio vs Apple Podcasts: Transcripts and Highlights",
-      "description": "Where Apple Podcasts transcripts stop and Macdio continues: every episode on device, search inside, Highlights to your notes app, plus live radio in the same app."
+      "description": "Where Apple Podcasts transcripts stop and Macdio continues: every episode on device, search inside, Highlights to your notes app, plus live radio in one app."
     }
   }
 }
