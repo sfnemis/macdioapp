@@ -1,22 +1,23 @@
 /* macdio.app v2 tokens. Every colour and font on the site is one of these.
-   Light paper by default; dark paper under the data-theme attribute set by the
-   theme script, and under prefers-color-scheme when no script ran. */
+   Dark paper by default (Sait, 2026-10-12: the site is a late-night radio
+   page, not a white sheet); the light paper is the toggle's alternative.
+   Hue 277 is the brand indigo; the accent is a warm brass against it. */
 :root {
+  --font-display: "Instrument Serif", ui-serif, Georgia, "Times New Roman", serif;
   --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-  --text-xs: 0.8rem;
+  --text-xs: 0.75rem;
   --text-sm: 0.9rem;
   --text-base: 1rem;
-  --text-md: 1.25rem;
-  --text-lg: 1.5625rem;
-  --text-xl: 1.9531rem;
-  --text-2xl: 2.4414rem;
-  --text-3xl: 3.0518rem;
-  --text-4xl: 3.8147rem;
-  --text-display: clamp(2.5rem, 4.5vw + 1rem, 4.75rem);
-  --text-display-s: clamp(2rem, 3.5vw + 0.75rem, 3.5rem);
+  --text-md: 1.2rem;
+  --text-lg: 1.5rem;
+  --text-xl: 1.875rem;
+  --text-2xl: 2.5rem;
+  --text-3xl: 3.2rem;
+  --text-4xl: 4rem;
+  --text-display: clamp(3rem, 6vw + 1rem, 6rem);
+  --text-display-s: clamp(2.25rem, 4vw + 0.75rem, 4rem);
 
   --space-3xs: 0.125rem;
   --space-2xs: 0.25rem;
@@ -30,11 +31,12 @@
   --space-4xl: 9rem;
 
   --radius-sm: 6px;
-  --radius-md: 10px;
+  --radius-md: 12px;
+  --radius-pill: 999px;
   --rule-hair: 1px;
-  --page-max: 72rem;
-  --page-gutter: clamp(1rem, 4vw, 2.5rem);
-  --measure: 65ch;
+  --page-max: 76rem;
+  --page-gutter: clamp(1rem, 4vw, 3rem);
+  --measure: 62ch;
 
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
@@ -42,6 +44,7 @@
   --dur-micro: 120ms;
   --dur-short: 220ms;
   --dur-long: 420ms;
+  --dur-slow: 12s;
 
   --z-base: 1;
   --z-raised: 10;
@@ -51,53 +54,42 @@
   --z-toast: 500;
   --z-tooltip: 600;
 
-  /* light paper, indigo-tinted neutrals (hue 277) */
-  --color-paper: oklch(98.5% 0.006 277);
-  --color-paper-2: oklch(96% 0.008 277);
-  --color-paper-3: oklch(93% 0.010 277);
-  --color-ink: oklch(20% 0.012 277);
-  --color-ink-2: oklch(34% 0.012 277);
-  --color-muted: oklch(48% 0.012 277);
-  --color-rule: oklch(86% 0.010 277);
-  --color-rule-2: oklch(91% 0.008 277);
-  --color-accent: oklch(54% 0.19 277);
-  --color-accent-strong: oklch(47% 0.20 277);
-  --color-accent-ink: oklch(98.5% 0.006 277);
-  --color-focus: oklch(56% 0.22 277);
-  color-scheme: light;
-}
-
-:root[data-theme="dark"] {
-  --color-paper: oklch(13% 0.012 277);
-  --color-paper-2: oklch(17% 0.014 277);
-  --color-paper-3: oklch(22% 0.014 277);
-  --color-ink: oklch(94% 0.008 277);
-  --color-ink-2: oklch(80% 0.010 277);
-  --color-muted: oklch(66% 0.012 277);
-  --color-rule: oklch(30% 0.014 277);
-  --color-rule-2: oklch(24% 0.012 277);
-  --color-accent: oklch(74% 0.15 277);
-  --color-accent-strong: oklch(80% 0.12 277);
-  --color-accent-ink: oklch(13% 0.012 277);
-  --color-focus: oklch(76% 0.19 277);
+  /* dark paper, indigo-tinted neutrals, brass accent */
+  --color-paper: oklch(11% 0.012 277);
+  --color-paper-2: oklch(15% 0.014 277);
+  --color-paper-3: oklch(20% 0.014 277);
+  --color-ink: oklch(95% 0.008 80);
+  --color-ink-2: oklch(80% 0.010 80);
+  --color-muted: oklch(64% 0.012 80);
+  --color-rule: oklch(28% 0.014 277);
+  --color-rule-2: oklch(22% 0.012 277);
+  --color-accent: oklch(80% 0.16 72);
+  --color-accent-strong: oklch(86% 0.14 80);
+  --color-accent-ink: oklch(11% 0.012 277);
+  --color-accent-2: oklch(74% 0.15 277);
+  --color-focus: oklch(82% 0.19 72);
+  --color-glow: oklch(80% 0.16 72 / 0.32);
+  --grad-bloom: radial-gradient(55% 60% at 72% 30%, oklch(74% 0.15 277 / 0.22) 0%, transparent 70%);
+  --shadow-soft: 0 24px 60px -28px oklch(0% 0 0 / 0.55);
   color-scheme: dark;
 }
 
-/* Without JavaScript the system preference decides. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --color-paper: oklch(13% 0.012 277);
-    --color-paper-2: oklch(17% 0.014 277);
-    --color-paper-3: oklch(22% 0.014 277);
-    --color-ink: oklch(94% 0.008 277);
-    --color-ink-2: oklch(80% 0.010 277);
-    --color-muted: oklch(66% 0.012 277);
-    --color-rule: oklch(30% 0.014 277);
-    --color-rule-2: oklch(24% 0.012 277);
-    --color-accent: oklch(74% 0.15 277);
-    --color-accent-strong: oklch(80% 0.12 277);
-    --color-accent-ink: oklch(13% 0.012 277);
-    --color-focus: oklch(76% 0.19 277);
-    color-scheme: dark;
-  }
+:root[data-theme="light"] {
+  --color-paper: oklch(97% 0.008 80);
+  --color-paper-2: oklch(94% 0.012 80);
+  --color-paper-3: oklch(90% 0.014 80);
+  --color-ink: oklch(18% 0.012 277);
+  --color-ink-2: oklch(32% 0.012 277);
+  --color-muted: oklch(46% 0.012 277);
+  --color-rule: oklch(84% 0.012 80);
+  --color-rule-2: oklch(90% 0.010 80);
+  --color-accent: oklch(56% 0.16 58);
+  --color-accent-strong: oklch(48% 0.17 52);
+  --color-accent-ink: oklch(97% 0.008 80);
+  --color-accent-2: oklch(50% 0.20 277);
+  --color-focus: oklch(58% 0.20 58);
+  --color-glow: oklch(56% 0.16 58 / 0.22);
+  --grad-bloom: radial-gradient(55% 60% at 72% 30%, oklch(50% 0.20 277 / 0.12) 0%, transparent 70%);
+  --shadow-soft: 0 24px 60px -32px oklch(20% 0.02 277 / 0.35);
+  color-scheme: light;
 }

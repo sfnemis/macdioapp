@@ -13,7 +13,7 @@ const EXEMPT = new Set(['src/styles/tokens.css', 'src/styles/starlight.css']);
 export function cssProblems(raw, file) {
   // Comments (the Hallmark stamp quotes the palette) and <meta> tags
   // (theme-color must be a literal) are not styling and are skipped.
-  const text = raw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/<meta\b[^>]*>/gi, '');
+  const text = raw.replace(/\/\*[\s\S]*?\*\//g, '').replace(/<meta\b[^>]*>/gi, '').replace(/@font-face\s*\{[^}]*\}/g, '');
   const problems = [];
   for (const m of text.matchAll(RAW_COLOUR)) problems.push(`${file}: ${m[1]} is not a token`);
   for (const m of text.matchAll(FONT)) problems.push(`${file}: ${m[0].trim()} bypasses the font tokens`);

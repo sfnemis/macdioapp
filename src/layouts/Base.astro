@@ -26,8 +26,7 @@ const url = SITE + localePath(lang, path);
 <meta property="og:url" content={url}>
 <meta property="og:type" content="website">
 <meta property="og:locale" content={locale.lang.replace('-', '_')}>
-<meta name="theme-color" content="#050507" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#07070d">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
@@ -36,7 +35,7 @@ const url = SITE + localePath(lang, path);
 {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 <script is:inline>
   // Apply the theme before first paint; same key as Starlight.
-  (function () { try { var t = localStorage.getItem('starlight-theme'); if (t !== 'dark' && t !== 'light') { t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } document.documentElement.dataset.theme = t; } catch (e) {} })();
+  (function () { try { var t = localStorage.getItem('starlight-theme'); document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark'; } catch (e) {} })();
 </script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
