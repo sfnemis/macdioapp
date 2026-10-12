@@ -269,7 +269,7 @@
   },
   "home": {
     "h1": "Radio and podcasts, on every Apple screen.",
-    "lede": "{stations} live stations and {podcasts} podcasts in one app, bought once for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Song ID reads the stream, so there is no microphone. Transcripts are made on your device.",
+    "lede": "{stations} live stations and {podcasts} podcasts in one app, bought once for iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay. Song ID reads the stream, so it never asks for the microphone. Transcripts are made on your device.",
     "secondary": "See it on your device",
     "heroClip": "iphone-songid",
     "heroCaption": "Song ID on iPhone, from the stream",
@@ -298,42 +298,42 @@
         "clip": "iphone-songid",
         "caption": "Song ID while a station plays",
         "h": "Name the song without listening in.",
-        "p": "Tap Song ID and Macdio identifies what the station is playing from the audio it is already receiving. No microphone permission, nothing recorded. Save the track or open it in Apple Music."
+        "p": "Tap Song ID and Macdio works out what the station is playing from the audio it already receives. No microphone permission, nothing recorded. Save the track or open it in Apple Music."
       },
       {
         "clip": "iphone-transcript",
         "caption": "A podcast transcript, made on the phone",
         "h": "Every episode, in writing.",
-        "p": "Play a podcast and the transcript is made on your iPhone, iPad or Mac, in the episode's language. Search inside it and jump to the sentence."
+        "p": "Play a podcast and the transcript is made on your iPhone, iPad or Mac, in the episode's language. Search inside it and jump to the sentence you want."
       },
       {
         "clip": "iphone-mark-notes",
         "caption": "A highlight sent to Apple Notes",
         "h": "Keep the moment.",
-        "p": "Highlight what you just heard and it goes to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise with the sentence and a link back to the episode."
+        "p": "Mark what you just heard and it goes to Apple Notes, Notion, Obsidian, Bear, Craft or Readwise, with the sentence and a link back to the episode."
       },
       {
         "clip": "iphone-recordings",
         "caption": "Recordings, one file per song",
         "h": "Record the stream, get a tagged library.",
-        "p": "Recording follows the station's song titles and splits the stream into tracks. Schedule a show and it records while you sleep."
+        "p": "On iPhone, iPad and Mac, recording follows the station's song titles and splits the stream into tracks. Schedule a show and it records while you sleep."
       },
       {
         "clip": "iphone-lyrics",
         "caption": "Synced lyrics on live radio",
         "h": "Lyrics that keep up with live radio.",
-        "p": "Synced lyrics line up with what you hear, anchored on the identified song."
+        "p": "Synced lyrics line up with what you hear, anchored on the song Macdio identified."
       },
       {
         "clip": "mac-menubar",
         "caption": "The Mac menu bar player",
         "h": "A real Mac app.",
-        "p": "Native, with a menu bar player, keyboard shortcuts and a station editor you can open from any computer on your Wi-Fi to fix your own stations."
+        "p": "Native on the Mac, with a menu bar player and keyboard shortcuts. The same library and the same purchase as on the phone."
       }
     ],
     "screens": {
       "h": "The same library on the big screen, on your wrist and in the car.",
-      "p": "One purchase, one iCloud library. Nothing to set up twice.",
+      "p": "One purchase, one iCloud library. Your own stations can be edited from a computer: the iPhone, iPad or Apple TV serves a small editor page on your Wi-Fi, protected by a PIN.",
       "items": [
         {
           "clip": "tv-songid",
@@ -351,7 +351,7 @@
     },
     "business": {
       "h": "A normal business.",
-      "p": "Macdio is made by one person. You pay once on the App Store and get every platform and every update. There is no account to create, no advertising, no analytics in the app, and no subscription."
+      "p": "Macdio is made by one person. You pay once on the App Store and get every platform and every update. There is no account to create, no advertising, no analytics in the app and no subscription."
     },
     "compare": {
       "h": "Compared with the apps you may be using now",
@@ -397,7 +397,7 @@
       },
       {
         "q": "Can I transfer my subscriptions between apps?",
-        "a": "{opml}"
+        "a": "Yes. Macdio imports and exports OPML, so subscriptions move over from Apple Podcasts, Overcast or Pocket Casts, and back out again if you leave."
       },
       {
         "q": "Is there an Android or web version?",
