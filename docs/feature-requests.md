@@ -99,6 +99,24 @@ saying what happened to it.
   Radio Garden, myTuner, Broadcasts, Overcast and the rest of the field. Every
   page, guide and language is planned against that map; GSC data for the
   current site is the baseline.
+  Progress 2026-10-12 20:10: thirteen pages built from the research page map
+  (`/pricing.html`, `/podcasts.html`, `/carplay.html`, `/features/podcast-
+  transcripts.html`, `/features/highlights.html`, `/features/song-id.html`,
+  `/features/recording.html`, `/features/synced-lyrics.html`, `/pocket-casts-
+  alternative.html`, `/mytuner-alternative.html`, `/snipd-alternative.html`,
+  `/overcast-alternative.html`, `/compare/apple-podcasts.html`), each with a
+  dated direct answer, cards, clips, a comparison table from the competitor
+  research, 5 or 6 FAQ, Article + FAQPage + BreadcrumbList JSON-LD and an
+  author line. Author lines added to the ten existing marketing pages. False
+  claims removed from the live copy (Live Activity and Dynamic Island on
+  iphone.html, features.html, presskit.html and the home page; watch
+  complications on privacy-watchos.html; Spotlight on Mac; "Loved songs sync
+  to Apple Music" as a Macdio exclusive, Broadcasts has it). Nav More menu
+  links Podcasts, Pricing and CarPlay; the home page links the new pages from
+  the podcast, pricing and compare sections; features.html links the five
+  feature pages. Open: Family Sharing on presskit.html (ASC setting, Sait
+  confirms), /radio-garden-alternative.html (low priority), the existing
+  platform pages' first paragraphs keep their old wording.
 - [ ] **W7 Search Console access for the service account is gone** (found
   2026-10-12 15:06). `claude-seo@claude-seo-macdio.iam.gserviceaccount.com`
   (key `~/.config/claude-seo/service_account.json`) gets `sites.list` = empty
