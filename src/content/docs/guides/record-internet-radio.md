@@ -72,7 +72,7 @@ A recording is as heavy as the stream, since nothing is added or compressed furt
 
 ## What format the files are in
 
-A recording keeps whatever the station sends. An MP3 station gives you an .mp3 and an AAC station gives you an .aac, with nothing re-encoded on the way to disk, so the file sounds exactly like the stream did. When Song ID has named a song in an AAC recording, its title, artist and cover are written into the file, which turns it into an .m4a. There is no quality setting to get wrong here, because the audio is never encoded a second time.
+A recording keeps whatever the station sends. An MP3 station gives you an .mp3 and an AAC station gives you an .aac, with nothing re-encoded on the way to disk, so the file sounds exactly like the stream did. When Song ID has named a song in an AAC recording, its title, artist, cover and lyrics are written into the file, which turns it into an .m4a. There is no quality setting to get wrong here, because the audio is never encoded a second time.
 
 ## Where the recordings live
 
