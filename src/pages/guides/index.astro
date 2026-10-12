@@ -1,0 +1,12 @@
+---
+// The guide hub index lives in src/pages so its URL is exactly /guides/index.html
+// (a Starlight content index would come out as /guides.html). StarlightPage gives
+// it the full Starlight chrome: sidebar, search, theme.
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+const title = 'Macdio Guides';
+const description = 'How to listen, record, identify and read along with radio and podcasts in Macdio on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay.';
+---
+<StarlightPage frontmatter={{ title, description }}>
+  <p>Guides for Macdio, the radio and podcast app for Apple devices. Each guide answers one question and names the devices it applies to.</p>
+  <p>The guide hub is being rebuilt. The nine existing guides return in the next step with their original addresses.</p>
+</StarlightPage>

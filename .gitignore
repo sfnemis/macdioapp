@@ -4,3 +4,12 @@
 
 # Local agent notes, never committed and never deployed
 CLAUDE.local.md
+
+# Build output and dependencies
+node_modules/
+dist/
+.astro/
+.wrangler/
+
+# Local tool state
+.serena/

@@ -1,0 +1,10 @@
+:root {
+  --sl-font: var(--font-body);
+  --sl-color-accent: var(--color-accent);
+  --sl-color-accent-high: var(--color-accent-strong);
+  --sl-color-bg: var(--color-bg);
+  --sl-color-bg-nav: var(--color-bg);
+  --sl-color-bg-sidebar: var(--color-surface);
+  --sl-color-text: var(--color-text);
+  --sl-color-gray-5: var(--color-border);
+}
