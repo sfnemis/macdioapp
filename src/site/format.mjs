@@ -17,6 +17,8 @@ export function countries(pricing) {
 
 export function price(pricing, cc, lang) {
   const p = pricing.prices[cc] ?? pricing.default;
-  const text = new Intl.NumberFormat(tag(lang), { style: 'currency', currency: p.c }).format(p.p);
+  // English pages print the US price the way the US store does ("$14.99",
+  // not en-GB's "US$14.99"); dates and counts keep the en-GB forms.
+  const text = new Intl.NumberFormat(lang === 'en' ? 'en-US' : tag(lang), { style: 'currency', currency: p.c }).format(p.p);
   return { amount: p.p, currency: p.c, text };
 }
