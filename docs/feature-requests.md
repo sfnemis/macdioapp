@@ -12,7 +12,7 @@ saying what happened to it.
   Everything is tested locally first; nothing deploys until Sait says "tamam".
 - [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
   on the model of https://linnote.app/guide/ (structured guide hub with
-  navigation, per-topic pages) for SEO and GEO. Existing 10 guides carry over.
+  navigation, per-topic pages) for SEO and GEO. The 9 existing guides carry over.
 - [ ] **W3 Site in every app language** (Sait, 2026-10-12). The app ships 14
   localizations (ar, de, en, es, fr, it, ja, nl, pl, pt-BR, ru, tr, zh-Hans,
   zh-Hant); the site gets the same 14, every page, with hreflang. Today only
