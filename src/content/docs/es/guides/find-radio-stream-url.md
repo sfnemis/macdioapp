@@ -1,6 +1,6 @@
 ---
 title: "Cómo encontrar la URL del stream de una emisora (4 formas)"
-description: "Consigue la dirección directa de cualquier emisora desde su propia web, desde las herramientas de desarrollador del navegador, desde un directorio público o desde la propia app. Con ejemplos reales."
+description: "La dirección directa de cualquier emisora: desde su web, las herramientas del navegador, un directorio público o la propia app. Con ejemplos reales."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

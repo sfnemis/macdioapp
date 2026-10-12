@@ -14,70 +14,22 @@
     "moreLabel": "Diğer sayfalar",
     "openMenu": "Menüyü aç",
     "pages": [
-      {
-        "path": "/guides/",
-        "label": "Rehberler"
-      },
-      {
-        "path": "/podcasts.html",
-        "label": "Podcast'ler"
-      },
-      {
-        "path": "/pricing.html",
-        "label": "Fiyat"
-      },
-      {
-        "path": "/carplay.html",
-        "label": "CarPlay'de radyo"
-      },
-      {
-        "path": "/iphone.html",
-        "label": "iPhone için radyo"
-      },
-      {
-        "path": "/mac.html",
-        "label": "Mac için radyo"
-      },
-      {
-        "path": "/ipad.html",
-        "label": "iPad için radyo"
-      },
-      {
-        "path": "/apple-tv.html",
-        "label": "Apple TV için radyo"
-      },
-      {
-        "path": "/apple-watch.html",
-        "label": "Apple Watch için radyo"
-      },
-      {
-        "path": "/support.html",
-        "label": "Destek"
-      },
-      {
-        "path": "/privacy.html",
-        "label": "Gizlilik"
-      },
-      {
-        "path": "/transparency.html",
-        "label": "Şeffaflık"
-      },
-      {
-        "path": "/accessibility.html",
-        "label": "Erişilebilirlik"
-      },
-      {
-        "path": "/submit-station.html",
-        "label": "İstasyon gönder"
-      },
-      {
-        "path": "/stations.html",
-        "label": "İstasyonlar"
-      },
-      {
-        "path": "/presskit.html",
-        "label": "Basın kiti"
-      }
+      { "path": "/guides/", "label": "Rehberler" },
+      { "path": "/podcasts.html", "label": "Podcast'ler" },
+      { "path": "/pricing.html", "label": "Fiyat" },
+      { "path": "/carplay.html", "label": "CarPlay'de radyo" },
+      { "path": "/iphone.html", "label": "iPhone için radyo" },
+      { "path": "/mac.html", "label": "Mac için radyo" },
+      { "path": "/ipad.html", "label": "iPad için radyo" },
+      { "path": "/apple-tv.html", "label": "Apple TV için radyo" },
+      { "path": "/apple-watch.html", "label": "Apple Watch için radyo" },
+      { "path": "/support.html", "label": "Destek" },
+      { "path": "/privacy.html", "label": "Gizlilik" },
+      { "path": "/transparency.html", "label": "Şeffaflık" },
+      { "path": "/accessibility.html", "label": "Erişilebilirlik" },
+      { "path": "/submit-station.html", "label": "İstasyon gönder" },
+      { "path": "/stations.html", "label": "İstasyonlar" },
+      { "path": "/presskit.html", "label": "Basın kiti" }
     ]
   },
   "footer": {
@@ -95,83 +47,38 @@
     "youtube": "Macdio YouTube'da"
   },
   "guides": {
-    "title": "Internet Radio Guides for Mac, iPhone, Watch and CarPlay",
-    "h1": "Guides",
-    "description": "Short, practical guides for internet radio listeners on Mac, iPhone, iPad, Apple Watch, Apple TV and CarPlay, written by the developer of Macdio.",
-    "intro": "Short, practical answers to the questions internet radio listeners actually ask, written by the developer of Macdio. Each guide names the devices it applies to and ends with the questions people search for.",
-    "allGuides": "All guides",
-    "behindH2": "The app behind the guides",
-    "behind": "Macdio is a native internet radio and podcast player for <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> and <a href=\"/apple-watch.html\">Apple Watch</a>. 60,000+ stations, recording, live lyrics and microphone-free song identification, in one purchase with no subscription.",
-    "writtenBy": "Written by <a href=\"/presskit.html\">Sait Firat NEMIS</a>, the developer of Macdio.",
-    "checkedOn": "Checked on {date}.",
+    "title": "Mac, iPhone, Watch ve CarPlay için İnternet Radyosu Rehberleri",
+    "h1": "Rehberler",
+    "description": "Mac, iPhone, iPad, Apple Watch, Apple TV ve CarPlay'deki internet radyosu dinleyicileri için kısa, pratik rehberler; Macdio'nun geliştiricisi tarafından yazıldı.",
+    "intro": "İnternet radyosu dinleyicilerinin gerçekten sorduğu sorulara kısa, pratik cevaplar; Macdio'nun geliştiricisi tarafından yazıldı. Her rehber geçerli olduğu cihazları söyler ve insanların aradığı sorularla biter.",
+    "allGuides": "Tüm rehberler",
+    "behindH2": "Rehberlerin arkasındaki uygulama",
+    "behind": "Macdio, <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> ve <a href=\"/apple-watch.html\">Apple Watch</a> için yerel bir internet radyosu ve podcast oynatıcısı. 60.000+ istasyon, kayıt, canlı şarkı sözleri ve mikrofonsuz şarkı tanıma, aboneliksiz tek satın almada.",
+    "writtenBy": "Macdio'nun geliştiricisi <a href=\"/presskit.html\">Sait Firat NEMIS</a> tarafından yazıldı.",
+    "checkedOn": "{date} tarihinde kontrol edildi.",
     "groups": [
       {
-        "label": "Radio on every device",
+        "label": "Her cihazda radyo",
         "guides": [
-          {
-            "slug": "how-to-listen-to-radio-on-mac",
-            "label": "Radio on a Mac",
-            "title": "How to listen to internet radio on a Mac",
-            "description": "Browser, VLC, the Music app or a menu bar player: every route, with honest trade-offs. Read this one first if you are new to radio on the desktop."
-          },
-          {
-            "slug": "radio-on-apple-watch",
-            "label": "Apple Watch without an iPhone",
-            "title": "Radio on Apple Watch without an iPhone",
-            "description": "Streaming on the wrist with no iPhone nearby: what standalone really means, what you need, and honest battery numbers."
-          },
-          {
-            "slug": "carplay-radio",
-            "label": "Radio in CarPlay",
-            "title": "Internet radio on CarPlay",
-            "description": "Presets like a classic car stereo, worldwide stations instead of local FM, and what a long drive costs in mobile data."
-          },
-          {
-            "slug": "siri-radio",
-            "label": "Play radio with Siri",
-            "title": "Play radio with Siri",
-            "description": "Every voice phrase Macdio understands, in 14 languages, and how a station name spoken in the car turns into the right stream."
-          }
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Mac'te radyo", "title": "Mac'te internet radyosu nasıl dinlenir", "description": "Tarayıcı, VLC, Müzik uygulaması ya da bir menü çubuğu oynatıcısı: her yol, dürüst artı ve eksileriyle. Masaüstünde radyoya yeniysen önce bunu oku." },
+          { "slug": "radio-on-apple-watch", "label": "iPhone olmadan Apple Watch", "title": "Apple Watch'ta iPhone olmadan radyo", "description": "Yakında iPhone olmadan bilekte yayın: bağımsız gerçekte ne demek, ne gerekiyor ve dürüst pil rakamları." },
+          { "slug": "carplay-radio", "label": "CarPlay'de radyo", "title": "CarPlay'de internet radyosu", "description": "Klasik araba teybi gibi ön ayarlar, yerel FM yerine dünya istasyonları ve uzun bir yolculuğun mobil veride ne kadara geldiği." },
+          { "slug": "siri-radio", "label": "Siri ile radyo çal", "title": "Siri ile radyo çal", "description": "Macdio'nun anladığı her sesli ifade, 14 dilde, ve arabada söylenen bir istasyon adının nasıl doğru yayına dönüştüğü." }
         ]
       },
       {
-        "label": "Radio features",
+        "label": "Radyo özellikleri",
         "guides": [
-          {
-            "slug": "record-internet-radio",
-            "label": "Record internet radio",
-            "title": "How to record internet radio",
-            "description": "Turn a live show into named, individual tracks on Mac and iPhone, and where the law of personal recording actually stands."
-          },
-          {
-            "slug": "identify-song-on-radio",
-            "label": "What song is playing?",
-            "title": "What song is playing on the radio?",
-            "description": "Three ways to identify a radio song, including one that reads the stream itself and never asks for the microphone."
-          },
-          {
-            "slug": "find-radio-stream-url",
-            "label": "Find a stream URL",
-            "title": "How to find a station's stream URL",
-            "description": "Four ways to get the direct address, what you may do with it, and how to add a station of your own."
-          },
-          {
-            "slug": "iphone-fm-radio",
-            "label": "Does the iPhone have FM radio?",
-            "title": "Does the iPhone have FM radio?",
-            "description": "The honest answer about the missing chip, receiver against transmitter, the emergency argument, and what to do instead."
-          }
+          { "slug": "record-internet-radio", "label": "İnternet radyosu kaydet", "title": "İnternet radyosu nasıl kaydedilir", "description": "Canlı bir programı Mac ve iPhone'da adlandırılmış, tek tek parçalara çevir; kişisel kayıt hukuku gerçekte nerede duruyor." },
+          { "slug": "identify-song-on-radio", "label": "Hangi şarkı çalıyor?", "title": "Radyoda çalan şarkı hangisi?", "description": "Bir radyo şarkısını tanımanın üç yolu; biri yayının kendisini okur ve mikrofonu hiç istemez." },
+          { "slug": "find-radio-stream-url", "label": "Yayın adresi bul", "title": "Bir istasyonun yayın adresi nasıl bulunur", "description": "Doğrudan adresi almanın dört yolu, onunla ne yapabileceğin ve kendi istasyonunu nasıl ekleyeceğin." },
+          { "slug": "iphone-fm-radio", "label": "iPhone'da FM radyo var mı?", "title": "iPhone'da FM radyo var mı?", "description": "Eksik çip hakkında dürüst cevap, alıcıya karşı verici, acil durum argümanı ve yerine ne yapılır." }
         ]
       },
       {
-        "label": "Buying and comparing",
+        "label": "Satın alma ve karşılaştırma",
         "guides": [
-          {
-            "slug": "best-internet-radio-apps",
-            "label": "Best internet radio apps",
-            "title": "Best internet radio apps compared",
-            "description": "Seven players for Mac, iPhone, Apple Watch and Apple TV, with prices, station counts and what each one leaves out."
-          }
+          { "slug": "best-internet-radio-apps", "label": "En iyi internet radyosu uygulamaları", "title": "En iyi internet radyosu uygulamaları karşılaştırması", "description": "Mac, iPhone, Apple Watch ve Apple TV için yedi oynatıcı; fiyatları, istasyon sayıları ve her birinin dışarıda bıraktıklarıyla." }
         ]
       }
     ]

@@ -1,6 +1,6 @@
 ---
 title: "Radio por internet en CarPlay: configuración y presintonías"
-description: "Radio por internet en la pantalla del coche en un minuto, con presintonías que se comportan como las de un autorradio. Incluye lo que gasta en datos una hora de escucha."
+description: "Radio por internet en la pantalla del coche en un minuto, con presintonías que funcionan como las de un autorradio. Incluye lo que gasta en datos una hora."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

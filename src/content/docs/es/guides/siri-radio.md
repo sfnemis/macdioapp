@@ -1,5 +1,5 @@
 ---
-title: "Pon la radio por internet con Siri: todas las frases de Macdio"
+title: "Pon la radio con Siri: todas las frases de Macdio"
 description: "Di la emisora y suena. Todas las frases de Siri que Macdio entiende, en 14 idiomas, en el iPhone, con los AirPods y desde el botón de voz de CarPlay."
 datePublished: 2026-09-20
 lastUpdated: 2026-09-20

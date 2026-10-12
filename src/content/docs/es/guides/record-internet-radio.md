@@ -1,6 +1,6 @@
 ---
 title: "Cómo grabar radio por internet en un Mac (paso a paso)"
-description: "Tres formas de grabar radio por internet en un Mac, y qué funciona en el iPhone: un reproductor con grabación integrada, una herramienta de captura del sistema y Audacity con un dispositivo de audio virtual."
+description: "Tres formas de grabar radio por internet en un Mac, y qué funciona en el iPhone: un reproductor con grabación integrada, captura del sistema y Audacity con audio virtual."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

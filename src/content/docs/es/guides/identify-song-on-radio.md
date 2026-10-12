@@ -1,6 +1,6 @@
 ---
 title: "¿Qué canción suena en la radio? 3 formas de saberlo"
-description: "Tres formas de ponerle nombre a una canción de la radio, incluida una que lee el propio stream y nunca pide el micrófono, para que el teléfono se quede en el bolsillo."
+description: "Tres formas de ponerle nombre a una canción de la radio, incluida una que lee el propio stream y nunca pide el micrófono. El teléfono se queda en el bolsillo."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:
