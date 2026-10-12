@@ -16,7 +16,7 @@ faq:
     a: "Lo streaming ha bisogno di copertura; le interruzioni brevi le copre il buffer, quelle più lunghe mettono in pausa la riproduzione finché il segnale non torna."
 ---
 
-L'FM ti dà le stazioni di una città. CarPlay più la radio internet ti dà tutte le città. Per configurarlo basta meno di un minuto.
+L'FM ti dà le stazioni di una città. CarPlay più la radio internet ti dà tutte le città.
 
 In auto la radio internet passa da CarPlay, con le stazioni del tuo iPhone invece dei ripetitori che hai a portata di segnale. La configurazione richiede meno di un minuto, l'interfaccia è pensata per un'occhiata e non per la lettura, e i tuoi preferiti diventano preselezioni che puoi premere senza guardare.
 

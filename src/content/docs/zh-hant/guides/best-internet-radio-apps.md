@@ -2,12 +2,12 @@
 title: "Mac 和 iPhone 上最好的網路電台 App（2026）"
 description: "比較七款適用 Mac、iPhone、iPad、Apple Watch 和 Apple TV 的網路電台 App：價格、電台數量、錄音和廣告，每個數字都來自 App Store。"
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Mac 上最好的網路電台 App 是哪一款？"
-    a: "要看你想怎麼付錢。Macdio 是一次購買，沒有廣告，有錄音和歌曲辨識，需要 macOS 26。Eter 和 Broadcasts 都能免費試用、再一次性解鎖，也能在較舊的 macOS 版本上執行。myTuner Radio Pro 是 Mac App Store 上另外販售的 App，售價 9.99 美元。"
+    a: "要看你想怎麼付錢。Macdio 是一次購買，沒有廣告，有錄音和歌曲辨識，需要 macOS 26。Eter 能免費試用、再一次性解鎖；Broadcasts 免費提供少數幾個電台，其餘要訂閱。兩款都能在較舊的 macOS 版本上執行。myTuner Radio Pro 是 Mac App Store 上另外販售的 App，售價 9.99 美元。"
   - q: "哪些網路電台 App 沒有廣告？"
-    a: "Macdio 沒有廣告，也沒有 App 內購買。Eter 和 Broadcasts 的 App Store 頁面沒有提到廣告，改賣一次性解鎖。Simple Radio 的免費版有展示型廣告，購買 Premium 後移除；TuneIn 則賣 Premium 訂閱，主打無廣告的新聞和沒有廣告的音樂電台。"
+    a: "Macdio 沒有廣告，也沒有 App 內購買。Eter 和 Broadcasts 的 App Store 頁面沒有提到廣告；Eter 賣一次性解鎖，Broadcasts 賣訂閱。Simple Radio 的免費版有展示型廣告，購買 Premium 後移除；TuneIn 則賣 Premium 訂閱，主打無廣告的新聞和沒有廣告的音樂電台。"
   - q: "這些 App 各有多少電台？"
     a: "2026年9月14日 App Store 上標示的數量：TuneIn 100,000 多個、Simple Radio 90,000 多個、Macdio 60,000 多個、myTuner Radio 50,000 個。Eter、Broadcasts 和 Radio Garden 沒有公布數字。這些 App 大多取用同樣的公開目錄，所以這些數字反映的比較是各家怎麼計算，而不是你實際聽得到什麼。"
   - q: "有哪一款能錄下電台節目？"
@@ -18,7 +18,7 @@ faq:
 
 每一款要花多少錢、實際能做什麼、適合誰。由其中一款的開發者撰寫。
 
-**對大多數人來說，選擇取決於你想怎麼付錢。TuneIn 和 Simple Radio 免費，但有廣告。Eter 和 Broadcasts 可以免費試用，再一次性解鎖。Macdio 一次 14.99 美元，涵蓋每部 Apple 裝置，沒有廣告也沒有訂閱，也是七款中唯一標示有錄音功能的。Radio Garden 適合拿來逛，而不是拿來聽。**
+**對大多數人來說，選擇取決於你想怎麼付錢。TuneIn 和 Simple Radio 免費，但有廣告。Eter 可以免費試用，再一次性解鎖；Broadcasts 免費提供少數幾個電台，其餘要訂閱。Macdio 一次 14.99 美元，涵蓋每部 Apple 裝置，沒有廣告也沒有訂閱，也是七款中唯一標示有錄音功能的。Radio Garden 適合拿來逛，而不是拿來聽。**
 
 ## 資料從哪裡來
 
@@ -32,7 +32,7 @@ Macdio 是我寫的，所以讀到介紹它的那一段時，請把這點放在�
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone、iPad、Mac、TV、Watch | 60,000+ | 一次 14.99 USD | 有，依曲目分割 | 無 |
 | Eter | iPhone、iPad、Mac、TV、Watch | 未公布 | 免費，一次性解鎖 | 未標示 | 未標示有廣告 |
-| Broadcasts | iPhone、iPad、Mac、TV、Watch | 未公布 | 免費，一次性解鎖 | 未標示 | 未標示有廣告 |
+| Broadcasts | iPhone、iPad、Mac、TV、Watch | 未公布 | 免費，訂閱每月 1.99 USD 起 | 未標示 | 未標示有廣告 |
 | Simple Radio | iPhone、iPad、Watch | 90,000+ | 免費，Premium 購買 | 未標示 | 有，展示型廣告 |
 | myTuner Radio | iPhone、iPad、TV、Watch、Mac 版 Pro App | 50,000 | 免費，訂閱每週 0.99 USD 起 | 未標示 | 未說明 |
 | TuneIn | iPhone、iPad、TV、Watch、智慧音箱 | 100,000+ | 免費，Premium 訂閱 | 未標示 | 有，Premium 會減少 |
@@ -42,7 +42,7 @@ Macdio 是我寫的，所以讀到介紹它的那一段時，請把這點放在�
 
 ## Macdio，給寧願一次買斷的人
 
-Macdio 在美國 App Store 售價 14.99 美元，付一次，透過 Universal Purchase 涵蓋 iPhone、iPad、Mac、Apple TV 和 Apple Watch。沒有廣告、沒有 App 內購買，也不用帳號。它收錄來自 RadioBrowser 目錄的 60,000 多個電台，加上你自己貼進來的任何串流網址。
+Macdio 在美國 App Store 售價 14.99 美元，付一次，透過 Universal Purchase 涵蓋 iPhone、iPad、Mac、Apple TV 和 Apple Watch。沒有廣告、沒有 App 內購買，也不用帳號。它收錄來自 Radio Browser 目錄的 60,000 多個電台，加上你自己貼進來的任何串流網址。
 
 別處難找的功能是錄音和歌曲辨識。它錄的是串流本身，而不是喇叭輸出的聲音，「依曲目分割」會把一段錄音切成每首歌一個檔案，各自有名稱和封面，[錄音指南](/guides/record-internet-radio.html)裡有說明。歌曲辨識讀的是串流裡的音訊，所以手機放在口袋裡也照樣運作，App 也從不要求麥克風權限。同步歌詞會跟著你聽到的內容捲動。收藏和收聽記錄透過 iCloud 在裝置間同步，手錶 App 在附近沒有 iPhone 時也能透過 LTE 串流。
 
@@ -52,7 +52,7 @@ Macdio 在美國 App Store 售價 14.99 美元，付一次，透過 Universal Pu
 
 ## Eter，能陪你慢慢升級的免費選項
 
-Apparent Software 出品的 Eter 可以免費下載，支援 macOS、iOS、iPadOS、watchOS 和 tvOS，也包含 CarPlay。它搜尋 radio-browser.info 資料庫，再加上一份精選的推薦電台清單，你也可以加入任何自己的串流網址。一次性的 App 內購買可以解鎖收藏電台的功能，並隱藏推薦清單，讓你只看到自己的電台。頁面上同時列了睡眠計時器，而且即使不解鎖，無限收聽也是免費的。
+Apparent Software 出品的 Eter 可以免費下載，支援 macOS、iOS、iPadOS、watchOS 和 tvOS，也包含 CarPlay。它搜尋 Radio Browser 資料庫，再加上一份精選的推薦電台清單，你也可以加入任何自己的串流網址。一次性的 App 內購買可以解鎖收藏電台的功能，並隱藏推薦清單，讓你只看到自己的電台。頁面上同時提到睡眠計時器，而且即使不解鎖，無限收聽也是免費的。
 
 它的 App Store 頁面沒有公布電台數量，也沒有提到錄音。最低需求是 iOS 16，所以比 Macdio 多支援了好幾代的裝置。
 
@@ -60,7 +60,7 @@ Apparent Software 出品的 Eter 可以免費下載，支援 macOS、iOS、iPadO
 
 ## Broadcasts，給自己整理清單的人
 
-Steven Troughton-Smith 開發的 Broadcasts 走的是和大型目錄相反的路：你建立一個只放自己真正會聽的電台的資料庫，它用封面組成的格狀畫面顯示。免費版的資料庫有數量限制，完整版解鎖後取消限制，還加上顯示電台和曲目封面的「正在播放」畫面。它透過 iCloud 在 iPhone、iPad、Mac、Apple Watch 和 Apple TV 之間同步資料庫，屬於 Universal Purchase，在通過認證的車用主機上支援 CarPlay，並在電台沒有提供資訊時，用測試中的 Shazam 補上中繼資料。
+Steven Troughton-Smith 開發的 Broadcasts 走的是和大型目錄相反的路：你建立一個只放自己真正會聽的電台的資料庫，它用封面組成的格狀畫面顯示。免費版只能放少數幾個電台，每月 1.99 美元或每年 11.99 美元的訂閱可以取消這個限制，還加上顯示電台和曲目封面的「正在播放」畫面。它透過 iCloud 在 iPhone、iPad、Mac、Apple Watch 和 Apple TV 之間同步資料庫，屬於 Universal Purchase，在通過認證的車用主機上支援 CarPlay，並在電台沒有提供資訊時，用測試中的 Shazam 補上中繼資料。
 
 頁面上沒有提到錄音，也沒有標示電台數量，因為目錄本來就不是這個 App 的重點。
 
@@ -76,7 +76,7 @@ Mac App Store 上沒有 Mac 版，頁面沒有提到錄音，最低需求是 iOS
 
 ## myTuner Radio，有 Mac 版的全球目錄
 
-Appgeneration 出品的 myTuner Radio 標示有 50,000 個電台，支援 Apple Watch、Apple TV 和 CarPlay。iPhone App 免費，訂閱從每週 0.99 美元到六個月 7.99 美元不等；Mac App Store 上另有售價 9.99 美元的 myTuner Radio Pro。如果你有 Apple Music 訂閱，它也能連結 Apple Music 的播放列表。
+Appgeneration 出品的 myTuner Radio 標示有 50,000 個電台，支援 Apple Watch、Apple TV 和 CarPlay。iPhone App 免費，訂閱從每週 0.99 美元到每年 34.99 美元不等；Mac App Store 上另有售價 9.99 美元的 myTuner Radio Pro。如果你有 Apple Music 訂閱，它也能連結 Apple Music 的播放列表。
 
 頁面沒有說明免費版的廣告情況，所以這一頁不做任何一方的斷言；頁面也沒有提到錄音。最低需求是 iOS 15。
 
@@ -110,7 +110,7 @@ Apple Music 有電台，但它是附帶電台的音樂訂閱，而不是收聽�
 
 ## 一分鐘內做出選擇
 
-先從錢開始。如果你一毛都不付，Eter 是最好的免費體驗，Simple Radio 最容易交給別人用。如果你討厭訂閱但願意付一次，Macdio、Broadcasts 和 myTuner Radio Pro 都是一次購買，個性卻很不一樣：一個完整的播放器、一個精心整理的資料庫，和一個目錄。
+先從錢開始。如果你一毛都不付，Eter 是最好的免費體驗，Simple Radio 最容易交給別人用。如果你討厭訂閱但願意付一次，Macdio、Eter 和 myTuner Radio Pro 都是一次購買，個性卻很不一樣：一個完整的播放器、一個精簡的目錄播放器，和一個只有 Mac 版的舊目錄。主打精心整理資料庫的 Broadcasts 則已改成訂閱制。
 
 接著看裝置清單。較舊的 iPhone 或 Intel Mac 會立刻排除 Macdio，指向 Eter 或 Broadcasts。廚房裡的智慧音箱指向 TuneIn。不帶手機跑步時用的 Apple Watch，會把範圍縮小到能在手錶本身串流的 App。
 
@@ -120,11 +120,11 @@ Apple Music 有電台，但它是附帶電台的音樂訂閱，而不是收聽�
 
 ### Mac 上最好的網路電台 App 是哪一款？
 
-要看你想怎麼付錢。Macdio 是一次購買，沒有廣告，有錄音和歌曲辨識，需要 macOS 26。Eter 和 Broadcasts 都能免費試用、再一次性解鎖，也能在較舊的 macOS 版本上執行。myTuner Radio Pro 是 Mac App Store 上另外販售的 App，售價 9.99 美元。
+要看你想怎麼付錢。Macdio 是一次購買，沒有廣告，有錄音和歌曲辨識，需要 macOS 26。Eter 能免費試用、再一次性解鎖；Broadcasts 免費提供少數幾個電台，其餘要訂閱。兩款都能在較舊的 macOS 版本上執行。myTuner Radio Pro 是 Mac App Store 上另外販售的 App，售價 9.99 美元。
 
 ### 哪些網路電台 App 沒有廣告？
 
-Macdio 沒有廣告，也沒有 App 內購買。Eter 和 Broadcasts 的 App Store 頁面沒有提到廣告，改賣一次性解鎖。Simple Radio 的免費版有展示型廣告，購買 Premium 後移除；TuneIn 則賣 Premium 訂閱，主打無廣告的新聞和沒有廣告的音樂電台。
+Macdio 沒有廣告，也沒有 App 內購買。Eter 和 Broadcasts 的 App Store 頁面沒有提到廣告；Eter 賣一次性解鎖，Broadcasts 賣訂閱。Simple Radio 的免費版有展示型廣告，購買 Premium 後移除；TuneIn 則賣 Premium 訂閱，主打無廣告的新聞和沒有廣告的音樂電台。
 
 ### 這些 App 各有多少電台？
 

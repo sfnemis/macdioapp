@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio gira dentro l'App Sandbox di macOS con il minimo dei permessi: accesso alla rete per lo streaming, microfono per la registrazione e iCloud per la sincronizzazione. Non può accedere a file, contatti o altre app senza il tuo permesso esplicito.</p>
+  <p class="reveal">Macdio gira dentro l'App Sandbox di macOS con i permessi che servono alle sue funzioni: accesso alla rete per lo streaming e per il relay locale che tiene stabili gli stream, iCloud per la sincronizzazione, notifiche per i nuovi episodi, Apple Events per inviare le evidenziazioni ad Apple Notes quando lo chiedi, e Private Cloud Compute di Apple per i riassunti degli episodi. Non ha accesso al microfono. Legge o scrive solo i file che scegli tu, come un file OPML o un elenco di stazioni, e non può raggiungere i contatti o altre app.</p>
 
   <h2 class="sec reveal">Servizi di terze parti</h2>
   <p class="reveal">Macdio si collega ai seguenti servizi esterni solo per le sue funzioni principali:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong> per scaricare i testi sincronizzati delle canzoni. Nessun dato personale viene inviato.</li>
     <li><strong>iTunes Search API</strong> per scaricare le copertine degli album. Nessun dato personale viene inviato.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> fornisce i loghi delle stazioni radio che non ne forniscono uno proprio. Viene inviato solo il dominio web della stazione, nessun dato personale.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> per la ricerca, le classifiche e le categorie dei podcast. Viene inviato solo il termine di ricerca o la categoria. Episodi e feed si scaricano direttamente dal server di ciascun programma.</li>
+    <li><strong>Apple ShazamKit</strong> per Song ID. Al servizio Shazam di Apple va una breve firma audio dello stream, non una registrazione. Il microfono non viene mai usato.</li>
+    <li><strong>Il modello linguistico di Apple</strong> scrive i capitoli e il riassunto di un episodio, sul dispositivo oppure su Private Cloud Compute di Apple, che non conserva il testo.</li>
+    <li><strong>push.macdio.app</strong>, il server delle notifiche di Macdio, riceve l'indirizzo per le notifiche di questo Mac e i programmi che segui, solo quando Notifiche dei nuovi episodi è attivo. Non conserva nient'altro.</li>
   </ul>
 
   <h2 class="sec reveal">Sincronizzazione iCloud</h2>

@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "搜尋中…",
+    "errorTitle": "連線錯誤",
+    "errorText": "無法連上電台資料庫，請再試一次。",
+    "noneTitle": "找不到電台",
+    "noneText": "試試其他搜尋字詞或篩選條件。",
+    "results": "{n} 個結果",
+    "resultsFor": "搜尋「{q}」",
+    "resultsIn": "國家/地區：{country}",
+    "popular": "顯示熱門電台 · 第 {page} 頁",
+    "prev": "← 上一頁",
+    "next": "下一頁 →",
+    "page": "第 {page} 頁",
+    "unknown": "未知"
+  },
+  "genres": {
+    "pop": "流行",
+    "rock": "搖滾",
+    "jazz": "爵士",
+    "classical": "古典",
+    "electronic": "電子",
+    "hip hop": "嘻哈",
+    "country": "鄉村",
+    "blues": "藍調",
+    "metal": "金屬",
+    "reggae": "雷鬼",
+    "latin": "拉丁",
+    "folk": "民謠",
+    "indie": "獨立",
+    "ambient": "氛圍音樂",
+    "news": "新聞",
+    "talk": "談話",
+    "sports": "體育",
+    "oldies": "懷舊老歌",
+    "80s": "80 年代",
+    "90s": "90 年代",
+    "lounge": "Lounge",
+    "soul": "靈魂樂",
+    "r&b": "R&B",
+    "punk": "龐克",
+    "dance": "舞曲",
+    "house": "浩室",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "新",
+    "label": "新功能：{title}",
+    "title": "新功能",
+    "dialog": "Macdio 新功能",
+    "all": "所有版本說明",
+    "gotIt": "知道了"
   }
 }

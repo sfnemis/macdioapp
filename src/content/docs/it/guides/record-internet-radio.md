@@ -2,7 +2,7 @@
 title: "Come registrare la radio internet su Mac (passo per passo)"
 description: "Tre modi per registrare la radio internet su Mac, e cosa funziona su iPhone: un lettore con registrazione integrata, uno strumento audio di sistema o Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Che qualità hanno le registrazioni?"
     a: "La stessa dello stream. L'audio in arrivo viene scritto così com'è, senza ricodifica, quindi una stazione a 128 kbps dà un file a 128 kbps e una stazione a 320 kbps dà un file a 320 kbps."
@@ -64,7 +64,7 @@ Quello che Macdio ha è la protezione opposta: una sessione si ferma da sola dop
 
 ## Cosa ferma una registrazione prima del tempo
 
-Due cose chiudono una sessione prima di te, ed entrambe salvano il file invece di perderlo. La prima è il limite di tre ore qui sopra. La seconda è il disco. Macdio controlla lo spazio libero mentre scrive, ti avvisa ogni cinque minuti quando il disco scende sotto i 500 MB, e ferma la registrazione con una notifica se lo spazio diventa critico, quindi nel caso peggiore hai un file più corto, non un disco pieno e un file rovinato. Il caso da tenere d'occhio è una lunga sessione notturna su un portatile quasi pieno, perché una stazione a 320 kbps scrive circa 144 MB all'ora.
+Due cose chiudono una sessione prima di te, ed entrambe salvano il file invece di perderlo. La prima è il limite di tre ore qui sopra. La seconda è il disco. Macdio non avvia una registrazione con meno di 500 MB liberi, controlla lo spazio libero mentre scrive, ti avvisa ogni cinque minuti quando il disco scende sotto i 500 MB, e ferma la registrazione con una notifica se lo spazio diventa critico, quindi nel caso peggiore hai un file più corto, non un disco pieno e un file rovinato. Il caso da tenere d'occhio è una lunga sessione notturna su un portatile quasi pieno, perché una stazione a 320 kbps scrive circa 144 MB all'ora.
 
 ## Quanto diventano grandi i file?
 
@@ -72,7 +72,7 @@ Una registrazione pesa quanto lo stream, perché non viene aggiunto né compress
 
 ## In che formato sono i file
 
-Una registrazione mantiene quello che manda la stazione. Una stazione MP3 ti dà un .mp3 e una stazione AAC un .aac, senza ricodifica sulla strada verso il disco, quindi il file suona esattamente come lo stream. I brani che Dividi per brano ritaglia vengono scritti come .m4a. Qui non c'è nessuna impostazione di qualità da sbagliare, perché non c'è una seconda codifica.
+Una registrazione mantiene quello che manda la stazione. Una stazione MP3 ti dà un .mp3 e una stazione AAC un .aac, senza ricodifica sulla strada verso il disco, quindi il file suona esattamente come lo stream. Quando Song ID ha dato un nome a una canzone in una registrazione AAC, titolo, artista e copertina vengono scritti nel file, che così diventa un .m4a. Qui non c'è nessuna impostazione di qualità da sbagliare, perché l'audio non viene mai codificato una seconda volta.
 
 ## Dove stanno le registrazioni
 

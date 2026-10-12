@@ -2,12 +2,12 @@
 title: "Che canzone sta passando alla radio? 3 modi per scoprirlo"
 description: "Tre modi per dare un nome a una canzone alla radio, compreso uno che legge lo stream e non chiede mai il microfono, così il telefono resta in tasca."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Funziona davvero senza microfono?"
     a: "Sì. Macdio riconosce la canzone dallo stream audio che sta già riproducendo, quindi il permesso per il microfono non viene mai chiesto."
   - q: "E se la stazione annuncia il titolo sbagliato?"
-    a: "Il riconoscimento dall'audio ha la precedenza quando può dimostrare che descrive il momento sullo schermo, quindi l'annuncio sbagliato viene corretto invece che copiato."
+    a: "Macdio mostra il titolo della stazione ogni volta che lo invia. Anche un'impronta audio può sbagliare, su una pubblicità, un remix o una versione live, e una correzione sbagliata ma sicura di sé è peggio di un titolo in ritardo. Song ID interviene dove la stazione non invia niente."
   - q: "Funziona in auto?"
     a: "Sì, anche con CarPlay, e un cuore messo a una canzone mentre guidi arriva comunque ad Apple Music. Leggi la guida a CarPlay."
   - q: "Funziona con la radio FM o AM?"
@@ -44,7 +44,7 @@ La maggior parte delle stazioni trasmette artista e titolo insieme all'audio, e 
 
 Se l'audio passa già attraverso un'app, l'app può riconoscerlo direttamente, senza microfono. È così che fa [Macdio](/iphone.html): Song ID ascolta lo stream e non la stanza, quindi funziona con il telefono bloccato in tasca, in un'auto rumorosa o su una [Apple TV](/apple-tv.html) dall'altra parte del salotto. Macdio non chiede mai il permesso per il microfono, perché non gli serve mai.
 
-Siccome sente l'audio vero, corregge anche la stazione quando sbaglia, e può dare un nome a una canzone in un tratto che la stazione non annuncia affatto. Lo stesso stream si può tenere mentre ascolti: [come registrare la radio internet](/guides/record-internet-radio.html), sul [Mac](/mac.html) come sull'iPhone.
+Siccome sente l'audio vero, può dare un nome a una canzone in un tratto che la stazione non annuncia affatto, e aggiungere la copertina quando la stazione invia solo il titolo. Lo stesso stream si può tenere mentre ascolti: [come registrare la radio internet](/guides/record-internet-radio.html), sul [Mac](/mac.html) come sull'iPhone.
 
 ## Perché in auto il microfono fa fatica
 
@@ -62,7 +62,7 @@ Funziona ancora anche il vecchio ripiego: scrivi tra virgolette in un motore di 
 
 I metadati delle stazioni li scrive il sistema di automazione che la stazione usa, e vanno alla deriva. Gli errori tipici sono una pubblicità o un jingle che eredita il titolo del brano precedente, un titolo che arriva qualche secondo prima o dopo, e un segnaposto come il nome della stazione al posto della canzone.
 
-Il riconoscimento dall'audio li corregge tutti e tre, perché dice cosa sta suonando davvero e non cosa sostiene il sistema di messa in onda. Quando la stazione ha ragione, vince il suo testo, perché chi trasmette conosce il proprio catalogo meglio di qualsiasi impronta audio.
+Il riconoscimento dall'audio dice cosa sta suonando davvero e non cosa sostiene il sistema di messa in onda, ed è per questo che è lo strumento giusto per i tratti che la stazione lascia vuoti. Macdio lascia comunque vincere il testo della stazione ogni volta che lo invia, perché chi trasmette conosce il proprio catalogo meglio di qualsiasi impronta audio, e una correzione sbagliata ma sicura di sé è peggio di un titolo in ritardo.
 
 ## Poi tieni la canzone
 
@@ -86,7 +86,7 @@ Sì. Macdio riconosce la canzone dallo stream audio che sta già riproducendo, q
 
 ### E se la stazione annuncia il titolo sbagliato?
 
-Il riconoscimento dall'audio ha la precedenza quando può dimostrare che descrive il momento sullo schermo, quindi l'annuncio sbagliato viene corretto invece che copiato.
+Macdio mostra il titolo della stazione ogni volta che lo invia. Anche un'impronta audio può sbagliare, su una pubblicità, un remix o una versione live, e una correzione sbagliata ma sicura di sé è peggio di un titolo in ritardo. Song ID interviene dove la stazione non invia niente.
 
 ### Funziona in auto?
 

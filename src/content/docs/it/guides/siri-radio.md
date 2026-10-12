@@ -2,7 +2,7 @@
 title: "Avvia la radio internet con Siri: tutti i comandi di Macdio"
 description: "Dici la stazione e parte. Ogni frase per Siri che Macdio capisce, in 14 lingue, su iPhone, con gli AirPods e dal tasto vocale in CarPlay."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "Devo dire \"su Macdio\"?"
     a: "Sì. Siri manda una frase a un'app in base al suo nome, quindi ogni comando finisce con Macdio. Senza, Siri fa partire Apple Music o ti chiede cosa intendevi."
@@ -43,7 +43,7 @@ Comincia ognuna con "Ehi Siri". La stazione va dove ci sono le parentesi.
 
 ## Quattordici lingue
 
-Siri usa la frase nella lingua in cui è impostato, e Macdio include le frasi in inglese, arabo, cinese (semplificato e tradizionale), olandese, francese, tedesco, italiano, giapponese, polacco, portoghese (Brasile), russo, spagnolo e turco. Un Siri in turco sente "Macdio ile Radio Paradise çal", uno in tedesco "Spiele Radio Paradise auf Macdio", uno in spagnolo "Pon Radio Paradise en Macdio". I nomi delle stazioni sono gli stessi in ogni lingua, quindi chi ascolta in italiano con preferiti spagnoli non ha problemi.
+Siri usa la frase nella lingua in cui è impostato, e Macdio include le frasi in inglese, arabo, cinese (semplificato e tradizionale), olandese, francese, tedesco, italiano, giapponese, polacco, portoghese (Brasile), russo, spagnolo e turco. Un Siri in turco sente "Macdio ile Radio Paradise çal", uno in tedesco "Radio Paradise in Macdio abspielen", uno in spagnolo "Reproducir Radio Paradise en Macdio". I nomi delle stazioni sono gli stessi in ogni lingua, quindi chi ascolta in italiano con preferiti spagnoli non ha problemi.
 
 ## In auto
 

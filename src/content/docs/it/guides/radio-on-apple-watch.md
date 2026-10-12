@@ -1,8 +1,8 @@
 ---
 title: "La radio su Apple Watch senza iPhone vicino (2026)"
-description: "L'orologio riproduce la radio in diretta via LTE da solo. Cosa serve davvero per l'autonomia, quali modelli ci riescono e i consumi reali di un'ora d'uso."
+description: "L'orologio riproduce la radio in diretta via LTE da solo. Cosa serve per l'autonomia, quali modelli ci riescono e quanto costa lo streaming in batteria e dati."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Apple Watch può riprodurre la radio senza iPhone?"
     a: "Sì, con un'app autonoma. L'app di Macdio per l'orologio fa streaming da sola, in Wi-Fi o con la rete cellulare."
@@ -17,7 +17,7 @@ faq:
   - q: "Le mie stazioni si sincronizzano dall'iPhone?"
     a: "Sì. Preferiti e cartelle arrivano con iCloud, e l'orologio ha anche una sua vista della libreria e la ricerca."
   - q: "Posso registrare la radio sull'orologio?"
-    a: "No. La registrazione è una funzione di Mac e iPhone. Le canzoni a cui metti il cuore sull'orologio si sincronizzano comunque ovunque."
+    a: "No. La registrazione è una funzione di iPhone, iPad e Mac. Le canzoni a cui metti il cuore sull'orologio si sincronizzano comunque ovunque."
 ---
 
 Una corsa, la borsa della piscina, una spesa veloce: spesso l'orologio è l'unico dispositivo che hai addosso. Ecco come funziona la radio internet direttamente su Apple Watch.
@@ -86,7 +86,7 @@ Sì. Preferiti e cartelle arrivano con iCloud, e l'orologio ha anche una sua vis
 
 ### Posso registrare la radio sull'orologio?
 
-No. La registrazione è una funzione di Mac e iPhone. Le canzoni a cui metti il cuore sull'orologio si sincronizzano comunque ovunque.
+No. La registrazione è una funzione di iPhone, iPad e Mac. Le canzoni a cui metti il cuore sull'orologio si sincronizzano comunque ovunque.
 
 ## Vuoi provarla?
 

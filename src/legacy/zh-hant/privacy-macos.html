@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio 在 macOS App Sandbox 內運行，只有最低限度的權限：串流用的網路存取、錄音用的麥克風，以及同步用的 iCloud。未經你明確許可，它無法存取檔案、聯絡人或其他 App。</p>
+  <p class="reveal">Macdio 在 macOS App Sandbox 內運行，只有功能所需的權限：串流以及讓串流保持穩定的本機中繼所需的網路存取、同步用的 iCloud、新集數的通知、在你要求時把重點傳到 Apple Notes 的 Apple Events，以及產生集數摘要的 Apple Private Cloud Compute。它沒有麥克風存取權。它只讀寫你自己挑選的檔案，例如 OPML 檔案或電台清單，也無法接觸聯絡人或其他 App。</p>
 
   <h2 class="sec reveal">第三方服務</h2>
   <p class="reveal">Macdio 只為了核心功能才連線到以下外部服務：</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong>，用來抓取同步歌詞。不會傳送個人資料。</li>
     <li><strong>iTunes Search API</strong>，用來抓取專輯封面。不會傳送個人資料。</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> 為自己沒有提供標誌的電台提供標誌。只會傳送電台的網域，沒有個人資料。</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>，用於 Podcast 搜尋、排行榜和分類。只會傳送搜尋字詞或分類。集數和 feed 直接從各節目自己的伺服器下載。</li>
+    <li><strong>Apple ShazamKit</strong>，用於 Song ID。送到 Apple Shazam 服務的是串流的一小段音訊特徵，不是錄音。從不使用麥克風。</li>
+    <li><strong>Apple 的語言模型</strong>為 Podcast 集數撰寫章節和摘要，在裝置上或在 Apple 的 Private Cloud Compute 上進行，後者不會保留這些文字。</li>
+    <li><strong>push.macdio.app</strong> 是 Macdio 的通知伺服器，只在「新集數通知」開啟時，接收這台 Mac 的通知位址和你追蹤的節目。它不保留其他任何東西。</li>
   </ul>
 
   <h2 class="sec reveal">iCloud 同步</h2>
