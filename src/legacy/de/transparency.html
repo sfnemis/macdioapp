@@ -58,7 +58,7 @@
   <p class="reveal">Wie die meisten Entwickler im Jahr 2026 nutze ich moderne KI-gestützte Werkzeuge als Teil meines Arbeitsablaufs, um Randfälle zu erkunden, Ideen zu prototypisieren und knifflige Debugging-Sitzungen durchzuarbeiten. Aber die Kernarchitektur, die Designentscheidungen, das Performance-Tuning und der am Ende ausgelieferte Code kommen alle aus bewusster Recherche und praktischer Iteration. Mir ist wichtig, die Details richtig hinzubekommen, und das heißt, jede Schicht des Stacks zu verstehen, statt zu übernehmen, was ein Werkzeug ausgibt.</p>
 
   <h2 class="reveal">Datenquellen &amp; APIs</h2>
-  <p class="reveal">Macdio hat keine eigene Senderdatenbank. Es stützt sich auf öffentliche APIs für Senderlisten, „Läuft gerade“-Metadaten und Liedtexte. Hier ist, womit die App spricht:</p>
+  <p class="reveal">Macdio stellt keinen eigenen Senderkatalog zusammen. Die Senderlisten kommen von Radio Browser, einer öffentlichen, von der Community gepflegten Datenbank; Macdios eigene Kopie davon (dir.macdio.app) springt nur ein, wenn Radio Browser nicht antwortet. „Läuft gerade“-Metadaten und Liedtexte kommen von öffentlichen APIs. Hier ist, womit die App spricht:</p>
   <div class="card-grid cols-auto reveal">
     <div class="info-card">
       <h3>Radio Browser</h3>

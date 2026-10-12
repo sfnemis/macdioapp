@@ -58,7 +58,7 @@
   <p class="reveal">和 2026 年大多數開發者一樣，我在工作流程中使用現代的 AI 輔助工具，用來探索邊界情況、製作原型，以及處理棘手的除錯過程。但核心架構、設計決策、效能調校和最終出貨的程式碼，全都來自審慎的研究和親手反覆打磨。我在意把細節做對，這表示要理解技術堆疊的每一層，而不是接受工具產生的任何東西。</p>
 
   <h2 class="reveal">資料來源與 API</h2>
-  <p class="reveal">Macdio 沒有自己的電台資料庫。它依賴公開 API 來提供電台列表、正在播放的中繼資料和歌詞。以下是 App 會連線的對象：</p>
+  <p class="reveal">Macdio 不自行編製電台目錄。電台列表來自 Radio Browser，一個由社群維護的公開資料庫；只有在 Radio Browser 沒有回應時，才會使用 Macdio 自己的副本（dir.macdio.app）。正在播放的中繼資料和歌詞來自公開 API。以下是 App 會連線的對象：</p>
   <div class="card-grid cols-auto reveal">
     <div class="info-card">
       <h3>Radio Browser</h3>

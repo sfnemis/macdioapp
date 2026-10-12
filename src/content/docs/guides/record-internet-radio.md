@@ -1,6 +1,6 @@
 ---
 title: "How to Record Internet Radio on a Mac (Step by Step)"
-description: "Three ways to record internet radio on a Mac, plus what works on iPhone: a player with recording built in, a system audio capture tool, and Audacity with a virtual audio device."
+description: "Three ways to record internet radio on a Mac, and what works on iPhone: a player with recording built in, a system audio tool, or Audacity."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

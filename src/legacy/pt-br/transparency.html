@@ -58,7 +58,7 @@
   <p class="reveal">Como a maioria dos desenvolvedores em 2026, eu uso ferramentas modernas assistidas por IA como parte do meu fluxo de trabalho, para explorar casos extremos, prototipar ideias e atravessar sessões difíceis de depuração. Mas a arquitetura central, as decisões de design, o ajuste de desempenho e o código final que vai para a loja vêm todos de pesquisa deliberada e iteração na prática. Eu me importo em acertar os detalhes, e isso significa entender cada camada da pilha em vez de aceitar o que uma ferramenta gera.</p>
 
   <h2 class="reveal">Fontes de dados &amp; APIs</h2>
-  <p class="reveal">O Macdio não tem um banco de dados próprio de estações. Ele depende de APIs públicas para fornecer listas de estações, metadados do que está tocando e letras. Veja com o que o app conversa:</p>
+  <p class="reveal">O Macdio não monta um catálogo próprio de estações. As listas de estações vêm do Radio Browser, um banco de dados público mantido pela comunidade, e a cópia própria do Macdio (dir.macdio.app) só é usada quando o Radio Browser não responde. Os metadados do que está tocando e as letras vêm de APIs públicas. Veja com o que o app conversa:</p>
   <div class="card-grid cols-auto reveal">
     <div class="info-card">
       <h3>Radio Browser</h3>
