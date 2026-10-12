@@ -1,0 +1,14 @@
+---
+import { t } from '../i18n/index.mjs';
+const { lang } = Astro.props;
+const s = t(lang);
+---
+<button type="button" class="theme" aria-label={s.nav.theme} data-theme-toggle>◐</button>
+<script is:inline>
+  // Shares Starlight's storage key so the guides and the marketing pages agree.
+  document.querySelector('[data-theme-toggle]').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem('starlight-theme', next); } catch (e) {}
+  });
+</script>

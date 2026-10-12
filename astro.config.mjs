@@ -34,6 +34,10 @@ export default defineConfig({
       credits: false,
       expressiveCode: false,
       customCss: ['./src/styles/tokens.css', './src/styles/starlight.css'],
+      // Starlight's own Head writes a canonical of the form /guides.html/ under
+      // preserve format and no hreflang for a single locale; this one uses the
+      // same helpers as Base.astro so both halves of the site agree.
+      components: { Head: './src/components/StarlightHead.astro' },
     }),
   ],
 });

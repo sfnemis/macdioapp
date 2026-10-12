@@ -1,0 +1,17 @@
+---
+import { localePath } from '../site/paths.mjs';
+import { t } from '../i18n/index.mjs';
+const { lang } = Astro.props;
+const s = t(lang);
+const p = (english) => localePath(lang, english);
+---
+<footer class="wrap footer">
+  <ul>
+    <li><a href={p('/support.html')}>{s.footer.support}</a></li>
+    <li><a href={p('/privacy.html')}>{s.footer.privacy}</a></li>
+    <li><a href={p('/presskit.html')}>{s.footer.press}</a></li>
+    <li><a href={p('/transparency.html')}>{s.footer.transparency}</a></li>
+    <li><a href={p('/accessibility.html')}>{s.footer.accessibility}</a></li>
+  </ul>
+  <p>© {new Date().getFullYear()} {s.footer.rights}</p>
+</footer>

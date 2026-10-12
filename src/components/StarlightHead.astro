@@ -1,0 +1,42 @@
+---
+// Replaces Starlight's Head so guide pages carry the same canonical, hreflang
+// and metadata rules as the marketing pages (Base.astro). Starlight's default
+// wrote the canonical as /guides.html/ under build.format "preserve" and no
+// hreflang while a single locale is live.
+import { SITE, localePath, alternates, splitLocale } from '../site/paths.mjs';
+import { byCode } from '../site/locales.mjs';
+
+const { entry, siteTitle } = Astro.locals.starlightRoute;
+// Astro.url.pathname is "/guides/" for the index route and "/guides/<slug>"
+// for content pages; the served file for the latter is "<slug>.html".
+let pathname = Astro.url.pathname;
+if (pathname.endsWith('/index.html')) pathname = pathname.slice(0, -'index.html'.length);
+else if (!pathname.endsWith('/') && !pathname.endsWith('.html')) pathname += '.html';
+const { code, path } = splitLocale(pathname);
+const locale = byCode(code);
+const url = SITE + localePath(code, path);
+const pageTitle = entry.data.title;
+const title = /Macdio/.test(pageTitle) ? pageTitle : `${pageTitle} | ${siteTitle}`;
+const description = entry.data.description ?? '';
+---
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="canonical" href={url}>
+{alternates(path).map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+<meta property="og:site_name" content="Macdio">
+<meta property="og:title" content={title}>
+<meta property="og:description" content={description}>
+<meta property="og:url" content={url}>
+<meta property="og:type" content="article">
+<meta property="og:locale" content={locale.lang.replace('-', '_')}>
+<meta name="theme-color" content="#050507" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="sitemap" href="/sitemap-index.xml">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>

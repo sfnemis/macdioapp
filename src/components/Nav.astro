@@ -1,0 +1,23 @@
+---
+import { localePath } from '../site/paths.mjs';
+import { t } from '../i18n/index.mjs';
+import LangSwitcher from './LangSwitcher.astro';
+import ThemeToggle from './ThemeToggle.astro';
+const { lang, path } = Astro.props;
+const s = t(lang);
+const p = (english) => localePath(lang, english);
+---
+<header class="wrap">
+  <a class="skip" href="#main">{s.nav.skip}</a>
+  <div class="nav">
+    <a class="brand" href={p('/')} aria-label={s.site.name}><img src="/icon-192.png" alt="" width="32" height="32"> {s.site.name}</a>
+    <ul>
+      <li><a href={p('/features.html')}>{s.nav.features}</a></li>
+      <li><a href={p('/guides/')}>{s.nav.guides}</a></li>
+      <li><a href={p('/pricing.html')}>{s.nav.pricing}</a></li>
+      <li><a href="https://hub.devdio.pro" rel="noopener">{s.nav.community}</a></li>
+    </ul>
+    <ThemeToggle lang={lang} />
+  </div>
+  <LangSwitcher lang={lang} path={path} />
+</header>
