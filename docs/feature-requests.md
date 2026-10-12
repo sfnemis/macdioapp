@@ -3,6 +3,25 @@
 Requests and findings, newest first. Nothing leaves this list without a line
 saying what happened to it.
 
+## 2026-10-12
+
+- [ ] **W1 Full redesign of macdio.app** (Sait, 2026-10-12). Replace the whole
+  current site with a more modern, simpler, more functional design. Built with
+  the Hallmark design skill (audit, then redesign), using the showcase clips and
+  stills in `~/MacdioBuild/showcase/media/web/` (app repo tracker #566).
+  Everything is tested locally first; nothing deploys until Sait says "tamam".
+- [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
+  on the model of https://linnote.app/guide/ (structured guide hub with
+  navigation, per-topic pages) for SEO and GEO. Existing 10 guides carry over.
+- [ ] **W3 Site in every app language** (Sait, 2026-10-12). The app ships 14
+  localizations (ar, de, en, es, fr, it, ja, nl, pl, pt-BR, ru, tr, zh-Hans,
+  zh-Hant); the site gets the same 14, every page, with hreflang. Today only
+  `/tr/` and `/de/` exist, one page each.
+- [ ] **W4 Automatic language by visitor** (Sait, 2026-10-12). The visitor lands
+  in their own language without choosing. Sait asked for country based; see the
+  design spec for why browser language (Accept-Language) is proposed instead,
+  with crawlers never redirected and a manual switcher on every page.
+
 ## 2026-09-14
 
 - [x] **Both custom domains are declared in `wrangler.jsonc` now.** `macdio.app`
