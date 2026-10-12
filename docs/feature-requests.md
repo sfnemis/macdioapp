@@ -10,6 +10,10 @@ saying what happened to it.
   the Hallmark design skill (audit, then redesign), using the showcase clips and
   stills in `~/MacdioBuild/showcase/media/web/` (app repo tracker #566).
   Everything is tested locally first; nothing deploys until Sait says "tamam".
+  F1 foundation done on branch `v2` (2026-10-12): Astro + Starlight skeleton, 33 marketing
+  routes in every live locale, Worker language redirect with tests, sitemap with hreflang,
+  hreflang/link/i18n checks in the build, web-size media, counts, claims register,
+  Hallmark audit. Not deployed. Next: F2 English design.
 - [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
   on the model of https://linnote.app/guide/ (structured guide hub with
   navigation, per-topic pages) for SEO and GEO. The 9 existing guides carry over.
