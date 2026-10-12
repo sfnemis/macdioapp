@@ -32,6 +32,14 @@ saying what happened to it.
   Radio Garden, myTuner, Broadcasts, Overcast and the rest of the field. Every
   page, guide and language is planned against that map; GSC data for the
   current site is the baseline.
+- [ ] **W7 Search Console access for the service account is gone** (found
+  2026-10-12 15:06). `claude-seo@claude-seo-macdio.iam.gserviceaccount.com`
+  (key `~/.config/claude-seo/service_account.json`) gets `sites.list` = empty
+  and 403 "User does not have sufficient permission for site
+  'sc-domain:macdio.app'"; it read the same property on 2026-09-10. Someone
+  removed the user from the property or the property was recreated. Sait adds
+  the address back under Search Console > Settings > Users and permissions
+  (Restricted is enough). Until then the W6 baseline is the 2026-09-10 reading.
 
 ## 2026-09-14
 
