@@ -61,8 +61,6 @@ Ruling on fonts (recorded for the Hallmark gate that bans system-ui as display):
 4. The hub is unreachable at build time: the build passes using the committed `src/data/hub.json` and the page states that file's date. Test in Task 4.
 5. 320 px: the stat strip, the nav button row and the App Store button never wrap or overflow; measured by `scrollWidth` in the browser, not by eye. Test in Task 7.
 
----
-
 ### Task 1: Tokens, base styles, CSS gate
 
 **Files:**
@@ -401,8 +399,6 @@ git add src/styles tests/check-css.test.mjs scripts/check-css.mjs package.json .
 git commit -m "v2: design tokens (custom indigo theme, light and dark), base styles, CSS token gate in the build"
 ```
 
----
-
 ### Task 2: Nav (N11 on details) and footer (Ft5 Statement)
 
 **Files:**
@@ -469,18 +465,15 @@ Every blurb is checked against `docs/research/2026-10-12-feature-inventory.md` b
 - [ ] **Step 2: Write `src/components/AppStoreButton.astro`**
 
 ```astro
----
 import { t } from '../i18n/index.mjs';
 const { lang, variant = 'fill' } = Astro.props;
 const s = t(lang);
----
 <a class={`btn btn--${variant}`} href="https://apps.apple.com/app/macdio/id6761737888" rel="noopener">{s.nav.appStore}</a>
 ```
 
 - [ ] **Step 3: Write `src/components/Nav.astro`** (N11 mega-menu on `<details>`, two panels, no library)
 
 ```astro
----
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 import LangSwitcher from './LangSwitcher.astro';
@@ -493,7 +486,6 @@ const groups = [
   { key: 'platforms', label: s.nav.platforms, items: s.nav.platformItems },
   { key: 'features', label: s.nav.features, items: s.nav.featureItems },
 ];
----
 <header class="nav wrap">
   <a class="skip" href="#main">{s.nav.skip}</a>
   <div class="nav__bar">
@@ -574,13 +566,11 @@ The `name="mega"` attribute makes the details elements exclusive (one open at a 
 - [ ] **Step 4: Write `src/components/Footer.astro`** (Ft5 Statement)
 
 ```astro
----
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 const { lang } = Astro.props;
 const s = t(lang);
 const p = (english) => localePath(lang, english);
----
 <footer class="foot wrap">
   <p class="foot__line">{s.footer.statement}</p>
   <div class="foot__meta">
@@ -636,8 +626,6 @@ Expected: the build chain all `ok` (check-css included); `3` details elements (t
 git add src/components src/layouts src/i18n/en.json src/styles/site.css
 git commit -m "v2: mega-menu nav on details, statement footer, App Store button, language and theme controls on tokens"
 ```
-
----
 
 ### Task 3: Media manifest and the Clip figure
 
@@ -729,7 +717,6 @@ Expected: 2 passing; `media manifest: 39 entries`; `iphone-songid` is `{ "w": 60
 - [ ] **Step 5: Write `src/components/Clip.astro`**
 
 ```astro
----
 // A real capture in a figure: webm and mp4 sources, a jpg poster, width and
 // height from the manifest. The sources are attached by a small inline
 // script when the figure nears the viewport, so a page never downloads a
@@ -739,7 +726,6 @@ import manifest from '../data/media.json';
 const { name, caption, priority = false } = Astro.props;
 const m = manifest[name];
 if (!m || m.kind !== 'clip') throw new Error(`Clip "${name}" is not in src/data/media.json (run scripts/media-manifest.mjs)`);
----
 <figure class="clip" data-clip={name}>
   <video muted loop playsinline preload="none" poster={`/media/${name}.jpg`} width={m.w} height={m.h} data-webm={`/media/${name}.webm`} data-mp4={`/media/${name}.mp4`} aria-label={caption} fetchpriority={priority ? 'high' : undefined}></video>
   <noscript><img src={`/media/${name}.jpg`} alt={caption} width={m.w} height={m.h}></noscript>
@@ -778,12 +764,10 @@ if (!m || m.kind !== 'clip') throw new Error(`Clip "${name}" is not in src/data/
 - [ ] **Step 6: Write `src/components/Still.astro`**
 
 ```astro
----
 import manifest from '../data/media.json';
 const { name, alt, caption } = Astro.props;
 const m = manifest[name];
 if (!m) throw new Error(`Still "${name}" is not in src/data/media.json`);
----
 <figure class="still">
   <img src={`/media/${name}.jpg`} alt={alt} width={m.w} height={m.h} loading="lazy" decoding="async">
   {caption && <figcaption>{caption}</figcaption>}
@@ -805,8 +789,6 @@ Temporarily render `<Clip name="does-not-exist" caption="x" />` in `src/pages/in
 git add scripts/media-manifest.mjs tests/media-manifest.test.mjs src/data/media.json src/components/Clip.astro src/components/Still.astro
 git commit -m "v2: media manifest with sizes and durations, lazy Clip and Still figures"
 ```
-
----
 
 ### Task 4: Hub feed from the community (W9)
 
@@ -910,13 +892,11 @@ Expected: 1 passing; `hub.json` lists three release notes (3.0 on 2026-09-30, 2.
 `HubFeed.astro`:
 
 ```astro
----
 import hub from '../data/hub.json';
 import { t } from '../i18n/index.mjs';
 const { lang } = Astro.props;
 const s = t(lang).hub;
 const fmt = (d) => new Date(d + 'T00:00:00Z').toLocaleDateString(lang === 'en' ? 'en-GB' : lang, { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
----
 <section class="hub wrap" aria-labelledby="hub-h">
   <div class="head-hang"><h2 id="hub-h">{s.heading}</h2><p>{s.lede}</p></div>
   <div class="hub__cols">
@@ -953,8 +933,6 @@ Disconnect by pointing the script at a dead host once: `HUB_TEST=1 node -e "impo
 git add scripts/hub.mjs tests/hub.test.mjs src/data/hub.json src/components/HubFeed.astro src/i18n/en.json
 git commit -m "v2: community hub feed (release notes and latest topics) fetched into the repo, rendered at build time"
 ```
-
----
 
 ### Task 5: Numbers and prices helpers
 
@@ -1024,8 +1002,6 @@ export function price(pricing, cc, lang) {
 git add src/site/format.mjs tests/format.test.mjs
 git commit -m "v2: locale number, date and price helpers"
 ```
-
----
 
 ### Task 6: The home page (Workbench)
 
@@ -1126,7 +1102,6 @@ export function webSite(lang) {
 `StatStrip.astro` (T4, 4-up, tabular):
 
 ```astro
----
 import counts from '../data/counts.json';
 import pricing from '../../public/pricing.json';
 import { t } from '../i18n/index.mjs';
@@ -1134,7 +1109,6 @@ import { formatCount, price, countries, longDate } from '../site/format.mjs';
 const { lang } = Astro.props;
 const s = t(lang).home;
 const fill = (str) => str.replace('{stations}', formatCount(counts.stations, lang)).replace('{podcasts}', formatCount(counts.podcasts, lang)).replace('{price}', price(pricing, 'US', 'en').text).replace('{countries}', String(countries(pricing)));
----
 <section class="stats wrap tnum" aria-label="Macdio in numbers">
   <ul>
     {s.stats.map((st) => <li><b>{fill(st.value)}</b><span>{fill(st.label)}</span></li>)}
@@ -1155,9 +1129,7 @@ const fill = (str) => str.replace('{stations}', formatCount(counts.stations, lan
 `Faq.astro`:
 
 ```astro
----
 const { items, heading, id = 'faq' } = Astro.props;
----
 <section class="faq wrap" aria-labelledby={id}>
   <h2 id={id} class="faq__h">{heading}</h2>
   {items.map((i) => (
@@ -1181,12 +1153,10 @@ const { items, heading, id = 'faq' } = Astro.props;
 `AuthorLine.astro`:
 
 ```astro
----
 import { t } from '../i18n/index.mjs';
 import { longDate } from '../site/format.mjs';
 const { lang, checkedOn } = Astro.props;
 const s = t(lang);
----
 <p class="author muted small wrap">{s.site.authorLine} {s.hub.asOf.toLowerCase()} {longDate(checkedOn, lang)}.</p>
 <style>.author { padding-block: var(--space-lg); }</style>
 ```
@@ -1196,7 +1166,6 @@ with `en.json` `site.authorLine`: `"Written by Sait Firat NEMIS, developer of Ma
 - [ ] **Step 5: Write `src/templates/Home.astro`**
 
 ```astro
----
 import Base from '../layouts/Base.astro';
 import Clip from '../components/Clip.astro';
 import AppStoreButton from '../components/AppStoreButton.astro';
@@ -1218,7 +1187,6 @@ const lede = h.lede.replace('{stations}', formatCount(counts.stations, lang)).re
 const faq = h.faq.map((f) => ({ q: f.q, a: f.a }));
 const jsonld = [webSite(lang), softwareApplication(lang, counts, pricing), faqPage(faq)];
 const p = (english) => localePath(lang, english);
----
 <Base lang={lang} path="/" title={page.title} description={page.description} jsonld={jsonld}>
   <section class="hero wrap">
     <div class="hero__text">
@@ -1298,8 +1266,6 @@ Expected: chain all `ok`; the H1; `3` JSON-LD blocks; the dated count line and t
 git add src/templates/Home.astro src/components/StatStrip.astro src/components/Faq.astro src/components/AuthorLine.astro src/site/jsonld.mjs src/pages src/i18n/en.json src/data/claims.md
 git commit -m "v2: home page as a Workbench tour of real captures, dated counts, hub feed, FAQ and JSON-LD"
 ```
-
----
 
 ### Task 7: Visual, mobile and Lighthouse checks, then the review gate
 

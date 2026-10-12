@@ -32,8 +32,6 @@
 4. A live locale missing one key that `en.json` has: the build fails with the key name, never ships English under a `tr` URL. Test in Task 7.
 5. `/ios/index.html` (noindex redirect stub) and `404.html` must not appear in the sitemap; the `/` entry must be `https://macdio.app/`, not `/index.html`. Tests in Task 6.
 
----
-
 ### Task 1: Branch, Astro skeleton, old site set aside
 
 **Files:**
@@ -197,11 +195,8 @@ export const collections = {
 `src/content/docs/guides/index.md` (the text comes from `old-site/guides/index.html`; keep the facts, drop the marketing tone; F3 rewrites it):
 
 ```md
----
 title: Macdio Guides
 description: How to listen, record, identify and read along with radio and podcasts in Macdio on iPhone, iPad, Mac, Apple TV, Apple Watch and CarPlay.
----
-
 Guides for Macdio, the radio and podcast app for Apple devices. Each guide answers one question and names the devices it applies to.
 
 The guide hub is being rebuilt. The nine existing guides return in the next step with their original addresses.
@@ -276,8 +271,6 @@ git add -A
 git commit -m "v2: Astro and Starlight skeleton, old site moved to old-site/, static assets kept in public/"
 git push -u origin v2
 ```
-
----
 
 ### Task 2: Locale paths helper with tests
 
@@ -363,8 +356,6 @@ Expected: 3 passing.
 git add src/site/paths.mjs tests/paths.test.mjs
 git commit -m "v2: locale path helpers with tests"
 ```
-
----
 
 ### Task 3: Base layout, nav, footer, switchers, English strings
 
@@ -465,13 +456,11 @@ h1, h2, h3 { font-family: var(--font-display); font-style: normal; overflow-wrap
 `src/components/LangSwitcher.astro`:
 
 ```astro
----
 import { liveLocales } from '../site/locales.mjs';
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 const { lang, path } = Astro.props;
 const s = t(lang);
----
 <nav class="lang" aria-label={s.nav.language}>
   <ul>
     {liveLocales().map((l) => (
@@ -492,11 +481,9 @@ const s = t(lang);
 `src/components/ThemeToggle.astro`:
 
 ```astro
----
 import { t } from '../i18n/index.mjs';
 const { lang } = Astro.props;
 const s = t(lang);
----
 <button type="button" class="theme" aria-label={s.nav.theme} data-theme-toggle>◐</button>
 <script is:inline>
   // Shares Starlight's storage key so the guides and the marketing pages agree.
@@ -511,7 +498,6 @@ const s = t(lang);
 `src/components/Nav.astro`:
 
 ```astro
----
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 import LangSwitcher from './LangSwitcher.astro';
@@ -519,7 +505,6 @@ import ThemeToggle from './ThemeToggle.astro';
 const { lang, path } = Astro.props;
 const s = t(lang);
 const p = (english) => localePath(lang, english);
----
 <header class="wrap">
   <a class="skip" href="#main">{s.nav.skip}</a>
   <div class="nav">
@@ -539,13 +524,11 @@ const p = (english) => localePath(lang, english);
 `src/components/Footer.astro`:
 
 ```astro
----
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 const { lang } = Astro.props;
 const s = t(lang);
 const p = (english) => localePath(lang, english);
----
 <footer class="wrap footer">
   <ul>
     <li><a href={p('/support.html')}>{s.footer.support}</a></li>
@@ -561,7 +544,6 @@ const p = (english) => localePath(lang, english);
 - [ ] **Step 5: Write `src/layouts/Base.astro`**
 
 ```astro
----
 import { byCode } from '../site/locales.mjs';
 import { SITE, localePath, alternates } from '../site/paths.mjs';
 import Nav from '../components/Nav.astro';
@@ -573,7 +555,6 @@ import '../styles/site.css';
 const { lang, path, title, description, jsonld = [] } = Astro.props;
 const locale = byCode(lang);
 const url = SITE + localePath(lang, path);
----
 <!doctype html>
 <html lang={locale.lang} dir={locale.dir}>
 <head>
@@ -616,11 +597,9 @@ const url = SITE + localePath(lang, path);
 Replace `src/pages/index.astro` with:
 
 ```astro
----
 import Base from '../layouts/Base.astro';
 import { t } from '../i18n/index.mjs';
 const s = t('en').pages['/'];
----
 <Base lang="en" path="/" title={s.title} description={s.description}>
   <h1>{s.title}</h1>
   <p>{s.description}</p>
@@ -644,8 +623,6 @@ Expected: first build: 2 hreflang links (en, x-default) and `<html lang="en" dir
 git add src/layouts src/components src/styles/site.css src/i18n src/pages/index.astro
 git commit -m "v2: base layout with hreflang, canonical, theme and language switchers; English strings from the live site"
 ```
-
----
 
 ### Task 4: Route files for 33 marketing pages in every live locale
 
@@ -719,13 +696,11 @@ Expected: 2 passing.
 `src/templates/Page.astro`:
 
 ```astro
----
 import Base from '../layouts/Base.astro';
 import { t } from '../i18n/index.mjs';
 const { lang, path } = Astro.props;
 const s = t(lang).pages[path];
 if (!s) throw new Error(`No strings for ${path} in ${lang}`);
----
 <Base lang={lang} path={path} title={s.title} description={s.description}>
   <h1>{s.title}</h1>
   <p>{s.description}</p>
@@ -735,95 +710,79 @@ if (!s) throw new Error(`No strings for ${path} in ${lang}`);
 `src/pages/index.astro`:
 
 ```astro
----
 import Page from '../templates/Page.astro';
----
 <Page lang="en" path="/" />
 ```
 
 `src/pages/[page].astro`:
 
 ```astro
----
 import Page from '../templates/Page.astro';
 import { ROOT_PAGES } from '../site/pages.mjs';
 export function getStaticPaths() { return ROOT_PAGES.map((page) => ({ params: { page } })); }
----
 <Page lang="en" path={`/${Astro.params.page}.html`} />
 ```
 
 `src/pages/features/[page].astro`:
 
 ```astro
----
 import Page from '../../templates/Page.astro';
 import { FEATURE_PAGES } from '../../site/pages.mjs';
 export function getStaticPaths() { return FEATURE_PAGES.map((page) => ({ params: { page } })); }
----
 <Page lang="en" path={`/features/${Astro.params.page}.html`} />
 ```
 
 `src/pages/compare/[page].astro`:
 
 ```astro
----
 import Page from '../../templates/Page.astro';
 import { COMPARE_PAGES } from '../../site/pages.mjs';
 export function getStaticPaths() { return COMPARE_PAGES.map((page) => ({ params: { page } })); }
----
 <Page lang="en" path={`/compare/${Astro.params.page}.html`} />
 ```
 
 `src/pages/[lang]/index.astro`:
 
 ```astro
----
 import Page from '../../templates/Page.astro';
 import { liveLocales, DEFAULT } from '../../site/locales.mjs';
 export function getStaticPaths() { return liveLocales().filter((l) => l.code !== DEFAULT).map((l) => ({ params: { lang: l.code } })); }
----
 <Page lang={Astro.params.lang} path="/" />
 ```
 
 `src/pages/[lang]/[page].astro`:
 
 ```astro
----
 import Page from '../../templates/Page.astro';
 import { liveLocales, DEFAULT } from '../../site/locales.mjs';
 import { ROOT_PAGES } from '../../site/pages.mjs';
 export function getStaticPaths() {
   return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => ROOT_PAGES.map((page) => ({ params: { lang: l.code, page } })));
 }
----
 <Page lang={Astro.params.lang} path={`/${Astro.params.page}.html`} />
 ```
 
 `src/pages/[lang]/features/[page].astro`:
 
 ```astro
----
 import Page from '../../../templates/Page.astro';
 import { liveLocales, DEFAULT } from '../../../site/locales.mjs';
 import { FEATURE_PAGES } from '../../../site/pages.mjs';
 export function getStaticPaths() {
   return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => FEATURE_PAGES.map((page) => ({ params: { lang: l.code, page } })));
 }
----
 <Page lang={Astro.params.lang} path={`/features/${Astro.params.page}.html`} />
 ```
 
 `src/pages/[lang]/compare/[page].astro`:
 
 ```astro
----
 import Page from '../../../templates/Page.astro';
 import { liveLocales, DEFAULT } from '../../../site/locales.mjs';
 import { COMPARE_PAGES } from '../../../site/pages.mjs';
 export function getStaticPaths() {
   return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => COMPARE_PAGES.map((page) => ({ params: { lang: l.code, page } })));
 }
----
 <Page lang={Astro.params.lang} path={`/compare/${Astro.params.page}.html`} />
 ```
 
@@ -844,8 +803,6 @@ Expected: English build 33 marketing pages + `guides/index.html` + `404.html` + 
 git add src/site/pages.mjs src/templates src/pages tests/pages.test.mjs
 git commit -m "v2: route files for 33 marketing pages in every live locale"
 ```
-
----
 
 ### Task 5: Worker with language redirect and tests
 
@@ -1028,8 +985,6 @@ Expected: `302 http://127.0.0.1:8787/tr/`, `200`, `200`, `200`, `404` (the 404 c
 git add worker.js tests/worker.test.mjs
 git commit -m "v2: Worker picks the language at / from Accept-Language or the lang cookie, never for crawlers"
 ```
-
----
 
 ### Task 6: Sitemap with hreflang, hreflang check, link check
 
@@ -1244,8 +1199,6 @@ git add scripts/sitemap.mjs scripts/check-hreflang.mjs scripts/check-links.mjs t
 git commit -m "v2: own sitemap with hreflang alternates, hreflang and internal link checks fail the build"
 ```
 
----
-
 ### Task 7: i18n completeness check
 
 **Files:**
@@ -1368,8 +1321,6 @@ git add scripts/i18n-check.mjs tests/i18n-check.test.mjs src/i18n/en.json
 git commit -m "v2: i18n completeness and length check in the build"
 ```
 
----
-
 ### Task 8: wrangler config, headers, check-public for the new layout
 
 **Files:**
@@ -1479,8 +1430,6 @@ git add wrangler.jsonc public/_headers scripts/check-public.sh
 git commit -m "v2: serve dist/, 404 page, cache headers for hashed assets and media, check-public for the new layout"
 ```
 
----
-
 ### Task 9: Media encode pipeline
 
 **Files:**
@@ -1566,8 +1515,6 @@ git add scripts/media-encode.sh public/media
 git commit -m "v2: web-size showcase clips and posters in public/media (37 clips, 2 stills)"
 ```
 
----
-
 ### Task 10: Dated counts and the claims register
 
 **Files:**
@@ -1648,8 +1595,6 @@ git add scripts/counts.sh src/data/counts.json src/data/claims.md
 git commit -m "v2: dated station and podcast counts, claims register for every statement the site makes"
 ```
 
----
-
 ### Task 11: Hallmark audit of the live site
 
 **Files:**
@@ -1675,8 +1620,6 @@ Write the ranked punch list the skill returns to `docs/research/2026-10-12-hallm
 git add docs/research/2026-10-12-hallmark-audit.md
 git commit -m "Research: Hallmark audit of the live macdio.app before the redesign"
 ```
-
----
 
 ### Task 12: Developer notes and the F1 wrap
 
