@@ -14,6 +14,17 @@ saying what happened to it.
   routes in every live locale, Worker language redirect with tests, sitemap with hreflang,
   hreflang/link/i18n checks in the build, web-size media, counts, claims register,
   Hallmark audit. Not deployed. Next: F2 English design.
+- [ ] **W9 Community feed on the home page** (Sait, 2026-10-12 17:13). Show the hub
+  (https://hub.devdio.pro, hub.macdio.app 301s there) on the home page: latest
+  release notes or recently resolved issues, dated and linked. Fetched from the
+  Discourse JSON API at build time (no client JS); freshness equals the last
+  deploy, so F5 adds a scheduled rebuild or the section says "as of <date>".
+- Design brief answers (Sait, 2026-10-12 17:13), for the Hallmark pass in F2:
+  audience as proposed plus searchers who arrive from Google and buy on the App
+  Store from the site; primary action the App Store download, the community hub
+  a close second; tone: an indie developer moving toward professional, every
+  statement correct, every feature listed (for example the Wi-Fi station editor
+  served from the phone to a computer browser, `Macdio/Services/StationEditorServer.swift`).
 - [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
   on the model of https://linnote.app/guide/ (structured guide hub with
   navigation, per-topic pages) for SEO and GEO. The 9 existing guides carry over.
