@@ -1,13 +1,15 @@
 ---
-import Page from '../../templates/Page.astro';
-import Home from '../../templates/Home.astro';
+// Every live locale except English: the pages its folder under src/legacy/
+// holds. "index" is the locale home, written as <lang>/index.html, the file
+// the Worker serves for /<lang>/.
+import Legacy from '../../layouts/Legacy.astro';
 import { liveLocales, DEFAULT } from '../../site/locales.mjs';
-import { ROOT_PAGES } from '../../site/pages.mjs';
-// "index" is the locale home: under build.format "file" the route /tr/index is
-// written as tr/index.html, which is the URL the Worker serves for /tr/.
+import { legacyPages, loadPage } from '../../site/legacy.mjs';
 export function getStaticPaths() {
-  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => ['index', ...ROOT_PAGES].map((page) => ({ params: { lang: l.code, page } })));
+  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) =>
+    legacyPages(l.code).filter((p) => /^\/([^/]+\.html)?$/.test(p)).map((p) => ({ params: { lang: l.code, page: p === '/' ? 'index' : p.slice(1, -5) } })));
 }
 const { lang, page } = Astro.params;
+const path = page === 'index' ? '/' : `/${page}.html`;
 ---
-{page === 'index' ? <Home lang={lang} /> : <Page lang={lang} path={`/${page}.html`} />}
+<Legacy lang={lang} path={path} page={loadPage(lang, path)} />

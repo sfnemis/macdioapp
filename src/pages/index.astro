@@ -1,4 +1,5 @@
 ---
-import Home from '../templates/Home.astro';
+import Legacy from '../layouts/Legacy.astro';
+import { loadPage } from '../site/legacy.mjs';
 ---
-<Home lang="en" />
+<Legacy lang="en" path="/" page={loadPage('en', '/')} />

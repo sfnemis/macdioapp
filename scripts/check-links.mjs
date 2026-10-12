@@ -8,7 +8,8 @@ import { fileURLToPath } from 'node:url';
 export function linkTargets(html) {
   const out = [];
   for (const m of html.matchAll(/\b(?:href|src|poster|data-webm|data-mp4)="(\/[^"#?]*)/g)) {
-    let target = m[1];
+    // A URL is percent-encoded; the file on disk is not ("Popular%20Nearby.webp").
+    let target = decodeURIComponent(m[1]);
     if (target.startsWith('//') || target.startsWith('/cdn-cgi/')) continue;
     if (target.endsWith('/')) target += 'index.html';
     out.push(target);

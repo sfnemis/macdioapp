@@ -1,0 +1,41 @@
+---
+// The live site's nav and mobile menu, with the markup parts.js used to build
+// at runtime, rendered at build time so crawlers and no-JS visitors get the
+// links. parts.js still binds the More menu and the burger.
+import { t } from '../i18n/index.mjs';
+import { localePath } from '../site/paths.mjs';
+import { hasPage } from '../site/legacy.mjs';
+import LegacySocials from './LegacySocials.astro';
+const { lang } = Astro.props;
+const s = t(lang);
+const home = localePath(lang, '/');
+// A page link goes into the locale folder only when that locale has the page.
+const p = (path) => (hasPage(lang, path) ? localePath(lang, path) : path);
+---
+<nav class="nav">
+  <a class="nav-brand" href={home}><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="https://hub.devdio.pro" target="_blank" rel="noopener">{s.nav.community} <span class="dot-green"></span></a>
+      <a class="nav-compare" href={`${home}#compare-table`}>{s.nav.compare}</a>
+      <a href={`${home}#identify`}>{s.nav.features}</a>
+      <a href={`${home}#preview`}>{s.nav.screenshots}</a>
+      <a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="/assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>
+      <div class="nav-more" id="navMore"><button class="nav-more-btn" id="navMoreBtn" aria-expanded="false" aria-label={s.nav.moreLabel}>{s.nav.more} <span class="chev">▾</span></button>
+        <div class="nav-more-menu">{s.nav.pages.map((l) => <a href={p(l.path)}>{l.label}</a>)}</div></div>
+    </div>
+    <div class="nav-socials"><LegacySocials lang={lang} /></div>
+    <a class="nav-appstore" href={s.site.storeUrl} target="_blank" rel="noopener" aria-label={s.site.storeLabel}><img src="/download_button.svg" alt={s.site.storeAlt} width="120" height="40"></a>
+    <button class="nav-burger" id="navBurger" aria-label={s.nav.openMenu} aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-socials"><LegacySocials lang={lang} /></div>
+  <a class="mm-link" href="https://hub.devdio.pro" target="_blank" rel="noopener">{s.nav.community} <span class="dot-green"></span></a>
+  <a class="mm-link nav-compare" href={`${home}#compare-table`}>{s.nav.compare}</a>
+  <a class="mm-link" href={`${home}#identify`}>{s.nav.features}</a>
+  <a class="mm-link" href={`${home}#preview`}>{s.nav.screenshots}</a>
+  <a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="/assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>
+  {s.nav.pages.map((l) => <a class="mm-small" href={p(l.path)}>{l.label}</a>)}
+  <a class="mm-download" href={s.site.storeUrl} target="_blank" rel="noopener" aria-label={s.site.storeLabel}><img src="/download_button.svg" alt={s.site.storeAlt} width="120" height="40"></a>
+</div>

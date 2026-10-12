@@ -1,7 +1,12 @@
 ---
-// Under build.format "file" a route named ".../index" is written as index.html
-// in that directory, which keeps the live URL /guides/ exactly.
-import GuidesIndex from '../../templates/GuidesIndex.astro';
-export function getStaticPaths() { return [{ params: { page: 'index' } }]; }
+// Under build.format "file" the route /guides/index is written as
+// guides/index.html, which keeps the live URL /guides/ exactly.
+import Legacy from '../../layouts/Legacy.astro';
+import { legacyPages, loadPage } from '../../site/legacy.mjs';
+export function getStaticPaths() {
+  return legacyPages('en').filter((p) => p.startsWith('/guides/')).map((p) => ({ params: { page: p === '/guides/' ? 'index' : p.slice('/guides/'.length, -5) } }));
+}
+const { page } = Astro.params;
+const path = page === 'index' ? '/guides/' : `/guides/${page}.html`;
 ---
-<GuidesIndex />
+<Legacy lang="en" path={path} page={loadPage('en', path)} />

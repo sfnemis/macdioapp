@@ -1,6 +1,20 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-const { flatten, checkLocale } = await import('../scripts/i18n-check.mjs');
+const { flatten, checkLocale, checkPage } = await import('../scripts/i18n-check.mjs');
+
+test('checkPage applies the em dash and we/our/us rules to a legacy page and warns on length', () => {
+  const page = { title: 'x'.repeat(61), description: 'Fine.', jsonld: ['{"text": "We built it"}'], main: '<p>Let us know</p><script>var we = 1;</script>' };
+  const r = checkPage('en', '/x.html', page);
+  assert.equal(r.problems.length, 2);
+  assert.match(r.problems[0], /JSON-LD: .*We built it/);
+  assert.match(r.problems[1], /main: Let us know/);
+  assert.equal(r.warnings.length, 1);
+  assert.match(r.warnings[0], /title is 61 chars/);
+  const ok = checkPage('tr', '/', { title: 'Radyo', description: 'Bize yazın', jsonld: [], main: '<p>We</p>' });
+  assert.deepEqual(ok.problems, []);
+  const dash = checkPage('en', '/', { title: 'A — B', description: '', jsonld: [], main: '' });
+  assert.match(dash.problems[0], /em dash in title/);
+});
 
 const en = { site: { name: 'Macdio' }, pages: { '/': { title: 'Macdio: Live Radio & Podcasts', description: 'Short.' } } };
 

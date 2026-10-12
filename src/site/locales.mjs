@@ -4,8 +4,8 @@
 // LIVE_ALL=1 turns every locale on for local tests.
 export const LOCALES = [
   { code: 'en', lang: 'en', label: 'English', dir: 'ltr', live: true },
-  { code: 'tr', lang: 'tr', label: 'Türkçe', dir: 'ltr', live: false },
-  { code: 'de', lang: 'de', label: 'Deutsch', dir: 'ltr', live: false },
+  { code: 'tr', lang: 'tr', label: 'Türkçe', dir: 'ltr', live: true },
+  { code: 'de', lang: 'de', label: 'Deutsch', dir: 'ltr', live: true },
   { code: 'fr', lang: 'fr', label: 'Français', dir: 'ltr', live: false },
   { code: 'es', lang: 'es', label: 'Español', dir: 'ltr', live: false },
   { code: 'it', lang: 'it', label: 'Italiano', dir: 'ltr', live: false },

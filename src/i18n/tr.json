@@ -1,0 +1,45 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/tr/app/macdio/id6761737888",
+    "storeLabel": "Macdio'yu App Store'dan indir",
+    "storeAlt": "App Store'dan indir"
+  },
+  "nav": {
+    "community": "Topluluk",
+    "compare": "Karşılaştır",
+    "features": "Özellikler",
+    "screenshots": "Ekran görüntüleri",
+    "more": "Daha fazla",
+    "moreLabel": "Diğer sayfalar",
+    "openMenu": "Menüyü aç",
+    "pages": [
+      { "path": "/guides/", "label": "Rehberler" },
+      { "path": "/iphone.html", "label": "iPhone için radyo" },
+      { "path": "/mac.html", "label": "Mac için radyo" },
+      { "path": "/ipad.html", "label": "iPad için radyo" },
+      { "path": "/apple-tv.html", "label": "Apple TV için radyo" },
+      { "path": "/apple-watch.html", "label": "Apple Watch için radyo" },
+      { "path": "/support.html", "label": "Destek" },
+      { "path": "/privacy.html", "label": "Gizlilik" },
+      { "path": "/transparency.html", "label": "Şeffaflık" },
+      { "path": "/accessibility.html", "label": "Erişilebilirlik" },
+      { "path": "/submit-station.html", "label": "İstasyon gönder" },
+      { "path": "/stations.html", "label": "İstasyonlar" },
+      { "path": "/presskit.html", "label": "Basın kiti" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. Tüm hakları saklıdır.",
+    "support": "Destek",
+    "privacy": "Gizlilik",
+    "presskit": "Basın kiti",
+    "contact": "İletişim"
+  },
+  "socials": {
+    "x": "Macdio X'te",
+    "instagram": "Macdio Instagram'da",
+    "tiktok": "Macdio TikTok'ta",
+    "youtube": "Macdio YouTube'da"
+  }
+}

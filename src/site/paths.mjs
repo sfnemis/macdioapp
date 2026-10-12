@@ -7,8 +7,9 @@ export function localePath(code, path) {
   return code === DEFAULT ? path : `/${code}${path}`;
 }
 
-export function alternates(path) {
-  const list = liveLocales().map((l) => ({ hreflang: l.lang, href: SITE + localePath(l.code, path) }));
+// `has(code)` limits the set to the locales that carry this page.
+export function alternates(path, has = () => true) {
+  const list = liveLocales().filter((l) => has(l.code)).map((l) => ({ hreflang: l.lang, href: SITE + localePath(l.code, path) }));
   list.push({ hreflang: 'x-default', href: SITE + path });
   return list;
 }

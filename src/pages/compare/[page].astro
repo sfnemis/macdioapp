@@ -1,6 +1,0 @@
----
-import Page from '../../templates/Page.astro';
-import { COMPARE_PAGES } from '../../site/pages.mjs';
-export function getStaticPaths() { return COMPARE_PAGES.map((page) => ({ params: { page } })); }
----
-<Page lang="en" path={`/compare/${Astro.params.page}.html`} />

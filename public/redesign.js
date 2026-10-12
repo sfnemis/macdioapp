@@ -246,7 +246,7 @@
     // Region comes from the browser itself (time zone, then locale). The old
     // ipwho.is lookup sent every visitor's IP to a third party that the privacy
     // and transparency pages never listed, and its free tier was returning 429.
-    fetch('pricing.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }).then(function (data) {
+    fetch('/pricing.json', { cache: 'force-cache' }).then(function (r) { return r.json(); }).then(function (data) {
       apply(guessRegion(), data);
     }).catch(function () { /* keep the static default price */ });
   })();

@@ -1,9 +1,0 @@
----
-import Page from '../../../templates/Page.astro';
-import { liveLocales, DEFAULT } from '../../../site/locales.mjs';
-import { FEATURE_PAGES } from '../../../site/pages.mjs';
-export function getStaticPaths() {
-  return liveLocales().filter((l) => l.code !== DEFAULT).flatMap((l) => FEATURE_PAGES.map((page) => ({ params: { lang: l.code, page } })));
-}
----
-<Page lang={Astro.params.lang} path={`/features/${Astro.params.page}.html`} />

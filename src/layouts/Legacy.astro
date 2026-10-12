@@ -1,0 +1,65 @@
+---
+// The live site's shell around one page from src/legacy/<locale>/: the head
+// every page carried (GA4, Open Graph, Twitter, icons, hreflang, redesign.css),
+// the nav and footer, the page's own JSON-LD and <main>, then the two site
+// scripts and any inline script the page had after them.
+import { byCode } from '../site/locales.mjs';
+import { SITE, localePath, alternates } from '../site/paths.mjs';
+import { hasPage } from '../site/legacy.mjs';
+import LegacyNav from '../components/LegacyNav.astro';
+import LegacyFooter from '../components/LegacyFooter.astro';
+
+// path is the English path ('/', '/mac.html'); page comes from loadPage().
+const { lang, path, page } = Astro.props;
+const locale = byCode(lang);
+const url = SITE + localePath(lang, path);
+const alts = alternates(path, (code) => hasPage(code, path));
+const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
+const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"]*)"/g)].map((m) => [m[1], m[2]]));
+---
+<!DOCTYPE html>
+<html lang={locale.lang} dir={locale.dir}>
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{page.title}</title>
+<meta name="description" content={page.description}>
+{page.keywords && <meta name="keywords" content={page.keywords} />}
+<meta name="author" content="SFN">
+<meta name="robots" content={page.robots || 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}>
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href={url}>
+{alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+<meta property="og:title" content={page.title}>
+<meta property="og:description" content={page.description}>
+<meta property="og:image" content={image}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content={url}>
+<meta property="og:type" content={page.ogType}>
+<meta property="og:site_name" content="Macdio">
+<meta property="og:locale" content={locale.lang.replace('-', '_')}>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@macdioapp">
+<meta name="twitter:title" content={page.title}>
+<meta name="twitter:description" content={page.description}>
+<meta name="twitter:image" content={image}>
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+{page.jsonld.map((s) => <script type="application/ld+json" set:html={s} />)}
+<link rel="stylesheet" href="/redesign.css">
+</head>
+<body>
+<LegacyNav lang={lang} />
+<main {...mainAttrs} set:html={page.main} />
+<LegacyFooter lang={lang} />
+<script is:inline src="/parts.js"></script>
+<script is:inline src="/redesign.js"></script>
+{page.bodyScripts.map((s) => <Fragment set:html={`<script>${s}</script>`} />)}
+</body>
+</html>

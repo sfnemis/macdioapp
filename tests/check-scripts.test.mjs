@@ -2,8 +2,8 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 const { scriptProblems } = await import('../scripts/check-scripts.mjs');
 
-test('inline scripts and the GA4 tag are allowed on a marketing page', () => {
-  const html = '<head><script>var a=1</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-X"></script><script type="application/ld+json">{}</script></head>';
+test('inline scripts, the site scripts and the GA4 tag are allowed on a marketing page', () => {
+  const html = '<head><script>var a=1</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-X"></script><script type="application/ld+json">{}</script></head><script src="/parts.js"></script><script src="/redesign.js"></script>';
   assert.deepEqual(scriptProblems(html), []);
 });
 

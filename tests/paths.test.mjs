@@ -16,6 +16,8 @@ test('alternates lists every live locale plus x-default pointing at English', ()
   assert.equal(alts.length, 15);
   assert.deepEqual(alts.find((a) => a.hreflang === 'pt-BR'), { hreflang: 'pt-BR', href: `${SITE}/pt-br/mac.html` });
   assert.deepEqual(alts.at(-1), { hreflang: 'x-default', href: `${SITE}/mac.html` });
+  const some = alternates('/mac.html', (code) => code === 'en' || code === 'tr');
+  assert.deepEqual(some.map((a) => a.hreflang), ['en', 'tr', 'x-default']);
 });
 
 test('splitLocale recognises locale prefixes and nothing else', () => {

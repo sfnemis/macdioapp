@@ -1,11 +1,12 @@
-// Marketing pages ship no JavaScript except inline scripts and the GA4 tag
-// (spec 3.1). Guide pages (Starlight) are allowed their search and table of
-// contents scripts, so paths with a "guides" segment are skipped.
+// Marketing pages ship no JavaScript except inline scripts, the site's own
+// two files (parts.js, redesign.js) and the GA4 tag. Guide pages (Starlight)
+// are allowed their search and table of contents scripts, so paths with a
+// "guides" segment are skipped.
 import { readdirSync, statSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ALLOWED_SRC = /^https:\/\/www\.googletagmanager\.com\//;
+const ALLOWED_SRC = /^(?:https:\/\/www\.googletagmanager\.com\/|\/(?:parts|redesign)\.js$)/;
 
 export function scriptProblems(html) {
   const problems = [];

@@ -1,0 +1,45 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/de/app/macdio/id6761737888",
+    "storeLabel": "Macdio im App Store laden",
+    "storeAlt": "Laden im App Store"
+  },
+  "nav": {
+    "community": "Community",
+    "compare": "Vergleich",
+    "features": "Funktionen",
+    "screenshots": "Screenshots",
+    "more": "Mehr",
+    "moreLabel": "Weitere Seiten",
+    "openMenu": "Menü öffnen",
+    "pages": [
+      { "path": "/guides/", "label": "Ratgeber" },
+      { "path": "/iphone.html", "label": "Radio für iPhone" },
+      { "path": "/mac.html", "label": "Radio für Mac" },
+      { "path": "/ipad.html", "label": "Radio für iPad" },
+      { "path": "/apple-tv.html", "label": "Radio für Apple TV" },
+      { "path": "/apple-watch.html", "label": "Radio für Apple Watch" },
+      { "path": "/support.html", "label": "Support" },
+      { "path": "/privacy.html", "label": "Datenschutz" },
+      { "path": "/transparency.html", "label": "Transparenz" },
+      { "path": "/accessibility.html", "label": "Barrierefreiheit" },
+      { "path": "/submit-station.html", "label": "Sender einreichen" },
+      { "path": "/stations.html", "label": "Sender" },
+      { "path": "/presskit.html", "label": "Pressemappe" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. Alle Rechte vorbehalten.",
+    "support": "Support",
+    "privacy": "Datenschutz",
+    "presskit": "Pressemappe",
+    "contact": "Kontakt"
+  },
+  "socials": {
+    "x": "Macdio auf X",
+    "instagram": "Macdio auf Instagram",
+    "tiktok": "Macdio auf TikTok",
+    "youtube": "Macdio auf YouTube"
+  }
+}
