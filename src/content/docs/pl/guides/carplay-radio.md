@@ -16,7 +16,7 @@ faq:
     a: "Streaming wymaga zasięgu; krótkie przerwy pokrywa bufor, dłuższe wstrzymują odtwarzanie, aż sygnał wróci."
 ---
 
-FM daje ci stacje jednego miasta. CarPlay plus radio internetowe daje ci każde miasto. Konfiguracja zajmuje mniej niż minutę.
+FM daje ci stacje jednego miasta. CarPlay plus radio internetowe daje ci każde miasto.
 
 Radio internetowe w samochodzie działa przez CarPlay, korzystając ze stacji na twoim iPhone'ie, a nie z nadajników w zasięgu. Konfiguracja zajmuje poniżej minuty, układ jest zbudowany na rzut oka, a nie na czytanie, a twoje ulubione stają się presetami, które trafisz bez patrzenia.
 

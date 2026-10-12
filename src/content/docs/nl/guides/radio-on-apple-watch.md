@@ -1,8 +1,8 @@
 ---
 title: "Radio op Apple Watch zonder iPhone in de buurt (2026)"
-description: "De Watch streamt zelfstandig live radio via LTE. Wat zelfstandig echt nodig heeft, welke modellen het kunnen, en echte batterijcijfers na een uur gebruik."
+description: "De Watch streamt zelfstandig live radio via LTE. Wat zelfstandig echt nodig heeft, welke modellen het kunnen, en wat streamen kost aan batterij en data."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Kan Apple Watch radio afspelen zonder de iPhone?"
     a: "Ja, met een zelfstandige app. De Watch-app van Macdio streamt zelf via wifi of mobiel netwerk."
@@ -17,7 +17,7 @@ faq:
   - q: "Synchroniseren mijn zenders vanaf de iPhone?"
     a: "Ja. Favorieten en mappen komen binnen via iCloud, en het horloge heeft ook zijn eigen bibliotheekweergave en zoekfunctie."
   - q: "Kan ik radio opnemen op het horloge?"
-    a: "Nee. Opnemen is een functie voor Mac en iPhone. Nummers die je op het horloge een hartje geeft synchroniseren wel overal."
+    a: "Nee. Opnemen is een functie voor iPhone, iPad en Mac. Nummers die je op het horloge een hartje geeft synchroniseren wel overal."
 ---
 
 Een rondje hardlopen, een zwemtas, een snelle boodschap: het horloge is vaak het enige apparaat dat je bij je hebt. Zo werkt internetradio rechtstreeks op Apple Watch.
@@ -86,7 +86,7 @@ Ja. Favorieten en mappen komen binnen via iCloud, en het horloge heeft ook zijn 
 
 ### Kan ik radio opnemen op het horloge?
 
-Nee. Opnemen is een functie voor Mac en iPhone. Nummers die je op het horloge een hartje geeft synchroniseren wel overal.
+Nee. Opnemen is een functie voor iPhone, iPad en Mac. Nummers die je op het horloge een hartje geeft synchroniseren wel overal.
 
 ## Klaar om het te proberen?
 

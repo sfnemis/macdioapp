@@ -1,6 +1,6 @@
 ---
 title: "Zo vind je de stream-URL van een radiozender (4 manieren)"
-description: "Haal het directe adres van een zender van de eigen site, uit de ontwikkelaarstools van je browser, een openbaar overzicht of de app zelf. Met echte voorbeelden."
+description: "Haal het directe adres van een zender van de eigen site, uit een openbaar overzicht, uit je browsertools of vraag het de zender. Met echte voorbeelden."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

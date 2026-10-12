@@ -16,7 +16,7 @@ faq:
     a: "Streamen heeft bereik nodig; korte gaten worden overbrugd door de buffer, langere pauzeren het afspelen tot het signaal terug is."
 ---
 
-FM geeft je de zenders van één stad. CarPlay plus internetradio geeft je elke stad. Instellen duurt minder dan een minuut.
+FM geeft je de zenders van één stad. CarPlay plus internetradio geeft je elke stad.
 
 Internetradio in de auto werkt via CarPlay, met de zenders op je iPhone in plaats van de zendmasten binnen bereik. Instellen duurt minder dan een minuut, de indeling is gemaakt om snel naar te kijken en niet om te lezen, en je favorieten worden voorkeuzeknoppen die je blind kunt raken.
 

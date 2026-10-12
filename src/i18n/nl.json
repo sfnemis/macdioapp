@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Zoeken…",
+    "errorTitle": "Verbindingsfout",
+    "errorText": "De zenderdatabase was niet bereikbaar. Probeer het opnieuw.",
+    "noneTitle": "Geen zenders gevonden",
+    "noneText": "Probeer een andere zoekterm of een ander filter.",
+    "results": "{n} resultaten",
+    "resultsFor": "voor \"{q}\"",
+    "resultsIn": "in {country}",
+    "popular": "Populaire zenders · Pagina {page}",
+    "prev": "← Vorige",
+    "next": "Volgende →",
+    "page": "Pagina {page}",
+    "unknown": "Onbekend"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Jazz",
+    "classical": "Klassiek",
+    "electronic": "Elektronisch",
+    "hip hop": "Hiphop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latin",
+    "folk": "Folk",
+    "indie": "Indie",
+    "ambient": "Ambient",
+    "news": "Nieuws",
+    "talk": "Praatradio",
+    "sports": "Sport",
+    "oldies": "Oldies",
+    "80s": "Jaren 80",
+    "90s": "Jaren 90",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dance",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "Nieuw",
+    "label": "Wat is er nieuw: {title}",
+    "title": "Wat is er nieuw",
+    "dialog": "Wat is er nieuw in Macdio",
+    "all": "Alle releasenotes",
+    "gotIt": "Begrepen"
   }
 }

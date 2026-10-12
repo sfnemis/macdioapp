@@ -1,8 +1,8 @@
 ---
 title: "Radio na Apple Watch bez iPhone'a w pobliżu (2026)"
-description: "Zegarek streamuje radio na żywo przez LTE sam. Czego naprawdę wymaga samodzielność, które modele to potrafią i prawdziwe liczby o baterii z godziny użytkowania."
+description: "Zegarek streamuje radio na żywo przez LTE sam. Czego naprawdę wymaga samodzielność, które modele to potrafią i ile streaming kosztuje baterii i danych."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Czy Apple Watch może grać radio bez iPhone'a?"
     a: "Tak, z samodzielną aplikacją. Aplikacja Macdio na zegarek streamuje sama przez Wi-Fi lub sieć komórkową."
@@ -17,7 +17,7 @@ faq:
   - q: "Czy moje stacje synchronizują się z iPhone'a?"
     a: "Tak. Ulubione i foldery przychodzą przez iCloud, a zegarek ma też własny widok biblioteki i wyszukiwanie."
   - q: "Czy mogę nagrywać radio na zegarku?"
-    a: "Nie. Nagrywanie to funkcja Maca i iPhone'a. Utwory, które polubisz na zegarku, i tak synchronizują się wszędzie."
+    a: "Nie. Nagrywanie to funkcja iPhone'a, iPada i Maca. Utwory, które polubisz na zegarku, i tak synchronizują się wszędzie."
 ---
 
 Bieg, torba na pływalnię, szybkie zakupy: zegarek często jest jedynym urządzeniem, które masz na sobie. Oto jak radio internetowe działa bezpośrednio na Apple Watch.
@@ -86,7 +86,7 @@ Tak. Ulubione i foldery przychodzą przez iCloud, a zegarek ma też własny wido
 
 ### Czy mogę nagrywać radio na zegarku?
 
-Nie. Nagrywanie to funkcja Maca i iPhone'a. Utwory, które polubisz na zegarku, i tak synchronizują się wszędzie.
+Nie. Nagrywanie to funkcja iPhone'a, iPada i Maca. Utwory, które polubisz na zegarku, i tak synchronizują się wszędzie.
 
 ## Gotowy spróbować?
 

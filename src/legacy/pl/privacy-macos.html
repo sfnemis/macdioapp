@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio działa wewnątrz App Sandbox macOS z minimalnymi uprawnieniami: dostęp do sieci do streamingu, mikrofon do nagrywania i iCloud do synchronizacji. Nie ma dostępu do plików, kontaktów ani innych aplikacji bez twojej wyraźnej zgody.</p>
+  <p class="reveal">Macdio działa wewnątrz App Sandbox macOS z uprawnieniami, których potrzebują jego funkcje: dostęp do sieci do streamingu i do lokalnego przekaźnika, który utrzymuje stabilność strumieni, iCloud do synchronizacji, powiadomienia o nowych odcinkach, Apple Events do wysyłania zaznaczeń do Apple Notes, gdy o to poprosisz, oraz Private Cloud Compute Apple do podsumowań odcinków. Nie ma dostępu do mikrofonu. Odczytuje i zapisuje tylko pliki, które sam wybierzesz, na przykład plik OPML albo listę stacji, i nie ma dostępu do kontaktów ani innych aplikacji.</p>
 
   <h2 class="sec reveal">Usługi zewnętrzne</h2>
   <p class="reveal">Macdio łączy się z poniższymi usługami zewnętrznymi wyłącznie na potrzeby podstawowych funkcji:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong>, do pobierania zsynchronizowanego tekstu utworów. Żadne dane osobowe nie są wysyłane.</li>
     <li><strong>iTunes Search API</strong>, do pobierania okładek albumów. Żadne dane osobowe nie są wysyłane.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> dostarcza logo stacji radiowych, które same go nie udostępniają. Wysyłana jest tylko domena stacji, żadne dane osobowe.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> do wyszukiwania podcastów, list popularności i kategorii. Wysyłane jest tylko wyszukiwane hasło lub kategoria. Odcinki i kanały pobierają się bezpośrednio z własnego serwera każdego programu.</li>
+    <li><strong>Apple ShazamKit</strong> do Song ID. Do usługi Shazam firmy Apple trafia krótka sygnatura dźwiękowa strumienia, a nie nagranie. Mikrofon nigdy nie jest używany.</li>
+    <li><strong>Model językowy Apple</strong> pisze rozdziały i podsumowanie odcinka podcastu, na urządzeniu albo w Private Cloud Compute Apple, które nie zachowuje tekstu.</li>
+    <li><strong>push.macdio.app</strong>, serwer powiadomień Macdio, otrzymuje adres powiadomień tego Maca i obserwowane przez ciebie programy, tylko gdy włączone są Powiadomienia o nowych odcinkach. Nic więcej nie przechowuje.</li>
   </ul>
 
   <h2 class="sec reveal">Synchronizacja iCloud</h2>

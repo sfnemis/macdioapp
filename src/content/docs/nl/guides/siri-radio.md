@@ -2,7 +2,7 @@
 title: "Internetradio afspelen met Siri: elke Macdio-spraakopdracht"
 description: "Zeg de zender en hij speelt. Elke Siri-zin die Macdio begrijpt, in 14 talen, op iPhone, met AirPods en vanaf de spraakknop in CarPlay."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "Moet ik \"op Macdio\" zeggen?"
     a: "Ja. Siri stuurt een zin naar een app op basis van de naam, dus elke opdracht eindigt met Macdio. Zonder speelt Siri Apple Music af of vraagt het wat je bedoelde."
@@ -43,7 +43,7 @@ Begin elke zin met "Hé Siri". De zender komt op de plek van de haakjes.
 
 ## Veertien talen
 
-Siri gebruikt de zin in de taal waarop het is ingesteld, en Macdio levert de zinnen in het Engels, Arabisch, Chinees (vereenvoudigd en traditioneel), Nederlands, Frans, Duits, Italiaans, Japans, Pools, Portugees (Brazilië), Russisch, Spaans en Turks. Een Turkse Siri hoort "Macdio ile Radio Paradise çal", een Duitse "Spiele Radio Paradise auf Macdio", een Spaanse "Pon Radio Paradise en Macdio". Zendernamen zijn in elke taal hetzelfde, dus een Turkse luisteraar met Spaanse favorieten zit goed.
+Siri gebruikt de zin in de taal waarop het is ingesteld, en Macdio levert de zinnen in het Engels, Arabisch, Chinees (vereenvoudigd en traditioneel), Nederlands, Frans, Duits, Italiaans, Japans, Pools, Portugees (Brazilië), Russisch, Spaans en Turks. Een Turkse Siri hoort "Macdio ile Radio Paradise çal", een Duitse "Radio Paradise in Macdio abspielen", een Spaanse "Reproducir Radio Paradise en Macdio". Zendernamen zijn in elke taal hetzelfde, dus een Turkse luisteraar met Spaanse favorieten zit goed.
 
 ## In de auto
 

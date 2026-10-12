@@ -28,7 +28,7 @@ Krótka odpowiedź brzmi nie, i to się nie zmieni. Uczciwa wersja dlaczego i co
 
 Nie taki, którego dałoby się użyć. Układy bezprzewodowe w starszych iPhone'ach zawierały blok tunera FM na krzemie, i stąd wzięła się plotka, ale ten blok nigdy nie był podłączony do anteny i nigdy nie był wystawiony dla oprogramowania. Uśpiony tranzystor to nie radio. W 2017 roku, po publicznej kampanii, by włączyć FM na sezon huraganów, Apple oświadczyło, że jego telefony nie mają układu radia FM, który dałoby się włączyć, ani anteny zaprojektowanej do obsługi sygnałów FM.
 
-To obejmuje każdy model do dziś. Ani pierwszy iPhone, ani generacja iPhone 17, nic pomiędzy. Pytanie wraca każdego września, bo każdy nowy model przynosi świeżą falę wyszukiwań, ale odpowiedź nie zmieniła się od osiemnastu lat.
+To obejmuje każdy model do dziś. Ani pierwszy iPhone, ani generacja iPhone 17, nic pomiędzy. Pytanie wraca każdego września, bo każdy nowy model przynosi świeżą falę wyszukiwań, ale odpowiedź nie zmieniła się od 2007 roku.
 
 ## Dlaczego Apple nie włącza radia FM w iPhone'ie
 

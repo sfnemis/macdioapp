@@ -1,8 +1,8 @@
 ---
 title: "Zo neem je internetradio op op een Mac (stap voor stap)"
-description: "Drie manieren om internetradio op te nemen op een Mac, plus wat werkt op iPhone: een speler die opneemt, een systeemaudio-tool en Audacity met virtuele audio."
+description: "Drie manieren om internetradio op te nemen op een Mac, en wat werkt op iPhone: een speler die opneemt, een systeemaudio-tool of Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Welke kwaliteit hebben de opnames?"
     a: "Identiek aan de stream. De binnenkomende audio wordt weggeschreven zoals ze aankomt, zonder opnieuw te coderen, dus een zender op 128 kbps geeft een bestand op 128 kbps en een zender op 320 kbps een bestand op 320 kbps."
@@ -64,7 +64,7 @@ Wat Macdio wél heeft is de omgekeerde beveiliging: een sessie stopt vanzelf na 
 
 ## Wat een opname vroegtijdig stopt
 
-Twee dingen beëindigen een sessie voordat jij dat doet, en beide bewaren het bestand in plaats van het te verliezen. Het eerste is de grens van drie uur hierboven. Het tweede is de schijf. Macdio houdt de vrije ruimte in het oog terwijl het schrijft, waarschuwt je elke vijf minuten zodra de schijf onder 500 MB zakt, en stopt de opname met een melding als de ruimte kritiek wordt, dus het ergste geval is een korter bestand in plaats van een volle schijf en een kapot bestand. Een lange nachtelijke sessie op een bijna volle laptop is het geval om in de gaten te houden, want een zender op 320 kbps schrijft ongeveer 144 MB per uur.
+Twee dingen beëindigen een sessie voordat jij dat doet, en beide bewaren het bestand in plaats van het te verliezen. Het eerste is de grens van drie uur hierboven. Het tweede is de schijf. Macdio begint geen opname met minder dan 500 MB vrij, houdt de vrije ruimte in het oog terwijl het schrijft, waarschuwt je elke vijf minuten zodra de schijf onder 500 MB zakt, en stopt de opname met een melding als de ruimte kritiek wordt, dus het ergste geval is een korter bestand in plaats van een volle schijf en een kapot bestand. Een lange nachtelijke sessie op een bijna volle laptop is het geval om in de gaten te houden, want een zender op 320 kbps schrijft ongeveer 144 MB per uur.
 
 ## Hoe groot worden de bestanden?
 
@@ -72,7 +72,7 @@ Een opname is zo zwaar als de stream, omdat er niets wordt toegevoegd of verder 
 
 ## In welk formaat de bestanden zijn
 
-Een opname bewaart wat de zender stuurt. Een MP3-zender geeft je een .mp3 en een AAC-zender een .aac, zonder dat er onderweg naar de schijf iets opnieuw wordt gecodeerd, dus het bestand klinkt precies zoals de stream deed. Nummers die Splitsen per nummer eruit knipt worden weggeschreven als .m4a. Er is hier geen kwaliteitsinstelling om verkeerd te zetten, omdat er geen tweede codering is.
+Een opname bewaart wat de zender stuurt. Een MP3-zender geeft je een .mp3 en een AAC-zender een .aac, zonder dat er onderweg naar de schijf iets opnieuw wordt gecodeerd, dus het bestand klinkt precies zoals de stream deed. Als Song ID een nummer in een AAC-opname heeft benoemd, worden titel, artiest en hoes in het bestand geschreven, en dan wordt het een .m4a. Er is hier geen kwaliteitsinstelling om verkeerd te zetten, omdat de audio nooit een tweede keer wordt gecodeerd.
 
 ## Waar de opnames staan
 

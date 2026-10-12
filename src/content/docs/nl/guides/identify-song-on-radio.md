@@ -2,12 +2,12 @@
 title: "Welk nummer draait op de radio? 3 manieren om het te weten"
 description: "Drie manieren om een nummer op de radio te herkennen, waaronder één die de stream leest en nooit om de microfoon vraagt, zodat de telefoon in je zak blijft."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Werkt het echt zonder de microfoon?"
     a: "Ja. Macdio herkent het nummer uit de audiostream die het al afspeelt, dus er wordt op geen enkel moment om microfoontoegang gevraagd."
   - q: "Wat als de zender de verkeerde titel meestuurt?"
-    a: "Herkenning uit de audio krijgt voorrang als ze kan bewijzen dat ze het moment op het scherm beschrijft, dus de verkeerde aankondiging wordt gecorrigeerd in plaats van gekopieerd."
+    a: "Macdio toont de eigen titel van de zender zodra die er een stuurt. Een vingerafdruk kan zich ook vergissen, bij een reclame, een remix of een liveversie, en een zelfverzekerde verkeerde correctie is erger dan een titel die wat later komt. Song ID vult aan waar de zender niets stuurt."
   - q: "Werkt het in de auto?"
     a: "Ja, ook via CarPlay, en een nummer achter het stuur een hartje geven komt nog altijd in Apple Music terecht. Zie de CarPlay-gids."
   - q: "Werkt dit met FM- of AM-radio?"
@@ -44,7 +44,7 @@ De meeste zenders zenden artiest en titel mee met de audio, en een goede speler 
 
 Als de audio al door een app stroomt, kan de app hem rechtstreeks herkennen, zonder microfoon. Zo doet [Macdio](/iphone.html) het: Song ID luistert naar de stream en niet naar de kamer, dus het werkt met de telefoon vergrendeld in een zak, in een lawaaiige auto, of op een [Apple TV](/apple-tv.html) aan de andere kant van de woonkamer. Macdio vraagt nooit om microfoontoegang, omdat het die nooit nodig heeft.
 
-Omdat het de echte audio hoort, corrigeert het ook de zender als die het mis heeft, en kan het een nummer benoemen tijdens een stuk dat de zender nooit aankondigt. Dezelfde stream kun je bewaren terwijl je luistert: [zo neem je internetradio op](/guides/record-internet-radio.html), op de [Mac](/mac.html) net zo goed als op de iPhone.
+Omdat het de echte audio hoort, kan het een nummer benoemen tijdens een stuk dat de zender nooit aankondigt, en de hoes toevoegen als de zender alleen een titel stuurt. Dezelfde stream kun je bewaren terwijl je luistert: [zo neem je internetradio op](/guides/record-internet-radio.html), op de [Mac](/mac.html) net zo goed als op de iPhone.
 
 ## Waarom de microfoon het moeilijk heeft in de auto
 
@@ -62,7 +62,7 @@ De oude noodoplossing werkt ook nog: typ een onthouden tekstregel tussen aanhali
 
 Zendermetadata wordt geschreven door de automatisering die de zender draait, en die loopt uit de pas. De gebruikelijke fouten zijn een reclame of jingle die de titel van het vorige nummer overneemt, een titel die een paar seconden te vroeg of te laat komt, en een plaatsvervanger zoals de naam van de zender op de plek waar het nummer zou moeten staan.
 
-Herkenning uit de audio corrigeert alle drie, omdat ze meldt wat er echt klinkt en niet wat het afspeelsysteem beweert. Als de zender het goed heeft, wint zijn eigen tekst, want de omroep kent zijn catalogus beter dan welke vingerafdruk ook.
+Herkenning uit de audio meldt wat er echt klinkt en niet wat het afspeelsysteem beweert, en daarom is ze het juiste gereedschap voor de stukken die de zender leeg laat. Macdio laat de eigen tekst van de zender toch winnen zodra die er een stuurt, want de omroep kent zijn catalogus beter dan welke vingerafdruk ook, en een zelfverzekerde verkeerde correctie is erger dan een titel die wat later komt.
 
 ## Bewaar het nummer dan
 
@@ -86,7 +86,7 @@ Ja. Macdio herkent het nummer uit de audiostream die het al afspeelt, dus er wor
 
 ### Wat als de zender de verkeerde titel meestuurt?
 
-Herkenning uit de audio krijgt voorrang als ze kan bewijzen dat ze het moment op het scherm beschrijft, dus de verkeerde aankondiging wordt gecorrigeerd in plaats van gekopieerd.
+Macdio toont de eigen titel van de zender zodra die er een stuurt. Een vingerafdruk kan zich ook vergissen, bij een reclame, een remix of een liveversie, en een zelfverzekerde verkeerde correctie is erger dan een titel die wat later komt. Song ID vult aan waar de zender niets stuurt.
 
 ### Werkt het in de auto?
 

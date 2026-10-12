@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">Na dzień 12 października 2026 Macdio nagrywa radio na żywo na iPhone'ie, iPadzie i Macu. Nagranie jest brane z samego strumienia, więc nie ma mikrofonu ani szumu otoczenia. Podziel według utworu dzieli sesję na jeden plik na utwór według granic utworów podawanych przez stację, z zabezpieczeniem minimalnej długości, żeby poprawiony tytuł nigdy nie przeciął utworu na pół. Silnik Song ID skanuje potem gotowe nagranie i wypisuje utwory w nim ze znacznikami czasu. Formaty to oryginalny strumień, MP3, AAC lub M4A w oryginalnej jakości albo 128, 192 lub 256 kbps.</p>
+  <p class="reveal">Na dzień 12 października 2026 Macdio nagrywa radio na żywo na iPhone'ie, iPadzie i Macu. Nagranie jest brane z samego strumienia, więc nie ma mikrofonu ani szumu otoczenia. Podziel według utworu dzieli sesję na jeden plik na utwór według granic utworów podawanych przez stację, z zabezpieczeniem minimalnej długości, żeby poprawiony tytuł nigdy nie przeciął utworu na pół. Silnik Song ID skanuje potem gotowe nagranie i wypisuje utwory w nim ze znacznikami czasu. Plik to własny dźwięk strumienia, w formacie i z bitrate, w jakich nadaje stacja.</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Zapisane nagrania na iPhone'ie z długością, rozmiarem i utworami znalezionymi w każdym"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Zapisane utwory z okładkami i stacją, z której pochodzą, w Macdio na iPhone'ie"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>Nagrywanie działa na iPhone'ie, iPadzie i Macu. Apple TV i Apple Watch odtwarzają, ale nie nagrywają.</li>
     <li>Nagranie zatrzymuje się samo domyślnie po trzech godzinach; maksymalną długość możesz zmienić. Nie ma planowanego nagrywania o ustalonej godzinie.</li>
-    <li>Nagrywanie odmawia startu przy mniej niż 500 MB wolnego miejsca, więc nigdy nie zapełni urządzenia.</li>
+    <li>Nagrywanie nie startuje przy mniej niż 500 MB wolnego miejsca. W trakcie nagrywania Macdio ostrzega co pięć minut, gdy wolne miejsce spadnie poniżej 500 MB, a gdy robi się krytycznie mało, zatrzymuje nagrywanie i zapisuje plik, więc urządzenie nigdy się nie zapełni.</li>
     <li>Nagrania zostają wewnątrz aplikacji. Nie ma eksportu, arkusza udostępniania, AirDrop ani kopiowania do Plików; to decyzja podjęta z App Review i ona się nie zmieni.</li>
   </ul>
-  <h2 class="reveal">Formaty i jakość</h2>
-  <p class="reveal">Oryginalny zachowuje strumień dokładnie tak, jak był nadawany, co dla stacji AAC lub MP3 jest najlepszą możliwą kopią. MP3, AAC i M4A kodują ponownie w 128, 192 lub 256 kbps, gdy chcesz mniejszych plików albo formatu, który woli konkretny odtwarzacz. Strumienie FLAC i Ogg są w trybie Oryginalny zachowywane bez zmian.</p>
+  <h2 class="reveal">Format i jakość</h2>
+  <p class="reveal">Nie ma ustawienia jakości, które można zepsuć: Macdio zapisuje dźwięk dokładnie tak, jak przychodzi, więc stacja MP3 daje MP3, stacja AAC daje AAC, a stacja FLAC lub Ogg też zachowuje swój format. Stacja 320 kbps daje plik 320 kbps. Gdy Song ID nazwie utwór w nagraniu AAC, jego tytuł, wykonawca, okładka i tekst trafiają do pliku, który staje się wtedy plikiem .m4a.</p>
   <h2 class="reveal">Czy to dozwolone?</h2>
-  <p class="reveal">Nagrywanie audycji do własnego słuchania to to samo, co przez dekady robił magnetofon kasetowy, i w większości krajów użytek osobisty jest w porządku. Udostępnianie albo sprzedawanie nagrania już nie, i to też jest powód, dla którego Macdio trzyma nagrania w aplikacji. <a class="inline" href="../guides/record-internet-radio.html">Poradnik nagrywania</a> przechodzi przez prawo kraj po kraju.</p>
+  <p class="reveal">Nagrywanie audycji do własnego słuchania to to samo, co przez dekady robił magnetofon kasetowy, i w większości krajów użytek osobisty jest w porządku. Udostępnianie albo sprzedawanie nagrania już nie, i to też jest powód, dla którego Macdio trzyma nagrania w aplikacji. <a class="inline" href="../guides/record-internet-radio.html">Poradnik nagrywania</a> mówi więcej o tym, jak wygląda nagrywanie na własny użytek.</p>
   <h2 class="reveal">Częste pytania</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>Czy Macdio nagrywa radio internetowe?</summary><div class="faq-a">Tak, na iPhone'ie, iPadzie i Macu, prosto ze strumienia, bez mikrofonu. Podziel według utworu tworzy jeden nazwany plik na utwór.</div></details>
     <details class="faq-item"><summary>Czy mogę zaplanować nagranie?</summary><div class="faq-a">Nie. Nagrywanie uruchamia się ręcznie i zatrzymuje po ustawionej maksymalnej długości, domyślnie po trzech godzinach.</div></details>
     <details class="faq-item"><summary>Czy mogę wyeksportować lub udostępnić nagranie?</summary><div class="faq-a">Nie. Nagrania zostają w aplikacji, celowo i w porozumieniu z App Review.</div></details>
-    <details class="faq-item"><summary>W jakich formatach nagrywa?</summary><div class="faq-a">Oryginalny strumień, MP3, AAC lub M4A, w oryginalnej jakości albo 128, 192 lub 256 kbps.</div></details>
+    <details class="faq-item"><summary>W jakich formatach nagrywa?</summary><div class="faq-a">We własnym formacie stacji: MP3, AAC, FLAC lub Ogg, z bitrate stacji. Nagrania AAC stają się plikami .m4a, gdy ich utwory zostaną otagowane.</div></details>
     <details class="faq-item"><summary>Czy działa na Apple TV lub Apple Watch?</summary><div class="faq-a">Nie. Te wersje odtwarzają radio, ale nie nagrywają.</div></details>
   </div>
   <h2 class="reveal">Wypróbuj</h2>

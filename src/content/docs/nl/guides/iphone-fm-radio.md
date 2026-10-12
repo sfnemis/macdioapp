@@ -28,7 +28,7 @@ Het korte antwoord is nee, en het komt ook niet. De eerlijke versie van waarom, 
 
 Niet een die je kunt gebruiken. De draadloze chips in oudere iPhones bevatten wel een FM-tunerblok op het silicium, en daar begon het gerucht, maar dat blok was nooit aan een antenne gekoppeld en werd nooit beschikbaar gemaakt voor software. Een slapende transistor is geen radio. In 2017, na een publieke campagne om FM in te schakelen tijdens het orkaanseizoen, verklaarde Apple dat zijn telefoons geen FM-radiochip hebben die kan worden ingeschakeld en geen antenne die is ontworpen voor FM-signalen.
 
-Dat geldt voor elk model tot nu toe. Niet de eerste iPhone, niet de iPhone 17-generatie, niets ertussen. De vraag komt elke september terug omdat elk nieuw model een nieuwe golf zoekopdrachten brengt, maar het antwoord is in achttien jaar niet veranderd.
+Dat geldt voor elk model tot nu toe. Niet de eerste iPhone, niet de iPhone 17-generatie, niets ertussen. De vraag komt elke september terug omdat elk nieuw model een nieuwe golf zoekopdrachten brengt, maar het antwoord is sinds 2007 niet veranderd.
 
 ## Waarom Apple FM-radio niet inschakelt op de iPhone
 

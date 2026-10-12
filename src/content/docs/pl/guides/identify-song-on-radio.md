@@ -2,12 +2,12 @@
 title: "Jaki utwór leci w radiu? 3 sposoby, by się dowiedzieć"
 description: "Trzy sposoby nazwania utworu z radia, w tym jeden, który odczytuje sam strumień i nigdy nie prosi o mikrofon, więc telefon zostaje w kieszeni."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Czy to naprawdę działa bez mikrofonu?"
     a: "Tak. Macdio rozpoznaje utwór ze strumienia audio, który już odtwarza, więc w żadnym momencie nie prosi o zgodę na mikrofon."
   - q: "Co, jeśli stacja podaje zły tytuł?"
-    a: "Rozpoznawanie z dźwięku ma pierwszeństwo, gdy może udowodnić, że opisuje moment na ekranie, więc zła zapowiedź jest poprawiana, a nie kopiowana."
+    a: "Macdio pokazuje własny tytuł stacji, gdy tylko stacja go wysyła. Odcisk też może się pomylić, przy reklamie, remiksie czy wersji na żywo, a pewna siebie błędna poprawka jest gorsza niż spóźniony tytuł. Song ID uzupełnia tam, gdzie stacja nic nie wysyła."
   - q: "Czy działa w aucie?"
     a: "Tak, także przez CarPlay, a polubienie utworu za kierownicą nadal trafia do Apple Music. Zobacz poradnik CarPlay."
   - q: "Czy to działa z radiem FM lub AM?"
@@ -44,7 +44,7 @@ Większość stacji nadaje wykonawcę i tytuł razem z dźwiękiem, a dobry odtw
 
 Jeśli dźwięk już płynie przez aplikację, aplikacja może rozpoznać go bezpośrednio, bez żadnego mikrofonu. Tak robi to [Macdio](/iphone.html): Song ID słucha strumienia, a nie pokoju, więc działa z telefonem zablokowanym w kieszeni, w głośnym aucie albo na [Apple TV](/apple-tv.html) z drugiego końca salonu. Macdio nigdy nie prosi o zgodę na mikrofon, bo nigdy go nie potrzebuje.
 
-Ponieważ słyszy prawdziwy dźwięk, poprawia też stację, gdy stacja się myli, i potrafi nazwać utwór w czasie, którego stacja w ogóle nie zapowiada. Ten sam strumień można zachować w trakcie słuchania: [jak nagrywać radio internetowe](/guides/record-internet-radio.html), na [Macu](/mac.html) tak samo jak na iPhone'ie.
+Ponieważ słyszy prawdziwy dźwięk, potrafi nazwać utwór w czasie, którego stacja w ogóle nie zapowiada, i dodać okładkę, gdy stacja wysyła tylko tytuł. Ten sam strumień można zachować w trakcie słuchania: [jak nagrywać radio internetowe](/guides/record-internet-radio.html), na [Macu](/mac.html) tak samo jak na iPhone'ie.
 
 ## Dlaczego mikrofon ma problem w aucie
 
@@ -62,7 +62,7 @@ Stary sposób awaryjny też działa: wpisz zapamiętany wers tekstu w wyszukiwar
 
 Metadane stacji pisze automatyka, jaką stacja akurat ma, i rozjeżdżają się. Typowe błędy to reklama albo dżingiel dziedziczący tytuł poprzedniego utworu, tytuł przychodzący kilka sekund za wcześnie albo za późno i wypełniacz, taki jak nazwa stacji, siedzący tam, gdzie powinien być utwór.
 
-Rozpoznawanie z dźwięku poprawia wszystkie trzy, bo raportuje to, co faktycznie brzmi, a nie to, co twierdzi system emisyjny. Gdy stacja ma rację, wygrywa jej własny tekst, bo nadawca zna swój katalog lepiej niż jakikolwiek odcisk.
+Rozpoznawanie z dźwięku raportuje to, co faktycznie brzmi, a nie to, co twierdzi system emisyjny, i dlatego jest właściwym narzędziem na fragmenty, które stacja zostawia puste. Macdio i tak pozwala wygrać własnemu tekstowi stacji, gdy tylko go wysyła, bo nadawca zna swój katalog lepiej niż jakikolwiek odcisk, a pewna siebie błędna poprawka jest gorsza niż spóźniony tytuł.
 
 ## Potem zachowaj utwór
 
@@ -86,7 +86,7 @@ Tak. Macdio rozpoznaje utwór ze strumienia audio, który już odtwarza, więc w
 
 ### Co, jeśli stacja podaje zły tytuł?
 
-Rozpoznawanie z dźwięku ma pierwszeństwo, gdy może udowodnić, że opisuje moment na ekranie, więc zła zapowiedź jest poprawiana, a nie kopiowana.
+Macdio pokazuje własny tytuł stacji, gdy tylko stacja go wysyła. Odcisk też może się pomylić, przy reklamie, remiksie czy wersji na żywo, a pewna siebie błędna poprawka jest gorsza niż spóźniony tytuł. Song ID uzupełnia tam, gdzie stacja nic nie wysyła.
 
 ### Czy działa w aucie?
 

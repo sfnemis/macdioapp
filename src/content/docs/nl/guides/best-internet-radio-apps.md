@@ -2,12 +2,12 @@
 title: "De beste internetradio-apps voor Mac en iPhone (2026)"
 description: "Zeven internetradio-apps voor Mac, iPhone, iPad, Apple Watch en Apple TV vergeleken op prijs, aantal zenders, opnemen en reclame, elk cijfer uit de App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Wat is de beste internetradio-app voor Mac?"
-    a: "Dat hangt af van hoe je wilt betalen. Macdio is één aankoop zonder advertenties, met opnemen en songherkenning, en heeft macOS 26 nodig. Eter en Broadcasts zijn beide gratis te proberen met een eenmalige ontgrendeling en draaien op oudere versies van macOS. myTuner Radio Pro is een aparte aankoop van 9,99 USD in de Mac App Store."
+    a: "Dat hangt af van hoe je wilt betalen. Macdio is één aankoop zonder advertenties, met opnemen en songherkenning, en heeft macOS 26 nodig. Eter is gratis te proberen met een eenmalige ontgrendeling, Broadcasts is gratis met een handvol zenders en een abonnement voor de rest, en beide draaien op oudere versies van macOS. myTuner Radio Pro is een aparte aankoop van 9,99 USD in de Mac App Store."
   - q: "Welke internetradio-apps hebben geen advertenties?"
-    a: "Macdio heeft geen advertenties en geen in-app aankopen. Eter en Broadcasts noemen geen advertenties in hun App Store-pagina en verkopen in plaats daarvan een eenmalige ontgrendeling. Simple Radio toont advertenties in de gratis versie en haalt ze weg met de Premium-aankoop, en TuneIn verkoopt een Premium-abonnement dat nieuws zonder advertenties en muziek zonder reclame belooft."
+    a: "Macdio heeft geen advertenties en geen in-app aankopen. Eter en Broadcasts noemen geen advertenties in hun App Store-pagina; Eter verkoopt een eenmalige ontgrendeling en Broadcasts een abonnement. Simple Radio toont advertenties in de gratis versie en haalt ze weg met de Premium-aankoop, en TuneIn verkoopt een Premium-abonnement dat nieuws zonder advertenties en muziek zonder reclame belooft."
   - q: "Hoeveel zenders hebben deze apps?"
     a: "De aantallen die op 14 september 2026 in de App Store werden genoemd zijn 100.000+ voor TuneIn, 90.000+ voor Simple Radio, 60.000+ voor Macdio en 50.000 voor myTuner Radio. Eter, Broadcasts en Radio Garden publiceren geen getal. De meeste van deze apps putten uit dezelfde openbare overzichten, dus de cijfers zeggen meer over hoe elke app telt dan over wat je echt kunt horen."
   - q: "Kan een van deze apps een radioprogramma opnemen?"
@@ -18,7 +18,7 @@ faq:
 
 Wat elke app kost, wat hij echt doet, en wie hem moet kiezen. Geschreven door de ontwikkelaar van een van de zeven.
 
-**Voor de meeste mensen komt de keuze neer op hoe je wilt betalen. TuneIn en Simple Radio zijn gratis en hebben advertenties. Eter en Broadcasts zijn gratis te proberen met een eenmalige ontgrendeling. Macdio kost eenmalig 14,99 Amerikaanse dollar voor elk Apple-apparaat, zonder advertenties en zonder abonnement, en het is de enige van de zeven die opnemen adverteert. Radio Garden installeer je om te bladeren, niet om te luisteren.**
+**Voor de meeste mensen komt de keuze neer op hoe je wilt betalen. TuneIn en Simple Radio zijn gratis en hebben advertenties. Eter is gratis te proberen met een eenmalige ontgrendeling, en Broadcasts is gratis met een handvol zenders en een abonnement voor de rest. Macdio kost eenmalig 14,99 Amerikaanse dollar voor elk Apple-apparaat, zonder advertenties en zonder abonnement, en het is de enige van de zeven die opnemen adverteert. Radio Garden installeer je om te bladeren, niet om te luisteren.**
 
 ## Waar dit vandaan komt
 
@@ -32,7 +32,7 @@ Die methode heeft een grens die het benoemen waard is. Een App Store-pagina is m
 | -- | -- | -- | -- | -- | -- |
 | Macdio | iPhone, iPad, Mac, TV, Watch | 60.000+ | 14,99 USD eenmalig | Ja, gesplitst per nummer | Geen |
 | Eter | iPhone, iPad, Mac, TV, Watch | Niet gepubliceerd | Gratis, eenmalige ontgrendeling | Niet geadverteerd | Geen geadverteerd |
-| Broadcasts | iPhone, iPad, Mac, TV, Watch | Niet gepubliceerd | Gratis, eenmalige ontgrendeling | Niet geadverteerd | Geen geadverteerd |
+| Broadcasts | iPhone, iPad, Mac, TV, Watch | Niet gepubliceerd | Gratis, abonnement vanaf 1,99 USD/maand | Niet geadverteerd | Geen geadverteerd |
 | Simple Radio | iPhone, iPad, Watch | 90.000+ | Gratis, Premium-aankoop | Niet geadverteerd | Ja, beeldadvertenties |
 | myTuner Radio | iPhone, iPad, TV, Watch, Pro-app voor Mac | 50.000 | Gratis, abonnementen vanaf 0,99 USD/week | Niet geadverteerd | Niet vermeld |
 | TuneIn | iPhone, iPad, TV, Watch, speakers | 100.000+ | Gratis, Premium-abonnement | Niet geadverteerd | Ja, Premium vermindert ze |
@@ -42,7 +42,7 @@ Elk cijfer komt van de App Store-pagina van elke app in de Amerikaanse store, ge
 
 ## Macdio, voor mensen die liever één keer kopen
 
-Macdio kost 14,99 Amerikaanse dollar in de Amerikaanse store, eenmalig betaald, en die aankoop dekt iPhone, iPad, Mac, Apple TV en Apple Watch via Universal Purchase. Er zijn geen advertenties, geen in-app aankopen en geen account. Het heeft meer dan 60.000 zenders uit het RadioBrowser-overzicht, plus elke stream-URL die je zelf plakt.
+Macdio kost 14,99 Amerikaanse dollar in de Amerikaanse store, eenmalig betaald, en die aankoop dekt iPhone, iPad, Mac, Apple TV en Apple Watch via Universal Purchase. Er zijn geen advertenties, geen in-app aankopen en geen account. Het heeft meer dan 60.000 zenders uit het Radio Browser-overzicht, plus elke stream-URL die je zelf plakt.
 
 De functies die elders moeilijk te vinden zijn, zijn opnemen en songherkenning. Het neemt de stream zelf op in plaats van het geluid uit de speakers, en Splitsen per nummer knipt een sessie in één bestand per nummer, elk benoemd en met een eigen hoes, zoals beschreven in de [opnamegids](/guides/record-internet-radio.html). Songherkenning leest de audio uit de stream, dus het blijft werken met de telefoon in een zak en de app vraagt nooit om microfoontoegang. Gesynchroniseerde songteksten scrollen mee met wat je hoort. Favorieten en geschiedenis synchroniseren via iCloud tussen apparaten, en de Watch-app streamt via LTE zonder iPhone in de buurt.
 
@@ -52,7 +52,7 @@ Kies het als je één betaling wilt, geen reclame, en de functies voor opnemen e
 
 ## Eter, de gratis optie die goed meegroeit
 
-Eter van Apparent Software is gratis te downloaden en draait op macOS, iOS, iPadOS, watchOS en tvOS, met CarPlay erbij. Het zoekt in de database van radio-browser.info en voegt een handgekozen lijst met aanbevolen zenders toe, en je kunt elke eigen stream-URL toevoegen. Eén eenmalige in-app aankoop ontgrendelt bewaarde favorieten en verbergt de aanbevolen lijst zodat je alleen je eigen zenders ziet. De pagina zet daar een slaaptimer naast, en onbeperkt luisteren is ook zonder ontgrendeling gratis.
+Eter van Apparent Software is gratis te downloaden en draait op macOS, iOS, iPadOS, watchOS en tvOS, met CarPlay erbij. Het zoekt in de database van Radio Browser en voegt een handgekozen lijst met aanbevolen zenders toe, en je kunt elke eigen stream-URL toevoegen. Eén eenmalige in-app aankoop ontgrendelt bewaarde favorieten en verbergt de aanbevolen lijst zodat je alleen je eigen zenders ziet. De pagina noemt daarnaast een slaaptimer, en onbeperkt luisteren is ook zonder ontgrendeling gratis.
 
 De App Store-pagina publiceert geen aantal zenders en adverteert geen opnemen. Het minimum is iOS 16, dus het reikt meerdere generaties verder terug dan Macdio.
 
@@ -60,7 +60,7 @@ Kies het als je niets wilt uitgeven, een week wilt kijken of de app je ligt, en 
 
 ## Broadcasts, voor mensen die hun eigen lijst samenstellen
 
-Broadcasts, van Steven Troughton-Smith, kiest de tegenovergestelde aanpak van een reusachtig overzicht: je bouwt een bibliotheek van de zenders waar je echt naar luistert en de app toont ze als een raster van hoezen. De gratis versie houdt een bibliotheek van beperkte grootte, en de ontgrendeling van de volledige versie haalt die grens weg en voegt een scherm Wordt nu afgespeeld toe met hoezen van zender en nummer. Het synchroniseert de bibliotheek via iCloud tussen iPhone, iPad, Mac, Apple Watch en Apple TV, is een Universal Purchase, ondersteunt CarPlay op gecertificeerde autoradio's, en gebruikt Shazam in bèta om metadata aan te vullen als een zender die niet meestuurt.
+Broadcasts, van Steven Troughton-Smith, kiest de tegenovergestelde aanpak van een reusachtig overzicht: je bouwt een bibliotheek van de zenders waar je echt naar luistert en de app toont ze als een raster van hoezen. De gratis versie houdt een handvol zenders, en een abonnement van 1,99 USD per maand of 11,99 USD per jaar haalt die grens weg en voegt een scherm Wordt nu afgespeeld toe met hoezen van zender en nummer. Het synchroniseert de bibliotheek via iCloud tussen iPhone, iPad, Mac, Apple Watch en Apple TV, is een Universal Purchase, ondersteunt CarPlay op gecertificeerde autoradio's, en gebruikt Shazam in bèta om metadata aan te vullen als een zender er zelf geen meestuurt.
 
 Niets op de pagina noemt opnemen, en er is geen geadverteerd aantal zenders, omdat het overzicht niet het punt van de app is.
 
@@ -76,7 +76,7 @@ Kies het als je een telefoon instelt voor iemand die één zender met één tik 
 
 ## myTuner Radio, het wereldwijde overzicht met een Mac-versie
 
-myTuner Radio van Appgeneration adverteert 50.000 radiozenders en ondersteunt Apple Watch, Apple TV en CarPlay. De iPhone-app is gratis met abonnementen van 0,99 USD per week tot 7,99 USD voor zes maanden, en er is een aparte myTuner Radio Pro in de Mac App Store voor 9,99 USD. Het koppelt ook met Apple Music voor afspeellijsten als je daar een abonnement hebt.
+myTuner Radio van Appgeneration adverteert 50.000 radiozenders en ondersteunt Apple Watch, Apple TV en CarPlay. De iPhone-app is gratis met abonnementen van 0,99 USD per week tot 34,99 USD per jaar, en er is een aparte myTuner Radio Pro in de Mac App Store voor 9,99 USD. Het koppelt ook met Apple Music voor afspeellijsten als je daar een abonnement hebt.
 
 De pagina beschrijft de advertenties van de gratis versie niet, dus deze pagina beweert daar niets over, en opnemen wordt niet genoemd. Het minimum is iOS 15.
 
@@ -110,7 +110,7 @@ Apple Music heeft radiozenders, maar het is een muziekabonnement met radio erbij
 
 ## Zo kies je in één minuut
 
-Begin met het geld. Als je niets wilt betalen, is Eter de beste gratis ervaring en Simple Radio de makkelijkste om aan iemand anders te geven. Als je abonnementen niet wilt maar wel één keer betaalt, zijn Macdio, Broadcasts en myTuner Radio Pro allemaal eenmalige aankopen met heel verschillende karakters: een volledige speler, een samengestelde bibliotheek en een overzicht.
+Begin met het geld. Als je niets wilt betalen, is Eter de beste gratis ervaring en Simple Radio de makkelijkste om aan iemand anders te geven. Als je abonnementen niet wilt maar wel één keer betaalt, zijn Macdio, Eter en myTuner Radio Pro allemaal eenmalige aankopen met heel verschillende karakters: een volledige speler, een slanke speler voor het zenderoverzicht, en een ouder overzicht dat alleen op de Mac draait. Broadcasts, de samengestelde bibliotheek, is overgestapt op een abonnement.
 
 Kijk dan naar de apparatenlijst. Een oudere iPhone of een Intel-Mac sluit Macdio meteen uit en wijst naar Eter of Broadcasts. Een slimme speaker in de keuken wijst naar TuneIn. Een Apple Watch die je zonder telefoon gebruikt bij het hardlopen beperkt de keuze tot de apps die op het horloge zelf streamen.
 
@@ -120,11 +120,11 @@ Denk ten slotte na over wat je doet terwijl de radio aanstaat. Als je alleen maa
 
 ### Wat is de beste internetradio-app voor Mac?
 
-Dat hangt af van hoe je wilt betalen. Macdio is één aankoop zonder advertenties, met opnemen en songherkenning, en heeft macOS 26 nodig. Eter en Broadcasts zijn beide gratis te proberen met een eenmalige ontgrendeling en draaien op oudere versies van macOS. myTuner Radio Pro is een aparte aankoop van 9,99 USD in de Mac App Store.
+Dat hangt af van hoe je wilt betalen. Macdio is één aankoop zonder advertenties, met opnemen en songherkenning, en heeft macOS 26 nodig. Eter is gratis te proberen met een eenmalige ontgrendeling, Broadcasts is gratis met een handvol zenders en een abonnement voor de rest, en beide draaien op oudere versies van macOS. myTuner Radio Pro is een aparte aankoop van 9,99 USD in de Mac App Store.
 
 ### Welke internetradio-apps hebben geen advertenties?
 
-Macdio heeft geen advertenties en geen in-app aankopen. Eter en Broadcasts noemen geen advertenties in hun App Store-pagina en verkopen in plaats daarvan een eenmalige ontgrendeling. Simple Radio toont advertenties in de gratis versie en haalt ze weg met de Premium-aankoop, en TuneIn verkoopt een Premium-abonnement dat nieuws zonder advertenties en muziek zonder reclame belooft.
+Macdio heeft geen advertenties en geen in-app aankopen. Eter en Broadcasts noemen geen advertenties in hun App Store-pagina; Eter verkoopt een eenmalige ontgrendeling en Broadcasts een abonnement. Simple Radio toont advertenties in de gratis versie en haalt ze weg met de Premium-aankoop, en TuneIn verkoopt een Premium-abonnement dat nieuws zonder advertenties en muziek zonder reclame belooft.
 
 ### Hoeveel zenders hebben deze apps?
 

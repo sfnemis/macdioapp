@@ -1,6 +1,6 @@
 ---
 title: "Jak znaleźć adres URL strumienia stacji radiowej (4 sposoby)"
-description: "Zdobądź bezpośredni adres każdej stacji z jej strony, narzędzi deweloperskich przeglądarki, publicznego katalogu lub samej aplikacji. Z prawdziwymi przykładami."
+description: "Zdobądź bezpośredni adres każdej stacji z jej strony, publicznego katalogu, narzędzi deweloperskich przeglądarki albo pytając stację. Z prawdziwymi przykładami."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

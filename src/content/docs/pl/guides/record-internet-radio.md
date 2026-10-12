@@ -1,8 +1,8 @@
 ---
 title: "Jak nagrywać radio internetowe na Macu (krok po kroku)"
-description: "Trzy sposoby nagrywania radia internetowego na Macu i co działa na iPhone'ie: odtwarzacz z nagrywaniem, zrzut dźwięku systemu i Audacity z wirtualnym audio."
+description: "Trzy sposoby nagrywania radia internetowego na Macu i co działa na iPhone'ie: odtwarzacz z nagrywaniem, narzędzie do dźwięku systemu albo Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Jakiej jakości są nagrania?"
     a: "Identycznej ze strumieniem. Przychodzący dźwięk jest zapisywany tak, jak dociera, bez ponownego kodowania, więc stacja 128 kbps daje plik 128 kbps, a stacja 320 kbps daje plik 320 kbps."
@@ -64,7 +64,7 @@ To, co Macdio ma, to zabezpieczenie w drugą stronę: sesja zatrzymuje się sama
 
 ## Co kończy nagranie wcześniej
 
-Dwie rzeczy kończą sesję przed tobą i obie zapisują plik, zamiast go tracić. Pierwsza to trzygodzinny limit powyżej. Druga to dysk. Macdio obserwuje wolne miejsce podczas zapisu, ostrzega co pięć minut, gdy dysk spadnie poniżej 500 MB, i zatrzymuje nagrywanie z powiadomieniem, jeśli miejsca jest krytycznie mało, więc najgorszy przypadek to krótszy plik, a nie pełny dysk i uszkodzony plik. Długa nocna sesja na prawie pełnym laptopie to przypadek do pilnowania, bo stacja 320 kbps zapisuje około 144 MB na godzinę.
+Dwie rzeczy kończą sesję przed tobą i obie zapisują plik, zamiast go tracić. Pierwsza to trzygodzinny limit powyżej. Druga to dysk. Macdio nie zacznie nagrania, gdy wolnego miejsca jest mniej niż 500 MB, obserwuje wolne miejsce podczas zapisu, ostrzega co pięć minut, gdy dysk spadnie poniżej 500 MB, i zatrzymuje nagrywanie z powiadomieniem, jeśli miejsca jest krytycznie mało, więc najgorszy przypadek to krótszy plik, a nie pełny dysk i uszkodzony plik. Długa nocna sesja na prawie pełnym laptopie to przypadek do pilnowania, bo stacja 320 kbps zapisuje około 144 MB na godzinę.
 
 ## Jak duże robią się pliki
 
@@ -72,7 +72,7 @@ Nagranie jest tak ciężkie jak strumień, bo nic nie jest dodawane ani dodatkow
 
 ## W jakim formacie są pliki
 
-Nagranie zachowuje to, co wysyła stacja. Stacja MP3 daje ci .mp3, a stacja AAC daje ci .aac, bez ponownego kodowania po drodze na dysk, więc plik brzmi dokładnie jak strumień. Utwory, które wycina Podziel według utworu, są zapisywane jako .m4a. Nie ma tu ustawienia jakości, które można zepsuć, bo nie ma drugiego kodowania.
+Nagranie zachowuje to, co wysyła stacja. Stacja MP3 daje ci .mp3, a stacja AAC daje ci .aac, bez ponownego kodowania po drodze na dysk, więc plik brzmi dokładnie jak strumień. Gdy Song ID nazwie utwór w nagraniu AAC, jego tytuł, wykonawca i okładka trafiają do pliku, który staje się wtedy plikiem .m4a. Nie ma tu ustawienia jakości, które można zepsuć, bo dźwięk nigdy nie jest kodowany drugi raz.
 
 ## Gdzie mieszkają nagrania
 
