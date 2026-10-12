@@ -16,7 +16,7 @@ faq:
     a: "El streaming necesita cobertura; los cortes breves los cubre el búfer y los largos pausan la reproducción hasta que vuelve la señal."
 ---
 
-La FM te da las emisoras de una ciudad. CarPlay más radio por internet te da todas las ciudades. La configuración lleva menos de un minuto.
+La FM te da las emisoras de una ciudad. CarPlay más radio por internet te da todas las ciudades.
 
 La radio por internet en el coche funciona a través de CarPlay, con las emisoras de tu iPhone en lugar de los transmisores que tengas al alcance. Se configura en menos de un minuto, la disposición está pensada para echar un vistazo y no para leer, y tus favoritos se convierten en presintonías que puedes pulsar sin mirar.
 

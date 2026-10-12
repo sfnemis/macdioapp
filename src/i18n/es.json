@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Buscando…",
+    "errorTitle": "Error de conexión",
+    "errorText": "No se pudo conectar con la base de datos de emisoras. Inténtalo de nuevo.",
+    "noneTitle": "No se han encontrado emisoras",
+    "noneText": "Prueba con otra búsqueda u otro filtro.",
+    "results": "{n} resultados",
+    "resultsFor": "para \"{q}\"",
+    "resultsIn": "en {country}",
+    "popular": "Emisoras populares · Página {page}",
+    "prev": "← Anterior",
+    "next": "Siguiente →",
+    "page": "Página {page}",
+    "unknown": "Sin nombre"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Jazz",
+    "classical": "Clásica",
+    "electronic": "Electrónica",
+    "hip hop": "Hip hop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latina",
+    "folk": "Folk",
+    "indie": "Indie",
+    "ambient": "Ambient",
+    "news": "Noticias",
+    "talk": "Tertulia",
+    "sports": "Deportes",
+    "oldies": "Éxitos del recuerdo",
+    "80s": "Años 80",
+    "90s": "Años 90",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dance",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "Nuevo",
+    "label": "Novedades: {title}",
+    "title": "Novedades",
+    "dialog": "Novedades de Macdio",
+    "all": "Todas las notas de versión",
+    "gotIt": "Entendido"
   }
 }

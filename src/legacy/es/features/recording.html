@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">A 12 de octubre de 2026 Macdio graba la radio en directo en iPhone, iPad y Mac. La grabación se toma del propio stream, así que no hay micrófono ni ruido ambiente. Dividir por pista corta la sesión en un archivo por canción usando los límites de canción de la propia emisora, con una protección de duración mínima para que un título corregido nunca parta una canción en dos. El motor de Song ID analiza después la grabación terminada y lista las canciones que contiene con marcas de tiempo. Los formatos son el stream original, MP3, AAC o M4A a la calidad original o a 128, 192 o 256 kbps.</p>
+  <p class="reveal">A 12 de octubre de 2026 Macdio graba la radio en directo en iPhone, iPad y Mac. La grabación se toma del propio stream, así que no hay micrófono ni ruido ambiente. Dividir por pista corta la sesión en un archivo por canción usando los límites de canción de la propia emisora, con una protección de duración mínima para que un título corregido nunca parta una canción en dos. El motor de Song ID analiza después la grabación terminada y lista las canciones que contiene con marcas de tiempo. El archivo es el propio audio del stream, en el formato y el bitrate que emite la emisora.</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Grabaciones guardadas en el iPhone con duración, tamaño y las canciones encontradas en cada una"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Canciones guardadas con carátulas y la emisora de la que vienen, en Macdio para iPhone"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>La grabación funciona en iPhone, iPad y Mac. El Apple TV y el Apple Watch reproducen pero no graban.</li>
     <li>Una grabación se detiene sola a las tres horas por defecto; puedes cambiar la duración máxima. No hay grabación programada a una hora fija.</li>
-    <li>La grabación se niega a empezar con menos de 500 MB libres, así que nunca llena el dispositivo.</li>
+    <li>La grabación no empieza con menos de 500 MB libres. Mientras graba, Macdio avisa cada cinco minutos cuando el espacio libre baja de 500 MB, y se detiene y guarda el archivo cuando el espacio se vuelve crítico, así que el dispositivo nunca se llena.</li>
     <li>Las grabaciones se quedan dentro de la app. No hay exportación, hoja de compartir, AirDrop ni copia a Archivos; fue una decisión tomada con App Review y no va a cambiar.</li>
   </ul>
-  <h2 class="reveal">Formatos y calidad</h2>
-  <p class="reveal">Original conserva el stream exactamente como se emitió, que para una emisora AAC o MP3 es la mejor copia posible. MP3, AAC y M4A recodifican a 128, 192 o 256 kbps cuando quieres archivos más pequeños o un formato que prefiera un reproductor concreto. Los streams FLAC y Ogg se conservan tal cual en Original.</p>
+  <h2 class="reveal">Formato y calidad</h2>
+  <p class="reveal">No hay ningún ajuste de calidad que puedas equivocar: Macdio escribe el audio exactamente como llega, así que una emisora MP3 da un MP3, una emisora AAC un AAC, y una emisora FLAC u Ogg también conserva su formato. Una emisora a 320 kbps da un archivo a 320 kbps. Cuando Song ID ha puesto nombre a la canción en una grabación AAC, su título, su artista, su carátula y su letra se escriben en el archivo, que pasa a ser un .m4a.</p>
   <h2 class="reveal">¿Está permitido?</h2>
-  <p class="reveal">Grabar una emisión para escucharla tú mismo es lo mismo que hizo una pletina de casete durante décadas, y en la mayoría de los países el uso personal está bien. Compartir o vender una grabación no lo está, y por eso también Macdio mantiene las grabaciones dentro de la app. La <a class="inline" href="../guides/record-internet-radio.html">guía de grabación</a> repasa la ley país por país.</p>
+  <p class="reveal">Grabar una emisión para escucharla tú mismo es lo mismo que hizo una pletina de casete durante décadas, y en la mayoría de los países el uso personal está bien. Compartir o vender una grabación no lo está, y por eso también Macdio mantiene las grabaciones dentro de la app. La <a class="inline" href="../guides/record-internet-radio.html">guía de grabación</a> cuenta más sobre cómo está la grabación para uso personal.</p>
   <h2 class="reveal">Preguntas habituales</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>¿Puede Macdio grabar radio por internet?</summary><div class="faq-a">Sí, en iPhone, iPad y Mac, directamente desde el stream y sin micrófono. Dividir por pista crea un archivo con nombre por cada canción.</div></details>
     <details class="faq-item"><summary>¿Puedo programar una grabación?</summary><div class="faq-a">No. La grabación se inicia a mano y se detiene al llegar a la duración máxima que fijes, tres horas por defecto.</div></details>
     <details class="faq-item"><summary>¿Puedo exportar o compartir una grabación?</summary><div class="faq-a">No. Las grabaciones se quedan en la app, por diseño y por acuerdo con App Review.</div></details>
-    <details class="faq-item"><summary>¿En qué formatos graba?</summary><div class="faq-a">El stream original, MP3, AAC o M4A, a la calidad original o a 128, 192 o 256 kbps.</div></details>
+    <details class="faq-item"><summary>¿En qué formatos graba?</summary><div class="faq-a">El de la propia emisora: MP3, AAC, FLAC u Ogg, al bitrate de la emisora. Las grabaciones AAC pasan a ser archivos .m4a cuando se etiquetan sus canciones.</div></details>
     <details class="faq-item"><summary>¿Funciona en el Apple TV o el Apple Watch?</summary><div class="faq-a">No. Esas versiones reproducen la radio pero no graban.</div></details>
   </div>
   <h2 class="reveal">Pruébalo</h2>

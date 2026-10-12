@@ -1,8 +1,8 @@
 ---
 title: "Cómo grabar radio por internet en un Mac (paso a paso)"
-description: "Tres formas de grabar radio por internet en Mac y qué funciona en iPhone: reproductor con grabación integrada, captura del sistema y Audacity con audio virtual."
+description: "Tres formas de grabar radio por internet en un Mac, y qué funciona en iPhone: un reproductor que graba, una captura del audio del sistema o Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "¿Qué calidad tienen las grabaciones?"
     a: "Idéntica a la del stream. El audio entrante se escribe tal como llega, sin recodificar, así que una emisora a 128 kbps da un archivo a 128 kbps y una a 320 kbps da un archivo a 320 kbps."
@@ -64,7 +64,7 @@ Lo que Macdio sí tiene es la protección contraria: una sesión se detiene sola
 
 ## Qué detiene una grabación antes de tiempo
 
-Dos cosas terminan una sesión antes que tú, y ambas guardan el archivo en lugar de perderlo. La primera es el límite de tres horas de arriba. La segunda es el disco. Macdio vigila el espacio libre mientras escribe, te avisa cada cinco minutos cuando la unidad baja de 500 MB y detiene la grabación con una notificación si el espacio se vuelve crítico, así que el peor caso es un archivo más corto y no un disco lleno con un archivo corrupto. Una sesión larga de noche en un portátil casi lleno es el caso a vigilar, porque una emisora a 320 kbps escribe unos 144 MB por hora.
+Dos cosas terminan una sesión antes que tú, y ambas guardan el archivo en lugar de perderlo. La primera es el límite de tres horas de arriba. La segunda es el disco. Macdio no empieza una grabación con menos de 500 MB libres, vigila el espacio libre mientras escribe, te avisa cada cinco minutos cuando la unidad baja de 500 MB y detiene la grabación con una notificación si el espacio se vuelve crítico, así que el peor caso es un archivo más corto y no un disco lleno con un archivo corrupto. Una sesión larga de noche en un portátil casi lleno es el caso a vigilar, porque una emisora a 320 kbps escribe unos 144 MB por hora.
 
 ## ¿Cuánto ocupan los archivos?
 
@@ -72,7 +72,7 @@ Una grabación pesa lo mismo que el stream, ya que no se añade ni se comprime n
 
 ## En qué formato están los archivos
 
-Una grabación conserva lo que envíe la emisora. Una emisora MP3 te da un .mp3 y una emisora AAC te da un .aac, sin recodificar nada de camino al disco, así que el archivo suena exactamente como sonaba el stream. Las pistas que recorta Dividir por pista se escriben como .m4a. Aquí no hay ningún ajuste de calidad que puedas equivocar, porque no hay una segunda codificación.
+Una grabación conserva lo que envíe la emisora. Una emisora MP3 te da un .mp3 y una emisora AAC te da un .aac, sin recodificar nada de camino al disco, así que el archivo suena exactamente como sonaba el stream. Cuando Song ID ha puesto nombre a una canción en una grabación AAC, su título, su artista y su carátula se escriben en el archivo, que pasa a ser un .m4a. Aquí no hay ningún ajuste de calidad que puedas equivocar, porque el audio nunca se codifica una segunda vez.
 
 ## Dónde viven las grabaciones
 

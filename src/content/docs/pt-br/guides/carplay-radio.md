@@ -1,6 +1,6 @@
 ---
-title: "Rádio pela internet no CarPlay: configuração e botões de memória"
-description: "Rádio pela internet na tela do carro em cerca de um minuto, com botões de memória que funcionam como num rádio de carro. Inclui quanto uma hora de streaming custa em dados."
+title: "Rádio pela internet no CarPlay: configuração e memórias"
+description: "Rádio pela internet na tela do carro em cerca de um minuto, com memórias como as de um rádio de carro. Inclui quanto uma hora de streaming gasta em dados."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:
@@ -16,7 +16,7 @@ faq:
     a: "Streaming precisa de sinal; falhas curtas são cobertas pelo buffer, as mais longas pausam a reprodução até o sinal voltar."
 ---
 
-A FM te dá as estações de uma cidade. CarPlay com rádio pela internet te dá todas as cidades. A configuração leva menos de um minuto.
+A FM te dá as estações de uma cidade. CarPlay com rádio pela internet te dá todas as cidades.
 
 Rádio pela internet no carro funciona pelo CarPlay, usando as estações do seu iPhone em vez dos transmissores ao alcance. A configuração leva menos de um minuto, o layout foi feito para olhadelas e não para leitura, e seus favoritos viram memórias que você aperta sem olhar.
 

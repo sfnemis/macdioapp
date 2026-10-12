@@ -1,6 +1,6 @@
 ---
-title: "Como encontrar a URL do stream de uma estação de rádio (4 formas)"
-description: "Obtenha o endereço direto de qualquer estação pelo site dela, pelas ferramentas de desenvolvedor do navegador, por um diretório público ou pelo próprio app. Com exemplos reais."
+title: "Como encontrar a URL do stream de uma rádio (4 formas)"
+description: "O endereço direto de qualquer estação pelo site dela, por um diretório público, pelas ferramentas do navegador ou perguntando à estação. Com exemplos reais."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

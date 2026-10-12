@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">Em 12 de outubro de 2026 o Macdio grava rádio ao vivo no iPhone, iPad e Mac. A gravação é tirada do próprio stream, então não há microfone nem ruído ambiente. Dividir por faixa corta a sessão em um arquivo por música usando as fronteiras de música da própria estação, com uma proteção de duração mínima para que um título corrigido nunca corte uma música em duas. O motor do Song ID então varre a gravação pronta e lista as músicas nela com os tempos. Os formatos são o stream original, MP3, AAC ou M4A na qualidade original ou a 128, 192 ou 256 kbps.</p>
+  <p class="reveal">Em 12 de outubro de 2026 o Macdio grava rádio ao vivo no iPhone, iPad e Mac. A gravação é tirada do próprio stream, então não há microfone nem ruído ambiente. Dividir por faixa corta a sessão em um arquivo por música usando as fronteiras de música da própria estação, com uma proteção de duração mínima para que um título corrigido nunca corte uma música em duas. O motor do Song ID então varre a gravação pronta e lista as músicas nela com os tempos. O arquivo é o próprio áudio do stream, no formato e no bitrate que a estação transmite.</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Gravações salvas no iPhone com duração, tamanho e as músicas encontradas em cada uma"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Músicas salvas com capas e a estação de onde vieram, no Macdio para iPhone"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>A gravação funciona no iPhone, iPad e Mac. Apple TV e Apple Watch tocam, mas não gravam.</li>
     <li>Uma gravação para sozinha depois de três horas por padrão; você pode mudar a duração máxima. Não há gravação agendada para um horário definido.</li>
-    <li>A gravação se recusa a começar com menos de 500 MB livres, então nunca lota o aparelho.</li>
+    <li>A gravação não começa com menos de 500 MB livres. Enquanto grava, o Macdio avisa a cada cinco minutos quando o espaço livre cai abaixo de 500 MB, e para e salva o arquivo quando o espaço fica crítico, então o aparelho nunca lota.</li>
     <li>As gravações ficam dentro do app. Não há exportação, folha de compartilhamento, AirDrop nem cópia para o Arquivos; essa foi uma decisão tomada com a App Review e não vai mudar.</li>
   </ul>
-  <h2 class="reveal">Formatos e qualidade</h2>
-  <p class="reveal">Original mantém o stream exatamente como foi transmitido, o que para uma estação AAC ou MP3 é a melhor cópia possível. MP3, AAC e M4A recodificam a 128, 192 ou 256 kbps quando você quer arquivos menores ou um formato que um player específico prefere. Streams FLAC e Ogg são mantidos como estão em Original.</p>
+  <h2 class="reveal">Formato e qualidade</h2>
+  <p class="reveal">Não há configuração de qualidade para errar: o Macdio grava o áudio exatamente como ele chega, então uma estação MP3 gera um MP3, uma estação AAC um AAC, e uma estação FLAC ou Ogg também mantém o seu formato. Uma estação a 320 kbps gera um arquivo a 320 kbps. Quando o Song ID deu nome à música numa gravação AAC, o título, o artista, a capa e a letra são gravados no arquivo, que então vira um .m4a.</p>
   <h2 class="reveal">É permitido?</h2>
-  <p class="reveal">Gravar uma transmissão para a sua própria escuta é a mesma coisa que um toca-fitas fez por décadas, e na maioria dos países o uso pessoal é aceito. Compartilhar ou vender uma gravação não é, e é também por isso que o Macdio mantém as gravações dentro do app. O <a class="inline" href="../guides/record-internet-radio.html">guia de gravação</a> passa pela lei país por país.</p>
+  <p class="reveal">Gravar uma transmissão para a sua própria escuta é a mesma coisa que um toca-fitas fez por décadas, e na maioria dos países o uso pessoal é aceito. Compartilhar ou vender uma gravação não é, e é também por isso que o Macdio mantém as gravações dentro do app. O <a class="inline" href="../guides/record-internet-radio.html">guia de gravação</a> fala mais sobre a situação da gravação para uso pessoal.</p>
   <h2 class="reveal">Perguntas comuns</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>O Macdio grava rádio pela internet?</summary><div class="faq-a">Sim, no iPhone, iPad e Mac, direto do stream e sem microfone. Dividir por faixa cria um arquivo com nome por música.</div></details>
     <details class="faq-item"><summary>Posso agendar uma gravação?</summary><div class="faq-a">Não. A gravação começa manualmente e para depois da duração máxima que você definir, três horas por padrão.</div></details>
     <details class="faq-item"><summary>Posso exportar ou compartilhar uma gravação?</summary><div class="faq-a">Não. As gravações ficam no app, por decisão de projeto e por acordo com a App Review.</div></details>
-    <details class="faq-item"><summary>Em quais formatos ele grava?</summary><div class="faq-a">O stream original, MP3, AAC ou M4A, na qualidade original ou a 128, 192 ou 256 kbps.</div></details>
+    <details class="faq-item"><summary>Em quais formatos ele grava?</summary><div class="faq-a">O da própria estação: MP3, AAC, FLAC ou Ogg, no bitrate da estação. Gravações AAC viram arquivos .m4a quando as músicas delas recebem tags.</div></details>
     <details class="faq-item"><summary>Funciona na Apple TV ou no Apple Watch?</summary><div class="faq-a">Não. Essas versões tocam rádio, mas não gravam.</div></details>
   </div>
   <h2 class="reveal">Experimente</h2>

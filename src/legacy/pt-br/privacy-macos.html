@@ -8,15 +8,15 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Política de privacidade: Macdio para macOS</title>
-<meta name="description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o Macdio trata dados no App Sandbox do macOS.">
+<meta name="description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o app trata dados no App Sandbox do macOS.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
 <link rel="canonical" href="https://macdio.app/privacy-macos.html"><meta property="og:title" content="Política de privacidade: Macdio para macOS">
-<meta property="og:description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o Macdio trata dados no App Sandbox do macOS.">
+<meta property="og:description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o app trata dados no App Sandbox do macOS.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
 <meta name="twitter:title" content="Política de privacidade: Macdio para macOS">
-<meta name="twitter:description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o Macdio trata dados no App Sandbox do macOS.">
+<meta name="twitter:description" content="Política de privacidade do Macdio para macOS. Nenhum dado pessoal é coletado, armazenado ou compartilhado. Veja como o app trata dados no App Sandbox do macOS.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/privacy-macos.html">
@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">O Macdio roda dentro do App Sandbox do macOS com permissões mínimas: acesso à rede para streaming, microfone para gravação e iCloud para sincronização. Ele não consegue acessar arquivos, contatos ou outros apps sem a sua permissão explícita.</p>
+  <p class="reveal">O Macdio roda dentro do App Sandbox do macOS com as permissões de que os recursos precisam: acesso à rede para streaming e para o relay local que mantém os streams estáveis, iCloud para sincronização, notificações para novos episódios, Apple Events para enviar destaques ao Apple Notes quando você pede, e o Private Cloud Compute da Apple para os resumos de episódios. Ele não tem acesso ao microfone. Só lê ou grava os arquivos que você mesmo escolhe, como um arquivo OPML ou uma lista de estações, e não consegue chegar aos contatos nem a outros apps.</p>
 
   <h2 class="sec reveal">Serviços de terceiros</h2>
   <p class="reveal">O Macdio se conecta aos seguintes serviços externos unicamente para a funcionalidade principal:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong> para buscar letras sincronizadas. Nenhum dado pessoal é enviado.</li>
     <li><strong>iTunes Search API</strong> para buscar capas de álbuns. Nenhum dado pessoal é enviado.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> fornece os logos das estações de rádio que não oferecem um. Só o domínio web da estação é enviado, nenhum dado pessoal.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> para busca, paradas e categorias de podcasts. Só o termo de busca ou a categoria é enviado. Episódios e feeds são baixados direto do servidor de cada programa.</li>
+    <li><strong>Apple ShazamKit</strong> para o Song ID. Uma assinatura de áudio curta do stream, não uma gravação, vai para o serviço Shazam da Apple. O microfone nunca é usado.</li>
+    <li><strong>O modelo de linguagem da Apple</strong> escreve os capítulos e o resumo de um episódio de podcast, no aparelho ou no Private Cloud Compute da Apple, que não guarda o texto.</li>
+    <li><strong>push.macdio.app</strong>, o servidor de notificações do Macdio, recebe o endereço de notificação deste Mac e os programas que você segue, só enquanto Notificações de Novos Episódios estiver ativado. Ele não guarda mais nada.</li>
   </ul>
 
   <h2 class="sec reveal">Sincronização pelo iCloud</h2>

@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio se ejecuta dentro del App Sandbox de macOS con los permisos mínimos: acceso a la red para el streaming, micrófono para la grabación e iCloud para la sincronización. No puede acceder a archivos, contactos ni otras apps sin tu permiso explícito.</p>
+  <p class="reveal">Macdio se ejecuta dentro del App Sandbox de macOS con los permisos que necesitan sus funciones: acceso a la red para el streaming y para el relé local que mantiene estables los streams, iCloud para la sincronización, notificaciones para los episodios nuevos, Apple Events para enviar subrayados a Apple Notes cuando lo pides, y Private Cloud Compute de Apple para los resúmenes de episodios. No tiene acceso al micrófono. Solo lee o escribe los archivos que eliges tú, como un archivo OPML o una lista de emisoras, y no puede llegar a los contactos ni a otras apps.</p>
 
   <h2 class="sec reveal">Servicios de terceros</h2>
   <p class="reveal">Macdio se conecta a los siguientes servicios externos únicamente para su funcionalidad básica:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong> para obtener letras sincronizadas. No se envía ningún dato personal.</li>
     <li><strong>API de búsqueda de iTunes</strong> para obtener carátulas de álbumes. No se envía ningún dato personal.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> proporciona los logotipos de las emisoras de radio que no ofrecen uno propio. Solo se envía el dominio web de la emisora, ningún dato personal.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> para la búsqueda, las listas de éxitos y las categorías de podcasts. Solo se envía el término de búsqueda o la categoría. Los episodios y los feeds se descargan directamente del servidor de cada programa.</li>
+    <li><strong>Apple ShazamKit</strong> para Song ID. Al servicio Shazam de Apple llega una breve firma de audio del stream, no una grabación. El micrófono no se usa nunca.</li>
+    <li><strong>El modelo de lenguaje de Apple</strong> escribe los capítulos y el resumen de un episodio de podcast, en el dispositivo o en Private Cloud Compute de Apple, que no guarda el texto.</li>
+    <li><strong>push.macdio.app</strong>, el servidor de notificaciones de Macdio, recibe la dirección de notificaciones de este Mac y los programas que sigues, solo mientras las notificaciones de episodios nuevos están activadas. No guarda nada más.</li>
   </ul>
 
   <h2 class="sec reveal">Sincronización con iCloud</h2>

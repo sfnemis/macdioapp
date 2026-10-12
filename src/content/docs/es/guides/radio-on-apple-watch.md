@@ -1,8 +1,8 @@
 ---
 title: "Radio en el Apple Watch sin el iPhone cerca (2026)"
-description: "El Watch reproduce radio en directo por LTE por su cuenta. Qué necesita el modo independiente, qué modelos pueden y cifras reales de batería tras una hora."
+description: "El Watch reproduce radio en directo por LTE por su cuenta. Qué necesita el modo independiente, qué modelos pueden y lo que cuesta en batería y datos."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "¿Puede el Apple Watch reproducir radio sin el iPhone?"
     a: "Sí, con una app independiente. La app de Macdio para el reloj reproduce por sí sola a través de Wi-Fi o datos móviles."
@@ -17,7 +17,7 @@ faq:
   - q: "¿Mis emisoras se sincronizan desde el iPhone?"
     a: "Sí. Favoritos y carpetas llegan por iCloud, y el reloj también tiene su propia vista de biblioteca y su buscador."
   - q: "¿Puedo grabar la radio en el reloj?"
-    a: "No. Grabar es una función de Mac e iPhone. Las canciones que marques con el corazón en el reloj se sincronizan igualmente en todas partes."
+    a: "No. Grabar es una función de iPhone, iPad y Mac. Las canciones que marques con el corazón en el reloj se sincronizan igualmente en todas partes."
 ---
 
 Una carrera, la bolsa de la piscina, una compra rápida: muchas veces el reloj es lo único que llevas encima. Así funciona la radio por internet directamente en el Apple Watch.
@@ -86,7 +86,7 @@ Sí. Favoritos y carpetas llegan por iCloud, y el reloj también tiene su propia
 
 ### ¿Puedo grabar la radio en el reloj?
 
-No. Grabar es una función de Mac e iPhone. Las canciones que marques con el corazón en el reloj se sincronizan igualmente en todas partes.
+No. Grabar es una función de iPhone, iPad y Mac. Las canciones que marques con el corazón en el reloj se sincronizan igualmente en todas partes.
 
 ## ¿Listo para probarlo?
 

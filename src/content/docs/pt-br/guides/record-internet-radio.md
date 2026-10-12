@@ -1,8 +1,8 @@
 ---
 title: "Como gravar rádio pela internet no Mac (passo a passo)"
-description: "Três formas de gravar rádio pela internet no Mac, mais o que funciona no iPhone: um player com gravação embutida, captura de áudio do sistema ou Audacity com dispositivo virtual."
+description: "Três formas de gravar rádio pela internet no Mac, e o que funciona no iPhone: um player que grava, uma captura do áudio do sistema ou o Audacity."
 datePublished: 2026-08-09
-lastUpdated: 2026-09-14
+lastUpdated: 2026-10-12
 faq:
   - q: "Qual é a qualidade das gravações?"
     a: "Idêntica ao stream. O áudio que chega é gravado como vem, sem recodificação, então uma estação a 128 kbps gera um arquivo a 128 kbps e uma estação a 320 kbps gera um arquivo a 320 kbps."
@@ -64,7 +64,7 @@ O que o Macdio tem é a proteção oposta: uma sessão para sozinha depois de tr
 
 ## O que encerra uma gravação antes da hora
 
-Duas coisas encerram uma sessão antes de você, e as duas salvam o arquivo em vez de perdê-lo. A primeira é o limite de três horas acima. A segunda é o disco. O Macdio observa o espaço livre enquanto grava, avisa a cada cinco minutos quando o disco cai abaixo de 500 MB e para a gravação com uma notificação se o espaço ficar crítico, então o pior caso é um arquivo mais curto e não um disco cheio com um arquivo corrompido. Uma sessão longa de madrugada num laptop quase cheio é o caso para ficar de olho, porque uma estação a 320 kbps grava cerca de 144 MB por hora.
+Duas coisas encerram uma sessão antes de você, e as duas salvam o arquivo em vez de perdê-lo. A primeira é o limite de três horas acima. A segunda é o disco. O Macdio não começa uma gravação com menos de 500 MB livres, observa o espaço livre enquanto grava, avisa a cada cinco minutos quando o disco cai abaixo de 500 MB e para a gravação com uma notificação se o espaço ficar crítico, então o pior caso é um arquivo mais curto e não um disco cheio com um arquivo corrompido. Uma sessão longa de madrugada num laptop quase cheio é o caso para ficar de olho, porque uma estação a 320 kbps grava cerca de 144 MB por hora.
 
 ## Qual o tamanho dos arquivos?
 
@@ -72,7 +72,7 @@ Uma gravação pesa o mesmo que o stream, já que nada é acrescentado nem compr
 
 ## Em que formato ficam os arquivos
 
-Uma gravação mantém o que a estação envia. Uma estação MP3 te dá um .mp3 e uma estação AAC te dá um .aac, sem nada recodificado no caminho até o disco, então o arquivo soa exatamente como o stream soava. As faixas que Dividir por faixa recorta são gravadas como .m4a. Não há configuração de qualidade para errar aqui, porque não há uma segunda codificação.
+Uma gravação mantém o que a estação envia. Uma estação MP3 te dá um .mp3 e uma estação AAC te dá um .aac, sem nada recodificado no caminho até o disco, então o arquivo soa exatamente como o stream soava. Quando o Song ID deu nome a uma música numa gravação AAC, o título, o artista e a capa são gravados no arquivo, que vira um .m4a. Não há configuração de qualidade para errar aqui, porque o áudio nunca é codificado uma segunda vez.
 
 ## Onde as gravações ficam
 

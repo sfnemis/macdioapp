@@ -1,8 +1,8 @@
 ---
-title: "Tocar rádio pela internet com a Siri: todos os comandos de voz do Macdio"
+title: "Tocar rádio com a Siri: todos os comandos do Macdio"
 description: "Diga a estação e ela toca. Todas as frases da Siri que o Macdio entende, em 14 idiomas, no iPhone, com AirPods e pelo botão de voz no CarPlay."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "Preciso dizer \"no Macdio\"?"
     a: "Sim. A Siri encaminha uma frase para um app pelo nome dele, então todo comando termina com Macdio. Sem isso a Siri toca o Apple Music ou pergunta o que você quis dizer."
@@ -31,19 +31,19 @@ A Siri aprende seus favoritos e as estações que você tocou recentemente, cerc
 Comece cada uma com "E aí Siri". A estação entra onde estão os colchetes.
 
 - Tocar [estação] no Macdio
-- Ouvir [estação] com o Macdio
-- Sintonizar [estação] no Macdio
+- Ouça [estação] com o Macdio
+- Sintonize [estação] no Macdio
 - Tocar meus favoritos no Macdio
-- Tocar meu primeiro favorito no Macdio
-- Tocar minhas estações favoritas no Macdio
-- Retomar o Macdio, Abrir o Macdio, Iniciar o Macdio
-- Parar o Macdio, Pausar o Macdio, Parar o rádio no Macdio
+- Toque meu primeiro favorito no Macdio
+- Toque minhas estações favoritas no Macdio
+- Retomar Macdio, Abra o Macdio, Inicie o Macdio
+- Parar Macdio, Pause o Macdio, Pare o rádio no Macdio
 
 "Tocar meus favoritos" inicia o primeiro favorito e coloca o resto na fila, então os botões de pular dos seus fones ou do volante percorrem a lista.
 
 ## Catorze idiomas
 
-A Siri usa a frase no idioma em que estiver configurada, e o Macdio traz as frases em inglês, árabe, chinês (simplificado e tradicional), holandês, francês, alemão, italiano, japonês, polonês, português (Brasil), russo, espanhol e turco. Uma Siri em turco ouve "Macdio ile Radio Paradise çal", uma em alemão "Spiele Radio Paradise auf Macdio", uma em espanhol "Pon Radio Paradise en Macdio". Os nomes das estações são os mesmos em todos os idiomas, então um ouvinte turco com favoritos espanhóis não tem problema.
+A Siri usa a frase no idioma em que estiver configurada, e o Macdio traz as frases em inglês, árabe, chinês (simplificado e tradicional), holandês, francês, alemão, italiano, japonês, polonês, português (Brasil), russo, espanhol e turco. Uma Siri em turco ouve "Macdio ile Radio Paradise çal", uma em alemão "Radio Paradise in Macdio abspielen", uma em espanhol "Reproducir Radio Paradise en Macdio". Os nomes das estações são os mesmos em todos os idiomas, então um ouvinte turco com favoritos espanhóis não tem problema.
 
 ## No carro
 

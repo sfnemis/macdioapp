@@ -2,12 +2,12 @@
 title: "¿Qué canción suena en la radio? 3 formas de saberlo"
 description: "Tres formas de ponerle nombre a una canción de la radio, incluida una que lee el propio stream y nunca pide el micrófono. El teléfono se queda en el bolsillo."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "¿De verdad funciona sin el micrófono?"
     a: "Sí. Macdio identifica la canción a partir del stream de audio que ya está reproduciendo, así que no se pide permiso de micrófono en ningún momento."
   - q: "¿Y si la emisora anuncia un título equivocado?"
-    a: "La identificación a partir del audio tiene prioridad cuando puede demostrar que describe el momento que hay en pantalla, así que el anuncio equivocado se corrige en lugar de copiarse."
+    a: "Macdio muestra el título de la propia emisora siempre que lo envía. Una huella de audio también puede equivocarse, con un anuncio, un remix o una versión en directo, y una corrección segura pero equivocada es peor que un título tardío. Song ID completa lo que la emisora no envía."
   - q: "¿Funciona en el coche?"
     a: "Sí, también a través de CarPlay, y marcar una canción con el corazón al volante sigue llegando a Apple Music. Mira la guía de CarPlay."
   - q: "¿Funciona con la radio FM o AM?"
@@ -44,7 +44,7 @@ La mayoría de las emisoras transmiten el artista y el título junto con el audi
 
 Si el audio ya está pasando por una app, la app puede identificarlo directamente, sin ningún micrófono. Así lo hace [Macdio](/iphone.html): Song ID escucha el stream y no la habitación, así que funciona con el teléfono bloqueado en el bolsillo, en un coche ruidoso o en un [Apple TV](/apple-tv.html) al otro lado del salón. Macdio nunca pide permiso de micrófono, porque nunca lo necesita.
 
-Como oye el audio real, también corrige a la emisora cuando la emisora se equivoca, y puede ponerle nombre a una canción durante un tramo que la emisora nunca anuncia. El mismo stream se puede conservar mientras escuchas: [cómo grabar radio por internet](/guides/record-internet-radio.html), en el [Mac](/mac.html) igual que en el iPhone.
+Como oye el audio real, puede ponerle nombre a una canción durante un tramo que la emisora nunca anuncia, y añadir la carátula cuando la emisora solo envía un título. El mismo stream se puede conservar mientras escuchas: [cómo grabar radio por internet](/guides/record-internet-radio.html), en el [Mac](/mac.html) igual que en el iPhone.
 
 ## Por qué el micrófono sufre en el coche
 
@@ -62,7 +62,7 @@ El recurso de siempre también sigue funcionando: escribir un verso que recuerde
 
 Los metadatos de la emisora los escribe la automatización que use la emisora, y se desvían. Los fallos habituales son un anuncio o una cuña que hereda el título del tema anterior, un título que llega unos segundos antes o después, y un relleno como el nombre de la emisora donde debería estar la canción.
 
-La identificación a partir del audio corrige las tres cosas, porque informa de lo que de verdad está sonando y no de lo que afirma el sistema de emisión. Cuando la emisora acierta, gana su propio texto, porque la emisora conoce su catálogo mejor que cualquier huella de audio.
+La identificación a partir del audio informa de lo que de verdad está sonando y no de lo que afirma el sistema de emisión, y por eso es la herramienta adecuada para los tramos que la emisora deja en blanco. Macdio sigue dejando que gane el texto de la propia emisora siempre que lo envía, porque la emisora conoce su catálogo mejor que cualquier huella de audio, y una corrección segura pero equivocada es peor que un título tardío.
 
 ## Y después, conserva la canción
 
@@ -86,7 +86,7 @@ Sí. Macdio identifica la canción a partir del stream de audio que ya está rep
 
 ### ¿Y si la emisora anuncia un título equivocado?
 
-La identificación a partir del audio tiene prioridad cuando puede demostrar que describe el momento que hay en pantalla, así que el anuncio equivocado se corrige en lugar de copiarse.
+Macdio muestra el título de la propia emisora siempre que lo envía. Una huella de audio también puede equivocarse, con un anuncio, un remix o una versión en directo, y una corrección segura pero equivocada es peor que un título tardío. Song ID completa lo que la emisora no envía.
 
 ### ¿Funciona en el coche?
 

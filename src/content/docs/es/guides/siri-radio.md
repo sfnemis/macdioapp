@@ -2,7 +2,7 @@
 title: "Pon la radio con Siri: todas las frases de Macdio"
 description: "Di la emisora y suena. Todas las frases de Siri que Macdio entiende, en 14 idiomas, en el iPhone, con los AirPods y desde el botón de voz de CarPlay."
 datePublished: 2026-09-20
-lastUpdated: 2026-09-20
+lastUpdated: 2026-10-12
 faq:
   - q: "¿Tengo que decir \"en Macdio\"?"
     a: "Sí. Siri dirige una frase a una app por su nombre, así que toda orden termina con Macdio. Sin él, Siri pone Apple Music o pregunta a qué te refieres."
@@ -20,7 +20,7 @@ faq:
 
 Di el nombre de la emisora y suena. En el coche no tienes que mirar la pantalla ni una vez.
 
-Desde Macdio 2.7.7 Siri conoce tus emisoras. "Oye Siri, pon Radio Paradise en Macdio" arranca el stream en el iPhone, en los AirPods o desde el botón de voz del volante. Las frases de abajo son las que Siri acepta, y la misma lista está en la app en Ajustes, Siri, en tu propio idioma.
+Desde Macdio 2.7.7 Siri conoce tus emisoras. "Oye Siri, reproducir Radio Paradise en Macdio" arranca el stream en el iPhone, en los AirPods o desde el botón de voz del volante. Las frases de abajo son las que Siri acepta, y la misma lista está en la app en Ajustes, Siri, en tu propio idioma.
 
 ## Di el nombre de la emisora
 
@@ -30,20 +30,20 @@ Siri aprende tus favoritos y las emisoras que has reproducido hace poco, unas ve
 
 Empieza cada una con "Oye Siri". La emisora va donde están los corchetes.
 
-- Pon [emisora] en Macdio
+- Reproducir [emisora] en Macdio
 - Escucha [emisora] con Macdio
 - Sintoniza [emisora] en Macdio
-- Pon mis favoritos en Macdio
-- Pon mi primer favorito en Macdio
+- Reproducir mis favoritos en Macdio
+- Pon mi primera favorita en Macdio
 - Pon mis emisoras favoritas en Macdio
-- Reanuda Macdio, Abre Macdio, Inicia Macdio
-- Detén Macdio, Pausa Macdio, Para la radio en Macdio
+- Reanudar Macdio, Abre Macdio, Inicia Macdio
+- Detener Macdio, Pausa Macdio, Detén la radio en Macdio
 
-"Pon mis favoritos" arranca el primer favorito y pone en cola el resto, así que los botones de saltar de tus auriculares o del volante recorren la lista.
+"Reproducir mis favoritos" arranca el primer favorito y pone en cola el resto, así que los botones de saltar de tus auriculares o del volante recorren la lista.
 
 ## Catorce idiomas
 
-Siri usa la frase en el idioma en que esté configurado, y Macdio incluye las frases en inglés, árabe, chino (simplificado y tradicional), neerlandés, francés, alemán, italiano, japonés, polaco, portugués (Brasil), ruso, español y turco. Un Siri en turco oye "Macdio ile Radio Paradise çal", uno en alemán "Spiele Radio Paradise auf Macdio", uno en español "Pon Radio Paradise en Macdio". Los nombres de las emisoras son iguales en todos los idiomas, así que un oyente turco con favoritos españoles no tiene problema.
+Siri usa la frase en el idioma en que esté configurado, y Macdio incluye las frases en inglés, árabe, chino (simplificado y tradicional), neerlandés, francés, alemán, italiano, japonés, polaco, portugués (Brasil), ruso, español y turco. Un Siri en turco oye "Macdio ile Radio Paradise çal", uno en alemán "Radio Paradise in Macdio abspielen", uno en español "Reproducir Radio Paradise en Macdio". Los nombres de las emisoras son iguales en todos los idiomas, así que un oyente turco con favoritos españoles no tiene problema.
 
 ## En el coche
 
@@ -51,7 +51,7 @@ Mantén pulsado el botón de voz del volante, o el botón de Siri en la pantalla
 
 ## Por qué el nombre de la app forma parte de la frase
 
-Siri envía una frase a una app solo cuando la app aparece nombrada en ella. "Pon Radio Paradise" a solas va a Apple Music, que no tiene esa emisora. "Pon Radio Paradise en Macdio" llega a Macdio. Por eso todas las frases de arriba terminan con el nombre.
+Siri envía una frase a una app solo cuando la app aparece nombrada en ella. "Reproducir Radio Paradise" a solas va a Apple Music, que no tiene esa emisora. "Reproducir Radio Paradise en Macdio" llega a Macdio. Por eso todas las frases de arriba terminan con el nombre.
 
 ## Preguntas frecuentes
 

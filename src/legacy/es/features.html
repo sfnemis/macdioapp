@@ -110,7 +110,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Dividir por pista</h3><p>Graba de forma continua o divide en un archivo por canción usando los límites de los metadatos ICY.</p></div>
     <div class="feat-item"><h3>Etiquetado automático</h3><p>Las grabaciones desconocidas se identifican en segundo plano y se nombran con título, artista y carátula.</p></div>
-    <div class="feat-item"><h3>Alta fidelidad</h3><p>Capturado directamente de la red como FLAC, AAC o MP3, con cero ruido ambiente.</p></div>
+    <div class="feat-item"><h3>Alta fidelidad</h3><p>Capturado directamente de la red en el formato de la propia emisora, MP3, AAC, FLAC u Ogg, con cero ruido ambiente.</p></div>
     <div class="feat-item"><h3>Archivos fiables</h3><p>Comprobaciones de disco y un bucle de sondeo evitan archivos vacíos incluso con una conexión inestable.</p></div>
   </div>
 </section>
@@ -137,7 +137,7 @@
   <div class="feat-cat-head"><span class="n">08</span><h2>Sincronización con iCloud</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>Sin cuenta</h3><p>Favoritos, historial, pistas guardadas, estadísticas y ajustes se sincronizan con tu ID de Apple actual.</p></div>
-    <div class="feat-item"><h3>Base de datos privada</h3><p>Guardado en tu base de datos privada de CloudKit, que Apple no puede leer.</p></div>
+    <div class="feat-item"><h3>Base de datos privada</h3><p>Guardado en tu base de datos privada de iCloud, que el desarrollador no puede ver. Con la protección de datos avanzada activada, Apple tampoco puede leerla.</p></div>
     <div class="feat-item"><h3>Nunca se pierde una importación</h3><p>Una arquitectura de tres disparadores y un sondeo cada 60 segundos garantizan que los cambios siempre llegan.</p></div>
     <div class="feat-item"><h3>Deduplicación inteligente</h3><p>Una huella que entiende los diacríticos elimina los duplicados correctamente, incluso con caracteres turcos.</p></div>
   </div>
@@ -183,7 +183,7 @@
 <section class="feat-cat reveal">
   <div class="feat-cat-head"><span class="n">13</span><h2>Apple TV</h2></div>
   <div class="feat-list">
-    <div class="feat-item"><h3>Interfaz para el sofá</h3><p>Disposición de tarjetas grandes hecha para el Siri Remote, con Explorar, Favoritos y Reproduciendo ahora.</p></div>
+    <div class="feat-item"><h3>Interfaz para el sofá</h3><p>Disposición de tarjetas grandes hecha para el Siri Remote, con Reproduciendo ahora, Reproducidas recientemente, Podcasts, Descubrir, Favoritos, Pistas guardadas y Estadísticas.</p></div>
     <div class="feat-item"><h3>Reproductor completo</h3><p>Carátula destacada, metadatos completos, selector de calidad, letras y AirPlay.</p></div>
   </div>
 </section>
@@ -191,7 +191,7 @@
 <section class="feat-cat reveal">
   <div class="feat-cat-head"><span class="n">14</span><h2>CarPlay</h2></div>
   <div class="feat-list">
-    <div class="feat-item"><h3>Cuatro pestañas completas</h3><p>Reproduciendo ahora, Favoritos, Explorar y Reproducidas recientemente, sincronizadas en directo con la app.</p></div>
+    <div class="feat-item"><h3>Cuatro pestañas completas</h3><p>Inicio, Podcasts, Favoritos y Descubrir, con la búsqueda a un toque y un Reproduciendo ahora que pone nombre a la canción.</p></div>
     <div class="feat-item"><h3>Controles físicos</h3><p>Emisora siguiente y anterior desde el coche, con carátulas en caché para mostrarlas rápido.</p></div>
     <div class="feat-item"><h3>Reconexión inalámbrica</h3><p>La sesión de audio se reconfigura limpiamente al reconectar CarPlay inalámbrico.</p></div>
   </div>
@@ -210,7 +210,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Widgets de pantalla de inicio</h3><p>Widgets pequeños y medianos con carátula de borde a borde y metadatos.</p></div>
     <div class="feat-item"><h3>Pantalla de bloqueo</h3><p>Widgets accesorios circulares, rectangulares y en línea.</p></div>
-    <div class="feat-item"><h3>Widgets</h3><p>Los widgets de la pantalla de inicio y de la pantalla de bloqueo muestran lo que suena, tus listas de emisoras, tus programas y los últimos episodios.</p></div>
+    <div class="feat-item"><h3>Listas y episodios</h3><p>Widgets medianos y grandes para tus listas de emisoras, tus programas y los últimos episodios.</p></div>
   </div>
 </section>
 
@@ -220,7 +220,7 @@
     <div class="feat-item"><h3>Apariencia</h3><p>Sistema, claro u oscuro, tú eliges.</p></div>
     <div class="feat-item"><h3>Controles de reproducción</h3><p>Calidad, duración del búfer, búfer adaptativo, avance automático y desfase de la letra, identificación automática.</p></div>
     <div class="feat-item"><h3>Límites de la biblioteca</h3><p>Decide cuántas emisoras reproducidas recientemente y pistas escuchadas conservar, de 5 a 50.</p></div>
-    <div class="feat-item"><h3>Opciones de grabación</h3><p>Modo, calidad, duración máxima y espacio libre en disco.</p></div>
+    <div class="feat-item"><h3>Opciones de grabación</h3><p>Un archivo o uno por canción, duración máxima y espacio libre en disco.</p></div>
   </div>
 </section>
 
@@ -237,8 +237,8 @@
   <div class="feat-cat-head"><span class="n">19</span><h2>Ingeniería</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>Cero dependencias</h3><p>Swift, SwiftUI y AppKit puros, sin frameworks de terceros.</p></div>
-    <div class="feat-item"><h3>Pequeña y rápida</h3><p>Unos 7,8 MB, 0 % de CPU en reposo y menos del 1 % durante la reproducción en segundo plano.</p></div>
-    <div class="feat-item"><h3>Segundo plano a prueba de fallos</h3><p>Un vaciado de SQLite en tres niveles al suspender evita el fallo 0xDEAD10CC en segundo plano.</p></div>
+    <div class="feat-item"><h3>Ligera para el dispositivo</h3><p>0 % de CPU en reposo y nada de código de terceros.</p></div>
+    <div class="feat-item"><h3>Segura en segundo plano</h3><p>La biblioteca se escribe en el disco antes de que el sistema suspenda la app, así que no se pierde nada cuando iOS la pone a dormir.</p></div>
   </div>
 </section>
 
@@ -258,7 +258,7 @@
     <div class="feat-item"><h3>Transcripciones en el dispositivo</h3><p>Cada episodio se convierte en texto buscable, hecho en el dispositivo en que escuchas. En el Apple TV, las transcripciones hechas en tu iPhone o Mac llegan a través de iCloud.</p></div>
     <div class="feat-item"><h3>Capítulos y resúmenes</h3><p>Salta a un capítulo, lee un resumen o busca dentro del episodio.</p></div>
     <div class="feat-item"><h3>Las canciones de cada episodio</h3><p>Las canciones que suenan en un episodio se identifican a partir del audio y se guardan en Pistas.</p></div>
-    <div class="feat-item"><h3>Subrayados con un botón o con Siri</h3><p>Toca el botón de marcador, o dile a Siri "Marca este momento en Macdio". El segundo exacto se guarda con la frase de la transcripción y se envía a Apple Notes, Notion, Obsidian, Bear, Craft o Readwise, o se comparte con quien quieras. En el iPhone, Apple Notes funciona mediante un atajo ya preparado que añades una vez.</p></div>
+    <div class="feat-item"><h3>Subrayados con un botón o con Siri</h3><p>Toca el botón de marcador, o dile a Siri "Marcar este momento en Macdio". El segundo exacto se guarda con la frase de la transcripción y se envía a Apple Notes, Notion, Obsidian, Bear, Craft o Readwise, o se comparte con quien quieras. En el iPhone, Apple Notes funciona mediante un atajo ya preparado que añades una vez.</p></div>
     <div class="feat-item"><h3>A continuación con radio en directo</h3><p>Pon en cola episodios y emisoras juntos. Una emisora cede el paso cuando se acaba su tiempo.</p></div>
     <div class="feat-item"><h3>Avisos de episodios nuevos</h3><p>Una notificación cuando un programa que sigues publica. Un toque abre el episodio.</p></div>
   </div>

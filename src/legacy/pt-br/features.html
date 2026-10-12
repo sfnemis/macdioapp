@@ -110,7 +110,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Dividir por faixa</h3><p>Grave sem parar ou divida em um arquivo por música usando os limites dos metadados ICY.</p></div>
     <div class="feat-item"><h3>Tags automáticas</h3><p>Gravações desconhecidas são identificadas em segundo plano e recebem título, artista e capa.</p></div>
-    <div class="feat-item"><h3>Alta fidelidade</h3><p>Capturada direto da rede como FLAC, AAC ou MP3, sem nenhum ruído ambiente.</p></div>
+    <div class="feat-item"><h3>Alta fidelidade</h3><p>Capturada direto da rede no formato da própria estação, MP3, AAC, FLAC ou Ogg, sem nenhum ruído ambiente.</p></div>
     <div class="feat-item"><h3>Arquivos confiáveis</h3><p>Verificações de disco e um ciclo de checagem evitam arquivos vazios mesmo numa conexão instável.</p></div>
   </div>
 </section>
@@ -137,7 +137,7 @@
   <div class="feat-cat-head"><span class="n">08</span><h2>Sincronização pelo iCloud</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>Sem conta</h3><p>Favoritos, histórico, faixas salvas, estatísticas e ajustes sincronizam pelo ID Apple que você já tem.</p></div>
-    <div class="feat-item"><h3>Banco de dados privado</h3><p>Guardado no seu banco de dados privado do CloudKit, que a Apple não consegue ler.</p></div>
+    <div class="feat-item"><h3>Banco de dados privado</h3><p>Guardado no seu banco de dados privado do iCloud, que o desenvolvedor não consegue ver. Com a Proteção Avançada de Dados ativada, nem a Apple consegue ler.</p></div>
     <div class="feat-item"><h3>Nenhuma importação perdida</h3><p>Uma arquitetura com três gatilhos e uma checagem a cada 60 segundos garantem que as mudanças sempre cheguem.</p></div>
     <div class="feat-item"><h3>Remoção inteligente de duplicados</h3><p>Uma impressão digital que entende acentos remove duplicados do jeito certo, até com caracteres turcos.</p></div>
   </div>
@@ -183,7 +183,7 @@
 <section class="feat-cat reveal">
   <div class="feat-cat-head"><span class="n">13</span><h2>Apple TV</h2></div>
   <div class="feat-list">
-    <div class="feat-item"><h3>Interface para o sofá</h3><p>Layout de cartões grandes feito para o Siri Remote, com Explorar, Favoritos e Tocando Agora.</p></div>
+    <div class="feat-item"><h3>Interface para o sofá</h3><p>Layout de cartões grandes feito para o Siri Remote, com Tocando Agora, Tocadas Recentemente, Podcasts, Descobrir, Favoritos, Faixas salvas e Estatísticas.</p></div>
     <div class="feat-item"><h3>Player completo</h3><p>Capa em destaque, metadados completos, seletor de qualidade, letras e AirPlay.</p></div>
   </div>
 </section>
@@ -191,7 +191,7 @@
 <section class="feat-cat reveal">
   <div class="feat-cat-head"><span class="n">14</span><h2>CarPlay</h2></div>
   <div class="feat-list">
-    <div class="feat-item"><h3>Quatro abas completas</h3><p>Tocando Agora, Favoritos, Explorar e Tocadas Recentemente, sincronizadas ao vivo com o app.</p></div>
+    <div class="feat-item"><h3>Quatro abas completas</h3><p>Início, Podcasts, Favoritos e Descobrir, com a busca a um toque e um Tocando Agora que dá nome à música.</p></div>
     <div class="feat-item"><h3>Controles físicos</h3><p>Próxima estação e estação anterior pelos botões do carro, com capas em cache para aparecer rápido.</p></div>
     <div class="feat-item"><h3>Reconexão sem fio</h3><p>A sessão de áudio se reconfigura direitinho quando o CarPlay sem fio reconecta.</p></div>
   </div>
@@ -210,7 +210,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Widgets na Tela de Início</h3><p>Widgets pequenos e médios com a capa de ponta a ponta e os metadados.</p></div>
     <div class="feat-item"><h3>Tela Bloqueada</h3><p>Widgets acessórios circulares, retangulares e em linha.</p></div>
-    <div class="feat-item"><h3>Widgets</h3><p>Os widgets da Tela de Início e da Tela Bloqueada mostram o que está tocando, suas listas de estações, seus programas e os últimos episódios.</p></div>
+    <div class="feat-item"><h3>Listas e episódios</h3><p>Widgets médios e grandes para suas listas de estações, seus programas e os últimos episódios.</p></div>
   </div>
 </section>
 
@@ -220,7 +220,7 @@
     <div class="feat-item"><h3>Aparência</h3><p>Sistema, clara ou escura, você escolhe.</p></div>
     <div class="feat-item"><h3>Controles de reprodução</h3><p>Qualidade, tamanho do buffer, buffer adaptativo, rolagem automática e ajuste de tempo das letras, identificação automática.</p></div>
     <div class="feat-item"><h3>Limites da biblioteca</h3><p>Defina quantas estações tocadas recentemente e quantas faixas ouvidas guardar, de 5 a 50.</p></div>
-    <div class="feat-item"><h3>Opções de gravação</h3><p>Modo, qualidade, duração máxima e espaço livre em disco.</p></div>
+    <div class="feat-item"><h3>Opções de gravação</h3><p>Um arquivo só ou um por música, duração máxima e espaço livre em disco.</p></div>
   </div>
 </section>
 
@@ -237,8 +237,8 @@
   <div class="feat-cat-head"><span class="n">19</span><h2>Engenharia</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>Zero dependências</h3><p>Swift, SwiftUI e AppKit puros, sem frameworks de terceiros.</p></div>
-    <div class="feat-item"><h3>Pequeno e rápido</h3><p>Cerca de 7,8 MB, 0% de CPU em repouso e menos de 1% tocando em segundo plano.</p></div>
-    <div class="feat-item"><h3>Segundo plano à prova de travamentos</h3><p>A gravação do SQLite em três níveis ao suspender evita o travamento 0xDEAD10CC em segundo plano.</p></div>
+    <div class="feat-item"><h3>Leve para o aparelho</h3><p>0% de CPU em repouso e nenhum código de terceiros.</p></div>
+    <div class="feat-item"><h3>Seguro em segundo plano</h3><p>A biblioteca é gravada no disco antes de o sistema suspender o app, então nada se perde quando o iOS o põe para dormir.</p></div>
   </div>
 </section>
 

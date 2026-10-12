@@ -28,7 +28,7 @@ A resposta curta é não, e não vai mudar. A versão honesta do porquê, e o qu
 
 Nenhum que você possa usar. Os chips de rede dos iPhones mais antigos tinham, sim, um bloco de sintonizador FM no silício, e foi daí que o boato começou, mas esse bloco nunca foi ligado a uma antena e nunca foi exposto ao software. Um transistor adormecido não é um rádio. Em 2017, depois de uma campanha pública para ligar o FM durante a temporada de furacões, a Apple declarou que seus celulares não têm chip de rádio FM que possa ser ativado nem antena projetada para sinais FM.
 
-Isso cobre todos os modelos até hoje. Nem o primeiro iPhone, nem a geração do iPhone 17, nada no meio. A pergunta volta todo mês de setembro porque cada modelo novo traz uma leva de buscas, mas a resposta não mudou em dezoito anos.
+Isso cobre todos os modelos até hoje. Nem o primeiro iPhone, nem a geração do iPhone 17, nada no meio. A pergunta volta todo mês de setembro porque cada modelo novo traz uma leva de buscas, mas a resposta não mudou desde 2007.
 
 ## Por que a Apple não ativa o rádio FM no iPhone
 

@@ -2,12 +2,12 @@
 title: "Que música está tocando no rádio? 3 formas de descobrir"
 description: "Três formas de descobrir o nome de uma música no rádio, incluindo uma que lê o próprio stream e nunca pede o microfone, para o celular ficar no bolso."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Funciona mesmo sem o microfone?"
     a: "Sim. O Macdio identifica a música a partir do stream de áudio que já está tocando, então nenhuma permissão de microfone é pedida em momento algum."
   - q: "E se a estação anunciar o título errado?"
-    a: "A identificação pelo áudio tem prioridade quando consegue provar que descreve o momento na tela, então o anúncio errado é corrigido em vez de copiado."
+    a: "O Macdio mostra o título da própria estação sempre que ela envia um. Uma impressão digital de áudio também pode errar, com um anúncio, um remix ou uma versão ao vivo, e uma correção confiante e errada é pior do que um título atrasado. O Song ID completa onde a estação não envia nada."
   - q: "Funciona no carro?"
     a: "Sim, inclusive pelo CarPlay, e dar coração numa música ao volante ainda chega ao Apple Music. Veja o guia do CarPlay."
   - q: "Funciona com rádio FM ou AM?"
@@ -44,7 +44,7 @@ A maioria das estações transmite artista e título junto com o áudio, e um bo
 
 Se o áudio já está passando por um app, o app pode identificá-lo diretamente, sem nenhum microfone. É assim que o [Macdio](/iphone.html) faz: o Song ID escuta o stream, não o ambiente, então funciona com o celular bloqueado no bolso, num carro barulhento ou numa [Apple TV](/apple-tv.html) do outro lado da sala. O Macdio nunca pede permissão de microfone, porque nunca precisa de uma.
 
-Como ele ouve o áudio de verdade, também corrige a estação quando a estação está errada, e consegue dar nome a uma música num trecho que a estação nunca anuncia. O mesmo stream pode ser guardado enquanto você ouve: [como gravar rádio pela internet](/guides/record-internet-radio.html), no [Mac](/mac.html) e também no iPhone.
+Como ele ouve o áudio de verdade, consegue dar nome a uma música num trecho que a estação nunca anuncia, e acrescentar a capa quando a estação envia só um título. O mesmo stream pode ser guardado enquanto você ouve: [como gravar rádio pela internet](/guides/record-internet-radio.html), no [Mac](/mac.html) e também no iPhone.
 
 ## Por que o microfone sofre no carro
 
@@ -62,7 +62,7 @@ A velha alternativa também continua funcionando: digite um trecho lembrado da l
 
 Os metadados da estação são escritos por qualquer automação que a estação use, e eles escorregam. As falhas comuns são um anúncio ou uma vinheta herdando o título da faixa anterior, um título que chega alguns segundos antes ou depois, e um texto genérico como o nome da estação ocupando o lugar da música.
 
-A identificação pelo áudio corrige as três, porque informa o que está soando de fato e não o que o sistema de playout afirma. Quando a estação está certa, o texto dela vence, já que a emissora conhece o próprio catálogo melhor do que qualquer impressão digital.
+A identificação pelo áudio informa o que está soando de fato e não o que o sistema de playout afirma, e por isso é a ferramenta certa para os trechos que a estação deixa em branco. O Macdio ainda deixa o texto da própria estação vencer sempre que ela envia um, já que a emissora conhece o próprio catálogo melhor do que qualquer impressão digital, e uma correção confiante e errada é pior do que um título atrasado.
 
 ## Depois, guarde a música
 
@@ -86,7 +86,7 @@ Sim. O Macdio identifica a música a partir do stream de áudio que já está to
 
 ### E se a estação anunciar o título errado?
 
-A identificação pelo áudio tem prioridade quando consegue provar que descreve o momento na tela, então o anúncio errado é corrigido em vez de copiado.
+O Macdio mostra o título da própria estação sempre que ela envia um. Uma impressão digital de áudio também pode errar, com um anúncio, um remix ou uma versão ao vivo, e uma correção confiante e errada é pior do que um título atrasado. O Song ID completa onde a estação não envia nada.
 
 ### Funciona no carro?
 

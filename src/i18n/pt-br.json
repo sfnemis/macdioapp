@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Buscando…",
+    "errorTitle": "Erro de conexão",
+    "errorText": "Não foi possível acessar o banco de dados de estações. Tente de novo.",
+    "noneTitle": "Nenhuma estação encontrada",
+    "noneText": "Tente outro termo de busca ou outro filtro.",
+    "results": "{n} resultados",
+    "resultsFor": "para \"{q}\"",
+    "resultsIn": "em {country}",
+    "popular": "Estações populares · Página {page}",
+    "prev": "← Anterior",
+    "next": "Próxima →",
+    "page": "Página {page}",
+    "unknown": "Sem nome"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Jazz",
+    "classical": "Clássica",
+    "electronic": "Eletrônica",
+    "hip hop": "Hip hop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latina",
+    "folk": "Folk",
+    "indie": "Indie",
+    "ambient": "Ambient",
+    "news": "Notícias",
+    "talk": "Talk show",
+    "sports": "Esportes",
+    "oldies": "Flashback",
+    "80s": "Anos 80",
+    "90s": "Anos 90",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dance",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "Novo",
+    "label": "Novidades: {title}",
+    "title": "Novidades",
+    "dialog": "Novidades do Macdio",
+    "all": "Todas as notas de versão",
+    "gotIt": "Entendi"
   }
 }

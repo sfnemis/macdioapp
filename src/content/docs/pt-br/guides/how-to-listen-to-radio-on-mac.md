@@ -1,6 +1,6 @@
 ---
 title: "4 formas de ouvir rádio pela internet no Mac (2026)"
-description: "Aba do navegador, VLC, o app Música ou um player nativo na barra de menus. Cada um testado no macOS 26, com o que realmente custa em cliques, CPU e abas abertas."
+description: "Aba do navegador, VLC, o app Música ou um player nativo na barra de menus. Cada um testado no macOS 26, com o que custa de verdade em cliques, CPU e abas."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

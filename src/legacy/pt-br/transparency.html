@@ -8,7 +8,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Transparência: como o Macdio é feito</title>
-<meta name="description" content="Como o Macdio é feito, quais fontes de dados usa e quem está por trás dele. Um projeto de um só desenvolvedor, em SwiftUI nativo, para todas as plataformas Apple.">
+<meta name="description" content="Como o Macdio é feito, quais fontes de dados usa e quem está por trás dele. Projeto de um só desenvolvedor, em SwiftUI nativo, para todas as plataformas Apple.">
 <meta name="keywords" content="transparência macdio, desenvolvedor macdio, fontes de dados app de rádio, lrclib, radio browser, app de rádio swiftui">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
@@ -75,6 +75,21 @@
       <p>API de letras gratuita e de código aberto. Fornece letras sincronizadas (formato LRC) e em texto simples para a música que está tocando. Sem chave de API, sem rastreamento.</p>
       <a class="ic-link" href="https://lrclib.net" target="_blank" rel="noopener">lrclib.net ↗</a>
     </div>
+    <div class="info-card">
+      <h3>Podcast Index</h3>
+      <p>Índice aberto e independente de 4,7 milhões de podcasts. Alimenta a busca, as paradas e as categorias de podcasts. Episódios e feeds depois são baixados direto do servidor de cada programa.</p>
+      <a class="ic-link" href="https://podcastindex.org" target="_blank" rel="noopener">podcastindex.org ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>Apple ShazamKit</h3>
+      <p>O reconhecimento de músicas da Apple. O Song ID envia uma assinatura de áudio curta do stream, nunca uma gravação e nunca o microfone, e recebe de volta a música, o artista e a capa.</p>
+      <a class="ic-link" href="https://developer.apple.com/shazamkit/" target="_blank" rel="noopener">ShazamKit ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>push.macdio.app</h3>
+      <p>O próprio servidor de notificações do Macdio para novos episódios. Só quando você ativa as notificações ele recebe o endereço de notificação do aparelho e os programas que você segue, e mais nada.</p>
+      <a class="ic-link" href="privacy.html">Política de privacidade</a>
+    </div>
   </div>
 
   <h2 class="reveal">Dependências</h2>
@@ -87,7 +102,7 @@
     <tbody>
       <tr>
         <th scope="row"><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></th>
-        <td>Análise anônima de visualizações de página (somente no site)</td>
+        <td>Análise de visualizações de página; usa cookies para diferenciar uma visita da outra (somente no site)</td>
         <td><span class="tag-pill">Web</span></td>
       </tr>
       <tr>
