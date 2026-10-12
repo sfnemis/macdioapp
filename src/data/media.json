@@ -1,0 +1,236 @@
+{
+  "carplay-discover": {
+    "w": 1280,
+    "h": 780,
+    "dur": 12.1,
+    "kind": "clip"
+  },
+  "carplay-favorites": {
+    "w": 1280,
+    "h": 780,
+    "dur": 14.1,
+    "kind": "clip"
+  },
+  "carplay-home": {
+    "w": 1280,
+    "h": 780,
+    "dur": 11.2,
+    "kind": "clip"
+  },
+  "carplay-nowplaying-blurred": {
+    "w": 1280,
+    "h": 780,
+    "dur": 16.1,
+    "kind": "clip"
+  },
+  "carplay-podcasts": {
+    "w": 1280,
+    "h": 780,
+    "dur": 11.1,
+    "kind": "clip"
+  },
+  "ipad-city-search": {
+    "w": 1200,
+    "h": 1600,
+    "dur": 14.5,
+    "kind": "clip"
+  },
+  "ipad-transcript": {
+    "w": 1200,
+    "h": 1600,
+    "dur": 17.5,
+    "kind": "clip"
+  },
+  "iphone-chapters": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "iphone-city-search": {
+    "w": 600,
+    "h": 1218,
+    "dur": 14.5,
+    "kind": "clip"
+  },
+  "iphone-lyrics": {
+    "w": 600,
+    "h": 1218,
+    "dur": 13.5,
+    "kind": "clip"
+  },
+  "iphone-mark-notes": {
+    "w": 600,
+    "h": 1218,
+    "dur": 9,
+    "kind": "clip"
+  },
+  "iphone-recordings": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "iphone-repeat-timer": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "iphone-songid": {
+    "w": 600,
+    "h": 1218,
+    "dur": 12.5,
+    "kind": "clip"
+  },
+  "iphone-summary": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "iphone-tracks": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "iphone-transcript": {
+    "w": 600,
+    "h": 1218,
+    "dur": 19.8,
+    "kind": "clip"
+  },
+  "iphone-transcript-search": {
+    "w": 600,
+    "h": 1218,
+    "dur": 13.5,
+    "kind": "clip"
+  },
+  "iphone-upnext-highlights": {
+    "w": 600,
+    "h": 1218,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "mac-city-search": {
+    "w": 1200,
+    "h": 750,
+    "dur": 13.3,
+    "kind": "clip"
+  },
+  "mac-discover": {
+    "w": 1200,
+    "h": 750,
+    "dur": 12.2,
+    "kind": "clip"
+  },
+  "mac-episode-songs": {
+    "w": 1200,
+    "h": 750,
+    "dur": 8.2,
+    "kind": "clip"
+  },
+  "mac-episode-songs-still": {
+    "w": 1200,
+    "h": 750,
+    "dur": 0,
+    "kind": "still"
+  },
+  "mac-lyrics": {
+    "w": 1200,
+    "h": 750,
+    "dur": 13.1,
+    "kind": "clip"
+  },
+  "mac-mark-notes": {
+    "w": 1200,
+    "h": 750,
+    "dur": 11.1,
+    "kind": "clip"
+  },
+  "mac-mark-notes-note": {
+    "w": 1200,
+    "h": 368,
+    "dur": 0,
+    "kind": "still"
+  },
+  "mac-menubar": {
+    "w": 1200,
+    "h": 2122,
+    "dur": 9.6,
+    "kind": "clip"
+  },
+  "mac-songid": {
+    "w": 1200,
+    "h": 750,
+    "dur": 14.2,
+    "kind": "clip"
+  },
+  "mac-stats": {
+    "w": 1200,
+    "h": 750,
+    "dur": 11.1,
+    "kind": "clip"
+  },
+  "mac-transcript": {
+    "w": 1200,
+    "h": 750,
+    "dur": 15.1,
+    "kind": "clip"
+  },
+  "mac-upnext-highlights": {
+    "w": 1200,
+    "h": 750,
+    "dur": 12.7,
+    "kind": "clip"
+  },
+  "tv-city-search": {
+    "w": 1280,
+    "h": 720,
+    "dur": 14.5,
+    "kind": "clip"
+  },
+  "tv-discover": {
+    "w": 1280,
+    "h": 720,
+    "dur": 14.5,
+    "kind": "clip"
+  },
+  "tv-library": {
+    "w": 1280,
+    "h": 720,
+    "dur": 13.5,
+    "kind": "clip"
+  },
+  "tv-lyrics": {
+    "w": 1280,
+    "h": 720,
+    "dur": 13.5,
+    "kind": "clip"
+  },
+  "tv-podcasts": {
+    "w": 1280,
+    "h": 720,
+    "dur": 14.3,
+    "kind": "clip"
+  },
+  "tv-songid": {
+    "w": 1280,
+    "h": 720,
+    "dur": 11.2,
+    "kind": "clip"
+  },
+  "watch-pages": {
+    "w": 600,
+    "h": 716,
+    "dur": 11.5,
+    "kind": "clip"
+  },
+  "watch-songid": {
+    "w": 600,
+    "h": 716,
+    "dur": 11.5,
+    "kind": "clip"
+  }
+}
