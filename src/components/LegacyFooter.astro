@@ -1,21 +1,14 @@
 ---
-// The live site's footer, plus the language menu (tracker W4): a disclosure
-// of plain links, one per live locale, pointing at this page in that language
-// when it exists and at the locale home otherwise. Links work with no script
-// and with the keyboard; parts.js stores the choice in the "lang" cookie the
-// Worker reads at "/".
+// The live site's footer, plus the language menu (LangMenu.astro, tracker W4).
 import { t } from '../i18n/index.mjs';
 import { localePath } from '../site/paths.mjs';
 import { hasPage } from '../site/legacy.mjs';
-import { liveLocales } from '../site/locales.mjs';
+import LangMenu from './LangMenu.astro';
 import LegacySocials from './LegacySocials.astro';
 const { lang, path = '/' } = Astro.props;
 const s = t(lang);
 const home = localePath(lang, '/');
 const p = (target) => (hasPage(lang, target) ? localePath(lang, target) : target);
-// On the 404 page every language goes to its home, not to its own 404 page.
-const options = liveLocales().map((l) => ({ code: l.code, lang: l.lang, label: l.label, href: path !== '/404.html' && hasPage(l.code, path) ? localePath(l.code, path) : localePath(l.code, '/') }));
-const current = options.find((o) => o.code === lang);
 ---
 <footer class="footer"><div class="wrap">
   <a class="footer-brand" href={home}><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>
@@ -26,11 +19,6 @@ const current = options.find((o) => o.code === lang);
     <a href={p('/presskit.html')}>{s.footer.presskit}</a>
     <a href="mailto:support@devdio.pro">{s.footer.contact}</a>
   </nav>
-  {options.length > 1 && (
-    <details class="lang-menu">
-      <summary><span class="vh">{s.footer.language}: </span>{current.label}</summary>
-      <ul>{options.map((o) => <li><a href={o.href} hreflang={o.lang} lang={o.lang} data-lang={o.code} aria-current={o.code === lang ? 'true' : undefined}>{o.label}</a></li>)}</ul>
-    </details>
-  )}
+  <LangMenu lang={lang} path={path} where="footer" />
   <div class="footer-socials"><LegacySocials lang={lang} /></div>
 </div></footer>

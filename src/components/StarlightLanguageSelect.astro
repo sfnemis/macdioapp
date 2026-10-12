@@ -1,0 +1,9 @@
+---
+// Starlight's language <select> replaced by the site's flag menu (tracker
+// W22): the guides offer the same languages, flags and "lang" cookie as the
+// marketing pages, and a language without this guide links to its guide hub.
+import LangMenu from './LangMenu.astro';
+import { hasGuide, guideRoute } from '../data/guides.mjs';
+const { code, path } = guideRoute(Astro.url);
+---
+<LangMenu lang={code} path={path} where="nav" has={(c) => hasGuide(c, path)} />

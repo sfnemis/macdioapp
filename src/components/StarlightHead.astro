@@ -3,20 +3,13 @@
 // and metadata rules as the marketing pages (Legacy.astro), plus the Article,
 // FAQPage and BreadcrumbList JSON-LD the live guides had. Starlight's default
 // wrote the canonical as /guides.html/ under build.format "preserve".
-import { existsSync } from 'node:fs';
-import { join } from 'node:path';
-import { SITE, localePath, alternates, splitLocale } from '../site/paths.mjs';
-import { byCode, DEFAULT } from '../site/locales.mjs';
-import { guideLocales } from '../data/guides.mjs';
+import { SITE, localePath, alternates } from '../site/paths.mjs';
+import { byCode } from '../site/locales.mjs';
+import { hasGuide, guideRoute } from '../data/guides.mjs';
 import { t } from '../i18n/index.mjs';
 
 const { entry, siteTitle } = Astro.locals.starlightRoute;
-// Astro.url.pathname is "/guides/" for the index route and "/guides/<slug>"
-// for content pages; the served file for the latter is "<slug>.html".
-let pathname = Astro.url.pathname;
-if (pathname.endsWith('/index.html')) pathname = pathname.slice(0, -'index.html'.length);
-else if (!pathname.endsWith('/') && !pathname.endsWith('.html')) pathname += '.html';
-const { code, path } = splitLocale(pathname);
+const { code, path } = guideRoute(Astro.url);
 const locale = byCode(code);
 const url = SITE + localePath(code, path);
 const pageTitle = entry.data.title;
@@ -29,8 +22,7 @@ const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
 // A locale carries a guide when it is a guide locale (live, with translated
 // guides) and, for a guide page, its Markdown file exists; the hub index
 // (/guides/) is a route every guide locale has.
-const guideCodes = new Set(guideLocales().map((l) => l.code));
-const hasDoc = (c) => c === DEFAULT || (guideCodes.has(c) && (path.endsWith('/') || existsSync(join(process.cwd(), 'src', 'content', 'docs', c, path.replace(/\.html$/, '.md')))));
+const hasDoc = (c) => hasGuide(c, path);
 const alts = alternates(path, hasDoc);
 const isGuide = path !== '/guides/';
 const iso = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : undefined);
@@ -46,7 +38,6 @@ if (isGuide) {
 const crumbs = [{ name: 'Macdio', item: SITE + localePath(code, '/') }, { name: t(code).guides.h1, item: SITE + localePath(code, '/guides/') }];
 if (isGuide) crumbs.push({ name: pageTitle, item: url });
 jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })) });
-const badgeStrings = 'window.MACDIO_I18N=' + JSON.stringify({ badge: t(code).badge }).replace(/</g, '\\u003c') + ';';
 ---
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -78,7 +69,5 @@ const badgeStrings = 'window.MACDIO_I18N=' + JSON.stringify({ badge: t(code).bad
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" href="/sitemap-index.xml">
 {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj).replace(/</g, '\\u003c')} />)}
-<script is:inline set:html={badgeStrings} />
-<script is:inline src="/hub-badge.js" defer></script>
 <!-- GA4 on macdio.app only: localhost, wrangler dev and previews would otherwise count as visits. -->
 <script is:inline>if(location.hostname==='macdio.app'){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N';document.head.appendChild(g);}</script>

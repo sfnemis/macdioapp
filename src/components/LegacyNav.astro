@@ -6,11 +6,15 @@ import { t } from '../i18n/index.mjs';
 import { localePath } from '../site/paths.mjs';
 import { hasPage } from '../site/legacy.mjs';
 import LegacySocials from './LegacySocials.astro';
-const { lang } = Astro.props;
+import LangMenu from './LangMenu.astro';
+const { lang, path = '/' } = Astro.props;
 const s = t(lang);
 const home = localePath(lang, '/');
 // A page link goes into the locale folder only when that locale has the page.
-const p = (path) => (hasPage(lang, path) ? localePath(lang, path) : path);
+const p = (target) => (hasPage(lang, target) ? localePath(lang, target) : target);
+// Guides sits in the bar itself (tracker W21); the rest of the pages stay under More.
+const guides = s.nav.pages.find((l) => l.path === '/guides/');
+const pages = s.nav.pages.filter((l) => l !== guides);
 ---
 <nav class="nav">
   <a class="nav-brand" href={home}><img src="/icon-192.png" alt="Macdio" width="192" height="192"><span>Macdio</span></a>
@@ -20,11 +24,13 @@ const p = (path) => (hasPage(lang, path) ? localePath(lang, path) : path);
       <a class="nav-compare" href={`${home}#compare-table`}>{s.nav.compare}</a>
       <a href={`${home}#identify`}>{s.nav.features}</a>
       <a href={`${home}#preview`}>{s.nav.screenshots}</a>
+      <a href={p(guides.path)}>{guides.label}</a>
       <a class="nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="/assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>
       <div class="nav-more" id="navMore"><button class="nav-more-btn" id="navMoreBtn" aria-expanded="false" aria-label={s.nav.moreLabel}>{s.nav.more} <span class="chev">▾</span></button>
-        <div class="nav-more-menu">{s.nav.pages.map((l) => <a href={p(l.path)}>{l.label}</a>)}</div></div>
+        <div class="nav-more-menu">{pages.map((l) => <a href={p(l.path)}>{l.label}</a>)}</div></div>
     </div>
     <div class="nav-socials"><LegacySocials lang={lang} /></div>
+    <LangMenu lang={lang} path={path} where="nav" />
     <a class="nav-appstore" href={s.site.storeUrl} target="_blank" rel="noopener" aria-label={s.site.storeLabel}><img src="/download_button.svg" alt={s.site.storeAlt} width="120" height="40"></a>
     <button class="nav-burger" id="navBurger" aria-label={s.nav.openMenu} aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -35,7 +41,8 @@ const p = (path) => (hasPage(lang, path) ? localePath(lang, path) : path);
   <a class="mm-link nav-compare" href={`${home}#compare-table`}>{s.nav.compare}</a>
   <a class="mm-link" href={`${home}#identify`}>{s.nav.features}</a>
   <a class="mm-link" href={`${home}#preview`}>{s.nav.screenshots}</a>
+  <a class="mm-link" href={p(guides.path)}>{guides.label}</a>
   <a class="mm-link nav-livedio" href="https://livedio.app" target="_blank" rel="noopener"><img src="/assets/livedio-mark.svg" alt="Livedio" width="16" height="16"><span>Livedio</span></a>
-  {s.nav.pages.map((l) => <a class="mm-small" href={p(l.path)}>{l.label}</a>)}
+  {pages.map((l) => <a class="mm-small" href={p(l.path)}>{l.label}</a>)}
   <a class="mm-download" href={s.site.storeUrl} target="_blank" rel="noopener" aria-label={s.site.storeLabel}><img src="/download_button.svg" alt={s.site.storeAlt} width="120" height="40"></a>
 </div>

@@ -68,6 +68,19 @@ saying what happened to it.
   "Got it" remembers the id and removes the pill. The browser never contacts
   the hub itself. W9's build-time feed (src/data/hub.json) stays for later
   page use; both read src/site/hub.mjs.
+  Revised 2026-10-13 00:10 (Sait, with a screenshot): nobody clicks a pill on
+  the logo. Move it to the hero: next to the "3" mark, or as content in the
+  empty space to the right of the hero headline.
+  Done 2026-10-13 (both forms, chosen by measuring): on the home page of each
+  language, a "What's new" card with the three release notes sits in the free
+  space beside the headline when at least 260 px fit there (English from 1280
+  px; Russian only from about 1900 px, its headline is wider), with the newest
+  note marked "New" until it is opened; otherwise a "New" pill sits next to
+  the "3" mark and opens the same list under it. Nothing on the logo and no
+  badge on other pages or the guides any more. Arabic: card on the left, the
+  "Macdio 3" mark kept left to right. Keyboard test: pill opens with Enter,
+  focus moves in, Escape returns, "Got it" removes pill and tag, survives a
+  reload (Chrome, en/ru/tr/ar at 390 to 1920 px).
 - [x] **W12 Mobile overflow on the live stations page** (found 2026-10-12 19:20
   during the port, by a width probe at 375 px). The stations page was 465 px
   wide on a 375 px phone: the country and genre selects take the width of their
@@ -150,6 +163,68 @@ saying what happened to it.
   tab order; breadcrumb names localized; `npm run deploy` runs tests, build,
   deploy, `check-public.sh` and `scripts/check-worker.mjs` (102 probes) in one
   command.
+- [x] **W20 Broken layout on the v2 home page** (Sait, 2026-10-13 00:11, with a
+  screenshot). "Everything about podcasts in Macdio" sits at the far left edge
+  instead of centered under the podcasts section; Sait expects more breakage
+  around it. Root cause of this one: the link reuses `.bento-more`, which has
+  no alignment of its own and only looked centered inside sections that set
+  `text-align: center`; the podcasts section is a `.feature` section, which
+  does not. Every page and width to be checked by screenshot, not only this
+  spot. Second spot from Sait (00:12): the FAQ heading "What people ask before
+  buying." sits at the left edge above a centered list; the #faq section added
+  in v2 has no centering either.
+  Fixed 2026-10-13: `.bento-more` and `#faq` centre themselves. A layout check
+  (`scripts/check-layout.mjs`, every marketing page of every language in
+  Chrome) then found three more classes and all are fixed: comparison tables
+  on nine pages (tunein/mytuner/pocket-casts/overcast/snipd alternatives,
+  podcasts, features/song-id, features/highlights, compare/apple-podcasts)
+  reached 662 px on a 375 px phone and their right columns were cut off (now
+  the holder scrolls sideways); transparency.html's data table was 2 to 36 px
+  too wide in five languages (cells now wrap long words); translated page
+  headings ran into both edges at 1440 px in 16 pages (now capped and
+  balanced). The comparison footnote on the home page is capped too. Final
+  run: 476 pages, 0 findings. The nav was also measured per language (W21,
+  W22).
+- [x] **W21 Guides as a top-level nav item** (Sait, 2026-10-13 00:12). Take
+  Guides out of the "More" menu and show it in the nav itself (and as a large
+  item in the mobile menu).
+  Done 2026-10-13. With Guides and the flag the bar needs up to 1146 px in one
+  line (Turkish), so the social icons hide below 1180 px (they stay in the
+  footer and the mobile menu) and the burger takes over below 1040 px instead
+  of 880; links never wrap. Checked in all 14 languages at 1041 to 1366 px.
+- [x] **W22 Language picker with a country flag in the nav** (Sait, 2026-10-13
+  00:12). A flag in the top bar showing the current language; tapping it lists
+  every language with its flag, so a visitor can read the page in the language
+  they want. The footer menu stays.
+  Done 2026-10-13: `src/components/LangMenu.astro`, one component for the nav
+  (flag only), the footer (flag and name) and the guide header (replaces
+  Starlight's select, links to the same guide in the chosen language). Flags
+  follow the App Store locale of each language: en 🇺🇸, pt-BR 🇧🇷, ar 🇸🇦,
+  zh-Hans 🇨🇳, zh-Hant 🇹🇼 (Sait may prefer 🇬🇧 or 🇭🇰). Works without script and
+  by keyboard; Escape and an outside click close it; the choice is stored in
+  the "lang" cookie the Worker reads at "/". Windows shows flag emoji as two
+  letters.
+- [x] **W24 Real podcast covers in the CarPlay podcasts clip** (found
+  2026-10-13 while checking W20). `media/carplay-podcasts` (used on the home,
+  podcasts and CarPlay pages) showed real show artwork, one with a real
+  person's photo, while the CarPlay Now Playing clip already used a blurred
+  cover. The artwork column and the corner cover are now blurred in the mp4,
+  webm and poster (ffmpeg boxblur, two phases around the list scroll at 4.7 s
+  so the "Continue Listening" heading stays sharp). Originals stay in
+  ~/MacdioBuild/showcase/media/web/. The CarPlay Home, Favorites and Discover
+  clips still show real station logos, as the live site's screenshots do.
+- [ ] **W23 Guides that teach Macdio's own features** (Sait, 2026-10-13 00:16,
+  "do not forget this"). The guide hub has 9 articles in three groups (Radio on
+  every device, Radio features, Buying and comparing); they stay, but they are
+  search articles, not guides. The hub needs real how-to guides for using
+  Macdio, written SEO and GEO friendly so they help listeners and bring search
+  and AI traffic: Song ID (Shazam) and Auto Song ID; game controllers;
+  customization; adding custom stations; editing stations from another
+  computer on the local network; podcasts; the AirPods feature; recording;
+  Siri phrases; Shortcuts setup; and per-platform guides for Mac, iPhone/iPad
+  and Apple TV. Every step must be checked against the app code and string
+  catalogs (exact menu and button names per language), then translated into
+  all 13 other site languages like the existing guides.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

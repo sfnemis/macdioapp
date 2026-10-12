@@ -1,0 +1,35 @@
+---
+// Language menu (tracker W4, W22): a disclosure of plain links, one per live
+// locale with its flag, pointing at this page in that language when it exists
+// and at the locale home otherwise. Works without script and by keyboard.
+// where="nav": the flag alone in the top bar, opens downward.
+// where="footer": flag and name, opens upward.
+// `has(code)` says whether a locale carries this page; the marketing pages
+// use hasPage, the guides pass hasGuide.
+// The inline script (run once per page) stores the choice in the "lang"
+// cookie the Worker reads at "/", and closes an open menu on an outside click
+// or Escape.
+import { t } from '../i18n/index.mjs';
+import { localePath } from '../site/paths.mjs';
+import { hasPage } from '../site/legacy.mjs';
+import { liveLocales } from '../site/locales.mjs';
+const { lang, path = '/', where, has = (code) => hasPage(code, path) } = Astro.props;
+const s = t(lang);
+// On the 404 page every language goes to its home, not to its own 404 page.
+const options = liveLocales().map((l) => ({ ...l, href: path !== '/404.html' && has(l.code) ? localePath(l.code, path) : localePath(l.code, '/') }));
+const current = options.find((o) => o.code === lang);
+---
+{options.length > 1 && (
+  <details class={`lang-menu lang-${where}`}>
+    <summary>
+      <span class="flag" aria-hidden="true">{current.flag}</span>
+      {where === 'nav'
+        ? <span class="vh">{s.footer.language}: {current.label}</span>
+        : <><span class="vh">{s.footer.language}: </span>{current.label}</>}
+    </summary>
+    <ul>{options.map((o) => <li><a href={o.href} hreflang={o.lang} lang={o.lang} data-lang={o.code} aria-current={o.code === lang ? 'true' : undefined}><span class="flag" aria-hidden="true">{o.flag}</span>{o.label}</a></li>)}</ul>
+  </details>
+)}
+<script is:inline>(function(){if(window.__macdioLang)return;window.__macdioLang=1;
+document.addEventListener('click',function(e){var t=e.target;var a=t.closest&&t.closest('.lang-menu a[data-lang]');if(a)document.cookie='lang='+a.getAttribute('data-lang')+'; Path=/; Max-Age=31536000; SameSite=Lax';document.querySelectorAll('.lang-menu[open]').forEach(function(d){if(!d.contains(t))d.open=false;});});
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;document.querySelectorAll('.lang-menu[open]').forEach(function(d){var had=d.contains(document.activeElement);d.open=false;if(had)d.querySelector('summary').focus();});});})();</script>

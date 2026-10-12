@@ -7,6 +7,7 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { LOCALES, DEFAULT, liveLocales } from '../site/locales.mjs';
+import { splitLocale } from '../site/paths.mjs';
 
 const I18N = join(process.cwd(), 'src', 'i18n');
 const DOCS = join(process.cwd(), 'src', 'content', 'docs');
@@ -18,6 +19,25 @@ export const ALL_GUIDES = GROUPS.flatMap((g) => g.guides);
 // Live locales whose guides exist as Markdown under src/content/docs/<code>/guides/.
 // A locale still being translated stays out until it is switched live.
 export const guideLocales = () => liveLocales().filter((l) => l.code === DEFAULT || existsSync(join(DOCS, l.code, 'guides')));
+
+// Whether locale `code` carries the guide at `path` ('/guides/' or
+// '/guides/<slug>.html'): English always; a guide locale for the hub index,
+// and for a guide only when its Markdown file exists.
+export function hasGuide(code, path) {
+  if (code === DEFAULT) return true;
+  if (!guideLocales().some((l) => l.code === code)) return false;
+  return path.endsWith('/') || existsSync(join(DOCS, code, path.replace(/^\//, '').replace(/\.html$/, '.md')));
+}
+
+// Locale code and served path of a Starlight page: Astro.url.pathname is
+// "/guides/" for the index route and "/guides/<slug>" for content pages; the
+// served file for the latter is "<slug>.html".
+export function guideRoute(url) {
+  let pathname = url.pathname;
+  if (pathname.endsWith('/index.html')) pathname = pathname.slice(0, -'index.html'.length);
+  else if (!pathname.endsWith('/') && !pathname.endsWith('.html')) pathname += '.html';
+  return splitLocale(pathname);
+}
 
 // Starlight sidebar entries with per-locale labels. Links end in .html because
 // the site serves files (build.format "file"); Starlight prefixes the locale.

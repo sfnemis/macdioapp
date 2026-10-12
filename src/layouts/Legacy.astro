@@ -60,13 +60,13 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <link rel="stylesheet" href="/redesign.css">
 </head>
 <body>
-<LegacyNav lang={lang} />
+<LegacyNav lang={lang} path={path} />
 <main {...mainAttrs} set:html={page.main} />
 <LegacyFooter lang={lang} path={path} />
 <script is:inline set:html={scriptStrings} />
 <script is:inline src="/parts.js"></script>
 <script is:inline src="/redesign.js"></script>
-<script is:inline src="/hub-badge.js" defer></script>
+{path === '/' && <script is:inline src="/hub-badge.js" defer></script>}
 {page.bodyScripts.map((s) => <Fragment set:html={`<script>${s}</script>`} />)}
 </body>
 </html>

@@ -51,6 +51,7 @@ export default defineConfig({
         SiteTitle: './src/components/StarlightSiteTitle.astro',
         ThemeProvider: './src/components/StarlightThemeProvider.astro',
         ThemeSelect: './src/components/StarlightThemeSelect.astro',
+        LanguageSelect: './src/components/StarlightLanguageSelect.astro',
         Footer: './src/components/StarlightFooter.astro',
       },
     }),

@@ -78,7 +78,7 @@ img, video { display: block; max-width: 100%; }
 .nav-right { display: flex; align-items: center; gap: 12px; }
 .nav-links { display: flex; align-items: center; gap: 2px; }
 .nav-links > a, .nav-more-btn {
-  display: inline-flex; align-items: center; gap: 6px; font-family: inherit;
+  display: inline-flex; align-items: center; gap: 6px; font-family: inherit; white-space: nowrap;
   color: var(--text-2); font-size: 14px; font-weight: 500; cursor: pointer;
   padding: 7px 11px; border-radius: 9px; border: 0; background: transparent;
   transition: color .18s, background .18s;
@@ -132,15 +132,19 @@ body.menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: none;
 .mobile-menu .mm-download { order: 99; margin-top: 22px; }
 .mobile-menu .mm-download img { height: 52px; width: auto; }
 
+/* The bar holds Guides and the flag menu too (W21, W22). Measured per
+   language on 2026-10-13: one line needs up to 1146 px with the social icons
+   (Turkish) and 1008 px without them, so the icons go below 1180 px (they are
+   in the footer and the mobile menu) and the burger takes over below 1040 px. */
+@media (max-width: 1180px) { .nav-socials { display: none; } }
+@media (max-width: 1040px) { .nav-links { display: none; } .nav-burger { display: flex; } }
 @media (max-width: 880px) {
-  .nav-links, .nav-socials { display: none; }
   .nav-appstore img { height: 28px; }
-  .nav-burger { display: flex; }
   /* equalizer reads stronger and softer on phones */
   .hero-eq { opacity: .6; height: clamp(120px, 22vh, 200px); gap: 4px; }
   .hero-eq .bar { min-width: 3px; filter: drop-shadow(0 0 6px rgba(168,85,247,.5)); }
 }
-@media (min-width: 881px) { .mobile-menu { display: none; } }
+@media (min-width: 1041px) { .mobile-menu { display: none; } }
 
 /* ---------- App Store button ---------- */
 .appstore {
@@ -376,7 +380,11 @@ body.menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: none;
 .bento-ico svg { width: 20px; height: 20px; stroke: #c4b5fd; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .bento-card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
 .bento-card p { font-size: 13px; color: var(--text-3); line-height: 1.5; }
-.bento-more { margin-top: clamp(28px,4vh,42px); }
+/* The "Macdio 3" mark is a logo: icon then 3 in every language, Arabic included. */
+.hero-mark { direction: ltr; }
+/* Centred on its own: it also sits in sections that do not centre text (W20). */
+.bento-more { margin-top: clamp(28px,4vh,42px); text-align: center; }
+#faq { text-align: center; }
 .bento-more a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #fff;
   padding: 12px 22px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface);
   transition: border-color .2s, transform .2s; }
@@ -389,6 +397,10 @@ body.menu-open .mobile-menu { opacity: 1; pointer-events: auto; transform: none;
 .table-wrap { max-width: 920px; margin: clamp(36px,5vh,52px) auto 0; overflow-x: auto;
   border: 1px solid var(--border); border-radius: 18px; background: rgba(12,12,16,.5); }
 table.cmp { width: 100%; border-collapse: collapse; min-width: 640px; }
+/* Whatever holds a comparison table scrolls sideways on a phone instead of
+   clipping the competitor columns (W20: nine pages clipped them at 375 px;
+   min-width 0 because some holders sit in a grid or flex row). */
+div:has(> table.cmp) { overflow-x: auto; max-width: 100%; min-width: 0; -webkit-overflow-scrolling: touch; }
 table.cmp th, table.cmp td { padding: 14px 12px; text-align: center; font-size: 14px; border-bottom: 1px solid var(--border); }
 table.cmp thead th { color: var(--text-3); font-weight: 600; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; }
 table.cmp th:first-child, table.cmp td:first-child { text-align: left; color: var(--text); font-weight: 500; }
@@ -402,7 +414,7 @@ table.cmp tr.grp th, table.cmp tr.grp td { text-align: left; font-size: 11px; le
 table.cmp tr.grp td.me { background: rgba(168,85,247,.08); }
 .yes { color: #a78bfa; font-weight: 700; }
 .no { color: var(--text-3); }
-.cmp-foot { margin-top: 14px; font-size: 12px; color: var(--text-3); }
+.cmp-foot { margin: 14px auto 0; max-width: 760px; font-size: 12px; color: var(--text-3); }
 
 /* ---------- PRICING ---------- */
 .pricing { text-align: center; }
@@ -475,7 +487,10 @@ table.cmp tr.grp td.me { background: rgba(168,85,247,.08); }
 .page-head { position: relative; padding: calc(var(--nav-h) + clamp(50px,9vh,90px)) 22px clamp(30px,5vh,50px); text-align: center; isolation: isolate; }
 .page-head::before { content:""; position:absolute; inset:0; z-index:-1;
   background: radial-gradient(60% 80% at 50% 0%, rgba(168,85,247,.16), transparent 70%), var(--bg); }
-.page-head h1 { font-weight: 700; letter-spacing: -.04em; line-height: 1.02; font-size: clamp(2.4rem, 7vw, 4.6rem); }
+.page-head h1 { font-weight: 700; letter-spacing: -.04em; line-height: 1.02; font-size: clamp(2.4rem, 7vw, 4.6rem);
+  /* Translated headings run longer than the English (German, French, Dutch
+     reached both edges at 1440 px): keep a margin and even out the lines. */
+  max-width: 1100px; margin-left: auto; margin-right: auto; text-wrap: balance; }
 .page-head h1 .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .page-head p { margin: 18px auto 0; max-width: 56ch; color: var(--text-2); font-size: clamp(1rem,1.7vw,1.2rem); line-height: 1.55; }
 .feat-cat { max-width: 1000px; margin: 0 auto; padding: clamp(34px,5vh,56px) 0; border-top: 1px solid var(--border); }
@@ -584,6 +599,9 @@ table.cmp tr.grp td.me { background: rgba(168,85,247,.08); }
   letter-spacing: .05em; border-bottom: 1px solid var(--border); background: rgba(255,255,255,.02); }
 .data-table td { padding: 12px 16px; font-size: 14px; color: var(--text-2); border-bottom: 1px solid rgba(255,255,255,.04); }
 .data-table tbody tr:last-child td { border-bottom: 0; }
+/* Long translated words and host names wrap inside a cell instead of pushing
+   the table past a phone screen (W20: five languages on transparency.html). */
+.data-table th, .data-table td { overflow-wrap: anywhere; }
 .data-table td a { color: #c4b5fd; }
 .tag-pill { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .05em; padding: 3px 8px; border-radius: 6px;
   background: rgba(99,102,241,.12); color: #c4b5fd; }
@@ -819,13 +837,19 @@ body > footer{margin-top:auto;}
 .author-line { margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-3); }
 .author-line a { color: #c4b5fd; }
 
-/* Language menu in the footer (tracker W4): a disclosure of plain links. */
+/* Language menu (LangMenu.astro, tracker W4): a disclosure of plain links. */
 .lang-menu { position: relative; }
 .lang-menu summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); font-size: 13px; }
 .lang-menu summary::-webkit-details-marker { display: none; }
 .lang-menu summary::after { content: "▾"; font-size: 10px; color: var(--text-3); }
 .lang-menu summary:hover, .lang-menu summary:focus-visible { color: var(--text); border-color: rgba(168,85,247,.5); outline: 2px solid rgba(168,85,247,.6); outline-offset: 2px; }
 .lang-menu ul { position: absolute; bottom: calc(100% + 8px); inset-inline-start: 0; z-index: 50; margin: 0; padding: 6px; list-style: none; min-width: 180px; max-height: 60vh; overflow-y: auto; border-radius: 14px; border: 1px solid var(--border); background: rgba(14,14,20,.97); box-shadow: 0 20px 50px rgba(0,0,0,.55); }
-.lang-menu li a { display: block; padding: 8px 10px; border-radius: 9px; color: var(--text-2); font-size: 14px; }
+.lang-menu li a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 9px; color: var(--text-2); font-size: 14px; white-space: nowrap; }
+.lang-menu .flag { font-size: 16px; line-height: 1; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+/* The same menu in the nav (tracker W22): the flag alone, opening downward. */
+.lang-nav summary { padding: 6px 8px; border-color: transparent; background: transparent; }
+.lang-nav summary:hover { outline: none; border-color: transparent; background: rgba(255,255,255,.06); }
+.lang-nav summary .flag { font-size: 19px; }
+.lang-nav ul { bottom: auto; top: calc(100% + 10px); inset-inline-start: auto; inset-inline-end: 0; max-height: calc(100vh - var(--nav-h) - 24px); }
 .lang-menu li a:hover, .lang-menu li a:focus-visible { background: rgba(255,255,255,.06); color: var(--text); outline: none; }
 .lang-menu li a[aria-current="true"] { color: var(--text); font-weight: 600; }

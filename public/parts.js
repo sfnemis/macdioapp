@@ -69,17 +69,8 @@
     });
   }
 
-  // Language menu in the footer: remember the choice for a year (the Worker
-  // reads the cookie when a visitor lands on "/"); the link itself navigates.
-  function bindLang() {
-    document.querySelectorAll('.lang-menu a[data-lang]').forEach(function (a) {
-      a.addEventListener('click', function () {
-        document.cookie = 'lang=' + a.getAttribute('data-lang') + '; Path=/; Max-Age=31536000; SameSite=Lax';
-      });
-    });
-  }
-
-  function init() { bindNav(); bindLightbox(); bindLang(); }
+  // The language menus bind themselves (LangMenu.astro).
+  function init() { bindNav(); bindLightbox(); }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
