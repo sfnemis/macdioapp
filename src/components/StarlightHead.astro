@@ -8,10 +8,13 @@ import { byCode } from '../site/locales.mjs';
 import { hasGuide, guideRoute } from '../data/guides.mjs';
 import { t } from '../i18n/index.mjs';
 
-const { entry, siteTitle } = Astro.locals.starlightRoute;
+const { entry, siteTitle, isFallback } = Astro.locals.starlightRoute;
 const { code, path } = guideRoute(Astro.url);
 const locale = byCode(code);
-const url = SITE + localePath(code, path);
+// A guide not yet translated into this locale is Starlight's fallback: the
+// English text under /<code>/guides/. It points to the English page as
+// canonical and stays out of the index (and so out of the sitemap).
+const url = SITE + localePath(isFallback ? 'en' : code, path);
 const pageTitle = entry.data.title;
 // A page may carry its own <title> in frontmatter head (the hub index keeps a
 // short H1 and a longer search title); otherwise the H1 with the site name.
@@ -44,7 +47,7 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <title>{title}</title>
 <meta name="description" content={description}>
 <meta name="author" content="SFN">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="robots" content={isFallback ? 'noindex, follow' : 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}>
 <link rel="canonical" href={url}>
 {alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 <meta property="og:site_name" content="Macdio">

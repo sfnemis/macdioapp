@@ -15,7 +15,7 @@ faq:
   - q: "Can I listen while running without the phone?"
     a: "Yes, with a cellular watch and Bluetooth headphones. On a GPS-only watch the run has to stay within a known Wi-Fi network."
   - q: "Do my stations sync from the iPhone?"
-    a: "Yes. Favorites and folders arrive over iCloud, and the watch also has its own library view and search."
+    a: "Yes. Favorites and folders come from Macdio on your iPhone, and the watch also has its own library view and search."
   - q: "Can I record radio on the watch?"
     a: "No. Recording is an iPhone, iPad and Mac feature. Songs you heart on the watch still sync everywhere."
 ---
@@ -52,7 +52,7 @@ AirPods or any Bluetooth headphones. watchOS sends streamed audio to Bluetooth, 
 
 ### Your stations
 
-Favorites sync from your other devices through iCloud, and the watch has its own library view and search.
+Favorites and lists come from Macdio on your iPhone, which keeps them in step with your other devices through iCloud, and the watch has its own library view and search.
 
 ## Battery honesty
 
@@ -82,7 +82,7 @@ Yes, with a cellular watch and Bluetooth headphones. On a GPS-only watch the run
 
 ### Do my stations sync from the iPhone?
 
-Yes. Favorites and folders arrive over iCloud, and the watch also has its own library view and search.
+Yes. Favorites and folders come from Macdio on your iPhone, and the watch also has its own library view and search.
 
 ### Can I record radio on the watch?
 

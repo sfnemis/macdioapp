@@ -225,6 +225,24 @@ saying what happened to it.
   and Apple TV. Every step must be checked against the app code and string
   catalogs (exact menu and button names per language), then translated into
   all 13 other site languages like the existing guides.
+  Progress 2026-10-13 01:00: four research agents read the app code and wrote
+  fact sheets (51 app findings logged as app tracker #573-#627); five writers
+  wrote 15 English guides from them (19,800 words): Macdio on iPhone and iPad,
+  on the Mac, on Apple TV; add your own station; edit stations on a computer;
+  favorites, lists and sync; Song ID and Auto Shazam; recording; sleep timer
+  and Clock Mode; podcasts; transcripts and Highlights; Shortcuts and
+  automations; AirPods and headphones; game controllers; customize Macdio.
+  The hub lists them first in five groups; the old three groups stay below.
+  Untranslated guides in other locales are Starlight fallbacks, now noindex
+  with an English canonical so they never enter the sitemap. Translation
+  into 13 languages next.
+  The research also found wrong claims on the existing site, fixed in English
+  (translations follow with the guides): Apple TV has no highlights
+  (features/highlights.html said it shows them); Notion and Readwise tokens
+  are kept in the Keychain with iCloud Keychain sync (highlights.html and
+  privacy.html said they stay on the device); Apple Watch gets favorites and
+  lists from the iPhone, not iCloud (apple-watch.html, features.html,
+  radio-on-apple-watch.md); record-internet-radio.md overstated two points.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

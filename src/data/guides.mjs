@@ -47,10 +47,13 @@ export function sidebar() {
   const tr = (pick) => Object.fromEntries(Object.entries(strings).filter(([code]) => code !== DEFAULT && lang(code)).map(([code, g]) => [lang(code), pick(g)]).filter(([, v]) => v));
   return [
     { label: strings[DEFAULT].h1, translations: tr((g) => g.h1), items: [{ label: strings[DEFAULT].allGuides, translations: tr((g) => g.allGuides), link: '/guides/index.html' }] },
-    ...GROUPS.map((g, gi) => ({
+    // Matched by slug, not by position: a locale whose strings do not have a
+    // new group yet falls back to English instead of borrowing the label of
+    // whatever group sits at the same index.
+    ...GROUPS.map((g) => ({
       label: g.label,
-      translations: tr((s) => s.groups[gi]?.label),
-      items: g.guides.map((x, xi) => ({ label: x.label, translations: tr((s) => s.groups[gi]?.guides[xi]?.label), link: `/guides/${x.slug}.html` })),
+      translations: tr((s) => s.groups.find((lg) => lg.guides.some((x) => x.slug === g.guides[0].slug))?.label),
+      items: g.guides.map((x) => ({ label: x.label, translations: tr((s) => s.groups.flatMap((lg) => lg.guides).find((y) => y.slug === x.slug)?.label), link: `/guides/${x.slug}.html` })),
     })),
   ];
 }

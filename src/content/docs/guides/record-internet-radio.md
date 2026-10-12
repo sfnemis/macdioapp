@@ -9,7 +9,7 @@ faq:
   - q: "Can I export a recording to Finder or the Files app?"
     a: "No. Recordings stay inside the app on your device, where you can play or delete them. There is no share, export or iCloud file sync for them."
   - q: "Can I record while using other apps?"
-    a: "Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off."
+    a: "Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off, as long as the station keeps playing."
   - q: "Can I record on Apple Watch or Apple TV?"
     a: "No. Recording is a Mac, iPhone and iPad feature. The watch and TV apps play stations and control playback."
   - q: "How do I record a radio show that airs at night?"
@@ -76,7 +76,7 @@ A recording keeps whatever the station sends. An MP3 station gives you an .mp3 a
 
 ## Where the recordings live
 
-Inside the app, on your own device, in the Recordings tab where each session and each split track can be played or deleted. They are not copied into your music library, they do not appear in the Files app or Finder, and there is no share or export button. That is a deliberate limit for a personal recording feature, not something waiting to be finished, and it keeps a personal recording personal. Nothing is uploaded anywhere.
+Inside the app, on your own device, in the Recordings tab where each session and each split track can be played or deleted. They are not copied into your music library, the app does not show them in the Files app or in your Finder folders, and there is no share or export button. That is a deliberate limit for a personal recording feature, not something waiting to be finished, and it keeps a personal recording personal. Nothing is uploaded anywhere.
 
 ## Is recording internet radio legal?
 
@@ -94,7 +94,7 @@ No. Recordings stay inside the app on your device, where you can play or delete 
 
 ### Can I record while using other apps?
 
-Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off.
+Yes. Recording captures the stream rather than the speakers, so it continues in the background on Mac and iPhone while you do something else, and with the screen off, as long as the station keeps playing.
 
 ### Can I record on Apple Watch or Apple TV?
 
