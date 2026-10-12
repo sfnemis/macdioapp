@@ -7,7 +7,7 @@ faq:
   - q: "What is the best internet radio app for Mac?"
     a: "It depends on how you pay. Macdio is a single purchase with no ads, recording and song identification, and it needs macOS 26. Eter is free to try with a one-time unlock, Broadcasts is free with a handful of stations and a subscription for the rest, and both run on older versions of macOS. myTuner Radio Pro is a separate $9.99 purchase on the Mac App Store."
   - q: "Which internet radio apps have no ads?"
-    a: "Macdio has no ads and no in-app purchases. Eter and Broadcasts do not advertise ads in their App Store listings and sell a one-time unlock instead. Simple Radio shows display ads on the free tier and removes them with its Premium purchase, and TuneIn sells a Premium subscription that advertises ad-free news and commercial-free music."
+    a: "Macdio has no ads and no in-app purchases. Eter and Broadcasts do not advertise ads in their App Store listings; Eter sells a one-time unlock and Broadcasts a subscription. Simple Radio shows display ads on the free tier and removes them with its Premium purchase, and TuneIn sells a Premium subscription that advertises ad-free news and commercial-free music."
   - q: "How many stations do these apps have?"
     a: "The counts advertised in the App Store on 14 September 2026 are 100,000+ for TuneIn, 90,000+ for Simple Radio, 60,000+ for Macdio and 50,000 for myTuner Radio. Eter, Broadcasts and Radio Garden do not publish a number. Most of these apps draw on the same public directories, so the figures say more about how each one counts than about what you can actually hear."
   - q: "Can any of them record a radio show?"
@@ -110,7 +110,7 @@ Apple Music has radio stations, but it is a music subscription with radio attach
 
 ## How to choose in one minute
 
-Start with the money. If you will not pay anything, Eter is the best free experience and Simple Radio is the easiest one to hand to someone else. If you dislike subscriptions but will pay once, Macdio, Broadcasts and myTuner Radio Pro are all one-time purchases with very different personalities: a full player, a curated library, and a directory.
+Start with the money. If you will not pay anything, Eter is the best free experience and Simple Radio is the easiest one to hand to someone else. If you dislike subscriptions but will pay once, Macdio, Eter and myTuner Radio Pro are all one-time purchases with very different personalities: a full player, a lean directory player, and an older Mac-only directory. Broadcasts, the curated library, moved to a subscription.
 
 Then check the device list. An older iPhone or an Intel Mac rules out Macdio immediately and points at Eter or Broadcasts. A smart speaker in the kitchen points at TuneIn. An Apple Watch used for running without a phone narrows it to the apps that stream on the watch itself.
 
@@ -124,7 +124,7 @@ It depends on how you pay. Macdio is a single purchase with no ads, recording an
 
 ### Which internet radio apps have no ads?
 
-Macdio has no ads and no in-app purchases. Eter and Broadcasts do not advertise ads in their App Store listings and sell a one-time unlock instead. Simple Radio shows display ads on the free tier and removes them with its Premium purchase, and TuneIn sells a Premium subscription that advertises ad-free news and commercial-free music.
+Macdio has no ads and no in-app purchases. Eter and Broadcasts do not advertise ads in their App Store listings; Eter sells a one-time unlock and Broadcasts a subscription. Simple Radio shows display ads on the free tier and removes them with its Premium purchase, and TuneIn sells a Premium subscription that advertises ad-free news and commercial-free music.
 
 ### How many stations do these apps have?
 

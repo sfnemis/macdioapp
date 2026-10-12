@@ -1,20 +1,20 @@
 ---
-title: "Comment trouver l'URL du flux d'une station de radio (4 méthodes)"
-description: "Obtenez l'adresse directe de n'importe quelle station depuis son site, depuis les outils de développement du navigateur, depuis un annuaire public ou depuis l'app elle-même. Avec de vrais exemples."
+title: "Trouver l'URL du flux d'une station de radio (4 méthodes)"
+description: "L'adresse directe d'une station depuis son site, un annuaire public, les outils de développement du navigateur, ou la station elle-même. Exemples réels."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:
-  - q: "Qu'est-ce qu'une URL de flux radio ?"
+  - q: "Qu'est-ce qu'une URL de flux radio ?"
     a: "C'est l'adresse directe du flux audio d'une station, et non la page qui l'entoure. Certaines se terminent par .mp3, .aac ou .m3u8, d'autres sont un simple hôte avec un port, et un lecteur les ouvre sans aucun site web entre les deux."
-  - q: "Comment trouver l'URL du flux d'une station ?"
+  - q: "Comment trouver l'URL du flux d'une station ?"
     a: "Essayez d'abord la page d'écoute de la station, puis un annuaire communautaire ouvert, puis l'onglet Réseau des outils de développement de votre navigateur pendant que le lecteur web tourne. Si rien de tout ça ne marche, demandez à la station par e-mail."
-  - q: "Pourquoi une URL de flux cesse-t-elle de fonctionner ?"
+  - q: "Pourquoi une URL de flux cesse-t-elle de fonctionner ?"
     a: "Les stations changent de serveur plus souvent que les auditeurs ne l'imaginent. Une adresse morte signifie en général un flux déplacé plutôt qu'une station fermée, donc cherchez à nouveau la station et mettez l'URL à jour au lieu de la supprimer."
 ---
 
 Quatre méthodes qui marchent, dans l'ordre où je les essaierais, plus quoi faire quand un flux que vous aimez se tait.
 
-L'URL du flux d'une station est l'adresse directe de son audio, et il y a quatre moyens fiables de l'obtenir : la page d'écoute de la station elle-même, un annuaire communautaire ouvert, l'onglet Réseau des outils de développement de votre navigateur, et tout simplement demander à la station. Ils sont ci-dessous dans l'ordre où ça vaut le coup d'essayer, avec quoi faire quand une adresse qui marchait se tait.
+L'URL du flux d'une station est l'adresse directe de son audio, et il y a quatre moyens fiables de l'obtenir : la page d'écoute de la station elle-même, un annuaire communautaire ouvert, l'onglet Réseau des outils de développement de votre navigateur, et tout simplement demander à la station. Ils sont ci-dessous dans l'ordre où ça vaut le coup d'essayer, avec quoi faire quand une adresse qui marchait se tait.
 
 ## Ce qu'est une URL de flux
 
@@ -22,7 +22,7 @@ C'est l'adresse directe du flux audio plutôt que la page qui l'entoure. Certain
 
 ## 1. Le site web de la station
 
-Commencez là, parce que c'est la source. Beaucoup de stations publient une page d'écoute qui propose un fichier .m3u ou .pls, souvent étiqueté pour VLC, Winamp ou « autres lecteurs ». Ces petits fichiers sont des listes de lecture qui contiennent la vraie adresse du flux, et tout lecteur correct les lit directement.
+Commencez là, parce que c'est la source. Beaucoup de stations publient une page d'écoute qui propose un fichier .m3u ou .pls, souvent étiqueté pour VLC, Winamp ou « autres lecteurs ». Ces petits fichiers sont des listes de lecture qui contiennent la vraie adresse du flux, et tout lecteur correct les lit directement.
 
 ## 2. Un annuaire communautaire ouvert
 
@@ -38,7 +38,7 @@ Sous-estimé et souvent le plus rapide. Les petites stations répondent aux e-ma
 
 ## Un mot sur ce que vous avez le droit d'en faire
 
-Trouver l'adresse d'un flux public et l'écouter vous-même, c'est de l'écoute ordinaire. Redistribuer l'audio d'une station, le rediffuser ou bâtir un service sur le flux de quelqu'un d'autre, c'est autre chose et cela entraîne ses propres obligations de licence. Restez personnel et restez simple : pointez votre propre lecteur vers la station et profitez-en.
+Trouver l'adresse d'un flux public et l'écouter vous-même, c'est de l'écoute ordinaire. Redistribuer l'audio d'une station, le rediffuser ou bâtir un service sur le flux de quelqu'un d'autre, c'est autre chose et cela entraîne ses propres obligations de licence. Restez personnel et restez simple : pointez votre propre lecteur vers la station et profitez-en.
 
 ## L'ajouter à Macdio
 
@@ -46,22 +46,22 @@ Une fois l'adresse en main, l'ajout prend quelques secondes. Ouvrez Macdio, touc
 
 ## Quand un flux se tait
 
-Les stations changent de serveur plus souvent qu'on ne le pense. Une URL morte signifie rarement une station morte, donc cherchez-la à nouveau avant d'abandonner ; il y a généralement une nouvelle adresse, et mieux vaut mettre à jour la station personnalisée que la supprimer.
+Les stations changent de serveur plus souvent qu'on ne le pense. Une URL morte signifie rarement une station morte, donc cherchez-la à nouveau avant d'abandonner ; il y a généralement une nouvelle adresse, et mieux vaut mettre à jour la station personnalisée que la supprimer.
 
 ## Questions fréquentes
 
-### Qu'est-ce qu'une URL de flux radio ?
+### Qu'est-ce qu'une URL de flux radio ?
 
 C'est l'adresse directe du flux audio d'une station, et non la page qui l'entoure. Certaines se terminent par .mp3, .aac ou .m3u8, d'autres sont un simple hôte avec un port, et un lecteur les ouvre sans aucun site web entre les deux.
 
-### Comment trouver l'URL du flux d'une station ?
+### Comment trouver l'URL du flux d'une station ?
 
 Essayez d'abord la page d'écoute de la station, puis un annuaire communautaire ouvert, puis l'onglet Réseau des outils de développement de votre navigateur pendant que le lecteur web tourne. Si rien de tout ça ne marche, demandez à la station par e-mail.
 
-### Pourquoi une URL de flux cesse-t-elle de fonctionner ?
+### Pourquoi une URL de flux cesse-t-elle de fonctionner ?
 
 Les stations changent de serveur plus souvent que les auditeurs ne l'imaginent. Une adresse morte signifie en général un flux déplacé plutôt qu'une station fermée, donc cherchez à nouveau la station et mettez l'URL à jour au lieu de la supprimer.
 
-## Prêt à ajouter les vôtres ?
+## Prêt à ajouter les vôtres ?
 
-Procurez-vous Macdio sur l'[App Store](https://apps.apple.com/app/macdio/id6761737888). Plus de 60 000 stations intégrées, et de la place pour toutes celles que vous apportez vous-même.
+Procurez-vous Macdio sur l'[App Store](https://apps.apple.com/app/macdio/id6761737888). Plus de 60 000 stations intégrées, et de la place pour toutes celles que vous apportez vous-même.

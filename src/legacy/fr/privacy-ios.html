@@ -7,15 +7,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Confidentialité : Macdio pour iOS, iPad et CarPlay</title>
+<title>Confidentialité : Macdio pour iOS, iPad et CarPlay</title>
 <meta name="description" content="Confidentialité de Macdio sur iOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données sur iPhone, iPad et CarPlay.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
-<link rel="canonical" href="https://macdio.app/privacy-ios.html"><meta property="og:title" content="Confidentialité : Macdio pour iOS, iPad et CarPlay">
+<link rel="canonical" href="https://macdio.app/privacy-ios.html"><meta property="og:title" content="Confidentialité : Macdio pour iOS, iPad et CarPlay">
 <meta property="og:description" content="Confidentialité de Macdio sur iOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données sur iPhone, iPad et CarPlay.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
-<meta name="twitter:title" content="Confidentialité : Macdio pour iOS, iPad et CarPlay">
+<meta name="twitter:title" content="Confidentialité : Macdio pour iOS, iPad et CarPlay">
 <meta name="twitter:description" content="Confidentialité de Macdio sur iOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données sur iPhone, iPad et CarPlay.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
@@ -64,7 +64,7 @@
   <p class="reveal">Vos stations, chansons, enregistrements, podcasts, transcriptions et surlignages restent sur votre appareil et ne se synchronisent que par votre propre compte iCloud. Macdio n'utilise aucun SDK d'analyse, de publicité ou de pistage et n'a aucun moyen de vous identifier.</p>
 
   <h2 class="sec reveal">Étiquette de confidentialité de l'App Store</h2>
-  <p class="reveal">L'étiquette de l'App Store liste deux types de données : Identifiant de l'appareil et Interaction avec le produit. Ni l'un ni l'autre n'est lié à vous, ni utilisé pour le pistage ; ils servent uniquement au fonctionnement de l'app. Il s'agit de l'adresse de notification de cet iPhone et de la liste des émissions que vous suivez. L'iPhone les envoie au serveur de notifications de Macdio quand Notifications de nouveaux épisodes est activé, pour que les nouveaux épisodes arrivent même quand l'app est fermée. Désactiver les notifications retire les deux du serveur. La <a class="inline" href="privacy.html">politique de confidentialité générale</a> donne les détails.</p>
+  <p class="reveal">L'étiquette de l'App Store liste deux types de données : Identifiant de l'appareil et Interaction avec le produit. Ni l'un ni l'autre n'est lié à vous, ni utilisé pour le pistage ; ils servent uniquement au fonctionnement de l'app. Il s'agit de l'adresse de notification de cet iPhone et de la liste des émissions que vous suivez. L'iPhone les envoie au serveur de notifications de Macdio quand Notifications de nouveaux épisodes est activé, pour que les nouveaux épisodes arrivent même quand l'app est fermée. Désactiver les notifications retire les deux du serveur. La <a class="inline" href="privacy.html">politique de confidentialité générale</a> donne les détails.</p>
 
   <h2 class="sec reveal">Statistiques d'écoute</h2>
   <p class="reveal">Votre historique d'écoute (quelles stations et quels épisodes vous avez écoutés, combien de temps, et sur quel appareil) est stocké uniquement dans votre conteneur iCloud privé. Il sert seulement à afficher vos statistiques sur vos propres appareils, et le développeur ne peut pas le voir.</p>
@@ -76,13 +76,16 @@
   <p class="reveal">Macdio utilise un conteneur partagé App Group (group.com.macdio.app) pour partager les données de lecture en cours avec les widgets iOS. Ces données restent entièrement sur votre appareil et servent uniquement à afficher la lecture en cours dans les widgets.</p>
 
   <h2 class="sec reveal">Services tiers</h2>
-  <p class="reveal">Macdio se connecte aux services externes suivants uniquement pour assurer ses fonctions de base :</p>
+  <p class="reveal">Macdio se connecte aux services externes suivants uniquement pour assurer ses fonctions de base :</p>
   <ul class="reveal">
     <li><strong>API Radio Browser</strong> pour parcourir et rechercher des stations de radio. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>dir.macdio.app</strong>, la copie de l'annuaire de stations tenue par Macdio, utilisée seulement quand Radio Browser ne répond pas. Elle ne garde que des totaux quotidiens. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>LRCLIB</strong> pour récupérer les paroles synchronisées. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>iTunes Search API</strong> pour récupérer les pochettes et les métadonnées des titres. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> fournit les logos des stations de radio qui n'en proposent pas elles-mêmes. Seul le domaine web de la station est envoyé, aucune donnée personnelle.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> pour la recherche de podcasts, les classements et les catégories. Seul le terme recherché ou la catégorie est envoyé. Les épisodes et les flux se téléchargent directement depuis le serveur de chaque émission.</li>
+    <li><strong>Apple ShazamKit</strong> pour Song ID. Une courte signature audio du flux, pas un enregistrement, part vers le service Shazam d'Apple. Le micro n'est jamais utilisé.</li>
+    <li><strong>Le modèle de langage d'Apple</strong> écrit les chapitres et le résumé d'un épisode de podcast, sur l'appareil ou sur le Private Cloud Compute d'Apple, qui ne garde pas le texte.</li>
   </ul>
 
   <h2 class="sec reveal">Synchronisation iCloud</h2>
@@ -93,7 +96,7 @@
   <p class="reveal">Les enregistrements sont stockés localement sur votre appareil. Ils ne sont jamais envoyés, transmis ni consultés par qui que ce soit d'autre.</p>
 
   <h2 class="sec reveal">Vie privée des enfants</h2>
-  <p class="reveal">Macdio ne collecte sciemment de données auprès de personne, y compris les enfants de moins de 13 ans. Les données de notification décrites ci-dessus ne sont pas personnelles et ne sont liées à personne.</p>
+  <p class="reveal">Macdio ne collecte sciemment de données personnelles auprès de personne, y compris les enfants de moins de 13 ans. Les données de notification décrites ci-dessus ne sont pas personnelles et ne sont liées à personne.</p>
 
   <h2 class="sec reveal">Modifications de cette politique</h2>
   <p class="reveal">Je peux mettre à jour cette politique de confidentialité de temps à autre. Les changements apparaîtront sur cette page avec une date actualisée.</p>

@@ -53,15 +53,15 @@
     "intro": "Des réponses courtes et concrètes aux questions que se posent vraiment les auditeurs de radio Internet, écrites par le développeur de Macdio. Chaque guide indique les appareils concernés et se termine par les questions que les gens tapent dans un moteur de recherche.",
     "allGuides": "Tous les guides",
     "behindH2": "L'app derrière les guides",
-    "behind": "Macdio est un lecteur natif de radio Internet et de podcasts pour <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> et <a href=\"/apple-watch.html\">Apple Watch</a>. Plus de 60 000 stations, l'enregistrement, les paroles en direct et l'identification des chansons sans micro, en un seul achat, sans abonnement.",
+    "behind": "Macdio est un lecteur natif de radio Internet et de podcasts pour <a href=\"/iphone.html\">iPhone</a>, <a href=\"/mac.html\">Mac</a>, <a href=\"/apple-tv.html\">Apple TV</a>, <a href=\"/ipad.html\">iPad</a> et <a href=\"/apple-watch.html\">Apple Watch</a>. Plus de 60 000 stations, l'enregistrement, les paroles en direct et l'identification des chansons sans micro, en un seul achat, sans abonnement.",
     "writtenBy": "Écrit par <a href=\"/presskit.html\">Sait Firat NEMIS</a>, le développeur de Macdio.",
     "checkedOn": "Vérifié le {date}.",
     "groups": [
       {
         "label": "La radio sur chaque appareil",
         "guides": [
-          { "slug": "how-to-listen-to-radio-on-mac", "label": "La radio sur un Mac", "title": "Comment écouter la radio Internet sur un Mac", "description": "Navigateur, VLC, l'app Musique ou un lecteur dans la barre des menus : chaque piste, avec ses compromis dits franchement. À lire en premier si la radio sur ordinateur est nouvelle pour vous." },
-          { "slug": "radio-on-apple-watch", "label": "Apple Watch sans iPhone", "title": "La radio sur Apple Watch sans iPhone", "description": "Écouter en streaming au poignet sans iPhone à proximité : ce que « autonome » veut vraiment dire, ce qu'il vous faut, et des chiffres d'autonomie honnêtes." },
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "La radio sur un Mac", "title": "Comment écouter la radio Internet sur un Mac", "description": "Navigateur, VLC, l'app Musique ou un lecteur dans la barre des menus : chaque piste, avec ses compromis dits franchement. À lire en premier si la radio sur ordinateur est nouvelle pour vous." },
+          { "slug": "radio-on-apple-watch", "label": "Apple Watch sans iPhone", "title": "La radio sur Apple Watch sans iPhone", "description": "Écouter en streaming au poignet sans iPhone à proximité : ce que « autonome » veut vraiment dire, ce qu'il vous faut, et des chiffres d'autonomie honnêtes." },
           { "slug": "carplay-radio", "label": "La radio dans CarPlay", "title": "La radio Internet dans CarPlay", "description": "Des présélections comme sur un autoradio classique, des stations du monde entier à la place de la FM locale, et ce qu'un long trajet coûte en données mobiles." },
           { "slug": "siri-radio", "label": "Lancer la radio avec Siri", "title": "Lancer la radio avec Siri", "description": "Toutes les phrases vocales que Macdio comprend, en 14 langues, et comment un nom de station prononcé dans la voiture devient le bon flux." }
         ]
@@ -70,9 +70,9 @@
         "label": "Fonctions radio",
         "guides": [
           { "slug": "record-internet-radio", "label": "Enregistrer la radio Internet", "title": "Comment enregistrer la radio Internet", "description": "Transformer une émission en direct en pistes individuelles et nommées sur Mac et iPhone, et où en est vraiment la loi sur l'enregistrement privé." },
-          { "slug": "identify-song-on-radio", "label": "Quelle chanson passe ?", "title": "Quelle chanson passe à la radio ?", "description": "Trois façons d'identifier une chanson à la radio, dont une qui lit le flux lui-même et ne demande jamais le micro." },
+          { "slug": "identify-song-on-radio", "label": "Quelle chanson passe ?", "title": "Quelle chanson passe à la radio ?", "description": "Trois façons d'identifier une chanson à la radio, dont une qui lit le flux lui-même et ne demande jamais le micro." },
           { "slug": "find-radio-stream-url", "label": "Trouver l'URL d'un flux", "title": "Comment trouver l'URL du flux d'une station", "description": "Quatre façons d'obtenir l'adresse directe, ce que vous avez le droit d'en faire, et comment ajouter une station à vous." },
-          { "slug": "iphone-fm-radio", "label": "L'iPhone a-t-il une radio FM ?", "title": "L'iPhone a-t-il une radio FM ?", "description": "La réponse honnête sur la puce absente, récepteur contre émetteur, l'argument des urgences, et quoi faire à la place." }
+          { "slug": "iphone-fm-radio", "label": "L'iPhone a-t-il une radio FM ?", "title": "L'iPhone a-t-il une radio FM ?", "description": "La réponse honnête sur la puce absente, récepteur contre émetteur, l'argument des urgences, et quoi faire à la place." }
         ]
       },
       {
@@ -82,5 +82,59 @@
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Recherche…",
+    "errorTitle": "Erreur de connexion",
+    "errorText": "Impossible de joindre la base de données des stations. Réessayez.",
+    "noneTitle": "Aucune station trouvée",
+    "noneText": "Essayez un autre terme de recherche ou un autre filtre.",
+    "results": "{n} résultats",
+    "resultsFor": "pour « {q} »",
+    "resultsIn": "· {country}",
+    "popular": "Stations populaires · Page {page}",
+    "prev": "← Précédente",
+    "next": "Suivante →",
+    "page": "Page {page}",
+    "unknown": "Inconnue"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Jazz",
+    "classical": "Classique",
+    "electronic": "Électronique",
+    "hip hop": "Hip-hop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latino",
+    "folk": "Folk",
+    "indie": "Indé",
+    "ambient": "Ambient",
+    "news": "Infos",
+    "talk": "Talk",
+    "sports": "Sport",
+    "oldies": "Oldies",
+    "80s": "Années 80",
+    "90s": "Années 90",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dance",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "Nouveau",
+    "label": "Nouveautés : {title}",
+    "title": "Nouveautés",
+    "dialog": "Les nouveautés de Macdio",
+    "all": "Toutes les notes de version",
+    "gotIt": "OK"
   }
 }

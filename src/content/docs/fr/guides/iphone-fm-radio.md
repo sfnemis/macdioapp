@@ -1,22 +1,22 @@
 ---
-title: "L'iPhone a-t-il une radio FM ? Non, voici ce qui marche à la place"
-description: "L'iPhone a-t-il une radio FM ? Non. Aucun iPhone n'a de puce ni d'antenne FM, Apple l'a dit en 2017. Voici pourquoi, et comment écouter les stations AM/FM sur iPhone à la place."
+title: "L'iPhone a-t-il une radio FM ? Non, voici ce qui marche"
+description: "L'iPhone a-t-il une radio FM ? Non. Ni puce ni antenne FM, Apple l'a dit en 2017. Voici pourquoi, et comment écouter les stations AM/FM sur iPhone à la place."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:
-  - q: "Les iPhone 16 et iPhone 17 ont-ils une radio FM ?"
+  - q: "Les iPhone 16 et iPhone 17 ont-ils une radio FM ?"
     a: "Non. Aucune génération d'iPhone n'est livrée avec la réception FM, y compris les gammes iPhone 16 et iPhone 17. La réponse est la même pour chaque modèle à ce jour."
-  - q: "Une app de radio FM peut-elle marcher sans Internet ?"
+  - q: "Une app de radio FM peut-elle marcher sans Internet ?"
     a: "Non. Les apps de l'App Store qui se disent radio FM sont des lecteurs de radio Internet, donc elles ont besoin du Wi-Fi ou des données cellulaires. Sans connexion, pas de son, parce qu'il n'y a pas de tuner dans le téléphone sur lequel se rabattre."
-  - q: "Une app peut-elle débloquer la FM sur mon iPhone ?"
+  - q: "Une app peut-elle débloquer la FM sur mon iPhone ?"
     a: "Non. L'accès matériel n'existe pas, donc aucune app ne peut fournir la réception FM. Tout ce qui le promet diffuse par Internet."
-  - q: "L'iPhone a-t-il un émetteur FM ?"
+  - q: "L'iPhone a-t-il un émetteur FM ?"
     a: "Non. Pour diffuser l'audio du téléphone vers une radio voisine, comme un autoradio sans entrée auxiliaire, il vous faut un accessoire émetteur FM séparé qui se connecte en Bluetooth ou par câble."
-  - q: "Quelle est la meilleure app de radio pour iPhone ?"
+  - q: "Quelle est la meilleure app de radio pour iPhone ?"
     a: "Ça dépend de ce que vous voulez. Les apps gratuites avec publicité couvrent le plus de téléphones, tandis que les lecteurs payants vous achètent l'absence de pub et des extras comme l'enregistrement et l'identification des chansons. Le comparatif de sept apps de radio liste côte à côte les prix, les plateformes et le nombre de stations."
-  - q: "La radio marche-t-elle en voiture ?"
+  - q: "La radio marche-t-elle en voiture ?"
     a: "Oui, via CarPlay. Voir le guide CarPlay pour l'installation et la consommation de données."
-  - q: "Combien de données consomme la radio Internet ?"
+  - q: "Combien de données consomme la radio Internet ?"
     a: "Environ 58 Mo par heure à 128 kbps, à peu près 1 Go pour 17 heures d'écoute. En Wi-Fi, elle ne consomme aucune donnée cellulaire."
 ---
 
@@ -24,11 +24,11 @@ La réponse courte est non, et ce n'est pas prévu. La version honnête du pourq
 
 **Non. Aucun iPhone n'a de récepteur radio FM utilisable, et Apple n'a jamais laissé un logiciel capter une station FM dessus. En 2017, Apple a déclaré que ses téléphones n'ont pas de puce FM qu'on puisse activer ni d'antenne pour les signaux FM. Vous pouvez quand même écouter les stations AM et FM sur un iPhone grâce aux apps de radio Internet, qui diffusent les mêmes émissions en Wi-Fi ou en cellulaire.**
 
-## Les iPhone ont-ils une puce radio FM ?
+## Les iPhone ont-ils une puce radio FM ?
 
 Pas une que vous puissiez utiliser. Les puces sans fil des anciens iPhone contenaient bien un bloc tuner FM sur le silicium, c'est de là que vient la rumeur, mais ce bloc n'a jamais été relié à une antenne ni exposé au logiciel. Un transistor en sommeil n'est pas une radio. En 2017, après une campagne publique pour activer la FM pendant la saison des ouragans, Apple a déclaré que ses téléphones n'ont pas de puce radio FM activable ni d'antenne conçue pour les signaux FM.
 
-Ça couvre chaque modèle à ce jour. Ni le premier iPhone, ni la génération iPhone 17, ni rien entre les deux. La question revient chaque septembre parce que chaque nouveau modèle relance les recherches, mais la réponse n'a pas changé en dix-huit ans.
+Ça couvre chaque modèle à ce jour. Ni le premier iPhone, ni la génération iPhone 17, ni rien entre les deux. La question revient chaque septembre parce que chaque nouveau modèle relance les recherches, mais la réponse n'a pas changé depuis 2007.
 
 ## Pourquoi Apple n'active pas la radio FM sur l'iPhone
 
@@ -54,7 +54,7 @@ Le meilleur argument pour la FM n'est pas la musique. C'est ce qui arrive quand 
 
 Ce que l'iPhone offre sur ce front, c'est un autre jeu d'outils. Les alertes d'urgence arrivent par le réseau cellulaire sans aucune app, et les modèles récents peuvent envoyer un message SOS par satellite quand il n'y a aucune couverture cellulaire. Utile, mais en complément de la radio de diffusion, pas en remplacement.
 
-## Peut-on encore écouter les stations FM sur un iPhone ?
+## Peut-on encore écouter les stations FM sur un iPhone ?
 
 Oui, et c'est ce que la plupart des gens cherchent en réalité. Presque chaque station AM et FM d'une certaine taille diffuse aussi son programme sur Internet, ce qui veut dire que la station que vous capteriez sur un autoradio est en général disponible sur un iPhone une seconde ou deux après l'avoir touchée. Vous entendez le même programme, les mêmes animateurs et les mêmes coupures pub, livrés en Wi-Fi ou en cellulaire au lieu des ondes.
 
@@ -66,13 +66,13 @@ Trois étapes, aucun compte nécessaire.
 
 Installez une app de radio native depuis l'App Store. Cherchez la station par son nom, ou parcourez par pays et par genre si vous cherchez du nouveau. Touchez-la une fois pour lancer la lecture, puis sauvegardez-la en favori pour qu'elle soit sur le premier écran la prochaine fois.
 
-[Macdio pour iPhone](/iphone.html) couvre plus de 60 000 stations avec CarPlay, des widgets pour l'écran d'accueil, les commandes sur l'écran verrouillé, des minuteurs de sommeil et un Mode horloge pour la table de nuit. Il identifie la chanson directement depuis le flux sans autorisation micro (voir [quelle chanson passe à la radio](/guides/identify-song-on-radio.html)), enregistre les émissions et les découpe en pistes nommées, et synchronise les favoris entre vos appareils Apple. Un seul achat, pas d'abonnement, rien de pisté. Il demande iOS 26, donc un téléphone plus ancien devra se tourner vers l'une des alternatives gratuites du [comparatif d'apps de radio](/guides/best-internet-radio-apps.html).
+[Macdio pour iPhone](/iphone.html) couvre plus de 60 000 stations avec CarPlay, des widgets pour l'écran d'accueil, les commandes sur l'écran verrouillé, des minuteurs de sommeil et un Mode horloge pour la table de nuit. Il identifie la chanson directement depuis le flux sans autorisation micro (voir [quelle chanson passe à la radio](/guides/identify-song-on-radio.html)), enregistre les émissions et les découpe en pistes nommées, et synchronise les favoris entre vos appareils Apple. Un seul achat, pas d'abonnement, rien de pisté. Il demande iOS 26, donc un téléphone plus ancien devra se tourner vers l'une des alternatives gratuites du [comparatif d'apps de radio](/guides/best-internet-radio-apps.html).
 
 ## Ce que la radio Internet fait mieux que la FM
 
 ### Toutes les villes, pas une seule
 
-La FM vous donne les émetteurs à portée. Le streaming vous donne plus de 60 000 stations dans le monde, y compris la station de votre enfance dans la ville que vous avez quittée.
+La FM vous donne les émetteurs à portée. Le streaming vous donne plus de 60 000 stations dans le monde, y compris la station de votre enfance dans la ville que vous avez quittée.
 
 ### Elle connaît la chanson
 
@@ -84,34 +84,34 @@ Les mêmes stations sur le téléphone, le Mac, la télé, la montre et en voitu
 
 ## Questions fréquentes
 
-### Les iPhone 16 et iPhone 17 ont-ils une radio FM ?
+### Les iPhone 16 et iPhone 17 ont-ils une radio FM ?
 
 Non. Aucune génération d'iPhone n'est livrée avec la réception FM, y compris les gammes iPhone 16 et iPhone 17. La réponse est la même pour chaque modèle à ce jour.
 
-### Une app de radio FM peut-elle marcher sans Internet ?
+### Une app de radio FM peut-elle marcher sans Internet ?
 
 Non. Les apps de l'App Store qui se disent radio FM sont des lecteurs de radio Internet, donc elles ont besoin du Wi-Fi ou des données cellulaires. Sans connexion, pas de son, parce qu'il n'y a pas de tuner dans le téléphone sur lequel se rabattre.
 
-### Une app peut-elle débloquer la FM sur mon iPhone ?
+### Une app peut-elle débloquer la FM sur mon iPhone ?
 
 Non. L'accès matériel n'existe pas, donc aucune app ne peut fournir la réception FM. Tout ce qui le promet diffuse par Internet.
 
-### L'iPhone a-t-il un émetteur FM ?
+### L'iPhone a-t-il un émetteur FM ?
 
 Non. Pour diffuser l'audio du téléphone vers une radio voisine, comme un autoradio sans entrée auxiliaire, il vous faut un accessoire émetteur FM séparé qui se connecte en Bluetooth ou par câble.
 
-### Quelle est la meilleure app de radio pour iPhone ?
+### Quelle est la meilleure app de radio pour iPhone ?
 
 Ça dépend de ce que vous voulez. Les apps gratuites avec publicité couvrent le plus de téléphones, tandis que les lecteurs payants vous achètent l'absence de pub et des extras comme l'enregistrement et l'identification des chansons. Le [comparatif de sept apps de radio](/guides/best-internet-radio-apps.html) liste côte à côte les prix, les plateformes et le nombre de stations.
 
-### La radio marche-t-elle en voiture ?
+### La radio marche-t-elle en voiture ?
 
 Oui, via CarPlay. Voir le [guide CarPlay](/guides/carplay-radio.html) pour l'installation et la consommation de données.
 
-### Combien de données consomme la radio Internet ?
+### Combien de données consomme la radio Internet ?
 
 Environ 58 Mo par heure à 128 kbps, à peu près 1 Go pour 17 heures d'écoute. En Wi-Fi, elle ne consomme aucune donnée cellulaire.
 
-## Prêt à écouter ?
+## Prêt à écouter ?
 
 Procurez-vous Macdio sur l'[App Store](https://apps.apple.com/app/macdio/id6761737888). Un seul achat, tous les appareils Apple, sans abonnement.

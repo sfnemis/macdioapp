@@ -7,15 +7,15 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Confidentialité : Macdio pour macOS</title>
+<title>Confidentialité : Macdio pour macOS</title>
 <meta name="description" content="Confidentialité de Macdio sur macOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données dans l'App Sandbox de macOS.">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
-<link rel="canonical" href="https://macdio.app/privacy-macos.html"><meta property="og:title" content="Confidentialité : Macdio pour macOS">
+<link rel="canonical" href="https://macdio.app/privacy-macos.html"><meta property="og:title" content="Confidentialité : Macdio pour macOS">
 <meta property="og:description" content="Confidentialité de Macdio sur macOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données dans l'App Sandbox de macOS.">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@macdioapp">
-<meta name="twitter:title" content="Confidentialité : Macdio pour macOS">
+<meta name="twitter:title" content="Confidentialité : Macdio pour macOS">
 <meta name="twitter:description" content="Confidentialité de Macdio sur macOS. Aucune donnée personnelle collectée, stockée ou partagée. Comment Macdio traite les données dans l'App Sandbox de macOS.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
@@ -65,8 +65,8 @@
   <p class="reveal">Je n'utilise aucun SDK d'analyse, de publicité ou de pistage.</p>
 
   <h2 class="sec reveal">Données d'utilisation (étiquette de confidentialité)</h2>
-  <p class="reveal">Comme déclaré dans l'étiquette de confidentialité de l'App Store, Macdio collecte <strong>Autres données d'utilisation</strong> pour <strong>Fonctionnalités de l'app</strong>. Il s'agit de votre historique d'écoute : quelles stations vous avez écoutées, combien de temps, et sur quel appareil.</p>
-  <p class="reveal">Ces données sont :</p>
+  <p class="reveal">Comme déclaré dans l'étiquette de confidentialité de l'App Store, Macdio collecte <strong>Autres données d'utilisation</strong> pour <strong>Fonctionnalités de l'app</strong>. Il s'agit de votre historique d'écoute : quelles stations vous avez écoutées, combien de temps, et sur quel appareil.</p>
+  <p class="reveal">Ces données sont :</p>
   <ul class="reveal">
     <li><strong>Non liées</strong> à votre identité</li>
     <li><strong>Non utilisées</strong> pour le pistage</li>
@@ -75,16 +75,20 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio tourne dans l'App Sandbox de macOS avec un minimum d'autorisations : l'accès réseau pour le streaming, le micro pour l'enregistrement et iCloud pour la synchronisation. Il ne peut pas accéder à vos fichiers, vos contacts ou d'autres apps sans votre permission explicite.</p>
+  <p class="reveal">Macdio tourne dans l'App Sandbox de macOS avec les autorisations dont ses fonctions ont besoin : l'accès réseau pour le streaming et pour le relais local qui garde les flux stables, iCloud pour la synchronisation, les notifications pour les nouveaux épisodes, les Apple Events pour envoyer les surlignages vers Apple Notes quand vous le demandez, et le Private Cloud Compute d'Apple pour les résumés d'épisodes. Il n'a aucun accès au micro. Il ne lit ou n'écrit que les fichiers que vous choisissez vous-même, comme un fichier OPML ou une liste de stations, et ne peut atteindre ni les contacts ni les autres apps.</p>
 
   <h2 class="sec reveal">Services tiers</h2>
-  <p class="reveal">Macdio se connecte aux services externes suivants uniquement pour ses fonctions de base :</p>
+  <p class="reveal">Macdio se connecte aux services externes suivants uniquement pour ses fonctions de base :</p>
   <ul class="reveal">
     <li><strong>API Radio Browser</strong> pour parcourir et rechercher des stations de radio. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>dir.macdio.app</strong>, la copie de l'annuaire de stations tenue par Macdio, utilisée seulement quand Radio Browser ne répond pas. Elle ne garde que des totaux quotidiens. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>LRCLIB</strong> pour récupérer les paroles synchronisées. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong>iTunes Search API</strong> pour récupérer les pochettes d'album. Aucune donnée personnelle n'est envoyée.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> fournit les logos des stations de radio qui n'en proposent pas elles-mêmes. Seul le domaine web de la station est envoyé, aucune donnée personnelle.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> pour la recherche de podcasts, les classements et les catégories. Seul le terme recherché ou la catégorie est envoyé. Les épisodes et les flux se téléchargent directement depuis le serveur de chaque émission.</li>
+    <li><strong>Apple ShazamKit</strong> pour Song ID. Une courte signature audio du flux, pas un enregistrement, part vers le service Shazam d'Apple. Le micro n'est jamais utilisé.</li>
+    <li><strong>Le modèle de langage d'Apple</strong> écrit les chapitres et le résumé d'un épisode de podcast, sur l'appareil ou sur le Private Cloud Compute d'Apple, qui ne garde pas le texte.</li>
+    <li><strong>push.macdio.app</strong>, le serveur de notifications de Macdio, reçoit l'adresse de notification de ce Mac et les émissions que vous suivez, seulement tant que Notifications de nouveaux épisodes est activé. Il ne garde rien d'autre.</li>
   </ul>
 
   <h2 class="sec reveal">Synchronisation iCloud</h2>
@@ -95,7 +99,7 @@
   <p class="reveal">Les enregistrements sont stockés localement sur votre Mac. Je n'envoie, ne transmets ni ne consulte vos enregistrements.</p>
 
   <h2 class="sec reveal">Contact</h2>
-  <p class="reveal">Des questions ? Écrivez-moi à <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>.</p>
+  <p class="reveal">Des questions ? Écrivez-moi à <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>.</p>
 </div>
 </main>
 

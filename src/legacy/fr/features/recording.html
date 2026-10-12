@@ -17,7 +17,7 @@
 </header>
 
 <div class="content">
-  <p class="reveal">Au 12 octobre 2026, Macdio enregistre la radio en direct sur iPhone, iPad et Mac. L'enregistrement vient du flux lui-même, donc pas de micro et pas de bruit ambiant. Diviser par piste découpe la session en un fichier par chanson grâce aux limites de chansons envoyées par la station, avec une durée minimale de garde pour qu'un titre corrigé ne coupe jamais une chanson en deux. Le moteur de Song ID analyse ensuite l'enregistrement terminé et liste les chansons qu'il contient avec leur horodatage. Les formats sont le flux d'origine, MP3, AAC ou M4A, en qualité d'origine ou à 128, 192 ou 256 kbps.</p>
+  <p class="reveal">Au 12 octobre 2026, Macdio enregistre la radio en direct sur iPhone, iPad et Mac. L'enregistrement vient du flux lui-même, donc pas de micro et pas de bruit ambiant. Diviser par piste découpe la session en un fichier par chanson grâce aux limites de chansons envoyées par la station, avec une durée minimale de garde pour qu'un titre corrigé ne coupe jamais une chanson en deux. Le moteur de Song ID analyse ensuite l'enregistrement terminé et liste les chansons qu'il contient avec leur horodatage. Le fichier est l'audio même du flux, dans le format et au débit que diffuse la station.</p>
   <div class="pshots reveal">
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-recordings.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Enregistrements sauvegardés sur iPhone avec la durée, la taille et les chansons trouvées dans chacun"><source data-src="/media/iphone-recordings.webm" type="video/webm"><source data-src="/media/iphone-recordings.mp4" type="video/mp4"></video></div>
     <div class="shot"><video data-lazy-video data-poster="/media/iphone-tracks.jpg" autoplay muted loop playsinline preload="none" width="600" height="1218" aria-label="Chansons sauvegardées avec leur pochette et la station d'où elles viennent, dans Macdio sur iPhone"><source data-src="/media/iphone-tracks.webm" type="video/webm"><source data-src="/media/iphone-tracks.mp4" type="video/mp4"></video></div>
@@ -32,19 +32,19 @@
   <ul class="reveal">
     <li>L'enregistrement marche sur iPhone, iPad et Mac. L'Apple TV et l'Apple Watch lisent la radio mais n'enregistrent pas.</li>
     <li>Un enregistrement s'arrête tout seul après trois heures par défaut ; vous pouvez changer la durée maximale. Il n'y a pas d'enregistrement programmé à une heure donnée.</li>
-    <li>L'enregistrement refuse de démarrer avec moins de 500 Mo libres, pour ne jamais remplir l'appareil.</li>
+    <li>L'enregistrement ne démarre pas avec moins de 500 Mo libres. Pendant qu'il tourne, Macdio prévient toutes les cinq minutes dès que l'espace libre passe sous 500 Mo, puis arrête et sauvegarde le fichier quand ça devient critique, pour que l'appareil ne soit jamais plein.</li>
     <li>Les enregistrements restent dans l'app. Pas d'export, pas de feuille de partage, pas d'AirDrop, pas de copie dans Fichiers ; c'est une décision prise avec l'App Review et elle ne changera pas.</li>
   </ul>
-  <h2 class="reveal">Formats et qualité</h2>
-  <p class="reveal">Original garde le flux exactement tel qu'il est diffusé, ce qui, pour une station en AAC ou en MP3, est la meilleure copie possible. MP3, AAC et M4A réencodent à 128, 192 ou 256 kbps quand vous voulez des fichiers plus petits ou un format qu'un lecteur précis préfère. Les flux FLAC et Ogg sont gardés tels quels en Original.</p>
+  <h2 class="reveal">Format et qualité</h2>
+  <p class="reveal">Il n'y a pas de réglage de qualité à rater : Macdio écrit l'audio exactement tel qu'il arrive, donc une station MP3 donne un MP3, une station AAC un AAC, et une station FLAC ou Ogg garde aussi son format. Une station à 320 kbps donne un fichier à 320 kbps. Quand Song ID a nommé la chanson dans un enregistrement AAC, son titre, son artiste, sa pochette et ses paroles sont écrits dans le fichier, qui devient alors un .m4a.</p>
   <h2 class="reveal">Est-ce autorisé ?</h2>
-  <p class="reveal">Enregistrer une émission pour votre propre écoute, c'est ce que faisait une platine cassette pendant des décennies, et dans la plupart des pays l'usage personnel ne pose pas de problème. Partager ou vendre un enregistrement, si, et c'est aussi pour ça que Macdio garde les enregistrements dans l'app. Le <a class="inline" href="../guides/record-internet-radio.html">guide de l'enregistrement</a> passe en revue la loi pays par pays.</p>
+  <p class="reveal">Enregistrer une émission pour votre propre écoute, c'est ce que faisait une platine cassette pendant des décennies, et dans la plupart des pays l'usage personnel ne pose pas de problème. Partager ou vendre un enregistrement, si, et c'est aussi pour ça que Macdio garde les enregistrements dans l'app. Le <a class="inline" href="../guides/record-internet-radio.html">guide de l'enregistrement</a> en dit plus sur la place de l'enregistrement pour un usage personnel.</p>
   <h2 class="reveal">Questions fréquentes</h2>
   <div class="faq reveal">
     <details class="faq-item"><summary>Macdio peut-il enregistrer la radio Internet ?</summary><div class="faq-a">Oui, sur iPhone, iPad et Mac, directement depuis le flux, sans micro. Diviser par piste fait un fichier nommé par chanson.</div></details>
     <details class="faq-item"><summary>Puis-je programmer un enregistrement ?</summary><div class="faq-a">Non. L'enregistrement démarre à la main et s'arrête après la durée maximale que vous avez fixée, trois heures par défaut.</div></details>
     <details class="faq-item"><summary>Puis-je exporter ou partager un enregistrement ?</summary><div class="faq-a">Non. Les enregistrements restent dans l'app, par choix et en accord avec l'App Review.</div></details>
-    <details class="faq-item"><summary>Dans quels formats enregistre-t-il ?</summary><div class="faq-a">Le flux d'origine, MP3, AAC ou M4A, en qualité d'origine ou à 128, 192 ou 256 kbps.</div></details>
+    <details class="faq-item"><summary>Dans quels formats enregistre-t-il ?</summary><div class="faq-a">Ceux de la station : MP3, AAC, FLAC ou Ogg, au débit de la station. Les enregistrements AAC deviennent des fichiers .m4a une fois leurs chansons étiquetées.</div></details>
     <details class="faq-item"><summary>Est-ce que ça marche sur Apple TV ou Apple Watch ?</summary><div class="faq-a">Non. Ces versions lisent la radio mais n'enregistrent pas.</div></details>
   </div>
   <h2 class="reveal">Essayez</h2>
