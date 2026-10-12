@@ -1,17 +1,28 @@
 ---
+// Ft5 Statement: one closing sentence, then the wordmark, the link row and
+// the credit in muted small type.
 import { localePath } from '../site/paths.mjs';
 import { t } from '../i18n/index.mjs';
 const { lang } = Astro.props;
 const s = t(lang);
 const p = (english) => localePath(lang, english);
 ---
-<footer class="wrap footer">
-  <ul>
-    <li><a href={p('/support.html')}>{s.footer.support}</a></li>
-    <li><a href={p('/privacy.html')}>{s.footer.privacy}</a></li>
-    <li><a href={p('/presskit.html')}>{s.footer.press}</a></li>
-    <li><a href={p('/transparency.html')}>{s.footer.transparency}</a></li>
-    <li><a href={p('/accessibility.html')}>{s.footer.accessibility}</a></li>
-  </ul>
-  <p>© {new Date().getFullYear()} {s.footer.rights}</p>
+<footer class="foot wrap">
+  <p class="foot__line">{s.footer.statement}</p>
+  <div class="foot__meta">
+    <span class="foot__mark">{s.site.name}</span>
+    <ul class="foot__links">
+      {s.footer.links.map((l) => <li><a href={p(l.path)}>{l.label}</a></li>)}
+    </ul>
+    <p class="muted small">{s.footer.madeBy} © {new Date().getFullYear()} {s.footer.rights}</p>
+  </div>
 </footer>
+<style>
+  .foot { padding-block: var(--space-3xl) var(--space-xl); display: grid; gap: var(--space-xl); }
+  .foot__line { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.8rem); line-height: 1.05; letter-spacing: -0.02em; max-inline-size: 28ch; font-weight: 700; }
+  .foot__meta { display: grid; gap: var(--space-md); padding-block-start: var(--space-md); border-block-start: var(--rule-hair) solid var(--color-rule); }
+  .foot__mark { font-weight: 700; }
+  .foot__links { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); }
+  .foot__links a { color: var(--color-ink-2); text-decoration: none; white-space: nowrap; font-size: var(--text-sm); }
+  .foot__links a:hover { color: var(--color-ink); text-decoration: underline; }
+</style>

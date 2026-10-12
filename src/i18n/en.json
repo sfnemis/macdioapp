@@ -4,22 +4,124 @@
     "url": "https://macdio.app"
   },
   "nav": {
-    "home": "Home",
+    "skip": "Skip to content",
+    "menu": "Menu",
+    "platforms": "Devices",
     "features": "Features",
     "guides": "Guides",
     "pricing": "Pricing",
     "community": "Community",
+    "appStore": "Get it on the App Store",
     "language": "Language",
-    "theme": "Theme",
-    "skip": "Skip to content"
+    "theme": "Switch between light and dark",
+    "platformItems": [
+      {
+        "label": "iPhone",
+        "blurb": "Radio, podcasts, Clock Mode, widgets",
+        "path": "/iphone.html"
+      },
+      {
+        "label": "iPad",
+        "blurb": "Full-screen lyrics and transcripts",
+        "path": "/ipad.html"
+      },
+      {
+        "label": "Mac",
+        "blurb": "Native app with a menu bar player",
+        "path": "/mac.html"
+      },
+      {
+        "label": "Apple TV",
+        "blurb": "Radio and podcasts on the big screen",
+        "path": "/apple-tv.html"
+      },
+      {
+        "label": "Apple Watch",
+        "blurb": "Plays on its own, no phone needed",
+        "path": "/apple-watch.html"
+      },
+      {
+        "label": "CarPlay",
+        "blurb": "Favourites and Song ID in the car",
+        "path": "/carplay.html"
+      }
+    ],
+    "featureItems": [
+      {
+        "label": "Podcast transcripts",
+        "blurb": "Made on your device, any episode",
+        "path": "/features/podcast-transcripts.html"
+      },
+      {
+        "label": "Highlights",
+        "blurb": "Save a moment to your notes app",
+        "path": "/features/highlights.html"
+      },
+      {
+        "label": "Song ID",
+        "blurb": "From the stream, no microphone",
+        "path": "/features/song-id.html"
+      },
+      {
+        "label": "Recording",
+        "blurb": "Live radio, split into tracks",
+        "path": "/features/recording.html"
+      },
+      {
+        "label": "Synced lyrics",
+        "blurb": "Lined up with the live stream",
+        "path": "/features/synced-lyrics.html"
+      },
+      {
+        "label": "Podcasts",
+        "blurb": "4.7 million shows, one purchase",
+        "path": "/podcasts.html"
+      }
+    ],
+    "appStoreShort": "App Store"
   },
   "footer": {
-    "support": "Support",
-    "privacy": "Privacy",
-    "press": "Press Kit",
-    "transparency": "Transparency",
-    "accessibility": "Accessibility",
-    "rights": "Sait Firat NEMIS. All rights reserved."
+    "statement": "One purchase. No account, no ads, no subscription.",
+    "madeBy": "Made by Sait Firat NEMIS.",
+    "rights": "All rights reserved.",
+    "links": [
+      {
+        "label": "Support",
+        "path": "/support.html"
+      },
+      {
+        "label": "Guides",
+        "path": "/guides/"
+      },
+      {
+        "label": "Stations",
+        "path": "/stations.html"
+      },
+      {
+        "label": "Submit a station",
+        "path": "/submit-station.html"
+      },
+      {
+        "label": "Press kit",
+        "path": "/presskit.html"
+      },
+      {
+        "label": "Privacy",
+        "path": "/privacy.html"
+      },
+      {
+        "label": "Transparency",
+        "path": "/transparency.html"
+      },
+      {
+        "label": "Accessibility",
+        "path": "/accessibility.html"
+      },
+      {
+        "label": "Community",
+        "path": "/community.html"
+      }
+    ]
   },
   "pages": {
     "/": {

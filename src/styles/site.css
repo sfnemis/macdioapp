@@ -69,6 +69,9 @@ small, .small { font-size: var(--text-sm); }
 .btn--fill { background: var(--color-accent-strong); border-color: var(--color-accent-strong); color: var(--color-accent-ink); }
 .btn--fill:hover { color: var(--color-accent-ink); }
 .btn--chip { border-color: var(--color-rule); }
+/* The store button keeps one line on phones by switching to its short label. */
+.btn__short { display: none; }
+@media (max-width: 40rem) { .nav .btn__long { display: none; } .nav .btn__short { display: inline; } }
 .link { color: var(--color-ink); text-decoration: underline; text-decoration-color: var(--color-rule); text-underline-offset: 0.2em; white-space: nowrap; }
 .link:hover { text-decoration-color: var(--color-accent); color: var(--color-ink); }
 

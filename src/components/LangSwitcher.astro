@@ -16,7 +16,13 @@ const s = t(lang);
   // Remember the picked language for the Worker's redirect at "/".
   document.querySelectorAll('.lang a[data-lang]').forEach((a) => {
     a.addEventListener('click', () => {
-      document.cookie = 'lang=' + a.dataset.lang + '; Max-Age=31536000; Path=/; SameSite=Lax; Secure';
+      document.cookie = 'lang=' + a.dataset.lang + '; Max-Age=31536000; Path=/; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
     });
   });
 </script>
+<style>
+  .lang ul { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-2xs); }
+  .lang a { display: block; padding: var(--space-2xs) var(--space-sm); border-radius: var(--radius-sm); color: var(--color-ink); text-decoration: none; white-space: nowrap; }
+  .lang a:hover { background: var(--color-paper-2); }
+  .lang a[aria-current="page"] { font-weight: 600; }
+</style>
