@@ -4,7 +4,7 @@ description: "說出電台名稱，它就播放。Macdio 聽得懂的每一句 S
 datePublished: 2026-09-20
 lastUpdated: 2026-10-12
 faq:
-  - q: "一定要說「用 Macdio」嗎？"
+  - q: "一定要說「在 Macdio 中」嗎？"
     a: "要。Siri 依名稱把語句送到對應的 App，所以每句指令都要帶 Macdio。沒有的話，Siri 會播放 Apple Music，或反問你的意思。"
   - q: "Siri 認識哪些電台？"
     a: "你的收藏和最近播放的電台。簡稱也可以，例如用 BBC 1 代表 BBC Radio 1，或用 Radio Paradise 代表全名裡帶著位元率的串流。"
@@ -20,7 +20,7 @@ faq:
 
 說出電台的名稱，它就播放。在車上你完全不用看螢幕。
 
-從 Macdio 2.7.7 開始，Siri 認識你的電台。「嘿 Siri，用 Macdio 播放 Radio Paradise」會在 iPhone 上、透過 AirPods，或從方向盤上的語音按鈕開始串流。下面的語句是 Siri 接受的，同一份清單也在 App 的「設定」、「Siri」裡，以你自己的語言顯示。
+從 Macdio 2.7.7 開始，Siri 認識你的電台。「嘿 Siri，在 Macdio 中播放 Radio Paradise」會在 iPhone 上、透過 AirPods，或從方向盤上的語音按鈕開始串流。下面的語句是 Siri 接受的，同一份清單也在 App 的「設定」、「Siri」裡，以你自己的語言顯示。
 
 ## 說出電台的名稱
 
@@ -30,14 +30,14 @@ Siri 會學習你的收藏和最近播放的電台，總共大約二十個，也
 
 每一句都以「嘿 Siri」開頭。電台放在方括號的位置。
 
-- 用 Macdio 播放 [電台]
-- 用 Macdio 聽 [電台]
-- 用 Macdio 轉到 [電台]
-- 用 Macdio 播放我的收藏
-- 用 Macdio 播放我的第一個收藏
-- 用 Macdio 播放我收藏的電台
+- 在 Macdio 中播放 [電台]
+- 用 Macdio 收聽 [電台]
+- 在 Macdio 轉到 [電台]
+- 在 Macdio 中播放我的收藏
+- 在 Macdio 播放我的第一個喜好項目
+- 在 Macdio 播放我喜愛的電台
 - 繼續播放 Macdio、打開 Macdio、啟動 Macdio
-- 停止 Macdio、暫停 Macdio、用 Macdio 停止電台
+- 停止 Macdio、暫停 Macdio、停止 Macdio 的電台
 
 「播放我的收藏」會從第一個收藏開始，並把其餘的排進佇列，所以耳機或方向盤上的跳過按鈕能在清單裡移動。
 
@@ -51,11 +51,11 @@ Siri 使用它所設定語言的語句，Macdio 內建英文、阿拉伯文、�
 
 ## 為什麼 App 的名稱是語句的一部分
 
-只有語句裡提到 App 的名稱，Siri 才會把它送到那個 App。單說「播放 Radio Paradise」會送到 Apple Music，而那裡沒有這個電台。「用 Macdio 播放 Radio Paradise」就會送到 Macdio。上面每一句都帶著名稱，就是這個原因。
+只有語句裡提到 App 的名稱，Siri 才會把它送到那個 App。單說「播放 Radio Paradise」會送到 Apple Music，而那裡沒有這個電台。「在 Macdio 中播放 Radio Paradise」就會送到 Macdio。上面每一句都帶著名稱，就是這個原因。
 
 ## 常見問題
 
-### 一定要說「用 Macdio」嗎？
+### 一定要說「在 Macdio 中」嗎？
 
 要。Siri 依名稱把語句送到對應的 App，所以每句指令都要帶 Macdio。沒有的話，Siri 會播放 Apple Music，或反問你的意思。
 
