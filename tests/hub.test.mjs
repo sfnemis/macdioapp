@@ -13,6 +13,6 @@ const cats = { 6: 'Release notes', 8: 'Feature requests' };
 test('pickTopics drops pinned "About" topics, sorts newest first, limits and links', () => {
   const r = pickTopics(sample, cats, 2);
   assert.equal(r.length, 2);
-  assert.deepEqual(r[0], { title: 'Persistent / recurring sleep timer', url: 'https://hub.devdio.pro/t/sleep/112', date: '2026-10-06', category: 'Feature requests' });
+  assert.deepEqual(r[0], { id: 112, title: 'Persistent / recurring sleep timer', url: 'https://hub.devdio.pro/t/sleep/112', date: '2026-10-06', category: 'Feature requests' });
   assert.equal(r[1].date, '2026-09-30');
 });

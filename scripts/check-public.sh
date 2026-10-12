@@ -24,21 +24,21 @@ MUST_404=(
   /public/ /public/index.html /dist/ /dist/index.html
 )
 # The site breaks without these, so a 404 here is also a failure.
-MUST_200=(/ /index.html /features.html /mac.html /guides/ /pricing.json /sitemap.xml /robots.txt)
+MUST_200=(/ /index.html /features.html /mac.html /guides/ /guides/siri-radio.html /tr/ /de/ /pricing.html /podcasts.html /carplay.html /features/song-id.html /compare/apple-podcasts.html /api/hub /pricing.json /sitemap.xml /robots.txt /hub-badge.js)
 # One hashed asset, read from the guide hub (marketing pages inline their small CSS), so the CDN path is proven too.
 asset=$(curl -s "$HOST/guides/" | grep -o '/_astro/[^"]*\.css' | head -1)
 [ -n "$asset" ] && MUST_200+=("$asset")
 
 fail=0
 for path in "${MUST_404[@]}"; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' "$HOST$path")
+  code=$(curl -s -o /dev/null -w '%{http_code}' -H 'Sec-Fetch-Mode: navigate' "$HOST$path")
   if [ "$code" != "404" ]; then
     echo "LEAK: $path is $code, expected 404"
     fail=1
   fi
 done
 for path in "${MUST_200[@]}"; do
-  code=$(curl -s -o /dev/null -w '%{http_code}' "$HOST$path")
+  code=$(curl -s -o /dev/null -w '%{http_code}' -H 'Sec-Fetch-Mode: navigate' "$HOST$path")
   if [ "$code" != "200" ]; then
     echo "MISSING: $path is $code, expected 200"
     fail=1

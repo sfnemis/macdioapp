@@ -6,7 +6,7 @@ import { readdirSync, statSync, readFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const ALLOWED_SRC = /^(?:https:\/\/www\.googletagmanager\.com\/|\/(?:parts|redesign)\.js$)/;
+const ALLOWED_SRC = /^(?:https:\/\/www\.googletagmanager\.com\/|\/(?:parts|redesign|hub-badge)\.js$)/;
 
 export function scriptProblems(html) {
   const problems = [];

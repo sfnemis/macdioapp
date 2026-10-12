@@ -1,0 +1,8 @@
+---
+// The site's 404 page in the marketing shell. Starlight injects its own
+// 404 route only when a project has none; the Worker serves this file
+// (dist/404.html) with status 404 for every miss.
+import Legacy from '../layouts/Legacy.astro';
+import { loadPage } from '../site/legacy.mjs';
+---
+<Legacy lang="en" path="/404.html" page={loadPage('en', '/404.html')} />

@@ -57,6 +57,17 @@ saying what happened to it.
   more functional form (proposed: a "what's new" dot plus a small popover with
   the last three release notes, fed by a Worker route that caches the hub's
   JSON, remembered per visitor in localStorage).
+  Progress 2026-10-12 20:40: built. Worker route `/api/hub` (worker.js
+  `hubFeed`) returns the three newest release notes from
+  hub.devdio.pro/c/macdio/release-notes/6.json with topic ids, cached by
+  Cloudflare for ten minutes and by the browser for five, 502 with an empty
+  list when the hub is down. `public/hub-badge.js` (loaded on the marketing
+  pages and the guide hub) asks that route, and when the newest post id is
+  above `localStorage` key `macdio.hub.seen` it puts a "New" pill on the logo;
+  the pill opens a small list of the three posts with dates, opening one or
+  "Got it" remembers the id and removes the pill. The browser never contacts
+  the hub itself. W9's build-time feed (src/data/hub.json) stays for later
+  page use; both read src/site/hub.mjs.
 - [x] **W12 Mobile overflow on the live stations page** (found 2026-10-12 19:20
   during the port, by a width probe at 375 px). The stations page was 465 px
   wide on a 375 px phone: the country and genre selects take the width of their
@@ -66,6 +77,22 @@ saying what happened to it.
   aurora and equalizer bars reach past the viewport too; the body already hid
   them, the clip on html makes it explicit). Verified headless: scrollWidth 375
   on the new build, 465 on the live site. Ships with the port.
+- [x] **W14 Browser navigations to "/" would have been the 404 page** (found
+  2026-10-12 20:55 with `wrangler dev`, before any deploy). The v2 hosting
+  config had `not_found_handling: "404-page"`; with that setting Cloudflare's
+  asset layer answers every browser navigation that misses an asset by itself,
+  before the Worker runs (`Sec-Fetch-Mode: navigate` triggers it), so "/",
+  "/tr/" and "/guides/" (directory URLs the Worker maps to index.html) came
+  back as the 404 page in Chrome while curl, which sends no such header, got
+  the real page. The deployed config on `main` has no `not_found_handling`
+  (default "none"), which is why the live site works. Fixed: "none" in
+  wrangler.jsonc, and the Worker serves `404.html` with status 404 for real
+  misses (unit test), and the 404 page is now in the marketing shell
+  (`src/pages/404.astro`). Verified with headless Chrome against `wrangler
+  dev`: "/", "/tr/", "/guides/" 200 as navigations, "/nope.html" and "/nope/"
+  404 with the page. Note for the deploy check: `scripts/check-public.sh`
+  must probe with `-H "Sec-Fetch-Mode: navigate"` too, or this class of bug
+  stays invisible to curl.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

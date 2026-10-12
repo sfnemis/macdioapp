@@ -82,3 +82,36 @@ test('a locale that is not live never gets a redirect, even when the browser ask
   assert.equal(r.status, 200);
   assert.equal(await r.text(), 'asset:/index.html');
 });
+
+test('/api/hub returns the three newest release notes with ids, and a 502 with an empty list when the hub is down', async () => {
+  const topics = [
+    { id: 109, slug: 'macdio-3-0', title: 'Macdio 3.0 is out', created_at: '2026-09-30T10:00:00Z', category_id: 6 },
+    { id: 50, slug: 'about', title: 'About the Release Notes category', created_at: '2026-01-01T00:00:00Z', category_id: 6, pinned: true },
+    { id: 105, slug: 'macdio-2-7-5', title: 'Macdio 2.7.5 is out', created_at: '2026-09-16T10:00:00Z', category_id: 6 },
+    { id: 102, slug: 'macdio-2-7', title: 'Macdio 2.7 is live', created_at: '2026-09-12T10:00:00Z', category_id: 6 },
+    { id: 90, slug: 'macdio-2-6', title: 'Macdio 2.6', created_at: '2026-08-01T10:00:00Z', category_id: 6 },
+  ];
+  const fakeFetch = async (url) => { assert.match(url, /hub\.devdio\.pro\/c\/macdio\/release-notes\/6\.json/); return new Response(JSON.stringify({ topic_list: { topics } }), { status: 200 }); };
+  const res = await handle(new Request('https://macdio.app/api/hub'), env, ['en'], fakeFetch);
+  assert.equal(res.status, 200);
+  assert.match(res.headers.get('Cache-Control'), /max-age=300/);
+  const body = await res.json();
+  assert.deepEqual(body.releaseNotes.map((t) => t.id), [109, 105, 102]);
+  assert.equal(body.releaseNotes[0].url, 'https://hub.devdio.pro/t/macdio-3-0/109');
+  const down = await handle(new Request('https://macdio.app/api/hub'), env, ['en'], async () => new Response('nope', { status: 503 }));
+  assert.equal(down.status, 502);
+  assert.deepEqual((await down.json()).releaseNotes, []);
+});
+
+test('a miss is answered with the site 404 page, status 404; directory URLs still map to index.html', async () => {
+  const assets = { ASSETS: { fetch: async (req) => { const p = new URL(req.url).pathname; if (p === '/404.html') return new Response('<h1>Not found</h1>', { status: 200, headers: { 'Content-Type': 'text/html' } }); if (p === '/guides/index.html' || p === '/index.html') return new Response('page:' + p, { status: 200 }); return new Response('', { status: 404 }); } } };
+  const miss = await handle(new Request('https://macdio.app/nope.html'), assets, ['en']);
+  assert.equal(miss.status, 404);
+  assert.equal(await miss.text(), '<h1>Not found</h1>');
+  const dirMiss = await handle(new Request('https://macdio.app/nope/'), assets, ['en']);
+  assert.equal(dirMiss.status, 404);
+  assert.equal(await dirMiss.text(), '<h1>Not found</h1>');
+  const guides = await handle(new Request('https://macdio.app/guides/'), assets, ['en']);
+  assert.equal(guides.status, 200);
+  assert.equal(await guides.text(), 'page:/guides/index.html');
+});

@@ -70,5 +70,6 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" href="/sitemap-index.xml">
 {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+<script is:inline src="/hub-badge.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>

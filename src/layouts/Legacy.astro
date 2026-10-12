@@ -60,6 +60,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <LegacyFooter lang={lang} />
 <script is:inline src="/parts.js"></script>
 <script is:inline src="/redesign.js"></script>
+<script is:inline src="/hub-badge.js" defer></script>
 {page.bodyScripts.map((s) => <Fragment set:html={`<script>${s}</script>`} />)}
 </body>
 </html>

@@ -2,7 +2,8 @@
 import Legacy from '../layouts/Legacy.astro';
 import { legacyPages, loadPage } from '../site/legacy.mjs';
 export function getStaticPaths() {
-  return legacyPages('en').filter((p) => /^\/[^/]+\.html$/.test(p)).map((p) => ({ params: { page: p.slice(1, -5) } }));
+  // 404.html has its own route (src/pages/404.astro) so Starlight does not add one.
+  return legacyPages('en').filter((p) => /^\/[^/]+\.html$/.test(p) && p !== '/404.html').map((p) => ({ params: { page: p.slice(1, -5) } }));
 }
 const path = `/${Astro.params.page}.html`;
 ---

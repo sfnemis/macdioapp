@@ -26,7 +26,13 @@
   "assets": {
     "directory": "./dist",
     "html_handling": "none",
-    "not_found_handling": "404-page",
+    // "none", not "404-page": with 404-page the asset layer answers every
+    // browser navigation that misses an asset by itself, before the Worker
+    // runs, so "/", "/tr/" and "/guides/" (directory URLs the Worker maps to
+    // index.html) came back as the 404 page in a browser while curl, which
+    // sends no Sec-Fetch-Mode header, got the real page. Found 2026-10-12
+    // with wrangler dev. The Worker serves 404.html for real misses.
+    "not_found_handling": "none",
     "binding": "ASSETS"
   },
 
