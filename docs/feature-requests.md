@@ -14,6 +14,10 @@ saying what happened to it.
   routes in every live locale, Worker language redirect with tests, sitemap with hreflang,
   hreflang/link/i18n checks in the build, web-size media, counts, claims register,
   Hallmark audit. Not deployed. Next: F2 English design.
+  F2a (2026-10-12): design system and home page built on branch `v2`; after Sait's
+  review the theme moved to dark paper, Instrument Serif with italic accent phrases,
+  brass accent and a CSS tuner in the hero (spec 7.1). Reviewed by a fresh reviewer,
+  fixes applied. Awaiting Sait's verdict on the new look before F2b.
 - [ ] **W9 Community feed on the home page** (Sait, 2026-10-12 17:13). Show the hub
   (https://hub.devdio.pro, hub.macdio.app 301s there) on the home page: latest
   release notes or recently resolved issues, dated and linked. Fetched from the

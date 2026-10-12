@@ -245,6 +245,26 @@ Fixed constraints for the pass:
 - Motion: CSS only, `prefers-reduced-motion` respected; the current `.reveal` fade is not
   reused above the fold (it cost about 900 ms of LCP in September).
 
+### 7.1 Revision, 2026-10-12 18:15 (Sait, after seeing the first home page)
+
+Sait pointed at the Hallmark showcase's "Static Hour" page (dark, serif, one italic
+accent phrase, a hand-built animated object, a player bar) as what he imagined. The
+design system changed accordingly, the structure did not:
+
+- Dark paper is the default (`oklch(11% 0.012 277)`, indigo-tinted); the light paper is
+  the toggle's alternative, not the system preference.
+- Display face: Instrument Serif (OFL, self-hosted, latin and latin-ext subsets from the
+  fontsource package; other scripts fall back to the system serif). Body stays the
+  system sans; mono for meta lines. Headings carry one italic phrase in the accent
+  colour (Hallmark gate 38a open by Sait's call).
+- Accent: warm brass `oklch(80% 0.16 72)` on dark, `oklch(56% 0.16 58)` on light; the
+  brand indigo stays as the second accent (tuner bars, blooms) and in the captures.
+- Hero enrichment: a CSS radio tuner (Tier A, `src/components/Tuner.astro`): frequency
+  scale, drifting needle, LIVE lamp, the fictional station of the captures; still under
+  reduced motion. No gradient text, no blobs, no drawn device chrome.
+- Buttons are pills; nav links are small uppercase mono; the sticky tour bar reads as a
+  player bar.
+
 ## 8. Content rules
 
 - Honest copy against the code (observation 0004): `src/data/claims.md` lists every
