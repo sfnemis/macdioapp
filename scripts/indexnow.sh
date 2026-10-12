@@ -10,7 +10,8 @@ test -f "public/$KEY.txt" || { echo "key file missing: public/$KEY.txt"; exit 1;
 BODY=$(python3 - "$HOST" "$KEY" <<'PY'
 import json, re, sys
 host, key = sys.argv[1], sys.argv[2]
-urls = re.findall(r"<loc>([^<]+)</loc>", open("public/sitemap.xml").read())
+# The sitemap is written by the build (scripts/sitemap.mjs) into dist/.
+urls = re.findall(r"<loc>([^<]+)</loc>", open("dist/sitemap.xml").read())
 assert urls, "sitemap has no urls"
 print(json.dumps({"host": host, "key": key,
                   "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}))

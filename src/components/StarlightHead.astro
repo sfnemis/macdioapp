@@ -19,7 +19,11 @@ const pageTitle = entry.data.title;
 // A page may carry its own <title> in frontmatter head (the hub index keeps a
 // short H1 and a longer search title); otherwise the H1 with the site name.
 const custom = entry.data.head?.find((h) => h.tag === 'title')?.content;
-const title = custom || (/Macdio/.test(pageTitle) ? pageTitle : `${pageTitle} | ${siteTitle}`);
+// The brand goes after the guide's own title only while the whole stays
+// within 60 characters (what search results show): "| Macdio Guides", then
+// "| Macdio", then nothing. Titles that already name Macdio stay as they are.
+const withBrand = [`${pageTitle} | ${siteTitle}`, `${pageTitle} | Macdio`].find((t) => t.length <= 60);
+const title = custom || (/Macdio/.test(pageTitle) ? pageTitle : withBrand || pageTitle);
 const description = entry.data.description ?? '';
 const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
 // A locale carries a guide when it is a guide locale (live, with translated
@@ -29,7 +33,7 @@ const hasDoc = (c) => hasGuide(c, path);
 const alts = alternates(path, hasDoc);
 const isGuide = path !== '/guides/';
 const iso = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : undefined);
-const author = { '@type': 'Person', name: 'Sait Firat NEMIS', url: 'https://macdio.app/presskit.html', sameAs: ['https://x.com/macdioapp', 'https://hub.devdio.pro'] };
+const author = { '@type': 'Person', name: 'Sait Firat NEMIS', url: 'https://macdio.app/presskit.html', sameAs: ['https://x.com/devdiopro', 'https://www.instagram.com/devdiopro', 'https://www.youtube.com/@Devdiopro', 'https://www.tiktok.com/@devdiopro', 'https://hub.devdio.pro'] };
 const publisher = { '@type': 'Organization', name: 'Macdio', url: 'https://macdio.app', logo: { '@type': 'ImageObject', url: 'https://macdio.app/assets/app-icon.png', width: 512, height: 512 } };
 const jsonld = [];
 if (isGuide) {
@@ -60,7 +64,7 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content={locale.lang.replace('-', '_')}>
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@macdioapp">
+<meta name="twitter:site" content="@devdiopro">
 <meta name="twitter:title" content={title}>
 <meta name="twitter:description" content={description}>
 <meta name="twitter:image" content={image}>

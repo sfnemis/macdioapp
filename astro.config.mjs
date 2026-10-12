@@ -31,10 +31,10 @@ export default defineConfig({
       defaultLocale: 'root',
       sidebar: sidebar(),
       social: [
-        { icon: 'x.com', label: 'Macdio on X', href: 'https://x.com/macdioapp' },
-        { icon: 'instagram', label: 'Macdio on Instagram', href: 'https://www.instagram.com/macdioapp' },
-        { icon: 'tiktok', label: 'Macdio on TikTok', href: 'https://www.tiktok.com/@macdioapp' },
-        { icon: 'youtube', label: 'Macdio on YouTube', href: 'https://www.youtube.com/@macdioapp' },
+        { icon: 'x.com', label: 'Devdio on X', href: 'https://x.com/devdiopro' },
+        { icon: 'instagram', label: 'Devdio on Instagram', href: 'https://www.instagram.com/devdiopro' },
+        { icon: 'tiktok', label: 'Devdio on TikTok', href: 'https://www.tiktok.com/@devdiopro' },
+        { icon: 'youtube', label: 'Devdio on YouTube', href: 'https://www.youtube.com/@Devdiopro' },
       ],
       tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       // src/pages/404.astro is the site's 404 in the marketing shell.

@@ -283,6 +283,16 @@ saying what happened to it.
     sync"); the press kit said "effortless iCloud sync across all devices";
     the controller guide's Apple TV answer now matches apple-tv.html. The
     unused watch screenshot file was deleted from public/.
+- [x] **W26 Social links go to the Devdio accounts** (Sait, 2026-10-13 02:18).
+  x.com/devdiopro, instagram.com/devdiopro, youtube.com/@Devdiopro,
+  tiktok.com/@devdiopro replace the old macdioapp handles in the nav, footer,
+  mobile menu, guide header, twitter:site and every JSON-LD sameAs (which now
+  lists all four plus the hub); link labels say "Devdio on X" and so on in 14
+  languages. Same pass before deploy: llms.txt rewritten (3.0.4, 14 languages,
+  every new page and guide; it wrongly listed Live Activities and "zero data
+  collection"), guide titles kept within 60 characters (78 translated titles
+  ran to 75 with the "| Macdio Guides" suffix), scripts/indexnow.sh reads the
+  built dist/sitemap.xml (public/ has none any more, so it would have failed).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
