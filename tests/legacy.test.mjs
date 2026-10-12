@@ -81,8 +81,8 @@ test('legacyPages lists the English site paths a locale has on disk', () => {
   const en = legacyPages('en');
   assert.ok(en.includes('/'));
   assert.ok(en.includes('/mac.html'));
-  assert.ok(en.includes('/guides/'));
-  assert.ok(en.includes('/guides/siri-radio.html'));
+  // The guides are Starlight Markdown now, not legacy pages.
+  assert.ok(!en.some((p) => p.startsWith('/guides/')));
   assert.ok(!en.includes('/sitemap.xml'));
   assert.deepEqual(legacyPages('tr'), ['/']);
   assert.ok(hasPage('tr', '/'));
@@ -97,9 +97,9 @@ test('loadPage reads a live page with its links localized', () => {
   assert.ok(home.main.includes('href="/features.html"'));
   assert.ok(home.main.includes('src="/assets/app-icon-276.png"'));
   assert.ok(!home.main.includes('static-sitelinks'));
-  const guide = loadPage('en', '/guides/siri-radio.html');
-  assert.equal(guide.ogType, 'article');
-  assert.equal(guide.mainAttrs, 'class="platform-page"');
+  const compare = loadPage('en', '/tunein-alternative.html');
+  assert.equal(compare.ogType, 'article');
+  assert.equal(compare.mainAttrs, 'class="platform-page"');
   const tr = loadPage('tr', '/');
   assert.ok(tr.main.includes('src="/assets/screenshots/iPhone_web/Discover-b.webp"'));
 });

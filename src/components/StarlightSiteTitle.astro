@@ -1,12 +1,13 @@
 ---
-// Replaces Starlight's SiteTitle: its default links the locale root through
-// Starlight's path formatter, which under build.format "file" becomes
-// "/tr.html" (a 404). This links the real locale home (/, /tr/, ...).
+// Replaces Starlight's SiteTitle: the Macdio brand linking to the site home,
+// then the Guides hub. Starlight's default links the locale root through its
+// path formatter, which under build.format "file" becomes "/tr.html".
 import { localePath } from '../site/paths.mjs';
-const { siteTitle, locale } = Astro.locals.starlightRoute;
+const { locale } = Astro.locals.starlightRoute;
 const code = locale ?? 'en';
 ---
-<a href={localePath(code, '/')} class="site-title">{siteTitle}</a>
-<style>
-  .site-title { color: var(--sl-color-text-accent); font-weight: 600; text-decoration: none; white-space: nowrap; }
-</style>
+<span class="guides-brand">
+  <a class="guides-brand" href={localePath(code, '/')}><img src="/icon-192.png" alt="" width="192" height="192">Macdio</a>
+  <span class="sep" aria-hidden="true">/</span>
+  <a class="guides-brand hub" href={localePath(code, '/guides/')}>Guides</a>
+</span>

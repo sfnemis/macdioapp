@@ -1,17 +1,11 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import { liveLocales } from './src/site/locales.mjs';
+import { sidebar } from './src/data/guides.mjs';
 
-// Starlight owns Astro's i18n config (setting both is an error). Its locale
-// map mirrors src/site/locales.mjs so guides and marketing pages agree on
-// which languages exist.
-const starlightLocales = Object.fromEntries(
-  liveLocales().map((l) => [
-    l.code === 'en' ? 'root' : l.code,
-    { label: l.label, lang: l.lang, ...(l.dir === 'rtl' ? { dir: 'rtl' } : {}) },
-  ]),
-);
-
+// Starlight owns Astro's i18n config (setting both is an error). The guides
+// are English only until a locale has translated guides under
+// src/content/docs/<code>/; then that locale is added here (W3). The
+// marketing pages handle their own locales (src/legacy/<code>/).
 export default defineConfig({
   site: 'https://macdio.app',
   // file: features.astro -> /features.html and Starlight writes ".html" on every
@@ -20,8 +14,8 @@ export default defineConfig({
   // a literal "index" segment, so /tr/index.html and /guides/index.html keep the
   // URLs the live site has today.
   build: { format: 'file' },
-  // Marketing pages ship no JavaScript beyond two inline scripts and GA4 (spec
-  // 3.1); Starlight would otherwise turn on Astro's prefetch module everywhere.
+  // Marketing pages ship no JavaScript beyond the site's two files and GA4;
+  // Starlight would otherwise turn on Astro's prefetch module everywhere.
   prefetch: false,
   integrations: [
     // Starlight adds @astrojs/sitemap unless an integration of that name is
@@ -32,18 +26,29 @@ export default defineConfig({
     { name: '@astrojs/sitemap', hooks: {} },
     starlight({
       title: 'Macdio Guides',
-      defaultLocale: 'root',
-      locales: starlightLocales,
-      sidebar: [{ label: 'Guides', items: [{ label: 'All guides', link: '/guides/index.html' }] }],
+      locales: { root: { label: 'English', lang: 'en' } },
+      sidebar: sidebar(),
+      social: [
+        { icon: 'x.com', label: 'Macdio on X', href: 'https://x.com/macdioapp' },
+        { icon: 'instagram', label: 'Macdio on Instagram', href: 'https://www.instagram.com/macdioapp' },
+        { icon: 'tiktok', label: 'Macdio on TikTok', href: 'https://www.tiktok.com/@macdioapp' },
+        { icon: 'youtube', label: 'Macdio on YouTube', href: 'https://www.youtube.com/@macdioapp' },
+      ],
+      tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 3 },
       pagefind: true,
       lastUpdated: true,
       credits: false,
       expressiveCode: false,
-      customCss: ['./src/styles/tokens.css', './src/styles/starlight.css'],
-      // Starlight's own Head writes a canonical of the form /guides.html/ under
-      // preserve format and no hreflang for a single locale; this one uses the
-      // same helpers as Base.astro so both halves of the site agree.
-      components: { Head: './src/components/StarlightHead.astro', SiteTitle: './src/components/StarlightSiteTitle.astro' },
+      customCss: ['./src/styles/starlight.css'],
+      // Dark only, the Macdio brand in the title, the author line in the
+      // footer, and a Head that follows the site's canonical and hreflang rules.
+      components: {
+        Head: './src/components/StarlightHead.astro',
+        SiteTitle: './src/components/StarlightSiteTitle.astro',
+        ThemeProvider: './src/components/StarlightThemeProvider.astro',
+        ThemeSelect: './src/components/StarlightThemeSelect.astro',
+        Footer: './src/components/StarlightFooter.astro',
+      },
     }),
   ],
 });

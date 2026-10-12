@@ -1,0 +1,10 @@
+---
+// Starlight's footer (last updated, previous/next) with the author line every
+// guide carries: who wrote it and when it was last checked.
+import Default from '@astrojs/starlight/components/Footer.astro';
+const { entry } = Astro.locals.starlightRoute;
+const checked = entry.data.lastUpdated instanceof Date ? entry.data.lastUpdated : null;
+const date = checked ? checked.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }) : '';
+---
+<p class="guide-author">Written by <a href="/presskit.html">Sait Firat NEMIS</a>, the developer of Macdio.{date && ` Checked on ${date}.`}</p>
+<Default {...Astro.props}><slot /></Default>

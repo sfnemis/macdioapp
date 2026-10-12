@@ -41,6 +41,22 @@ export function checkLocale(code, strings, en, { live }) {
 
 const visible = (html) => html.replace(/<script[\s\S]*?<\/script>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/&amp;/g, '&');
 
+// src/content/docs/<code>/guides/*.md (English lives at the root of docs/) as
+// [path, page] pairs shaped like loadPage() output. Frontmatter strings are
+// JSON-quoted by the converter, so JSON.parse reads them back.
+export function guidePages(code) {
+  const dir = join(process.cwd(), 'src', 'content', 'docs', code === 'en' ? '' : code, 'guides');
+  let files = [];
+  try { files = readdirSync(dir).filter((f) => f.endsWith('.md')); } catch { return []; }
+  return files.map((f) => {
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const [, fm = '', body = raw] = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/) || [];
+    const field = (k) => { const m = fm.match(new RegExp(`^${k}: (.*)$`, 'm')); return m ? (m[1].startsWith('"') ? JSON.parse(m[1]) : m[1]) : ''; };
+    const faq = [...fm.matchAll(/^ {2}- q: (.*)\n {4}a: (.*)$/gm)].map((m) => ({ q: JSON.parse(m[1]), a: JSON.parse(m[2]) }));
+    return [`/guides/${f.slice(0, -3)}.html`, { title: field('title'), description: field('description'), jsonld: faq.length ? [JSON.stringify(faq)] : [], main: body }];
+  });
+}
+
 export function checkPage(code, path, page) {
   const problems = [];
   const warnings = [];
@@ -73,6 +89,14 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     for (const path of legacyPages(l.code)) {
       pages++;
       const r = checkPage(l.code, path, loadPage(l.code, path));
+      problems = problems.concat(r.problems);
+      warnings = warnings.concat(r.warnings);
+    }
+    // The guides (Starlight Markdown): frontmatter title, description and FAQ
+    // pairs, then the body, under the same rules.
+    for (const [path, page] of guidePages(l.code)) {
+      pages++;
+      const r = checkPage(l.code, path, page);
       problems = problems.concat(r.problems);
       warnings = warnings.concat(r.warnings);
     }

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'node:url';
 
 const RAW_COLOUR = /(#[0-9a-f]{3,8}\b|\b(?:rgb|rgba|hsl|hsla|oklch|oklab)\((?!\s*from\s)[^)]*\))/gi;
 const FONT = /font-family\s*:(?!\s*var\(--font-)[^;}]+/gi;
-const EXEMPT = new Set(['src/styles/tokens.css', 'src/styles/starlight.css']);
+const EXEMPT = new Set(['src/styles/starlight.css']);
 
 export function cssProblems(raw, file) {
   // Comments (the Hallmark stamp quotes the palette) and <meta> tags

@@ -1,10 +1,12 @@
 ---
 // Replaces Starlight's Head so guide pages carry the same canonical, hreflang
-// and metadata rules as the marketing pages (Base.astro). Starlight's default
-// wrote the canonical as /guides.html/ under build.format "preserve" and no
-// hreflang while a single locale is live.
+// and metadata rules as the marketing pages (Legacy.astro), plus the Article,
+// FAQPage and BreadcrumbList JSON-LD the live guides had. Starlight's default
+// wrote the canonical as /guides.html/ under build.format "preserve".
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { SITE, localePath, alternates, splitLocale } from '../site/paths.mjs';
-import { byCode } from '../site/locales.mjs';
+import { byCode, DEFAULT } from '../site/locales.mjs';
 
 const { entry, siteTitle } = Astro.locals.starlightRoute;
 // Astro.url.pathname is "/guides/" for the index route and "/guides/<slug>"
@@ -16,26 +18,57 @@ const { code, path } = splitLocale(pathname);
 const locale = byCode(code);
 const url = SITE + localePath(code, path);
 const pageTitle = entry.data.title;
-const title = /Macdio/.test(pageTitle) ? pageTitle : `${pageTitle} | ${siteTitle}`;
+// A page may carry its own <title> in frontmatter head (the hub index keeps a
+// short H1 and a longer search title); otherwise the H1 with the site name.
+const custom = entry.data.head?.find((h) => h.tag === 'title')?.content;
+const title = custom || (/Macdio/.test(pageTitle) ? pageTitle : `${pageTitle} | ${siteTitle}`);
 const description = entry.data.description ?? '';
+const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
+// A locale carries a guide when its Markdown file exists under src/content/docs/<code>/.
+const hasDoc = (c) => c === DEFAULT || existsSync(join(process.cwd(), 'src', 'content', 'docs', c, path.endsWith('/') ? path + 'index.md' : path.replace(/\.html$/, '.md')));
+const alts = alternates(path, hasDoc);
+const isGuide = path !== '/guides/';
+const iso = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : undefined);
+const author = { '@type': 'Person', name: 'Sait Firat NEMIS', url: 'https://macdio.app/presskit.html', sameAs: ['https://x.com/macdioapp', 'https://hub.devdio.pro'] };
+const publisher = { '@type': 'Organization', name: 'Macdio', url: 'https://macdio.app', logo: { '@type': 'ImageObject', url: 'https://macdio.app/assets/app-icon.png', width: 512, height: 512 } };
+const jsonld = [];
+if (isGuide) {
+  jsonld.push({ '@context': 'https://schema.org', '@type': 'Article', headline: pageTitle, description, datePublished: iso(entry.data.datePublished), dateModified: iso(entry.data.lastUpdated) ?? iso(entry.data.datePublished), author, publisher, mainEntityOfPage: { '@type': 'WebPage', '@id': url }, inLanguage: locale.lang });
+  if (entry.data.faq?.length) jsonld.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: entry.data.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+}
+const crumbs = [{ name: 'Home', item: SITE + localePath(code, '/') }, { name: 'Guides', item: SITE + localePath(code, '/guides/') }];
+if (isGuide) crumbs.push({ name: pageTitle, item: url });
+jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })) });
 ---
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{title}</title>
 <meta name="description" content={description}>
+<meta name="author" content="SFN">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <link rel="canonical" href={url}>
-{alternates(path).map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+{alts.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 <meta property="og:site_name" content="Macdio">
 <meta property="og:title" content={title}>
 <meta property="og:description" content={description}>
 <meta property="og:url" content={url}>
-<meta property="og:type" content="article">
+<meta property="og:type" content={isGuide ? 'article' : 'website'}>
+<meta property="og:image" content={image}>
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content={locale.lang.replace('-', '_')}>
-<meta name="theme-color" content="#07070d">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@macdioapp">
+<meta name="twitter:title" content={title}>
+<meta name="twitter:description" content={description}>
+<meta name="twitter:image" content={image}>
+<meta name="theme-color" content="#050507">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" href="/sitemap-index.xml">
+{jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>

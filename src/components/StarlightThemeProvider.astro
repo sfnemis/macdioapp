@@ -1,0 +1,6 @@
+---
+// The site is dark only (redesign.css). Starlight's default provider reads a
+// stored light/dark choice; this pins dark and StarlightThemeSelect.astro
+// renders no toggle.
+---
+<script is:inline>document.documentElement.dataset.theme = 'dark';</script>
