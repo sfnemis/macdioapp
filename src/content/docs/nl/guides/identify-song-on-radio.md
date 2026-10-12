@@ -1,6 +1,6 @@
 ---
-title: "Welk nummer draait er op de radio? 3 manieren om het te weten"
-description: "Drie manieren om een nummer op de radio te herkennen, waaronder één die de stream zelf leest en nooit om de microfoon vraagt, zodat de telefoon in je zak blijft."
+title: "Welk nummer draait op de radio? 3 manieren om het te weten"
+description: "Drie manieren om een nummer op de radio te herkennen, waaronder één die de stream leest en nooit om de microfoon vraagt, zodat de telefoon in je zak blijft."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

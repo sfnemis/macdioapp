@@ -1,6 +1,6 @@
 ---
 title: "Jak nagrywać radio internetowe na Macu (krok po kroku)"
-description: "Trzy sposoby nagrywania radia internetowego na Macu, plus co działa na iPhone'ie: odtwarzacz z wbudowanym nagrywaniem, narzędzie do przechwytywania dźwięku systemowego i Audacity z wirtualnym urządzeniem audio."
+description: "Trzy sposoby nagrywania radia internetowego na Macu i co działa na iPhone'ie: odtwarzacz z nagrywaniem, zrzut dźwięku systemu i Audacity z wirtualnym audio."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

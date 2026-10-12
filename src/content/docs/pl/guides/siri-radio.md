@@ -1,5 +1,5 @@
 ---
-title: "Włączaj radio internetowe przez Siri: każda komenda głosowa Macdio"
+title: "Radio internetowe przez Siri: każda komenda głosowa Macdio"
 description: "Powiedz nazwę stacji i gra. Każda fraza Siri, którą rozumie Macdio, w 14 językach, na iPhone'ie, z AirPods i z przycisku głosowego w CarPlay."
 datePublished: 2026-09-20
 lastUpdated: 2026-09-20

@@ -1,6 +1,6 @@
 ---
-title: "Radio internetowe w CarPlay: konfiguracja i przyciski presetów"
-description: "Radio internetowe na ekranie auta w około minutę, z przyciskami presetów, które zachowują się jak radio samochodowe. Z informacją, ile danych kosztuje godzina streamingu."
+title: "Radio internetowe w CarPlay: konfiguracja i presety stacji"
+description: "Radio internetowe na ekranie auta w około minutę, z przyciskami presetów działającymi jak w radiu samochodowym. Do tego ile danych zużywa godzina streamingu."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

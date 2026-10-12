@@ -1,6 +1,6 @@
 ---
-title: "Najlepsze aplikacje radia internetowego na Maca i iPhone'a (2026)"
-description: "Siedem aplikacji radia internetowego na Maca, iPhone'a, iPada, Apple Watch i Apple TV porównanych pod względem ceny, liczby stacji, nagrywania i reklam, każda liczba z App Store."
+title: "Najlepsze aplikacje radia internetowego: Mac i iPhone (2026)"
+description: "Porównanie siedmiu aplikacji radia internetowego na Maca, iPhone'a, iPada, Apple Watch i Apple TV: cena, liczba stacji, nagrywanie, reklamy. Dane z App Store."
 datePublished: 2026-09-14
 lastUpdated: 2026-09-14
 faq:

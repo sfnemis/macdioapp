@@ -1,5 +1,5 @@
 ---
-title: "Internetradio afspelen met Siri: elke spraakopdracht van Macdio"
+title: "Internetradio afspelen met Siri: elke Macdio-spraakopdracht"
 description: "Zeg de zender en hij speelt. Elke Siri-zin die Macdio begrijpt, in 14 talen, op iPhone, met AirPods en vanaf de spraakknop in CarPlay."
 datePublished: 2026-09-20
 lastUpdated: 2026-09-20

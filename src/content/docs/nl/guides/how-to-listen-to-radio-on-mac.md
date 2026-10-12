@@ -1,6 +1,6 @@
 ---
-title: "4 manieren om naar internetradio te luisteren op een Mac (2026)"
-description: "Browsertabblad, VLC, de Muziek-app of een native speler in de menubalk. Elke route getest op macOS 26, met wat ze echt kosten aan klikken, CPU en open browsertabbladen."
+title: "4 manieren om internetradio te luisteren op een Mac (2026)"
+description: "Browsertabblad, VLC, de Muziek-app of een native speler in de menubalk. Elke route getest op macOS 26, met de echte kosten aan klikken, CPU en open tabbladen."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

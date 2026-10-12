@@ -1,6 +1,6 @@
 ---
 title: "Heeft de iPhone FM-radio? Nee, dit werkt in plaats daarvan"
-description: "Heeft de iPhone FM-radio? Nee. Geen enkele iPhone heeft een FM-chip of -antenne, zei Apple in 2017. Hier lees je waarom, en hoe je toch AM- en FM-zenders op de iPhone hoort."
+description: "Heeft de iPhone FM-radio? Nee. Geen enkele iPhone heeft een FM-chip of -antenne, zei Apple in 2017. Lees waarom en hoe je toch AM/FM-zenders op de iPhone hoort."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

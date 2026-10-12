@@ -1,6 +1,6 @@
 ---
 title: "Czy iPhone ma radio FM? Nie. Oto, co działa zamiast tego"
-description: "Czy iPhone ma radio FM? Nie. Żaden iPhone nie ma układu FM ani anteny, Apple powiedziało to w 2017. Oto dlaczego i jak zamiast tego słuchać stacji AM/FM na iPhone'ie."
+description: "Czy iPhone ma radio FM? Nie. Żaden iPhone nie ma układu FM ani anteny, Apple powiedziało to w 2017. Oto dlaczego i jak mimo to słuchać stacji AM/FM."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

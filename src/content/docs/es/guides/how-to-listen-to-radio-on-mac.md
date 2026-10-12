@@ -1,6 +1,6 @@
 ---
 title: "4 formas de escuchar radio por internet en un Mac (2026)"
-description: "Pestaña del navegador, VLC, la app Música o un reproductor nativo en la barra de menús. Probadas en macOS 26, con lo que cuestan de verdad en clics, CPU y pestañas."
+description: "Pestaña del navegador, VLC, la app Música o un reproductor nativo en la barra de menús. Probadas en macOS 26, con su coste real en clics, CPU y pestañas."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

@@ -1,6 +1,6 @@
 ---
 title: "iPhone'da FM Radyo Var mı? Hayır, İşte Yerine Ne Çalışıyor"
-description: "iPhone'da FM radyo var mı? Hayır. Hiçbir iPhone'da FM çipi ya da anteni yok, Apple bunu 2017'de söyledi. Nedeni ve iPhone'da AM/FM istasyonlarını yerine nasıl dinleyeceğin burada."
+description: "iPhone'da FM radyo var mı? Hayır. Hiçbir iPhone'da FM çipi ya da anteni yok, Apple bunu 2017'de söyledi. Nedeni ve AM/FM istasyonlarını yine de dinlemenin yolu."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

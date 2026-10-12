@@ -1,6 +1,6 @@
 ---
-title: "Mac ve iPhone için En İyi İnternet Radyosu Uygulamaları (2026)"
-description: "Mac, iPhone, iPad, Apple Watch ve Apple TV için yedi internet radyosu uygulaması fiyat, istasyon sayısı, kayıt ve reklam açısından karşılaştırıldı; her rakam App Store'dan."
+title: "En İyi İnternet Radyosu Uygulamaları: Mac ve iPhone (2026)"
+description: "Mac, iPhone, iPad, Apple Watch ve Apple TV için yedi internet radyosu uygulaması fiyat, istasyon sayısı, kayıt ve reklamda kıyaslandı, rakamlar App Store'dan."
 datePublished: 2026-09-14
 lastUpdated: 2026-09-14
 faq:

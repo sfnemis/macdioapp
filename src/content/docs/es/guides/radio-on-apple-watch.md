@@ -1,6 +1,6 @@
 ---
 title: "Radio en el Apple Watch sin el iPhone cerca (2026)"
-description: "El Watch reproduce radio en directo por LTE por su cuenta. Qué necesita de verdad el modo independiente, qué modelos pueden y cifras reales de batería tras una hora."
+description: "El Watch reproduce radio en directo por LTE por su cuenta. Qué necesita el modo independiente, qué modelos pueden y cifras reales de batería tras una hora."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

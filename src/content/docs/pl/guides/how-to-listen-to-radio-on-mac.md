@@ -1,6 +1,6 @@
 ---
 title: "4 sposoby słuchania radia internetowego na Macu (2026)"
-description: "Karta przeglądarki, VLC, aplikacja Muzyka albo natywny odtwarzacz w pasku menu. Każdy wypróbowany na macOS 26, z tym, co naprawdę kosztuje w kliknięciach, CPU i otwartych kartach."
+description: "Karta przeglądarki, VLC, aplikacja Muzyka lub natywny odtwarzacz w pasku menu. Każdy sprawdzony na macOS 26, z realnym kosztem w kliknięciach, CPU i kartach."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/jp/app/macdio/id6761737888",
+    "storeLabel": "App StoreでMacdioをダウンロード",
+    "storeAlt": "App Storeからダウンロード"
+  },
+  "nav": {
+    "community": "コミュニティ",
+    "compare": "比較",
+    "features": "機能",
+    "screenshots": "スクリーンショット",
+    "more": "その他",
+    "moreLabel": "その他のページ",
+    "openMenu": "メニューを開く",
+    "pages": [
+      { "path": "/guides/", "label": "ガイド" },
+      { "path": "/podcasts.html", "label": "ポッドキャスト" },
+      { "path": "/pricing.html", "label": "価格" },
+      { "path": "/carplay.html", "label": "CarPlayでラジオ" },
+      { "path": "/iphone.html", "label": "iPhone向けラジオ" },
+      { "path": "/mac.html", "label": "Mac向けラジオ" },
+      { "path": "/ipad.html", "label": "iPad向けラジオ" },
+      { "path": "/apple-tv.html", "label": "Apple TV向けラジオ" },
+      { "path": "/apple-watch.html", "label": "Apple Watch向けラジオ" },
+      { "path": "/support.html", "label": "サポート" },
+      { "path": "/privacy.html", "label": "プライバシー" },
+      { "path": "/transparency.html", "label": "透明性" },
+      { "path": "/accessibility.html", "label": "アクセシビリティ" },
+      { "path": "/submit-station.html", "label": "局を登録" },
+      { "path": "/stations.html", "label": "局" },
+      { "path": "/presskit.html", "label": "プレスキット" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio. 無断転載を禁じます。",
+    "support": "サポート",
+    "privacy": "プライバシー",
+    "presskit": "プレスキット",
+    "contact": "お問い合わせ",
+    "language": "言語"
+  },
+  "socials": {
+    "x": "XのMacdio",
+    "instagram": "InstagramのMacdio",
+    "tiktok": "TikTokのMacdio",
+    "youtube": "YouTubeのMacdio"
+  },
+  "guides": {
+    "title": "Mac、iPhone、Watch、CarPlay向けインターネットラジオガイド",
+    "h1": "ガイド",
+    "description": "Mac、iPhone、iPad、Apple Watch、Apple TV、CarPlayでインターネットラジオを聴く人のための、短くて実用的なガイド。Macdioの開発者が書いています。",
+    "intro": "インターネットラジオのリスナーが実際に抱く疑問への、短くて実用的な答えです。Macdioの開発者が書いています。どのガイドにも対象のデバイスを明記し、最後にみなさんがよく検索する質問をまとめています。",
+    "allGuides": "すべてのガイド",
+    "behindH2": "ガイドの裏にあるアプリ",
+    "behind": "Macdioは、<a href=\"/iphone.html\">iPhone</a>、<a href=\"/mac.html\">Mac</a>、<a href=\"/apple-tv.html\">Apple TV</a>、<a href=\"/ipad.html\">iPad</a>、<a href=\"/apple-watch.html\">Apple Watch</a>向けのネイティブなインターネットラジオとポッドキャストのプレーヤーです。60,000以上の局、録音、ライブ歌詞、マイクを使わない曲の識別を、サブスクリプションなしの1回の購入で。",
+    "writtenBy": "執筆: Macdioの開発者 <a href=\"/presskit.html\">Sait Firat NEMIS</a>。",
+    "checkedOn": "{date}確認。",
+    "groups": [
+      {
+        "label": "どのデバイスでもラジオを",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Macでラジオ", "title": "Macでインターネットラジオを聴く方法", "description": "ブラウザ、VLC、ミュージックアプリ、メニューバープレーヤー。すべての方法を、正直な長所と短所と一緒に。デスクトップでラジオを聴くのが初めてなら、まずこれを読んでください。" },
+          { "slug": "radio-on-apple-watch", "label": "iPhoneなしでApple Watch", "title": "iPhoneなしでApple Watchでラジオを聴く", "description": "iPhoneが近くになくても手首でストリーミング。単体動作が本当に意味すること、必要なもの、そしてバッテリーについての正直な数字。" },
+          { "slug": "carplay-radio", "label": "CarPlayでラジオ", "title": "CarPlayでインターネットラジオ", "description": "昔ながらのカーステレオのようなプリセット、地元のFMの代わりに世界中の局、そして長いドライブで使うモバイルデータの量。" },
+          { "slug": "siri-radio", "label": "Siriでラジオを再生", "title": "Siriでラジオを再生する", "description": "Macdioが理解するすべての音声フレーズを14の言語で。そして車の中で口にした局名が、どうやって正しいストリームになるか。" }
+        ]
+      },
+      {
+        "label": "ラジオの機能",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "インターネットラジオを録音", "title": "インターネットラジオを録音する方法", "description": "MacとiPhoneでライブの番組を名前付きの個別のトラックにする方法と、個人的な録音について法律が実際にどうなっているか。" },
+          { "slug": "identify-song-on-radio", "label": "流れている曲は？", "title": "ラジオで流れている曲は？", "description": "ラジオの曲を識別する3つの方法。その1つはストリームそのものを読み、マイクを求めることがありません。" },
+          { "slug": "find-radio-stream-url", "label": "ストリームURLを見つける", "title": "局のストリームURLを見つける方法", "description": "直接のアドレスを手に入れる4つの方法、その使い道、そして自分の局を追加する方法。" },
+          { "slug": "iphone-fm-radio", "label": "iPhoneにFMラジオはある？", "title": "iPhoneにFMラジオはあるのか", "description": "存在しないチップについての正直な答え、受信機とトランスミッターの違い、緊急時の議論、そして代わりにできること。" }
+        ]
+      },
+      {
+        "label": "選ぶ、比べる",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "おすすめのインターネットラジオアプリ", "title": "インターネットラジオアプリ比較", "description": "Mac、iPhone、Apple Watch、Apple TV向けの7つのプレーヤーを、価格、局数、それぞれに足りないものと一緒に。" }
+        ]
+      }
+    ]
+  }
+}

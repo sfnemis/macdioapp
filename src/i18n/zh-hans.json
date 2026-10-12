@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macdio",
+    "storeUrl": "https://apps.apple.com/cn/app/macdio/id6761737888",
+    "storeLabel": "在 App Store 下载 Macdio",
+    "storeAlt": "在 App Store 下载"
+  },
+  "nav": {
+    "community": "社区",
+    "compare": "对比",
+    "features": "功能",
+    "screenshots": "截图",
+    "more": "更多",
+    "moreLabel": "更多页面",
+    "openMenu": "打开菜单",
+    "pages": [
+      { "path": "/guides/", "label": "指南" },
+      { "path": "/podcasts.html", "label": "播客" },
+      { "path": "/pricing.html", "label": "价格" },
+      { "path": "/carplay.html", "label": "CarPlay 电台" },
+      { "path": "/iphone.html", "label": "iPhone 电台" },
+      { "path": "/mac.html", "label": "Mac 电台" },
+      { "path": "/ipad.html", "label": "iPad 电台" },
+      { "path": "/apple-tv.html", "label": "Apple TV 电台" },
+      { "path": "/apple-watch.html", "label": "Apple Watch 电台" },
+      { "path": "/support.html", "label": "支持" },
+      { "path": "/privacy.html", "label": "隐私" },
+      { "path": "/transparency.html", "label": "透明度" },
+      { "path": "/accessibility.html", "label": "辅助功能" },
+      { "path": "/submit-station.html", "label": "提交电台" },
+      { "path": "/stations.html", "label": "电台" },
+      { "path": "/presskit.html", "label": "媒体资料包" }
+    ]
+  },
+  "footer": {
+    "copyright": "© 2026 Devdio。保留所有权利。",
+    "support": "支持",
+    "privacy": "隐私",
+    "presskit": "媒体资料包",
+    "contact": "联系",
+    "language": "语言"
+  },
+  "socials": {
+    "x": "Macdio 的 X 账号",
+    "instagram": "Macdio 的 Instagram",
+    "tiktok": "Macdio 的 TikTok",
+    "youtube": "Macdio 的 YouTube"
+  },
+  "guides": {
+    "title": "Mac、iPhone、Watch 和 CarPlay 网络电台指南",
+    "h1": "指南",
+    "description": "写给 Mac、iPhone、iPad、Apple Watch、Apple TV 和 CarPlay 上网络电台听众的简短实用指南，作者是 Macdio 的开发者。",
+    "intro": "网络电台听众真正会问的问题，这里给出简短实用的回答，作者是 Macdio 的开发者。每篇指南都写明适用的设备，结尾是大家常搜索的问题。",
+    "allGuides": "所有指南",
+    "behindH2": "这些指南背后的应用",
+    "behind": "Macdio 是一个原生的网络电台和播客播放器，支持 <a href=\"/iphone.html\">iPhone</a>、<a href=\"/mac.html\">Mac</a>、<a href=\"/apple-tv.html\">Apple TV</a>、<a href=\"/ipad.html\">iPad</a> 和 <a href=\"/apple-watch.html\">Apple Watch</a>。60,000 多个电台、录音、实时歌词和不用麦克风的歌曲识别，一次购买，没有订阅。",
+    "writtenBy": "本文由 Macdio 的开发者 <a href=\"/presskit.html\">Sait Firat NEMIS</a> 撰写。",
+    "checkedOn": "核对日期：{date}。",
+    "groups": [
+      {
+        "label": "每一台设备上的电台",
+        "guides": [
+          { "slug": "how-to-listen-to-radio-on-mac", "label": "Mac 上的电台", "title": "如何在 Mac 上收听网络电台", "description": "浏览器、VLC、“音乐”应用或菜单栏播放器：每一种方法，以及诚实的取舍。如果你刚开始在电脑上听电台，先读这一篇。" },
+          { "slug": "radio-on-apple-watch", "label": "不带 iPhone 的 Apple Watch", "title": "不带 iPhone，在 Apple Watch 上听电台", "description": "附近没有 iPhone 时在手腕上串流：独立运行到底是什么意思，你需要什么，以及诚实的电量数字。" },
+          { "slug": "carplay-radio", "label": "CarPlay 上的电台", "title": "CarPlay 上的网络电台", "description": "像经典车载音响一样的预设按钮，全世界的电台而不只是本地 FM，以及一次长途要用多少移动流量。" },
+          { "slug": "siri-radio", "label": "用 Siri 播放电台", "title": "用 Siri 播放电台", "description": "Macdio 能听懂的每一句语音指令，支持 14 种语言，以及在车上说出的电台名怎样变成正确的流。" }
+        ]
+      },
+      {
+        "label": "电台功能",
+        "guides": [
+          { "slug": "record-internet-radio", "label": "录制网络电台", "title": "如何录制网络电台", "description": "在 Mac 和 iPhone 上把一档直播节目变成一首首带名字的曲目，以及个人录音在法律上到底处于什么位置。" },
+          { "slug": "identify-song-on-radio", "label": "正在放什么歌？", "title": "电台正在放什么歌？", "description": "识别电台歌曲的三种方法，其中一种直接读取流，从不请求麦克风。" },
+          { "slug": "find-radio-stream-url", "label": "查找流地址", "title": "如何找到电台的流地址", "description": "拿到直接地址的四种方法，你能拿它做什么，以及怎样添加你自己的电台。" },
+          { "slug": "iphone-fm-radio", "label": "iPhone 有 FM 收音机吗？", "title": "iPhone 有 FM 收音机吗？", "description": "关于缺失芯片的诚实答案，接收器和发射器的区别，紧急情况这个理由，以及该怎么做。" }
+        ]
+      },
+      {
+        "label": "购买与对比",
+        "guides": [
+          { "slug": "best-internet-radio-apps", "label": "最好的网络电台应用", "title": "最佳网络电台应用对比", "description": "七款支持 Mac、iPhone、Apple Watch 和 Apple TV 的播放器，列出价格、电台数量，以及每一款缺了什么。" }
+        ]
+      }
+    ]
+  }
+}

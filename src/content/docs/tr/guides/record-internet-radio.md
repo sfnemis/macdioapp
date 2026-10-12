@@ -1,6 +1,6 @@
 ---
 title: "Mac'te İnternet Radyosu Nasıl Kaydedilir (Adım Adım)"
-description: "Mac'te internet radyosu kaydetmenin üç yolu, artı iPhone'da ne çalışıyor: kaydı yerleşik bir oynatıcı, bir sistem sesi yakalama aracı ve sanal ses aygıtıyla Audacity."
+description: "Mac'te internet radyosu kaydetmenin üç yolu ve iPhone'da ne çalışıyor: kaydı yerleşik bir oynatıcı, sistem sesi yakalama aracı ve sanal ses aygıtıyla Audacity."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:

@@ -1,6 +1,6 @@
 ---
 title: "Zo neem je internetradio op op een Mac (stap voor stap)"
-description: "Drie manieren om internetradio op te nemen op een Mac, plus wat werkt op iPhone: een speler met ingebouwd opnemen, een tool die systeemaudio vastlegt, en Audacity met een virtueel audioapparaat."
+description: "Drie manieren om internetradio op te nemen op een Mac, plus wat werkt op iPhone: een speler die opneemt, een systeemaudio-tool en Audacity met virtuele audio."
 datePublished: 2026-08-09
 lastUpdated: 2026-09-14
 faq:
