@@ -110,7 +110,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Split by track</h3><p>Record continuously or split into one file per song using ICY metadata boundaries.</p></div>
     <div class="feat-item"><h3>Auto-tagging</h3><p>Unknown recordings are identified in the background and named with title, artist, and artwork.</p></div>
-    <div class="feat-item"><h3>High fidelity</h3><p>Captured straight from the network as FLAC, AAC, or MP3, with zero ambient noise.</p></div>
+    <div class="feat-item"><h3>High fidelity</h3><p>Captured straight from the network in the station's own format, MP3, AAC, FLAC or Ogg, with zero ambient noise.</p></div>
     <div class="feat-item"><h3>Reliable files</h3><p>Disk checks and a polling loop prevent empty files even on an unstable connection.</p></div>
   </div>
 </section>
@@ -137,7 +137,7 @@
   <div class="feat-cat-head"><span class="n">08</span><h2>iCloud Sync</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>No account</h3><p>Favorites, history, saved tracks, stats, and settings sync through your existing Apple ID.</p></div>
-    <div class="feat-item"><h3>Private database</h3><p>Stored in your private CloudKit database, which Apple cannot read.</p></div>
+    <div class="feat-item"><h3>Private database</h3><p>Stored in your private iCloud database, which the developer cannot see. With Advanced Data Protection on, Apple cannot read it either.</p></div>
     <div class="feat-item"><h3>Never misses an import</h3><p>A three-trigger architecture and a 60-second poll guarantee changes always arrive.</p></div>
     <div class="feat-item"><h3>Smart dedup</h3><p>Diacritic-aware fingerprinting removes duplicates correctly, even for Turkish characters.</p></div>
   </div>
@@ -191,7 +191,7 @@
 <section class="feat-cat reveal">
   <div class="feat-cat-head"><span class="n">14</span><h2>CarPlay</h2></div>
   <div class="feat-list">
-    <div class="feat-item"><h3>Four full tabs</h3><p>Now Playing, Favorites, Browse, and Recently Played, live-synced with the app.</p></div>
+    <div class="feat-item"><h3>Four full tabs</h3><p>Home, Podcasts, Favorites and Discover, with a search one tap away and a Now Playing that names the song.</p></div>
     <div class="feat-item"><h3>Hardware controls</h3><p>Next and previous station from the car, with cached artwork for fast display.</p></div>
     <div class="feat-item"><h3>Wireless reconnect</h3><p>The audio session reconfigures cleanly on wireless CarPlay reconnect.</p></div>
   </div>
@@ -210,7 +210,7 @@
   <div class="feat-list">
     <div class="feat-item"><h3>Home Screen widgets</h3><p>Small and medium widgets with edge-to-edge artwork and metadata.</p></div>
     <div class="feat-item"><h3>Lock Screen</h3><p>Circular, rectangular, and inline accessory widgets.</p></div>
-    <div class="feat-item"><h3>Widgets</h3><p>Home Screen and Lock Screen widgets show what is playing, your station lists, your shows and the latest episodes.</p></div>
+    <div class="feat-item"><h3>Lists and episodes</h3><p>Medium and large widgets for your station lists, your shows and the latest episodes.</p></div>
   </div>
 </section>
 
@@ -220,7 +220,7 @@
     <div class="feat-item"><h3>Appearance</h3><p>System, light, or dark, your choice.</p></div>
     <div class="feat-item"><h3>Playback controls</h3><p>Quality, buffer length, adaptive buffering, lyrics auto-scroll and offset, auto-identify.</p></div>
     <div class="feat-item"><h3>Library limits</h3><p>Set how many recently played stations and heard tracks to keep, from 5 to 50.</p></div>
-    <div class="feat-item"><h3>Recording options</h3><p>Mode, quality, maximum duration, and remaining disk space.</p></div>
+    <div class="feat-item"><h3>Recording options</h3><p>One file or one per song, maximum duration, and remaining disk space.</p></div>
   </div>
 </section>
 
@@ -237,8 +237,8 @@
   <div class="feat-cat-head"><span class="n">19</span><h2>Engineering</h2></div>
   <div class="feat-list">
     <div class="feat-item"><h3>Zero dependencies</h3><p>Pure Swift, SwiftUI, and AppKit, with no third-party frameworks.</p></div>
-    <div class="feat-item"><h3>Tiny and fast</h3><p>About 7.8 MB, 0% idle CPU, and under 1% during background playback.</p></div>
-    <div class="feat-item"><h3>Crash-proof background</h3><p>Three-tier SQLite flushing on suspend prevents the 0xDEAD10CC background crash.</p></div>
+    <div class="feat-item"><h3>Light on the device</h3><p>0% CPU when idle, and no third-party code at all.</p></div>
+    <div class="feat-item"><h3>Safe in the background</h3><p>The library is written to disk before the system suspends the app, so nothing is lost when iOS puts it to sleep.</p></div>
   </div>
 </section>
 

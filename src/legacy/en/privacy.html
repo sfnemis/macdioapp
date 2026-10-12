@@ -54,7 +54,7 @@
     <a class="info-card" href="privacy-ios.html"><h2>iOS · iPhone · iPad · CarPlay <span class="ic-arrow">→</span></h2><p>How Macdio handles data on iPhone, iPad, and CarPlay.</p></a>
     <a class="info-card" href="privacy-macos.html"><h2>macOS <span class="ic-arrow">→</span></h2><p>App Sandbox, entitlements, and local recordings on your Mac.</p></a>
     <a class="info-card" href="privacy-tvos.html"><h2>tvOS · Apple TV <span class="ic-arrow">→</span></h2><p>Streaming-only privacy details for the living room.</p></a>
-    <a class="info-card" href="privacy-watchos.html"><h2>watchOS · Apple Watch <span class="ic-arrow">→</span></h2><p>Complications and on-watch data handling.</p></a>
+    <a class="info-card" href="privacy-watchos.html"><h2>watchOS · Apple Watch <span class="ic-arrow">→</span></h2><p>Playback on the watch's own connection and on-watch data handling.</p></a>
   </div>
 
   <h2 class="sec reveal">General overview</h2>
@@ -80,6 +80,7 @@
     <li><strong>LRCLIB</strong>, for synchronized lyrics of the song that is playing.</li>
     <li><strong>iTunes Search API</strong>, for album artwork and track details.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong>, for logos of stations that do not provide one. Only the station's web domain is sent.</li>
+    <li><strong>Apple ShazamKit</strong>, for Song ID. A short audio signature of the stream, not a recording, goes to Apple's Shazam service to find the song. The microphone is never used.</li>
     <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong>, for podcast search, charts and categories.</li>
   </ul>
   <p class="reveal">Each service receives only what a request needs, such as a song title or a search term. No identifier of you or your device is sent.</p>
@@ -89,6 +90,9 @@
 
   <h2 class="sec reveal">Audio &amp; recordings</h2>
   <p class="reveal">Recordings you make with Macdio stay on your device. They are never uploaded or shared.</p>
+
+  <h2 class="sec reveal">This website</h2>
+  <p class="reveal">macdio.app counts visits with Google Analytics, which sets cookies to tell visits apart, and with Cloudflare Web Analytics, which sets none. The station directory page talks to Radio Browser from your browser, and the "New" badge asks this site's own server for the newest release notes. The <a class="inline" href="transparency.html">transparency page</a> lists every service.</p>
 
   <h2 class="sec reveal">Children's privacy</h2>
   <p class="reveal">Macdio does not knowingly collect personal data from anyone, including children under 13. The notification data described above is not personal and is not linked to anyone.</p>

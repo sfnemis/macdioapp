@@ -16,7 +16,7 @@ faq:
     a: "Streaming needs coverage; short gaps are bridged by the buffer, longer ones pause playback until the signal returns."
 ---
 
-FM gives you the stations of one city. CarPlay plus internet radio gives you every city. Setup takes less than a minute.
+FM gives you the stations of one city. CarPlay plus internet radio gives you every city.
 
 Internet radio in the car works through CarPlay, using the stations on your iPhone rather than the transmitters within range. Setup takes under a minute, the layout is built for glances rather than reading, and your favorites become presets you can hit without looking.
 

@@ -202,11 +202,20 @@ getJSON('/countries?order=stationcount&reverse=true&limit=60')
   .catch(function () { if (pendingCountry) searchStations(0); });
 
 // Common genres
+// Visible strings come from window.MACDIO_I18N.stations, written by the page
+// shell from src/i18n/<locale>.json, so this script stays the same in every
+// language; {n}, {q}, {country} and {page} are filled in here.
+function T(key, fallback, vars) {
+  var all = (window.MACDIO_I18N && window.MACDIO_I18N.stations) || {};
+  var s = all[key] || fallback;
+  for (var k in (vars || {})) s = s.split('{' + k + '}').join(vars[k]);
+  return s;
+}
 var genres = ['pop','rock','jazz','classical','electronic','hip hop','country','blues','metal','reggae','latin','folk','indie','ambient','news','talk','sports','oldies','80s','90s','lounge','soul','r&b','punk','dance','house','techno','trance','chill'];
 genres.forEach(function (g) {
   var opt = document.createElement('option');
   opt.value = g;
-  opt.textContent = g.charAt(0).toUpperCase() + g.slice(1);
+  opt.textContent = ((window.MACDIO_I18N && window.MACDIO_I18N.genres) || {})[g] || (g.charAt(0).toUpperCase() + g.slice(1));
   genreFilter.appendChild(opt);
 });
 
@@ -228,33 +237,33 @@ function searchStations(page) {
 
   lastQuery = { name: name, country: country, tag: tag };
 
-  resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>Searching…</div>';
+  resultsContainer.innerHTML = '<div class="loading"><div class="spinner"></div>' + esc(T('searching', 'Searching…')) + '</div>';
   pagination.innerHTML = '';
 
   getJSON('/stations/search?' + params.toString())
     .then(function (stations) { renderStations(stations); })
     .catch(function () {
-      resultsContainer.innerHTML = '<div class="empty-state"><h3>Connection error</h3><p>Could not reach the station database. Please try again.</p></div>';
+      resultsContainer.innerHTML = '<div class="empty-state"><h3>' + esc(T('errorTitle', 'Connection error')) + '</h3><p>' + esc(T('errorText', 'Could not reach the station database. Please try again.')) + '</p></div>';
       resultsInfo.textContent = '';
     });
 }
 
 function renderStations(stations) {
   if (stations.length === 0) {
-    resultsContainer.innerHTML = '<div class="empty-state"><h3>No stations found</h3><p>Try a different search term or filter.</p></div>';
-    resultsInfo.textContent = '0 results';
+    resultsContainer.innerHTML = '<div class="empty-state"><h3>' + esc(T('noneTitle', 'No stations found')) + '</h3><p>' + esc(T('noneText', 'Try a different search term or filter.')) + '</p></div>';
+    resultsInfo.textContent = T('results', '{n} results', { n: 0 });
     pagination.innerHTML = '';
     return;
   }
 
   var label = '';
   if (lastQuery.name || lastQuery.country || lastQuery.tag) {
-    label = stations.length + (stations.length === PAGE_SIZE ? '+' : '') + ' results';
-    if (lastQuery.name) label += ' for "' + lastQuery.name + '"';
-    if (lastQuery.country) label += ' in ' + lastQuery.country;
+    label = T('results', '{n} results', { n: stations.length + (stations.length === PAGE_SIZE ? '+' : '') });
+    if (lastQuery.name) label += ' ' + T('resultsFor', 'for "{q}"', { q: lastQuery.name });
+    if (lastQuery.country) label += ' ' + T('resultsIn', 'in {country}', { country: lastQuery.country });
     if (lastQuery.tag) label += ' · ' + lastQuery.tag;
   } else {
-    label = 'Showing popular stations · Page ' + (currentPage + 1);
+    label = T('popular', 'Showing popular stations · Page {page}', { page: currentPage + 1 });
   }
   resultsInfo.textContent = label;
 
@@ -286,7 +295,7 @@ function renderStations(stations) {
     html += '<div class="station-card">';
     html += '<div class="station-icon">' + icon + '</div>';
     html += '<div class="station-info">';
-    html += '<div class="station-name" title="' + esc(s.name || '') + '">' + esc(s.name || 'Unknown') + '</div>';
+    html += '<div class="station-name" title="' + esc(s.name || '') + '">' + esc(s.name || T('unknown', 'Unknown')) + '</div>';
     html += '<div class="station-meta">' + meta.join(' · ') + '</div>';
     html += tags;
     html += '</div></div>';
@@ -296,11 +305,11 @@ function renderStations(stations) {
 
   var pagHtml = '';
   if (currentPage > 0) {
-    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage - 1) + ')">← Prev</button>';
+    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage - 1) + ')">' + esc(T('prev', '← Prev')) + '</button>';
   }
-  pagHtml += '<button class="page-btn active" disabled>Page ' + (currentPage + 1) + '</button>';
+  pagHtml += '<button class="page-btn active" disabled>' + esc(T('page', 'Page {page}', { page: currentPage + 1 })) + '</button>';
   if (stations.length === PAGE_SIZE) {
-    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage + 1) + ')">Next →</button>';
+    pagHtml += '<button class="page-btn" onclick="searchStations(' + (currentPage + 1) + ')">' + esc(T('next', 'Next →')) + '</button>';
   }
   pagination.innerHTML = pagHtml;
 

@@ -6,6 +6,12 @@
    is sent anywhere, and the hub itself is never contacted by the browser. */
 (function () {
   var KEY = 'macdio.hub.seen';
+  // Labels from the page's own language (window.MACDIO_I18N.badge, written by
+  // the page shell), English when a page has none.
+  var I = (window.MACDIO_I18N && window.MACDIO_I18N.badge) || {};
+  var L = function (k, d) { return I[k] || d; };
+  var lang = document.documentElement.lang || 'en';
+  var day = function (iso) { try { return new Date(iso + 'T12:00:00Z').toLocaleDateString(lang, { day: 'numeric', month: 'long', year: 'numeric' }); } catch (e) { return iso; } };
   var anchor = document.querySelector('.nav-brand') || document.querySelector('a.guides-brand');
   if (!anchor || !window.fetch) return;
   var seen = 0;
@@ -40,8 +46,8 @@
     var dot = document.createElement('button');
     dot.type = 'button';
     dot.className = 'hub-dot';
-    dot.textContent = 'New';
-    dot.setAttribute('aria-label', "What's new: " + notes[0].title);
+    dot.textContent = L('new', 'New');
+    dot.setAttribute('aria-label', L('label', "What's new: {title}").split('{title}').join(notes[0].title));
     dot.setAttribute('aria-expanded', 'false');
     anchor.appendChild(dot);
     var pop = null;
@@ -60,21 +66,21 @@
       pop = document.createElement('div');
       pop.className = 'hub-pop';
       pop.setAttribute('role', 'dialog');
-      pop.setAttribute('aria-label', "What's new in Macdio");
-      var h = document.createElement('h2'); h.textContent = "What's new"; pop.appendChild(h);
+      pop.setAttribute('aria-label', L('dialog', "What's new in Macdio"));
+      var h = document.createElement('h2'); h.textContent = L('title', "What's new"); pop.appendChild(h);
       notes.forEach(function (n) {
         var a = document.createElement('a');
         a.href = n.url; a.target = '_blank'; a.rel = 'noopener';
         if (n.id > seen) a.className = 'hub-new';
         a.textContent = n.title;
-        var d = document.createElement('small'); d.textContent = n.date; a.appendChild(d);
+        var d = document.createElement('small'); d.textContent = day(n.date); a.appendChild(d);
         a.addEventListener('click', done);
         pop.appendChild(a);
       });
       var foot = document.createElement('div'); foot.className = 'hub-foot';
-      var all = document.createElement('a'); all.href = 'https://hub.devdio.pro/c/macdio/release-notes/6'; all.target = '_blank'; all.rel = 'noopener'; all.textContent = 'All release notes';
+      var all = document.createElement('a'); all.href = 'https://hub.devdio.pro/c/macdio/release-notes/6'; all.target = '_blank'; all.rel = 'noopener'; all.textContent = L('all', 'All release notes');
       all.addEventListener('click', done);
-      var ok = document.createElement('button'); ok.type = 'button'; ok.textContent = 'Got it'; ok.addEventListener('click', done);
+      var ok = document.createElement('button'); ok.type = 'button'; ok.textContent = L('gotIt', 'Got it'); ok.addEventListener('click', done);
       foot.appendChild(all); foot.appendChild(ok); pop.appendChild(foot);
       document.body.appendChild(pop);
       dot.setAttribute('aria-expanded', 'true');

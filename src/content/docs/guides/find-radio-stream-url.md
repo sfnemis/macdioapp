@@ -1,6 +1,6 @@
 ---
 title: "How to Find a Radio Station's Stream URL (4 Ways)"
-description: "Get the direct address of any station from its own site, from browser developer tools, from a public directory, or from the app itself. With real examples."
+description: "Get the direct address of any station from its own site, from a public directory, from browser developer tools, or by asking the station. With real examples."
 datePublished: 2026-08-09
 lastUpdated: 2026-08-31
 faq:

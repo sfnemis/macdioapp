@@ -2,12 +2,12 @@
 title: "What Song Is Playing on the Radio? 3 Ways to Find Out"
 description: "Three ways to name a song on the radio, including one that reads the stream itself and never asks for the microphone, so the phone stays in your pocket."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Does it really work without the microphone?"
     a: "Yes. Macdio identifies the song from the audio stream it is already playing, so no microphone permission is requested at any point."
   - q: "What if the station announces the wrong title?"
-    a: "Identification from the audio takes priority when it can prove it describes the moment on screen, so the wrong announcement gets corrected instead of copied."
+    a: "Macdio shows the station's own title whenever it sends one. A fingerprint can be wrong too, about an advert, a remix or a live version, and a confident wrong correction is worse than a late title. Song ID fills in where the station sends nothing."
   - q: "Does it work in the car?"
     a: "Yes, including over CarPlay, and hearting a song at the wheel still reaches Apple Music. See the CarPlay guide."
   - q: "Does this work with FM or AM radio?"
@@ -44,7 +44,7 @@ Most stations broadcast the artist and title alongside the audio, and a good pla
 
 If the audio is already flowing through an app, the app can identify it directly, without any microphone. That is how [Macdio](/iphone.html) does it: Song ID listens to the stream rather than the room, so it works with the phone locked in a pocket, in a noisy car, or on an [Apple TV](/apple-tv.html) across the living room. Macdio never asks for microphone permission, because it never needs one.
 
-Because it hears the actual audio, it also corrects the station when the station is wrong, and it can name a song during a stretch the station never announces at all. The same stream can be kept as you listen: [how to record internet radio](/guides/record-internet-radio.html), on the [Mac](/mac.html) as well as the iPhone.
+Because it hears the actual audio, it can name a song during a stretch the station never announces at all, and add the cover when the station sends only a title. The same stream can be kept as you listen: [how to record internet radio](/guides/record-internet-radio.html), on the [Mac](/mac.html) as well as the iPhone.
 
 ## Why the microphone struggles in the car
 
@@ -62,7 +62,7 @@ The old fallback still works too: type a remembered line of the lyrics into a se
 
 Station metadata is written by whatever automation the station runs, and it drifts. The usual failures are an advert or a jingle inheriting the previous track's title, a title that arrives a few seconds early or late, and a placeholder like the station name sitting where the song should be.
 
-Identification from the audio corrects all three, because it reports what is actually sounding rather than what the playout system claims. When the station is right, its own text wins, since the broadcaster knows its catalog better than any fingerprint.
+Identification from the audio reports what is actually sounding rather than what the playout system claims, which is why it is the right tool for the stretches a station leaves blank. Macdio still lets the station's own text win whenever it sends one, since the broadcaster knows its catalog better than any fingerprint, and a confident wrong correction is worse than a late title.
 
 ## Then keep the song
 
@@ -86,7 +86,7 @@ Yes. Macdio identifies the song from the audio stream it is already playing, so 
 
 ### What if the station announces the wrong title?
 
-Identification from the audio takes priority when it can prove it describes the moment on screen, so the wrong announcement gets corrected instead of copied.
+Macdio shows the station's own title whenever it sends one. A fingerprint can be wrong too, about an advert, a remix or a live version, and a confident wrong correction is worse than a late title. Song ID fills in where the station sends nothing.
 
 ### Does it work in the car?
 

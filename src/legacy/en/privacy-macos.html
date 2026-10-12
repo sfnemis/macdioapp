@@ -75,7 +75,7 @@
   </ul>
 
   <h2 class="sec reveal">App Sandbox</h2>
-  <p class="reveal">Macdio runs inside the macOS App Sandbox with minimal entitlements: network access for streaming, microphone for recording, and iCloud for sync. It cannot access files, contacts, or other apps without your explicit permission.</p>
+  <p class="reveal">Macdio runs inside the macOS App Sandbox with the entitlements its features need: network access for streaming and for the local relay that keeps streams stable, iCloud for sync, notifications for new episodes, Apple Events to send highlights to Apple Notes when you ask, and Apple's Private Cloud Compute for episode summaries. It has no microphone access. It reads or writes only the files you pick yourself, such as an OPML file or a station list, and cannot reach contacts or other apps.</p>
 
   <h2 class="sec reveal">Third-party services</h2>
   <p class="reveal">Macdio connects to the following external services solely for core functionality:</p>
@@ -85,6 +85,10 @@
     <li><strong>LRCLIB</strong> to fetch synchronized song lyrics. No personal data is sent.</li>
     <li><strong>iTunes Search API</strong> to fetch album artwork. No personal data is sent.</li>
     <li><strong><a class="inline" href="https://logo.dev" target="_blank" rel="noopener">Logo.dev</a></strong> supplies the logos of radio stations that do not provide one themselves. Only the station's web domain is sent, no personal data.</li>
+    <li><strong><a class="inline" href="https://podcastindex.org" target="_blank" rel="noopener">Podcast Index</a></strong> for podcast search, charts and categories. Only the search term or category is sent. Episodes and feeds download directly from each show's own server.</li>
+    <li><strong>Apple ShazamKit</strong> for Song ID. A short audio signature of the stream, not a recording, goes to Apple's Shazam service. The microphone is never used.</li>
+    <li><strong>Apple's language model</strong> writes a podcast episode's chapters and summary, on the device or on Apple's Private Cloud Compute, which does not keep the text.</li>
+    <li><strong>push.macdio.app</strong>, Macdio's notification server, receives this Mac's notification address and the shows you follow, only while New Episode Notifications is on. It keeps nothing else.</li>
   </ul>
 
   <h2 class="sec reveal">iCloud sync</h2>

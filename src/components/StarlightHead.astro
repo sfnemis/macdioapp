@@ -8,6 +8,7 @@ import { join } from 'node:path';
 import { SITE, localePath, alternates, splitLocale } from '../site/paths.mjs';
 import { byCode, DEFAULT } from '../site/locales.mjs';
 import { guideLocales } from '../data/guides.mjs';
+import { t } from '../i18n/index.mjs';
 
 const { entry, siteTitle } = Astro.locals.starlightRoute;
 // Astro.url.pathname is "/guides/" for the index route and "/guides/<slug>"
@@ -43,6 +44,7 @@ if (isGuide) {
 const crumbs = [{ name: 'Home', item: SITE + localePath(code, '/') }, { name: 'Guides', item: SITE + localePath(code, '/guides/') }];
 if (isGuide) crumbs.push({ name: pageTitle, item: url });
 jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })) });
+const badgeStrings = 'window.MACDIO_I18N=' + JSON.stringify({ badge: t(code).badge }).replace(/</g, '\\u003c') + ';';
 ---
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -74,6 +76,7 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" href="/sitemap-index.xml">
 {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj)} />)}
+<script is:inline set:html={badgeStrings} />
 <script is:inline src="/hub-badge.js" defer></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
 <script is:inline>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>

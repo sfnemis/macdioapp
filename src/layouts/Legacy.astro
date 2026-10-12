@@ -6,6 +6,7 @@
 import { byCode } from '../site/locales.mjs';
 import { SITE, localePath, alternates } from '../site/paths.mjs';
 import { hasPage } from '../site/legacy.mjs';
+import { t } from '../i18n/index.mjs';
 import LegacyNav from '../components/LegacyNav.astro';
 import LegacyFooter from '../components/LegacyFooter.astro';
 
@@ -15,6 +16,10 @@ const locale = byCode(lang);
 const url = SITE + localePath(lang, path);
 const alts = alternates(path, (code) => hasPage(code, path));
 const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
+// Strings the site scripts put on screen (stations search, the what's new
+// badge), from this locale's JSON; '<' is escaped so the JSON cannot close the tag.
+const strings = t(lang);
+const scriptStrings = 'window.MACDIO_I18N=' + JSON.stringify({ stations: strings.stations, genres: strings.genres, badge: strings.badge }).replace(/</g, '\\u003c') + ';';
 const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"]*)"/g)].map((m) => [m[1], m[2]]));
 ---
 <!DOCTYPE html>
@@ -58,6 +63,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <LegacyNav lang={lang} />
 <main {...mainAttrs} set:html={page.main} />
 <LegacyFooter lang={lang} path={path} />
+<script is:inline set:html={scriptStrings} />
 <script is:inline src="/parts.js"></script>
 <script is:inline src="/redesign.js"></script>
 <script is:inline src="/hub-badge.js" defer></script>

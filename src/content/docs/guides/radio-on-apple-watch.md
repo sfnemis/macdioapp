@@ -1,8 +1,8 @@
 ---
 title: "Radio on Apple Watch With No iPhone Nearby (2026)"
-description: "The Watch streams live radio over LTE on its own. What standalone actually needs, which models can do it, and real battery numbers from an hour of use."
+description: "The Watch streams live radio over LTE on its own. What standalone actually needs, which models can do it, and what streaming costs in battery and data."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-10-12
 faq:
   - q: "Can Apple Watch play radio without the iPhone?"
     a: "Yes, with a standalone app. Macdio's watch app streams by itself over Wi-Fi or cellular."
@@ -17,7 +17,7 @@ faq:
   - q: "Do my stations sync from the iPhone?"
     a: "Yes. Favorites and folders arrive over iCloud, and the watch also has its own library view and search."
   - q: "Can I record radio on the watch?"
-    a: "No. Recording is a Mac and iPhone feature. Songs you heart on the watch still sync everywhere."
+    a: "No. Recording is an iPhone, iPad and Mac feature. Songs you heart on the watch still sync everywhere."
 ---
 
 A run, a swim bag, a quick shop: the watch is often the only device on you. Here is how internet radio works directly on Apple Watch.
@@ -86,7 +86,7 @@ Yes. Favorites and folders arrive over iCloud, and the watch also has its own li
 
 ### Can I record radio on the watch?
 
-No. Recording is a Mac and iPhone feature. Songs you heart on the watch still sync everywhere.
+No. Recording is an iPhone, iPad and Mac feature. Songs you heart on the watch still sync everywhere.
 
 ## Ready to try it?
 

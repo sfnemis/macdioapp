@@ -14,22 +14,70 @@
     "moreLabel": "More pages",
     "openMenu": "Open menu",
     "pages": [
-      { "path": "/guides/", "label": "Guides" },
-      { "path": "/podcasts.html", "label": "Podcasts" },
-      { "path": "/pricing.html", "label": "Pricing" },
-      { "path": "/carplay.html", "label": "Radio in CarPlay" },
-      { "path": "/iphone.html", "label": "Radio for iPhone" },
-      { "path": "/mac.html", "label": "Radio for Mac" },
-      { "path": "/ipad.html", "label": "Radio for iPad" },
-      { "path": "/apple-tv.html", "label": "Radio for Apple TV" },
-      { "path": "/apple-watch.html", "label": "Radio for Apple Watch" },
-      { "path": "/support.html", "label": "Support" },
-      { "path": "/privacy.html", "label": "Privacy" },
-      { "path": "/transparency.html", "label": "Transparency" },
-      { "path": "/accessibility.html", "label": "Accessibility" },
-      { "path": "/submit-station.html", "label": "Submit Station" },
-      { "path": "/stations.html", "label": "Stations" },
-      { "path": "/presskit.html", "label": "Press Kit" }
+      {
+        "path": "/guides/",
+        "label": "Guides"
+      },
+      {
+        "path": "/podcasts.html",
+        "label": "Podcasts"
+      },
+      {
+        "path": "/pricing.html",
+        "label": "Pricing"
+      },
+      {
+        "path": "/carplay.html",
+        "label": "Radio in CarPlay"
+      },
+      {
+        "path": "/iphone.html",
+        "label": "Radio for iPhone"
+      },
+      {
+        "path": "/mac.html",
+        "label": "Radio for Mac"
+      },
+      {
+        "path": "/ipad.html",
+        "label": "Radio for iPad"
+      },
+      {
+        "path": "/apple-tv.html",
+        "label": "Radio for Apple TV"
+      },
+      {
+        "path": "/apple-watch.html",
+        "label": "Radio for Apple Watch"
+      },
+      {
+        "path": "/support.html",
+        "label": "Support"
+      },
+      {
+        "path": "/privacy.html",
+        "label": "Privacy"
+      },
+      {
+        "path": "/transparency.html",
+        "label": "Transparency"
+      },
+      {
+        "path": "/accessibility.html",
+        "label": "Accessibility"
+      },
+      {
+        "path": "/submit-station.html",
+        "label": "Submit Station"
+      },
+      {
+        "path": "/stations.html",
+        "label": "Stations"
+      },
+      {
+        "path": "/presskit.html",
+        "label": "Press Kit"
+      }
     ]
   },
   "footer": {
@@ -60,27 +108,126 @@
       {
         "label": "Radio on every device",
         "guides": [
-          { "slug": "how-to-listen-to-radio-on-mac", "label": "Radio on a Mac", "title": "How to listen to internet radio on a Mac", "description": "Browser, VLC, the Music app or a menu bar player: every route, with honest trade-offs. Read this one first if you are new to radio on the desktop." },
-          { "slug": "radio-on-apple-watch", "label": "Apple Watch without an iPhone", "title": "Radio on Apple Watch without an iPhone", "description": "Streaming on the wrist with no iPhone nearby: what standalone really means, what you need, and honest battery numbers." },
-          { "slug": "carplay-radio", "label": "Radio in CarPlay", "title": "Internet radio on CarPlay", "description": "Presets like a classic car stereo, worldwide stations instead of local FM, and what a long drive costs in mobile data." },
-          { "slug": "siri-radio", "label": "Play radio with Siri", "title": "Play radio with Siri", "description": "Every voice phrase Macdio understands, in 14 languages, and how a station name spoken in the car turns into the right stream." }
+          {
+            "slug": "how-to-listen-to-radio-on-mac",
+            "label": "Radio on a Mac",
+            "title": "How to listen to internet radio on a Mac",
+            "description": "Browser, VLC, the Music app or a menu bar player: every route, with honest trade-offs. Read this one first if you are new to radio on the desktop."
+          },
+          {
+            "slug": "radio-on-apple-watch",
+            "label": "Apple Watch without an iPhone",
+            "title": "Radio on Apple Watch without an iPhone",
+            "description": "Streaming on the wrist with no iPhone nearby: what standalone really means, what you need, and honest battery numbers."
+          },
+          {
+            "slug": "carplay-radio",
+            "label": "Radio in CarPlay",
+            "title": "Internet radio on CarPlay",
+            "description": "Presets like a classic car stereo, worldwide stations instead of local FM, and what a long drive costs in mobile data."
+          },
+          {
+            "slug": "siri-radio",
+            "label": "Play radio with Siri",
+            "title": "Play radio with Siri",
+            "description": "Every voice phrase Macdio understands, in 14 languages, and how a station name spoken in the car turns into the right stream."
+          }
         ]
       },
       {
         "label": "Radio features",
         "guides": [
-          { "slug": "record-internet-radio", "label": "Record internet radio", "title": "How to record internet radio", "description": "Turn a live show into named, individual tracks on Mac and iPhone, and where the law of personal recording actually stands." },
-          { "slug": "identify-song-on-radio", "label": "What song is playing?", "title": "What song is playing on the radio?", "description": "Three ways to identify a radio song, including one that reads the stream itself and never asks for the microphone." },
-          { "slug": "find-radio-stream-url", "label": "Find a stream URL", "title": "How to find a station's stream URL", "description": "Four ways to get the direct address, what you may do with it, and how to add a station of your own." },
-          { "slug": "iphone-fm-radio", "label": "Does the iPhone have FM radio?", "title": "Does the iPhone have FM radio?", "description": "The honest answer about the missing chip, receiver against transmitter, the emergency argument, and what to do instead." }
+          {
+            "slug": "record-internet-radio",
+            "label": "Record internet radio",
+            "title": "How to record internet radio",
+            "description": "Turn a live show into named, individual tracks on Mac and iPhone, and where the law of personal recording actually stands."
+          },
+          {
+            "slug": "identify-song-on-radio",
+            "label": "What song is playing?",
+            "title": "What song is playing on the radio?",
+            "description": "Three ways to identify a radio song, including one that reads the stream itself and never asks for the microphone."
+          },
+          {
+            "slug": "find-radio-stream-url",
+            "label": "Find a stream URL",
+            "title": "How to find a station's stream URL",
+            "description": "Four ways to get the direct address, what you may do with it, and how to add a station of your own."
+          },
+          {
+            "slug": "iphone-fm-radio",
+            "label": "Does the iPhone have FM radio?",
+            "title": "Does the iPhone have FM radio?",
+            "description": "The honest answer about the missing chip, receiver against transmitter, the emergency argument, and what to do instead."
+          }
         ]
       },
       {
         "label": "Buying and comparing",
         "guides": [
-          { "slug": "best-internet-radio-apps", "label": "Best internet radio apps", "title": "Best internet radio apps compared", "description": "Seven players for Mac, iPhone, Apple Watch and Apple TV, with prices, station counts and what each one leaves out." }
+          {
+            "slug": "best-internet-radio-apps",
+            "label": "Best internet radio apps",
+            "title": "Best internet radio apps compared",
+            "description": "Seven players for Mac, iPhone, Apple Watch and Apple TV, with prices, station counts and what each one leaves out."
+          }
         ]
       }
     ]
+  },
+  "stations": {
+    "searching": "Searching…",
+    "errorTitle": "Connection error",
+    "errorText": "Could not reach the station database. Please try again.",
+    "noneTitle": "No stations found",
+    "noneText": "Try a different search term or filter.",
+    "results": "{n} results",
+    "resultsFor": "for \"{q}\"",
+    "resultsIn": "in {country}",
+    "popular": "Showing popular stations · Page {page}",
+    "prev": "← Prev",
+    "next": "Next →",
+    "page": "Page {page}",
+    "unknown": "Unknown"
+  },
+  "genres": {
+    "pop": "Pop",
+    "rock": "Rock",
+    "jazz": "Jazz",
+    "classical": "Classical",
+    "electronic": "Electronic",
+    "hip hop": "Hip Hop",
+    "country": "Country",
+    "blues": "Blues",
+    "metal": "Metal",
+    "reggae": "Reggae",
+    "latin": "Latin",
+    "folk": "Folk",
+    "indie": "Indie",
+    "ambient": "Ambient",
+    "news": "News",
+    "talk": "Talk",
+    "sports": "Sports",
+    "oldies": "Oldies",
+    "80s": "80s",
+    "90s": "90s",
+    "lounge": "Lounge",
+    "soul": "Soul",
+    "r&b": "R&B",
+    "punk": "Punk",
+    "dance": "Dance",
+    "house": "House",
+    "techno": "Techno",
+    "trance": "Trance",
+    "chill": "Chill"
+  },
+  "badge": {
+    "new": "New",
+    "label": "What's new: {title}",
+    "title": "What's new",
+    "dialog": "What's new in Macdio",
+    "all": "All release notes",
+    "gotIt": "Got it"
   }
 }
