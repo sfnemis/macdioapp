@@ -29,6 +29,20 @@ saying what happened to it.
   a close second; tone: an indie developer moving toward professional, every
   statement correct, every feature listed (for example the Wi-Fi station editor
   served from the phone to a computer browser, `Macdio/Services/StationEditorServer.swift`).
+- [ ] **W10 Direction change** (Sait, 2026-10-12 18:23). The current design stays.
+  Keep the live look (dark #050507, SF, `redesign.css`, `parts.js` nav and footer)
+  and apply on it: the guide hub (W2), the SEO/GEO work (W6, new pages in the
+  current visual language), the new podcast and CarPlay clips and stills (W5,
+  revised: added to the existing pages, not a full media swap), the 14 languages
+  (W3, W4) and a "what's new" badge (W11). The redesign experiment (home page on a
+  dark serif theme) is parked at tag `redesign-experiment-2026-10-12`. Everything
+  is shown locally before anything deploys.
+- [ ] **W11 "New" badge on the logo for a new hub post** (Sait, 2026-10-12 18:23).
+  When a new release note appears on the hub, the logo in the nav shows a small
+  "New" or "Updated" bubble that opens the post; Sait is open to a more modern,
+  more functional form (proposed: a "what's new" dot plus a small popover with
+  the last three release notes, fed by a Worker route that caches the hub's
+  JSON, remembered per visitor in localStorage).
 - [ ] **W2 Professional guide section** (Sait, 2026-10-12). Rebuild `/guides/`
   on the model of https://linnote.app/guide/ (structured guide hub with
   navigation, per-topic pages) for SEO and GEO. The 9 existing guides carry over.
