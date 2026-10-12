@@ -16,7 +16,7 @@ export const LOCALES = [
   { code: 'ru', lang: 'ru', label: 'Русский', dir: 'ltr', live: false },
   { code: 'ar', lang: 'ar', label: 'العربية', dir: 'rtl', live: true },
   { code: 'zh-hans', lang: 'zh-Hans', label: '简体中文', dir: 'ltr', live: false },
-  { code: 'zh-hant', lang: 'zh-Hant', label: '繁體中文', dir: 'ltr', live: false },
+  { code: 'zh-hant', lang: 'zh-Hant', label: '繁體中文', dir: 'ltr', live: true },
 ];
 
 export const DEFAULT = 'en';

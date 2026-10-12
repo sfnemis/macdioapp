@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>透明度：Macdio 是怎么做出来的</title>
+<meta name="description" content="Macdio 是怎么做出来的，用了哪些数据来源，背后是谁。一个独立开发者的项目，用原生 SwiftUI 为每个 Apple 平台打造。">
+<meta name="keywords" content="Macdio 透明度, Macdio 开发者, 电台应用数据来源, lrclib, radio browser, SwiftUI 电台应用">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="theme-color" content="#050507">
+<link rel="canonical" href="https://macdio.app/transparency.html"><meta property="og:title" content="透明度：Macdio 是怎么做出来的">
+<meta property="og:description" content="Macdio 是怎么做出来的，用了哪些数据来源，背后是谁。一个独立开发者的 SwiftUI 项目，覆盖每个 Apple 平台。">
+<meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<meta property="og:url" content="https://macdio.app/transparency.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macdio">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="透明度：Macdio 是怎么做出来的">
+<meta name="twitter:description" content="Macdio 是怎么做出来的，用了哪些数据来源，背后是谁。">
+<meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+<link rel="manifest" href="/site.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon-180.png"><link rel="stylesheet" href="redesign.css"><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Macdio", "item": "https://macdio.app/" },
+    { "@type": "ListItem", "position": 2, "name": "透明度", "item": "https://macdio.app/transparency.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="nav-slot"></div>
+
+<main>
+<header class="page-head">
+  <p class="eyebrow reveal">透明度</p>
+  <h1 class="reveal d1">Macdio <span class="grad">是怎么做出来的。</span></h1>
+  <p class="reveal d1">Macdio 是一个人的项目。这里坦白地讲讲这个应用怎么工作、接触哪些数据，以及做它都投入了什么。</p>
+</header>
+
+<div class="content">
+  <h2 class="reveal">谁在做 Macdio</h2>
+  <p class="reveal">Macdio 是 <strong>Sait Firat NEMIS</strong> 一个人开发的项目。背后没有公司，没有团队，也没有投资人。只有一个人，在做一个他觉得 App Store 上缺少的电台应用。</p>
+  <p class="reveal">六个平台上的 SwiftUI 代码、网站、App Store 页面和支持邮箱都由我负责。如果你写信到 <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>，收信的就是我本人。</p>
+
+  <h2 class="reveal">它是怎么做的</h2>
+  <p class="reveal">Macdio 百分之百是原生 Swift 和 SwiftUI。没有 Electron，没有 React Native，也没有网页视图。每一个界面都专门为它运行的平台编写：iPhone、iPad、Mac、Apple TV、Apple Watch 和 CarPlay。</p>
+  <p class="reveal">和 2026 年的大多数开发者一样，我在工作中会用现代的 AI 辅助工具，用来探索边界情况、验证想法的原型，以及排查棘手的 bug。但核心架构、设计决策、性能调优和最终发布的代码，都来自认真的研究和亲手的反复打磨。我在意把细节做对，这意味着要理解技术栈的每一层，而不是接受工具生成的任何东西。</p>
+
+  <h2 class="reveal">数据来源和 API</h2>
+  <p class="reveal">Macdio 自己不维护电台目录。电台列表来自公共社区数据库 Radio Browser，只有在 Radio Browser 没有响应时，才会使用 Macdio 自己的副本（dir.macdio.app）。正在播放的元数据和歌词来自公共 API。下面是这个应用会联系的服务：</p>
+  <div class="card-grid cols-auto reveal">
+    <div class="info-card">
+      <h3>Radio Browser</h3>
+      <p>社区维护的网络电台数据库。提供电台元数据、流地址、国家信息和类型标签。几万个电台的目录就是从这里来的。</p>
+      <a class="ic-link" href="https://www.radio-browser.info" target="_blank" rel="noopener">radio-browser.info ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>iTunes Search API</h3>
+      <p>Apple 的公共搜索 API，根据电台广播的曲目元数据获取专辑封面、发行年份和专辑名，用来丰富正在播放的信息。</p>
+      <a class="ic-link" href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/" target="_blank" rel="noopener">iTunes Search API ↗</a>
+    </div>
+    <div class="info-card">
+      <h3>LRCLIB</h3>
+      <p>开源、免费的歌词 API。为正在播放的歌曲提供同步（LRC 格式）歌词和纯文本歌词。不需要 API 密钥，没有追踪。</p>
+      <a class="ic-link" href="https://lrclib.net" target="_blank" rel="noopener">lrclib.net ↗</a>
+    </div>
+  </div>
+
+  <h2 class="reveal">依赖</h2>
+  <p class="reveal">Macdio 的依赖极少。应用本身没有使用任何第三方 Swift 包，完全用 Apple 自己的框架打造（SwiftUI、SwiftData、AVFoundation、CloudKit、MediaPlayer）。</p>
+  <p class="reveal">这个网站同样精简。它不加载网页字体，也没有 3D 库。文字使用你的 Apple 设备上已有的系统字体，所有动画都是普通的 CSS 和 JavaScript。用到的外部服务有：</p>
+  <table class="data-table reveal">
+    <thead>
+      <tr><th scope="col">名称</th><th scope="col">用途</th><th scope="col">类型</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"><a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analytics</a></th>
+        <td>匿名的页面浏览统计（仅限网站）</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.cloudflare.com/web-analytics/" target="_blank" rel="noopener">Cloudflare Web Analytics</a></th>
+        <td>不用 Cookie 的访问计数，由托管方在边缘节点添加（仅限网站）</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://www.radio-browser.info" target="_blank" rel="noopener">Radio Browser</a></th>
+        <td>目录页面的电台数据，由你的浏览器直接查询（仅限网站）</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+      <tr>
+        <th scope="row">dir.macdio.app</th>
+        <td>Macdio 自己的 Radio Browser 目录副本。目录页面只在 Radio Browser 没有响应时才会向它查询。它不保存 IP 地址。</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://hub.devdio.pro" target="_blank" rel="noopener">hub.devdio.pro</a></th>
+        <td>Macdio 自己的社区论坛。标志上的“新”标记会向本站自己的服务器询问最新的三条更新说明；你的浏览器从不直接联系论坛，唯一保存的是你看过的最后一个帖子的 id，存在你浏览器的本地存储里。</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+      <tr>
+        <th scope="row">电台标志服务器</th>
+        <td>在目录页面上，每个电台的标志都从该电台自己的服务器加载，所以这些服务器能看到你的 IP 地址。请求不带来源信息（referrer），加载失败的标志会换成一个本地图标。没有任何内容通过本站代理。</td>
+        <td><span class="tag-pill">网站</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2 class="reveal">更新记录</h2>
+  <p class="reveal">Macdio 完整的版本历史和更新说明可以在 <a class="inline" href="https://apps.apple.com/app/macdio/id6761737888" target="_blank" rel="noopener">App Store 页面</a>上查看。每次更新都写明了具体改了什么。</p>
+</div>
+</main>
+
+<div id="footer-slot">
+  <nav class="static-sitelinks" aria-label="站点链接">
+  <a href="index.html">Macdio 网络电台</a>
+  <a href="mac.html">Mac 网络电台应用</a>
+  <a href="iphone.html">iPhone 网络电台应用</a>
+  <a href="ipad.html">iPad 网络电台应用</a>
+  <a href="apple-tv.html">Apple TV 网络电台应用</a>
+  <a href="apple-watch.html">Apple Watch 网络电台应用</a>
+  <a href="features.html">Macdio 全部功能</a>
+  <a href="stations.html">网络电台目录</a>
+  <a href="guides/">电台指南</a>
+  <a href="guides/how-to-listen-to-radio-on-mac.html">如何在 Mac 上收听网络电台</a>
+  <a href="guides/iphone-fm-radio.html">iPhone 有 FM 收音机吗</a>
+  <a href="guides/record-internet-radio.html">如何录制网络电台</a> <a href="guides/best-internet-radio-apps.html">最佳网络电台应用对比</a>
+  <a href="guides/identify-song-on-radio.html">如何识别电台正在播放的歌曲</a>
+  <a href="guides/carplay-radio.html">如何在 CarPlay 中收听电台</a>
+  <a href="guides/siri-radio.html">如何用 Siri 播放电台</a>
+  <a href="guides/radio-on-apple-watch.html">如何在 Apple Watch 上收听电台</a>
+  <a href="guides/find-radio-stream-url.html">如何找到电台的流媒体地址</a>
+  <a href="tunein-alternative.html">Macdio 与 TuneIn 对比</a>
+  <a href="support.html">Macdio 支持</a>
+  <a href="privacy.html">隐私政策</a>
+  </nav>
+</div>
+
+<script src="parts.js"></script>
+<script src="redesign.js"></script>
+</body>
+</html>
