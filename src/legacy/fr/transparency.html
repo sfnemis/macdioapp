@@ -7,19 +7,19 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');</script>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Transparence : comment Macdio est conçu</title>
+<title>Transparence : comment Macdio est conçu</title>
 <meta name="description" content="Comment Macdio est conçu, ses sources de données et qui est derrière. Un projet de développeur solo en SwiftUI natif pour chaque plateforme Apple.">
 <meta name="keywords" content="transparence macdio, développeur macdio, sources de données app radio, lrclib, radio browser, app radio swiftui">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="theme-color" content="#050507">
-<link rel="canonical" href="https://macdio.app/transparency.html"><meta property="og:title" content="Transparence : comment Macdio est conçu">
+<link rel="canonical" href="https://macdio.app/transparency.html"><meta property="og:title" content="Transparence : comment Macdio est conçu">
 <meta property="og:description" content="Comment Macdio est conçu, ses sources de données et qui est derrière. Un projet SwiftUI de développeur solo pour chaque plateforme Apple.">
 <meta property="og:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <meta property="og:url" content="https://macdio.app/transparency.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Macdio">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Transparence : comment Macdio est conçu">
+<meta name="twitter:title" content="Transparence : comment Macdio est conçu">
 <meta name="twitter:description" content="Comment Macdio est conçu, ses sources de données et qui est derrière.">
 <meta name="twitter:image" content="https://macdio.app/assets/discourse/x-summary-large.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
@@ -50,15 +50,15 @@
 
 <div class="content">
   <h2 class="reveal">Qui développe Macdio</h2>
-  <p class="reveal">Macdio est le projet d'un développeur solo, <strong>Sait Fırat Nemis</strong>. Pas de société derrière, pas d'équipe, pas d'investisseurs. Juste une personne qui construit l'app de radio qui semblait manquer sur l'App Store.</p>
+  <p class="reveal">Macdio est le projet d'un développeur solo, <strong>Sait Firat NEMIS</strong>. Pas de société derrière, pas d'équipe, pas d'investisseurs. Juste une personne qui construit l'app de radio qui semblait manquer sur l'App Store.</p>
   <p class="reveal">Je m'occupe du code SwiftUI sur les six plateformes, du site web, de la présence sur l'App Store et de la boîte d'assistance. Si vous écrivez à <a class="inline" href="mailto:support@macdio.app">support@macdio.app</a>, c'est moi que vous joignez directement.</p>
 
   <h2 class="reveal">Comment il est conçu</h2>
-  <p class="reveal">Macdio est 100 % natif, en Swift et SwiftUI. Pas d'Electron, pas de React Native, pas de vues web. Chaque écran est écrit spécifiquement pour la plateforme sur laquelle il tourne : iPhone, iPad, Mac, Apple TV, Apple Watch et CarPlay.</p>
+  <p class="reveal">Macdio est 100 % natif, en Swift et SwiftUI. Pas d'Electron, pas de React Native, pas de vues web. Chaque écran est écrit spécifiquement pour la plateforme sur laquelle il tourne : iPhone, iPad, Mac, Apple TV, Apple Watch et CarPlay.</p>
   <p class="reveal">Comme la plupart des développeurs en 2026, j'utilise des outils modernes assistés par IA dans mon travail, pour explorer des cas limites, prototyper des idées et me sortir de séances de débogage épineuses. Mais l'architecture de fond, les choix de conception, le réglage des performances et le code final livré viennent tous d'une recherche délibérée et d'itérations à la main. Je tiens à ce que les détails soient justes, et cela veut dire comprendre chaque couche de la pile plutôt que d'accepter ce qu'un outil génère.</p>
 
   <h2 class="reveal">Sources de données &amp; API</h2>
-  <p class="reveal">Macdio n'a pas sa propre base de stations. Il s'appuie sur des API publiques pour les listes de stations, les métadonnées de lecture et les paroles. Voici à quoi l'app parle :</p>
+  <p class="reveal">Macdio ne compose pas son propre catalogue de stations. Les listes de stations viennent de Radio Browser, une base de données publique tenue par la communauté, et la copie qu'en garde Macdio (dir.macdio.app) ne sert que lorsque Radio Browser ne répond pas. Les métadonnées de lecture et les paroles viennent d'API publiques. Voici à quoi l'app parle :</p>
   <div class="card-grid cols-auto reveal">
     <div class="info-card">
       <h3>Radio Browser</h3>
@@ -79,7 +79,7 @@
 
   <h2 class="reveal">Dépendances</h2>
   <p class="reveal">Macdio a une empreinte de dépendances minimale. L'app elle-même n'utilise aucun paquet Swift tiers. Elle est entièrement construite avec les frameworks d'Apple (SwiftUI, SwiftData, AVFoundation, CloudKit, MediaPlayer).</p>
-  <p class="reveal">Ce site web est tout aussi léger. Il n'embarque ni police web ni bibliothèque 3D. La typographie utilise la police système déjà présente sur votre appareil Apple, et chaque animation est du simple CSS et JavaScript. Les services externes sont :</p>
+  <p class="reveal">Ce site web est tout aussi léger. Il n'embarque ni police web ni bibliothèque 3D. La typographie utilise la police système déjà présente sur votre appareil Apple, et chaque animation est du simple CSS et JavaScript. Les services externes sont :</p>
   <table class="data-table reveal">
     <thead>
       <tr><th scope="col">Nom</th><th scope="col">Rôle</th><th scope="col">Type</th></tr>
@@ -103,6 +103,11 @@
       <tr>
         <th scope="row">dir.macdio.app</th>
         <td>La copie de l'annuaire Radio Browser tenue par Macdio. La page annuaire ne l'interroge que lorsque Radio Browser ne répond pas. Elle ne conserve aucune adresse IP.</td>
+        <td><span class="tag-pill">Web</span></td>
+      </tr>
+      <tr>
+        <th scope="row"><a href="https://hub.devdio.pro" target="_blank" rel="noopener">hub.devdio.pro</a></th>
+        <td>Le forum communautaire de Macdio. Le badge « New » sur le logo demande au serveur de ce site les trois dernières notes de version ; votre navigateur ne contacte jamais le forum, et la seule chose conservée est l'identifiant du dernier message que vous avez vu, dans le stockage local de votre navigateur.</td>
         <td><span class="tag-pill">Web</span></td>
       </tr>
       <tr>

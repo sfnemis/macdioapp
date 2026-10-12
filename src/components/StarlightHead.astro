@@ -7,6 +7,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { SITE, localePath, alternates, splitLocale } from '../site/paths.mjs';
 import { byCode, DEFAULT } from '../site/locales.mjs';
+import { guideLocales } from '../data/guides.mjs';
 
 const { entry, siteTitle } = Astro.locals.starlightRoute;
 // Astro.url.pathname is "/guides/" for the index route and "/guides/<slug>"
@@ -24,8 +25,11 @@ const custom = entry.data.head?.find((h) => h.tag === 'title')?.content;
 const title = custom || (/Macdio/.test(pageTitle) ? pageTitle : `${pageTitle} | ${siteTitle}`);
 const description = entry.data.description ?? '';
 const image = 'https://macdio.app/assets/discourse/x-summary-large.png';
-// A locale carries a guide when its Markdown file exists under src/content/docs/<code>/.
-const hasDoc = (c) => c === DEFAULT || existsSync(join(process.cwd(), 'src', 'content', 'docs', c, path.endsWith('/') ? path + 'index.md' : path.replace(/\.html$/, '.md')));
+// A locale carries a guide when it is a guide locale (live, with translated
+// guides) and, for a guide page, its Markdown file exists; the hub index
+// (/guides/) is a route every guide locale has.
+const guideCodes = new Set(guideLocales().map((l) => l.code));
+const hasDoc = (c) => c === DEFAULT || (guideCodes.has(c) && (path.endsWith('/') || existsSync(join(process.cwd(), 'src', 'content', 'docs', c, path.replace(/\.html$/, '.md')))));
 const alts = alternates(path, hasDoc);
 const isGuide = path !== '/guides/';
 const iso = (d) => (d instanceof Date ? d.toISOString().slice(0, 10) : undefined);

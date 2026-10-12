@@ -32,8 +32,11 @@ export function checkLocale(code, strings, en, { live }) {
   for (const [k, v] of Object.entries(have)) {
     if (typeof v !== 'string') continue;
     if (v.includes('—')) problems.push(`${code}: em dash in ${k}`);
-    if (/\.title$/.test(k) && v.length > 60) problems.push(`${code}: ${k} title is ${v.length} chars (max 60)`);
-    if (/\.description$/.test(k) && v.length > 160) problems.push(`${code}: ${k} description is ${v.length} chars (max 160)`);
+    // Meta title and description limits; the guide cards under guides.groups are
+    // on-page text, not meta, so they are left out.
+    const meta = !k.startsWith('guides.groups.');
+    if (meta && /\.title$/.test(k) && v.length > 60) problems.push(`${code}: ${k} title is ${v.length} chars (max 60)`);
+    if (meta && /\.description$/.test(k) && v.length > 160) problems.push(`${code}: ${k} description is ${v.length} chars (max 160)`);
     if (code === 'en' && WE.test(v)) problems.push(`${code}: "we/our/us" in ${k}: ${v}`);
   }
   return live ? problems : [];

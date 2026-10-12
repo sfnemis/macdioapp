@@ -6,7 +6,7 @@
 // astro.config.mjs imports this before Vite exists.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
-import { LOCALES, DEFAULT } from '../site/locales.mjs';
+import { LOCALES, DEFAULT, liveLocales } from '../site/locales.mjs';
 
 const I18N = join(process.cwd(), 'src', 'i18n');
 const DOCS = join(process.cwd(), 'src', 'content', 'docs');
@@ -15,8 +15,9 @@ const read = (code) => JSON.parse(readFileSync(join(I18N, `${code}.json`), 'utf8
 export const GROUPS = read(DEFAULT).guides.groups;
 export const ALL_GUIDES = GROUPS.flatMap((g) => g.guides);
 
-// Locales whose guides exist as Markdown under src/content/docs/<code>/guides/.
-export const guideLocales = () => LOCALES.filter((l) => l.code === DEFAULT || existsSync(join(DOCS, l.code, 'guides')));
+// Live locales whose guides exist as Markdown under src/content/docs/<code>/guides/.
+// A locale still being translated stays out until it is switched live.
+export const guideLocales = () => liveLocales().filter((l) => l.code === DEFAULT || existsSync(join(DOCS, l.code, 'guides')));
 
 // Starlight sidebar entries with per-locale labels. Links end in .html because
 // the site serves files (build.format "file"); Starlight prefixes the locale.

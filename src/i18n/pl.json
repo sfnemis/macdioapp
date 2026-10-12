@@ -14,22 +14,70 @@
     "moreLabel": "Więcej stron",
     "openMenu": "Otwórz menu",
     "pages": [
-      { "path": "/guides/", "label": "Poradniki" },
-      { "path": "/podcasts.html", "label": "Podcasty" },
-      { "path": "/pricing.html", "label": "Cena" },
-      { "path": "/carplay.html", "label": "Radio w CarPlay" },
-      { "path": "/iphone.html", "label": "Radio na iPhone'a" },
-      { "path": "/mac.html", "label": "Radio na Maca" },
-      { "path": "/ipad.html", "label": "Radio na iPada" },
-      { "path": "/apple-tv.html", "label": "Radio na Apple TV" },
-      { "path": "/apple-watch.html", "label": "Radio na Apple Watch" },
-      { "path": "/support.html", "label": "Pomoc" },
-      { "path": "/privacy.html", "label": "Prywatność" },
-      { "path": "/transparency.html", "label": "Transparentność" },
-      { "path": "/accessibility.html", "label": "Dostępność" },
-      { "path": "/submit-station.html", "label": "Zgłoś stację" },
-      { "path": "/stations.html", "label": "Stacje" },
-      { "path": "/presskit.html", "label": "Materiały prasowe" }
+      {
+        "path": "/guides/",
+        "label": "Poradniki"
+      },
+      {
+        "path": "/podcasts.html",
+        "label": "Podcasty"
+      },
+      {
+        "path": "/pricing.html",
+        "label": "Cena"
+      },
+      {
+        "path": "/carplay.html",
+        "label": "Radio w CarPlay"
+      },
+      {
+        "path": "/iphone.html",
+        "label": "Radio na iPhone'a"
+      },
+      {
+        "path": "/mac.html",
+        "label": "Radio na Maca"
+      },
+      {
+        "path": "/ipad.html",
+        "label": "Radio na iPada"
+      },
+      {
+        "path": "/apple-tv.html",
+        "label": "Radio na Apple TV"
+      },
+      {
+        "path": "/apple-watch.html",
+        "label": "Radio na Apple Watch"
+      },
+      {
+        "path": "/support.html",
+        "label": "Pomoc"
+      },
+      {
+        "path": "/privacy.html",
+        "label": "Prywatność"
+      },
+      {
+        "path": "/transparency.html",
+        "label": "Transparentność"
+      },
+      {
+        "path": "/accessibility.html",
+        "label": "Dostępność"
+      },
+      {
+        "path": "/submit-station.html",
+        "label": "Zgłoś stację"
+      },
+      {
+        "path": "/stations.html",
+        "label": "Stacje"
+      },
+      {
+        "path": "/presskit.html",
+        "label": "Materiały prasowe"
+      }
     ]
   },
   "footer": {
@@ -47,7 +95,7 @@
     "youtube": "Macdio na YouTube"
   },
   "guides": {
-    "title": "Poradniki radia internetowego na Maca, iPhone'a, zegarek i CarPlay",
+    "title": "Poradniki radia internetowego: Mac, iPhone, Watch, CarPlay",
     "h1": "Poradniki",
     "description": "Krótkie, praktyczne poradniki dla słuchaczy radia internetowego na Macu, iPhone'ie, iPadzie, Apple Watch, Apple TV i w CarPlay, napisane przez twórcę Macdio.",
     "intro": "Krótkie, praktyczne odpowiedzi na pytania, które słuchacze radia internetowego naprawdę zadają, napisane przez twórcę Macdio. Każdy poradnik wymienia urządzenia, których dotyczy, i kończy się pytaniami, które ludzie wyszukują.",
@@ -60,25 +108,70 @@
       {
         "label": "Radio na każdym urządzeniu",
         "guides": [
-          { "slug": "how-to-listen-to-radio-on-mac", "label": "Radio na Macu", "title": "Jak słuchać radia internetowego na Macu", "description": "Przeglądarka, VLC, aplikacja Muzyka albo odtwarzacz w pasku menu: każda droga, z uczciwymi kompromisami. Przeczytaj ten najpierw, jeśli radio na komputerze jest dla ciebie nowe." },
-          { "slug": "radio-on-apple-watch", "label": "Apple Watch bez iPhone'a", "title": "Radio na Apple Watch bez iPhone'a", "description": "Streaming na nadgarstku bez iPhone'a w pobliżu: co naprawdę znaczy samodzielna, czego potrzebujesz i uczciwe liczby o baterii." },
-          { "slug": "carplay-radio", "label": "Radio w CarPlay", "title": "Radio internetowe w CarPlay", "description": "Presety jak w klasycznym radiu samochodowym, stacje z całego świata zamiast lokalnego FM i ile długa trasa kosztuje w danych komórkowych." },
-          { "slug": "siri-radio", "label": "Włączaj radio przez Siri", "title": "Włączaj radio przez Siri", "description": "Każda fraza głosowa, którą rozumie Macdio, w 14 językach, i jak nazwa stacji wypowiedziana w aucie zamienia się we właściwy strumień." }
+          {
+            "slug": "how-to-listen-to-radio-on-mac",
+            "label": "Radio na Macu",
+            "title": "Jak słuchać radia internetowego na Macu",
+            "description": "Przeglądarka, VLC, aplikacja Muzyka albo odtwarzacz w pasku menu: każda droga, z uczciwymi kompromisami. Przeczytaj ten najpierw, jeśli radio na komputerze jest dla ciebie nowe."
+          },
+          {
+            "slug": "radio-on-apple-watch",
+            "label": "Apple Watch bez iPhone'a",
+            "title": "Radio na Apple Watch bez iPhone'a",
+            "description": "Streaming na nadgarstku bez iPhone'a w pobliżu: co naprawdę znaczy samodzielna, czego potrzebujesz i uczciwe liczby o baterii."
+          },
+          {
+            "slug": "carplay-radio",
+            "label": "Radio w CarPlay",
+            "title": "Radio internetowe w CarPlay",
+            "description": "Presety jak w klasycznym radiu samochodowym, stacje z całego świata zamiast lokalnego FM i ile długa trasa kosztuje w danych komórkowych."
+          },
+          {
+            "slug": "siri-radio",
+            "label": "Włączaj radio przez Siri",
+            "title": "Włączaj radio przez Siri",
+            "description": "Każda fraza głosowa, którą rozumie Macdio, w 14 językach, i jak nazwa stacji wypowiedziana w aucie zamienia się we właściwy strumień."
+          }
         ]
       },
       {
         "label": "Funkcje radiowe",
         "guides": [
-          { "slug": "record-internet-radio", "label": "Nagrywaj radio internetowe", "title": "Jak nagrywać radio internetowe", "description": "Zamień audycję na żywo w nazwane, osobne utwory na Macu i iPhone'ie, i jak naprawdę wygląda prawo nagrywania na własny użytek." },
-          { "slug": "identify-song-on-radio", "label": "Jaki utwór leci?", "title": "Jaki utwór leci w radiu?", "description": "Trzy sposoby rozpoznania utworu z radia, w tym jeden, który odczytuje sam strumień i nigdy nie prosi o mikrofon." },
-          { "slug": "find-radio-stream-url", "label": "Znajdź adres strumienia", "title": "Jak znaleźć adres URL strumienia stacji", "description": "Cztery sposoby na zdobycie bezpośredniego adresu, co możesz z nim zrobić i jak dodać własną stację." },
-          { "slug": "iphone-fm-radio", "label": "Czy iPhone ma radio FM?", "title": "Czy iPhone ma radio FM?", "description": "Uczciwa odpowiedź o brakującym układzie, odbiornik kontra nadajnik, argument awaryjny i co zrobić zamiast tego." }
+          {
+            "slug": "record-internet-radio",
+            "label": "Nagrywaj radio internetowe",
+            "title": "Jak nagrywać radio internetowe",
+            "description": "Zamień audycję na żywo w nazwane, osobne utwory na Macu i iPhone'ie, i jak naprawdę wygląda prawo nagrywania na własny użytek."
+          },
+          {
+            "slug": "identify-song-on-radio",
+            "label": "Jaki utwór leci?",
+            "title": "Jaki utwór leci w radiu?",
+            "description": "Trzy sposoby rozpoznania utworu z radia, w tym jeden, który odczytuje sam strumień i nigdy nie prosi o mikrofon."
+          },
+          {
+            "slug": "find-radio-stream-url",
+            "label": "Znajdź adres strumienia",
+            "title": "Jak znaleźć adres URL strumienia stacji",
+            "description": "Cztery sposoby na zdobycie bezpośredniego adresu, co możesz z nim zrobić i jak dodać własną stację."
+          },
+          {
+            "slug": "iphone-fm-radio",
+            "label": "Czy iPhone ma radio FM?",
+            "title": "Czy iPhone ma radio FM?",
+            "description": "Uczciwa odpowiedź o brakującym układzie, odbiornik kontra nadajnik, argument awaryjny i co zrobić zamiast tego."
+          }
         ]
       },
       {
         "label": "Kupowanie i porównywanie",
         "guides": [
-          { "slug": "best-internet-radio-apps", "label": "Najlepsze aplikacje radia internetowego", "title": "Najlepsze aplikacje radia internetowego w porównaniu", "description": "Siedem odtwarzaczy na Maca, iPhone'a, Apple Watch i Apple TV, z cenami, liczbą stacji i tym, czego każdemu brakuje." }
+          {
+            "slug": "best-internet-radio-apps",
+            "label": "Najlepsze aplikacje radia internetowego",
+            "title": "Najlepsze aplikacje radia internetowego w porównaniu",
+            "description": "Siedem odtwarzaczy na Maca, iPhone'a, Apple Watch i Apple TV, z cenami, liczbą stacji i tym, czego każdemu brakuje."
+          }
         ]
       }
     ]

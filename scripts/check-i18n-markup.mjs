@@ -1,11 +1,13 @@
 // A translated page must carry exactly the English page's markup: the same
 // tags with the same classes in the same order, the same hrefs, the same
 // inline script, and a guide the same headings count and table rows. Only
-// the words may differ. Runs over every locale folder that exists; a locale
-// missing a file the English site has is reported too.
+// the words may differ. Runs over every live locale (src/site/locales.mjs); a
+// live locale missing a file the English site has is reported too. Locales
+// still being translated stay out of the build until they are switched live.
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { liveLocales, DEFAULT } from '../src/site/locales.mjs';
 
 const strip = (h) => h.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '<script type="application/ld+json"></script>');
 
@@ -62,7 +64,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const enGuides = readdirSync(join(docs, 'guides')).filter((f) => f.endsWith('.md'));
   let problems = 0, files = 0;
   const say = (m) => { problems++; console.error(m); };
-  for (const code of readdirSync(legacy).filter((c) => c !== 'en')) {
+  for (const code of liveLocales().map((l) => l.code).filter((c) => c !== DEFAULT)) {
     for (const rel of enPages) {
       const f = join(legacy, code, rel);
       if (!existsSync(f)) { say(`${code}/${rel}: missing`); continue; }
