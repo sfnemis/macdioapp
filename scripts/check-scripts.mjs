@@ -25,6 +25,12 @@ export function scriptProblems(html) {
   // A redirect stub (/ios/) sends everyone to the store at once and is exempt.
   const storeRedirect = /location\.replace\('https:\/\/apps\.apple\.com\//.test(html);
   if (!storeRedirect && html.includes('href="https://apps.apple.com/') && !html.includes('/* app-store-clicks */')) problems.push('App Store link without the App Store click counter (src/components/AppStoreClicks.astro)');
+  // Every App Store link carries the campaign tokens (W35, added after the
+  // build by scripts/store-campaign.mjs) so App Store Connect can count the
+  // downloads the site brings.
+  for (const m of html.matchAll(/href="(https:\/\/apps\.apple\.com\/[^"]*)"/g)) {
+    if (!/[?&](?:amp;)?ct=/.test(m[1])) { problems.push(`App Store link without a campaign token: ${m[1]}`); break; }
+  }
   if (/googletagmanager\.com|gtag\(|G-QR2MZ9NF2N/.test(html)) problems.push('Google Analytics is still on the page; the site counts visits with Umami only');
   // Every JSON-LD block must parse; a "</script>" inside a string would end
   // the block early and leave the rest of it as page text.

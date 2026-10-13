@@ -27,12 +27,18 @@ test('the Umami recorder (replay and heatmaps, W30) is allowed from the self-hos
 });
 
 test('a page with an App Store link must carry the App Store click counter (W34)', () => {
-  const link = '<a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888">Get</a>';
+  const link = '<a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888?pt=96130860&amp;ct=macdio-web&amp;mt=8">Get</a>';
   assert.match(scriptProblems(link)[0], /App Store click/);
   assert.deepEqual(scriptProblems('<script>/* app-store-clicks */</script>' + link), []);
   assert.deepEqual(scriptProblems('<p>no store link here</p>'), []);
   // /ios/ only redirects to the store; its fallback link is never a choice a visitor makes on a page.
   assert.deepEqual(scriptProblems("<script>window.location.replace('https://apps.apple.com/app/macdio/id6761737888');</script>" + link), []);
+});
+
+test('every App Store link carries the App Store campaign tokens (W35)', () => {
+  const counter = '<script>/* app-store-clicks */</script>';
+  assert.match(scriptProblems(counter + '<a href="https://apps.apple.com/app/macdio/id6761737888">Get</a>')[0], /campaign/);
+  assert.deepEqual(scriptProblems(counter + '<a href="https://apps.apple.com/app/macdio/id6761737888?pt=96130860&amp;ct=macdio-web&amp;mt=8">Get</a>'), []);
 });
 
 test('a module script or any other external script is a problem', () => {
