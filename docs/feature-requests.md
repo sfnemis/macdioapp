@@ -118,7 +118,10 @@ saying what happened to it.
   it), so GA is the only analytics; the API token has no Web Analytics
   permission to check the account. The third option therefore means adding
   the Cloudflare beacon, not keeping it.
-- [ ] **W16 Two support addresses** (found 2026-10-12). Checked 2026-10-13: support@devdio.pro on
+- [x] **W16 Two support addresses** (found 2026-10-12). Sait chose
+  support@devdio.pro everywhere (2026-10-13 14:18); every page in all 14
+  languages now uses it (140 files), the app's feedback links follow in 3.0.5
+  (app tracker #634). Checked 2026-10-13: support@devdio.pro on
   support.html and in the footer of every page; support@macdio.app on ten
   pages (the five privacy policies, accessibility, community, presskit,
   submit-station, transparency). Both domains have Zoho MX records. support.html and the
