@@ -17,32 +17,35 @@ const BOTS = /googlebot|bingbot|applebot|duckduckbot|yandex|baiduspider|gptbot|c
 
 // /api/hub: the three newest release notes from the community hub, for the
 // badge (public/hub-badge.js). The browser talks only to macdio.app. The
-// Browsers get max-age=0 and ask every time: a browser max-age is raised to
-// the zone's 3-day Browser Cache TTL by Cloudflare, which kept a new release
-// note out of browsers for days (found 2026-10-13). The edge copy below uses
-// s-maxage.
+// The edge copy (caches.default) lives ten minutes through s-maxage. What the
+// browser gets is always "private, max-age=0, must-revalidate": Cloudflare
+// raises any public browser max-age, even 0, to the zone's 3-day Browser
+// Cache TTL, which kept a new release note out of browsers for days (found
+// 2026-10-13); a private header is left alone.
 // answer is kept in this data centre's cache for ten minutes (caches.default,
 // which works whatever the hub's own headers say; the hub sends no-store), so
 // the hub sees about one request per location per ten minutes, never one per
 // visitor, however often someone calls this route.
 const HUB_KEY = 'https://macdio.app/api/hub';
 const JSON_HEADERS = { 'Content-Type': 'application/json; charset=utf-8', 'X-Content-Type-Options': 'nosniff' };
+const BROWSER = 'private, max-age=0, must-revalidate';
+const toBrowser = (res) => { const out = new Response(res.body, res); out.headers.set('Cache-Control', BROWSER); return out; };
 
 export async function hubFeed(fetchFn = fetch, ctx = null, cache = null) {
   if (cache) {
     const hit = await cache.match(new Request(HUB_KEY));
-    if (hit) return hit;
+    if (hit) return toBrowser(hit);
   }
   try {
     const r = await fetchFn(HUB + RELEASE_NOTES_PATH, { headers: { Accept: 'application/json', 'User-Agent': 'macdio.app (what\'s new badge)' } });
     if (!r.ok) throw new Error(`hub ${r.status}`);
     const releaseNotes = pickTopics(await r.json(), { 6: 'Release Notes' }, 3);
-    const res = new Response(JSON.stringify({ releaseNotes }), { status: 200, headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=0, s-maxage=600, must-revalidate' } });
+    const res = new Response(JSON.stringify({ releaseNotes }), { status: 200, headers: { ...JSON_HEADERS, 'Cache-Control': 'public, s-maxage=600' } });
     if (cache && ctx) ctx.waitUntil(cache.put(new Request(HUB_KEY), res.clone()));
-    return res;
+    return toBrowser(res);
   } catch {
     // A fixed message: the upstream error can carry a fragment of the hub's HTML.
-    return new Response(JSON.stringify({ releaseNotes: [], error: 'hub unavailable' }), { status: 502, headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=60' } });
+    return new Response(JSON.stringify({ releaseNotes: [], error: 'hub unavailable' }), { status: 502, headers: { ...JSON_HEADERS, 'Cache-Control': BROWSER } });
   }
 }
 

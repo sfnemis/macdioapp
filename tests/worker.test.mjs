@@ -94,12 +94,11 @@ test('/api/hub returns the three newest release notes with ids, and a 502 with a
   const fakeFetch = async (url) => { assert.match(url, /hub\.devdio\.pro\/c\/macdio\/release-notes\/6\.json/); return new Response(JSON.stringify({ topic_list: { topics } }), { status: 200 }); };
   const res = await handle(new Request('https://macdio.app/api/hub'), env, ['en'], fakeFetch);
   assert.equal(res.status, 200);
-  // The edge keeps it ten minutes (s-maxage); browsers ask every time
-  // (max-age=0). A browser max-age is overridden by the zone's 3-day Browser
-  // Cache TTL, which kept new release notes out of browsers for days.
-  assert.match(res.headers.get('Cache-Control'), /s-maxage=600/);
-  assert.match(res.headers.get('Cache-Control'), /(^|[ ,])max-age=0\b/);
-  assert.match(res.headers.get('Cache-Control'), /must-revalidate/);
+  // Browsers get "private, max-age=0, must-revalidate": Cloudflare raises
+  // any public browser max-age (even 0) to the zone's 3-day Browser Cache
+  // TTL, which kept new release notes out of browsers for days; private is
+  // left alone (the "/" page proves it).
+  assert.equal(res.headers.get('Cache-Control'), 'private, max-age=0, must-revalidate');
   const body = await res.json();
   assert.deepEqual(body.releaseNotes.map((t) => t.id), [109, 105, 102]);
   assert.equal(body.releaseNotes[0].url, 'https://hub.devdio.pro/t/macdio-3-0/109');
@@ -166,10 +165,15 @@ test('/api/hub is served from a cache when present, sets nosniff, and hides upst
   await Promise.all(waits);
   assert.equal(first.status, 200);
   assert.equal(first.headers.get('X-Content-Type-Options'), 'nosniff');
+  // The edge copy keeps ten minutes through s-maxage; what leaves the Worker,
+  // fresh or from the edge copy, is private to the browser.
+  assert.match([...store.values()][0].headers.get('Cache-Control'), /s-maxage=600/);
   const second = await handle(new Request('https://macdio.app/api/hub'), assetsEnv, ['en'], fetchFn, ctx, cache);
   assert.equal(second.status, 200);
   assert.equal(calls, 1);
+  assert.equal(second.headers.get('Cache-Control'), 'private, max-age=0, must-revalidate');
   const broken = await handle(new Request('https://macdio.app/api/hub'), assetsEnv, ['en'], async () => { throw new Error('<html>secret upstream page</html>'); }, ctx, null);
   assert.equal(broken.status, 502);
   assert.doesNotMatch(await broken.text(), /secret/);
+  assert.equal(broken.headers.get('Cache-Control'), 'private, max-age=0, must-revalidate');
 });
