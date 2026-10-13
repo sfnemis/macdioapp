@@ -450,6 +450,17 @@ saying what happened to it.
   Macdio, Livedio and Repdio. Written through a temporary admin API key
   (deleted afterwards, answers 401); every data source it uses answered 200
   for all four websites. Not seen on screen by me (no login).
+- [ ] **W34 Count App Store button clicks on macdio.app and livedio.app**
+  (Sait, 2026-10-14 00:26: where do visitors browse most, and do they really
+  press the Download on the App Store buttons, top or middle; also: what can
+  Umami Pixels do). Today Umami counts pages, entry and exit pages and
+  referrers, and macdio.app has heatmaps on 15% of visits, but no click on an
+  App Store link is counted. Plan: every apps.apple.com link gets Umami's
+  data-umami-event "App Store click" with its position (top, bottom, nav,
+  faq, footer, content) and kind (button, text link), set at click time by a
+  small inline script so the 323 macdio and 37 livedio links need no edit;
+  a build check fails if a page with an App Store link lacks it; privacy
+  text names the click count; boards and dashboard get an events view.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
