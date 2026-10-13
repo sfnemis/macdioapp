@@ -61,6 +61,10 @@ A copy of `.env` from before these two lines is at
   user's own board (type dashboard, id = the user id, written through
   POST /api/dashboard); its components name their website with entityType
   and entityId.
+- Event "App Store click" (W34) with properties position (top, bottom, nav,
+  faq, footer, content) and kind (button, text link) on macdio.app and
+  livedio.app. Goals of that event: macdio 6a7320f2, livedio cd2e4ac0
+  (POST /api/websites/<id>/goals, parameters {type: event, value}).
 - Boards (2026-10-13): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef,
   owned by admin. Board JSON is `parameters.rows[].columns[].component` with
   `type` (WebsiteMetricsBar, WebsiteChart, RealtimeActiveUsers, MetricsTable,

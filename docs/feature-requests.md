@@ -450,7 +450,7 @@ saying what happened to it.
   Macdio, Livedio and Repdio. Written through a temporary admin API key
   (deleted afterwards, answers 401); every data source it uses answered 200
   for all four websites. Not seen on screen by me (no login).
-- [ ] **W34 Count App Store button clicks on macdio.app and livedio.app**
+- [x] **W34 Count App Store button clicks on macdio.app and livedio.app**
   (Sait, 2026-10-14 00:26: where do visitors browse most, and do they really
   press the Download on the App Store buttons, top or middle; also: what can
   Umami Pixels do). Today Umami counts pages, entry and exit pages and
@@ -461,6 +461,19 @@ saying what happened to it.
   small inline script so the 323 macdio and 37 livedio links need no edit;
   a build check fails if a page with an App Store link lacks it; privacy
   text names the click count; boards and dashboard get an events view.
+  Done 2026-10-14 00:40 (macdio Worker f97c64a3, livedio a59fa256): the
+  stamp is src/components/AppStoreClicks.astro (both heads) and the end of
+  livedio's site.js (v=9 on its 20 pages). check-scripts fails on a page with
+  an App Store link and no counter, except the /ios/ redirect stub (test
+  written first, failed, passed; suite 61/61). Privacy pages say Umami also
+  counts App Store clicks and where they sit (macdio 14 languages, dated
+  October 14; livedio too). Local: top, bottom, nav and content labels set,
+  same-tab links still open, nothing sent from localhost. Live: a click on
+  each site's top button reached Umami as "App Store click" {position: top,
+  kind: button}. Goals "App Store click" (macdio 6a7320f2, livedio
+  cd2e4ac0, event goals), shown on both boards (goal, clicks chart, a note on
+  where to read position) and on the dashboard; the goal answered 1 of 7
+  visitors with my test click in it. Temporary API key deleted (401).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
