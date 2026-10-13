@@ -474,6 +474,15 @@ saying what happened to it.
   cd2e4ac0, event goals), shown on both boards (goal, clicks chart, a note on
   where to read position) and on the dashboard; the goal answered 1 of 7
   visitors with my test click in it. Temporary API key deleted (401).
+- [ ] **W35 Tracked short links for social media, and App Store campaign
+  links** (Sait, 2026-10-14 00:40). Umami Links at stats.devdio.pro/q/<slug>
+  (a click is counted with referrer and country, then redirected): one per
+  platform (Instagram, TikTok, X, YouTube, Reddit, hub) for Macdio and for
+  Livedio, pointing at the App Store. Downloads need App Store campaign links
+  (pt = provider token, ct = campaign); Sait creates one campaign in App
+  Store Connect (Analytics, Acquisition, Campaigns) and sends the pt value,
+  then the site links get ct=macdio-web / livedio-web and each short link
+  its own ct.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
