@@ -69,6 +69,8 @@ A copy of `.env` from before these two lines is at
   country, device) and redirects (307). Slugs <app>-<platform> for macdio and
   livedio: instagram, tiktok, x, youtube, reddit, hub. Slugs need 8+
   characters. Clicks are website_event rows whose website_id is the link id.
+  Their targets carry the App Store campaign ?pt=96130860&ct=<slug>&mt=8, so
+  App Store Connect counts downloads per link as well.
 - Boards (2026-10-13): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef,
   owned by admin. Board JSON is `parameters.rows[].columns[].component` with
   `type` (WebsiteMetricsBar, WebsiteChart, RealtimeActiveUsers, MetricsTable,
