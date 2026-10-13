@@ -12,10 +12,12 @@ test('Google Analytics is gone: any gtag tag or inline loader is a problem', () 
   assert.match(scriptProblems("<script>if(location.hostname==='macdio.app'){gtag('config','G-QR2MZ9NF2N')}</script>")[0], /Google Analytics/);
 });
 
-test('Umami counts visits, only on macdio.app', () => {
-  const ok = '<script defer src="https://cloud.umami.is/script.js" data-website-id="53f86548-2a9e-4567-b01f-65af482ca8ac" data-domains="macdio.app"></script>';
+test('Umami counts visits from the self-hosted server, only on macdio.app', () => {
+  const ok = '<script defer src="https://stats.devdio.pro/script.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5" data-domains="macdio.app"></script>';
   assert.deepEqual(scriptProblems(ok), []);
   assert.match(scriptProblems(ok.replace(' data-domains="macdio.app"', ''))[0], /data-domains/);
+  // Umami Cloud was left on 2026-10-13 (W29): its tag is an unknown external script now.
+  assert.match(scriptProblems(ok.replace('stats.devdio.pro', 'cloud.umami.is'))[0], /external script https:\/\/cloud\.umami\.is/);
 });
 
 test('a module script or any other external script is a problem', () => {

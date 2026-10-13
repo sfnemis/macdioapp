@@ -1,8 +1,9 @@
 // Marketing pages ship no JavaScript except inline scripts, the site's own
 // files (parts.js, redesign.js, hub-badge.js) and Umami, the cookie-free visit
-// counter (tracker W28), which must carry data-domains="macdio.app" so local
-// previews and test runs are not counted. Google Analytics is gone from the
-// site (2026-10-13); any gtag tag or loader fails here, guides included.
+// counter (tracker W28), self-hosted at stats.devdio.pro since W29. Its tag
+// must carry data-domains="macdio.app" so local previews and test runs are not
+// counted. Google Analytics is gone from the site (2026-10-13); any gtag tag or
+// loader fails here, guides included.
 // Guide pages (Starlight)
 // are allowed their search and table of contents scripts, so paths with a
 // "guides" segment are skipped.
@@ -11,7 +12,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ALLOWED_SRC = /^\/(?:parts|redesign|hub-badge)\.js$/;
-const UMAMI = 'https://cloud.umami.is/script.js';
+const UMAMI = 'https://stats.devdio.pro/script.js'; // self-hosted Umami (W29)
 
 export function scriptProblems(html) {
   const problems = [];
