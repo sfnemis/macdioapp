@@ -94,7 +94,12 @@ test('/api/hub returns the three newest release notes with ids, and a 502 with a
   const fakeFetch = async (url) => { assert.match(url, /hub\.devdio\.pro\/c\/macdio\/release-notes\/6\.json/); return new Response(JSON.stringify({ topic_list: { topics } }), { status: 200 }); };
   const res = await handle(new Request('https://macdio.app/api/hub'), env, ['en'], fakeFetch);
   assert.equal(res.status, 200);
-  assert.match(res.headers.get('Cache-Control'), /max-age=600/);
+  // The edge keeps it ten minutes (s-maxage); browsers ask every time
+  // (max-age=0). A browser max-age is overridden by the zone's 3-day Browser
+  // Cache TTL, which kept new release notes out of browsers for days.
+  assert.match(res.headers.get('Cache-Control'), /s-maxage=600/);
+  assert.match(res.headers.get('Cache-Control'), /(^|[ ,])max-age=0\b/);
+  assert.match(res.headers.get('Cache-Control'), /must-revalidate/);
   const body = await res.json();
   assert.deepEqual(body.releaseNotes.map((t) => t.id), [109, 105, 102]);
   assert.equal(body.releaseNotes[0].url, 'https://hub.devdio.pro/t/macdio-3-0/109');

@@ -17,6 +17,10 @@ const BOTS = /googlebot|bingbot|applebot|duckduckbot|yandex|baiduspider|gptbot|c
 
 // /api/hub: the three newest release notes from the community hub, for the
 // badge (public/hub-badge.js). The browser talks only to macdio.app. The
+// Browsers get max-age=0 and ask every time: a browser max-age is raised to
+// the zone's 3-day Browser Cache TTL by Cloudflare, which kept a new release
+// note out of browsers for days (found 2026-10-13). The edge copy below uses
+// s-maxage.
 // answer is kept in this data centre's cache for ten minutes (caches.default,
 // which works whatever the hub's own headers say; the hub sends no-store), so
 // the hub sees about one request per location per ten minutes, never one per
@@ -33,7 +37,7 @@ export async function hubFeed(fetchFn = fetch, ctx = null, cache = null) {
     const r = await fetchFn(HUB + RELEASE_NOTES_PATH, { headers: { Accept: 'application/json', 'User-Agent': 'macdio.app (what\'s new badge)' } });
     if (!r.ok) throw new Error(`hub ${r.status}`);
     const releaseNotes = pickTopics(await r.json(), { 6: 'Release Notes' }, 3);
-    const res = new Response(JSON.stringify({ releaseNotes }), { status: 200, headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=600' } });
+    const res = new Response(JSON.stringify({ releaseNotes }), { status: 200, headers: { ...JSON_HEADERS, 'Cache-Control': 'public, max-age=0, s-maxage=600, must-revalidate' } });
     if (cache && ctx) ctx.waitUntil(cache.put(new Request(HUB_KEY), res.clone()));
     return res;
   } catch {

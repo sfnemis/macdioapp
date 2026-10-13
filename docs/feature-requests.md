@@ -293,6 +293,19 @@ saying what happened to it.
   collection"), guide titles kept within 60 characters (78 translated titles
   ran to 75 with the "| Macdio Guides" suffix), scripts/indexnow.sh reads the
   built dist/sitemap.xml (public/ has none any more, so it would have failed).
+- [x] **W27 What's new card showed old release notes after the deploy**
+  (found 2026-10-13 02:23 by the live check). Two causes, both fixed with a
+  test first: (1) the feed dropped every pinned topic to skip the category's
+  "About" topic, and the 3.0.4 post (topic 114) was pinned, so it vanished;
+  now only the "About the ..." topic is left out. (2) /api/hub sent
+  `max-age=600`, which Cloudflare raised to the zone's Browser Cache TTL of 3
+  days (259200), so a browser kept an old list for days; it now sends
+  `max-age=0, s-maxage=600, must-revalidate` (edge ten minutes, browser asks
+  every time), like the static files, which Cloudflare leaves alone. The API
+  token has no Cache Purge permission, so a stale edge copy cannot be purged
+  by hand; it expires after ten minutes. Sait submitted the sitemap to Google
+  and Bing himself (2026-10-13); the service account still has no Search
+  Console access (W7).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
