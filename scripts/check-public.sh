@@ -52,6 +52,16 @@ if [ "$al_code" != "302" ] || [ "${al_loc%/tr/}" = "$al_loc" ]; then
   fail=1
 fi
 
+# /ios and /ios/ (public/_redirects) go straight to the App Store with the
+# macdio-ios campaign, so App Store Connect counts what those links bring (W35).
+for p in /ios /ios/; do
+  read -r ios_code ios_loc < <(curl -s -o /dev/null -w '%{http_code} %{redirect_url}\n' "$HOST$p")
+  if [ "$ios_code" != "302" ] || [[ "$ios_loc" != *"ct=macdio-ios"* ]]; then
+    echo "IOS: $p is $ios_code ${ios_loc:-}, expected a 302 to the App Store with ct=macdio-ios"
+    fail=1
+  fi
+done
+
 # /api/hub depends on hub.devdio.pro. When the hub is down the badge simply
 # does not show, so a failure here is reported but does not fail the deploy.
 hub_code=$(curl -s -o /dev/null -w '%{http_code}' "$HOST/api/hub")
