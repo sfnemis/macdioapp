@@ -33,7 +33,7 @@ Feature pages: [podcast transcripts](https://macdio.app/features/podcast-transcr
 
 Comparisons, each with what the other app does better: [TuneIn](https://macdio.app/tunein-alternative.html), [myTuner](https://macdio.app/mytuner-alternative.html), [Pocket Casts](https://macdio.app/pocket-casts-alternative.html), [Overcast](https://macdio.app/overcast-alternative.html), [Snipd](https://macdio.app/snipd-alternative.html), [Apple Podcasts](https://macdio.app/compare/apple-podcasts.html).
 
-The directory search is addressable, so a link can carry the query: `https://macdio.app/stations.html?q=jazz&country=Türkiye&genre=chill`. All three parameters are optional. Country names follow Radio Browser spelling but match without case or accents.
+The directory search is addressable, so a link can carry the query: `https://macdio.app/stations.html?q=jazz&country=Turkiye&genre=chill`. All three parameters are optional. Country names follow Radio Browser spelling but match without case or accents.
 
 ## How to use Macdio
 
