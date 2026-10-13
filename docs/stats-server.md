@@ -27,6 +27,24 @@ password, the database password and the tunnel token live only on the server
 Checked from outside on 2026-10-13: port 3000 does not answer; the only way in
 is the tunnel. DNS: `stats.devdio.pro` CNAME to the tunnel, proxied.
 
+## Settings in /opt/umami/.env
+
+`.env` is umami:umami 600 (it was 644, readable by every user, with the
+database password in it, until 2026-10-13 18:09). It holds:
+
+- `DATABASE_URL`
+- `TWO_FACTOR_ENCRYPTION_KEY`: 64 hex characters (AES-256 key for the TOTP
+  secrets), added 2026-10-13 so two-factor login can be turned on. If the key
+  is lost or changed, every stored 2FA secret becomes unreadable and those
+  users cannot log in until 2FA is cleared for them, so the key must survive
+  in backups. The community-scripts `update` keeps `.env` (backup and
+  restore).
+- `MCP_ENABLED=1`: the MCP endpoint at https://stats.devdio.pro/mcp. It
+  answers 401 without credentials (checked from outside).
+
+A copy of `.env` from before these two lines is at
+`/root/umami-env.bak-202610131809` (600).
+
 ## What it records
 
 - Websites: macdio.app (id cef17e25-0c90-4678-a353-b397a24ef5c5). livedio.app
