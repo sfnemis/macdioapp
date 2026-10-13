@@ -317,6 +317,18 @@ saying what happened to it.
   by hand; it expires after ten minutes. Sait submitted the sitemap to Google
   and Bing himself (2026-10-13); the service account still has no Search
   Console access (W7).
+- [ ] **W28 Replace Google Analytics with a free open-source, cookieless
+  analytics** (Sait, 2026-10-13 14:18). Researched: Umami (MIT, PostgreSQL
+  only, no cookies, ~0.4-1 GB RAM, Docker or Node; free Cloud Hobby plan),
+  Plausible CE (AGPL, needs ClickHouse, 2 GB+), Matomo (heavy PHP/MySQL,
+  cookies by default), Rybbit (AGPL, ClickHouse). Recommendation: Umami
+  self-hosted on Sait's Istanbul server behind a Cloudflare Tunnel (same
+  pattern as dir.macdio.app), script and collect endpoint served through
+  macdio.app's own Worker so ad blockers do not drop it; one install can count
+  macdio.app, livedio.app and devdio.pro. Then run it next to GA for a few
+  days, remove GA, and rewrite the privacy pages (14 languages): closes W15.
+  Waiting for Sait: where to host (new LXC, the existing macdio-rb CT, or
+  Umami Cloud) and the server address for SSH (not in any repo file).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
