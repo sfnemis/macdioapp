@@ -20,6 +20,11 @@ const UMAMI_RECORDER = 'https://stats.devdio.pro/recorder.js';
 
 export function scriptProblems(html) {
   const problems = [];
+  // Every App Store click is counted (W34); a page that links to the store
+  // without the counter would undercount silently.
+  // A redirect stub (/ios/) sends everyone to the store at once and is exempt.
+  const storeRedirect = /location\.replace\('https:\/\/apps\.apple\.com\//.test(html);
+  if (!storeRedirect && html.includes('href="https://apps.apple.com/') && !html.includes('/* app-store-clicks */')) problems.push('App Store link without the App Store click counter (src/components/AppStoreClicks.astro)');
   if (/googletagmanager\.com|gtag\(|G-QR2MZ9NF2N/.test(html)) problems.push('Google Analytics is still on the page; the site counts visits with Umami only');
   // Every JSON-LD block must parse; a "</script>" inside a string would end
   // the block early and leave the rest of it as page text.

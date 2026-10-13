@@ -7,6 +7,7 @@ import { SITE, localePath, alternates } from '../site/paths.mjs';
 import { byCode } from '../site/locales.mjs';
 import { hasGuide, guideRoute } from '../data/guides.mjs';
 import { t } from '../i18n/index.mjs';
+import AppStoreClicks from './AppStoreClicks.astro';
 
 const { entry, siteTitle, isFallback } = Astro.locals.starlightRoute;
 const { code, path } = guideRoute(Astro.url);
@@ -80,3 +81,4 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <script is:inline defer src="https://stats.devdio.pro/script.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5" data-domains="macdio.app"></script>
 <!-- Session replay and heatmaps (W30): starts only after the counter above has a session, so never outside macdio.app. -->
 <script is:inline defer src="https://stats.devdio.pro/recorder.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5"></script>
+<AppStoreClicks />

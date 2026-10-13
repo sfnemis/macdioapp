@@ -1,0 +1,24 @@
+---
+// Counts clicks on App Store links in Umami (tracker W34). A window capture
+// listener runs before the tracker's own document listener, stamps the link
+// with Umami's data-umami-event attributes, and the tracker then sends the
+// event (and, for a same-tab link, waits for it before leaving). Stamping at
+// click time covers every link, also ones added after load, without editing
+// the 300-odd links in the pages. Nothing is sent outside macdio.app: the
+// tracker's data-domains rule decides that.
+---
+<script is:inline>/* app-store-clicks */
+window.addEventListener('click', function (e) {
+  var a = e.target && e.target.closest && e.target.closest('a[href^="https://apps.apple.com/"]');
+  if (!a || a.hasAttribute('data-umami-event')) return;
+  var where = a.closest('nav, #nav-slot') ? 'nav'
+    : a.closest('.hero, .hero-content, .hero-actions, .page-head') ? 'top'
+    : a.closest('#get, .final') ? 'bottom'
+    : a.closest('.faq-a, details') ? 'faq'
+    : a.closest('footer, #footer-slot') ? 'footer'
+    : 'content';
+  a.setAttribute('data-umami-event', 'App Store click');
+  a.setAttribute('data-umami-event-position', where);
+  a.setAttribute('data-umami-event-kind', a.querySelector('img, svg') || /btn|badge|cta/.test(a.className) ? 'button' : 'text link');
+}, true);
+</script>

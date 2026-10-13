@@ -26,6 +26,15 @@ test('the Umami recorder (replay and heatmaps, W30) is allowed from the self-hos
   assert.match(scriptProblems(rec.replace('stats.devdio.pro', 'cloud.umami.is'))[0], /external script/);
 });
 
+test('a page with an App Store link must carry the App Store click counter (W34)', () => {
+  const link = '<a class="badge-btn" href="https://apps.apple.com/app/macdio/id6761737888">Get</a>';
+  assert.match(scriptProblems(link)[0], /App Store click/);
+  assert.deepEqual(scriptProblems('<script>/* app-store-clicks */</script>' + link), []);
+  assert.deepEqual(scriptProblems('<p>no store link here</p>'), []);
+  // /ios/ only redirects to the store; its fallback link is never a choice a visitor makes on a page.
+  assert.deepEqual(scriptProblems("<script>window.location.replace('https://apps.apple.com/app/macdio/id6761737888');</script>" + link), []);
+});
+
 test('a module script or any other external script is a problem', () => {
   const html = '<head><script type="module" src="/_astro/page.abc.js"></script><script src="https://cdn.example.com/x.js"></script></head>';
   const problems = scriptProblems(html);

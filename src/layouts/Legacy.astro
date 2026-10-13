@@ -9,6 +9,7 @@ import { hasPage } from '../site/legacy.mjs';
 import { t } from '../i18n/index.mjs';
 import LegacyNav from '../components/LegacyNav.astro';
 import LegacyFooter from '../components/LegacyFooter.astro';
+import AppStoreClicks from '../components/AppStoreClicks.astro';
 
 // path is the English path ('/', '/mac.html'); page comes from loadPage().
 const { lang, path, page } = Astro.props;
@@ -30,6 +31,7 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <script is:inline defer src="https://stats.devdio.pro/script.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5" data-domains="macdio.app"></script>
 <!-- Session replay and heatmaps (W30): starts only after the counter above has a session, so never outside macdio.app. -->
 <script is:inline defer src="https://stats.devdio.pro/recorder.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5"></script>
+<AppStoreClicks />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title set:html={page.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')} />
 <meta name="description" content={page.description}>
