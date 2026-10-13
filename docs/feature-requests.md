@@ -400,6 +400,15 @@ saying what happened to it.
   Earlier the same evening: TWO_FACTOR_ENCRYPTION_KEY and MCP_ENABLED=1 added
   (MCP answers 401 without a key), and `.env` was found world-readable with
   the database password in it and set to 600.
+- [ ] **W31 Count devdio.pro, livedio.app and repdio.app in Umami; boards for
+  Macdio, Livedio and Repdio** (Sait, 2026-10-13 18:26). Add the three sites in
+  the self-hosted Umami, put the counter on each (replacing Google Analytics
+  where it runs: devdio.pro G-PYJDRYG2BQ, livedio.app G-CMT7ECBZ3E; repdio.app
+  runs none and its privacy page says so), update each site's privacy text and
+  CSP, and build one board per product. Found while starting: devdio-web
+  deploys the repository root as the web root (`"directory": "."`, guarded
+  only by .assetsignore); per the standing rule that is fixed first (move the
+  site into public/).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
