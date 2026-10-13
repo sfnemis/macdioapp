@@ -57,6 +57,10 @@ A copy of `.env` from before these two lines is at
   (9bb74d72-a831-432f-862f-cbb92d93f155), repdio.app
   (16cd86f5-0811-4262-81bb-8b39fde12410). Replay and heatmaps are on for
   macdio.app only.
+- Dashboard (Kontrol Paneli, 2026-10-14): "Devdio overview", the admin
+  user's own board (type dashboard, id = the user id, written through
+  POST /api/dashboard); its components name their website with entityType
+  and entityId.
 - Boards (2026-10-13): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef,
   owned by admin. Board JSON is `parameters.rows[].columns[].component` with
   `type` (WebsiteMetricsBar, WebsiteChart, RealtimeActiveUsers, MetricsTable,

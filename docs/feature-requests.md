@@ -439,11 +439,17 @@ saying what happened to it.
   on rum/site_info). Needs Sait: turn off automatic setup for the four sites
   in the dashboard (Analytics & Logs, Web Analytics), or give the token
   Account Web Analytics edit so I can.
-- [ ] **W33 Umami Dashboard (Kontrol Paneli) with all products** (Sait,
+- [x] **W33 Umami Dashboard (Kontrol Paneli) with all products** (Sait,
   2026-10-14 00:22: "Panolar yaptin ama Kontrol Panelini neden yapmadin").
   Umami's Dashboard is a separate per-user board (type dashboard, id = user
   id, /api/dashboard), not one of the Boards; W31 built only the three Boards.
   No dashboard existed for admin, so nothing is overwritten.
+  Done 2026-10-14 00:30: "Devdio overview", 9 rows: one row per site
+  (Macdio, Livedio, Repdio, Devdio) with its metrics bar and online-now
+  count, visitor charts 2 x 2, then top pages, referrers and countries for
+  Macdio, Livedio and Repdio. Written through a temporary admin API key
+  (deleted afterwards, answers 401); every data source it uses answered 200
+  for all four websites. Not seen on screen by me (no login).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
