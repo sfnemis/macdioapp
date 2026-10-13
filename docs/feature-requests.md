@@ -376,6 +376,17 @@ saying what happened to it.
   on, and the root password was shared in chat, so it must change); removing
   macdio.app from Umami Cloud waits for Sait's yes; livedio.app and
   devdio.pro are not added yet.
+- [ ] **W30 Turn on Umami session replay, heatmaps and city-level location,
+  no consent banner** (Sait, 2026-10-13 18:13, option 2 of 4 after I said
+  replay is widely held to need consent in the EU and that I am not a lawyer;
+  he chose it knowing that). Needs: `recorder.js` tag next to `script.js` on
+  every page (190 KB, 58 KB gzipped, deferred), recorder on for macdio.app
+  (replay and heatmaps, 15% sample each, inputs masked, 5 minute cap),
+  `SKIP_LOCATION_HEADERS=1` so Umami looks up region and city in its GeoLite
+  database instead of taking Cloudflare's country header, and the privacy and
+  transparency pages rewritten in 14 languages so they say exactly what is
+  recorded. Also asked: how to use the MCP endpoint (needs an API key from the
+  dashboard; API keys work on self-hosted).
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
