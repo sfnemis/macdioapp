@@ -65,6 +65,10 @@ A copy of `.env` from before these two lines is at
   faq, footer, content) and kind (button, text link) on macdio.app and
   livedio.app. Goals of that event: macdio 6a7320f2, livedio cd2e4ac0
   (POST /api/websites/<id>/goals, parameters {type: event, value}).
+- Links (W35): https://stats.devdio.pro/q/<slug> counts a click (referrer,
+  country, device) and redirects (307). Slugs <app>-<platform> for macdio and
+  livedio: instagram, tiktok, x, youtube, reddit, hub. Slugs need 8+
+  characters. Clicks are website_event rows whose website_id is the link id.
 - Boards (2026-10-13): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef,
   owned by admin. Board JSON is `parameters.rows[].columns[].component` with
   `type` (WebsiteMetricsBar, WebsiteChart, RealtimeActiveUsers, MetricsTable,

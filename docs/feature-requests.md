@@ -483,6 +483,15 @@ saying what happened to it.
   Store Connect (Analytics, Acquisition, Campaigns) and sends the pt value,
   then the site links get ct=macdio-web / livedio-web and each short link
   its own ct.
+  Links done 2026-10-14 00:50: 12 links, https://stats.devdio.pro/q/<slug>
+  with slugs macdio-instagram, macdio-tiktok, macdio-x, macdio-youtube,
+  macdio-reddit, macdio-hub and the same six for livedio, each a 307 to the
+  app's App Store page. Checked: a phone user agent with an Instagram
+  referrer got the redirect and the click was stored (referrer
+  instagram.com, TR, iOS); an unknown slug is 404; Cloudflare does not cache
+  the redirects (DYNAMIC). Two test clicks (macdio-instagram, livedio-x) are
+  in the data. A HEAD request also counts as a click. Waiting for Sait: the
+  pt value; then each short link's target gets its own ct.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
