@@ -339,7 +339,7 @@ saying what happened to it.
   languages; the transparency page also dropped Cloudflare Web Analytics,
   which was never on the v2 site. No cookie banner is needed: the site sets
   no analytics cookies any more. This closes W15.
-- [ ] **W29 Move Umami from Umami Cloud to Sait's own server** (Sait,
+- [x] **W29 Move Umami from Umami Cloud to Sait's own server** (Sait,
   2026-10-13 17:13). Umami self-hosted includes funnels, journeys, retention,
   segments, session replay (v3.1+) and heatmaps (v3.2+) for free; only email
   reports stay Cloud-only. It needs PostgreSQL only (no ClickHouse), so it is
@@ -359,7 +359,23 @@ saying what happened to it.
   and check-scripts to the new address, update the transparency text in 14
   languages, verify one live hit with no cookies, and only then remove the
   site from Umami Cloud (asked first). Session replay and heatmaps stay off
-  until the privacy pages are rewritten for them. Waiting for Sait: the CT.
+  until the privacy pages are rewritten for them.
+  Done 2026-10-13 18:30 (live, Worker version 8d4a571c): Sait made CT 105 on
+  the VPS (86.104.14.90). The default admin/umami login was open on port 3000
+  to the internet when I got in; I changed the password first, then bound
+  Umami to 127.0.0.1 and moved it to its own user. Tunnel umami-stats routes
+  stats.devdio.pro to it (DNS CNAME, proxied); macdio.app is website
+  cef17e25. The site tag and check-scripts point at stats.devdio.pro (test
+  written first, failed, then passed; suite 59/59), the transparency row
+  says "on the developer's own server" in 14 languages. Verified live in
+  Chrome with a normal user agent: script and /api/send 200, no cookies, the
+  visit recorded as path /, country TR, Chrome, Mac OS. Headless Chrome is
+  dropped as a bot. Only the country is stored (Cloudflare header), which
+  matches the privacy page. Server notes: docs/stats-server.md. Open: Sait
+  changes the admin password and rebuilds SSH (root password login is still
+  on, and the root password was shared in chat, so it must change); removing
+  macdio.app from Umami Cloud waits for Sait's yes; livedio.app and
+  devdio.pro are not added yet.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
