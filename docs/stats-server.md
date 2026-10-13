@@ -52,8 +52,16 @@ A copy of `.env` from before these two lines is at
 
 ## What it records
 
-- Websites: macdio.app (id cef17e25-0c90-4678-a353-b397a24ef5c5). livedio.app
-  and devdio.pro can be added in the dashboard.
+- Websites: macdio.app (cef17e25-0c90-4678-a353-b397a24ef5c5), devdio.pro
+  (a38bee44-f71a-42dd-a390-5fb4c7c8a57c), livedio.app
+  (9bb74d72-a831-432f-862f-cbb92d93f155), repdio.app
+  (16cd86f5-0811-4262-81bb-8b39fde12410). Replay and heatmaps are on for
+  macdio.app only.
+- Boards (2026-10-13): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef,
+  owned by admin. Board JSON is `parameters.rows[].columns[].component` with
+  `type` (WebsiteMetricsBar, WebsiteChart, RealtimeActiveUsers, MetricsTable,
+  WorldMap, WeeklyTraffic, UTM, ...) and `props`; `columns[].size` is the
+  flex share.
 - The client IP comes from `cf-connecting-ip` (first in Umami's header list), so
   sessions are per visitor, not per tunnel.
 - Location: country, region and city from the GeoLite database (see

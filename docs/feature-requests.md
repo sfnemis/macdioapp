@@ -400,7 +400,7 @@ saying what happened to it.
   Earlier the same evening: TWO_FACTOR_ENCRYPTION_KEY and MCP_ENABLED=1 added
   (MCP answers 401 without a key), and `.env` was found world-readable with
   the database password in it and set to 600.
-- [ ] **W31 Count devdio.pro, livedio.app and repdio.app in Umami; boards for
+- [x] **W31 Count devdio.pro, livedio.app and repdio.app in Umami; boards for
   Macdio, Livedio and Repdio** (Sait, 2026-10-13 18:26). Add the three sites in
   the self-hosted Umami, put the counter on each (replacing Google Analytics
   where it runs: devdio.pro G-PYJDRYG2BQ, livedio.app G-CMT7ECBZ3E; repdio.app
@@ -409,6 +409,36 @@ saying what happened to it.
   deploys the repository root as the web root (`"directory": "."`, guarded
   only by .assetsignore); per the standing rule that is fixed first (move the
   site into public/).
+  Done 2026-10-13 18:55. Umami websites: devdio.pro a38bee44, livedio.app
+  9bb74d72, repdio.app 16cd86f5. Boards (website boards, 7 rows each: metrics
+  bar, visitors chart and online now, pages/referrers/channels, world map and
+  countries, cities/languages/entry pages, devices/browsers/OS, weekly traffic
+  and UTM sources): Macdio ac7f274b, Livedio 26217f9e, Repdio 666fb7ef. Made
+  through a temporary admin API key added in the database and deleted
+  afterwards (a call with it now answers 401); the board data sources were
+  checked through the API (every metric type 200). I could not look at the
+  boards myself: a screenshot through a temporary share link was refused by
+  the session's permission check, and the shares were deleted.
+  Sites: devdio.pro now serves only public/ (Worker devdio-web, www sent to
+  the apex by the Worker because a page rule does not reach a Worker custom
+  domain, workers.dev off, new scripts/check-public.sh); livedio.app (20
+  pages) and repdio.app (4 pages) carry the counter; GA is gone from devdio
+  and livedio; privacy text updated on livedio and repdio; CSPs allow
+  stats.devdio.pro. Each site's post-deploy check passes, and a visit with a
+  normal user agent was counted on all three (2 page views each), no cookies.
+- [ ] **W32 Cloudflare Web Analytics is injected into all four sites** (found
+  2026-10-13 18:50). Cloudflare's automatic Web Analytics setup adds
+  `static.cloudflareinsights.com/beacon.min.js` to macdio.app, devdio.pro,
+  livedio.app and repdio.app. My home DNS answers 0.0.0.0 for that host, so
+  every earlier check from this Mac missed it, and the W28 note above that it
+  "was never on the v2 site" is wrong. On macdio.app and livedio.app (no CSP)
+  it runs for real visitors and no privacy page mentions it; on devdio.pro and
+  repdio.app the new CSP blocks it (one console error per page). repdio.app's
+  old CSP allowed it while its privacy page said "runs no analytics". The API
+  token cannot read or change Web Analytics settings ("Authentication error"
+  on rum/site_info). Needs Sait: turn off automatic setup for the four sites
+  in the dashboard (Analytics & Logs, Web Analytics), or give the token
+  Account Web Analytics edit so I can.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
