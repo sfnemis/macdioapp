@@ -1,7 +1,8 @@
-// Marketing pages ship no JavaScript except inline scripts and the site's own
-// files (parts.js, redesign.js, hub-badge.js). The GA4 tag is added by an
-// inline script on macdio.app only; a static gtag tag would count every
-// localhost and preview load as a visit, so it fails here, guides included.
+// Marketing pages ship no JavaScript except inline scripts, the site's own
+// files (parts.js, redesign.js, hub-badge.js) and Umami, the cookie-free visit
+// counter (tracker W28), which must carry data-domains="macdio.app" so local
+// previews and test runs are not counted. Google Analytics is gone from the
+// site (2026-10-13); any gtag tag or loader fails here, guides included.
 // Guide pages (Starlight)
 // are allowed their search and table of contents scripts, so paths with a
 // "guides" segment are skipped.
@@ -10,9 +11,11 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ALLOWED_SRC = /^\/(?:parts|redesign|hub-badge)\.js$/;
+const UMAMI = 'https://cloud.umami.is/script.js';
 
 export function scriptProblems(html) {
   const problems = [];
+  if (/googletagmanager\.com|gtag\(|G-QR2MZ9NF2N/.test(html)) problems.push('Google Analytics is still on the page; the site counts visits with Umami only');
   // Every JSON-LD block must parse; a "</script>" inside a string would end
   // the block early and leave the rest of it as page text.
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
@@ -22,7 +25,8 @@ export function scriptProblems(html) {
     const src = m[1].match(/\bsrc="([^"]*)"/);
     if (!src) continue;
     if (ALLOWED_SRC.test(src[1])) continue;
-    if (src[1].startsWith('https://www.googletagmanager.com/')) { problems.push('GA4 tag loads on every host; load it from the macdio.app-only inline script'); continue; }
+    if (src[1].startsWith('https://www.googletagmanager.com/')) continue; // reported above
+    if (src[1] === UMAMI) { if (!/\bdata-domains="macdio\.app"/.test(m[1])) problems.push('Umami without data-domains="macdio.app" counts local previews and test runs'); continue; }
     problems.push(`external script ${src[1]}`);
   }
   return problems;

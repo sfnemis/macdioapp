@@ -106,7 +106,7 @@ saying what happened to it.
   404 with the page. Note for the deploy check: `scripts/check-public.sh`
   must probe with `-H "Sec-Fetch-Mode: navigate"` too, or this class of bug
   stays invisible to curl.
-- [ ] **W15 Google Analytics cookies and EU consent** (found 2026-10-12 by the
+- [x] **W15 Google Analytics cookies and EU consent** (found 2026-10-12 by the
   German sync pass). macdio.app loads GA4 (gtag, G-QR2MZ9NF2N) on every page
   with no consent banner; GA sets `_ga` cookies, which under GDPR and the
   German TTDSG normally need consent first. The live site has worked this way
@@ -317,7 +317,7 @@ saying what happened to it.
   by hand; it expires after ten minutes. Sait submitted the sitemap to Google
   and Bing himself (2026-10-13); the service account still has no Search
   Console access (W7).
-- [ ] **W28 Replace Google Analytics with a free open-source, cookieless
+- [x] **W28 Replace Google Analytics with a free open-source, cookieless
   analytics** (Sait, 2026-10-13 14:18). Researched: Umami (MIT, PostgreSQL
   only, no cookies, ~0.4-1 GB RAM, Docker or Node; free Cloud Hobby plan),
   Plausible CE (AGPL, needs ClickHouse, 2 GB+), Matomo (heavy PHP/MySQL,
@@ -329,6 +329,16 @@ saying what happened to it.
   days, remove GA, and rewrite the privacy pages (14 languages): closes W15.
   Waiting for Sait: where to host (new LXC, the existing macdio-rb CT, or
   Umami Cloud) and the server address for SSH (not in any repo file).
+  Done 2026-10-13 15:00: Sait set up Umami Cloud (website id 53f86548...) and
+  said remove GA outright. GA is gone from every page, the guides and the
+  /ios/ redirect (which now goes straight to the App Store); the Umami tag
+  carries data-domains="macdio.app" so previews and tests are not counted;
+  check-scripts fails on any Google Analytics trace and on an Umami tag
+  without that domain limit. privacy.html ("This website") and the
+  transparency table now name Umami (no cookies, no personal data) in all 14
+  languages; the transparency page also dropped Cloudflare Web Analytics,
+  which was never on the v2 site. No cookie banner is needed: the site sets
+  no analytics cookies any more. This closes W15.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

@@ -76,5 +76,5 @@ jsonld.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemL
 <link rel="manifest" href="/site.webmanifest">
 <link rel="sitemap" href="/sitemap-index.xml">
 {jsonld.map((obj) => <script type="application/ld+json" set:html={JSON.stringify(obj).replace(/</g, '\\u003c')} />)}
-<!-- GA4 on macdio.app only: localhost, wrangler dev and previews would otherwise count as visits. -->
-<script is:inline>if(location.hostname==='macdio.app'){window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments);};gtag('js',new Date());gtag('config','G-QR2MZ9NF2N');var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-QR2MZ9NF2N';document.head.appendChild(g);}</script>
+<!-- Umami counts visits without cookies (tracker W28); data-domains keeps local previews and test runs out. -->
+<script is:inline defer src="https://cloud.umami.is/script.js" data-website-id="53f86548-2a9e-4567-b01f-65af482ca8ac" data-domains="macdio.app"></script>
