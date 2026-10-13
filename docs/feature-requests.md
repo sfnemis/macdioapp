@@ -347,11 +347,12 @@ saying what happened to it.
   Proxmox helper (`ct/umami.sh`). Read 2026-10-13: it creates an unprivileged
   Debian 13 CT (2 cores, 2 GB, 12 GB), installs Node 22, PostgreSQL 17 and the
   latest Umami release, and runs it as a root systemd service on port 3000 on
-  every interface with the default login admin/umami. On this server a CT has
-  its public address on eth0 (like CT 101), so port 3000 is open to the
-  internet until the firewall is in place. Plan: Sait runs the script
-  (advanced settings: static public IP like CT 101, SSH on, the Mac's key) and
-  stops the service at once; I then harden the CT the CT 101 way (SSH 2229
+  every interface with the default login admin/umami. Host (Sait, 17:16): not
+  the server that runs CT 101 but Sait's Proxmox VPS; the LXC gets its own
+  public IP, so port 3000 is open to the internet until the firewall is in
+  place. Sait prepares the CT and hands over the access himself. Plan: the
+  service is stopped (or the password changed) as soon as the CT exists; I
+  then harden the CT the CT 101 way (SSH 2229
   keys only, nftables inbound drop), move Umami to its own user, change the
   admin password, add macdio.app, livedio.app and devdio.pro, connect a
   Cloudflare Tunnel to stats.devdio.pro (no open port), switch the site tag
