@@ -339,6 +339,26 @@ saying what happened to it.
   languages; the transparency page also dropped Cloudflare Web Analytics,
   which was never on the v2 site. No cookie banner is needed: the site sets
   no analytics cookies any more. This closes W15.
+- [ ] **W29 Move Umami from Umami Cloud to Sait's own server** (Sait,
+  2026-10-13 17:13). Umami self-hosted includes funnels, journeys, retention,
+  segments, session replay (v3.1+) and heatmaps (v3.2+) for free; only email
+  reports stay Cloud-only. It needs PostgreSQL only (no ClickHouse), so it is
+  lighter than Plausible CE or Rybbit. Sait wants to run the community-scripts
+  Proxmox helper (`ct/umami.sh`). Read 2026-10-13: it creates an unprivileged
+  Debian 13 CT (2 cores, 2 GB, 12 GB), installs Node 22, PostgreSQL 17 and the
+  latest Umami release, and runs it as a root systemd service on port 3000 on
+  every interface with the default login admin/umami. On this server a CT has
+  its public address on eth0 (like CT 101), so port 3000 is open to the
+  internet until the firewall is in place. Plan: Sait runs the script
+  (advanced settings: static public IP like CT 101, SSH on, the Mac's key) and
+  stops the service at once; I then harden the CT the CT 101 way (SSH 2229
+  keys only, nftables inbound drop), move Umami to its own user, change the
+  admin password, add macdio.app, livedio.app and devdio.pro, connect a
+  Cloudflare Tunnel to stats.devdio.pro (no open port), switch the site tag
+  and check-scripts to the new address, update the transparency text in 14
+  languages, verify one live hit with no cookies, and only then remove the
+  site from Umami Cloud (asked first). Session replay and heatmaps stay off
+  until the privacy pages are rewritten for them. Waiting for Sait: the CT.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,
