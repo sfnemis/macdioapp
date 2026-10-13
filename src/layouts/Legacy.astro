@@ -28,6 +28,8 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <meta charset="UTF-8">
 <!-- Umami (self-hosted at stats.devdio.pro, tracker W29) counts visits without cookies; data-domains keeps local previews and test runs out. -->
 <script is:inline defer src="https://stats.devdio.pro/script.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5" data-domains="macdio.app"></script>
+<!-- Session replay and heatmaps (W30): starts only after the counter above has a session, so never outside macdio.app. -->
+<script is:inline defer src="https://stats.devdio.pro/recorder.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title set:html={page.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')} />
 <meta name="description" content={page.description}>

@@ -20,6 +20,12 @@ test('Umami counts visits from the self-hosted server, only on macdio.app', () =
   assert.match(scriptProblems(ok.replace('stats.devdio.pro', 'cloud.umami.is'))[0], /external script https:\/\/cloud\.umami\.is/);
 });
 
+test('the Umami recorder (replay and heatmaps, W30) is allowed from the self-hosted server only', () => {
+  const rec = '<script defer src="https://stats.devdio.pro/recorder.js" data-website-id="cef17e25-0c90-4678-a353-b397a24ef5c5"></script>';
+  assert.deepEqual(scriptProblems(rec), []);
+  assert.match(scriptProblems(rec.replace('stats.devdio.pro', 'cloud.umami.is'))[0], /external script/);
+});
+
 test('a module script or any other external script is a problem', () => {
   const html = '<head><script type="module" src="/_astro/page.abc.js"></script><script src="https://cdn.example.com/x.js"></script></head>';
   const problems = scriptProblems(html);

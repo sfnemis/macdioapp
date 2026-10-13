@@ -1,9 +1,10 @@
 // Marketing pages ship no JavaScript except inline scripts, the site's own
 // files (parts.js, redesign.js, hub-badge.js) and Umami, the cookie-free visit
-// counter (tracker W28), self-hosted at stats.devdio.pro since W29. Its tag
-// must carry data-domains="macdio.app" so local previews and test runs are not
-// counted. Google Analytics is gone from the site (2026-10-13); any gtag tag or
-// loader fails here, guides included.
+// counter (tracker W28), self-hosted at stats.devdio.pro since W29, with its
+// recorder for replay and heatmaps (W30). The counter's tag must carry
+// data-domains="macdio.app" so local previews and test runs are not counted.
+// Google Analytics is gone from the site (2026-10-13); any gtag tag or loader
+// fails here, guides included.
 // Guide pages (Starlight)
 // are allowed their search and table of contents scripts, so paths with a
 // "guides" segment are skipped.
@@ -13,6 +14,9 @@ import { fileURLToPath } from 'node:url';
 
 const ALLOWED_SRC = /^\/(?:parts|redesign|hub-badge)\.js$/;
 const UMAMI = 'https://stats.devdio.pro/script.js'; // self-hosted Umami (W29)
+// Session replay and heatmaps (W30). It records only once the tracker above has
+// a session, and the tracker never sends outside macdio.app (data-domains).
+const UMAMI_RECORDER = 'https://stats.devdio.pro/recorder.js';
 
 export function scriptProblems(html) {
   const problems = [];
@@ -27,6 +31,7 @@ export function scriptProblems(html) {
     if (!src) continue;
     if (ALLOWED_SRC.test(src[1])) continue;
     if (src[1].startsWith('https://www.googletagmanager.com/')) continue; // reported above
+    if (src[1] === UMAMI_RECORDER) continue;
     if (src[1] === UMAMI) { if (!/\bdata-domains="macdio\.app"/.test(m[1])) problems.push('Umami without data-domains="macdio.app" counts local previews and test runs'); continue; }
     problems.push(`external script ${src[1]}`);
   }
