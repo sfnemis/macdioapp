@@ -376,7 +376,7 @@ saying what happened to it.
   on, and the root password was shared in chat, so it must change); removing
   macdio.app from Umami Cloud waits for Sait's yes; livedio.app and
   devdio.pro are not added yet.
-- [ ] **W30 Turn on Umami session replay, heatmaps and city-level location,
+- [x] **W30 Turn on Umami session replay, heatmaps and city-level location,
   no consent banner** (Sait, 2026-10-13 18:13, option 2 of 4 after I said
   replay is widely held to need consent in the EU and that I am not a lawyer;
   he chose it knowing that). Needs: `recorder.js` tag next to `script.js` on
@@ -387,6 +387,19 @@ saying what happened to it.
   transparency pages rewritten in 14 languages so they say exactly what is
   recorded. Also asked: how to use the MCP endpoint (needs an API key from the
   dashboard; API keys work on self-hosted).
+  Done 2026-10-13 18:25 (live, Worker 51121a4c): recorder on in the database,
+  SKIP_LOCATION_HEADERS=1, recorder.js on every page (check-scripts test
+  written first, failed, passed; suite 60/60), privacy "This website" section
+  rewritten and dated October 13 in 14 languages, transparency row too.
+  Verified: local preview loads the scripts and the recorder config but sends
+  no visit and no recording; live in Chrome with a normal user agent and the
+  sample rates set to 1 for the test: /api/send 200, 8 /api/record 200, 7
+  replay chunks and 6 heatmap events stored, no cookies; rates set back to
+  0.15 and checked. A fresh session is stored as TR, TR-34, Istanbul. My test
+  visits (two sessions, Mac and Windows user agents) are in the data.
+  Earlier the same evening: TWO_FACTOR_ENCRYPTION_KEY and MCP_ENABLED=1 added
+  (MCP answers 401 without a key), and `.env` was found world-readable with
+  the database password in it and set to 600.
 - [ ] **W13 Meta descriptions over 160 characters** (found 2026-10-12 by the
   content check over the legacy pages): `/features.html` 188, `/guides/record-
   internet-radio.html` 177, `/ipad.html` 163, `/privacy.html` 164, `/tr/` 184,

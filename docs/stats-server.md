@@ -40,7 +40,12 @@ database password in it, until 2026-10-13 18:09). It holds:
   in backups. The community-scripts `update` keeps `.env` (backup and
   restore).
 - `MCP_ENABLED=1`: the MCP endpoint at https://stats.devdio.pro/mcp. It
-  answers 401 without credentials (checked from outside).
+  answers 401 without credentials (checked from outside). It takes an API key
+  (`umami_...`, made under Settings, API keys) as a bearer token; API keys
+  cannot reach password, 2FA, user or admin routes.
+- `SKIP_LOCATION_HEADERS=1` (W30): Umami ignores Cloudflare's country header
+  and looks the IP up in `geo/GeoLite2-City.mmdb`, so country, region and city
+  are stored. The IP itself is not stored.
 
 A copy of `.env` from before these two lines is at
 `/root/umami-env.bak-202610131809` (600).
@@ -51,14 +56,21 @@ A copy of `.env` from before these two lines is at
   and devdio.pro can be added in the dashboard.
 - The client IP comes from `cf-connecting-ip` (first in Umami's header list), so
   sessions are per visitor, not per tunnel.
-- Location comes from Cloudflare's `cf-ipcountry` header. Umami then skips its
-  own GeoLite lookup, so only the country is stored, no region or city. That
-  matches the privacy page ("the country"). Region and city would need the
-  zone's "Add visitor location headers" managed transform, and a privacy page
-  change first.
+- Location: country, region and city from the GeoLite database (see
+  `SKIP_LOCATION_HEADERS` above), since W30. A session keeps the location it
+  was created with: a visitor seen before the switch stays country-only until
+  the monthly salt rotates.
 - Headless browsers are dropped as bots (`/api/send` answers 200 with no
   record). Test with a normal user agent.
-- Session replay and heatmaps are off; the privacy pages do not cover them.
+- Session replay and heatmaps are on since W30 (2026-10-13, Sait chose no
+  consent banner after being told replay is widely held to need consent in
+  the EU). Settings live in the database, table `website`: `recorder_enabled`
+  and `replay_config` (replayEnabled, heatmapEnabled, sampleRate 0.15,
+  heatmapSampleRate 0.15, maskLevel moderate = every input masked,
+  maxDuration 300000 ms). The site loads `recorder.js` next to `script.js`; it
+  records only after the tracker has a session, so never outside macdio.app.
+  The privacy and transparency pages describe all of it in 14 languages; any
+  change to these settings needs those pages changed too.
 
 ## Known log lines
 
