@@ -113,7 +113,15 @@ saying what happened to it.
   all along; the v2 privacy page now says so plainly ("This website" section).
   Sait's call: a consent banner, GA consent mode with cookies off until consent,
   or drop GA and keep Cloudflare Web Analytics (cookieless, already on).
-- [ ] **W16 Two support addresses** (found 2026-10-12). support.html and the
+  Correction 2026-10-13: Cloudflare Web Analytics is NOT on the live v2 site.
+  The live HTML carries no cloudflareinsights beacon (Cloudflare would inject
+  it), so GA is the only analytics; the API token has no Web Analytics
+  permission to check the account. The third option therefore means adding
+  the Cloudflare beacon, not keeping it.
+- [ ] **W16 Two support addresses** (found 2026-10-12). Checked 2026-10-13: support@devdio.pro on
+  support.html and in the footer of every page; support@macdio.app on ten
+  pages (the five privacy policies, accessibility, community, presskit,
+  submit-station, transparency). Both domains have Zoho MX records. support.html and the
   footer use support@devdio.pro; privacy, accessibility, submit-station and
   transparency use support@macdio.app. Both may well work; Sait confirms which
   one the site should name and the other is aligned in every locale.
