@@ -376,6 +376,10 @@ saying what happened to it.
   on, and the root password was shared in chat, so it must change); removing
   macdio.app from Umami Cloud waits for Sait's yes; livedio.app and
   devdio.pro are not added yet.
+  Closed 2026-10-14 (Sait, 15:46): the old Umami Cloud site is deleted, the
+  CT 105 root password is changed and SSH rebuilt, and the Umami admin
+  password is changed. Done by Sait; not checked from here (no credentials
+  are held here, by design).
 - [x] **W30 Turn on Umami session replay, heatmaps and city-level location,
   no consent banner** (Sait, 2026-10-13 18:13, option 2 of 4 after I said
   replay is widely held to need consent in the EU and that I am not a lawyer;
@@ -426,7 +430,7 @@ saying what happened to it.
   and livedio; privacy text updated on livedio and repdio; CSPs allow
   stats.devdio.pro. Each site's post-deploy check passes, and a visit with a
   normal user agent was counted on all three (2 page views each), no cookies.
-- [ ] **W32 Cloudflare Web Analytics is injected into all four sites** (found
+- [x] **W32 Cloudflare Web Analytics is injected into all four sites** (found
   2026-10-13 18:50). Cloudflare's automatic Web Analytics setup adds
   `static.cloudflareinsights.com/beacon.min.js` to macdio.app, devdio.pro,
   livedio.app and repdio.app. My home DNS answers 0.0.0.0 for that host, so
@@ -439,6 +443,10 @@ saying what happened to it.
   on rum/site_info). Needs Sait: turn off automatic setup for the four sites
   in the dashboard (Analytics & Logs, Web Analytics), or give the token
   Account Web Analytics edit so I can.
+  Done 2026-10-14: Sait turned the automatic setup off. Verified 15:48 with a
+  cache-busting fetch of the four home pages (real HTML, 19-80 KB, Umami tag
+  present): `cloudflareinsights` appears 0 times on macdio.app, livedio.app,
+  devdio.pro and repdio.app.
 - [x] **W33 Umami Dashboard (Kontrol Paneli) with all products** (Sait,
   2026-10-14 00:22: "Panolar yaptin ama Kontrol Panelini neden yapmadin").
   Umami's Dashboard is a separate per-user board (type dashboard, id = user
