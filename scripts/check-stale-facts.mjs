@@ -7,6 +7,9 @@ import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+// The version the App Store sells today: the home JSON-LD of every locale must say exactly this.
+export const APP_VERSION = '3.1';
+
 export const RULES = [
   { id: 'app-size', re: /7[.,]8\s?(MB|Mo|МБ|ميغابايت)/i, why: 'the app is about 82 MB, not 7.8 MB' },
   { id: 'crash-claim', re: /DEAD10CC/i, why: 'no crash-proof claim on the site' },
@@ -14,7 +17,7 @@ export const RULES = [
   { id: 'station-count', re: /(?<![\d])50[.,   ]?000(\+|\s?\+)/, why: 'the directory has 60,000+ stations' },
   { id: 'old-ios', re: /(iOS|iPadOS)\s?18(?![\d.])/, why: 'iOS and iPadOS need 26; tvOS 18 is fine' },
   { id: 're-encode-bitrates', re: /128,?\s?192,?\s?(or|ou|oder|o|of|lub|или|或|または|أو|veya|e|y)?\s?256/i, why: 'recordings have no quality setting' },
-  { id: 'software-version', re: /"softwareVersion":\s*"3\.0\.0"/, why: 'the app is 3.0.4' },
+  { id: 'software-version', re: new RegExp(`"softwareVersion":\\s*"(?!${APP_VERSION.replace(/\./g, '\\.')}")`), why: `the app is ${APP_VERSION}` },
 ];
 
 function walk(dir) {
