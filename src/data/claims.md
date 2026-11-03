@@ -40,5 +40,5 @@ read before the page that needs it is written).
 | Repeat skipping: a show's repeated segments learned from two downloaded episodes and skipped | `Macdio/Services/Podcast/SegmentSkipService.swift` ("Needs two downloaded episodes") | verified | 2026-10-12 |
 | Playback speed is the only audio control (no trim silence, no volume boost) | grep `skipSilence`, `trimSilence`, `voiceBoost`, `volumeBoost` across Swift sources: none; rate in `PodcastLibrary.swift` | verified | 2026-10-12 |
 | Widgets: Now Playing (small, medium, Lock Screen circular, rectangular, inline), Station Lists, Shows, Latest Episodes; iPhone and iPad | feature inventory row "Widgets", `MacdioWidgets` target | verified | 2026-10-12 |
-| Family Sharing | an App Store Connect setting, not in code; the press kit page said "Family Sharing support" before 2026-10-12 and still does; Sait confirms in App Store Connect | open | 2026-10-12 |
+| Family Sharing | an App Store setting, not in code; the US App Store page says "Up to six family members can use this app with Family Sharing enabled" | verified | 2026-11-04 |
 | Ad-break recovery and predictive song cycle (features.html Song Identification section) | not read in code yet; `ShazamService.swift` to read before the next copy pass | open | 2026-10-12 |

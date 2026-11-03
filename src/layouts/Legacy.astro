@@ -35,7 +35,6 @@ const mainAttrs = Object.fromEntries([...page.mainAttrs.matchAll(/([\w-]+)="([^"
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title set:html={page.title.replace(/&/g, '&amp;').replace(/</g, '&lt;')} />
 <meta name="description" content={page.description}>
-{page.keywords && <meta name="keywords" content={page.keywords} />}
 <meta name="author" content="SFN">
 <meta name="robots" content={page.robots || 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'}>
 <meta name="theme-color" content="#050507">

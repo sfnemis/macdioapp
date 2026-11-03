@@ -37,7 +37,7 @@ test('extract takes the page-specific head and main, without the sitelinks block
   const p = extract(page);
   assert.equal(p.title, 'Macdio: Live Radio & Podcasts');
   assert.equal(p.description, '60,000+ stations & podcasts.');
-  assert.equal(p.keywords, 'radio, podcasts');
+  assert.equal(p.keywords, undefined);
   assert.equal(p.robots, 'index, follow');
   assert.deepEqual(p.jsonld, ['{ "@type": "SoftwareApplication" }', '{ "@type": "FAQPage" }']);
   assert.equal(p.mainAttrs, 'id="top"');
@@ -52,7 +52,6 @@ test('extract keeps a page-specific inline body script and a classed main', () =
   assert.equal(p.mainAttrs, 'class="platform-page"');
   assert.equal(p.main, '<p>x</p>');
   assert.deepEqual(p.bodyScripts, ['\nvar API = 1;\n']);
-  assert.equal(p.keywords, '');
   assert.deepEqual(p.jsonld, []);
 });
 
@@ -63,6 +62,8 @@ test('localizeHtml makes relative links root-relative and localizes page links t
     '<a href="/mac.html">m</a> <a href="/#compare">h</a> <a href="/guides/">g</a> <img src="/assets/a.webp"> <source data-src="/assets/vids/x.mp4"> <a href="#identify">i</a> <a href="https://x.com/">x</a> <a href="mailto:a@b.c">e</a> <a href="/already.html">r</a> <a href="/macdio_PressKit.pdf">p</a>');
   assert.equal(localizeHtml('<a href="mac.html">m</a> <a href="../index.html#compare">h</a>', 'tr', exists),
     '<a href="/mac.html">m</a> <a href="/tr/#compare">h</a>');
+  assert.equal(localizeHtml('<a href="/">h</a> <a href="/mac.html#x">m</a> <img src="/assets/a.webp"> <a href="//x.com/a.html">x</a>', 'tr', () => true),
+    '<a href="/tr/">h</a> <a href="/tr/mac.html#x">m</a> <img src="/assets/a.webp"> <a href="//x.com/a.html">x</a>');
 });
 
 test('localizeHtml leaves script contents alone', () => {
@@ -87,6 +88,9 @@ test('legacyPages lists the English site paths a locale has on disk', () => {
   assert.ok(legacyPages('tr').includes('/'));
   assert.ok(hasPage('tr', '/'));
   assert.ok(!hasPage('xx', '/'));
+  assert.ok(hasPage('tr', '/guides/'));
+  assert.ok(hasPage('tr', '/guides/siri-radio.html'));
+  assert.ok(!hasPage('tr', '/guides/no-such-guide.html'));
   assert.deepEqual(legacyPages('xx'), []);
 });
 

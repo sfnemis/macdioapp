@@ -1,12 +1,13 @@
 // The live site's pages, kept whole under src/legacy/<locale>/ exactly as
 // they were served. The build takes the page-specific parts out of each file
-// (title, description, keywords, robots, JSON-LD, <main>, inline body scripts)
+// (title, description, robots, JSON-LD, <main>, inline body scripts)
 // and Legacy.astro adds the shared shell. Links written relative to the page
 // ("mac.html", "assets/x.webp", "../index.html") become root-relative, and a
 // page link points into the locale folder when that locale has the page.
 import { readdirSync, readFileSync, existsSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import { localePath } from './paths.mjs';
+import { hasGuide } from '../data/guides.mjs';
 
 // process.cwd() rather than import.meta.url: Astro bundles this module into
 // dist/ chunks at build time, where a URL relative to the module is wrong.
@@ -23,7 +24,6 @@ export function extract(html) {
   return {
     title: decode(attr(head, /<title>([\s\S]*?)<\/title>/)),
     description: decode(attr(head, /<meta name="description" content="([^"]*)"/)),
-    keywords: decode(attr(head, /<meta name="keywords" content="([^"]*)"/)),
     robots: attr(head, /<meta name="robots" content="([^"]*)"/),
     ogType: attr(head, /<meta property="og:type" content="([^"]*)"/) || 'website',
     jsonld: [...head.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => m[1].trim()),
@@ -35,14 +35,14 @@ export function extract(html) {
   };
 }
 
-const SKIP = /^(?:https?:|\/|#|mailto:|tel:|data:|javascript:)/;
+const SKIP = /^(?:https?:|\/\/|#|mailto:|tel:|data:|javascript:)/;
 
 export function localizeHtml(html, lang, exists) {
   return html.split(/(<script\b[\s\S]*?<\/script>)/).map((part, i) => {
     if (i % 2) return part;
     return part.replace(/\b(href|src|data-src|poster)="([^"]*)"/g, (all, name, value) => {
       if (!value || SKIP.test(value)) return all;
-      const [, file, rest] = ('/' + value.replace(/^(?:\.\.\/)+/, '')).match(/^([^#?]*)(.*)$/);
+      const [, file, rest] = ('/' + value.replace(/^(?:\.\.\/|\/)+/, '')).match(/^([^#?]*)(.*)$/);
       let path = file === '/index.html' ? '/' : file;
       if ((path.endsWith('.html') || path.endsWith('/')) && exists(lang, path)) path = localePath(lang, path);
       return `${name}="${path}${rest}"`;
@@ -55,6 +55,7 @@ export function pathToFile(path) {
 }
 
 export function hasPage(code, path) {
+  if (path.startsWith('/guides/')) return hasGuide(code, path);
   return existsSync(join(ROOT, code, pathToFile(path)));
 }
 

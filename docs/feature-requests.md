@@ -15,18 +15,17 @@ saying what happened to it.
   translations too, because check-i18n-markup fails on any tag difference. Translated guides were not
   touched (no check forces it), and translated titles, H1s and meta descriptions on the TuneIn page
   stay as they were. Close after deploy, `check-public.sh` on the live host, and the submissions.
-- [ ] **W37 Translated pages link to the English guides** (found 2026-11-04 during W36). `hasPage` in
-  `src/site/legacy.mjs` only looks under `src/legacy/`, so a guide link on a translated marketing page is
-  never localized: `/tr/mac.html` points at `/guides/...`, not `/tr/guides/...`, on 364 translated pages.
-  Translated guides exist and are indexable, so they lose those internal links and a Turkish reader lands
-  on English text. Fix: make the `exists` check see guides. Left out of W36 because that task said to change
-  nothing else. Needs Sait's go.
-- [ ] **W38 Open items seen during W36** (2026-11-04). The home page still ships `<meta name="keywords">`.
-  `iphone.html` states Family Sharing works, and claims.md still marks that claim open. `pricing.html` gives
-  myTuner Radio Pro as 79.99 USD while the roundup guide gives 9.99 USD: the Mac App Store shows 9.99 USD on
-  2026-11-04, the 79.99 figure was not rechecked and may be the iPhone in-app product. The Search Console
-  service account lists no sites (`list_sites` returns empty, W7), so the submitted sitemap list could not be
-  read from here.
+- [x] **W37 Translated pages link to the English guides** (found 2026-11-04 during W36). `hasPage` only
+  looked under `src/legacy/`, and `localizeHtml` skipped every root-absolute href, so 364 translated pages
+  sent readers to English guides and some body links to English marketing pages. Fixed in the source
+  2026-11-04: `hasPage` asks `hasGuide` for `/guides/` paths and `localizeHtml` localizes root-absolute page
+  links too. Translated guides themselves were never affected: Starlight rewrites their Markdown links.
+- [x] **W38 Open items seen during W36** (2026-11-04). Meta keywords: the build no longer emits them (8 page
+  types carried them, not only the home page); the inert lines stay in the sources so lastmod does not move
+  on 112 pages for a head tag. Family Sharing: verified on the US App Store page, claims.md updated.
+  myTuner prices: no error, both figures are real. 79.99 USD is the "Radio Pro: Stop Ads + Music EQ" in-app
+  purchase on the iPhone app, 9.99 USD is the separate myTuner Radio Pro Mac app. Search Console read
+  access: still W7, which only a property owner can restore.
 
 ## 2026-10-12
 
