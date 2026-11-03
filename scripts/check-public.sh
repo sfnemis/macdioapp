@@ -24,7 +24,7 @@ MUST_404=(
   /public/ /public/index.html /dist/ /dist/index.html
 )
 # The site breaks without these, so a 404 here is also a failure.
-MUST_200=(/ /index.html /features.html /mac.html /guides/ /guides/siri-radio.html /tr/ /de/ /pricing.html /podcasts.html /carplay.html /features/song-id.html /compare/apple-podcasts.html /pricing.json /sitemap.xml /robots.txt /hub-badge.js)
+MUST_200=(/ /index.html /features.html /mac.html /guides/ /guides/siri-radio.html /tr/ /de/ /pricing.html /podcasts.html /carplay.html /features/song-id.html /compare/apple-podcasts.html /pricing.json /sitemap.xml /sitemap-index.xml /sitemap-en.xml /sitemap-tr.xml /robots.txt /hub-badge.js)
 # One hashed asset, read from the guide hub (marketing pages inline their small CSS), so the CDN path is proven too.
 asset=$(curl -s "$HOST/guides/" | grep -o '/_astro/[^"]*\.css' | head -1)
 [ -n "$asset" ] && MUST_200+=("$asset")

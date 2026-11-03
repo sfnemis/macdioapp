@@ -16,9 +16,11 @@ function walk(dir) {
   return readdirSync(dir).flatMap((n) => { const p = join(dir, n); return statSync(p).isDirectory() ? walk(p) : [p]; });
 }
 
-const sitemap = readFileSync(join(dist, 'sitemap.xml'), 'utf8');
+// The per-language sitemaps the index lists, so a file the index forgot fails here.
+const index = readFileSync(join(dist, 'sitemap.xml'), 'utf8');
+const sitemaps = [...index.matchAll(/<loc>[^<]*\/(sitemap-[^<]+\.xml)<\/loc>/g)].map((m) => m[1]);
 const expected = new Map();
-for (const block of sitemap.split('<url>').slice(1)) {
+for (const block of sitemaps.flatMap((f) => readFileSync(join(dist, f), 'utf8').split('<url>').slice(1))) {
   const loc = block.match(/<loc>([^<]+)<\/loc>/)[1];
   const alts = [...block.matchAll(/hreflang="([^"]+)" href="([^"]+)"/g)].map((m) => `${m[1]} ${norm(m[2])}`).sort();
   expected.set(norm(loc), alts);
@@ -38,5 +40,5 @@ for (const f of walk(dist).map((p) => relative(dist, p))) {
   if (!canonical) say(`${f}: no canonical`);
   else if (norm(canonical[1]) !== url) say(`${f}: canonical ${canonical[1]} is not ${url}`);
 }
-console.log(problems ? `check-hreflang: ${problems} problem(s)` : `check-hreflang: ok, ${expected.size} urls`);
+console.log(problems ? `check-hreflang: ${problems} problem(s)` : `check-hreflang: ok, ${expected.size} urls in ${sitemaps.length} sitemaps`);
 process.exit(problems ? 1 : 0);

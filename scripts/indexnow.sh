@@ -8,10 +8,12 @@ HOST="macdio.app"
 KEY="80c004ef1f5a429ab1d919978a666da5"   # must match $KEY.txt at the site root
 test -f "public/$KEY.txt" || { echo "key file missing: public/$KEY.txt"; exit 1; }
 BODY=$(python3 - "$HOST" "$KEY" <<'PY'
-import json, re, sys
+import glob, json, re, sys
 host, key = sys.argv[1], sys.argv[2]
-# The sitemap is written by the build (scripts/sitemap.mjs) into dist/.
-urls = re.findall(r"<loc>([^<]+)</loc>", open("dist/sitemap.xml").read())
+# The per-language sitemaps are written by the build (scripts/sitemap.mjs) into
+# dist/. sitemap.xml and sitemap-index.xml list sitemaps, not pages.
+urls = [u for f in sorted(glob.glob("dist/sitemap-*.xml")) if not f.endswith("sitemap-index.xml")
+        for u in re.findall(r"<loc>([^<]+)</loc>", open(f).read())]
 assert urls, "sitemap has no urls"
 print(json.dumps({"host": host, "key": key,
                   "keyLocation": f"https://{host}/{key}.txt", "urlList": urls}))

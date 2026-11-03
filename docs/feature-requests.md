@@ -3,6 +3,31 @@
 Requests and findings, newest first. Nothing leaves this list without a line
 saying what happened to it.
 
+## 2026-11-04
+
+- [ ] **W36 Indexing fix: internal links, roundup hub, sitemap index, TuneIn for Mac** (Sait, task of
+  2026-11-03). GSC URL Inspection on 2026-11-03: `/tunein-alternative.html`, `/mytuner-alternative.html`,
+  `/guides/best-internet-radio-apps.html`, `/compare/apple-podcasts.html` and `/tr/tunein-alternative.html`
+  are "Discovered - currently not indexed". Cause is crawl priority. Scope: body links from indexed pages,
+  the roundup guide as a hub, real `<lastmod>`, sitemap split per locale, title/H1/FAQ/meta on the TuneIn
+  page. No external submission in this task.
+  Done in the source on 2026-11-04, not deployed. Copy added to the English pages went into all 13
+  translations too, because check-i18n-markup fails on any tag difference. Translated guides were not
+  touched (no check forces it), and translated titles, H1s and meta descriptions on the TuneIn page
+  stay as they were. Close after deploy, `check-public.sh` on the live host, and the submissions.
+- [ ] **W37 Translated pages link to the English guides** (found 2026-11-04 during W36). `hasPage` in
+  `src/site/legacy.mjs` only looks under `src/legacy/`, so a guide link on a translated marketing page is
+  never localized: `/tr/mac.html` points at `/guides/...`, not `/tr/guides/...`, on 364 translated pages.
+  Translated guides exist and are indexable, so they lose those internal links and a Turkish reader lands
+  on English text. Fix: make the `exists` check see guides. Left out of W36 because that task said to change
+  nothing else. Needs Sait's go.
+- [ ] **W38 Open items seen during W36** (2026-11-04). The home page still ships `<meta name="keywords">`.
+  `iphone.html` states Family Sharing works, and claims.md still marks that claim open. `pricing.html` gives
+  myTuner Radio Pro as 79.99 USD while the roundup guide gives 9.99 USD: the Mac App Store shows 9.99 USD on
+  2026-11-04, the 79.99 figure was not rechecked and may be the iPhone in-app product. The Search Console
+  service account lists no sites (`list_sites` returns empty, W7), so the submitted sitemap list could not be
+  read from here.
+
 ## 2026-10-12
 
 - [ ] **W1 Full redesign of macdio.app** (Sait, 2026-10-12). Replace the whole
