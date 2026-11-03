@@ -2,7 +2,7 @@
 title: "De beste internetradio-apps voor Mac en iPhone (2026)"
 description: "Zeven internetradio-apps voor Mac, iPhone, iPad, Apple Watch en Apple TV vergeleken op prijs, aantal zenders, opnemen en reclame, elk cijfer uit de App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "Wat is de beste internetradio-app voor Mac?"
     a: "Dat hangt af van hoe je wilt betalen. Macdio is één aankoop zonder advertenties, met opnemen en songherkenning, en heeft macOS 26 nodig. Eter is gratis te proberen met een eenmalige ontgrendeling, Broadcasts is gratis met een handvol zenders en een abonnement voor de rest, en beide draaien op oudere versies van macOS. myTuner Radio Pro is een aparte aankoop van 9,99 USD in de Mac App Store."
@@ -80,7 +80,7 @@ myTuner Radio van Appgeneration adverteert 50.000 radiozenders en ondersteunt Ap
 
 De pagina beschrijft de advertenties van de gratis versie niet, dus deze pagina beweert daar niets over, en opnemen wordt niet genoemd. Het minimum is iOS 15.
 
-Kies het als je een breed internationaal overzicht wilt en je prettig voelt bij het abonnementsmodel, of als de eenmalige Pro-versie voor Mac past bij hoe je luistert. Lees de abonnementsvoorwaarden voordat je doortikt, want weekprijzen lopen sneller op dan ze lezen.
+Kies het als je een breed internationaal overzicht wilt en je prettig voelt bij het abonnementsmodel, of als de eenmalige Pro-versie voor Mac past bij hoe je luistert. Lees de abonnementsvoorwaarden voordat je doortikt, want weekprijzen lopen sneller op dan ze lezen. Er is een langere [vergelijking van Macdio en myTuner](/mytuner-alternative.html) als dat de keuze is die je afweegt.
 
 ## TuneIn, de grootste catalogus en de meeste reclame
 
@@ -107,6 +107,8 @@ Geen van de apps maakt van je telefoon een FM-ontvanger. De hardware daarvoor zi
 ## Weggelaten apps, en waarom
 
 Apple Music heeft radiozenders, maar het is een muziekabonnement met radio erbij en geen manier om je lokale omroep te bereiken, dus het beantwoordt een andere vraag. De apps van Sonos en Alexa spelen internetradio goed binnen hun eigen hardware en zijn niet echt spelers voor Mac of iPhone. Webspelers zijn prima aan een bureau en matig in een broekzak, want een browsertabblad geeft je geen bediening op het toegangsscherm, geen CarPlay en geen slaaptimer. De lijst hierboven beperkt zich tot apps die je op een Apple-apparaat installeert en opent om te luisteren.
+
+Podcast-apps beantwoorden ook een andere vraag. Macdio speelt ook podcasts af en heeft een eigen vergelijkingspagina met [Overcast](/overcast-alternative.html), [Pocket Casts](/pocket-casts-alternative.html) en [Snipd](/snipd-alternative.html).
 
 ## Zo kies je in één minuut
 

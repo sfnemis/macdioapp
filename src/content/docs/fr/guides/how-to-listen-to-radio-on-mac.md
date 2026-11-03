@@ -2,7 +2,7 @@
 title: "4 façons d'écouter la radio Internet sur un Mac (2026)"
 description: "Onglet de navigateur, VLC, l'app Musique ou un lecteur dans la barre des menus, testés sur macOS 26 : ce que chacun coûte en clics, en CPU et en onglets."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-11-04
 faq:
   - q: "Le Mac peut-il lire la radio sans navigateur ?"
     a: "Oui. VLC lit n'importe quelle URL de flux, l'app Musique accepte les liens directs, et une app native comme Macdio apporte tout le catalogue avec elle, donc rien ne dépend d'un onglet de navigateur."
@@ -41,6 +41,8 @@ Un lecteur dédié supprime complètement la chasse aux URL. [Macdio pour Mac](/
 ## Quelle piste choisir ?
 
 Pour une station que vous visitez une fois, le navigateur convient et ne coûte rien. Pour une poignée de flux dont vous connaissez déjà les adresses, VLC suffit et se fait oublier. Pour la radio comme habitude quotidienne, où vous voulez parcourir des stations, garder des favoris, voir quelle chanson passe et lancer l'écoute sans ouvrir de fenêtre, le navigateur et VLC atteignent vite leurs limites, et un lecteur dédié est la réponse honnête.
+
+Si un lecteur dédié est la piste que vous voulez, le guide des [meilleures apps de radio Internet](/guides/best-internet-radio-apps.html) en compare sept, et la page sur Macdio comme [alternative à TuneIn pour Mac](/tunein-alternative.html) couvre le passage depuis TuneIn.
 
 ## Garder la radio dans la barre des menus
 

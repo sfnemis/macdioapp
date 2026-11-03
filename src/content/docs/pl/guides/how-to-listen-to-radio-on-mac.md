@@ -2,7 +2,7 @@
 title: "4 sposoby słuchania radia internetowego na Macu (2026)"
 description: "Karta przeglądarki, VLC, aplikacja Muzyka lub natywny odtwarzacz w pasku menu. Każdy sprawdzony na macOS 26, z realnym kosztem w kliknięciach, CPU i kartach."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-11-04
 faq:
   - q: "Czy Mac może grać radio bez przeglądarki?"
     a: "Tak. VLC odtwarza dowolny adres strumienia, aplikacja Muzyka przyjmuje bezpośrednie linki, a natywna aplikacja taka jak Macdio przynosi ze sobą cały katalog, więc nic nie zależy od karty przeglądarki."
@@ -41,6 +41,8 @@ Dedykowany odtwarzacz całkowicie eliminuje polowanie na adresy. [Macdio na Maca
 ## Którą drogę wybrać?
 
 Dla stacji, którą odwiedzasz raz, przeglądarka jest w porządku i nic nie kosztuje. Dla garści strumieni, których adresy już znasz, VLC wystarcza i nie wchodzi w drogę. Dla radia jako codziennego nawyku, gdy chcesz przeglądać stacje, trzymać ulubione, widzieć, jaki utwór leci, i zaczynać słuchanie bez otwierania okna, przeglądarce i VLC szybko kończy się droga, a dedykowany odtwarzacz to uczciwa odpowiedź.
+
+Jeśli wybierasz dedykowany odtwarzacz, przewodnik po [najlepszych aplikacjach radia internetowego](/guides/best-internet-radio-apps.html) porównuje siedem z nich, a strona o Macdio jako [alternatywie dla TuneIn na Maca](/tunein-alternative.html) opisuje przejście z TuneIn.
 
 ## Radio w pasku menu
 

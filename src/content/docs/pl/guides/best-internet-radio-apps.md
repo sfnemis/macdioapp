@@ -2,7 +2,7 @@
 title: "Najlepsze aplikacje radia internetowego: Mac i iPhone (2026)"
 description: "Porównanie siedmiu aplikacji radia internetowego na Maca, iPhone'a, iPada, Apple Watch i Apple TV: cena, liczba stacji, nagrywanie, reklamy. Dane z App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "Jaka jest najlepsza aplikacja radia internetowego na Maca?"
     a: "To zależy, jak płacisz. Macdio to jeden zakup bez reklam, z nagrywaniem i rozpoznawaniem utworów, i wymaga macOS 26. Eter można wypróbować za darmo z jednorazowym odblokowaniem, Broadcasts jest darmowe z kilkoma stacjami i subskrypcją na resztę, a obie działają na starszych wersjach macOS. myTuner Radio Pro to osobny zakup za 9,99 USD w Mac App Store."
@@ -80,7 +80,7 @@ myTuner Radio od Appgeneration reklamuje 50 000 stacji radiowych i obsługuje Ap
 
 Wpis nie opisuje reklam w planie darmowym, więc ta strona nie twierdzi nic w żadną stronę, a nagrywanie nie jest wspomniane. Minimum to iOS 15.
 
-Wybierz go, jeśli chcesz szerokiego międzynarodowego katalogu i akceptujesz model subskrypcyjny, albo jeśli jednorazowa wersja Pro na Maca pasuje do tego, jak słuchasz. Przeczytaj warunki subskrypcji przed klikaniem dalej, bo tygodniowa cena sumuje się szybciej, niż się czyta.
+Wybierz go, jeśli chcesz szerokiego międzynarodowego katalogu i akceptujesz model subskrypcyjny, albo jeśli jednorazowa wersja Pro na Maca pasuje do tego, jak słuchasz. Przeczytaj warunki subskrypcji przed klikaniem dalej, bo tygodniowa cena sumuje się szybciej, niż się czyta. Jest dłuższe [porównanie Macdio i myTuner](/mytuner-alternative.html), jeśli to wybór, który rozważasz.
 
 ## TuneIn, największy katalog i najwięcej reklam
 
@@ -107,6 +107,8 @@ Niektóre ograniczenia to medium, a nie aplikacja, i pójdą za tobą do każdej
 ## Pominięte aplikacje i dlaczego
 
 Apple Music ma stacje radiowe, ale to subskrypcja muzyczna z doczepionym radiem, a nie sposób, by dotrzeć do lokalnego nadawcy, więc odpowiada na inne pytanie. Aplikacje Sonos i Alexa dobrze grają radio internetowe na własnym sprzęcie i nie są naprawdę odtwarzaczami na Maca czy iPhone'a. Odtwarzacze w przeglądarce są dobre przy biurku i słabe w kieszeni, bo karta przeglądarki nie daje sterowania z ekranu blokady, CarPlay ani wyłącznika czasowego. Lista powyżej jest ograniczona do aplikacji, które instalujesz na urządzeniu Apple i otwierasz, żeby słuchać.
+
+Aplikacje do podcastów to też inna kwestia. Macdio odtwarza również podcasty i ma osobne strony porównujące je z [Overcast](/overcast-alternative.html), [Pocket Casts](/pocket-casts-alternative.html) i [Snipd](/snipd-alternative.html).
 
 ## Jak wybrać w minutę
 

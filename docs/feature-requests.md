@@ -15,6 +15,9 @@ saying what happened to it.
   translations too, because check-i18n-markup fails on any tag difference. Translated guides were not
   touched (no check forces it), and translated titles, H1s and meta descriptions on the TuneIn page
   stay as they were. Close after the submissions and the 7-day coverage check (Hermes).
+  Follow-up task from Sait, 2026-11-04 02:49: the two open items, translated guides (links) and translated
+  TuneIn heads (title, H1, meta description). Body links on the translated marketing pages and the FAQ were
+  already in b68db22.
 - [x] **W37 Translated pages link to the English guides** (found 2026-11-04 during W36). `hasPage` only
   looked under `src/legacy/`, and `localizeHtml` skipped every root-absolute href, so 364 translated pages
   sent readers to English guides and some body links to English marketing pages. Fixed in the source

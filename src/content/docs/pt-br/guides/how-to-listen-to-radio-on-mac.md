@@ -2,7 +2,7 @@
 title: "4 formas de ouvir rádio pela internet no Mac (2026)"
 description: "Aba do navegador, VLC, o app Música ou um player nativo na barra de menus. Cada um testado no macOS 26, com o que custa de verdade em cliques, CPU e abas."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-11-04
 faq:
   - q: "O Mac toca rádio sem navegador?"
     a: "Sim. O VLC toca qualquer URL de stream, o app Música aceita links diretos e um app nativo como o Macdio traz o catálogo inteiro consigo, então nada depende de uma aba do navegador."
@@ -41,6 +41,8 @@ Um player dedicado elimina a caça à URL por completo. O [Macdio para Mac](/mac
 ## Qual caminho escolher?
 
 Para uma estação que você visita uma vez, o navegador serve e não custa nada. Para um punhado de streams cujos endereços você já conhece, o VLC basta e não atrapalha. Para rádio como hábito diário, quando você quer navegar pelas estações, manter favoritos, ver que música está tocando e começar a ouvir sem abrir uma janela, o navegador e o VLC ficam sem fôlego rápido, e um player dedicado é a resposta honesta.
+
+Se um player dedicado é o caminho que você quer, o guia dos [melhores apps de rádio na internet](/guides/best-internet-radio-apps.html) compara sete, e a página sobre o Macdio como [alternativa ao TuneIn para Mac](/tunein-alternative.html) cobre a troca do TuneIn.
 
 ## Mantendo o rádio na barra de menus
 

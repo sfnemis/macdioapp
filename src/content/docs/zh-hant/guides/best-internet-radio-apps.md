@@ -2,7 +2,7 @@
 title: "Mac 和 iPhone 上最好的網路電台 App（2026）"
 description: "比較七款適用 Mac、iPhone、iPad、Apple Watch 和 Apple TV 的網路電台 App：價格、電台數量、錄音和廣告，每個數字都來自 App Store。"
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "Mac 上最好的網路電台 App 是哪一款？"
     a: "要看你想怎麼付錢。Macdio 是一次購買，沒有廣告，有錄音和歌曲辨識，需要 macOS 26。Eter 能免費試用、再一次性解鎖；Broadcasts 免費提供少數幾個電台，其餘要訂閱。兩款都能在較舊的 macOS 版本上執行。myTuner Radio Pro 是 Mac App Store 上另外販售的 App，售價 9.99 美元。"
@@ -80,7 +80,7 @@ Appgeneration 出品的 myTuner Radio 標示有 50,000 個電台，支援 Apple 
 
 頁面沒有說明免費版的廣告情況，所以這一頁不做任何一方的斷言；頁面也沒有提到錄音。最低需求是 iOS 15。
 
-如果你想要一個廣泛的國際目錄，也能接受訂閱制，或者一次買斷的 Mac Pro 版剛好符合你的收聽方式，就選它。點下去之前先看清楚訂閱條款，因為按週計價累積起來比看起來快。
+如果你想要一個廣泛的國際目錄，也能接受訂閱制，或者一次買斷的 Mac Pro 版剛好符合你的收聽方式，就選它。點下去之前先看清楚訂閱條款，因為按週計價累積起來比看起來快。如果你正在這兩者之間考慮，這裡有一篇更長的 [Macdio 與 myTuner 比較](/mytuner-alternative.html)。
 
 ## TuneIn，最大的目錄，也最多廣告
 
@@ -107,6 +107,8 @@ Radio Garden Live 把電台放在一顆旋轉的地球上。每個綠點都是�
 ## 沒有列入的 App，以及原因
 
 Apple Music 有電台，但它是附帶電台的音樂訂閱，而不是收聽你在地電台的管道，所以回答的是另一個問題。Sonos 和 Alexa 的 App 在自家硬體裡播放網路電台很好，但其實不算 Mac 或 iPhone 的播放器。網頁播放器在桌前還行，放進口袋就很差，因為瀏覽器分頁沒有鎖定畫面控制、沒有 CarPlay，也沒有睡眠計時器。上面的清單只限於安裝在 Apple 裝置上、打開就能聽的 App。
+
+Podcast App 回答的也是另一個問題。Macdio 也能播放 Podcast，並有分別與 [Overcast](/overcast-alternative.html)、[Pocket Casts](/pocket-casts-alternative.html) 和 [Snipd](/snipd-alternative.html) 比較的頁面。
 
 ## 一分鐘內做出選擇
 

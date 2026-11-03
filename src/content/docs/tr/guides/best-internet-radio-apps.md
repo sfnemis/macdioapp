@@ -2,7 +2,7 @@
 title: "En İyi İnternet Radyosu Uygulamaları: Mac ve iPhone (2026)"
 description: "Mac, iPhone, iPad, Apple Watch ve Apple TV için yedi internet radyosu uygulaması fiyat, istasyon sayısı, kayıt ve reklamda kıyaslandı, rakamlar App Store'dan."
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "Mac için en iyi internet radyosu uygulaması hangisi?"
     a: "Nasıl ödediğine bağlı. Macdio reklamsız, kayıt ve şarkı tanımalı tek bir satın alma ve macOS 26 istiyor. Eter tek seferlik açmayla denemesi ücretsiz, Broadcasts birkaç istasyonla ücretsiz ve gerisi için abonelik istiyor; ikisi de macOS'in eski sürümlerinde çalışıyor. myTuner Radio Pro Mac App Store'da ayrı bir 9,99 ABD doları satın alma."
@@ -80,7 +80,7 @@ Appgeneration'ın myTuner Radio'su 50.000 radyo istasyonu duyuruyor ve Apple Wat
 
 Sayfa ücretsiz kademenin reklamını tarif etmiyor, bu yüzden bu sayfa iki yönde de iddia etmiyor ve kayıttan söz yok. En düşük sürüm iOS 15.
 
-Geniş bir uluslararası dizin istiyorsan ve abonelik modeliyle rahatsan, ya da tek seferlik Mac Pro sürümü dinleme biçimine uyuyorsa seç. Dokunup geçmeden önce abonelik şartlarını oku, çünkü haftalık fiyatlar okunduğundan hızlı birikir.
+Geniş bir uluslararası dizin istiyorsan ve abonelik modeliyle rahatsan, ya da tek seferlik Mac Pro sürümü dinleme biçimine uyuyorsa seç. Dokunup geçmeden önce abonelik şartlarını oku, çünkü haftalık fiyatlar okunduğundan hızlı birikir. Tarttığın seçim buysa daha uzun bir [Macdio ve myTuner karşılaştırması](/mytuner-alternative.html) var.
 
 ## TuneIn, en büyük katalog ve en çok reklam
 
@@ -107,6 +107,8 @@ Hiçbiri telefonunu FM alıcısına da çevirmez. Bunun donanımı iPhone'da hi�
 ## Dışarıda bırakılan uygulamalar ve nedeni
 
 Apple Music'te radyo istasyonları var ama yerel yayıncına ulaşmanın bir yolu değil, radyo eklenmiş bir müzik aboneliği; yani başka bir soruya cevap veriyor. Sonos ve Alexa uygulamaları kendi donanımlarının içinde internet radyosunu iyi çalıyor ve gerçekte Mac ya da iPhone oynatıcısı değiller. Web oynatıcıları masada iyi, cepte kötü; çünkü bir tarayıcı sekmesi sana Kilit Ekranı kontrolü, CarPlay ve uyku zamanlayıcısı vermez. Yukarıdaki liste bir Apple cihazına kurup dinlemek için açtığın uygulamalarla sınırlı.
+
+Podcast uygulamaları da başka bir soruya cevap veriyor. Macdio podcast de çalıyor ve [Overcast](/overcast-alternative.html), [Pocket Casts](/pocket-casts-alternative.html) ve [Snipd](/snipd-alternative.html) ile karşılaştırıldığı ayrı sayfaları var.
 
 ## Bir dakikada nasıl seçilir
 

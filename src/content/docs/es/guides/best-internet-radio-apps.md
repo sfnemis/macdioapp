@@ -2,7 +2,7 @@
 title: "Mejores apps de radio por internet para Mac e iPhone (2026)"
 description: "Siete apps de radio por internet para Mac, iPhone, iPad, Apple Watch y Apple TV comparadas por precio, emisoras, grabación y anuncios, con cifras del App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "¿Cuál es la mejor app de radio por internet para Mac?"
     a: "Depende de cómo pagues. Macdio es una compra única sin anuncios, con grabación e identificación de canciones, y necesita macOS 26. Eter es gratuita para probar con un desbloqueo único, Broadcasts es gratuita con unas pocas emisoras y una suscripción para el resto, y las dos funcionan en versiones más antiguas de macOS. myTuner Radio Pro es una compra aparte de 9,99 USD en el Mac App Store."
@@ -80,7 +80,7 @@ myTuner Radio, de Appgeneration, anuncia 50.000 emisoras de radio y es compatibl
 
 La ficha no describe la publicidad del nivel gratuito, así que esta página no afirma nada en ningún sentido, y no se menciona la grabación. El mínimo es iOS 15.
 
-Elígela si quieres un directorio internacional amplio y te sientes cómodo con el modelo de suscripción, o si la versión Pro para Mac de pago único encaja con cómo escuchas. Lee las condiciones de la suscripción antes de tocar para seguir, porque el precio semanal suma más rápido de lo que parece.
+Elígela si quieres un directorio internacional amplio y te sientes cómodo con el modelo de suscripción, o si la versión Pro para Mac de pago único encaja con cómo escuchas. Lee las condiciones de la suscripción antes de tocar para seguir, porque el precio semanal suma más rápido de lo que parece. Hay una [comparativa más larga de Macdio y myTuner](/mytuner-alternative.html) si esa es la decisión que estás sopesando.
 
 ## TuneIn, el catálogo más grande y la mayor publicidad
 
@@ -107,6 +107,8 @@ Ninguna de ellas convierte tu teléfono en un receptor FM tampoco. El hardware p
 ## Apps que quedan fuera, y por qué
 
 Apple Music tiene emisoras de radio, pero es una suscripción de música con radio añadida y no una forma de llegar a tu emisora local, así que responde a otra pregunta. Las apps de Sonos y Alexa reproducen bien la radio por internet dentro de su propio hardware y no son realmente reproductores para Mac o iPhone. Los reproductores web van bien en una mesa y mal en un bolsillo, ya que una pestaña del navegador no te da controles en la pantalla de bloqueo, ni CarPlay, ni temporizador de sueño. La lista de arriba se limita a apps que instalas en un dispositivo Apple y abres para escuchar.
+
+Las apps de podcasts responden también a otra pregunta. Macdio reproduce además podcasts y tiene su propia página frente a [Overcast](/overcast-alternative.html), [Pocket Casts](/pocket-casts-alternative.html) y [Snipd](/snipd-alternative.html).
 
 ## Cómo elegir en un minuto
 

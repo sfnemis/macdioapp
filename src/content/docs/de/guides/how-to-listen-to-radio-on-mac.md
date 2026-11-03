@@ -2,7 +2,7 @@
 title: "Internetradio auf dem Mac hören: 4 Wege (2026)"
 description: "Browser-Tab, VLC, die Musik-App oder ein nativer Player in der Menüleiste. Jeder Weg auf macOS 26 getestet, mit dem, was er an Klicks, CPU und Tabs kostet."
 datePublished: 2026-08-09
-lastUpdated: 2026-08-31
+lastUpdated: 2026-11-04
 faq:
   - q: "Kann der Mac Radio ohne Browser abspielen?"
     a: "Ja. VLC spielt jede Stream-URL, die Musik-App nimmt direkte Links an, und eine native App wie Macdio bringt gleich den ganzen Katalog mit, sodass nichts von einem Browser-Tab abhängt."
@@ -41,6 +41,8 @@ Ein eigener Player erspart dir die URL-Suche komplett. [Macdio für Mac](/mac.ht
 ## Welchen Weg solltest du nehmen?
 
 Für einen Sender, den du einmal besuchst, reicht der Browser, und er kostet nichts. Für eine Handvoll Streams, deren Adressen du schon kennst, genügt VLC und bleibt dir aus dem Weg. Für Radio als tägliche Gewohnheit, bei der du Sender durchstöbern, Favoriten behalten, den laufenden Song sehen und ohne Fenster loshören willst, stoßen Browser und VLC schnell an ihre Grenzen, und ein eigener Player ist die ehrliche Antwort.
+
+Wenn ein eigener Player dein Weg ist, vergleicht der Ratgeber zu den [besten Internetradio-Apps](/guides/best-internet-radio-apps.html) sieben davon, und die Seite zu Macdio als [TuneIn-Alternative für den Mac](/tunein-alternative.html) behandelt den Umstieg von TuneIn.
 
 ## Das Radio in der Menüleiste
 
