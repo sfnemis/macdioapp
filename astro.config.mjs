@@ -1,7 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { sidebar, guideLocales } from './src/data/guides.mjs';
-import rehypeLocalizeLinks from './src/site/rehype-localize-links.mjs';
 
 // Starlight owns Astro's i18n config (setting both is an error). A locale
 // joins the guide hub when its guides exist under src/content/docs/<code>/
@@ -19,7 +18,6 @@ export default defineConfig({
   // Marketing pages ship no JavaScript beyond the site's two files and GA4;
   // Starlight would otherwise turn on Astro's prefetch module everywhere.
   prefetch: false,
-  markdown: { rehypePlugins: [rehypeLocalizeLinks] },
   integrations: [
     // Starlight adds @astrojs/sitemap unless an integration of that name is
     // present. The site builds its own sitemap (scripts/sitemap.mjs) because

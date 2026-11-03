@@ -66,17 +66,13 @@ test('localizeHtml makes relative links root-relative and localizes page links t
     '<a href="/tr/">h</a> <a href="/tr/mac.html#x">m</a> <img src="/assets/a.webp"> <a href="//x.com/a.html">x</a>');
 });
 
-test('rehypeLocalizeLinks keeps a translated guide in its locale and leaves English guides alone', async () => {
-  const { default: plugin } = await import('../src/site/rehype-localize-links.mjs');
-  const a = (href) => ({ tagName: 'a', properties: { href } });
-  const tree = () => ({ children: [{ tagName: 'p', children: [a('/mac.html#x'), a('/guides/siri-radio.html'), a('/guides/no-such-guide.html'), a('https://x.com/a.html'), a('/assets/a.webp')] }] });
-  const hrefs = (t) => t.children[0].children.map((n) => n.properties.href);
-  const tr = tree();
-  plugin()(tr, { path: '/repo/src/content/docs/tr/guides/x.md' });
-  assert.deepEqual(hrefs(tr), ['/tr/mac.html#x', '/tr/guides/siri-radio.html', '/guides/no-such-guide.html', 'https://x.com/a.html', '/assets/a.webp']);
-  const en = tree();
-  plugin()(en, { path: '/repo/src/content/docs/guides/x.md' });
-  assert.deepEqual(hrefs(en), hrefs(tree()));
+test('localizeGuideBody localizes links in the guide body only', async () => {
+  const { localizeGuideBody } = await import('../scripts/fix-index-links.mjs');
+  const exists = (code, path) => path !== '/guides/gone.html';
+  const html = '<a href="/guides/x.html" lang="en">EN</a><main><div class="sl-markdown-content"><a href="/mac.html#x">m</a> <a href="/guides/x.html">g</a> <a href="/guides/gone.html">n</a> <a href="https://x.com/a.html">e</a> <a href="/assets/a.webp">f</a> <a href="#y">h</a></div></main><a href="/guides/x.html">after</a>';
+  assert.equal(localizeGuideBody(html, 'tr', exists),
+    '<a href="/guides/x.html" lang="en">EN</a><main><div class="sl-markdown-content"><a href="/tr/mac.html#x">m</a> <a href="/tr/guides/x.html">g</a> <a href="/guides/gone.html">n</a> <a href="https://x.com/a.html">e</a> <a href="/assets/a.webp">f</a> <a href="#y">h</a></div></main><a href="/guides/x.html">after</a>');
+  assert.equal(localizeGuideBody('<p><a href="/mac.html">m</a></p>', 'tr', exists), '<p><a href="/mac.html">m</a></p>');
 });
 
 test('localizeHtml leaves script contents alone', () => {
