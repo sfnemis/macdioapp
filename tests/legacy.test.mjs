@@ -66,6 +66,19 @@ test('localizeHtml makes relative links root-relative and localizes page links t
     '<a href="/tr/">h</a> <a href="/tr/mac.html#x">m</a> <img src="/assets/a.webp"> <a href="//x.com/a.html">x</a>');
 });
 
+test('rehypeLocalizeLinks keeps a translated guide in its locale and leaves English guides alone', async () => {
+  const { default: plugin } = await import('../src/site/rehype-localize-links.mjs');
+  const a = (href) => ({ tagName: 'a', properties: { href } });
+  const tree = () => ({ children: [{ tagName: 'p', children: [a('/mac.html#x'), a('/guides/siri-radio.html'), a('/guides/no-such-guide.html'), a('https://x.com/a.html'), a('/assets/a.webp')] }] });
+  const hrefs = (t) => t.children[0].children.map((n) => n.properties.href);
+  const tr = tree();
+  plugin()(tr, { path: '/repo/src/content/docs/tr/guides/x.md' });
+  assert.deepEqual(hrefs(tr), ['/tr/mac.html#x', '/tr/guides/siri-radio.html', '/guides/no-such-guide.html', 'https://x.com/a.html', '/assets/a.webp']);
+  const en = tree();
+  plugin()(en, { path: '/repo/src/content/docs/guides/x.md' });
+  assert.deepEqual(hrefs(en), hrefs(tree()));
+});
+
 test('localizeHtml leaves script contents alone', () => {
   const html = '<script>\nvar s = \'<img src="\' + logo + \'">\';\n</script><a href="mac.html">m</a>';
   assert.equal(localizeHtml(html, 'en', () => true), '<script>\nvar s = \'<img src="\' + logo + \'">\';\n</script><a href="/mac.html">m</a>');

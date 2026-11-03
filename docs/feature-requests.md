@@ -22,7 +22,7 @@ saying what happened to it.
   looked under `src/legacy/`, and `localizeHtml` skipped every root-absolute href, so 364 translated pages
   sent readers to English guides and some body links to English marketing pages. Fixed in the source
   2026-11-04: `hasPage` asks `hasGuide` for `/guides/` paths and `localizeHtml` localizes root-absolute page
-  links too. Translated guides themselves were never affected: Starlight rewrites their Markdown links.
+  links too. Correction 2026-11-04 02:58: the first version of this note said translated guides were fine because Starlight rewrites their links. That was wrong, the `/tr/guides/` links seen were the sidebar. Every translated guide body linked to English URLs. Fixed by `src/site/rehype-localize-links.mjs`.
 - [x] **W38 Open items seen during W36** (2026-11-04). Meta keywords: the build no longer emits them (8 page
   types carried them, not only the home page); the inert lines stay in the sources so lastmod does not move
   on 112 pages for a head tag. Family Sharing: verified on the US App Store page, claims.md updated.
