@@ -2,7 +2,7 @@
 title: "Best Internet Radio Apps for Mac and iPhone (2026)"
 description: "Seven internet radio apps for Mac, iPhone, iPad, Apple Watch and Apple TV compared on price, station count, recording and ads, every figure from the App Store."
 datePublished: 2026-09-14
-lastUpdated: 2026-10-12
+lastUpdated: 2026-11-04
 faq:
   - q: "What is the best internet radio app for Mac?"
     a: "It depends on how you pay. Macdio is a single purchase with no ads, recording and song identification, and it needs macOS 26. Eter is free to try with a one-time unlock, Broadcasts is free with a handful of stations and a subscription for the rest, and both run on older versions of macOS. myTuner Radio Pro is a separate $9.99 purchase on the Mac App Store."
@@ -80,7 +80,7 @@ myTuner Radio from Appgeneration advertises 50,000 radio stations and supports A
 
 The listing does not describe the free tier's advertising, so this page does not claim either way, and recording is not mentioned. Minimum is iOS 15.
 
-Pick it if you want a broad international directory and are comfortable with the subscription model, or if the one-off Mac Pro version fits how you listen. Read the subscription terms before tapping through, because weekly pricing adds up faster than it reads.
+Pick it if you want a broad international directory and are comfortable with the subscription model, or if the one-off Mac Pro version fits how you listen. Read the subscription terms before tapping through, because weekly pricing adds up faster than it reads. There is a longer [comparison of Macdio and myTuner](/mytuner-alternative.html) if that is the choice you are weighing.
 
 ## TuneIn, the biggest catalog and the most advertising
 
@@ -107,6 +107,8 @@ None of them turns your phone into an FM receiver either. The hardware for that 
 ## Apps left out, and why
 
 Apple Music has radio stations, but it is a music subscription with radio attached rather than a way to reach your local broadcaster, so it answers a different question. The Sonos and Alexa apps play internet radio well inside their own hardware and are not really Mac or iPhone players. Web players are fine at a desk and poor in a pocket, since a browser tab gives you no Lock Screen controls, no CarPlay and no sleep timer. The list above is limited to apps you install on an Apple device and open to listen.
+
+Podcast apps answer a different question too. Macdio also plays podcasts, and it has its own page against [Overcast](/overcast-alternative.html), [Pocket Casts](/pocket-casts-alternative.html) and [Snipd](/snipd-alternative.html).
 
 ## How to choose in one minute
 
