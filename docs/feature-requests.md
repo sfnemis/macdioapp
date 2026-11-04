@@ -12,9 +12,9 @@ saying what happened to it.
   the roundup guide as a hub, real `<lastmod>`, sitemap split per locale, title/H1/FAQ/meta on the TuneIn
   page. No external submission in this task.
   Live on 2026-11-04 (deployed by Sait from b68db22, checked on the live host). Follow-up the same night,
-  commits 184964a and a7a2c98, waiting for Sait's deploy: translated TuneIn heads (title, H1, meta description,
+  commits 184964a and a7a2c98, deployed by Sait and checked live: translated TuneIn heads (title, H1, meta description,
   JSON-LD), roundup and Mac guide links in all 13 translations, every translated guide body kept in its locale.
-  Close after that deploy, the submissions and the 7-day coverage check (Hermes).
+  Close after the submissions and the 7-day coverage check (Hermes).
 - [x] **W37 Translated pages link to the English guides** (found 2026-11-04 during W36). `hasPage` only
   looked under `src/legacy/`, and `localizeHtml` skipped every root-absolute href, so 364 translated pages
   sent readers to English guides and some body links to English marketing pages. Fixed in the source
