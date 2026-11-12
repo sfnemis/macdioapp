@@ -8,7 +8,7 @@ import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 // The version the App Store sells today: the home JSON-LD of every locale must say exactly this.
-export const APP_VERSION = '3.2';
+export const APP_VERSION = '3.2.1';
 
 export const RULES = [
   { id: 'app-size', re: /7[.,]8\s?(MB|Mo|МБ|ميغابايت)/i, why: 'the app is about 82 MB, not 7.8 MB' },
